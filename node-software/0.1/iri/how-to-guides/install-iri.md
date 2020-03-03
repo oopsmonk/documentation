@@ -82,7 +82,7 @@ LOCAL_SNAPSHOTS_PRUNING_ENABLED = true
 5\. Download the IRI Docker image and run it. Replace the `$PATH_TO_DIRECTORY` placeholder with the path to the directory where you saved the configuration file.
 
 ```bash
-docker run --name iri -v $PATH_TO_DIRECTORY/config.ini:/path/to/conf/config.ini iotaledger/iri:latest -c /path/to/conf/config.ini
+docker run --name iri --net=host -v $PATH_TO_DIRECTORY/config.ini:/path/to/conf/config.ini iotaledger/iri:latest -c /path/to/conf/config.ini
 ```
 
 This command mounts the configuration file to the `path/to/conf` folder on the Docker container. You can change this path to mount the configuration file to a different folder.
