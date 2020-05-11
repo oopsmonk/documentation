@@ -2,9 +2,9 @@
 
 **When a new version of [IRI is released on GitHub](https://github.com/iotaledger/iri/releases), we recommend that you upgrade your local IRI to the new version. In this guide, you upgrade IRI to the latest version.**
 
-## Upgrade to version 1.9.0
+## Upgrade to version 1.8.6
 
-Version 1.9.0 comes with the following changes, which aren't backwards compatible:
+Version 1.8.6 comes with the following changes, which aren't backwards compatible:
 
 - To save memory, empty `signatureMessageFragment` fields (all 9s) in transactions are truncated before being stored in the database
 
@@ -26,7 +26,7 @@ If your node does local snapshots, you need to do one of the following:
 
 #### Merge snapshot data and spent addresses
 
-By merging your snapshot data and spent addresses into a single database, you can keep all your existing data and make it compatible with IRI version 1.9.0.
+By merging your snapshot data and spent addresses into a single database, you can keep all your existing data and make it compatible with IRI version 1.8.6.
 
 ##### Prerequisites
 
@@ -148,7 +148,7 @@ Now, you have a `localsnapshots-db` directory, which contains all your snapshot 
 
 #### Delete your snapshot files and spent addresses
 
-If you don't want to keep your exisiting snapshot data, you can delete it.
+If you don't want to keep your existing snapshot data, you can delete it.
 
 1. Stop IRI
 

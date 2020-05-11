@@ -186,14 +186,14 @@ The pre-built IRI Java file is available on the [IOTA GitHub repository](https:/
     ```
 
     :::info:
-    Make sure that you include the whole version, for example 1.9.0-RELEASE.
+    Make sure that you include the whole version, for example 1.8.6-RELEASE.
     :::
 
 The download may take some time. If everything went well, you should see something like the following in the output:
 
 ```
 HTTP request sent, awaiting response ... 200 OK
-'/home/jake/node/iri-1.9.0-RELEASE.jar' saved [175441686/175441686]
+'/home/jake/node/iri-1.8.6-RELEASE.jar' saved [175441686/175441686]
 ```
 
 Now you can [configure IRI](#configure-the-iri).

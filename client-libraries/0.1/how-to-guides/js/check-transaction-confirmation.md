@@ -43,10 +43,6 @@ In this guide, we connect to a node on the [Devnet](root://getting-started/0.1/n
 
     When you execute the file, you should see an array that contains the `true` boolean, meaning that the transaction is confirmed.
 
-    :::info:
-    You could also use the `getInclusionStates()` method to check if a transaction is approved by an array of your own chosen transactions.
-    :::
-
 5. Go to [utils.iota.org](https://utils.iota.org) and find a pending transaction
 
     :::info:Can't find a pending transaction?

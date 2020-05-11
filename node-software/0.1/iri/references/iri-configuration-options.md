@@ -57,8 +57,6 @@ Use these settings to customize what your node does with its ledger.
 |`--spent-addresses-db-path`|`SPENT_ADDRESSES_DB_PATH`|Sets the path to the directory in which the spent addresses database is saved|string|"spent-addresses-db"|
 |`--spent-addresses-db-log-path`|`SPENT_ADDRESSES_DB_LOG_PATH`|Sets the path to the directory in which the logs for the spent addresses database are saved|string|"spent-addresses-log"|
 
-
-
 ## IXI
 
 Use these settings to customize how your node uses IXI modules.
@@ -80,6 +78,7 @@ Use these settings to customize how and when your node does [local snapshots](ro
 |<a name="local-snapshots-interval-synced"></a>`--local-snapshots-interval-synced`|`LOCAL_SNAPSHOTS_INTERVAL_SYNCED`  | Interval, in milestone transactions, at which snapshot files are created if the ledger is fully synchronized  |number| 10   |
 |<a name="local-snapshots-interval-unsynced"></a>`--local-snapshots-interval-unsynced`|`LOCAL_SNAPSHOTS_INTERVAL_UNSYNCED`   | Interval, in milestone transactions, at which snapshot files are created if the ledger is not fully synchronized  |number| 1,000  | This value is higher than the `LOCAL_SNAPSHOTS_INTERVAL_SYNCED` configuration option to allow the IRI to focus its resources on synchronizing with its neighbor IRI nodes|
 |<a name="local-snapshots-base-path"></a>`--local-snapshots-base-path`|`LOCAL_SNAPSHOTS_BASE_PATH`  |  Path to the snapshot file, not including the file extension. |  string |  mainnet   | Prepends the `.snapshot.meta` and `.snapshot.state` files with the value of this parameter. For the default value, the files are named `mainnet.snapshot.meta` and `mainnet.snapshot.state`. You can specify a directory for the files to be added to by doing the following: `<directory>/<filename>`, which results in `directory/filename.snapshot.meta`. |
+|`--local-snapshots-db-max-size`|`LOCAL_SNAPSHOTS_DB_MAX_SIZE`|The maximum size this database should reach on disk. Supported units: GB, GiB, MB, MiB|string|-1|If set to -1, no maximum size is enforced. Without a given unit, the default is GB|
 
 ## Network
 
