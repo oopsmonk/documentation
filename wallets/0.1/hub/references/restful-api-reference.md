@@ -68,8 +68,7 @@ var options = {
   method: 'POST',
   headers: {
     'Content-Type': 'application/json',
-		'X-IOTA-API-Version': '1',
-    'Content-Length': Buffer.byteLength(JSON.stringify(command))
+    'X-IOTA-API-Version': '1'
   },
   json: command
 };
@@ -164,8 +163,7 @@ var options = {
   method: 'POST',
   headers: {
     'Content-Type': 'application/json',
-		'X-IOTA-API-Version': '1',
-    'Content-Length': Buffer.byteLength(JSON.stringify(command))
+    'X-IOTA-API-Version': '1'
   },
   json: command
 };
@@ -265,8 +263,7 @@ var options = {
   method: 'POST',
   headers: {
     'Content-Type': 'application/json',
-		'X-IOTA-API-Version': '1',
-    'Content-Length': Buffer.byteLength(JSON.stringify(command))
+    'X-IOTA-API-Version': '1'
   },
   json: command
 };
@@ -366,8 +363,7 @@ var options = {
   method: 'POST',
   headers: {
     'Content-Type': 'application/json',
-		'X-IOTA-API-Version': '1',
-    'Content-Length': Buffer.byteLength(JSON.stringify(command))
+    'X-IOTA-API-Version': '1'
   },
   json: command
 };
@@ -475,8 +471,7 @@ var options = {
   method: 'POST',
   headers: {
     'Content-Type': 'application/json',
-		'X-IOTA-API-Version': '1',
-    'Content-Length': Buffer.byteLength(JSON.stringify(command))
+    'X-IOTA-API-Version': '1'
   },
   json: command
 };
@@ -569,8 +564,7 @@ var options = {
   method: 'POST',
   headers: {
     'Content-Type': 'application/json',
-		'X-IOTA-API-Version': '1',
-    'Content-Length': Buffer.byteLength(JSON.stringify(command))
+    'X-IOTA-API-Version': '1'
   },
   json: command
 };
@@ -669,8 +663,7 @@ var options = {
   method: 'POST',
   headers: {
     'Content-Type': 'application/json',
-		'X-IOTA-API-Version': '1',
-    'Content-Length': Buffer.byteLength(JSON.stringify(command))
+    'X-IOTA-API-Version': '1'
   },
   json: command
 };
@@ -737,10 +730,11 @@ curl http://localhost:50051 \
 ### Results
 
 |**Return field** | **Description** |
+|:----|:-----|
 | `userId`          | ID of the user whose account's balance changed |
 | `timestamp`       | Time since epoch in milliseconds that the balance change occured|
 |`reason`|  The type of [event that caused a change to the account balance](#balance-change-events-for-user-accounts)    |   
-| amount          | Amount that changed to the balance     |        
+| `amount`          | Amount that changed to the balance     |        
 | `sweepBundleHash` | Contains either the bundle hash for a `DEPOSIT` event|
 |`withdrawalUuid`| Contains a withdrawal UUID for a `WITHDRAWAL` or `WITHDRAWAL_CANCELED` event
 
@@ -804,8 +798,7 @@ var options = {
   method: 'POST',
   headers: {
     'Content-Type': 'application/json',
-		'X-IOTA-API-Version': '1',
-    'Content-Length': Buffer.byteLength(JSON.stringify(command))
+    'X-IOTA-API-Version': '1'
   },
   json: command
 };
@@ -900,8 +893,7 @@ var options = {
   method: 'POST',
   headers: {
     'Content-Type': 'application/json',
-		'X-IOTA-API-Version': '1',
-    'Content-Length': Buffer.byteLength(JSON.stringify(command))
+    'X-IOTA-API-Version': '1'
   },
   json: command
 };
@@ -981,7 +973,7 @@ Depending on the value of the `type` field, the following data is returned:
 |`reason`|  The type of [event that caused a change to the account balance](#balance-change-events-for-user-accounts)    |
 | `userId`          | ID of the user whose account's balance changed |
 | `timestamp`       | Time since epoch in milliseconds that the balance change occured|
-| amount          | Amount that changed to the balance     |        
+| `amount`          | Amount that changed to the balance     |        
 | `sweepBundleHash` | Contains either the bundle hash for a `DEPOSIT` event|
 |`withdrawalUuid`| Contains a withdrawal UUID for a `WITHDRAWAL` or `WITHDRAWAL_CANCELED` event|
 
@@ -995,7 +987,7 @@ Depending on the value of the `type` field, the following data is returned:
 | `amount`      |Amount that changed to the balance                                                          |
 | `reason`      | The type of [event that caused a change to the balance of the user's address](#balance-change-events-for-user-addresses)                                                         |
 | `hash`       | Contains either a tail transaction hash for a `DEPOSIT` reason or a bundle hash for a `SWEEP` reason |
-| timestamp   | Time since epoch in milliseconds that the balance change occured|
+| `timestamp`   | Time since epoch in milliseconds that the balance change occured|
 
 #### HUB_ADDRESS
 
@@ -1076,8 +1068,7 @@ var options = {
   method: 'POST',
   headers: {
     'Content-Type': 'application/json',
-		'X-IOTA-API-Version': '1',
-    'Content-Length': Buffer.byteLength(JSON.stringify(command))
+    'X-IOTA-API-Version': '1'
   },
   json: command
 };
@@ -1191,8 +1182,7 @@ var options = {
   method: 'POST',
   headers: {
     'Content-Type': 'application/json',
-		'X-IOTA-API-Version': '1',
-    'Content-Length': Buffer.byteLength(JSON.stringify(command))
+    'X-IOTA-API-Version': '1'
   },
   json: command
 };
@@ -1291,8 +1281,7 @@ var options = {
   method: 'POST',
   headers: {
     'Content-Type': 'application/json',
-		'X-IOTA-API-Version': '1',
-    'Content-Length': Buffer.byteLength(JSON.stringify(command))
+    'X-IOTA-API-Version': '1'
   },
   json: command
 };
@@ -1408,8 +1397,7 @@ var options = {
   method: 'POST',
   headers: {
     'Content-Type': 'application/json',
-		'X-IOTA-API-Version': '1',
-    'Content-Length': Buffer.byteLength(JSON.stringify(command))
+    'X-IOTA-API-Version': '1'
   },
   json: command
 };
@@ -1514,8 +1502,7 @@ var options = {
   method: 'POST',
   headers: {
     'Content-Type': 'application/json',
-		'X-IOTA-API-Version': '1',
-    'Content-Length': Buffer.byteLength(JSON.stringify(command))
+    'X-IOTA-API-Version': '1'
   },
   json: command
 };
@@ -1637,8 +1624,7 @@ var options = {
   method: 'POST',
   headers: {
     'Content-Type': 'application/json',
-		'X-IOTA-API-Version': '1',
-    'Content-Length': Buffer.byteLength(JSON.stringify(command))
+    'X-IOTA-API-Version': '1'
   },
   json: command
 };
@@ -1743,8 +1729,7 @@ var options = {
   method: 'POST',
   headers: {
     'Content-Type': 'application/json',
-		'X-IOTA-API-Version': '1',
-    'Content-Length': Buffer.byteLength(JSON.stringify(command))
+    'X-IOTA-API-Version': '1'
   },
   json: command
 };
@@ -1848,8 +1833,7 @@ var options = {
   method: 'POST',
   headers: {
     'Content-Type': 'application/json',
-		'X-IOTA-API-Version': '1',
-    'Content-Length': Buffer.byteLength(JSON.stringify(command))
+    'X-IOTA-API-Version': '1'
   },
   json: command
 };
@@ -1947,8 +1931,7 @@ var options = {
   method: 'POST',
   headers: {
     'Content-Type': 'application/json',
-		'X-IOTA-API-Version': '1',
-    'Content-Length': Buffer.byteLength(JSON.stringify(command))
+    'X-IOTA-API-Version': '1'
   },
   json: command
 };
@@ -1999,7 +1982,7 @@ curl http://localhost:50051 \
 When requesting data about a user's balance history, the reason for the balance change will be one of the following events. 
 
 |**Name**|**Description**  |
-| :------------------- | :------------------------------------------------------------ |                                                      |
+| :------------------- | :---------------------|
 | `DEPOSIT`              | User received tokens through a deposit event
 | `BUY`                  | User gained tokens as part of a batch transfer|
 | `WITHDRAWAL`           | User withdrew tokens                    |

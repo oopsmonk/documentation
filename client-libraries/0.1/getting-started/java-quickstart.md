@@ -145,6 +145,7 @@ package com.iota;
 
 import org.iota.jota.IotaAPI;
 import org.iota.jota.dto.response.GetNodeInfoResponse;
+import org.iota.jota.error.ArgumentException;
 
 class ConnectToNode {
 public static void main(String[] args) throws ArgumentException {
@@ -153,7 +154,7 @@ public static void main(String[] args) throws ArgumentException {
         // and specify which node to connect to
         IotaAPI api = new IotaAPI.Builder()
             .protocol("https")
-            .host("nodes.devnet.thetangle.org")
+            .host("nodes.devnet.iota.org")
             .port(443)
             .build();
 
@@ -230,7 +231,7 @@ You've confirmed your connection to a synchronized node.
 
 ## Run the code
 
-These code samples are hosted on [GitHub](https://github.com/JakeSCahill/java-iota-workshop).
+These code samples are hosted on [GitHub](https://github.com/iota-community/java-iota-workshop).
 
 To get started you need [Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) installed on your device.
 
@@ -241,7 +242,7 @@ In the command-line, do the following:
 --------------------
 ### Linux and macOS
 ```bash
-git clone https://github.com/JakeSCahill/java-iota-workshop.git
+git clone https://github.com/iota-community/java-iota-workshop.git
 cd java-iota-workshop
 mvn clean install
 mvn exec:java -Dexec.mainClass="com.iota.HelloWorld"
@@ -249,7 +250,7 @@ mvn exec:java -Dexec.mainClass="com.iota.HelloWorld"
 ---
 ### Windows
 ```bash
-git clone https://github.com/JakeSCahill/java-iota-workshop.git
+git clone https://github.com/iota-community/java-iota-workshop.git
 cd java-iota-workshop
 mvn clean install
 mvn exec:java -D"exec.mainClass"="com.iota.HelloWorld"

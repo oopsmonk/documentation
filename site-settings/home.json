@@ -22,6 +22,10 @@
             "name": "roadmap"
         },
         {
+            "href": "https://status.iota.org/",
+            "name": "status"
+        },
+        {
             "href": "https://training.iota.org/",
             "name": "training"
         },
@@ -31,7 +35,7 @@
         },
         {
             "href": "https://utils.iota.org/",
-            "name": "utils"
+            "name": "utilities"
         }
     ],
     "popularTopics": [
@@ -50,27 +54,23 @@
         {
             "query": "set up a private tangle",
             "name": "Private Tangle"
-        },
-        {
-            "query": "cryptocore",
-            "name": "CryptoCore"
         }
     ],
     "cards": [
         {
             "href": "/docs/getting-started/0.1/introduction/overview",
             "image": "1.png",
-            "name": "What is IOTA?"
+            "name": "Learn about IOTA technology"
         },
         {
             "href": "/docs/client-libraries/0.1/getting-started/quickstart",
-            "image": "3.png",
-            "name": "Get Started"
+            "image": "2.png",
+            "name": "Start building"
         },
         {
-            "href": "/docs/getting-started/0.1/references/quickstart-dev-handbook",
-            "image": "2.png",
-            "name": "Developer Handbook"
+            "href": "/docs/blueprints/0.1/introduction/overview",
+            "image": "3.png",
+            "name": "Explore blueprints"
         }
     ]
 }

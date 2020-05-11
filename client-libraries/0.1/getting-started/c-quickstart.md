@@ -24,9 +24,7 @@ In our guides, we use a Linux [Ubuntu 18.04 LTS](https://www.ubuntu.com/download
     If you're new to [Bazel](https://docs.bazel.build/versions/master/getting-started.html), we recommend reading their getting-started documentation.
     :::
 
-2. Open the [Linux Terminal](https://www.howtogeek.com/140679/beginner-geek-how-to-start-using-the-linux-terminal/)
-
-3. Create a directory for your project
+2. Create a directory for your project
 
 	```bash
 	sudo mkdir my-c-iota-project
@@ -69,7 +67,7 @@ The C client library is organized in packages, which contain related methods. Al
 
     ```cpp
     // The IOTA node to connect to and its port
-    #define CONFIG_IRI_NODE_URI "nodes.devnet.thetangle.org"
+    #define CONFIG_IRI_NODE_URI "nodes.devnet.iota.org"
 
     #define CONFIG_IRI_NODE_PORT 443
 
@@ -323,7 +321,7 @@ You've confirmed your connection to a synchronized node.
 
 ## Run the code
 
-These code samples are hosted on [GitHub](https://github.com/JakeSCahill/java-iota-workshop).
+These code samples are hosted on [GitHub](https://github.com/iota-community/c-iota-workshop).
 
 To get started you need [Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) installed on your device.
 
