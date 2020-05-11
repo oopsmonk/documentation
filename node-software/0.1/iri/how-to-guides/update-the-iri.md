@@ -66,7 +66,7 @@ To complete this guide, you need the following:
     make shared_lib && make install-shared
     ```
 
-This step can take a few minutes.
+    This step can take a few minutes.
 
     When the libraries are installed, you should see the following:
 
