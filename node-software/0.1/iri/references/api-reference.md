@@ -1545,7 +1545,7 @@ You can convert the returned trytes to ASCII characters by using the client libr
 | `duration` | Number of milliseconds it took to complete the request |
 
 :::info:
-If a node doesn't have the trytes for a given transaction hash in its ledger, the value at the index of that transaction hash is `null`.
+If the node doesn't have the trytes for a given transaction hash in its ledger, a `null` value is returned.
 :::
 
 ## interruptAttachingToTangle
