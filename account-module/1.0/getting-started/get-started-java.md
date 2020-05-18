@@ -6,6 +6,10 @@
 
 To use the account module, you need a Java development environment. If you're new to IOTA, we recommend completing our [getting started guide](root://client-libraries/1.0/getting-started/java-quickstart.md), where you will learn how to set up a development environment and connect to a node.
 
+:::info:
+The sample code for these tutorials is hosted on [GitHub](https://github.com/iota-community/account-module).
+:::
+
 1. [Create an account](../tutorials/java/create-account.md)
 
 2. [Create a plugin to log events](../tutorials/java/create-plugin.md)

@@ -24,7 +24,7 @@ Read the following blog posts about IRI:
 - [Introducing Local Snapshots](https://blog.iota.org/coming-up-local-snapshots-7018ff0ed5db)
 - [Networking Rewrite](https://blog.iota.org/iri-1-8-0-with-networking-rewrite-9d1e2be001e7)
 
-## Repository
+## Source code
 
 Go to the IRI source code on [Github](https://github.com/iotaledger/iri).
 

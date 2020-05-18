@@ -1,6 +1,6 @@
 # Index
 
-[Core overview](overview.md)
+[Introduction/Overview](overview.md)
 
 [Getting started/Get started with C](/getting-started/get-started-c.md)
 
@@ -80,14 +80,14 @@
 
 [Tutorials/Python/Listen for live transactions on the Tangle](/tutorials/python/listen-for-transactions.md)
 
-[API reference/C](https://github.com/iotaledger/iota.c/tree/master/cclient/api)
+[References/API reference/C](https://github.com/iotaledger/iota.c/tree/master/cclient/api)
 
-[API reference/Go](https://github.com/iotaledger/iota.go/tree/master/.docs/iota.go/reference)
+[References/API reference/Go](https://github.com/iotaledger/iota.go/tree/master/.docs/iota.go/reference)
 
-[API reference/Java](https://github.com/iotaledger/iota-java/tree/dev/docs/iota-java)
+[References/API reference/Java](https://github.com/iotaledger/iota-java/tree/dev/docs/iota-java)
 
-[API reference/JavaScript](https://github.com/iotaledger/iota.js/blob/next/api_reference.md)
+[References/API reference/JavaScript](https://github.com/iotaledger/iota.js/blob/next/api_reference.md)
 
-[API reference/Python](https://pyota.readthedocs.io/en/latest/)
+[References/API reference/Python](https://pyota.readthedocs.io/en/latest/)
 
 [Contribute to the project](contribute.md)

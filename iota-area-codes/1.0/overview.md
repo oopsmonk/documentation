@@ -7,19 +7,6 @@ With IACs, you can:
 - Tag a transaction with a location
 - Find transactions by their location
 
-## Blog posts
-
----------------
-#### **IOTA Area Codes — A proposal to geo-tag IOTA transactions** ####
-[IOTA Area Codes — A proposal to geo-tag IOTA transactions](https://blog.iota.org/iota-area-codes-a-proposal-to-geo-tag-iota-transactions-d3c457d1df1b)
-
-An overview of IACs.
----------------
-
-## Repository
-
-Go to the source code on [Github](https://github.com/iotaledger/iota-area-codes).
-
 ## Supported languages
 
 ### **Official support** ###
@@ -30,6 +17,19 @@ Go to the source code on [Github](https://github.com/iotaledger/iota-area-codes)
 ---
 
 ---------------
+
+## Blog posts
+
+---------------
+#### **IOTA Area Codes — A proposal to geo-tag IOTA transactions** ####
+[IOTA Area Codes — A proposal to geo-tag IOTA transactions](https://blog.iota.org/iota-area-codes-a-proposal-to-geo-tag-iota-transactions-d3c457d1df1b)
+
+An overview of IACs.
+---------------
+
+## Source code
+
+The source code for this project is hosted on [Github](https://github.com/iotaledger/iota-area-codes).
 
 ## Next steps
 

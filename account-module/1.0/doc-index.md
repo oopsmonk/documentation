@@ -1,8 +1,8 @@
 # Index
 
-[Account module/Overview](overview.md)
+[Introduction/Overview](overview.md)
 
-[How the account module works](how-it-works.md)
+[Introduction/How the account module works](how-it-works.md)
 
 [Guides/Creating a CDA](/guides/creating-a-cda.md)
 
@@ -34,7 +34,7 @@
 
 [Tutorials/Java/Make a payment](/tutorials/java/make-payment.md)
 
-[Account module/Java/Export your seed state](/tutorials/java/export-seed-state.md)
+[Tutorials/Java/Export your seed state](/tutorials/java/export-seed-state.md)
 
 [Tutorials/Java/Listen to events](/tutorials/java/listen-to-events.md)
 

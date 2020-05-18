@@ -10,10 +10,6 @@ With the client load balancer, you can:
 - Blacklist nodes after failing to respond
 - Configure node settings such as the minimum weight magnitude for each individual node or for all nodes
 
-## Repository
-
-Go to the source code on [Github](https://github.com/iotaledger/client-load-balancer).
-
 ## Supported languages
 
 ### **Official support** ###
@@ -25,6 +21,10 @@ Go to the source code on [Github](https://github.com/iotaledger/client-load-bala
 ---
 
 ---------------
+
+## Source code
+
+The source code for this project is hosted on [Github](https://github.com/iotaledger/client-load-balancer).
 
 ## Next steps
 
