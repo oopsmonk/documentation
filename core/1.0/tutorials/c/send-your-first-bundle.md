@@ -10,7 +10,7 @@ In this tutorial, we connect to a [node](root://getting-started/0.1/network/node
 
 - **[Depth](root://getting-started/0.1/transactions/depth.md)**: 3
 
-These settings are defined in a `config.h` file, which we create in the [getting started guide](../../getting-started/c-quickstart.md).
+These settings are defined in a `config.h` file, which is created in the [getting started guide](root://client-libraries/1.0/getting-started/c-quickstart.md).
 
 ## Code walkthrough
 
@@ -111,7 +111,7 @@ These code samples are hosted on [GitHub](https://github.com/iota-community/c-io
 
 To get started you need [Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) installed on your device.
 
-You also need a C development environment. If this is your first time using the C client library, complete our [getting started guide](../../getting-started/c-quickstart.md).
+You also need a C development environment. If this is your first time using the C client library, complete our [getting started guide](root://client-libraries/1.0/getting-started/c-quickstart.md).
 
 In the command-line, do the following:
 

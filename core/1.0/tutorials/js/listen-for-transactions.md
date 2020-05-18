@@ -127,6 +127,6 @@ It may take a minute or two to receive data from the node.
 
 ## Next steps
 
-[Start using Masked Authenticated Messaging](../../mam/introduction/overview.md) to send encrypted streams of data that others can subscribe to on the Tangle.
+[Start using Masked Authenticated Messaging](root://mam/1.0/overview.md) to send encrypted streams of data that others can subscribe to on the Tangle.
 
 Take a look at our [app blueprints](root://blueprints/0.1/introduction/overview.md) for inspiration.

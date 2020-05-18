@@ -66,7 +66,7 @@ Starting from the given index, the connected node checks if the address is spent
 If an address with the given index is spent, the index is incremented until the node finds one that isn't spent.
 
 :::warning:
-This way of generating addresses replies on the node to return valid data about your addresses. To have more control over your addresses, we recommend using the [account module](../../account-module/introduction/overview.md) to keep track of spent addresses in your own local database.
+This way of generating addresses replies on the node to return valid data about your addresses. To have more control over your addresses, we recommend using the [account module](root://account-module/1.0/overview.md) to keep track of spent addresses in your own local database.
 :::
 
 In the console, you should see an address.
