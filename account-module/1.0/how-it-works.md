@@ -1,14 +1,18 @@
 # How the account module works
 
-**The account module allows you to build an account object that keeps track of your seed state in a local database.**
+**The account module allows you to build an account object that keeps track of your account in a local database.**
+
+## Conditional deposit addresses
+
+One of the many benefits of using the account module is that you can define conditions in which your addresses are active or expired. These conditions help senders to decide whether it's safe to send tokens to an address. For this reason, addresses in accounts are called _conditional deposit addresses_ (CDA).
+
+Accounts use CDAs to help reduce the risk of withdrawing from [spent addresses](root://getting-started/0.1/clients/addresses.md#spent-addresses). When you request IOTA tokens from someone, you can create a CDA that's active for a certain period of time. This way, you let the sender know that you intend to withdraw from that address only after that time. As a result, the sender can decide whether to make a deposit, depending on how much time is left on a CDA.
 
 ## Seed state
 
-The seed state is a local file
+The seed state is a local file that contains a record of the pending transactions and active CDAs for your seed.
 
 To see your seed state, you can export it, allowing you to back it up and/or import it into another account.
-
-These are examples of exported seed states in Go, Java, and JavaScript:
 
 --------------------
 ### Go
@@ -115,8 +119,3 @@ These are examples of exported seed states in Go, Java, and JavaScript:
 ```
 --------------------
 
-## Conditional deposit addresses
-
-One of the many benefits of using accounts is that you can define conditions in which your addresses are active or expired. These conditions help senders to decide whether it's safe to send tokens to an address. For this reason, addresses in accounts are called _conditional deposit addresses_ (CDA).
-
-Accounts use CDAs to help reduce the risk of withdrawing from [spent addresses](root://getting-started/0.1/clients/addresses.md#spent-addresses). When you request IOTA tokens from someone, you can create a CDA that's active for a certain period of time. This way, you let the sender know that you intend to withdraw from that address only after that time. As a result, the sender can decide whether to make a deposit, depending on how much time is left on a CDA.

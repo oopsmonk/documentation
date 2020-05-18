@@ -1,8 +1,8 @@
 # Index
 
-[MAM overview](overview.md)
+[Introduction/Overview](overview.md)
 
-[How MAM works](how-it-works.md)
+[Introduction/How MAM works](how-it-works.md)
 
 [Tutorials/JavaScript/Publish public messages](/tutorials/js/create-public-channel.md)
 
@@ -10,4 +10,4 @@
 
 [Tutorials/JavaScript/Display messages on a webpage](/tutorials/js/create-mam-webpage.md)
 
-[API reference](api-reference.md)
+[References/API reference](api-reference.md)

@@ -8,19 +8,6 @@ With MAM, you can:
 - Send messages on channels
 - Read messages from channels
 
-## Blog posts
-
----------------
-#### **Introducing Masked Authenticated Messaging** ####
-[Introducing Masked Authenticated Messaging](https://blog.iota.org/introducing-masked-authenticated-messaging-e55c1822d50e)
-
-An overview of MAM.
----------------
-
-## Repository
-
-Go to the source code on [Github](https://github.com/iotaledger/mam.js).
-
 ## Supported languages
 
 ### **Official support** ###
@@ -32,6 +19,19 @@ Go to the source code on [Github](https://github.com/iotaledger/mam.js).
 ---
 
 ---------------
+
+## Blog posts
+
+---------------
+#### **Introducing Masked Authenticated Messaging** ####
+[Introducing Masked Authenticated Messaging](https://blog.iota.org/introducing-masked-authenticated-messaging-e55c1822d50e)
+
+An overview of MAM.
+---------------
+
+## Source code
+
+The source code for this project is hosted on [Github](https://github.com/iotaledger/mam.js).
 
 ## Next steps
 

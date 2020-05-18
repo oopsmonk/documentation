@@ -36,7 +36,7 @@ Read the following blog posts about Trinity:
 - [Trinity Public Bug Bounty](https://blog.iota.org/trinity-public-bug-bounty-df9d2512e50)
 - [What’s next for Trinity?](https://blog.iota.org/the-next-steps-for-trinity-f9af3fc64736)
 
-## Repository
+## Source code
 
 Go to the Trinity source code on [Github](https://github.com/iotaledger/trinity-wallet).
 

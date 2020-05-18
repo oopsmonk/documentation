@@ -24,7 +24,7 @@ Compass is an open-source implementation of the Coordinator. You can use Compass
 
 To allow your nodes to reach a consensus, you must configure your nodes to recognize Compass milestones. Then, you can configure Compass to send milestones to one of your nodes at regular intervals.
 
-## Repository
+## Source code
 
 Go to the Compass source code on [Github](https://github.com/iotaledger/compass)
 
