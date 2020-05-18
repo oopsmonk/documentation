@@ -10,4 +10,4 @@
 
 [References/Error messages](/references/error-messages.md)
 
-[Contribute to the project](/contribute.md)
+[Contributing/Contribute to the project](/contribute.md)
