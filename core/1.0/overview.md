@@ -14,23 +14,23 @@ With the core client library, you can:
 
 ---------------
 #### **C** ####
-[Link](/getting-started/get-started-c.md)
+[Link](getting-started/get-started-c.md)
 ---
 
 #### **Go** ####
-[Link](/getting-started/get-started-go.md)
+[Link](getting-started/get-started-go.md)
 ---
 
 #### **Java** ####
-[Link](/getting-started/get-started-java.md)
+[Link](getting-started/get-started-java.md)
 ---
 
 #### **JavaScript** ####
-[Link](/getting-started/get-started-js.md)
+[Link](getting-started/get-started-js.md)
 ---
 
 #### **Python** ####
-[Link](/getting-started/get-started-python.md)
+[Link](getting-started/get-started-python.md)
 
 ---------------
 

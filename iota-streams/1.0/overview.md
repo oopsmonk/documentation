@@ -20,7 +20,7 @@ Messages are intended to be read and processed. After a message is sent, you sho
 
 ---------------
 #### **Rust** ####
-[Link](/guides/building-a-protocol.md/)
+[Link](guides/building-a-protocol.md/)
 ---------------
 
 ## Roadmap
@@ -44,5 +44,5 @@ The source code for this project is hosted on [Github](https://github.com/iotale
 
 ## Next steps
 
-Take a look at how to [build a Streams protocol](/guides/building-a-protocol.md).
+Take a look at how to [build a Streams protocol](guides/building-a-protocol.md).
 
