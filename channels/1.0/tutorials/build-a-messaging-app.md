@@ -247,7 +247,7 @@ In this step, you create the main function that calls the ones you just created.
 
     The subscriber needs all this information to get the messages from the channel.
 
-## Step 4. Set up the subscriber
+## Step 5. Set up the subscriber
 
 In this step, you write a function to read the author's messages from the Tangle and verify them. 
 
