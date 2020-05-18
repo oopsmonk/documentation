@@ -6,7 +6,7 @@
 
 [Protocols/Channels](root://channels/1.0/overview.md)
 
-[Contribute to the project](/contribute.md)
+[Contributing/Contribute to the project](/contribute.md)
 
 
 

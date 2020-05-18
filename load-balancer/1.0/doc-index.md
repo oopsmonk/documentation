@@ -8,5 +8,5 @@
 
 [References/API reference](https://github.com/iotaledger/client-load-balancer/tree/master/docs)
 
-[Contribute to the project](contribute.md)
+[Contributing/Contribute to the project](contribute.md)
 
