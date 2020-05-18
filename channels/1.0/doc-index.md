@@ -1,8 +1,8 @@
 # Index
 
-[Channels overview](/overview.md)
+[Introduction/Overview](/overview.md)
 
-[How Channels works](/how-it-works.md)
+[Introduction/How Channels works](/how-it-works.md)
 
 [Guides/Designing a messaging workflow](/guides/designing-the-workflow.md)
 

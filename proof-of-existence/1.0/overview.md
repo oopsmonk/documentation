@@ -7,10 +7,6 @@ With the proof of existence library, you can:
 - Hash a file and attach it to the Tangle to use as a single source of truth
 - Get the file from the Tangle and verify that the original file is still unchanged
 
-## Repository
-
-Go to the source code on [Github](https://github.com/iotaledger/iota-poex-tool).
-
 ## Supported languages
 
 ### **Official support** ###
@@ -22,6 +18,10 @@ Go to the source code on [Github](https://github.com/iotaledger/iota-poex-tool).
 ---
 
 ---------------
+
+## Source code
+
+The source code for this project is hosted on [Github](https://github.com/iotaledger/iota-poex-tool).
 
 ## Next steps
 

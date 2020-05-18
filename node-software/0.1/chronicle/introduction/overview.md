@@ -44,7 +44,7 @@ Read the following blog posts about Chronicle:
 
 - [Introducing Chronicle - A Permanode Solution](https://blog.iota.org/introducing-chronicle-a-permanode-solution-8e506a2e0813)
 
-## Repository
+## Source code
 
 Go to the Chronicle source code on [Github](https://github.com/iotaledger/chronicle).
 

@@ -57,7 +57,7 @@ Read the following blog posts about Hub:
 - [Introducing IOTA Hub](https://blog.iota.org/introducing-iota-hub-5349bb8a29cd)
 - [Hub Update: Easily Integrate IOTA With Your Exchange, Custody Solution, Or Product](https://blog.iota.org/hub-update-easily-integrate-iota-with-your-exchange-custody-solution-or-product-747181b33d37)
 
-## Repository
+## Source code
 
 Go to the Hub source code on [Github](https://github.com/iotaledger/hub).
 

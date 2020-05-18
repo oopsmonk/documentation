@@ -21,7 +21,7 @@ Read the following blog posts about GoShimmer:
 
 - [Open Sourcing the GoShimmer Prototype](https://blog.iota.org/open-sourcing-of-the-goshimmer-prototype-891c0a8eafcb)
 
-## Repository
+## Source code
 
 Go to the GoShimmer source code on [Github](https://github.com/iotaledger/goshimmer).
 

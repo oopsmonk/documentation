@@ -12,8 +12,7 @@ The client libraries are currently in beta development, and you should not use t
 #### **Core** ####
 [Link](root://core/1.0/overview.md)
 
-Use your favourite language to send request to a node's HTTP API, to create transactions, and convert data to/from trytes and trits.
-
+Use your favourite language to send requests to a node's HTTP API, create transactions, and convert data to or from trytes and trits.
 ---
 
 #### **Account module** ####
@@ -37,17 +36,6 @@ Configure the core client library with backup nodes in case of request errors
 
 Prove that a file is unchanged on the Tangle so that all parties that trust it.
 ---
-#### **Proof of work proxy server** ####
-[Link](root://proof-of-work-proxy/1.0/overview.md)
-
-Install a dedicated proxy server to do proof of work (PoW) for your transactions by intercepting calls to the node's API.
----
-
-#### **Tangle certificates** ####
-[Link](root://tangle-certificate/1.0/overview.md)
-
-Create a custom immutable certificate and control who can issue it.
----
 
 #### **Trytes compressor** ####
 [Link](root://tryte-compress/1.0/overview.md)
@@ -65,3 +53,18 @@ Publish public or private data streams, called channels, in transactions on the 
 ### __Community support__ ###
 
 For community projects, see the [IOTA community GitHub repository](https://github.com/iota-community).
+
+## Utilities and other APIs
+
+---------------
+#### **Proof of work proxy server** ####
+[Link](root://proof-of-work-proxy/1.0/overview.md)
+
+Install a dedicated proxy server to do proof of work (PoW) for your transactions by intercepting calls to the node's API.
+---
+
+#### **Tangle certificates** ####
+[Link](root://tangle-certificate/1.0/overview.md)
+
+Create a custom immutable certificate and control who can issue it.
+---------------

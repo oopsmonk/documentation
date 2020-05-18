@@ -1,6 +1,7 @@
 [Getting Started](/getting-started)
 [Client Libraries](/client-libraries)
 [Streams](/iota-streams)
+[Core](/core)
 [Account module](/account-module)
 [Channels](/channels)
 [IOTA area codes](/iota-area-codes)

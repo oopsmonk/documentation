@@ -1,6 +1,6 @@
 # Index
 
-[Overview](overview.md)
+[Introduction/Overview](overview.md)
 
 [Guides/Building a protocol](/guides/building-a-protocol.md)
 

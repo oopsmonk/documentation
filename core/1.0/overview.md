@@ -14,23 +14,23 @@ With the core client library, you can:
 
 ---------------
 #### **C** ####
-[Link](https://github.com/iotaledger/entangled/tree/develop/cclient)
+[Link](/getting-started/get-started-c.md)
 ---
 
 #### **Go** ####
-[Link](../getting-started/go-quickstart.md)
+[Link](/getting-started/get-started-go.md)
 ---
 
 #### **Java** ####
-[Link](../getting-started/java-quickstart.md)
+[Link](/getting-started/get-started-java.md)
 ---
 
 #### **JavaScript** ####
-[Link](../getting-started/js-quickstart.md)
+[Link](/getting-started/get-started-js.md)
 ---
 
 #### **Python** ####
-[Link](../getting-started/python-quickstart.md)
+[Link](/getting-started/get-started-python.md)
 
 ---------------
 
@@ -40,7 +40,3 @@ With the core client library, you can:
 #### __C#__ ####
 [Link](https://github.com/iota-community/tangle-.net)
 ---------------
-
-## Next steps
-
-[Understand how Channels works](/how-it-works.md).
