@@ -10,9 +10,13 @@ Installing Android apps, or APKs, from sources outside of the Play Store is dang
 On 11 February 2020, the IOTA Foundation became aware of an attack on the Trinity wallet, during which some users’ seeds and Trinity passwords were compromised. Please check our advice for [protecting your Trinity account](../how-to-guides/protect-trinity-account.md).
 :::
 
-To verify the authenticity of Trinity Mobile for Android, you can check its SHA256 hash and its code signature. Instructions for both of these steps differ--verification of the SHA256 hash can be done from your Android device, but a computer is required in order to verify the code signature.
+To verify the authenticity of Trinity Mobile for Android, you can check its SHA256 hash and its code signature.
 
-### Verify the SHA256 hash
+## Prerequisites
+To verify the SHA256 hash, you can use your Android device.
+To verify the code signature, you'll need a computer with the [Java Development Kit (JDK)](https://www.oracle.com/java/technologies/javase-downloads.html) installed.
+
+## Verify the SHA256 hash
 
 1. Go to https://www.sisik.eu/hash.
 
@@ -22,24 +26,21 @@ To verify the authenticity of Trinity Mobile for Android, you can check its SHA2
 
 4. Compare your SHA256 hash with the one in the [release notes](https://github.com/iotaledger/trinity-wallet/releases) and make sure that they match
 
-### Verify the code signature
+## Verify the code signature
 
-#### Prerequisites
-To follow these instructions you will need a computer with [Java Development Kit (JDK)](https://www.oracle.com/java/technologies/javase-downloads.html) installed.
-
-1. Download the Trinity APK to your computer
+1. Download the Trinity APK to your computer.
 
 2. Open a command-line interface such as Terminal or PowerShell.
 
 3. Verify the signature of the Trinity APK, replacing the path with the path to your Trinity APK on your computer:
-```bash
-keytool -printcert -jarfile path/to/trinity.apk
-```
+		```bash
+		keytool -printcert -jarfile path/to/trinity.apk
+		```
 
 For example, if the APK is in `~/Downloads`:
-```bash
-keytool -printcert -jarfile ~/Downloads/app-release-bitrise-signed.apk
-```
+		```bash
+		keytool -printcert -jarfile ~/Downloads/app-release-bitrise-signed.apk
+		```
 
 4. Make sure that the following information matches the output of the command:
 
