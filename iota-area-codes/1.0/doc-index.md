@@ -10,5 +10,5 @@
 
 [References/API reference](https://github.com/iotaledger/iota-area-codes/blob/master/docs/api.md)
 
-[Contribute to the project](contribute.md)
+[Contributing/Contribute to the project](contribute.md)
 

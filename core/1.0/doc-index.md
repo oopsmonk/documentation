@@ -90,4 +90,4 @@
 
 [References/API reference/Python](https://pyota.readthedocs.io/en/latest/)
 
-[Contribute to the project](contribute.md)
+[Contributing/Contribute to the project](contribute.md)
