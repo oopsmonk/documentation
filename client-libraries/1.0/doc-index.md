@@ -6,10 +6,6 @@
 
 [Getting started/Go](/getting-started/go-quickstart.md)
 
-[Channels](root://channels/1.0/overview.md)
-
-[IOTA area codes](root://iota-area-codes/1.0/overview.md)
-
 [Getting started/JavaScript](/getting-started/js-quickstart.md)
 
 [Getting started/Python](/getting-started/python-quickstart.md)
