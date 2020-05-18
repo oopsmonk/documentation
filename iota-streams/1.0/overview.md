@@ -14,6 +14,15 @@ Here are just a few ideas of what you can build with Streams:
 
 Messages are intended to be read and processed. After a message is sent, you should not rely on being able to read that message again.
 
+## Supported languages
+
+### **Official support** ###
+
+---------------
+#### **Rust** ####
+[Link](/guides/building-a-protocol.md/)
+---------------
+
 ## Roadmap
 
 Streams is in the alpha phase of the release cycle. The purpose of this version of Streams is to get some feedback before we progress towards the final implementation.
@@ -29,9 +38,9 @@ See the [roadmap](https://roadmap.iota.org/masked-authenticated-messaging-v1_1) 
 An overview of the alpha release of Streams.
 ---------------
 
-## Repository
+## Source code
 
-Go to the Streams source code on [Github](https://github.com/iotaledger/streams).
+The source code for this project is hosted on [Github](https://github.com/iotaledger/streams).
 
 ## Next steps
 
