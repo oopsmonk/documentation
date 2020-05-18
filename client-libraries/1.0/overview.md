@@ -12,7 +12,7 @@ The client libraries are currently in beta development, and you should not use t
 #### **Core** ####
 [Link](root://core/1.0/overview.md)
 
-Use your favourite language to send request to a node's HTTP API, create transactions, and convert data to or from trytes and trits.
+Use your favourite language to send requests to a node's HTTP API, create transactions, and convert data to or from trytes and trits.
 ---
 
 #### **Account module** ####
