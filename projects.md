@@ -1,5 +1,6 @@
 [Getting Started](/getting-started)
 [Client Libraries](/client-libraries)
+[Core](/core)
 [Account module](/account-module)
 [IOTA area codes](/iota-area-codes)
 [Client load balancer](/load-balancer)

@@ -12,7 +12,7 @@ All the following commands must include an HTTP header.
 
 
 :::warning:
-This API is in beta and subject to change. We recommend that you don't use this API in production applications.
+This API is in beta and subject to change. We donrecommend that you don't use this API in production applications.
 :::
 
 ## addNeighbors

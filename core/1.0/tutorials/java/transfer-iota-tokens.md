@@ -168,4 +168,4 @@ For example, you are online shopping and the checkout has a QR code that gives y
 
 During the time it takes you to complete the checkout and send your transfer bundle, the website owner withdraws IOTA tokens from the address in the QR code. Now that address is spent, and you have just sent IOTA tokens to it.
 
-To help stop this from happening, we recommend using the [account module](../../account-module/introduction/overview.md) to create conditional deposit addresses that specify whether they are active or expired.
+To help stop this from happening, we recommend using the [account module](root://account-module/1.0/overview.md) to create conditional deposit addresses that specify whether they are active or expired.
