@@ -15,7 +15,7 @@ With MAM, you can:
 ---------------
 
 #### **JavaScript** ####
-[Link](/tutorials/js)
+[Link](tutorials/js)
 ---
 
 ---------------
@@ -35,4 +35,4 @@ The source code for this project is hosted on [Github](https://github.com/iotale
 
 ## Next steps
 
-[Understand how MAM works](/how-it-works.md).
+[Understand how MAM works](how-it-works.md).

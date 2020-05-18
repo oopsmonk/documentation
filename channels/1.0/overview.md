@@ -18,7 +18,7 @@ Messages are intended to be read and processed. After a message is sent, you sho
 
 ---------------
 #### **Rust** ####
-[Link](/guides/designing-the-workflow.md/)
+[Link](guides/designing-the-workflow.md/)
 ---------------
 
 ## Roadmap
@@ -42,4 +42,4 @@ The source code for this project is hosted on [Github](https://github.com/iotale
 
 ## Next steps
 
-[Learn how Channels works](/how-it-works.md).
+[Learn how Channels works](how-it-works.md).

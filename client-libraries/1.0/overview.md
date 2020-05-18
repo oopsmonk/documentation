@@ -48,6 +48,12 @@ Prove that a file is unchanged on the Tangle so that all parties that trust it.
 Store transaction trytes in a smaller memory space so you can later rebroadcast or reattach them.
 ---
 
+#### **Tangle certificates** ####
+[Link](root://tangle-certificate/1.0/overview.md)
+
+Create a custom immutable certificate and control who can issue it.
+---
+
 #### **MAM (deprecated)** ####
 [Link](root://mam/1.0/overview.md)
 
@@ -59,17 +65,11 @@ Publish public or private data streams, called channels, in transactions on the 
 
 For community projects, see the [IOTA community GitHub repository](https://github.com/iota-community).
 
-## Utilities and other APIs
+## Utilities
 
 ---------------
 #### **Proof of work proxy server** ####
 [Link](root://proof-of-work-proxy/1.0/overview.md)
 
 Install a dedicated proxy server to do proof of work (PoW) for your transactions by intercepting calls to the node's API.
----
-
-#### **Tangle certificates** ####
-[Link](root://tangle-certificate/1.0/overview.md)
-
-Create a custom immutable certificate and control who can issue it.
 ---------------

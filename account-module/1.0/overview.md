@@ -20,15 +20,15 @@ To benefit from the account module, both the sender and receiver must use it to 
 ---------------
 
 #### **Go** ####
-[Link](/getting-started/get-started-go.md)
+[Link](getting-started/get-started-go.md)
 ---
 
 #### **Java** ####
-[Link](/getting-started/get-started-java.md)
+[Link](getting-started/get-started-java.md)
 ---
 
 #### **JavaScript** ####
-[Link](/getting-started/get-started-js.md)
+[Link](getting-started/get-started-js.md)
 ---
 
 ---------------
@@ -54,4 +54,4 @@ The source code for this project is hosted on [Github](https://github.com/iotale
 
 ## Next steps
 
-[Learn how the account module works](/how-it-works.md).
+[Learn how the account module works](how-it-works.md).

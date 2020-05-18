@@ -14,7 +14,7 @@ With the proof of existence library, you can:
 ---------------
 
 #### **JavaScript** ####
-[Link](/getting-started/prove-a-file-is-unchanged.md)
+[Link](getting-started/prove-a-file-is-unchanged.md)
 ---
 
 ---------------
@@ -25,4 +25,4 @@ The source code for this project is hosted on [Github](https://github.com/iotale
 
 ## Next steps
 
-[Get started](/getting-started/prove-a-file-is-unchanged.md).
+[Get started](getting-started/prove-a-file-is-unchanged.md).

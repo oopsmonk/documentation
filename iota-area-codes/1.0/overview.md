@@ -13,7 +13,7 @@ With IACs, you can:
 
 ---------------
 #### **JavaScript** ####
-[Link](/getting-started/tag-a-transaction.md)
+[Link](getting-started/tag-a-transaction.md)
 ---
 
 ---------------
@@ -33,5 +33,5 @@ The source code for this project is hosted on [Github](https://github.com/iotale
 
 ## Next steps
 
-[Understand how IACs work](/how-it-works.md).
+[Understand how IACs work](how-it-works.md).
 

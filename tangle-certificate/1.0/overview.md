@@ -15,11 +15,11 @@ With the Tangle certificates API, you can:
 ---------------
 
 #### **JavaScript** ####
-[Link](/getting-started/create-certificate.md)
+[Link](getting-started/create-certificate.md)
 ---
 
 ---------------
 
 ## Next steps
 
-[Get started](/getting-started/create-certificate.md).
+[Get started](getting-started/create-certificate.md).

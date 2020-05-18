@@ -18,11 +18,11 @@ With the trytes compressor, you can:
 ---------------
 
 #### **JavaScript** ####
-[Link](/getting-started/compress-transaction.md)
+[Link](getting-started/compress-transaction.md)
 ---
 
 ---------------
 
 ## Next steps
 
-[Get started](/getting-started/compress-transaction.md).
+[Get started](getting-started/compress-transaction.md).
