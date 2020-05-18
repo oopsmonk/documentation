@@ -76,13 +76,19 @@ The way that messages are linked affects whether receivers (the author and subsc
 
 ### Publishing public payloads
 
-The most basic messaging workflow for publishing **public payloads** on a channel is where all messages are linked to the `Announce` message. In this workflow, subscribers only rely on the `Announce` message to be able to process the author's `SignedPacket` messages.
+The most basic messaging workflow for publishing **public payloads** on a channel is where all messages are linked to the `Announce` message. In this workflow, subscribers only rely on the `Announce` message to be able to process the author's `SignedPacket` or `TaggedPacket` messages.
 
 ![Annonce message linked to a SignedPacket message](../images/signedpacket-workflow.png)
 
-### Publishing masked payloads
+:::info:
+`SignedPacket` messages can be sent only by the author.
 
-In general, all masked payloads rely on a `Keyload` message. This message contains an encrypted session key that allows authorized subscribers to do the following:
+When `SignedPacket` or `TaggedPacket` messages are attached to an `Announce` message, any masked payloads in them can be read by everyone.
+:::
+
+### Publishing masked payloads that are encrypted
+
+For masked payloads to be encrypted, they must be linked to a `Keyload` message. This message contains the encrypted session key that allows authorized subscribers to do the following:
 
 - Decrypt the author's masked payloads in future messages that are linked to the `Keyload` message
 - Encrypt their own masked payloads in `TaggedPacket` messages
