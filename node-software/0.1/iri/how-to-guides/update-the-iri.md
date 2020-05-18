@@ -1,6 +1,6 @@
 # Upgrade IRI
 
-**When a new version of [IRI is released on GitHub](https://github.com/iotaledger/iri/releases), we recommend that you upgrade your local IRI to the new version. In this guide, you upgrade IRI to the latest version.**
+**IRI is in a beta development stage, so it's likely to change, meaning that you'll need to update it. In this tutorial, you update IRI to the latest version.**
 
 ## Upgrade to version 1.8.6
 
