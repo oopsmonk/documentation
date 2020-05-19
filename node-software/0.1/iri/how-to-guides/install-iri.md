@@ -36,11 +36,9 @@ To run IRI, you download and run the [IRI Docker image](https://hub.docker.com/r
 
 2\. [Find some neighbors](../how-to-guides/find-neighbor-iri-nodes.md) that are running on your chosen IOTA network and make a note of their URLs or IP addresses
 
-3\. Create a configuration file in the same directory as your IRI Java file, and add your configuration options to it. Replace `jake` with your Linux username.
+3\. Make a directory on your host system in which to save the IRI files
 
-```bash
-nano /home/jake/node/config.ini
-```
+4\. Create a `config.ini` file in that directory, and add your configuration options to it
 
 These are some example configurations:
 
@@ -53,7 +51,7 @@ This file configures IRI to run on the Mainnet, exposes the API on port 14265, a
 [IRI]
 PORT = 14265
 NEIGHBORING_SOCKET_PORT = 15600
-NEIGHBORS = tcp://my.favorite.com:15600 tcp://my.other.favorite.com:15600 
+NEIGHBORS = 
 IXI_DIR = ixi
 DEBUG = false
 DB_PATH = mainnetdb
@@ -81,11 +79,13 @@ LOCAL_SNAPSHOTS_PRUNING_ENABLED = true
 ```
 --------------------
 
-4\. Download the IRI Docker image and run it, passing in your configuration file
+5\. Download the IRI Docker image and run it. Replace the `$PATH_TO_DIRECTORY` placeholder with the path to the directory where you saved the configuration file.
 
 ```bash
-docker run --name iri iotaledger/iri:latest -c /path/to/conf/config.ini
+docker run --name iri --net=host -v $PATH_TO_DIRECTORY/config.ini:/path/to/conf/config.ini iotaledger/iri:latest -c /path/to/conf/config.ini
 ```
+
+This command mounts the configuration file to the `path/to/conf` folder on the Docker container. You can change this path to mount the configuration file to a different folder.
 
 :::info:
 To have the IRI Docker container restart on every reboot, add the `--restart=always` flag to the `docker run` command.
@@ -95,7 +95,7 @@ To have the IRI Docker container restart on every reboot, add the `--restart=alw
 IRI is running in the background! Now, you can use the IRI API to start interacting with the Tangle.
 :::
 
-5\. Call the [getNodeInfo](../references/api-reference.md#getnodeinfo) endpoint to request general information about the IRI node
+6\. Call the [getNodeInfo](../references/api-reference.md#getnodeinfo) endpoint to request general information about the IRI node
 
     ```bash
     curl -s http://localhost:14265 -X POST -H 'X-IOTA-API-Version: 1' -H 'Content-Type: application/json' -d '{"command": "getNodeInfo"}' | jq
@@ -125,6 +125,7 @@ IRI is running in the background! Now, you can use the IRI API to start interact
     "transactionsToRequest":0,
     "features":["snapshotPruning","dnsRefresher","tipSolidification"],
     "coordinatorAddress": "EQSAUZXULTTYZCLNJNTXQTQHOMOFZERHTCGTXOLTVAHKSA9OGAZDEKECURBRIXIJWNPFCQIOVFVVXJVD9",
+    "dbSizeInBytes": 144800000,
     "duration": 0
     }
     ```
@@ -185,19 +186,19 @@ The pre-built IRI Java file is available on the [IOTA GitHub repository](https:/
     ```
 
     :::info:
-    Make sure that you include the whole version, for example 1.6.0-RELEASE.
+    Make sure that you include the whole version, for example 1.8.6-RELEASE.
     :::
 
 The download may take some time. If everything went well, you should see something like the following in the output:
 
 ```
 HTTP request sent, awaiting response ... 200 OK
-'/home/jake/node/iri-1.8.4-RELEASE.jar' saved [175441686/175441686]
+'/home/jake/node/iri-1.8.6-RELEASE.jar' saved [175441686/175441686]
 ```
 
 Now you can [configure IRI](#configure-the-iri).
 
-#### Build the IRI Java file from the source code
+#### Build the IRI Java file from source
 
 Instead of downloading the pre-built IRI Java file, you may want to build the file from the source code for any of the following reasons:
 
@@ -212,29 +213,11 @@ Instead of downloading the pre-built IRI Java file, you may want to build the fi
     sudo apt-get update
     ```
 
-2. Install the [Maven](https://maven.apache.org/what-is-maven.html) build tool. Change the `USER_HOME_DIR` variable to your chosen path.
+2. Install the [Maven](https://maven.apache.org/what-is-maven.html) build tool
 
     ```bash
-    export MAVEN_VERSION=3.5.4
-    export USER_HOME_DIR="/root"
-    export SHA=ce50b1c91364cb77efe3776f756a6d92b76d9038b0a0782f7d53acf1e997a14d
-    export BASE_URL=https://apache.osuosl.org/maven/maven-3/${MAVEN_VERSION}/binaries
-    sudo apt-get update && apt-get install -y --no-install-recommends curl
-    sudo mkdir -p /usr/share/maven /usr/share/maven/ref
-    sudo curl -fsSL -o /tmp/apache-maven.tar.gz ${BASE_URL}/apache-maven-${MAVEN_VERSION}-bin.tar.gz
-
-    # Check the sha256 checksum, the output should read 'OK' if the checksum is correct
-
-    echo "${SHA} /tmp/apache-maven.tar.gz" | sha256sum -c -
-    sudo tar -xzf /tmp/apache-maven.tar.gz -C /usr/share/maven --strip-components=1
-    sudo rm -f /tmp/apache-maven.tar.gz
-    export MAVEN_HOME=/usr/share/maven
-    export MAVEN_CONFIG="${USER_HOME_DIR}/.m2"
+    sudo apt install maven
     ```
-
-    :::info:
-    The SHA256 checksum is also available on the [Apache website](https://archive.apache.org/dist/maven/maven-3/3.5.4/binaries/apache-maven-3.5.4-bin.tar.gz.sha256).
-    :::
 
 3. Install Git
 
@@ -271,17 +254,17 @@ IRI runs in a Java virtual machine, which you can optimize by setting some Java 
 
 1\. Define the Java variables to optimize the Java virtual machine
 
-    ```bash
-    export JAVA_OPTIONS="-XX:+UnlockExperimentalVMOptions -XX:+DisableAttachMechanism -XX:InitiatingHeapOccupancyPercent=60 -XX:G1MaxNewSizePercent=75 -XX:MaxGCPauseMillis=10000 -XX:+UseG1GC"
-    export JAVA_MIN_MEMORY=2G
-    export JAVA_MAX_MEMORY=4G
-    ```
+```bash
+export JAVA_OPTIONS="-XX:+UnlockExperimentalVMOptions -XX:+DisableAttachMechanism -XX:InitiatingHeapOccupancyPercent=60 -XX:G1MaxNewSizePercent=75 -XX:MaxGCPauseMillis=10000 -XX:+UseG1GC"
+export JAVA_MIN_MEMORY=2G
+export JAVA_MAX_MEMORY=4G
+```
 
-    **JAVA_OPTIONS:** Commands that optimize the Java virtual machine
+**JAVA_OPTIONS:** Commands that optimize the Java virtual machine
 
-    **JAVA_MIN_MEMORY:** The initial memory allocation for the Java virtual machine
-    
-    **JAVA_MAX_MEMORY:** the maximum memory allocation for the Java virtual machine
+**JAVA_MIN_MEMORY:** The initial memory allocation for the Java virtual machine
+
+**JAVA_MAX_MEMORY:** the maximum memory allocation for the Java virtual machine
 
 2\. [Plan how you want to configure IRI](../how-to-guides/configure-iri.md)
 
@@ -304,7 +287,7 @@ This file configures IRI to run on the Mainnet, exposes the API on port 14265, a
 [IRI]
 PORT = 14265
 NEIGHBORING_SOCKET_PORT = 15600
-NEIGHBORS = tcp://my.favorite.com:15600 tcp://my.other.favorite.com:15600 
+NEIGHBORS = 
 IXI_DIR = ixi
 DEBUG = false
 DB_PATH = mainnetdb
@@ -334,15 +317,15 @@ LOCAL_SNAPSHOTS_PRUNING_ENABLED = true
 
 5\. Download the latest spent addresses file and snapshot files, which contains the latest data for the Devnet and Mainnet IOTA networks. This directory is available on [the IOTA Foundation's website](https://dbfiles.iota.org/?prefix=mainnet/iri/local-snapshots-and-spent-addresses/)
 
-    :::info:
-    Make sure you download the correct directory for your chosen IOTA network.
-    :::
+:::info:
+Make sure you download the correct directory for your chosen IOTA network.
+:::
 
 6\. Extract the directories in the same directory as your IRI Java file. Replace `jake` with your Linux username, and replace the `$FILE_NAME` placeholder with the name of the file you downloaded.
 
-    ```bash
-    tar -xzvf /home/jake/node/$FILE_NAME
-    ```
+```bash
+tar -xzvf /home/jake/node/$FILE_NAME
+```
     
 ### Step 3. Run IRI
 
@@ -400,6 +383,7 @@ When you've downloaded, and configured IRI, it's time to run it.
     "transactionsToRequest":0,
     "features":["snapshotPruning","dnsRefresher","tipSolidification"],
     "coordinatorAddress": "EQSAUZXULTTYZCLNJNTXQTQHOMOFZERHTCGTXOLTVAHKSA9OGAZDEKECURBRIXIJWNPFCQIOVFVVXJVD9",
+    "dbSizeInBytes": 144800000,
     "duration": 0
     }
     ```

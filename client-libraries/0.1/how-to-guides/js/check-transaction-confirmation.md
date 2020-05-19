@@ -43,11 +43,7 @@ In this tutorial, we connect to a node on the [Devnet](root://getting-started/0.
 
     When you execute the file, you should see an array that contains the `true` boolean, meaning that the transaction is confirmed.
 
-    :::info:
-    You could also use the `getInclusionStates()` method to check if a transaction is approved by an array of your own chosen transactions.
-    :::
-
-5. Go to [devnet.thetangle.org](https://devnet.thetangle.org) and find a pending transaction
+5. Go to [utils.iota.org](https://utils.iota.org) and find a pending transaction
 
     :::info:Can't find a pending transaction?
     Click a transaction hash in the Latest transactions box. This transaction is a tip, so it is in a pending state.
