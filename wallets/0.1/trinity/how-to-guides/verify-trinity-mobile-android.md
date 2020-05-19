@@ -33,11 +33,12 @@ To verify the code signature, you'll need a computer with the [Java Development 
 2. Open a command-line interface such as Terminal or PowerShell.
 
 3. Verify the signature of the Trinity APK, replacing the path with the path to your Trinity APK on your computer:
+
 		```bash
 		keytool -printcert -jarfile path/to/trinity.apk
 		```
 
-For example, if the APK is in `~/Downloads`:
+		For example, if the APK is in `~/Downloads`:
 		```bash
 		keytool -printcert -jarfile ~/Downloads/app-release-bitrise-signed.apk
 		```
