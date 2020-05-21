@@ -123,7 +123,7 @@ The output should display something like the following:
 ```
 
 :::info:Want to know what these fields mean?
-[Take a look at the `getNodeInfo()` API reference](root://node-software/0.1/iri/references/api-reference.md#getnodeinfo).
+[Take a look at the `getNodeInfo()` endpoint](root://iri/1.0/references/iri-api-reference.md#getnodeinfo).
 :::
 
 ## Run the code

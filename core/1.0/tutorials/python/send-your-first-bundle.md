@@ -72,7 +72,7 @@ In this tutorial, we connect to a [node](root://getting-started/0.1/network/node
     The Python library makes a disctinction between proposed and regular transaction objects. Proposed transaction objects are those that you can edit because they are not yet attached to the Tangle. In contrast, regular transaction objects are immutable because they are already attached to the Tangle.
     :::
 
-6. Pass your `ProposedTransaction` object to the [`send_transfer()`](https://pyota.readthedocs.io/en/latest/api.html#send-transfer) method to do [tip selection](root://node-software/0.1/iri/concepts/tip-selection.md), [remote proof of work](root://getting-started/0.1/transactions/proof-of-work.md), and to send the bundle to the node
+6. Pass your `ProposedTransaction` object to the [`send_transfer()`](https://pyota.readthedocs.io/en/latest/api.html#send-transfer) method to do [tip selection](root://getting-started/0.1/network/tip-selection.md), [remote proof of work](root://getting-started/0.1/transactions/proof-of-work.md), and to send the bundle to the node
 
     ```python
     result = api.send_transfer(transfers = [tx])
@@ -91,7 +91,7 @@ You can use this tail transaction hash to read the transaction from the Tangle.
 :::warning:
 Nodes can delete old transactions from their local copies of the Tangle. Therefore, a time may come where you request your transaction from a node, but the node doesn't have it anymore.
 
-If you want to store data on the Tangle for extended periods of time, we recommend either [running your own node](root://node-software/0.1/iri/how-to-guides/quickstart.md) or running a permanode such as [Chronicle](root://node-software/0.1/chronicle/introduction/overview.md).
+If you want to store data on the Tangle for extended periods of time, we recommend [running your own node](root://node-software/1.0/overview.md).
 :::
 
 ## Run the code

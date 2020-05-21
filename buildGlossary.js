@@ -10,17 +10,15 @@ function capitalize(string)
 }
 
 function convertToDefinitionList (termsObj) {
-    var newFile = fs.createWriteStream('glossary-definition-list.md');
+    var newFile = fs.createWriteStream('getting-started/references/terminology.md');
 
-    newFile.write('# Glossary\r\n\r\n**This glossary contains definitions of terms that are used in IOTA.**\r\n\r\nTerms are listed in alphabetical order.\r\n');
+    newFile.write('# Terminology\r\n\r\n**This termbase contains definitions of terms that are used in IOTA.**\r\n\r\nTerms are listed in alphabetical order.\r\n');
 
     // Access categories, terms, and definitions
     for(var i = 0; i < termsObj.length; i++){
 
-        newFile.write('\r\n## ' + capitalize(termsObj[i].cat) + '\r\n\r\n' )
-
         for(term in termsObj[i].terms ){
-            newFile.write('<dl><dt>' + term + '</dt>' + '<dd>' + termsObj[i].terms[term] + '</dd>' + '</dl>' + '\r\n');
+            newFile.write(`##${term}\\r\\n_${term.pos}_\\r\\n${term.definition}\\r\\n`);
         }
     }
 }

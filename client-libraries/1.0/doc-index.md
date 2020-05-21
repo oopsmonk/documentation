@@ -22,14 +22,10 @@
 
 [Client libraries/Proof of existence](root://proof-of-existence/1.0/overview.md)
 
+[Client libraries/Tangle certificates](root://tangle-certificate/1.0/overview.md)
+
 [Client libraries/Trytes compressor](root://tryte-compress/1.0/overview.md)
 
 [Client libraries/MAM](root://mam/1.0/overview.md)
 
 [Utilities/Proof of work proxy server](root://proof-of-work-proxy/1.0/overview.md)
-
-[API/Tangle certificates](root://tangle-certificate/1.0/overview.md)
-
-[API reference/Node HTTP API](root://node-software/0.1/iri/references/api-reference.md)
-
-[API reference/Node ZMQ events](root://node-software/0.1/iri/references/zmq-events.md)

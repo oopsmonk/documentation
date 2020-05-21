@@ -28,7 +28,7 @@ To rebroadcast a bundle means to send the same bundle to a node again. This way,
 
 ## Promote
 
-To promote a bundle means to increase its chances of being selected during [tip selection](root://node-software/0.1/iri/concepts/tip-selection.md) by increasing the cumulative weight of its tail transaction. When you promote a bundle, you create and send a zero-value transaction that references both its tail transaction and the latest milestone.
+To promote a bundle means to increase its chances of being selected during [tip selection](root://getting-started/0.1/network/tip-selection.md) by increasing the cumulative weight of its tail transaction. When you promote a bundle, you create and send a zero-value transaction that references both its tail transaction and the latest milestone.
 
 Promoting a bundle is often more effective than reattaching a bundle, unless the bundle you're promoting leads to an inconsistent state (double spend) or is older than the last six milestones.
 

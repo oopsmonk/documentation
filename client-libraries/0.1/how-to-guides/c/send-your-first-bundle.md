@@ -69,7 +69,7 @@ These settings are defined in a `config.h` file, which we create in the [getting
 
     The library expects the values of the transaction fields in trits, so we convert the trytes to trits before adding them to the `transfer` object.
 
-5. To create a bundle from your `transfers` array, pass it to the [`iota_client_send_transfer()`](https://github.com/iotaledger/entangled/blob/develop/cclient/api/extended/send_transfer.h) method, which handles [tip selection](root://node-software/0.1/iri/concepts/tip-selection.md), [remote proof of work](root://getting-started/0.1/transactions/proof-of-work.md), and sending the bundle to the node
+5. To create a bundle from your `transfers` array, pass it to the [`iota_client_send_transfer()`](https://github.com/iotaledger/entangled/blob/develop/cclient/api/extended/send_transfer.h) method, which handles [tip selection](root://getting-started/0.1/network/tip-selection.md), [remote proof of work](root://getting-started/0.1/transactions/proof-of-work.md), and sending the bundle to the node
 
     ```cpp
     // Create a bundle from the transfers array and send it to the node

@@ -8,7 +8,7 @@ To test and deploy this application, you need the following:
 
 - Node.js installed on your device
 - An instance of a [Firebase server](https://firebase.google.com/)
-- Access to an [IRI node's API](root://node-software/0.1/iri/how-to-guides/get-started-with-the-api.md)
+- Access to a [node's API](root://api-reference/1.0/overview.md)
 
 ## Deploy the track and trace app
 

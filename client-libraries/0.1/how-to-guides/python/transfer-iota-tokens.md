@@ -100,7 +100,7 @@ To transfer your test tokens from one address to another, you need to create and
     )
     ```
 
-6. To create a transfer bundle from your `ProposedTransaction` object, pass it to the [`send_transfer()`](https://pyota.readthedocs.io/en/latest/api.html#send-transfer) method, which handles [tip selection](root://node-software/0.1/iri/concepts/tip-selection.md), [remote proof of work](root://getting-started/0.1/transactions/proof-of-work.md), and sending the bundle to the [node](root://getting-started/0.1/network/nodes.md)
+6. To create a transfer bundle from your `ProposedTransaction` object, pass it to the [`send_transfer()`](https://pyota.readthedocs.io/en/latest/api.html#send-transfer) method, which handles [tip selection](root://getting-started/0.1/network/tip-selection.md), [remote proof of work](root://getting-started/0.1/transactions/proof-of-work.md), and sending the bundle to the [node](root://getting-started/0.1/network/nodes.md)
 
     ```python
     result = api.send_transfer(transfers=[tx] )

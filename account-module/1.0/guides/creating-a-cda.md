@@ -18,7 +18,7 @@ When you create a CDA, you must specify the `timeout_at` field to define at what
 
 The expiry time that you choose depends on how fast you expect the depositor to make a deposit. If you are in direct contact with the depositor and you are both waiting to settle the transfer, you can specify a shorter timeout. If you're not sure who the depositor is, for example if the CDA is used for accepting donations, you can specify a longer timeout.
 
-:::info
+:::info:
 If a CDA is created with only the `timeout_at` field, it can be used in withdrawals as soon as it has a non-zero balance even if it hasn't expired. Therefore, to avoid withdrawing from a spent address, we recommend allowing more than one deposit or setting a balance limit whenever possible.
 :::
 

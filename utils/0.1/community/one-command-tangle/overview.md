@@ -10,7 +10,7 @@ For quickstart instructions or to read the source code, [go to the GitHub reposi
 This code still in beta development. Do not use this code in production environments.
 :::
 
-The test network runs one [IRI node](root://node-software/0.1/iri/introduction/overview.md) and an instance of [Compass](root://compass/0.1/introduction/overview.md) on your localhost (not connected to the Internet).
+The test network runs one [IRI node](root://iri/1.0/overview.md) and an instance of [Compass](root://compass/0.1/introduction/overview.md) on your localhost (not connected to the Internet).
 
 The IRI node receives transactions, validates them, and keeps an up-to-date record of users' balances.
 
@@ -84,11 +84,11 @@ If you want to use all the functionalities of the utilities website, you need th
 
 When the application is running, you can interact with the network through the IRI node's API port at the following address `http://localhost:14265`.
 
-See a list of [API endpoints](root://node-software/0.1/iri/references/api-reference.md).
+See a list of [API endpoints](root://iri/1.0/references/iri-api-reference.md).
 
 --------------------
 ### GetBalances
-Using the [core JavaScript client library](root://core/1.0/overview.md) with Node.js, you can call the [`getBalances`](root://node-software/0.1/iri/references/api-reference.md#getbalances) endpoint to get the total balance of the seed.
+Using the [core JavaScript client library](root://core/1.0/overview.md) with Node.js, you can call the [`getBalances`](root://iri/1.0/references/iri-api-reference.md#getbalances) endpoint to get the total balance of the seed.
 
 
  ```js
