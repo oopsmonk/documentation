@@ -6,6 +6,8 @@
 
 [Getting started/Go](/getting-started/go-quickstart.md)
 
+[Getting started/Java](/getting-started/java-quickstart.md)
+
 [Getting started/JavaScript](/getting-started/js-quickstart.md)
 
 [Getting started/Python](/getting-started/python-quickstart.md)

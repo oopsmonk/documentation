@@ -13,7 +13,7 @@ By running a GoShimmer node, you can test the cutting-edge developments in the n
 
 GoShimmer is a prototype node software that the Research Department are developing to test a [Coordicide](https://coordicide.iota.org) alphanet.
 
-When all the modules become available, the GoShimmer nodes will become the Coordicide testnet, which is a release candidate for the next IOTA protocol.
+When all the modules become available, the GoShimmer nodes will become the Coordicide testnet: A release candidate for the next IOTA protocol.
 
 See the [roadmap](https://roadmap.iota.org/goshimmer-alphanet) for more information.
 
