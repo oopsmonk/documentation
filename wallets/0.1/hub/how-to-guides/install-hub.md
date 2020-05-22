@@ -13,7 +13,7 @@ In this tutorial, you download the Hub Docker image and run it in a Docker conta
 
 ### Prerequisites
 
-To complete this guide, you need the following:
+To complete this tutorial, you need the following:
 
 - [Git](https://git-scm.com/downloads)
 - [Docker](https://docs.docker.com/install/#supported-platforms)
@@ -211,7 +211,7 @@ In this tutorial, you install Hub on Ubuntu 18.04 and manage it in a supervisor 
 
 ### Prerequisites
 
-To complete this guide, you need an [Ubuntu 18.04 LTS](https://www.ubuntu.com/download/server) server. If you are on a Windows or Mac operating system, you can [create a Linux server in a virtual machine](root://general/0.1/how-to-guides/set-up-virtual-machine.md).
+To complete this tutorial, you need an [Ubuntu 18.04 LTS](https://www.ubuntu.com/download/server) server. If you are on a Windows or Mac operating system, you can [create a Linux server in a virtual machine](root://general/0.1/how-to-guides/set-up-virtual-machine.md).
 
 ### Step 1. Install the dependencies
 

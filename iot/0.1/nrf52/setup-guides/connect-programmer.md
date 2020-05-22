@@ -4,7 +4,7 @@
 
 ## Hardware
 
-To complete this guide, you need the following:
+To complete this tutorial, you need the following:
 
 - Linux-based PC to which to connect the programmer
 - An nRF52-series microcontroller

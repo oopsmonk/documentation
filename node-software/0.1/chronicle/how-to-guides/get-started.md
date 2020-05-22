@@ -10,7 +10,7 @@ This is an alpha project that we will continue to develop and rewrite in Rust, w
 
 ## Prerequisites
 
-To complete this guide, you need the following:
+To complete this tutorial, you need the following:
 
 - [Create a Scylla cluster on a single data center](https://docs.scylladb.com/operating-scylla/procedures/cluster-management/create_cluster/) (Scylla version 3.0.6 or later). At the moment, Chronicle supports only clusters in a single data center.
 

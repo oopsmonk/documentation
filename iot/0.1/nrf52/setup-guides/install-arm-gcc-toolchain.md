@@ -4,7 +4,7 @@
 
 ## Hardware
 
-To complete this guide, you need a Linux PC.
+To complete this tutorial, you need a Linux PC.
 
 ---
 

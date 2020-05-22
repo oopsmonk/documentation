@@ -4,7 +4,7 @@
 
 ## Packages
 
-To complete this guide, you need to install the following packages:
+To complete this tutorial, you need to install the following packages:
 
 --------------------
 ### npm

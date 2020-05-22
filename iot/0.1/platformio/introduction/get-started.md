@@ -4,7 +4,7 @@
 
 ## Hardware
 
-To complete this guide you need the following:
+To complete this tutorial you need the following:
 - A 32-bit/64-bit microcontroller device that is supported by Arduino
 - A Linux, macOS, or Windows operating system
 

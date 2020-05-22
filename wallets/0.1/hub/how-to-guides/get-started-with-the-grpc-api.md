@@ -4,7 +4,7 @@
 
 ## Prerequisites
 
-To complete this guide, you must have the following:
+To complete this tutorial, you must have the following:
 
 - An [instance of Hub](../how-to-guides/install-hub.md)
 - A code editor such as [Visual Studio Code](https://code.visualstudio.com/Download)

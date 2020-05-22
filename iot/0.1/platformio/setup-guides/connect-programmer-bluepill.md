@@ -4,7 +4,7 @@
 
 ## Hardware
 
-To complete this guide, you need the following:
+To complete this tutorial, you need the following:
 
 - A bluepill board (STM32F103C8T6)
 - A Linux, macOS, or Windows operating system

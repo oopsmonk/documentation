@@ -4,7 +4,7 @@
 
 ## Prerequisites
 
-To complete this guide, you need an unspent address.
+To complete this tutorial, you need an unspent address.
 
 You can generate an unspent address, using any of the following options:
 

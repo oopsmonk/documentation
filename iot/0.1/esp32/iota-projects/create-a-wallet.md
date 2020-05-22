@@ -4,7 +4,7 @@
 
 ## Hardware
 
-To complete this guide, you need the following:
+To complete this tutorial, you need the following:
 
 - [A prepared ESP32 and a Linux PC with the required toolchain](../introduction/get-started.md)
 

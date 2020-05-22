@@ -20,13 +20,13 @@ If you want to use the CryptoCore in a production environment, you should follow
 
 ## Prerequisites
 
-To complete this guide, you need to have completed the [CryptoCore getting started guide](../introduction/get-started.md).
+To complete this tutorial, you need to have completed the [CryptoCore getting started guide](../introduction/get-started.md).
 
 You also need Node.js installed on the Raspberry Pi. See [this article](https://github.com/nodesource/distributions/blob/master/README.md#debinstall) and follow the Ubuntu installation instructions.
 
 ## Packages
 
-To complete this guide, you need to install the following Node.js packages:
+To complete this tutorial, you need to install the following Node.js packages:
 
 --------------------
 ### npm

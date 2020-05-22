@@ -4,7 +4,7 @@
 
 ## Packages
 
-To complete this guide, you need to install the following package (if you're using Go modules, you just need to reference this package):
+To complete this tutorial, you need to install the following package (if you're using Go modules, you just need to reference this package):
 
 ```bash
 go get github.com/pebbe/zmq4

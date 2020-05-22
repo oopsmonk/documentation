@@ -9,7 +9,7 @@ You have two options for running IRI:
 
 ## Prerequisites
 
-To complete this guide, you need the following:
+To complete this tutorial, you need the following:
 
 - 4GB RAM
 - 64-bit processor
@@ -22,7 +22,7 @@ In this tutorial, you download the IRI Docker image and run it in a Docker conta
 
 ### Prerequisites
 
-To complete this guide, you need [Docker](https://docs.docker.com/install/#supported-platforms).
+To complete this tutorial, you need [Docker](https://docs.docker.com/install/#supported-platforms).
 
 :::info:
 If you're using a Debian-based operating system, add `sudo` before the commands in the following tasks.

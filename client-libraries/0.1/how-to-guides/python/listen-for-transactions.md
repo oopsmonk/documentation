@@ -4,7 +4,7 @@
 
 ## Packages
 
-To complete this guide, you need to install the following package:
+To complete this tutorial, you need to install the following package:
 
 ```bash
 pip install zmq

@@ -4,7 +4,7 @@
 
 ## Hardware
 
-To complete this guide, you need a Linux PC and an [ESP32 DevKitC](https://www.espressif.com/en/products/hardware/esp32-devkitc/overview).
+To complete this tutorial, you need a Linux PC and an [ESP32 DevKitC](https://www.espressif.com/en/products/hardware/esp32-devkitc/overview).
 
 ## Step 1. Set up your development environment
 

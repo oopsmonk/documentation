@@ -14,7 +14,7 @@ Feel free to contribute to the libraries, so that they eventually become product
 
 ## Prerequisites
 
-To complete this guide, you need the following:
+To complete this tutorial, you need the following:
 
 - **Operating system:** Linux, MacOS, BSD or Windows
 - **RAM:** 2GB
