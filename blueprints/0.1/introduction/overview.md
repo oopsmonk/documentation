@@ -1,12 +1,12 @@
 # Application blueprints
 
-**A blueprint is a document that explains how IOTA technology is used to solve real problems and to support well defined business needs. It provides guidelines for you to replicate and deploy the solution in similar systems and to test different business models.**
+**These blueprints provide guidelines for you to replicate and deploy IOTA  technology in real-world scenarios.**
 
-Blueprints are designed to do the following:
+Blueprints do the following:
 
-- **Overview:** Describe a problem and a solution
-- **App architecture:** Present an architecture that shows you how to solve the problem with IOTA
-- **Deploy and test:** Explain how you can test, edit, and deploy the blueprint (if a demo is available)
+- Describe a problem and a solution
+- Present an architecture that shows you how to solve the problem with IOTA technology
+- Explain how you can test, edit, and deploy the blueprint if a demo is available
 
 -------------------------
 ![Data Marketplace](../images/data-marketplace-thumbnail.png)
