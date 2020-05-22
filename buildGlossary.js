@@ -10,15 +10,24 @@ function capitalize(string)
 }
 
 function convertToDefinitionList (termsObj) {
-    var newFile = fs.createWriteStream('getting-started/references/terminology.md');
+    var newFile = fs.createWriteStream('getting-started/0.1/references/glossary.md');
 
-    newFile.write('# Terminology\r\n\r\n**This termbase contains definitions of terms that are used in IOTA.**\r\n\r\nTerms are listed in alphabetical order.\r\n');
+    newFile.write('# Terminology\r\n\r\n**This termbase contains definitions of terms that are used in IOTA.**\r\n\r\nIn the interests of efficient and accurate translations, we do not use synonyms. Instead, terms have one of the following statuses:\r\n\r\n- **Preferred:** This term is used in our documentation\r\n- **Deprecated:** This term is banned, out-of-date, or obsolete');
 
     // Access categories, terms, and definitions
     for(var i = 0; i < termsObj.length; i++){
 
-        for(term in termsObj[i].terms ){
-            newFile.write(`##${term}\\r\\n_${term.pos}_\\r\\n${term.definition}\\r\\n`);
+        newFile.write(`\r\n\r\n## ${termsObj[i].cat}\r\n\r\n`);
+        newFile.write(`${termsObj[i].definition}`);
+
+        for(term in termsObj[i].EN ){
+            newFile.write(`\r\n\r\n### ${term}\r\n\r\n`);
+
+            newFile.write('|**Definition**|**Part of speech**|**Status**|\r\n');
+            newFile.write('|:---------|:-------------|:-----|\r\n');
+
+            newFile.write(`|${termsObj[i].EN[term].definition}|${termsObj[i].EN[term].pos}|${termsObj[i].EN[term].status}|`);
+                
         }
     }
 }

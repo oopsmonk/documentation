@@ -1,82 +1,170 @@
 [
-{
+    {
+        "cat": "Accounts",
+        "definition": "The terms in this category are related to account in an IOTA network",
+        "EN": {
+            "address": {
+                "definition": "A public key that belongs to a seed and that has a balance of IOTA tokens on IOTA networks",
+                "pos": "noun",
+                "status": "preferred"
+            },
+            "IOTA token": {
+                "definition": "Unit of value that can be transferred over an IOTA network",
+                "pos": "noun",
+                "status": "preferred"
+            },
+            "security level": {
+                "definition": "An address generation parameter that affects the security of one-time signatures",
+                "pos": "noun",
+                "status": "preferred"
+            },
+            "seed": {
+                "definition": "Unique password that is used to generate addresses, private keys, and signatures",
+                "pos": "noun",
+                "status": "preferred"
+            }
+        }
+    },
+    {
+        "cat": "Cryptography",
+        "definition": "The terms in this category are related to cryptography",
+        "EN": {
+            "Curl": {
+                "definition": "Hashing function, designed for the Internet of things, that uses the SHA-3 sponge-based construction",
+                "pos": "noun",
+                "status": "preferred"
+            },
+            "Kerl": {
+                "definition": "Ternary version of the Keccek-384 hashing function that takes a 48 byte input and produces a 243 trit output, using [two's complement](https://en.wikipedia.org/wiki/Two%27s_complement)",
+                "pos": "noun",
+                "status": "preferred"
+            },
+            "Troika": {
+                "definition": "Ternary hash function",
+                "pos": "noun",
+                "status": "preferred"
+            }
+        }
 
-    "cat": "acronyms",
-    "terms": {
-        "CTPS": "Confirmed transactions per second",
-        "DAG": "Directed acyclic graph",
-        "MWM": "Minimum weight magnitude",
-        "PoW": "Proof of work",
-        "TPS": "Transactions per second",
-        "W-OTS": "Winternitz one-time signature"
-    
+    },
+    {
+        "cat": "Network",
+        "definition": "The terms in this category are related to IOTA networks",
+        "EN": {
+            "blowball": {
+                "definition": "A subgraph where a majority of tip transactions reference one central transaction",
+                "pos": "noun",
+                "status": "preferred"
+            },
+            "Coordinator": {
+                "definition": "A subgraph where a majority of tip transactions reference one central transaction",
+                "pos": "noun",
+                "status": "preferred"
+            },
+            "node": {
+                "definition": "A device that is part of an IOTA network and that has read and write access to the Tangle",
+                "pos": "noun",
+                "status": "preferred"
+            },
+            "subgraph": {
+                "definition": "Section of the Tangle that contains transactions between a milestone transaction and tip transactions",
+                "pos": "noun",
+                "status": "preferred"
+            },
+            "Tangle": {
+                "definition": "An immutable data structure that contains an up-to-date history of transactions, each of which references two others",
+                "pos": "noun",
+                "status": "preferred"
+            }
+        }
+
+    },
+    {
+        "cat": "Transactions",
+        "definition": "The terms in this category are related to transactions",
+        "EN": {
+            "bundle": {
+                "definition": "Group of transactions that rely on each other's validity",
+                "pos": "noun",
+                "status": "preferred"
+            },
+            "child": {
+                "definition": "Transaction that directly references two other transactions",
+                "pos": "noun",
+                "status": "preferred"
+            },
+            "confirmed": {
+                "definition": "State of a transaction when it's been approved by a milestone",
+                "pos": "adjective",
+                "status": "preferred"
+            },
+            "depth": {
+                "definition": "Entry milestone that's used to start tip selection through a subgraph",
+                "pos": "noun",
+                "status": "preferred"
+            },
+            "future set": {
+                "definition": "Two or more transactions that reference the same transaction",
+                "pos": "noun",
+                "status": "preferred"
+            },
+            "proof of work": {
+                "definition": "Data that is calculated using trial and error to meet certain requirements",
+                "pos": "noun",
+                "status": "preferred"
+            },
+            "solid": {
+                "definition": "State of a transaction when a node has its entire history in its ledger",
+                "pos": "noun",
+                "status": "preferred"
+            },
+            "minimum weight magnitude": {
+                "definition": "A setting for proof of work that defines the number of trailing zeros that a transaction hash must have",
+                "pos": "noun",
+                "status": "preferred"
+            },
+            "milestone": {
+                "definition": "Transaction that's created by the Coordinator",
+                "pos": "noun",
+                "status": "preferred"
+            },
+            "parent": {
+                "definition": "Transaction that is directly referenced by a child transaction",
+                "pos": "noun",
+                "status": "preferred"
+            },
+            "pending": {
+                "definition": "State of a transaction when it's attached to the Tangle, but not yet confirmed",
+                "pos": "noun",
+                "status": "preferred"
+            },
+            "reattach": {
+                "definition": "Recreate and resend a transaction",
+                "pos": "verb",
+                "status": "preferred"
+            },
+            "rebroadcast": {
+                "definition": "Send the same transaction to a node again",
+                "pos": "verb",
+                "status": "preferred"
+            },
+            "tail transaction": {
+                "definition": "The first transaction in a bundle",
+                "pos": "noun",
+                "status": "preferred"
+            },
+            "tip selection": {
+                "definition": "Process whereby a node selects two tip transactions from the Tangle",
+                "pos": "noun",
+                "status": "preferred"
+            },
+            "tip transaction": {
+                "definition": "Transaction with no children",
+                "pos": "noun",
+                "status": "preferred"
+            }
+        }
     }
-
-},
-{
-    "cat": "cryptography",
-    "terms": {
-        "Curl": "Hashing function, designed for the Internet of things, that uses the SHA-3 sponge-based construction.",
-        "Kerl": "Ternary version of the Keccek-384 hashing function that takes a 48 byte input and produces a 243 trit output, using [two's complement](https://en.wikipedia.org/wiki/Two%27s_complement).",
-        "Winternitz one-time signature": "Quantum-resistant signature scheme that's used to sign transactions that withdraw IOTA tokens."
-
-    }
-
-},
-{
-    "cat": "tangle",
-    "terms": {
-        "blowball": "Tangle formation where a majority of tip transactions reference one central transaction.",
-        "subgraph": "Section of the ledger that contains all transactions between a milestone transaction and tip transactions",
-    }
-
-},
-{
-    "cat": "transactions",
-    "terms": {
-        "child": {
-            "definition": "Transaction that directly references two other transactions.",
-            "pos": "noun",
-            "status": "preferred"
-        },
-        "confirmed": {
-            "definition": "State of a transaction when it's been approved by a milestone",
-            "pos": "adjective",
-            "status": "preferred"
-        },
-        "depth": {
-            "definition": "Entry milestone that's used to start tip selection through a subgraph.",
-            "pos": "noun",
-            "status": "preferred"
-        },
-        "future set": "Group of transactions that approve the same transaction.",
-        "inconsistent": "State of a transaction when it leads to a negative balance of IOTA tokens",
-        "inclusion": "State of a transaction that's been referenced by given tip transactions or a milestone transaction",
-        "invalid": "State of a transaction when it's either non-solid, inconsistent, or it references a transaction that's too old",
-        "milestone": "Valid transaction that's created by the Coordinator. IRI nodes use milestones to determine if transactions are confirmed.",
-        "minimum weight magnitude": "Integer that sets the amount of work that will be carried out on a transaction hash during PoW. The solution to the computational puzzle is a transaction hash that contains the same number of trailing nines as the MWM.",
-        "parent": "Transaction that is directly referenced by a child transaction",
-        "pending": "State of a transaction when it's been seen by the network, but not yet confirmed",
-        "reattach": "Recreate and resend a transaction by requesting new tip transactions, recalculating the transaction and bundle hashes, signing any value transactions, and doing proof of work",
-        "rebroadcast": "Send the same transaction to a node again",
-        "solid": "State of a transaction when an IRI node has its entire history (all directly and indirectly referenced transactions) in its ledger",
-        "tail transaction": "Transaction 0 in a bundle. IRI nodes contruct and validate bundles by traversing the trunk transaction of each tail transaction.",
-        "tip selection": "Process whereby a node selects two tip transactions from the Tangle",
-        "tip transaction": "Transaction with no children",
-    }
-}
-
-},
-{
-    "cat": "ternary",
-    "terms": {
-        "ternary": "Base-3 numeral system",
-        "trit": "Digit in a ternary number system. Trits are often represented by 1, 0, -1.",
-        "tryte": "A tryte is 3 trits which can represent 27 values"
-
-    }
-
-}
 ]
 
 
