@@ -5,7 +5,7 @@
 ![API workflow](../images/api-workflow.png)
 
 :::info:Just want to run some code?
-A full CLI example, including publishing masked payloads is available on [GitHub](https://github.com/JakeSCahill/channels-examples).
+A full CLI example, including masked payloads is available on [GitHub](https://github.com/JakeSCahill/channels-examples).
 :::
 
 ## Prerequisites
@@ -69,7 +69,7 @@ In this step, you write a function that announces a new channel. This channel is
     }
     ```
 
-    As well as the author, this function takes a generic type that implements the [`Transport`](https://github.com/iotaledger/streams/blob/master/iota-streams-app/src/transport/tangle/client.rs) trait for sending and receiving messages.
+    As well as the author, this function takes a generic type that implements the [`Transport`](https://github.com/iotaledger/streams/blob/master/iota-streams-app/src/transport/tangle/client.rs) trait for sending and receiving messages on a communication channel.
 
     In Channels, the IOTA client library is extended to implement this trait, which means that we can use it to create a [bundle](root://getting-started/0.1/transactions/bundles.md) from messages and send them to a node.
 
@@ -77,7 +77,7 @@ In this step, you write a function that announces a new channel. This channel is
     In Rust, it's best practice to follow the convention of using underscores to separate words (snake_case) in the names of functions and variables.
     :::   
 
-4. Create an [`Announce`](../how-it-works.md#message-types) message, which you can later use to publish the channel on the Tangle
+4. Create an [`Announce`](../how-it-works.md#message-types) message
 
     ```rust
     let announcement = author.announce()?;
@@ -87,7 +87,7 @@ In this step, you write a function that announces a new channel. This channel is
     The [`?`](https://doc.rust-lang.org/edition-guide/rust-2018/error-handling-and-panics/the-question-mark-operator-for-easier-error-handling.html) operator is for handling any errors that may be produced while creating the message.
     :::
 
-5. Publish your channel on the Tangle
+5. Publish your `Announce` message on the Tangle
 
     ```rust
     client.send_message_with_options(&announcement, send_opt)?;
@@ -104,7 +104,7 @@ In this step, you write a function that announces a new channel. This channel is
      Ok(announcement.link)
     ```
 
-    As an author, you must send the channel address and the message identifiers of messages to anyone who wants to read them. In this tutorial, you'll do this by passing them to the subscriber as command-line arguments.
+    As an author, you must send the channel address and the message identifier to anyone who wants to read the message. In this tutorial, you'll do this by passing them to the subscriber as command-line arguments.
 
 7. In the `mod.rs` file, add the following to expose this module to the rest of your project
 

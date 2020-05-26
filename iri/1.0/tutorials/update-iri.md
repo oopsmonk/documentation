@@ -1,6 +1,6 @@
 # Upgrade to version 1.8.6
 
-**In this tutorial, you upgrade IRI to version 1.8.6, which comes with breaking changes.**
+**In this tutorial, you upgrade IRI to version 1.8.6.**
 
 Version 1.8.6 comes with the following changes, which aren't backwards compatible:
 
