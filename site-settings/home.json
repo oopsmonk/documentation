@@ -59,18 +59,18 @@
     "cards": [
         {
             "href": "/docs/getting-started/0.1/introduction/overview",
-            "image": "1.png",
+            "image": "2.png",
             "name": "Learn about IOTA technology"
         },
         {
             "href": "/docs/client-libraries/1.0/overview",
-            "image": "2.png",
+            "image": "1.png",
             "name": "Start building"
         },
         {
             "href": "/docs/blueprints/0.1/introduction/overview",
             "image": "3.png",
-            "name": "Explore app blueprints"
+            "name": "Explore application blueprints"
         }
     ]
 }
