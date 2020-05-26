@@ -4,4 +4,4 @@
 
 |**Date**|**Change summary**|**GitHub pull request**|
 |:-------|:-----------------|:----------------------|
-||Restructured the content architecture so that each node software has its own documentation set | [#670](https://github.com/iotaledger/documentation/pull/670)|
+|May 26, 2020|Restructured the content architecture so that each node software has its own documentation set | [#700](https://github.com/iotaledger/documentation/pull/700)|
