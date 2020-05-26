@@ -14,6 +14,7 @@
 [Tutorials/Set up a reverse proxy server](/tutorials/set-up-a-reverse-proxy.md)
 [Tutorials/Upgrade IRI to version 1.8.6](/tutorials/update-iri.md)
 
+[References/API reference](/references/iri-api-reference.md)
 [References/Troubleshooting](/references/troubleshooting.md)
 [References/IRI configuration options](/references/iri-configuration-options.md)
 [References/ZMQ events](/references/zmq-events.md)
