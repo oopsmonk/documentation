@@ -695,7 +695,6 @@ This API endpoint returns data only if the node is synchronized.
 |**Parameters**s |**Required or Optional**|**Description** |Type
 |--|--|--|--|
 | `addresses` |Required| Address for which to get the balance (do not include the checksum) |array of strings|
-| `threshold` |Required| Confirmation threshold between 0 and 100 | integer|
 | `tips` |Optional| Tips whose history of transactions to traverse to find the balance |array of strings|
 
 ### Examples
@@ -709,8 +708,7 @@ command = {
   "command": "getBalances",
   "addresses": [
     "DE9DVSOWIIIKEBAAHCKBWNXGXTOKVLZPLRAGKZG9GXKFRFWERKBFYMPRLAGVZTRVYPEPHBMUPDMRQ9DPZ"
-  ],
-  "threshold": 100
+  ]
 }
 
 stringified = json.dumps(command)
@@ -736,8 +734,7 @@ var command = {
   "command": "getBalances",
   "addresses": [
     "DE9DVSOWIIIKEBAAHCKBWNXGXTOKVLZPLRAGKZG9GXKFRFWERKBFYMPRLAGVZTRVYPEPHBMUPDMRQ9DPZ"
-  ],
-  "threshold": 100
+  ]
 };
 
 var options = {
@@ -767,8 +764,7 @@ curl http://localhost:14265 \
   "command": "getBalances",
   "addresses": [
     "DE9DVSOWIIIKEBAAHCKBWNXGXTOKVLZPLRAGKZG9GXKFRFWERKBFYMPRLAGVZTRVYPEPHBMUPDMRQ9DPZ"
-  ],
-  "threshold": 100
+  ]
 }'
 ```
 --------------------
@@ -810,8 +806,6 @@ Gets the inclusion states of a set of transactions.
 
 This endpoint determines if a transaction is confirmed by the network (referenced by a valid milestone).
 
-You can search for multiple tips (and thus, milestones) to get past inclusion states of transactions.
-
 :::info:
 This endpoint returns data only if the node is synchronized.
 :::
@@ -821,7 +815,6 @@ This endpoint returns data only if the node is synchronized.
 |**Parameters** |**Required or Optional**|**Description** |**Type**|
 |--|--|--|--|
 | `transactions` |Required| List of transaction hashes for which you want to get the inclusion state|array of strings
-| `tips` | Required (can be empty)|List of tip transaction hashes (including milestones) you want to search for | array of strings
 
 ### Examples
 --------------------
@@ -833,10 +826,6 @@ import json
 command = {
   "command": "getInclusionStates",
   "transactions": [
-    "P9KFSJVGSPLXAEBJSHWFZLGP9GGJTIO9YITDEHATDTGAFLPLBZ9FOFWWTKMAZXZHFGQHUOXLXUALY9999", 
-    "P9KFSJVGSPLXAEBJSHWFZLGP9GGJTIO9YITDEHATDTGAFLPLBZ9FOFWWTKMAZXZHFGQHUOXLXUALY9999"
-  ],
-  "tips": [
     "P9KFSJVGSPLXAEBJSHWFZLGP9GGJTIO9YITDEHATDTGAFLPLBZ9FOFWWTKMAZXZHFGQHUOXLXUALY9999", 
     "P9KFSJVGSPLXAEBJSHWFZLGP9GGJTIO9YITDEHATDTGAFLPLBZ9FOFWWTKMAZXZHFGQHUOXLXUALY9999"
   ]
@@ -864,10 +853,6 @@ var request = require('request');
 var command = {
   "command": "getInclusionStates",
   "transactions": [
-    "P9KFSJVGSPLXAEBJSHWFZLGP9GGJTIO9YITDEHATDTGAFLPLBZ9FOFWWTKMAZXZHFGQHUOXLXUALY9999", 
-    "P9KFSJVGSPLXAEBJSHWFZLGP9GGJTIO9YITDEHATDTGAFLPLBZ9FOFWWTKMAZXZHFGQHUOXLXUALY9999"
-  ],
-  "tips": [
     "P9KFSJVGSPLXAEBJSHWFZLGP9GGJTIO9YITDEHATDTGAFLPLBZ9FOFWWTKMAZXZHFGQHUOXLXUALY9999", 
     "P9KFSJVGSPLXAEBJSHWFZLGP9GGJTIO9YITDEHATDTGAFLPLBZ9FOFWWTKMAZXZHFGQHUOXLXUALY9999"
   ]
@@ -899,10 +884,6 @@ curl http://localhost:14265 \
 -d '{
   "command": "getInclusionStates",
   "transactions": [
-    "P9KFSJVGSPLXAEBJSHWFZLGP9GGJTIO9YITDEHATDTGAFLPLBZ9FOFWWTKMAZXZHFGQHUOXLXUALY9999", 
-    "P9KFSJVGSPLXAEBJSHWFZLGP9GGJTIO9YITDEHATDTGAFLPLBZ9FOFWWTKMAZXZHFGQHUOXLXUALY9999"
-  ],
-  "tips": [
     "P9KFSJVGSPLXAEBJSHWFZLGP9GGJTIO9YITDEHATDTGAFLPLBZ9FOFWWTKMAZXZHFGQHUOXLXUALY9999", 
     "P9KFSJVGSPLXAEBJSHWFZLGP9GGJTIO9YITDEHATDTGAFLPLBZ9FOFWWTKMAZXZHFGQHUOXLXUALY9999"
   ]
@@ -1210,6 +1191,7 @@ curl http://localhost:14265 \
   "tipSolidification"
  ],
  "coordinatorAddress": "EQSAUZXULTTYZCLNJNTXQTQHOMOFZERHTCGTXOLTVAHKSA9OGAZDEKECURBRIXIJWNPFCQIOVFVVXJVD9",
+ "dbSizeInBytes": 144800000,
  "duration": 0
 }
 ```
@@ -1237,7 +1219,7 @@ curl http://localhost:14265 \
 | `latestMilestoneIndex` | Index of the latest milestone |
 | `latestSolidSubtangleMilestone` | Transaction hash of the latest solid milestone |
 | `latestSolidSubtangleMilestoneIndex` | Index of the latest solid milestone |
-| `milestoneStartIndex` | Start milestone for the current version of the IRI |
+| `milestoneStartIndex` | The index of the milestone from which the node started synchronizing when it first joined the network. This index will not change unless the node's ledger is deleted and the node starts synchronizing from a new milestone index.|
 |`lastSnapshottedMilestoneIndex`|Index of the last milestone that triggered a [local snapshot](root://getting-started/0.1/network/nodes.md#local-snapshots) on the node |
 | `neighbors` | Total number of connected neighbor nodes  |
 | `packetsQueueSize` | Size of the packet queue |
@@ -1246,9 +1228,14 @@ curl http://localhost:14265 \
 | `transactionsToRequest` | Total number of transactions that the node is missing in its ledger|
 | `features` | Enabled configuration options|
 | `coordinatorAddress` | Address (Merkle root) of the Coordinator|
+| `dbSizeInBytes` |The current number of bytes in the node's database|
 | `duration` | Number of milliseconds it took to complete the request |
 
 ## getTips
+
+:::info:
+This endpoint is no longer available in version 1.8.6 or later of IRI.
+:::
 
 Gets tip transaction hashes from a node.
 
@@ -1559,7 +1546,7 @@ You can convert the returned trytes to ASCII characters by using the client libr
 | `duration` | Number of milliseconds it took to complete the request |
 
 :::info:
-If a node doesn't have the trytes for a given transaction hash in its ledger, the value at the index of that transaction hash is either `null` or a string of 9s.
+If the node doesn't have the trytes for a given transaction hash in its ledger, a `null` value is returned.
 :::
 
 ## interruptAttachingToTangle
