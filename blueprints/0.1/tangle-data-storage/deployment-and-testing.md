@@ -103,4 +103,4 @@ This completes the full lifecycle for storing, retrieving, and validating a file
 
 ## Next steps
 
-Try [running your own IRI node](root://node-software/0.1/iri/how-to-guides/quickstart.md) and configuring the application to connect to it.
+Try [running your own node](root://node-software/1.0/overview.md) and configuring the application to connect to it.

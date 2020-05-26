@@ -10,7 +10,7 @@ If you want to use the CryptoCore in a production environment, you should follow
 
 ## Prerequisites
 
-To complete this guide, you need to have completed the [CryptoCore getting started guide](../introduction/get-started.md).
+To complete this tutorial, you need to have completed the [CryptoCore getting started guide](../introduction/get-started.md).
 
 ## Code walkthrough
 

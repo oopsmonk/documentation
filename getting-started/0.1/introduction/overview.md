@@ -51,7 +51,7 @@ An IOTA network consists of nodes and clients, and anyone is free to act as eith
 
 Nodes are the backbone of an IOTA network as they are the only devices that have read and write access to the immutable record of transactions called the Tangle.
 
-Interconnected nodes form an IOTA network by running the same [node software](root://node-software/0.1/introduction/overview.md), allowing them to validate transactions and attach them to the Tangle.
+Interconnected nodes form an IOTA network by running the same [node software](root://node-software/1.0/overview.md), allowing them to validate transactions and attach them to the Tangle.
 
 ### Clients
 
@@ -85,7 +85,7 @@ eCl@ss|eCl@ss is cooperating with IOTA to share and store ISO/IEC-compliant prod
 
 **Non-developers:** Use the [official Trinity wallet](root://wallets/0.1/trinity/introduction/overview.md) to create and store your seed, send and receive transactions, and more.
 
-**Developers:** [Get started with one of the client libraries](root://client-libraries/1.0/overview.md) or [join an IOTA network by running your own node](root://node-software/0.1/iri/how-to-guides/quickstart.md)
+**Developers:** [Get started with one of the client libraries](root://client-libraries/1.0/overview.md).
 
 **Exchanges:** Use the [official Hub wallet](root://wallets/0.1/hub/introduction/overview.md) to integrate IOTA into your exchange.
 

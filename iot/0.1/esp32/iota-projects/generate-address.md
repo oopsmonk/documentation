@@ -4,7 +4,7 @@
 
 ## Hardware
 
-To complete this guide, you need the following:
+To complete this tutorial, you need the following:
 
 - [An ESP32 and a PC with the required toolchain](../introduction/get-started.md)
 - An LCD screen connected to your ESP32, using one of the following options:

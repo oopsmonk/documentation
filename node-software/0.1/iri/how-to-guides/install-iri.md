@@ -9,7 +9,7 @@ You have two options for running IRI:
 
 ## Prerequisites
 
-To complete this guide, you need the following:
+To complete this tutorial, you need the following:
 
 - 4GB RAM
 - 64-bit processor
@@ -22,7 +22,7 @@ In this tutorial, you download the IRI Docker image and run it in a Docker conta
 
 ### Prerequisites
 
-To complete this guide, you need [Docker](https://docs.docker.com/install/#supported-platforms).
+To complete this tutorial, you need [Docker](https://docs.docker.com/install/#supported-platforms).
 
 :::info:
 If you're using a Debian-based operating system, add `sudo` before the commands in the following tasks.
@@ -522,8 +522,6 @@ It may take some time for node to synchronize, so we recommend that you wait a w
 
 ## Next steps
 
-[Get started with the API](../how-to-guides/get-started-with-the-api.md).
+[Set up a reverse proxy](../how-to-guides/set-up-a-reverse-proxy.md) for your node so that you can configure HTTPS support, rate limiting, and load balancing.
 
-[Set up a reverse proxy](../how-to-guides/set-up-a-reverse-proxy.md) for your IRI node so that you can configure HTTPS support, rate limiting, and load balancing.
-
-Set up the [Chronicle node software](root://node-software/0.1/chronicle/introduction/overview.md) to turn your node into a permanode.
+Set up the [Chronicle node software](root://chronicle/1.0/overview.md) to turn your node into a permanode.

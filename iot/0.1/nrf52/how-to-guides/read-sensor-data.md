@@ -4,7 +4,7 @@
 
 ## Hardware
 
-To complete this guide, you need the following:
+To complete this tutorial, you need the following:
 
 - [A prepared nRF52 microcontroller](../introduction/get-started.md)
 - [A connected BME/BMP 280 sensor](../setup-guides/connect-bosch-sensor.md)

@@ -28,7 +28,7 @@ When choosing an IOTA network, you need to consider the following options:
 
 ### --apiAddress
 
-Hub needs to connect to a node's API to be able to interact with the [Tangle](root://getting-started/0.1/network/the-tangle.md). To avoid connecting to a malicious node, we recommend connecting Hub to a local node that you control. If you don't have a local node, read about the [IRI node software](root://node-software/0.1/iri/introduction/overview.md) for guides on setting one up.
+Hub needs to connect to a node's API to be able to interact with the [Tangle](root://getting-started/0.1/network/the-tangle.md). To avoid connecting to a malicious node, we recommend connecting Hub to a local node that you control. If you don't have a local node, read about the [IRI node software](root://iri/1.0/overview.md) for guides on setting one up.
 
 #### Development environment
 

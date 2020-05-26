@@ -6,6 +6,10 @@
 The client libraries are currently in beta development, and you should not use them in production environments.
 :::
 
+# Best practice
+
+For a client application, it's best to use an instance of a serverless architecture such as [AWS Lambda](https://aws.amazon.com/lambda/). This way, your application is not restricted by hardware and has a high availability.
+
 ### **Official support** ###
 
 ---------------

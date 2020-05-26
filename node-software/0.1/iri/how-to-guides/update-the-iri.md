@@ -32,7 +32,7 @@ By merging your snapshot data and spent addresses into a single database, you ca
 
 This guide has been tested on Ubuntu 18.04 and 19.04.
 
-To complete this guide, you need the following:
+To complete this tutorial, you need the following:
 
 - Git
 - Go version 1.12 or later

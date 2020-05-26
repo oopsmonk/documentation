@@ -1,6 +1,6 @@
 # Listen for live transactions in Java
 
-**In this tutorial, you listen to the Tangle for recent transactions by subscribing to the [zero message queue (ZMQ)](https://zeromq.org/) on [nodes](root://getting-started/0.1/network/nodes.md) that run the [IRI node software](root://node-software/0.1/iri/introduction/overview.md).**
+**In this tutorial, you listen to the Tangle for recent transactions by subscribing to the [zero message queue (ZMQ)](https://zeromq.org/) on [nodes](root://getting-started/0.1/network/nodes.md).**
 
 ## IOTA network
 
@@ -25,7 +25,7 @@ In this tutorial, we connect to a node on the [Devnet](root://getting-started/0.
     socket.connect("tcp://zmq.devnet.iota.org:5556");
     ```
 
-3. Subscribe to the [`tx` and `sn`](root://node-software/0.1/iri/references/zmq-events.md) events to see all transactions and confirmed transactions
+3. Subscribe to the [`tx` and `sn`](root://iri/1.0/references/zmq-events.md) events to see all transactions and confirmed transactions
 
     ```java
     socket.subscribe("tx");

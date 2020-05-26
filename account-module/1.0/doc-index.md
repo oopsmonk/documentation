@@ -52,4 +52,4 @@
 
 [Tutorials/JavaScript/Combine your balance](/tutorials/js/combine-balance.md)
 
-[Contribute to the project](contribute.md)
+[Contributing/Contribute to the project](contribute.md)

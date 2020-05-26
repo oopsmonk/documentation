@@ -14,7 +14,7 @@ To complement this guide, we created this video tutorial, which guides you throu
 
 ## Prerequisites
 
-To complete this guide, you need the following:
+To complete this tutorial, you need the following:
 
 - An instance of Hub that's connected to a Devnet node and that has an exposed RESTful API server
 - A Linux [Ubuntu 18.04 LTS](https://www.ubuntu.com/download/server) server. If you are on a Windows or Mac operating system, you can [create a Linux server in a virtual machine](root://general/0.1/how-to-guides/set-up-virtual-machine.md).

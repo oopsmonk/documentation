@@ -14,7 +14,7 @@ To avoid changing port forwarding rules, you need the internal IP address of you
 
 ### Prerequisites
 
-To complete this guide, you must have a Linux Ubuntu 18.04 server. If you don't have a Linux server and you're running a Windows or Mac operating system, you can [run one in a virtual machine](../how-to-guides/set-up-virtual-machine.md).
+To complete this tutorial, you must have a Linux Ubuntu 18.04 server. If you don't have a Linux server and you're running a Windows or Mac operating system, you can [run one in a virtual machine](../how-to-guides/set-up-virtual-machine.md).
 
 ---
 
@@ -96,7 +96,7 @@ To expose a local device to the Internet, you must create port forwarding rules,
 
 ### Prerequisites
 
-To complete this guide, you need the following:
+To complete this tutorial, you need the following:
 
 - Administrator access to your router
 - A [static IP address on your local network](#get-a-static-ip-address-on-your-local-network).

@@ -24,7 +24,7 @@ In this case, you should make sure to [configure reattachments](../how-to-guides
 
 If Hub is connected to a public node, that node may be receiving lots of transactions from different clients. As a result, the node may take a long time to validate the transactions in Hub's bundle.
 
-We recommend [running your own node](root://node-software/0.1/iri/how-to-guides/quickstart.md) and connected Hub to it so that you have your own direct access to the network.
+We recommend [running your own node](root://node-software/1.0/overview.md) and connected Hub to it so that you have your own direct access to the network.
 
 ### Sweeps contains too many transactions
 

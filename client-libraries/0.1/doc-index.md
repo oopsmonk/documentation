@@ -150,9 +150,7 @@
 
 [MAM/API reference/MAM API reference](/mam/api-reference/mam-api-reference.md)
 
-[API reference/IRI node API](root://node-software/0.1/iri/references/api-reference.md)
-
-[API reference/IRI node ZMQ events](root://node-software/0.1/iri/references/zmq-events.md)
+[API reference/Node APIs](root://api-reference/1.0/overview.md)
 
 [API reference/C](https://github.com/iotaledger/entangled/tree/develop/cclient/api)
 

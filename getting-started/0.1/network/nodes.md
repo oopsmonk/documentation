@@ -1,6 +1,6 @@
 # Nodes
 
-**Nodes are the core of an IOTA network. They run the [node software](root://node-software/0.1/introduction/overview.md) that gives them read and write access to the [Tangle](../network/the-tangle.md). Like any [distributed system](https://en.wikipedia.org/wiki/Distributed_computing), nodes are connected to others called neighbors to form an IOTA network. When one node, no matter where it is in the world, receives a [transaction](../transactions/transactions.md), it will try to forward it to all its neighbors. This way, all nodes eventually validate all transactions and store them in their local copy of the [Tangle](../network/the-tangle.md) called a ledger.**
+**Nodes are the core of an IOTA network. They run the [node software](root://node-software/1.0/overview.md) that gives them read and write access to the [Tangle](../network/the-tangle.md). Like any [distributed system](https://en.wikipedia.org/wiki/Distributed_computing), nodes are connected to others called neighbors to form an IOTA network. When one node, no matter where it is in the world, receives a [transaction](../transactions/transactions.md), it will try to forward it to all its neighbors. This way, all nodes eventually validate all transactions and store them in their local copy of the [Tangle](../network/the-tangle.md) called a ledger.**
 
 ## How nodes work
 
@@ -41,7 +41,7 @@ To make sure that all nodes eventually have the same view of the Tangle, they mu
 
 A node is synchronized when it has solidified all milestones up to the latest one.
 
-In the IRI and cIRI [node software](root://node-software/0.1/introduction/overview.md), which runs the Mainnet, a node is synchronized when the values of the  `latestMilestoneIndex` and `latestSolidSubtangleMilestoneIndex` fields are equal.
+In the IRI and cIRI [node software](root://node-software/1.0/overview.md), which runs the Mainnet, a node is synchronized when the values of the  `latestMilestoneIndex` and `latestSolidSubtangleMilestoneIndex` fields are equal.
 
 :::info:
 The `latestMilestoneIndex` field is accurate only when the node is connected to synchronized neighbors.
@@ -85,8 +85,4 @@ Rather than doing local snapshots, a permanode stores the full history of the Ta
 
 ## Related guides
 
-Run [IRI](root://node-software/0.1/iri/introduction/overview.md), the node software that runs on the public IOTA networks.
-
-Run [GoShimmer](root://node-software/0.1/goshimmer/introduction/overview.md), the prototype node software that will lead to Coordicide. 
-
-Run [Chronicle](root://node-software/0.1/chronicle/introduction/overview.md), the IOTA Foundation's permanode software.
+To run your own node, see the available [node software](root://node-software/1.0/overview.md).

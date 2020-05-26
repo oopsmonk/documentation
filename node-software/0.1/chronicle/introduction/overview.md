@@ -1,12 +1,12 @@
 # Chronicle
 
-**Chronicle is a permanode solution that allows you to store all transactions that reach an [IRI node](root://node-software/0.1/iri/introduction/overview.md) in a distributed database that's secure and that scales well.**
+**Chronicle is a permanode solution that allows you to store all transactions that reach a [node](root://iri/1.0/overview.md) in a distributed database that's secure and that scales well.**
 
 :::info:
 Chronicle will be ported to Rust to align with the future strategy of the IOTA technology stack.
 :::
 
-Chronicle receives transactions from IRI nodes through the `trytes` [ZMQ event](root://node-software/0.1/iri/references/zmq-events.md). When Chronicle receives transactions, it processes them through an [Elixir](https://elixir-lang.org/) umbrella project, then it stores them in [ScyllaDB](https://www.scylladb.com/).
+Chronicle receives transactions from nodes through the `trytes` [ZMQ event](root://iri/1.0/references/zmq-events.md). When Chronicle receives transactions, it processes them through an [Elixir](https://elixir-lang.org/) umbrella project, then it stores them in [ScyllaDB](https://www.scylladb.com/).
 
 ScyllaDB takes care of the big data concerns such as partitioning, replication, in-memory processing, and consistency.
 

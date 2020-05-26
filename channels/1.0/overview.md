@@ -2,7 +2,7 @@
 
 **Channels is a built-in [Streams](root://iota-streams/1.0/overview.md) protocol for building secure messaging applications.**
 
-With the Channels, you can:
+With Channels, you can:
 
 - Sign and encrypt messages, allowing others to verify your identity on the channel
 - Publish messages on the Tangle, making them transparent and tamperproof

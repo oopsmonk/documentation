@@ -1,6 +1,6 @@
 # Proof-of-work proxy server
 
-**A node's [`attachToTangle`](root://node-software/0.1/iri/references/api-reference.md#attachToTangle) endpoint is resource intensive. As a result, many calls to this endpoint can sometimes cause the node to crash. In this tutorial, you install a dedicated proxy server to do proof of work (PoW) to intercept calls this this endpoint and do the proof of work.**
+**A node's [`attachToTangle`](root://iri/1.0/references/iri-api-reference.md#attachToTangle) endpoint is resource intensive. As a result, many calls to this endpoint can sometimes cause the node to crash. In this tutorial, you install a dedicated proxy server to do proof of work (PoW) to intercept calls this this endpoint and do the proof of work.**
 
 ## Download, build, and run the proxy server
 
@@ -12,7 +12,7 @@ All requests to the other IRI API endpoints are forwarded to the IRI node.
 
 ### Prerequisites
 
-To complete this guide, you need the following:
+To complete this tutorial, you need the following:
 
 - At least version 1.12 of the Go programming language (we recommend the latest version)
 - GCC: For macOS, you can install GCC using [Homebrew](https://brew.sh/) (`brew install gcc`). For Windows, you can [install TDM-GCC](http://tdm-gcc.tdragon.net/download). For Linux (Ubuntu 18.04), you can [install GCC from the `build-essential` package](https://linuxize.com/post/how-to-install-gcc-compiler-on-ubuntu-18-04/).

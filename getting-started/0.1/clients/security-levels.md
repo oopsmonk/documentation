@@ -14,7 +14,7 @@ The greater the security level, the longer the address's private key, which resu
 
 The security level of an address corresponds to the same number of transactions that are needed to contain the signature.
 
-For example, when an address has a security level of 3, its signature is 6,561 trytes long, but the [`signatureMessageFragment` field](../transactions/transactions.md#structure-of-a-transaction) of a single transaction can contain only 2,187 trytes. As a result, you would need fragment the other 4,374 trytes of the signature over 2 additional zero-value transactions in the [bundle](../transactions/bundles.md).
+For example, when an address has a security level of 3, its signature is 6,561 trytes long, but the [`signatureMessageFragment` field](../transactions/transactions.md#structure-of-a-transaction) of a single transaction can contain only 2,187 trytes. As a result, you would need to fragment the other 4,374 trytes of the signature over 2 additional zero-value transactions in the [bundle](../transactions/bundles.md).
 
 ## Advice for choosing a security level
 

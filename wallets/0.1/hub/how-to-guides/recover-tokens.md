@@ -10,7 +10,7 @@ To transfer the total balance of a spent address into a single output address, i
 
 ## Prerequisites
 
-To complete this guide, you need the following:
+To complete this tutorial, you need the following:
 
 - An [instance of Hub](../how-to-guides/install-hub.md)
 - [A Node.js developer environment](root://client-libraries/1.0/getting-started/js-quickstart.md)

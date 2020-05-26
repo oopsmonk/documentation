@@ -1,10 +1,10 @@
 # Listen for live transactions in Python
 
-**In this tutorial, you listen to the Tangle for confirmed transactions by subscribing to the [zero message queue (ZMQ)](https://zeromq.org/) on [nodes](root://getting-started/0.1/network/nodes.md) that run the [IRI node software](root://node-software/0.1/iri/introduction/overview.md).**
+**In this tutorial, you listen to the Tangle for confirmed transactions by subscribing to the [zero message queue (ZMQ)](https://zeromq.org/) on [nodes](root://getting-started/0.1/network/nodes.md).**
 
 ## Packages
 
-To complete this guide, you need to install the following package:
+To complete this tutorial, you need to install the following package:
 
 ```bash
 pip install zmq
@@ -30,7 +30,7 @@ In this tutorial, we connect to a node on the [Devnet](root://getting-started/0.
     socket.connect('tcp://zmq.devnet.iota.org:5556')
     ```
 
-3. Subscribe to the [`sn`](root://node-software/0.1/iri/references/zmq-events.md) event to see confirmed transactions
+3. Subscribe to the [`sn`](root://iri/1.0/references/zmq-events.md) event to see confirmed transactions
 
     ```python
     socket.subscribe('sn')

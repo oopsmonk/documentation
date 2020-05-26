@@ -10,7 +10,7 @@
 
 [Quickstart/Trinity wallet users](root://wallets/0.1/trinity/introduction/overview.md)
 
-[Quickstart/Node owners](root://node-software/0.1/iri/introduction/overview.md)
+[Quickstart/Node owners](root://node-software/1.0/overview.md)
 
 [How-to guides/Create a seed](/tutorials/create-a-seed.md)
 

@@ -4,7 +4,7 @@
 
 ## Hardware
 
-To complete this guide, you need DuPont cables to connect the USB-to-UART connector to your microcontroller
+To complete this tutorial, you need DuPont cables to connect the USB-to-UART connector to your microcontroller
 
 ## Step 1. Choose a USB-to-UART connector
 

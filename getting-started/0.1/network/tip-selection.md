@@ -4,11 +4,11 @@
 
 In general, the tip selection algorithm selects transactions that have no parents. These transactions are called tips, hence the name 'tip selection'.
 
-Although the tip selection algorithm is embedded in the [IRI node software](root://node-software/0.1/iri/introduction/overview.md), it isn't enforced by the network. Instead, nodes are given an incentive to use the tip selection algorithm.
+Although the tip selection algorithm is embedded in the [IRI node software](root://iri/1.0/overview.md), it isn't enforced by the network. Instead, nodes are given an incentive to use the tip selection algorithm.
 
 ## The tip selection process
 
-When a client calls the [`getTransactionsToApprove`](root://node-software/0.1/iri/references/api-reference.md#getTransactionsToApprove) API endpoint, the node selects a subgraph (also known as a subtangle) of the ledger and does two weighted random walks through it. Each weighted random walk returns a tip transaction hash.
+When a client calls the [`getTransactionsToApprove`](root://iri/1.0/references/iri-api-reference.md#getTransactionsToApprove) API endpoint, the node selects a subgraph (also known as a subtangle) of the ledger and does two weighted random walks through it. Each weighted random walk returns a tip transaction hash.
 
 ### Subgraph selection
 
@@ -30,7 +30,7 @@ To increase the probability of selecting a path to new transactions, the algorit
 
 The cumulative weight of a transaction is calculated using the following variables:
 - **Future set:** Transactions that approves the transaction
-- **[`ALPHA` configuration parameter](root://node-software/0.1/iri/references/iri-configuration-options.md#alpha):** A number that affects the randomness of the tip selection process
+- **`ALPHA` configuration parameter:** A number that affects the randomness of the tip selection process
 
 Nodes gives a high rating to a transaction with a large future set because it has a higher probability of being confirmed than one with a small future set. However, if a node were to rate transactions based only on this variable, the ledger would become a long, narrow chain of transactions, which are referenced by many other transactions. This would slow the rate of new transactions being appended to the ledger because new transactions would have to wait until they had a large enough future set before other transactions would reference them. So, to increase the speed at which new transactions are appended to the ledger, nodes also use the `ALPHA` configuration parameter to calculate the cumulative weight.
 

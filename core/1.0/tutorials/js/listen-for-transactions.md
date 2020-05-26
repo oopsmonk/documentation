@@ -1,10 +1,10 @@
 # Listen for live transactions in Node.js
 
-**In this tutorial, you listen to the Tangle for recent transactions by subscribing to the [zero message queue (ZMQ)](https://zeromq.org/) on [nodes](root://getting-started/0.1/network/nodes.md) that run the [IRI node software](root://node-software/0.1/iri/introduction/overview.md).**
+**In this tutorial, you listen to the Tangle for recent transactions by subscribing to the [zero message queue (ZMQ)](https://zeromq.org/) on [nodes](root://getting-started/0.1/network/nodes.md).**
 
 ## Packages
 
-To complete this guide, you need to install the following package:
+To complete this tutorial, you need to install the following package:
 
 --------------------
 ### npm
@@ -37,7 +37,7 @@ In this tutorial, we connect to a node on the [Devnet](root://getting-started/0.
     sock.connect('tcp://zmq.devnet.iota.org:5556');
     ```
 
-3. If the script is executed with no additional arguments, subscribe to the [`tx`](root://node-software/0.1/iri/references/zmq-events.md) event to see all transactions, otherwise subscribe to the address event to see only transactions that were sent to that address
+3. If the script is executed with no additional arguments, subscribe to the [`tx`](root://iri/1.0/references/zmq-events.md) event to see all transactions, otherwise subscribe to the address event to see only transactions that were sent to that address
 
     ```js
     // Check for a command-line argument

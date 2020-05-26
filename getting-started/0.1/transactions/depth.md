@@ -8,11 +8,11 @@ When choosing a depth, you should consider the following question.
 
 ### What is the maximum depth that your node will allow?
 
-To restrict the depth, nodes can define a maximum value for it in the [`MAX-DEPTH`](root://node-software/0.1/iri/references/iri-configuration-options.md#max-depth) configuration option.
+To restrict the depth, nodes can define a maximum value for it in the [`MAX-DEPTH`](root://iri/1.0/references/iri-configuration-options.md#max-depth) configuration option.
 
 If you aren't connected to your own node, you should consider doing so. This way, you can make sure that you're using a valid depth.
 
-If you want to use a third-party node, you can check the value of this configuration option by calling the [`getNodeAPIConfiguration`](root://node-software/0.1/iri/references/api-reference.md#getnodeapiconfiguration) endpoint.
+If you want to use a third-party node, you can check the value of this configuration option by calling the [`getNodeAPIConfiguration`](root://iri/1.0/references/iri-api-reference.md#getnodeapiconfiguration) endpoint.
 
 ## Related guides
 

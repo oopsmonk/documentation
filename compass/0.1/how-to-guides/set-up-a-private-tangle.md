@@ -211,7 +211,7 @@ The `snapshot.example.txt` file puts the total IOTA supply of 2.7Pi in the first
 	:::info:
 	If you want to allow neighbors to automatically connect to your node, edit the `02_run_iri.sh` file and add the `--auto-tethering-enabled true` flag to the list of other flags.
 
-	Find out which [other flags](root://node-software/0.1/iri/references/iri-configuration-options.md) you can change to customize the IRI for your own private Tangle.
+	Find out which [other flags](root://iri/1.0/references/iri-configuration-options.md) you can change to customize IRI for your own private Tangle.
 	:::
 
 	:::info:
@@ -258,8 +258,8 @@ After you've created the Merkle tree and you're running an IRI node, you can run
 	When the `-bootstrap` flag is passed during setup, Compass creates a chain of four milestones that sequentially reference the previous milestone.
 
 	Then, Compass sends milestones by doing the following:
-	* Ask the IRI node for tip transactions ([tip selection](root://node-software/0.1/iri/concepts/tip-selection.md))
-	* Ask the IRI node to broadcast the milestone
+	* Ask the node for tip transactions
+	* Ask the node to broadcast the milestone
 	* Sleep until the next tick interval
 	:::
 
@@ -271,11 +271,11 @@ If you restart Compass, you don't need to pass it the `-bootstrap` flag (Compass
 
 When the application is running, you can interact with the network through the IRI node's API port at the following address http://localhost:14265.
 
-For a list of API endpoints see the [IRI API reference](root://node-software/0.1/iri/references/api-reference.md).
+For a list of API endpoints see the [node API reference](root://iri/1.0/references/iri-api-reference.md).
 
 --------------------
 ### getBalances
-Call the [`getBalances`](root://node-software/0.1/iri/references/api-reference.md#getbalances) endpoint to get the total balance of your seed.
+Call the [`getBalances`](root://iri/1.0/references/iri-api-reference.md#getbalances) endpoint to get the total balance of your seed.
 
  ```js
  var request = require('request');

@@ -8,7 +8,7 @@ For maximum security, it's best practice to run the signing server in a remote l
 
 ## Prerequisites
 
-To complete this guide, you need the following:
+To complete this tutorial, you need the following:
 
 - An [instance of Hub](../how-to-guides/install-hub.md)
 - A Linux [Ubuntu 18.04 LTS](https://www.ubuntu.com/download/server) server. If you are on a Windows or Mac operating system, you can [create a Linux server in a virtual machine](root://general/0.1/how-to-guides/set-up-virtual-machine.md).a new installation of [Ubuntu 18.04 LTS](https://www.ubuntu.com/download/server).

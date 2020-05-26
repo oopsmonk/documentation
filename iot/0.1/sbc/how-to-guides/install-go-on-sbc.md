@@ -4,7 +4,7 @@
 
 ## Hardware
 
-To complete this guide, you must have a Linux device that uses an ARM system architecture (32 bit or 64 bit).
+To complete this tutorial, you must have a Linux device that uses an ARM system architecture (32 bit or 64 bit).
 
 ---
 

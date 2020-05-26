@@ -38,7 +38,7 @@ This message contains the author's public keys that subscribers need for process
 
 ### Sending the link to the subscriber
 
-To let subscribers know about the channel, you must send them the link (channel address and the message identifier) outside of the channel.
+To let subscribers know about the channel, you must send them the link (channel address and the message identifier).
 
 How you send this link is up to you. For example, if your application is a mobile app, you could send the link through a push notification.
 
@@ -63,20 +63,20 @@ All message types have a corresponding `unwrap()` method for processing the mess
 
 ## Other messaging workflows
 
-After announcing a channel, you can start interacting with others on the channel, using the following messaging workflows as a guide:
+After announcing a channel, you can start interacting with others, using the following messaging workflows as a guide:
 
 - [Publishing public payloads](#publishing-public-payloads)
 - [Publishing masked payloads](#publishing-masked-payloads)
 - [Getting the public encryption keys of subscribers](#getting-the-public-encryption-keys-of-subscribers)
 - [Changing the author's signature keys](#changing-the-signature-keys)
 
-These workflows describe some best practices for linking messages.
+These workflows describe some best practices for linking messages to each other.
 
 The way that messages are linked affects whether receivers (the author and subscribers) have the correct information in their [states](../how-it-works.md#author-and-subscriber-states) to be able to process messages correctly.
 
 ### Publishing public payloads
 
-The most basic messaging workflow for publishing **public payloads** on a channel is where all messages are linked to the `Announce` message. In this workflow, subscribers only rely on the `Announce` message to be able to process the author's `SignedPacket` or `TaggedPacket` messages.
+The most basic messaging workflow for publishing **public payloads** is where all messages are linked to the `Announce` message. In this workflow, subscribers need only on the `Announce` message to be able to process the author's `SignedPacket` or `TaggedPacket` messages.
 
 ![Annonce message linked to a SignedPacket message](../images/signedpacket-workflow.png)
 
@@ -93,7 +93,7 @@ For masked payloads to be encrypted, they must be linked to a `Keyload` message.
 - Decrypt the author's masked payloads in future messages that are linked to the `Keyload` message
 - Encrypt their own masked payloads in `TaggedPacket` messages
 
-As a result, each `Keyload`message essentially acts as the start of a private channel within the main public channel, allowing you to create fine-grained access permissions for authorized subscribers. 
+As a result, each `Keyload`message essentially acts as the start of a private channel within the main one, allowing you to create fine-grained permissions for subscribers. 
 
 ![Keyload message linked to an Announce message](../images/keyload-workflow.png)
 
@@ -109,8 +109,6 @@ To use the session key, authorized subscribers can then process the `Keyload` me
 
 :::info:
 Before being able to decrypt a masked payload, susbcribers need to process the corresponding `Keyload` and `Announce` messages.
-
-If you were to ever [change the author's signature keys](#changing-the-signature-keys), the subscriber would also need to have processed the corresponding `ChangeKey` message.
 :::
 
 ### Getting the public encryption keys of subscribers
@@ -127,7 +125,7 @@ To get the public encryption keys of authorized subscribers, you can use one of 
 If the author is created with an encryption key pair, subscribers can publish  `Subscribe` messages on the channel to request access to a session key.
 
 :::info:
-`Subscribe` messages should always be linked to the `Announce` message.
+Because the `Announce` message contains the author's public encryption key, `Subscribe` messages should always be linked to it.
 :::
 
 ![Subscribe message linked to an Announce message](../images/subscribe-workflow.png)
@@ -135,10 +133,10 @@ If the author is created with an encryption key pair, subscribers can publish  `
 After publishing a `Subscribe` message, the subscriber sends the author the message identifier. The author then decides whether to publish a `Keyload` message for that subscriber.
 
 :::info:
-A single `Keyload` message can contain a session key for more than one subcriber.
+A single `Keyload` message may contain a session key for more than one subcriber.
 :::
 
-If the subscribers who published the `Subscribe` messages no longer plan on reading encrypted messages on the channel, they can notify the author by publishing  `Unsubscribe` messages. By notifying the author of their intent to unsubscribe, subscribers reduce the amount of computation that the author must do to generate future session keys. It's in the author's interest to listen to the channel for these messages.
+If the subscribers who published the `Subscribe` messages no longer plan on reading encrypted messages on the channel, they can notify the author by publishing `Unsubscribe` messages. By notifying the author of their intent to unsubscribe, subscribers reduce the amount of computation that the author must do to generate future session keys. It's in the author's interest to listen for these messages.
 
 :::info:
 `Unsubscribe` messages should always be linked to the corresponding `Subscribe` message because it contains the information that the author needs to verify the message.
@@ -146,20 +144,22 @@ If the subscribers who published the `Subscribe` messages no longer plan on read
 
 #### Outside of the channel
 
-Instead of allowing subscribers to request access to a session key, you may decide which subscribers should be allowed access to masked payloads before announcing the channel. These subscribers may come from an external source such as a list of members' email addresses in a database.
+Instead of allowing subscribers to request access to a session key, you can choose authorized subscribers before announcing the channel. These subscribers may come from an external source such as a list of members' email addresses in a database.
 
 To set up subscribers before announcing the channel, you can choose them in advance and either establish a pre-shared key or request their NTRU keys.
 
 The author can then later use these keys to publish a `Keyload` message.
 
-## Changing the signature keys
+## Generating new signature keys
 
-You may want to change the author's signature keys before running out of them so the author can continue publishing messages on the same channel instead of starting a new one.
+Because the author's signature keys are for one-time use, the author may run out of them.
+
+You may want to generate new signature keys to be able to continue publishing messages on the same channel instead of starting a new one.
 
 To generate a new set of [signature keys](../how-it-works.md#signature-keys), the author publishes a `ChangeKey` message.
 
 :::info:
-The author needs at least one signature key left in the Merkle tree to be able to sign the `ChangeKey` message and prove your ownership of the channel.
+The author needs at least one signature key left in the Merkle tree to be able to sign and publish the `ChangeKey` message.
 :::
 
 The `ChangeKey` message should be linked to either an `Announce` message or a previous `ChangeKey` message so that subscribers can use a previous public signature key to verify the new one.
