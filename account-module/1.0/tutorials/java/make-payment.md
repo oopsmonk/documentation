@@ -22,7 +22,7 @@ In this tutorial, we connect to a node on the [Devnet](root://getting-started/0.
     :::
 
 
-2. If you dont have a CDA that contains IOTA tokens, follow [this guide](../java/generate-cda.md)
+2. If you don't have a CDA that contains IOTA tokens, follow [this guide](../java/generate-cda.md)
 
 3. After making sure that the CDA is still active, send a deposit to it
 

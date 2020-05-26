@@ -26,7 +26,7 @@ In this tutorial, we connect to a node on the [Devnet](root://getting-started/0.
 
 To make a payment, your account needs to have one or more CDAs that contains IOTA tokens.
 
-1. If you dont have a CDA that contains IOTA tokens, follow this guide to [generate a CDA](../js/generate-cda.md) and send test IOTA tokens to it
+1. If you don't have a CDA that contains IOTA tokens, follow this guide to [generate a CDA](../js/generate-cda.md) and send test IOTA tokens to it
 
 2. Use the `parseCDAMagnet()` method to deserialize the magnet link into a CDA 
 
