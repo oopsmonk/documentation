@@ -22,7 +22,7 @@ In this blueprint, we use IOTA technology to automatically check downloaded file
 
 See this website for a [demonstration of a proof of existence application](https://iota-poex.dag.sh/).
 
-Unfortuntely, you can't deploy your own local version of this demo. However, you can test the [proof of existence JavaScript library](root://proof-of-existence/1.0/overview.md) that we built, using this blueprint.
+Unfortunately, you can't deploy your own local version of this demo. However, you can test the [proof of existence JavaScript library](root://proof-of-existence/1.0/overview.md) that we built, using this blueprint.
 
 ## Additional resources
 

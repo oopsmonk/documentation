@@ -65,7 +65,7 @@ Oracles take an oracle source as an argument and return `true` if the oracle sou
 
 To make a payment, your account needs to have one or more CDAs that contains IOTA tokens.
 
-1. If you dont have a CDA that contains IOTA tokens, follow [this guide](../go/generate-cda.md)
+1. If you don't have a CDA that contains IOTA tokens, follow [this guide](../go/generate-cda.md)
 
 2. Use the oracle to make sure that the CDA is still active, then send a deposit to it
     
