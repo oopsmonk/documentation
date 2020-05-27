@@ -10,7 +10,7 @@ All the code is open source and hosted on GitHub where you can do the following:
 - Suggest a new feature
 - Contribute to the documentation
 
-For more details about how you can contribute to the respository, see the contribution guidelines:
+For more details about how you can contribute to the repository, see the contribution guidelines:
 
 - [C](https://github.com/iotaledger/iota.c/blob/master/.github/CONTRIBUTING.md)
 - [Go](https://github.com/iotaledger/iota.go/blob/master/.github/CONTRIBUTING.md)
@@ -20,7 +20,7 @@ For more details about how you can contribute to the respository, see the contri
 
 ## Contribute to the documentation
 
-This documention is also open source and hosted on GitHub.
+This documentation is also open source and hosted on GitHub.
 
 If you want to contribute new documentation or fix an error, see the [contribution guidelines](https://github.com/iotaledger/documentation/blob/develop/.github/CONTRIBUTING.md).
 
