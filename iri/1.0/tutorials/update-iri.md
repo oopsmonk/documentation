@@ -16,7 +16,7 @@ If your node does not do local snapshots, you can update IRI by simply downloadi
 
 ## Node owners who configured IRI to do local snapshots
 
-If your node does local snapshots, you need to choose one of the following options:
+If your node does local snapshots, you need to choose one of the following options to update your IRI database before downloading and running the latest `.jar` file:
 
 - [Keep all your existing snapshot data](../tutorials/merge-snapshot.md)
 - [Delete your snapshot data and start again](../tutorials/delete-snapshot.md)
