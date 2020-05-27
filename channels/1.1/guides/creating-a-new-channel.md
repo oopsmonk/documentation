@@ -51,9 +51,7 @@ To sign messages, the `Author` object uses a [Merkle signature scheme (MSS)](htt
 
 A channel does not exist until it has been announced.
 
-To announce the channel, an author must publish an [`Announce`](../references/message-types.md) message on the communication channel.
-
-To create an `Announce` message, use the `announce()` method.
+To announce the channel, an author must first create an [`Announce`](../references/message-types.md) message, using the `announce()` method.
 
 ```rust
 let announcement = author.announce();
@@ -64,7 +62,7 @@ let announcement = author.announce();
 To publish a message on the Tangle, you need the following:
 
 - An instance of the IOTA Rust client library
-- The default node options, including the minimum weight magnitude
+- The default node options, including the minimum weight magnitude, and whether to do local or remote proof of work
 - The `Transport` trait for the Tangle
 
 ```rust
