@@ -16,7 +16,7 @@
 
 [Client libraries/Account module](root://account-module/1.0/overview.md)
 
-[Client libraries/Channels](root://channels/1.0/overview.md)
+[Client libraries/Channels](root://channels/1.1/overview.md)
 
 [Client libraries/IOTA area codes](root://iota-area-codes/1.0/overview.md)
 

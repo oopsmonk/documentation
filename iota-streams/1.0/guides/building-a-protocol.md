@@ -54,7 +54,7 @@ After creating your message types, you can write the methods for creating, publi
 
 We'll be adding more information about building Streams applications in the near future.
 
-In the meantime, take a look at the [Channels protocol](root://channels/1.0/overview.md) and get involved by discussing your own ideas in the #streams-discussion channel on [Discord](https://discord.iota.org/).
+In the meantime, take a look at the [Channels protocol](root://channels/1.1/overview.md) and get involved by discussing your own ideas in the #streams-discussion channel on [Discord](https://discord.iota.org/).
 
 
 
