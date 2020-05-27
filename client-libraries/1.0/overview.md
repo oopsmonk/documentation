@@ -25,7 +25,7 @@ Use your favourite language to send requests to a node's HTTP API, create transa
 Simplify IOTA payments without the worry of withdrawing from spent addresses or the need to promote and reattach pending transactions.
 ---
 #### **Channels** ####
-[Link](root://channels/1.0/overview.md)
+[Link](root://channels/1.1/overview.md)
 
 Build secure messaging applications where users can prove a message's integrity and authenticity.
 ---
