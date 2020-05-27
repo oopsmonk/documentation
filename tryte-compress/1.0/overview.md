@@ -9,7 +9,7 @@ This algorithm is also lightweight enough to be used by embedded devices.
 With the trytes compressor, you can:
 
 - Compress trytes into bytes
-- Decompress bytes into tryes
+- Decompress bytes into trytes
 
 ## Supported languages
 
