@@ -4,5 +4,5 @@
 
 You have the following options for running a node:
 
-- [Download the exectuable](../tutorials/install-goshimmer-executable.md) (quickest option)
+- [Download the executable](../tutorials/install-goshimmer-executable.md) (quickest option)
 - [Build the executable from source](../tutorials/install-goshimmer-native.md)
