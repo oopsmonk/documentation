@@ -12,7 +12,10 @@
 
 [Tutorials/Find neighbors](/tutorials/find-neighbors.md)
 [Tutorials/Set up a reverse proxy server](/tutorials/set-up-a-reverse-proxy.md)
+[Tutorials/Download the latest snapshot data](/tutorials/delete-snapshot.md)
+
 [Tutorials/Upgrade IRI to version 1.8.6](/tutorials/update-iri.md)
+[Tutorials/Merge your snapshot data and spent addresses](/tutorials/merge-snapshot.md)
 
 [References/API reference](/references/iri-api-reference.md)
 [References/Troubleshooting](/references/troubleshooting.md)
