@@ -4,5 +4,5 @@
 
 You have two options for running IRI:
 
-- [Run IRI in a Docker container](../tutorials/install-iri-linux.md) (for Linux, macOS, and Windows)
-- [Build and run IRI on a Linux Ubuntu server](../tutorials/install-iri-docker.md)
+- [Run IRI in a Docker container](../tutorials/install-iri-docker.md) (for Linux, macOS, and Windows)
+- [Build and run IRI on a Linux Ubuntu server](../tutorials/install-iri-linux.md)
