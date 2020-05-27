@@ -27,7 +27,7 @@ Simplify IOTA payments without the worry of withdrawing from spent addresses or 
 #### **Channels** ####
 [Link](root://channels/1.0/overview.md)
 
-Build secure messaging applications wheres users can prove a message's integrity and authenticity.
+Build secure messaging applications where users can prove a message's integrity and authenticity.
 ---
 #### **IOTA Area Codes** ####
 [Link](root://iota-area-codes/1.0/overview.md)
