@@ -30,7 +30,7 @@ Cryptography is what makes Streams so powerful. Built into the framework are cry
 - [Merkle tree signature scheme (MSS)](https://en.wikipedia.org/wiki/Merkle_signature_scheme) for Winternitz one-time-signatures
 - [NTRU key pairs](https://en.wikipedia.org/wiki/NTRU)
 
-For example, the Channels application uses spongos for processing messages that rely on information in other messages.
+For example, the Channels protocol uses spongos for processing messages that rely on information in other messages.
 
 If want to use another type of cryptography in your own application, you can add another crate that handles it.
 
@@ -54,7 +54,7 @@ After creating your message types, you can write the methods for creating, publi
 
 We'll be adding more information about building Streams applications in the near future.
 
-In the meantime, take a look at the [Channels application](root://channels/1.0/overview.md) and get involved by discussing your own ideas in the #streams-discussion channel on [Discord](https://discord.iota.org/).
+In the meantime, take a look at the [Channels protocol](root://channels/1.0/overview.md) and get involved by discussing your own ideas in the #streams-discussion channel on [Discord](https://discord.iota.org/).
 
 
 

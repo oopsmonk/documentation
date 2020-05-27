@@ -6,7 +6,7 @@
 
 [Guides/Designing a messaging workflow](/guides/designing-the-workflow.md)
 
-[Tutorials/Build your first Channels application](/tutorials/build-a-messaging-app.md)
+[Tutorials/Build your first application](/tutorials/build-a-messaging-app.md)
 
 [References/Error messages](/references/error-messages.md)
 
