@@ -4,7 +4,7 @@
 
 ## Join the Permanode Initiative
 
-The Permanode Inititative is a collaborative effort to help improve the developer experience of running a permanode with a focus on the following:
+The Permanode Initiative is a collaborative effort to help improve the developer experience of running a permanode with a focus on the following:
 
 - Quality assurance and review
 - Documentation

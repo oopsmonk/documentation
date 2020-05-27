@@ -4,7 +4,7 @@
 
 ## Join the Streams Initiative
 
-The [Streams Inititative](https://github.com/iota-community/IOTAStreams) is a collaborative effort to help improve the developer experience of the Streams framework and the Channels application with a focus on the following:
+The [Streams Inititative](https://github.com/iota-community/IOTAStreams) is a collaborative effort to help improve the developer experience of the Streams framework and the Channels protocol with a focus on the following:
 
 - Quality assurance and review
 - Documentation

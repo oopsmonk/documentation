@@ -8,4 +8,4 @@ The code is also hosted on [GitHub](https://github.com/JakeSCahill/channels-exam
 
 1. [Design a messaging workflow](../guides/designing-the-workflow.md)
 
-2. [Build your first Channels application](../tutorials/build-a-messaging-app.md)
+2. [Build your first application](../tutorials/build-a-messaging-app.md)

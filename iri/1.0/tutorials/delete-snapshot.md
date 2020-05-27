@@ -25,7 +25,9 @@
     tar -xvf latest-LS.tar
     ```
 
-Now, you have a `latest-LS` directory, which contains the latest snapshot data and spent addresses.
+:::success:
+Now, you have a `local-snapshots-db` directory, which contains all the latest snapshot data and spent addresses.
+:::
 
 ## Next steps
 
