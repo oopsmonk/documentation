@@ -331,7 +331,7 @@ tar -xzvf /home/jake/node/$FILE_NAME
 
 When you've downloaded, and configured IRI, it's time to run it.
 
-1. Run IRI. Replace `jake` with your Linux username, and replace the `$VERSION` placeolder with the version of the IRI that you downloaded.
+1. Run IRI. Replace `jake` with your Linux username, and replace the `$VERSION` placeholder with the version of the IRI that you downloaded.
 
     ```bash
     java ${JAVA_OPTIONS} -Xms${JAVA_MIN_MEMORY} -Xmx${JAVA_MAX_MEMORY} -Djava.net.preferIPv4Stack=true -jar /home/jake/node/iri-${VERSION}.jar -c /home/jake/node/config.ini
