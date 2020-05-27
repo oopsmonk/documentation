@@ -54,8 +54,8 @@ Use these settings to customize what your node does with its ledger.
 |<a name="db-path"></a> `--db-path`| `DB_PATH`|Sets the path to the directory in which the database is saved|string |mainnetdb |
 |<a name="rescan"></a> `--rescan`|`RESCAN_DB`|Rescans all transaction metadata (approvees, bundles, and tags) |boolean |false |
 |<a name="revalidate"></a>`--revalidate` |`REVALIDATE`|Reloads data in the database about confirmed transactions, and transaction metadata | boolean| false|
-|`--spent-addresses-db-path`|`SPENT_ADDRESSES_DB_PATH`|Sets the path to the directory in which the spent addresses database is saved|string|"spent-addresses-db"|
-|`--spent-addresses-db-log-path`|`SPENT_ADDRESSES_DB_LOG_PATH`|Sets the path to the directory in which the logs for the spent addresses database are saved|string|"spent-addresses-log"|
+|`--localsnapshots-db-path`|`LOCALSNAPSHOTS_DB_PATH`|Sets the path to the directory in which the local snapshots database is saved|string|"local-snapshots-db"|
+|`--localsnapshots-db-log-path`|`LOCALSNAPSHOTS_DB_LOG_PATH`|Sets the path to the directory in which the logs for the local snapshots database are saved|string|"local-snapshots-log"|
 
 ## IXI
 

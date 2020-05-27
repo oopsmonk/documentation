@@ -152,7 +152,7 @@ To complete this tutorial, you need the following:
     :::
 
 :::success:
-Now, you have a `localsnapshots-db` directory, which contains all your snapshot data and spent addresses.
+Now, you have a `local-snapshots-db` directory, which contains all your snapshot data and spent addresses.
 :::
 
 ## Next steps
