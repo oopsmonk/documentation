@@ -1,6 +1,6 @@
 # Python quickstart
 
-**In this quickstart, you learn the basics of IOTA development in Python, from setting up a development environment to connecting to a node.**
+**In this quickstart, you learn the basics of IOTA development in Python, from setting up a development environment to connecting to an IOTA node.**
 
 In this quickstart, you will learn how to:
 
@@ -8,7 +8,7 @@ In this quickstart, you will learn how to:
 
 2. Install packages
 
-3. Connect to a node
+3. Connect to an IOTA node
 
 ## Step 1. Set up a developer environment
 
@@ -81,11 +81,11 @@ After installing a package, you'll have the client library code and its dependen
 
 Now you can start coding.
 
-## Step 3. Connect to a node
+## Step 3. Connect to an IOTA node
 
 It's best practice to make sure that you're connected to a [synchronized node](root://getting-started/0.1/network/nodes.md#synchronized-nodes) before you start sending transactions to it. This way, you know that it has an up-to-date view of [the Tangle](root://getting-started/0.1/network/the-tangle.md).
 
-Whenever you connect to a node, you need to know which [IOTA network](root://getting-started/0.1/network/iota-networks.md) it's in. Here, we connect to a node on the Devnet, which is the IOTA networks that you can use for testing.
+Whenever you connect to an IOTA node, you need to know which [IOTA network](root://getting-started/0.1/network/iota-networks.md) it's in. Here, we connect to an IOTA node on the Devnet, which is the IOTA networks that you can use for testing.
 
 1. Go to the IOTA Foundation [Discord](https://discord.iota.org) and enter **!milestone** in the `botbox` channel
 
@@ -104,7 +104,7 @@ Whenever you connect to a node, you need to know which [IOTA network](root://get
     # Specify which node to connect to
     api = Iota(adapter = 'https://nodes.devnet.iota.org:443')
 
-    # Call the `get_node_info()` method for information about the node and the Tangle
+    # Call the `get_node_info()` method for information about the IOTA node and the Tangle
     response = api.get_node_info()
 
     print(response)
@@ -116,7 +116,7 @@ Whenever you connect to a node, you need to know which [IOTA network](root://get
     python index.py
     ```
 
-The node returns something like the following:
+The IOTA node returns something like the following:
 
 ```json
 {
@@ -145,7 +145,7 @@ The node returns something like the following:
 
 ### Reading the response object
 
-If the `latestMilestoneIndex` field is equal to the one you got from Discord and the `latestSolidSubtangleMilestoneIndex` field, the node is synchronized.
+If the `latestMilestoneIndex` field is equal to the one you got from Discord and the `latestSolidSubtangleMilestoneIndex` field, the IOTA node is synchronized.
 
 If not, try connecting to a different node. The [iota.dance website](https://iota.dance/) includes a list of Mainnet nodes. Or, you can [run your own node](root://node-software/1.0/overview.md).
 

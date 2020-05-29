@@ -8,7 +8,7 @@ One Chronicle node manages and supervises all the shards in a Scylla swarm. It d
 
 ![Scylla swarm](images/scylla-swarm.jpg)
 
-In this diagram, the Chronicle node consists of the green components between the IRI node and the Scylla swarm. The node contains the umbrella project, API services, the core app, the ZMQ messenger, and the explorer service.
+In this diagram, the Chronicle node consists of the green components between the IRI node and the Scylla swarm. The IOTA node contains the umbrella project, API services, the core app, the ZMQ messenger, and the explorer service.
 
 ![Chronicle node architecture](images/chronicle-node.jpg)
 

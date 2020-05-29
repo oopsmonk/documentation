@@ -1,8 +1,14 @@
 # Chronicle API reference
 
-**The GoShimmer API provides a simple and consistent way to get transactions from a Chronicle permanode. This API accepts HTTP requests and responds with JSON data.**
+**The Chronicle API provides a simple and consistent way to get transactions from a Chronicle permanode.**
 
-All the following commands must include an HTTP header.
+## Headers
+
+All commands must include the `X-IOTA-API-Version` header set to 1.
+
+All resources expect and return JSON response bodies. Error responses will also be sent as JSON.
+
+In practice this means that you'll always get a response with a `Content-Type` header set to `application/json`.
 
 | **Header**       | **Value** | **Required or Optional** |
 |:---------------|:--------|:--------|
@@ -12,6 +18,14 @@ All the following commands must include an HTTP header.
 :::warning:
 This API is in beta, and is subject to change. We recommend that you don't use this API in production applications.
 :::
+
+## Base URL
+
+All requests to this API should be sent to the URL of a Chronicle node.
+
+If you don't already have an IOTA node to connect to, we recommend [running your own](root://node-software/1.0/overview.md).
+
+Running your own node has many benefits, of which the most important is that you don't need to trust a potentially malicious third-party node. If you were to connect to a malicious node, it could give you incorrect information about balances and transactions, leading to stolen IOTA tokens.
 
 ## getTrytes
 

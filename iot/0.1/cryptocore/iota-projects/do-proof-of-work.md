@@ -6,7 +6,7 @@ This guide walks you through the process of writing the following scripts:
 
 - **`create_bundle.sh`:** Creates a bundle of eight zero-value transactions without a proof of work
 - **`do_pow.sh`:** Uses the CryptoCore to do proof of work for the bundle
-- **`send-bundle.js`:** Connects to a node and sends the bundle's transactions to it
+- **`send-bundle.js`:** Connects to an IOTA node and sends the bundle's transactions to it
 
 :::info:
 These code samples are also hosted on [GitHub](https://github.com/iota-community/cryptocore-scripts).
@@ -57,14 +57,14 @@ In this step, you write a script that creates eight zero-value transactions, cha
     sudo nano create-bundle.js
     ```
 
-2. Use the first argument that is passed to the script to connect to a node on either the Devnet or the Mainnet
+2. Use the first argument that is passed to the script to connect to an IOTA node on either the Devnet or the Mainnet
 
     ```js
     
     // This argument should be a minimum weight magnitude (14 or 9)
     const network = process.argv[2];
 
-    // Define a node for each IOTA network
+    // Define an IOTA node for each IOTA network
     const nodes = {
             devnet: 'https://nodes.devnet.iota.org:443',
             mainnet: `https://nodes.iota.org:443`
@@ -73,11 +73,11 @@ In this step, you write a script that creates eight zero-value transactions, cha
     // Connect to the correct IOTA network, depending on the user's
     // selection in the CryptoCore script
     if (network === '14') {
-            iota = Iota.composeAPI({
+           IOTA = Iota.composeAPI({
             provider: nodes.mainnet
             });
     } else {
-            iota = Iota.composeAPI({
+           IOTA = Iota.composeAPI({
             provider: nodes.devnet
             });
     }
@@ -156,7 +156,7 @@ In this step, you write a script that creates eight zero-value transactions, cha
     const seed = "999999999999999999999999999999999999999999999999999999999999999999999999999999999"
 
     // Chain the transactions into a bundle
-    iota.prepareTransfers(seed, transfers)
+   IOTA.prepareTransfers(seed, transfers)
         .then(function(trytes){
         console.log(JSON.stringify(trytes));
         })
@@ -274,13 +274,13 @@ In this step, you write a script that attaches a bundle of transactions to the T
     sudo nano send-bundle.js
     ```
 
-2. Use the first argument that was passed to the script to connect to a node on either the Devnet or the Mainnet
+2. Use the first argument that was passed to the script to connect to an IOTA node on either the Devnet or the Mainnet
 
     ```js
     // This argument should be a minimum weight magnitude (14 or 9)
     const network = process.argv[2];
 
-    // Define a node for each IOTA network
+    // Define an IOTA node for each IOTA network
     const nodes = {
             devnet: 'https://nodes.devnet.iota.org:443',
             mainnet: `https://nodes.iota.org:443`
@@ -289,11 +289,11 @@ In this step, you write a script that attaches a bundle of transactions to the T
     // Connect to the correct IOTA network, depending on the user's
     // selection in the CryptoCore script
     if (network === '14') {
-            iota = Iota.composeAPI({
+           IOTA = Iota.composeAPI({
             provider: nodes.mainnet
             });
     } else {
-            iota = Iota.composeAPI({
+           IOTA = Iota.composeAPI({
             provider: nodes.devnet
             });
     }
@@ -319,7 +319,7 @@ In this step, you write a script that attaches a bundle of transactions to the T
 
     ```js
     // Send the transaction trytes to the connected IOTA node
-    iota.storeAndBroadcast(trytes)
+   IOTA.storeAndBroadcast(trytes)
     .then(trytes => {
         console.log("Successfully attached transactions to the Tangle");
         // Print the transaction details
@@ -391,7 +391,7 @@ Tail transaction hash:
 
 To see your bundle on the Tangle, copy the tail transaction hash and paste it into a [Tangle explorer](https://utils.iota.org/).
 
-If the Tangle explorer doesn't display your transaction after 5 minutes, the node may not have sent your transaction to its neighbors.
+If the Tangle explorer doesn't display your transaction after 5 minutes, the IOTA node may not have sent your transaction to its neighbors.
 
 To resend your transaction, you can pass the transaction trytes in the `my-transactions/attached_trytes.txt` file to the [`storeAndBroadcast()`](https://github.com/iotaledger/iota.js/tree/next/packages/core#corestoreandbroadcasttrytes-callback) method in the JavaScript client library.
 

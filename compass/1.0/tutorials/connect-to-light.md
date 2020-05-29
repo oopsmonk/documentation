@@ -23,6 +23,6 @@ To complete this tutorial, you need the following:
 3. Go to **RECEIVE** > **ATTACH TO TANGLE** to see your full balance
 
 :::success:Congratulations! :tada:
-The light wallet is now connected to the node in your private Tangle.
+The light wallet is now connected to the IOTA node in your private Tangle.
 :::
 

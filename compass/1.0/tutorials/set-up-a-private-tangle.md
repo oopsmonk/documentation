@@ -2,8 +2,6 @@
 
 **In this tutorial, you install a private Tangle, which consists of an IRI node and Compass on the same server or virtual machine.**
 
-![Single-node private Tangle](../images/single-node-tangle.svg)
-
 ## Prerequisites
 
 A Linux server with the following minimum requirements. If you are on a Windows or macOS operating system, you can [create a Linux server in a virtual machine](root://general/0.1/how-to-guides/set-up-virtual-machine.md).
@@ -256,8 +254,8 @@ After you've created the Merkle tree and you're running an IRI node, you can run
 	When the `-bootstrap` flag is passed during setup, Compass creates a chain of four milestones that sequentially reference the previous milestone.
 
 	Then, Compass sends milestones by doing the following:
-	* Ask the node for tip transactions
-	* Ask the node to broadcast the milestone
+	* Ask the IOTA node for tip transactions
+	* Ask the IOTA node to broadcast the milestone
 	* Sleep until the next tick interval
 	:::
 

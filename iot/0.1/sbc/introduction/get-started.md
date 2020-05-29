@@ -20,8 +20,6 @@ If your device has a Windows operating system, you can use [a virtual machine (V
 
 When choosing an SBC, you should consider its features and decide whether it will meet your needs.
 
-For example, if you plan to use your SBC to run an IRI node, you need at least 4 GB of RAM.
-
 Wikipedia have a [list of different SBCs](https://en.wikipedia.org/wiki/Comparison_of_single-board_computers) and a comparison of their features. 
 
 :::info:

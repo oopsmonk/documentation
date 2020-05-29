@@ -135,7 +135,7 @@ The terms in this category are related to transactions
 
 |**Definition**|**Part of speech**|**Status**|
 |:---------|:-------------|:-----|
-|State of a transaction when a node has its entire history in its ledger|noun|preferred|
+|State of a transaction when an IOTA node has its entire history in its ledger|noun|preferred|
 
 ### minimum weight magnitude
 
@@ -171,7 +171,7 @@ The terms in this category are related to transactions
 
 |**Definition**|**Part of speech**|**Status**|
 |:---------|:-------------|:-----|
-|Send the same transaction to a node again|verb|preferred|
+|Send the same transaction to an IOTA node again|verb|preferred|
 
 ### tail transaction
 
@@ -183,7 +183,7 @@ The terms in this category are related to transactions
 
 |**Definition**|**Part of speech**|**Status**|
 |:---------|:-------------|:-----|
-|Process whereby a node selects two tip transactions from the Tangle|noun|preferred|
+|Process whereby an IOTA node selects two tip transactions from the Tangle|noun|preferred|
 
 ### tip transaction
 

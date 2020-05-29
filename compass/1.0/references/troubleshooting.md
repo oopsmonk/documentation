@@ -16,18 +16,18 @@ You may see this error when you run any command that includes `bazel run //docke
 
 ## Malformed snapshot state file
 
-You may see this error when you run the node.
+You may see this error when you run the IOTA node.
 
 In the `snapshot.txt` file, remove any line break characters.
 
 ## NumberFormatException
 
-You may see this error when you run the node.
+You may see this error when you run the IOTA node.
 
 In the `snapshot.txt` file, remove any spaces after the semicolon.
 
 ## IllegalArgumentException
 
-You may see this error when you run the node.
+You may see this error when you run the IOTA node.
 
 In the `snapshot.txt` file, remove any spaces before the semicolon.

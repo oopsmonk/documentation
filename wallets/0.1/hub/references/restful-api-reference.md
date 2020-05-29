@@ -2001,5 +2001,5 @@ When requesting data about a user's balance history, the reason for the balance 
 |**Name**| **Description**             |
 | ------------ | ------ | ------------------------ |
 | `HUB_UNKNOWN` |    Unknown                      |
-| `INBOUND`   |  IOTA tokens were deposited into the Hub address during a sweep |
+| `INBOUND`   | IOTA tokens were deposited into the Hub address during a sweep |
 | `OUTBOUND`     | IOTA tokens were withdrawn from the Hub address during a sweep|

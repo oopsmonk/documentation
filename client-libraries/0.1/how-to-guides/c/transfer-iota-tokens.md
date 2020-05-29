@@ -14,7 +14,7 @@ These settings are defined in a `config.h` file, which we create in the [getting
 
 ## Step 1. Get test IOTA tokens
 
-To send test IOTA tokens on the Devnet, the nodes must have a record of a greater than 0 balance for one of the addresses that belongs to your seed. To get test IOTA tokens to use on the Devnet, you can use the Devnet faucet.
+To send test IOTA tokens on the Devnet, the IOTA nodes must have a record of a greater than 0 balance for one of the addresses that belongs to your seed. To get test IOTA tokens to use on the Devnet, you can use the Devnet faucet.
 
 1\. Create a new seed and back it up
 
@@ -98,10 +98,10 @@ To transfer your test tokens from one address to another, you need to create and
     transfer_array_add(transfers, &tf);
     ```
 
-5. To create a bundle from your `transfers` array, pass it to the [`iota_client_send_transfer()`](https://github.com/iotaledger/entangled/blob/develop/cclient/api/extended/send_transfer.h) method, which handles [tip selection](root://getting-started/0.1/network/tip-selection.md), [remote proof of work](root://getting-started/0.1/transactions/proof-of-work.md), and sending the bundle to the node
+5. To create a bundle from your `transfers` array, pass it to the [`iota_client_send_transfer()`](https://github.com/iotaledger/entangled/blob/develop/cclient/api/extended/send_transfer.h) method, which handles [tip selection](root://getting-started/0.1/network/tip-selection.md), [remote proof of work](root://getting-started/0.1/transactions/proof-of-work.md), and sending the bundle to the IOTA node
 
     ```go
-    // Create a bundle from the transfers array and send it to the node
+    // Create a bundle from the transfers array and send it to the IOTA node
     ret_code = iota_client_send_transfer(s, seed, SECURITY_LEVEL, TIP_SELECTION_DEPTH, MINIMUM_WEIGHT_MAGNITUDE, false, transfers, NULL, NULL, NULL, bundle);
 
     printf("Sending 1 i to %s\n", RECEIVER_ADDR);
@@ -119,10 +119,10 @@ To transfer your test tokens from one address to another, you need to create and
     transfer_array_free(transfers);
     ```
 
-    This method asks the node to check the balance of your seed's addresses. If your addresses have enough IOTA tokens to complete the transfer, the method creates input transactions to withdraw the full balance from enough of your addresses to fulfill the transfer. Then, the method adds those transactions to the transfer bundle and signs the bundle with the private keys of any withdrawn addresses.
+    This method asks the IOTA node to check the balance of your seed's addresses. If your addresses have enough IOTA tokens to complete the transfer, the method creates input transactions to withdraw the full balance from enough of your addresses to fulfill the transfer. Then, the method adds those transactions to the transfer bundle and signs the bundle with the private keys of any withdrawn addresses.
 
     :::info:
-    Your seed never leaves your device. The library generates addresses and sends them to the node.
+    Your seed never leaves your device. The library generates addresses and sends them to the IOTA node.
     :::
 
     If the amount you want to transfer is less than the balance of your withdrawn addresses, the method creates another output transaction to transfer the remainder to an unspent address that belongs to your seed.

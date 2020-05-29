@@ -5,7 +5,7 @@
 -------------------------
 ![IRI](images/IRI.png)
 ## [IRI](root://iri/1.0/overview.md)
-The IRI (IOTA reference implementation) is open-source Java software that runs on the IOTA Mainnet. This software defines the current IOTA protocol, which allows clients to transfer the IOTA token among each other.
+IRI is the original IOTA reference implementation for the IOTA Mainnet. This software is now in maintenance mode. Only critical fixes will be made. We recommend using Hornet if you are setting up your first node.
 -------------------------
 
 -------------------------
@@ -17,6 +17,12 @@ Chronicle is an addition to the IRI node software that allows you to store all t
 -------------------------
 ![GoShimmer](images/GoShimmer.png)
 ## [GoShimmer](root://goshimmer/1.0/overview.md)
-GoShimmer is open-source Go software that implements a prototype of an IOTA network without the Coordinator. This network is still in development, so not all modules exist, but new ones will be added when they are ready.
+GoShimmer implements a prototype of an IOTA network without the Coordinator. This network is still in development, so not all modules exist, but new ones will be added when they are ready.
+-------------------------
+
+-------------------------
+![Hornet](images/hornet.png)
+## [Hornet](root://hornet/1.0/overview.md)
+Hornet is an implementation of IRI that is maintained by the IOTA community. This implementation will continue to be updated to include the protocol changes in [Chrysalis](https://roadmap.iota.org/chrysalis).
 -------------------------
 

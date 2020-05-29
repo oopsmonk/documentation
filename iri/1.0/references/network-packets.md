@@ -16,4 +16,4 @@
 |**Type**|**Bytes**|**Description**|
 |:------|:------------------|:--------------|
 |Transaction Gossip|Minimum: 341, Maximum: 1650 bytes|Contains the byte-encoded transaction data (292-1604 bytes) and the transaction hash of a requested transaction (49 bytes). The byte-encoded transaction data is truncated by removing all 0 bytes from the end of the `signatureMessageFragment` field.|
-|Handshake|10|Contains the node's port number (2 bytes) and the time (8 bytes) that the handshake packet was sent (millisecond timestamp). This message is the first message that's exchanged between two neighbors to identify each other. The timestamp is used to show the latency among neighbors.|
+|Handshake|10|Contains the IOTA node's port number (2 bytes) and the time (8 bytes) that the handshake packet was sent (millisecond timestamp). This message is the first message that's exchanged between two neighbors to identify each other. The timestamp is used to show the latency among neighbors.|

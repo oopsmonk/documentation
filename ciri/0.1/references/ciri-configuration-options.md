@@ -19,7 +19,7 @@ You can choose to configure cIRI by specifying the configuration options in the 
 |<a name="--p-remove-request"></a>`--p-remove-request`| Probability of removing a transaction from the request queue without requesting it. | float, must be in [0,1] | 0.01 | |
 |<a name="--p-reply-random-tip"></a>`--p-reply-random-tip`| Probability of replying to a random transaction request, even though your node doesn't have anything to request. | float, must be in [0,1].  | 0.66 | |
 |<a name="--p-select-milestone"></a>`--p-select-milestone`| Probability of sending a current milestone request to a neighbour. | float, must be in [0,1].  | 0.7 | |
-|<a name="--p-send-milestone"></a>`--p-send-milestone`| Probability of sending a milestone transaction when the node looks for a random transaction to send to a neighbor. | float, must be in [0,1]. | 0.02 | |
+|<a name="--p-send-milestone"></a>`--p-send-milestone`| Probability of sending a milestone transaction when the IOTA node looks for a random transaction to send to a neighbor. | float, must be in [0,1]. | 0.02 | |
 |<a name="--requester-queue-size"></a>`--requester-queue-size`| Size of the transaction requester queue. | number | 10000 | |
 |<a name="--tcp-receiver-port"></a>`--tcp-receiver-port`| Displays the usage. | number  | 15600 | |
 |<a name="--tips-cache-size"></a>`--tips-cache-size`| Size of the tips cache. Also bounds the number of tips returned by getTips API call. | number | 5000 | |
@@ -52,7 +52,7 @@ You can choose to configure cIRI by specifying the configuration options in the 
 |<a name="p-remove-request"></a>`p-remove-request`| Probability of removing a transaction from the request queue without requesting it. | float, must be in [0,1] | 0.01 | |
 |<a name="p-reply-random-tip"></a>`p-reply-random-tip`| Probability of replying to a random transaction request, even though your node doesn't have anything to request. | float, must be in [0,1].  | 0.66 | |
 |<a name="p-select-milestone"></a>`p-select-milestone`| Probability of sending a current milestone request to a neighbour. | float, must be in [0,1].  | 0.7 | |
-|<a name="p-send-milestone"></a>`p-send-milestone`| Probability of sending a milestone transaction when the node looks for a random transaction to send to a neighbor. | float, must be in [0,1]. | 0.02 | |
+|<a name="p-send-milestone"></a>`p-send-milestone`| Probability of sending a milestone transaction when the IOTA node looks for a random transaction to send to a neighbor. | float, must be in [0,1]. | 0.02 | |
 |<a name="requester-queue-size"></a>`requester-queue-size`| Size of the transaction requester queue. | number | 10000 | |
 |<a name="tcp-receiver-port"></a>`tcp-receiver-port`| Displays the usage. | number  | 15600 | |
 |<a name="tips-cache-size"></a>`tips-cache-size`| Size of the tips cache. Also bounds the number of tips returned by getTips API call. | number | 5000 | |

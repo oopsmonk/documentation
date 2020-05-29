@@ -14,7 +14,7 @@ The test network runs one [IRI node](root://iri/1.0/overview.md) and an instance
 
 The IRI node receives transactions, validates them, and keeps an up-to-date record of users' balances.
 
-At regular intervals, Compass sends the IRI node zero-value transactions called [milestones](root://getting-started/0.1/network/the-tangle.md#milestones) that reference other transactions. Any transaction that's referenced by a milestone is considered confirmed. At this point, the node updates any balances that were affected by the confirmed transaction.
+At regular intervals, Compass sends the IRI node zero-value transactions called [milestones](root://getting-started/0.1/network/the-tangle.md#milestones) that reference other transactions. Any transaction that's referenced by a milestone is considered confirmed. At this point, the IOTA node updates any balances that were affected by the confirmed transaction.
 
 The total supply of tokens are stored on the first address of this seed: `SEED99999999999999999999999999999999999999999999999999999999999999999999999999999`.
 
@@ -248,5 +248,5 @@ Use one of our other tools and utilities with your new network.
 Try out the [MAM watcher](../mam-watcher/overview.md) to send encrypted messages through your network.
 
 :::info:
-Make sure to change the node URL `https://nodes.devnet.thetangle.org:443` to the URL of your node in both the `sender.js` file and the `fetcher.js` file.
+Make sure to change the IOTA node URL `https://nodes.devnet.thetangle.org:443` to the URL of your node in both the `sender.js` file and the `fetcher.js` file.
 :::

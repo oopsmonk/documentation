@@ -12,7 +12,7 @@ pip install zmq
 
 ## IOTA network
 
-In this tutorial, we connect to a node on the [Devnet](root://getting-started/0.1/network/iota-networks.md#devnet).
+In this tutorial, we connect to an IOTA node on the [Devnet](root://getting-started/0.1/network/iota-networks.md#devnet).
 
 ## Code walkthrough
 
@@ -22,7 +22,7 @@ In this tutorial, we connect to a node on the [Devnet](root://getting-started/0.
     import zmq
     ```
 
-2. Connect the socket to a node's ZMQ port
+2. Connect the socket to an IOTA node's ZMQ port
 
     ```python
     context = zmq.Context()
@@ -37,11 +37,11 @@ In this tutorial, we connect to a node on the [Devnet](root://getting-started/0.
     print ("Socket connected")
     ```
 
-4. Process the event data that the node returns
+4. Process the event data that the IOTA node returns
 
     ```python
     while True:
-        print ("Waiting for events from the node")
+        print ("Waiting for events from the IOTA node")
         message = socket.recv()
         data = message.split()
         print ("Transaction confirmed by milestone index: ", data[1])
@@ -61,7 +61,7 @@ We use the [REPL.it tool](https://repl.it) to allow you to run sample code in th
 Click the green button to run the sample code in this guide and see the results in the window.
 
 :::info:
-It may take a minute or two to receive data from the node.
+It may take a minute or two to receive data from the IOTA node.
 :::
 
 <iframe height="600px" width="100%" src="https://repl.it/@jake91/ZMQ-example-Python?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>

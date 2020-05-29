@@ -1,6 +1,6 @@
-# Send requests to a node
+# Send requests to an IOTA node
 
-**Nodes wait to receive transactions from clients on the API port that's set in the `PORT` configuration parameter. You can send HTTP requests to this port to interact with a node's REST API, which allows you to read/write data to the Tangle.**
+**Nodes wait to receive transactions from clients on the API port that's set in the `PORT` configuration parameter. You can send HTTP requests to this port to interact with an IOTA node's REST API, which allows you to read/write data to the Tangle.**
 
 ## Prerequisites
 
@@ -10,9 +10,9 @@ To use the code samples in this tutorial, you must have the following:
 - A code editor such as [Visual Studio Code](https://code.visualstudio.com/Download)
 - Access to a command-line interface
 
-## Request information about the node
+## Request information about the IOTA node
 
-You can call the [getNodeInfo](../references/api-reference.md#getnodeinfo) endpoint to request general information about the node.
+You can call the [getNodeInfo](../references/api-reference.md#getnodeinfo) endpoint to request general information about the IOTA node.
 
 For more endpoints, see the [API reference](../references/api-reference.md).
 
@@ -57,7 +57,7 @@ command = json.dumps({
 ```
 --------------------
 
-3\. Send the request to the node
+3\. Send the request to the IOTA node
 
 --------------------
 ### Node.js

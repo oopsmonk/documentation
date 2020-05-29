@@ -22,7 +22,7 @@ In this tutorial, we connect to a [node](root://getting-started/0.1/network/node
 
 ## Step 1. Get test IOTA tokens
 
-To send test IOTA tokens on the Devnet, the nodes must have a record of a greater than 0 balance for one of the addresses that belongs to your seed. To get test IOTA tokens to use on the Devnet, you can use the Devnet faucet.
+To send test IOTA tokens on the Devnet, the IOTA nodes must have a record of a greater than 0 balance for one of the addresses that belongs to your seed. To get test IOTA tokens to use on the Devnet, you can use the Devnet faucet.
 
 1\. Create a new seed and back it up
 
@@ -66,7 +66,7 @@ To transfer your test tokens from one address to another, you need to create and
     )
     ```
 
-2. Connect to a node
+2. Connect to an IOTA node
 
     ```go
     var node = "https://nodes.devnet.thetangle.org"
@@ -114,17 +114,17 @@ To transfer your test tokens from one address to another, you need to create and
     trytes, err := api.PrepareTransfers(seed, transfers, PrepareTransfersOptions{})
     must(err)
     ```
-    This method asks the node to check the balance of your seed's addresses. If your addresses have enough IOTA tokens to complete the transfer, the method creates input transactions to withdraw the full balance from enough of your addresses to fulfill the transfer. Then, the method adds those transactions to the transfer bundle and signs the bundle with the private keys of any withdrawn addresses.
+    This method asks the IOTA node to check the balance of your seed's addresses. If your addresses have enough IOTA tokens to complete the transfer, the method creates input transactions to withdraw the full balance from enough of your addresses to fulfill the transfer. Then, the method adds those transactions to the transfer bundle and signs the bundle with the private keys of any withdrawn addresses.
 
     :::info:
     Your seed never leaves your device.
 
-    The library generates addresses on your local device and sends them to the node.
+    The library generates addresses on your local device and sends them to the IOTA node.
     :::
 
     If the amount you want to transfer is less than the balance of your withdrawn addresses, the method creates another output transaction to transfer the remainder to an unspent address that belongs to your seed.
     
-8. Pass the bundle trytes to the [`SendTrytes()`](https://github.com/iotaledger/iota.go/blob/master/.docs/iota.go/reference/api_send_trytes.md) method, which handles [tip selection](root://getting-started/0.1/network/tip-selection.md), [remote proof of work](root://getting-started/0.1/transactions/proof-of-work.md), and sending the bundle to the node
+8. Pass the bundle trytes to the [`SendTrytes()`](https://github.com/iotaledger/iota.go/blob/master/.docs/iota.go/reference/api_send_trytes.md) method, which handles [tip selection](root://getting-started/0.1/network/tip-selection.md), [remote proof of work](root://getting-started/0.1/transactions/proof-of-work.md), and sending the bundle to the IOTA node
 
     ```go
     myBundle, err := api.SendTrytes(trytes, depth, minimumWeightMagnitude)

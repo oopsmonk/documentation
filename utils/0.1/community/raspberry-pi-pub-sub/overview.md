@@ -62,7 +62,7 @@ Before we start looking at the details, run the application so you can see how q
   ```
 
 :::success:Congratulations! :tada:
-In the console, you should see that the current temperature in Celcius is sent as a transaction to a node on the Devnet.
+In the console, you should see that the current temperature in Celcius is sent as a transaction to an IOTA node on the Devnet.
 
 If you wait for around a minute, you should see the ZMQ event trigger when the transaction is confirmed.
 :::

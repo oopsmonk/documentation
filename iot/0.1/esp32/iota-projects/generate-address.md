@@ -46,9 +46,9 @@ To run this application on Windows, enter the following commands in Git Bash.
 
     |**Configuration option**|**Description**|**Notes**
     |:----|:-----|:-----|
-    |`WiFi`|Set your WiFi credentials to allow the application to connect to the Internet |If you don't connect to a local IRI node, you must configure the WiFi settings to allow the application to connect to the remote node over the Internet |
+    |`WiFi`|Set your WiFi credentials to allow the application to connect to the Internet |If you don't connect to a local node, you must configure the WiFi settings to allow the application to connect to the remote node over the Internet |
     |`SNTP` |Set the `Timezone` option to the [timezone](https://github.com/nayarsystems/posix_tz_db/blob/master/zones.json) that you want the application to use|By default, this application uses China Standard Time|
-    |`IRI Node`|Set the options to the IRI node to which you want the application to connect| By default, this application connects to a Devnet node over HTTPS|
+    |`IRI Node`|Set the options to the IOTA node to which you want the application to connect| By default, this application connects to a Devnet node over HTTPS|
     |`Monitor interval(s)`| Set the number of seconds for which the application should wait between each check of the address| By default, this application checks the address every 30 seconds|
 
     :::info:

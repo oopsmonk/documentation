@@ -42,9 +42,9 @@ In this step, you use Cargo to create a new project and install the dependencies
 2. Open the `Cargo.toml` file, and add the following dependencies under the `[DEPENDENCIES]` section
 
     ```bash
-    iota-streams = { git = "https://github.com/iotaledger/streams" }
+   IOTA-streams = { git = "https://github.com/iotaledger/streams" }
     failure = "0.1"
-    iota-lib-rs = "0.4"
+   IOTA-lib-rs = "0.4"
     ```
 
 Now you have all the dependencies, you're ready to start coding.
@@ -104,9 +104,9 @@ In this step, you write a function that announces a new channel. This channel is
     The [`?`](https://doc.rust-lang.org/edition-guide/rust-2018/error-handling-and-panics/the-question-mark-operator-for-easier-error-handling.html) operator is for handling any errors that may be produced while creating the message.
     :::
 
-    The `send_message_with_options()` method uses the IOTA client library to convert messages into bundles and send the resulting transactions to a node.
+    The `send_message_with_options()` method uses the IOTA client library to convert messages into bundles and send the resulting transactions to an IOTA node.
 
-    This method returns an error only if the bundle was not sent to the node. Therefore, if you see no error, the bundle was sent.
+    This method returns an error only if the bundle was not sent to the IOTA node. Therefore, if you see no error, the bundle was sent.
 
 5. Return the `Announce` message identifier
 
@@ -161,7 +161,7 @@ In this step, you write a function that creates and publishes an alert about bre
 
     For more information about linking, see [Linking messages](../guides/linking-messages.md).
 
-4. Convert the public payload to a `Trytes` type to be able to send it to a node
+4. Convert the public payload to a `Trytes` type to be able to send it to an IOTA node
 
     ```rust
     let public_payload = Trytes(Tbits::from_str(&public_payload).unwrap());

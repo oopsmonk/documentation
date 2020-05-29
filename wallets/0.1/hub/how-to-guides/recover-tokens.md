@@ -13,7 +13,7 @@ To transfer the total balance of a spent address into a single output address, i
 To complete this tutorial, you need the following:
 
 - An [instance of Hub](../how-to-guides/install-hub.md)
-- [A Node.js developer environment](root://client-libraries/1.0/getting-started/js-quickstart.md)
+- [An IOTA node.js developer environment](root://client-libraries/1.0/getting-started/js-quickstart.md)
 - The [`@iota/bundle`](https://github.com/iotaledger/iota.js/tree/next/packages/bundle), [`@iota/core`](https://github.com/iotaledger/iota.js/tree/next/packages/core), [`@iota/converter`](https://github.com/iotaledger/iota.js/tree/next/packages/converter), and [`@iota/transaction`](https://github.com/iotaledger/iota.js/tree/next/packages/transaction) packages
 - The [`SignBundle_enabled` flag](../references/command-line-options.md#signBundle) set to `true`.
 
@@ -130,9 +130,9 @@ Hub has a `signBundle()` gRPC method, which allows you to sign bundles that with
    The third argument specifies the first transaction in the bundle to which to start adding the signature fragments. In our example, the first transaction is the output transaction, so it doesn't need a signature.
    :::
 
-## Step 3. Send the signed bundle to a node
+## Step 3. Send the signed bundle to an IOTA node
 
-After adding the signature fragments to the input transactions in your bundle, it's now signed and ready to be sent to a node.
+After adding the signature fragments to the input transactions in your bundle, it's now signed and ready to be sent to an IOTA node.
 
 1. Convert the transactions in the signed bundle to trytes and push them into a new array
 
@@ -143,7 +143,7 @@ After adding the signature fragments to the input transactions in your bundle, i
    }
    ```
 
-2. Connect to a node by adding the URL of one to the `provider` field
+2. Connect to an IOTA node by adding the URL of one to the `provider` field
 
    ```js
    const iota = Iota.composeAPI({
@@ -151,17 +151,17 @@ After adding the signature fragments to the input transactions in your bundle, i
    });
    ```
 
-3. Set the node configuration options
+3. Set the IOTA node configuration options
 
    ```js
    const depth = 3;
    const minWeightMagnitude = 14;
    ```
 
-4. Send the bundle's transaction trytes to the node
+4. Send the bundle's transaction trytes to the IOTA node
 
    ```js
-   iota.sendTrytes(trytes.reverse(), depth, minWeightMagnitude)
+  IOTA.sendTrytes(trytes.reverse(), depth, minWeightMagnitude)
    .then(bundle => {
       console.log(`Sent bundle: ${JSON.stringify(bundle, null, 1)}`)
    })
@@ -264,14 +264,14 @@ for (let offset = 0; offset < bundle.length; offset += Transaction.TRANSACTION_L
 }
 
 const iota = Iota.composeAPI({
-   // Replace with the URL of the IRI node you want to send the transactions to
+   // Replace with the URL of the IOTA node you want to send the transactions to
     provider: 'https://pow.iota.community:443'
 });
 
 const depth = 3;
 const minWeightMagnitude = 14;
 
-// We need the bundle to be in order head to tail before sending it to the node
+// We need the bundle to be in order head to tail before sending it to the IOTA node
 iota.sendTrytes(trytes.reverse(), depth, minWeightMagnitude)
    .then(bundle => {
       console.log(`Sent bundle: ${JSON.stringify(bundle, null, 1)}`)

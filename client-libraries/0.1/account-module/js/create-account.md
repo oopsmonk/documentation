@@ -20,7 +20,7 @@ yarn add @iota/account ntp-client
 
 ## IOTA network
 
-In this tutorial, we connect to a node on the [Devnet](root://getting-started/0.1/network/iota-networks.md#devnet) with the following network settings:
+In this tutorial, we connect to an IOTA node on the [Devnet](root://getting-started/0.1/network/iota-networks.md#devnet) with the following network settings:
 
 - **[Minimum weight magnitude](root://getting-started/0.1/network/minimum-weight-magnitude.md)**: 9
 
@@ -60,7 +60,7 @@ const seed = 'PUEOTSEITFEVEWCWBTSIZM9NKRGJEIMXTULBACGFRQK9IMGICLBKW9TTEVSDQMGWKB
 3\. Define your network settings
 
 ```js
-// The node to connect to
+// The IOTA node to connect to
 const provider = 'https://nodes.devnet.iota.org:443';
 
 // How far back in the Tangle to start the tip selection
@@ -83,7 +83,7 @@ const maxDepth = 6;
 const timeSource = () => util.promisify(ntpClient.getNetworkTime)("time.google.com", 123);
 ```
 
-5\. Create your account and connect it to a node
+5\. Create your account and connect it to an IOTA node
    
 ```js
 const account = createAccount({

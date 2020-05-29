@@ -25,7 +25,7 @@ The IOTA network in which your node runs is determined by the following configur
 
 ### MWM
 
-The [minimum weight magnitude](root://getting-started/0.1/network/minimum-weight-magnitude.md) (MWM) is important because nodes use this setting to determine whether transactions are valid. To be valid, transactions must contain a [proof of work](root://getting-started/0.1/transactions/proof-of-work.md) that used at least the MWM in the node's configuration.
+The [minimum weight magnitude](root://getting-started/0.1/network/minimum-weight-magnitude.md) (MWM) is important because nodes use this setting to determine whether transactions are valid. To be valid, transactions must contain a [proof of work](root://getting-started/0.1/transactions/proof-of-work.md) that used at least the MWM in the IOTA node's configuration.
 
 ### NEIGHBORS
 
@@ -84,7 +84,7 @@ Milestones are sent approximately every two minute. So, use the following formul
 
 - 990, 100
 
-In this scenario, the sum of `LOCAL_SNAPSHOTS_PRUNING_DELAY` + `LOCAL_SNAPSHOTS_DEPTH` is 50, 100. Therefore, the node will prune transactions that were confirmed by any milestone with an index lower than 940, 000 (990, 100 - 50,100). As a result all transactions between milestones 940, 000 and 990, 100 will be kept in the ledger.
+In this scenario, the sum of `LOCAL_SNAPSHOTS_PRUNING_DELAY` + `LOCAL_SNAPSHOTS_DEPTH` is 50, 100. Therefore, the IOTA node will prune transactions that were confirmed by any milestone with an index lower than 940, 000 (990, 100 - 50,100). As a result all transactions between milestones 940, 000 and 990, 100 will be kept in the ledger.
 
 ## Do you want to create snapshot files as backups?
 

@@ -5,14 +5,14 @@
 :::info:
 The latest version of GoShimmer no longer supports ZMQ.
 
-In the next version, ZMQ will be replaced by MQTT to allow you to monitor a node for transactions.
+In the next version, ZMQ will be replaced by MQTT to allow you to monitor an IOTA node for transactions.
 :::
 
-You can receive this transaction data from a node by doing the following:
+You can receive this transaction data from an IOTA node by doing the following:
 
 1. Install an open-source ZMQ library
 
-2. Create a ZMQ socket and connect it to a node
+2. Create a ZMQ socket and connect it to an IOTA node
 
 3. Subscribe to events from the ZMQ
 
@@ -28,7 +28,7 @@ To use the sample code in this tutorial, you must have the following:
 
 ## Subscribe to the transaction event
 
-You can subscribe to the `tx` event to monitor a node for recently received transactions.
+You can subscribe to the `tx` event to monitor an IOTA node for recently received transactions.
 
 1\. Install the zeromq package
 
@@ -99,7 +99,7 @@ print ("Socket connected")
 ```
 --------------------
 
-5\. Process the event data that the node returns
+5\. Process the event data that the IOTA node returns
 
 --------------------
 ### Node.js
@@ -117,7 +117,7 @@ sock.on('message', msg => {
 ### Python
 ```python
 while True:
-    print ("Waiting for events from the node")
+    print ("Waiting for events from the IOTA node")
     message = socket.recv()
     data = message.split()
     print (data)
@@ -156,7 +156,7 @@ If we take this data as a random example, it corresponds to the following:
 |YMTMRYBLFPTYCLHAWJVDE...|Bundle hash|
 |BLFZJUOBAPWCXTGOCSBVJ...|Trunk transaction hash|
 |FXTZC9KKRBWSBYKCOGUDZ...|Branch transaction hash|
-|1562247720|Unix epoch of when the node received the transaction|
+|1562247720|Unix epoch of when the IOTA node received the transaction|
 |99999999999999999999...|Empty tag|
 
 :::info:

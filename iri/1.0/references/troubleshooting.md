@@ -2,11 +2,11 @@
 
 **This topic contains known issues that you may find while using IRI and some suggested steps to resolve them.**
 
-## The node won't synchronize with its neighbors
+## The IOTA node won't synchronize with its neighbors
 
-It may take some time for the node to synchronize, so we recommend that you wait a while to see if it synchronizes by itself.
+It may take some time for the IOTA node to synchronize, so we recommend that you wait a while to see if it synchronizes by itself.
 
-If the node still doesn't synchronize, see the following steps:
+If the IOTA node still doesn't synchronize, see the following steps:
 
 - [Make sure that you have 6 or 7 neighbors](../tutorials/find-neighbors.md)
 

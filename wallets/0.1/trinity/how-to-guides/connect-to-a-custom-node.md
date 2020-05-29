@@ -10,12 +10,12 @@ On 11 February 2020, the IOTA Foundation became aware of an attack on the Trinit
 
 ## Connect Trinity to custom nodes
 
-As well as connecting to a single custom node, you can also add multiple custom nodes and use them as a node quorum. This way, you aren't restricted to using the built-in remote list of Trinity nodes.
+As well as connecting to a single custom node, you can also add multiple custom nodes and use them as an IOTA node quorum. This way, you aren't restricted to using the built-in remote list of Trinity nodes.
 
 --------------------
 ### Desktop
 
-1. Go to **Trinity** > **Settings** > **Node** > **Add custom nodes**,  and enter the URL or IP address of the nodes you want to add
+1. Go to **Trinity** > **Settings** > **Node** > **Add custom nodes**,  and enter the URL or IP address of the IOTA nodes you want to add
 
     All nodes in Trinity must communicate over HTTPS.
 
@@ -31,7 +31,7 @@ As well as connecting to a single custom node, you can also add multiple custom 
 
 5. Select your node from the dropdown menu
 
-    If your custom node is a Devnet node, you must also disable the **Use remote list** option. The nodes in that list are Mainnet nodes, so they're incompatible with the Devnet.
+    If your custom node is a Devnet node, you must also disable the **Use remote list** option. The IOTA nodes in that list are Mainnet nodes, so they're incompatible with the Devnet.
 
 6. If you added more than one custom node, choose the size of your node quorum
 
@@ -39,7 +39,7 @@ As well as connecting to a single custom node, you can also add multiple custom 
 ---
 ### Mobile
 
-1. Go to **Settings** > **Node** > **Add custom nodes**,  and enter the URL or IP address of the nodes you want to add
+1. Go to **Settings** > **Node** > **Add custom nodes**,  and enter the URL or IP address of the IOTA nodes you want to add
 
     All nodes in Trinity must communicate over HTTPS.
 
@@ -55,7 +55,7 @@ As well as connecting to a single custom node, you can also add multiple custom 
 
 5. Select your node from the dropdown menu
 
-    If your custom node is a Devnet node, you must also disable the **Use remote list** option. The nodes in that list are Mainnet nodes, so they're incompatible with the Devnet.
+    If your custom node is a Devnet node, you must also disable the **Use remote list** option. The IOTA nodes in that list are Mainnet nodes, so they're incompatible with the Devnet.
 
 6. If you added more than one custom node, choose the size of your node quorum
 

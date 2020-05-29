@@ -4,7 +4,7 @@
 
 ## IOTA network
 
-In this tutorial, we connect to a node on the [Devnet](root://getting-started/0.1/network/iota-networks.md#devnet).
+In this tutorial, we connect to an IOTA node on the [Devnet](root://getting-started/0.1/network/iota-networks.md#devnet).
 
 The network settings are defined in a `config.h` file, which we create in the [getting started guide](../../getting-started/c-quickstart.md).
 
@@ -39,7 +39,7 @@ The network settings are defined in a `config.h` file, which we create in the [g
     }
     ```
 
-3. Use the [`get_balances()`](https://github.com/iotaledger/entangled/blob/develop/cclient/api/core/get_balances.h) method to ask the node for the current balance of the address
+3. Use the [`get_balances()`](https://github.com/iotaledger/entangled/blob/develop/cclient/api/core/get_balances.h) method to ask the IOTA node for the current balance of the address
 
     ```cpp
     // Set the threshold (this is not used but we must set it)

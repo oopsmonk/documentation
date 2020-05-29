@@ -4,9 +4,9 @@
 
 With the core client library, you can:
 
-- Build transactions and package them into bundles before sending them to a node
-- Connect to a node and send it transactions to attach to the Tangle
-- Connect to a node and request data from the Tangle such as transactions, and the balances of addresses
+- Build transactions and package them into bundles before sending them to an IOTA node
+- Connect to an IOTA node and send it transactions to attach to the Tangle
+- Connect to an IOTA node and request data from the Tangle such as transactions, and the balances of addresses
 
 ## Supported languages
 

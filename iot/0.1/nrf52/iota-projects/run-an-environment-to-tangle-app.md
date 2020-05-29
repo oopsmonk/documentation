@@ -11,7 +11,7 @@ To complete this tutorial, you need the following:
 
 ## Architecture
 
-The border router asks the sensor server for information, then sends that information to a node so that it can attach it to the Tangle.
+The border router asks the sensor server for information, then sends that information to an IOTA node so that it can attach it to the Tangle.
 
 ![MAMv1 environment sensor architecture](../images/messagetoMAM.png)
 

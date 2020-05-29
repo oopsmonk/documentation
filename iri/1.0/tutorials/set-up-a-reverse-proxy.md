@@ -214,7 +214,7 @@ By default, nodes communicate over HTTP, which is an insecure connection. To be 
     ```
 
   :::info:
-  Here, we generate use [Let's Encrypt](https://letsencrypt.org/how-it-works/) to generate the files.
+  Here, we use [Let's Encrypt](https://letsencrypt.org/how-it-works/) to generate the files.
   :::
 
 2. Open the `iri.conf` file

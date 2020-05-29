@@ -36,7 +36,7 @@ To deploy this application on your local network, complete the following instruc
 
     |**Configuration option**|**Description**|**Notes**|
     |:---|:-----|:----|
-    |`node` (required)|Set the `provider` field to the URL of an IOTA node. Set the `depth` field to a valid [depth](root://getting-started/0.1/transactions/depth.md), and the `mwm` field to a valid [minimum weight magnitude](root://getting-started/0.1/network/minimum-weight-magnitude.md).|When choosing a node, consider the [IOTA network](root://getting-started/0.1/network/iota-networks.md) that you want to use|
+    |`node` (required)|Set the `provider` field to the URL of an IOTA node. Set the `depth` field to a valid [depth](root://getting-started/0.1/transactions/depth.md), and the `mwm` field to a valid [minimum weight magnitude](root://getting-started/0.1/network/minimum-weight-magnitude.md).|When choosing an IOTA node, consider the [IOTA network](root://getting-started/0.1/network/iota-networks.md) that you want to use|
     |`ipfs` (required)|Set the `provider` field to the URL of your IPFS node. If your IPFS node requires an authentication token, set this in the `token` field.||
     |`dynamoDbConnection` (required)| Set these fields to the settings for your DynamoDB instance|This database is needed to keep track of transaction data so that it is never lost on the Tangle after a snapshot|
     |`allowedDomains`| Set this field to the domains that may access the API.||

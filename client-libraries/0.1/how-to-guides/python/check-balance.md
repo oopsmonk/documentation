@@ -12,7 +12,7 @@ pip install pyota
 
 ## IOTA network
 
-In this tutorial, we connect to a node on the [Devnet](root://getting-started/0.1/network/iota-networks.md#devnet).
+In this tutorial, we connect to an IOTA node on the [Devnet](root://getting-started/0.1/network/iota-networks.md#devnet).
 
 ## Code walkthrough
 
@@ -28,13 +28,13 @@ In this tutorial, we connect to a node on the [Devnet](root://getting-started/0.
     seed = 'JBN9ZRCOH9YRUGSWIQNZWAIFEZUBDUGTFPVRKXWPAUCEQQFS9NHPQLXCKZKRHVCCUZNF9CZZWKXRZVCWQ'
     ```
 
-3. Connect to a node
+3. Connect to an IOTA node
 
     ```python
     api = Iota('https://nodes.devnet.iota.org:443', seed)
     ```
 
-4. Use the [`get_account_data()`](https://pyota.readthedocs.io/en/latest/api.html#get-account-data) method to ask the node for the current balance of the seed's addresses
+4. Use the [`get_account_data()`](https://pyota.readthedocs.io/en/latest/api.html#get-account-data) method to ask the IOTA node for the current balance of the seed's addresses
 
     ```python
     balance = api.get_account_data()
@@ -42,7 +42,7 @@ In this tutorial, we connect to a node on the [Devnet](root://getting-started/0.
     ```
 
     :::info:
-    This method starts from index 0 and asks the node if it has one or more input transactions that withdraw from the address. If the node has input transactions that withdraw from the address, the index is incremented and this process continues until an unspent address is found.
+    This method starts from index 0 and asks the IOTA node if it has one or more input transactions that withdraw from the address. If the IOTA node has input transactions that withdraw from the address, the index is incremented and this process continues until an unspent address is found.
     :::
 
     In the console, you should see a balance of IOTA tokens:

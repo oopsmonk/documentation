@@ -190,7 +190,7 @@ See the Nginx documentation to [learn more about the `upstream` directive](http:
 
 ## Add HTTPS support
 
-By default, nodes communicate over HTTP, which is an insecure connection. To be able to connect to your node from the Trinity wallet, your node must use HTTPS.
+By default, nodes communicate over HTTP, which is an unsecure connection. To be able to connect to your node from the Trinity wallet, your node must use HTTPS.
 
 1. Generate SSL certificates and private key files. Replace the `$YOUR_EMAIL` and `$YOUR_DOMAIN` placeholders with your email address and domain.
 

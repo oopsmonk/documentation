@@ -6,7 +6,7 @@ To start integrating IOTA into your app or website you need complete these three
 
 1. [Create a seed](#step-1.-create-a-seed) so you can have access to addresses that can hold IOTA tokens
 
-2. [Install a client library](#step-2.-install-a-client-library) so that you can interact with an IOTA network through a node
+2. [Install a client library](#step-2.-install-a-client-library) so that you can interact with an IOTA network through an IOTA node
 
 3. [Make a test API request](#step-2.-make-a-test-api-request) to confirm that you're connected to a synchronized node
 
@@ -164,16 +164,16 @@ $ pip install pyota[ccurl,pow]
 
 ## Step 3. Make a test API request
 
-Before you use a node, you should make sure that it's synchronized with the rest of the network. This way, you know that it has an up-to-date [view of the Tangle](root://dev-essentials/0.1/concepts/the-tangle.md).
+Before you use an IOTA node, you should make sure that it's synchronized with the rest of the network. This way, you know that it has an up-to-date [view of the Tangle](root://dev-essentials/0.1/concepts/the-tangle.md).
 
-A node is considered synchronized when the `latestMilestoneIndex` field is equal to the `latestSolidSubtangleMilestoneIndex` field.
+An IOTA node is considered synchronized when the `latestMilestoneIndex` field is equal to the `latestSolidSubtangleMilestoneIndex` field.
 
-The `latestMilestoneIndex` field is the index of the latest milestone that the node has received from its neighbors.
+The `latestMilestoneIndex` field is the index of the latest milestone that the IOTA node has received from its neighbors.
 
-The `latestSolidSubtangleMilestoneIndex` field is the index of the latest milestone for which the node's ledger has all the transactions that the milestone directly and indirectly references.
+The `latestSolidSubtangleMilestoneIndex` field is the index of the latest milestone for which the IOTA node's ledger has all the transactions that the milestone directly and indirectly references.
 
 :::info:
-The `latestMilestoneIndex` and `latestSolidSubtangleMilestoneIndex` fields are accurate only when the IRI node is connected to synchronized neighbors.
+The `latestMilestoneIndex` and `latestSolidSubtangleMilestoneIndex` fields are accurate only when the IOTA node is connected to synchronized neighbors.
 :::
 
 1. To check the current `latestMilestoneIndex` field, go to our [Discord](https://discord.iota.org) and enter **!milestone** in one of the channels
@@ -183,7 +183,7 @@ The `latestMilestoneIndex` and `latestSolidSubtangleMilestoneIndex` fields are a
 2. To check if your node is synchronized, call the `getNodeInfo()` method
 
     :::info:
-    Here, we connect to a node on the Devnet, which is one of the [IOTA networks](../references/iota-networks.md) that you can use for testing. The Devnet is similar to the Mainnet, except the tokens are free.
+    Here, we connect to an IOTA node on the Devnet, which is one of the [IOTA networks](../references/iota-networks.md) that you can use for testing. The Devnet is similar to the Mainnet, except the tokens are free.
     :::
 
 --------------------
@@ -198,7 +198,7 @@ const iota = Iota.composeAPI({
 provider: 'https://nodes.devnet.iota.org:443'
 });
 
-// Call the `getNodeInfo()` method for information about the node and the Tangle
+// Call the `getNodeInfo()` method for information about the IOTA node and the Tangle
 iota.getNodeInfo()
 // Convert the returned object to JSON to make the output more readable
 .then(info => console.log(JSON.stringify(info, null, 1)))
@@ -217,7 +217,7 @@ IotaAPI api = new IotaAPI.Builder()
         .host("nodes.devnet.iota.org")
         .port("443")
         .build();
-// Call the `getNodeInfo()` method for information about the node and the Tangle
+// Call the `getNodeInfo()` method for information about the IOTA node and the Tangle
 GetNodeInfoResponse response = api.getNodeInfo();
 // Print the response to the console
 System.out.println(response);
@@ -239,7 +239,7 @@ func main() {
 	api, err := ComposeAPI(HTTPClientSettings{URI: endpoint})
 	handleErr(err)
 
-    // Call the `getNodeInfo()` method for information about the node and the Tangle
+    // Call the `getNodeInfo()` method for information about the IOTA node and the Tangle
 	nodeInfo, err := api.GetNodeInfo()
     handleErr(err)
 
@@ -262,7 +262,7 @@ from pprint import pprint
 # Create a new instance of the IOTA API class
 api = Iota(adapter = 'https://nodes.devnet.iota.org:443')
 
-# Send a request to a node, receive response
+# Send a request to an IOTA node, receive response
 response = api.get_node_info()
 
 # Print response
@@ -270,7 +270,7 @@ pprint(response)
 ```
 --------------------
 
-The node returns a response object:
+The IOTA node returns a response object:
 
 ```json
 {
@@ -298,7 +298,7 @@ The node returns a response object:
 }
 ```
 
-If the `latestMilestoneIndex` field is equal to the one you got from Discord and the `latestSolidSubtangleMilestoneIndex` field, the node is synchronized.
+If the `latestMilestoneIndex` field is equal to the one you got from Discord and the `latestSolidSubtangleMilestoneIndex` field, the IOTA node is synchronized.
 
 If not, try connecting to a different node. The [iota.dance website](https://iota.dance/) includes a list of Mainnet nodes.
 

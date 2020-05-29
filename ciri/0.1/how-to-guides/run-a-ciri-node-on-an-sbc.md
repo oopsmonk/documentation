@@ -1,7 +1,7 @@
 # Run a cIRI node on a single-board computer
 
 **When you run the cIRI on an SBC (single-board computer), it becomes a cIRI node that gives you direct access to an IOTA network. 
-By running a node, you help the IOTA network to become more distributed by adding to the number of ledgers and validating your neighbors' transactions.**
+By running an IOTA node, you help the IOTA network to become more distributed by adding to the number of ledgers and validating your neighbors' transactions.**
 
 :::info:
 This guide cross compiles cIRI. You can also use the [Run a cIRI node on Linux](run-a-ciri-node-on-linux.md).
@@ -26,7 +26,7 @@ To complete this tutorial, you need [an SBC](root://iot/0.1/sbc/how-to-guides/ge
 
 - Ubuntu (or other Linux based OS, BSD should also work) with SSH enabled and a configured network. This guide uses Ubuntu. We recommend using Ubuntu if you consider yourself a beginner.
 - At least 512 MB of RAM
-- At least 64 GB storage (or 16 GB if the node is only for testing purposes)
+- At least 64 GB storage (or 16 GB if the IOTA node is only for testing purposes)
 
 ## Download cIRI
 

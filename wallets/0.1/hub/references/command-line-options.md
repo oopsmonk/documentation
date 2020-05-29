@@ -61,8 +61,8 @@ If you've downloaded Hub, you can also run it with the `--help` flag to see a li
 |<a name="keySecLevel"></a>`--keySecLevel` |[Security level](root://getting-started/0.1/clients/security-levels.md) to use for generating deposit addresses|2||
 |<a name="minWeightMagnitude"></a>`--minWeightMagnitude`| [Minimum weight magnitude (MWM)](root://getting-started/0.1/transactions/proof-of-work.md#minimum-weight-magnitude) to use for proof of work|integer |9|To use Hub on the Mainnet, you must use a MWM of 14|
 |`--numBundlesToMine`| Number of different bundle hashes to generate to find one that reveals the least amount of the private key in the signature for a spent address|integer| 5000000| Bundles are mined only when you use the `RecoverFunds` API call|
-|<a name="powMode"></a>`--powMode`|Where [proof of work](root://getting-started/0.1/transactions/proof-of-work.md) is done| "local": Do proof of work on the device that is running Hub, "remote": Use the `attachToTangle` endpoint to ask the node to do proof of work|"remote"|To use the remote mode, the IRI node in the `--apiAddress` option must support remote PoW|
-|<a name="useHttpsIRI"></a>`--useHttpsIRI`| Whether to use the SSL protocol to communicate with the node's API|true: Use the SSL protocol, false: Do not use the SSL protocol|false| |
+|<a name="powMode"></a>`--powMode`|Where [proof of work](root://getting-started/0.1/transactions/proof-of-work.md) is done| "local": Do proof of work on the device that is running Hub, "remote": Use the `attachToTangle` endpoint to ask the IOTA node to do proof of work|"remote"|To use the remote mode, the IRI node in the `--apiAddress` option must support remote PoW|
+|<a name="useHttpsIRI"></a>`--useHttpsIRI`| Whether to use the SSL protocol to communicate with the IOTA node's API|true: Use the SSL protocol, false: Do not use the SSL protocol|false| |
 
 ## Signing
 

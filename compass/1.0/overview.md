@@ -1,6 +1,6 @@
 # Private Tangle
 
-**A private Tangle is an IOTA network that you control and that contains only nodes that you know. A private Tangle uses the same technology as the public IOTA networks, except you control it by running an open-source implementation of the Coordinator called Compass. You can use Compass to allow the nodes in your own IOTA network to reach a consensus on Compass' milestones instead of the Coordinator's ones.**
+**A private Tangle is an IOTA network that you control and that contains only nodes that you know. A private Tangle uses the same technology as the public IOTA networks, except you control it by running an open-source implementation of the Coordinator called Compass. You can use Compass to allow the IOTA nodes in your own IOTA network to reach a consensus on Compass' milestones instead of the Coordinator's ones.**
 
 You may want to set up a private Tangle for the following reasons:
 

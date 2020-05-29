@@ -39,9 +39,9 @@ The wallet application uses the C client library to interact with the an IOTA ne
 
     |**Configuration option**|**Description**|**Notes**|
     |:----|:-----|:-----|
-    |`WiFi`|Set your WiFi credentials to allow the application to connect to the Internet |If you don't connect to a local IRI node, you must configure the WiFi settings to allow the application to connect to the remote node over the Internet |
+    |`WiFi`|Set your WiFi credentials to allow the application to connect to the Internet |If you don't connect to a local node, you must configure the WiFi settings to allow the application to connect to the remote node over the Internet |
     |`SNTP` |Set the `Timezone` option to the [timezone](https://github.com/nayarsystems/posix_tz_db/blob/master/zones.json) that you want the application to use|By default, this application uses China Standard Time|
-    |`IRI Node`|Set the options to the IRI node to which you want the application to connect| By default, this application connects to a Mainnet node over HTTPS|
+    |`IRI Node`|Set the options for the IOTA node to which you want the application to connect| By default, this application connects to a Mainnet node over HTTPS|
     |`Seed` (required)| Set this option to the [seed](root://getting-started/0.1/clients/seeds.md) that you want the application to use to generate addresses and sign transactions|The seed you enter must be a valid 81-tryte seed|
 
     :::info:
@@ -64,8 +64,8 @@ The wallet application uses the C client library to interact with the an IOTA ne
     I (2250) esp32_main: Initializing SNTP: pool.ntp.org, Timezone: CST-8
     I (2250) esp32_main: Waiting for system time to be set... (1/10)
     I (4260) esp32_main: The current date/time is: Tue Aug  6 12:56:39 2019
-    IOTA> 
-    IOTA> info
+   IOTA> 
+   IOTA> info
     appName IRI Testnet 
     appVersion 1.8.0-RC1 
     latestMilestone: VBKNZNCULYJPHGHSIAVQLNLNRVMV9UBPCHJRSBBFOWPCKYWRMXXZTPUQFKBXPRBQBCTHVMMMZZJTQG999
@@ -77,7 +77,7 @@ The wallet application uses the C client library to interact with the an IOTA ne
     time 1565067405641 
     tips 93 
     transactionsToRequest 0 
-    IOTA> 
+   IOTA> 
     ```
 
 :::success: Congratulations :tada:

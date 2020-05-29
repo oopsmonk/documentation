@@ -71,7 +71,7 @@ use iota_streams::app::transport::tangle::client::SendTrytesOptions;
 use iota_streams::app_channels::api::tangle::{Transport};
 ```
 
-Then, you can use the `iota_client` object to connect to a node and publish the message on the Tangle.
+Then, you can use the `iota_client` object to connect to an IOTA node and publish the message on the Tangle.
 
 The `iota_client` object is extended to implement the [`Transport` trait for the Tangle](https://github.com/iotaledger/streams/blob/master/iota-streams-app/src/transport/tangle/client.rs), which means that you can use it to create a [bundle](root://getting-started/0.1/transactions/bundles.md) from messages.
 

@@ -1,6 +1,6 @@
 # Trytes compressor
 
-**When you send a bundle of transactions to a node, sometimes those transactions don't reach the rest of the network, so they will never be confirmed. For example, a node may go offline before it can forward your transactions to its neighbors. As a result, we recommend that you store the transaction trytes so that you can later rebroadcast or reattach them. To store transaction trytes in a smaller memory space, use the trytes compressor tool to compress the trytes into bytes.**
+**When you send a bundle of transactions to an IOTA node, sometimes those transactions don't reach the rest of the network, so they will never be confirmed. For example, an IOTA node may go offline before it can forward your transactions to its neighbors. As a result, we recommend that you store the transaction trytes so that you can later rebroadcast or reattach them. To store transaction trytes in a smaller memory space, use the trytes compressor tool to compress the trytes into bytes.**
 
 The algorithm that compresses the trytes uses a combination of run-length encoding and huffman encoding based on a static huffman tree to reduce the amount of memory space that they occupy by up to 75%.
 
@@ -83,13 +83,13 @@ yarn add @iota/core @iota/converter @iota/tryte-compress
     ];
     ```
 
-5. Create a bundle from the `transfers` object, store the returned trytes in a global variable, then send them to the node
+5. Create a bundle from the `transfers` object, store the returned trytes in a global variable, then send them to the IOTA node
 
     ```js
 
     let bundleTrytes;
 
-    iota.prepareTransfers(seed, transfers)
+   IOTA.prepareTransfers(seed, transfers)
     .then(trytes => {
         // Store the trytes in a global variable
         bundleTrytes = trytes[0];
@@ -157,7 +157,7 @@ const Converter = require('@iota/converter');
 const fs = require('fs');
 
 // Create a new instance of the IOTA object
-// Use the `provider` field to specify which IRI node to connect to
+// Use the `provider` field to specify which node to connect to
 const iota = Iota.composeAPI({
 provider: 'https://nodes.devnet.iota.org:443'
 });
@@ -217,7 +217,7 @@ Use the [trytes compressor utility](https://utils.iota.org/compress) to compress
 
     ![Compressor](../images/compress.png)
 
-Use the trytes compressor API to decompress the trytes before resending them to a node. For example, you could do the following:
+Use the trytes compressor API to decompress the trytes before resending them to an IOTA node. For example, you could do the following:
 
     ```js
     function readCompressedTailTransaction (file){

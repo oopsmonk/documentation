@@ -1,6 +1,6 @@
-# Best practices for running a node
+# Best practices for running an IOTA node
 
-**When you run a node, you have lots of different options for setting up a reliable architecture. This article gives you some advice that we often give to our partners.**
+**When you run an IOTA node, you have lots of different options for setting up a reliable architecture. This article gives you some advice that we often give to our partners.**
 
 Often, our partners leverage the Tangle to store and distribute a hash of their data for verification purposes.
 
@@ -46,7 +46,7 @@ When you have a client application and some nodes, it's best practice to make su
 
 To evenly distribute the API calls among all your nodes, you can run a reverse proxy server that will act as a load balancer.
 
-This way, you can even have one domain name for your reverse proxy server that all nodes will send their API calls to. But, on the backend, the nodes with the most spare computational power will process the request and return the response to the reverse proxy server.
+This way, you can even have one domain name for your reverse proxy server that all nodes will send their API calls to. But, on the backend, the IOTA nodes with the most spare computational power will process the request and return the response to the reverse proxy server.
 
 :::info:
 Read our guide on [setting up a reverse proxy server](../how-to-guides/set-up-a-reverse-proxy.md) for your node.

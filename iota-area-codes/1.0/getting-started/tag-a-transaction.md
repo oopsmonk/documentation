@@ -95,7 +95,7 @@ In this example, we use the [IAC API](https://github.com/iotaledger/iota-area-co
     }
     ];
 
-    iota.prepareTransfers(seed, transfers)
+   IOTA.prepareTransfers(seed, transfers)
     .then(trytes => {
     return iota.sendTrytes(trytes, 3/*depth*/, 9/*MWM*/)
     })
@@ -113,9 +113,9 @@ In this example, we use the [IAC API](https://github.com/iotaledger/iota-area-co
     ```js
     var locations =[];
 
-    iota.findTransactions({tags:[iac]})
+   IOTA.findTransactions({tags:[iac]})
         .then(trytes => {
-    iota.getTransactionObjects(trytes)
+   IOTA.getTransactionObjects(trytes)
         .then(
             array => {
                 for(i=0;i<array.length;i++){

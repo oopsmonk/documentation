@@ -77,10 +77,10 @@ In this step, you write a script that uses the Javascript client library to crea
     const savedTransactionDirectory = process.argv[6];
     ```
 
-2. Use the first argument to connect to a node on either the Devnet or the Mainnet
+2. Use the first argument to connect to an IOTA node on either the Devnet or the Mainnet
 
     ```js
-    // Define a node for each IOTA network
+    // Define an IOTA node for each IOTA network
     const nodes = {
             devnet: 'https://nodes.devnet.thetangle.org:443',
             mainnet: `https://nodes.iota.org:443`
@@ -89,11 +89,11 @@ In this step, you write a script that uses the Javascript client library to crea
     // Connect to the correct IOTA network, depending on the user's
     // selection in the main script
     if (network === 14) {
-        iota = Iota.composeAPI({
+       IOTA = Iota.composeAPI({
             provider: nodes.mainnet
             });
     } else {
-        iota = Iota.composeAPI({
+       IOTA = Iota.composeAPI({
             provider: nodes.devnet
             });
     }
@@ -148,7 +148,7 @@ In this step, you write a script that uses the Javascript client library to crea
     let value = 0;
 
     // Check the balance of the input address
-    iota.getBalances([inputAddress], 100)
+   IOTA.getBalances([inputAddress], 100)
     .then(({ balances }) => {
         
         if (balances[0] === 0) {
@@ -428,13 +428,13 @@ In this step, you write a script that adds a signature to the bundle that you sa
     sudo nano add-signature-to-bundle.js.
     ```
 
-2. Use the first argument that is passed to the script to connect to a node on either the Devnet or the Mainnet
+2. Use the first argument that is passed to the script to connect to an IOTA node on either the Devnet or the Mainnet
 
     ```js
     // This argument should be a minimum weight magnitude (14 or 9)
     const network = parseInt(process.argv[2]);
 
-    // Define a node for each IOTA network
+    // Define an IOTA node for each IOTA network
     const nodes = {
             devnet: 'https://nodes.devnet.iota.org:443',
             mainnet: `https://nodes.iota.org:443`
@@ -443,11 +443,11 @@ In this step, you write a script that adds a signature to the bundle that you sa
     // Connect to the correct IOTA network, depending on the user's
     // selection in the main script
     if (network === 14) {
-        iota = Iota.composeAPI({
+       IOTA = Iota.composeAPI({
             provider: nodes.mainnet
             });
     } else {
-        iota = Iota.composeAPI({
+       IOTA = Iota.composeAPI({
             provider: nodes.devnet
             });
     }
@@ -505,8 +505,8 @@ In this step, you write a script that adds a signature to the bundle that you sa
 7. Use the [`sendTrytes()`](https://github.com/iotaledger/iota.js/tree/next/packages/core#module_core.sendTrytes) method to do proof of work and send the transactions to the connected node
 
     ```js
-    // We need the bundle to be in order head to tail before sending it to the node
-    iota.sendTrytes(trytes, depth, network)
+    // We need the bundle to be in order head to tail before sending it to the IOTA node
+   IOTA.sendTrytes(trytes, depth, network)
         .then(bundle => {
         // Increment the index to avoid withdrawing from the same address again
         let index = indexFile.index;
@@ -595,7 +595,7 @@ Tail transaction hash:EIFWPZBERTVIEPQVGXNXCBILS9G9MLZYOHEAHTCZKXSSVLENKDVBPYATVT
 
 To see your bundle on the Tangle, copy the tail transaction hash and paste it into a [Tangle explorer](https://utils.iota.org/).
 
-If the Tangle explorer doesn't display your transaction after 5 minutes, the node may not have sent your transaction to its neighbors.
+If the Tangle explorer doesn't display your transaction after 5 minutes, the IOTA node may not have sent your transaction to its neighbors.
 
 To resend your transaction, you can pass the transaction trytes in the `my-transactions/attached_value_trytes.txt` file to the [`sendTrytes()`](https://github.com/iotaledger/iota.js/tree/next/packages/core#corestoreandbroadcasttrytes-callback) method in the JavaScript client library.
 

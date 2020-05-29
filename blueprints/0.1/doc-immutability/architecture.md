@@ -47,7 +47,7 @@ The document hash is put in the `signatureMessageFragment` field of a transactio
 
 #### Saving the transaction hash to the database
 
-The transaction hash on the Tangle is saved in the database so that the application can ask the node to return it when necessary.
+The transaction hash on the Tangle is saved in the database so that the application can ask the IOTA node to return it when necessary.
 
 ### Verifying a document
 

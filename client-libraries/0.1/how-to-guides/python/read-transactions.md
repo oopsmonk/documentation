@@ -12,7 +12,7 @@ pip install pyota
 
 ## IOTA network
 
-In this tutorial, we connect to a node on the [Devnet](root://getting-started/0.1/network/iota-networks.md#devnet).
+In this tutorial, we connect to an IOTA node on the [Devnet](root://getting-started/0.1/network/iota-networks.md#devnet).
 
 ## Code walkthrough
 
@@ -22,7 +22,7 @@ In this tutorial, we connect to a node on the [Devnet](root://getting-started/0.
     from iota import Iota
     ```
 
-2. Connect to a node
+2. Connect to an IOTA node
 
     ```python
     api = Iota('https://nodes.devnet.iota.org:443', testnet = True)

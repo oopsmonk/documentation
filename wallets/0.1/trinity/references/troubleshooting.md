@@ -12,9 +12,9 @@ If you can't find the solution to your issue, reach out to the Trinity team on t
 
 Trinity regularly updates your balance by asking [nodes](root://getting-started/0.1/network/nodes.md) for the balance of all [addresses](root://getting-started/0.1/clients/addresses.md) associated with your [seed](root://getting-started/0.1/clients/seeds.md).
 
-If Trinity can't connect to a node, it may display an incorrect balance.
+If Trinity can't connect to an IOTA node, it may display an incorrect balance.
 
-To fix this problem, Trinity keeps a list of your generated addresses so that you can re-synchronize it the next time Trinity connects to a node.
+To fix this problem, Trinity keeps a list of your generated addresses so that you can re-synchronize it the next time Trinity connects to an IOTA node.
 
 If you think your balance is wrong, you can synchronize Trinity by going to **Settings** > **Account** > **Account management** > **Tools** > **Sync account**, or you can [perform a snapshot transition](../how-to-guides/perform-a-snapshot-transition.md).
 
