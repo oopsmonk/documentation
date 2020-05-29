@@ -1,4 +1,4 @@
-# One-command private Tangle
+# Set up a one-command private Tangle
 
 **In this tutorial, you set up your own IOTA network by using a single [Docker](https://www.docker.com/why-docker) command. When you run this command, you'll have your own IOTA test network and 2.7Pi (the maximum amount) of test [IOTA tokens](root://getting-started/0.1/clients/token.md). You can use this application to test your ideas and applications without risking any monetary value.**
 
