@@ -15,5 +15,7 @@
 [References/Compass configuration options](/references/compass-configuration-options.md)
 [References/Merkle tree compute times](/references/merkle-tree-compute-times.md)
 [References/Troubleshooting](/references/troubleshooting.md)
+[References/Changelog](changelog.md)
+
 
 [Contributing/Contribute to the project](contribute.md)
