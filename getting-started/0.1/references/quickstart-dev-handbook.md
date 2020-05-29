@@ -102,10 +102,10 @@ To switch between the Devnet and Mainnet, just change the `provider` field to th
 
 ### How do I set up a private Tangle?
 
-To set up a private Tangle you need to run a local IOTA IRI node and an instance of Compass (our open-source Coordinator).
+To set up a private Tangle you need to run a local node and an instance of Compass (our open-source Coordinator).
 
 :::info:
-[Learn how to set up a private Tangle](root://compass/0.1/how-to-guides/set-up-a-private-tangle.md).
+[Learn how to set up a private Tangle](root://compass/1.0/overview.md).
 :::
 
 ### Useful links

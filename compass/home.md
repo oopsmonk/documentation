@@ -1,10 +1,10 @@
 # Compass is an open-source implementation of the Coordinator, which is a client application that allows nodes in an IOTA network to reach a consensus.
 
-[Compass overview](/0.1/introduction/overview.md)
+[Compass overview](/1.0/overview.md)
 ## Learn what Compass is and how you can use it
 
-[Set up a private Tangle](/0.1/how-to-guides/set-up-a-private-tangle.md)
+[Set up a private Tangle](/1.0/tutorials/install-compass.md)
 ## Find out how to set up your own IOTA network with its own private Tangle
 
-[Configuration options](/0.1/how-to-guides/compass-configuration-options.md)
+[Configuration options](/1.0/references/compass-configuration-options.md)
 ## Explore the different options for customizing your own private Tangle
