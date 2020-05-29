@@ -12,7 +12,8 @@ The [light wallet](https://github.com/iotaledger/wallet) is a deprecated wallet 
 |:----|:----|:----|
 |[Run Compass as a plugin on the Hornet node software](../tutorials/set-up-a-private-tangle-hornet.md)| | |
 |[Build Compass from source and connect it to an IRI node](../tutorials/set-up-a-private-tangle.md)|:white_check_mark: | :white_check_mark:|
-|[Set up a one-command Tangle with an IRI node](../tutorials/set-up-one-command.md)|:white_check_mark: | :white_check_mark:|:white_check_mark:
+|[Set up a one-command Tangle with an IRI node](../tutorials/set-up-one-command.md)|:white_check_mark: | :white_check_mark:|
+
 
 :::info:
 The one-command Tangle uses a pre-made seed that you can't change. As a result, if you were to expose it to the Internet, anyone would be able to forge Compass' signatures. Therefore, if you plan on exposing your private Tangle on the Internet it's better to use one of the other options.
