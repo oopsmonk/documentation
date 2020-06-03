@@ -1,0 +1,10 @@
+{
+    "rootFolder": ".",
+    "reportFile": "projects-summary.log",
+    "projectsFile": "",
+    "checkRemotePages": true,
+    "consoleDetail": true,
+    "exitWithError": true,
+    "checkSpelling": true,
+    "spellingFile": "spelling-summary.md"
+}

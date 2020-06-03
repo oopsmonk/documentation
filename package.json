@@ -1,0 +1,30 @@
+{
+    "name": "documentation",
+    "version": "1.0.0",
+    "description": "Documentation",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/iotaledger/documentation.git"
+    },
+    "bugs": {
+        "url": "https://github.com/iotaledger/documentation/issues"
+    },
+    "scripts": {
+        "validate": "node buildProjects.js --no-remote"
+    },
+    "pre-commit": [
+        "validate"
+    ],
+    "homepage": "https://github.com/iotaledger/documentation#readme",
+    "devDependencies": {
+        "axios": "^0.19.1",
+        "chalk": "^3.0.0",
+        "cheerio": "^1.0.0-rc.2",
+        "emoji-regex": "^8.0.0",
+        "emoji-unicode": "^2.0.0",
+        "markdown-it": "^10.0.0",
+        "node-emoji": "^1.10.0",
+        "pre-commit": "^1.2.2",
+        "spellchecker": "^3.7.0"
+    }
+}

@@ -1,0 +1,76 @@
+{
+    "headerTitle": "Developer Documentation",
+    "headerTopLinks": [
+        {
+            "href": "https://iota.org",
+            "name": "iota.org"
+        },
+        {
+            "href": "https://blog.iota.org/",
+            "name": "news"
+        },
+        {
+            "href": "https://ecosystem.iota.org/",
+            "name": "ecosystem"
+        },
+        {
+            "href": "https://qubic.iota.org/",
+            "name": "qubic"
+        },
+        {
+            "href": "https://roadmap.iota.org/",
+            "name": "roadmap"
+        },
+        {
+            "href": "https://status.iota.org/",
+            "name": "status"
+        },
+        {
+            "href": "https://training.iota.org/",
+            "name": "training"
+        },
+        {
+            "href": "https://trinity.iota.org/",
+            "name": "wallet"
+        },
+        {
+            "href": "https://utils.iota.org/",
+            "name": "utilities"
+        }
+    ],
+    "popularTopics": [
+        {
+            "query": "iri",
+            "name": "IRI"
+        },
+        {
+            "query": "hub",
+            "name": "Hub"
+        },
+        {
+            "query": "trinity",
+            "name": "Trinity"
+        },
+        {
+            "query": "set up a private tangle",
+            "name": "Private Tangle"
+        }
+    ],
+    "cards": [
+        {
+            "href": "/docs/getting-started/0.1/introduction/overview",
+            "image": "2.png",
+            "name": "Learn about IOTA technology"
+        },
+        {
+            "href": "/docs/client-libraries/1.0/overview",
+            "image": "1.png",
+            "name": "Start building"
+        },
+        {
+            "href": "/docs/blueprints/0.1/introduction/overview",
+            "image": "3.png",
+            "name": "Explore application blueprints"
+        }
+    ]
+}
