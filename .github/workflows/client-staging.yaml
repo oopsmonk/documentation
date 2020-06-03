@@ -3,12 +3,9 @@ name: Client Build and Deploy Staging
 on:
   push:
     branches: [develop]
-    paths:
-      - "**"
-      - ".github/workflows/client-staging.yaml"
-      - "!.github/workflows/api-staging.yaml"
-      - "!api/docs/**"
-    
+  pull_request:
+    branches: [develop]
+   
 
 jobs:
   build:
