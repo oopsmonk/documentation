@@ -1,4 +1,4 @@
-## Enabling remote proof of work
+# Enabling remote proof of work
 
 **Nodes can do remote proof of work for new transactions, but this feature is disabled by default. This topic discusses how to enable remote proof of work.**
 

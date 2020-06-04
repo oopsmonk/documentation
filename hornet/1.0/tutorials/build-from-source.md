@@ -101,7 +101,7 @@ In this step, you use the open source code on GitHub to build an executable file
     HORNET 0.4.0
     ```
 
-:::success: Congratulations tada:
+:::success: Congratulations :tada:
 You've built Hornet from source.
 :::
 

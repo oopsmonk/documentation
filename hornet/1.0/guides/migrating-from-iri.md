@@ -103,7 +103,7 @@ After completing these tasks, you can follow the instructions on the [migration 
 For more information about configuring Hornet, see the following guides:
 
 - [Securing your API](../guides/securing-your-api.md)
-- [Allowing remote proof of work](../guides/allowing-remote-pow.md)
+- [Enabling remote proof of work](../guides/allowing-remote-pow.md)
 - [Configuring local snapshots](../guides/configuring-snapshots.md)
 - [Managing fixed neighbors](../guides/managing-neighbors.md)
 - [Setting up your dashboard](../guides/setting-up-dashboard.md)

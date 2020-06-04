@@ -21,5 +21,6 @@
 [IRI](/iri)
 [Chronicle](/chronicle)
 [GoShimmer](/goshimmer)
+[Hornet](/hornet)
 [General](/general)
 [Contributing](/contributing)

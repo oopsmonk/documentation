@@ -1,4 +1,4 @@
-# Connecting to a custom entry node
+# Connecting to a custom autopeering entry node
 
 **If you don't trust the default entry nodes to give your node honest neighbors, you can configure Hornet to use your own custom entry nodes. This topic explains how to connect to a custom entry node.**
 

@@ -6,7 +6,7 @@
 
 If you have fixed neighbors in the `peering.json` file, those neighbors are part of the IOTA network that you are trying to leave.
 
-To connect to a different IOTA network, you need to either remove those fixed neighbors from the file, or replace them with neighbors in your new IOTA network. For more information about adding fixed neighbors, see [Managing fixed neighbors](../guides/adding-neighbors.md).
+To connect to a different IOTA network, you need to either remove those fixed neighbors from the file, or replace them with neighbors in your new IOTA network. For more information about adding fixed neighbors, see [Managing fixed neighbors](../guides/managing-neighbors.md).
 
 ## Changing the network configuration
 
