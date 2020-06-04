@@ -23,6 +23,6 @@ GoShimmer implements a prototype of an IOTA network without the Coordinator. Thi
 -------------------------
 ![Hornet](images/hornet.png)
 ## [Hornet](root://hornet/1.0/overview.md)
-Hornet is an implementation of IRI that is maintained by the IOTA community. This implementation will continue to be updated to include the protocol changes in [Chrysalis](https://roadmap.iota.org/chrysalis).
+Hornet is an implementation of IRI that is maintained by the IOTA community. This implementation will continue to be updated to include the protocol changes in Chrysalis.
 -------------------------
 
