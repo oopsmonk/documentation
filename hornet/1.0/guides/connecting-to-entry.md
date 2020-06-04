@@ -16,8 +16,4 @@ To connect to a custom entry node, add its address to the `autopeering.entryNode
 ],
 ```
 
-Entry nodes' addresses are defined in the following format:
-
-```
-<public-key>@<host>:<autopeering-port>
-```
+Entry nodes' addresses are defined in the following format: `public-key@host:autopeering-port`.

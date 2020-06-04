@@ -42,9 +42,7 @@ Other nodes on your local network can use this public key to connect to your ent
 
 ## Monitoring your entry node
 
-You can monitor your entry node with the `healthz` API endpoint:
-
-<host>:<api-port>/healthz
+You can monitor your entry node with the `healthz` API endpoint `host:api-port/healthz`.
 
 This endpoint returns an HTTP 200 status code if everything is OK.
 

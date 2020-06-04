@@ -51,7 +51,6 @@ Hornet will not accept transactions if their timestamps are older than the first
 
     You can use the default settings for this object because the file names match those that you got from the IRI GitHub repository.
 
-
     ```json
     "snapshots": {
         "global": {

@@ -11,4 +11,4 @@
 |macOS|Use a Docker image| |
 | |Use a pre-built binary file in the [GitHub release assets](https://github.com/gohornet/hornet/releases)
 |Windows|Use a Docker image| |
-| |Use a pre-built binary file in the [GitHub release assets](https://github.com/gohornet/hornet/releases)
+| |Use a pre-built binary file in the [GitHub release assets](https://github.com/gohornet/hornet/releases) | |
