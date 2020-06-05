@@ -24,13 +24,7 @@ The latest snapshot data contains transactions from a certain point in history. 
     cd hornet
     ```
 
-2. Download the latest snapshot data
-
-    ```bash
-    curl -LO https://dbfiles.iota.org/mainnet/hornet/latest-export.gz.bin
-    ```
-
-3. Give the Docker user permission to use the database directory
+2. Give the Docker user permission to use the database directory
 
     ```bash
     mkdir mainnetdb
@@ -44,6 +38,13 @@ The latest snapshot data contains transactions from a certain point in history. 
 ## Step 2. Start your node
 
 In this step, you use the Docker image to start running Hornet on the Mainnet in a Docker container.
+
+When Hornet starts for the first time, it downloads the latest local snapshot data from https://ls.manapotion.io/, and processes it, storing the transactions in the `mainnetdb` directory.
+
+```
+2020-06-02T11:13:43+02:00       INFO    Snapshot        Downloading snapshot from https://ls.manapotion.io/export.bin
+Downloading... 421 MB/685 MB (52 MB/s)2020-06-02T11:13:43+02:00       INFO    Snapshot        Downloading snapshot from https://ls.manapotion.io/export.bin
+```
 
 You have two options for running the Docker container:
 
@@ -73,7 +74,6 @@ If you don't have Docker Compose, you can build the Docker image from the Docker
     :::info:
     If you're using an aarch64/arm64 architecture, pass the `--build-arg ARCH=arm64` argument to the `build` command.
     :::
-
 
 2. Run Hornet in a container
 
@@ -126,8 +126,6 @@ See the [Docker documentation](https://docs.docker.com/engine/reference/commandl
 
 ## Next steps
 
-Use the Do
-
 Try using one of the client libraries to send transactions to the nodes in your private Tangle:
 
 - [C](root://core/1.0/getting-started/get-started-c.md)
@@ -139,9 +137,5 @@ Try using one of the client libraries to send transactions to the nodes in your 
 - [JavaScript](root://core/1.0/getting-started/get-started-js.md)
 
 - [Python](root://core/1.0/getting-started/get-started-python.md)
-
-## Next steps
-
-If you want to start sending transactions to your node, see [Client libraries](root://client-libraries/1.0/overview.md). You'll need the URL or IP address of your node.
 
 If you want to continue learning how to customize and secure your node, see the [Guides](../guides/securing-your-node.md) section.

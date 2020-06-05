@@ -77,17 +77,19 @@ In this step, you use the open source code on GitHub to build an executable file
 
     This directory now contains all the configuration files.
 
-3. Build the executable file for Hornet
+3. Build the executable file, using the build script
 
     ```bash
-    go build -tags=pow_avx
+    ./scripts/build_hornet.sh
     ```
 
-    The `-tags=pow_avx` option builds the executable in a way that allows the node to use an optimized algorithm for remote proof of work.
+    This script appends the current Git commit hash to the version number, making it easier for you to identify which version you are using.
 
-    This process may take a minute or so.
+    The build may take a minute or so to finish. When the build is finished, you should have an executable file called `hornet`.
 
-    When the process is finished, you should have an executable file called `hornet`.
+    :::info: Faster proof of work
+    If your device uses a new x86_64 (amd64) architecture and you expect your node to do remote proof of work, add the `-tags=pow_avx` option to the `go build` command in the `build_hornet.sh` file. This option builds the executable file in a way that allows your node to use an optimized algorithm for remote proof of work.
+    :::
 
 4. Make sure that the build was successful
 
@@ -95,10 +97,10 @@ In this step, you use the open source code on GitHub to build an executable file
     ./hornet --version
     ```
 
-    You should see a version number such as the following:
+    You should see a version number and a Git commit hash such as the following:
 
     ```bash
-    HORNET 0.4.0
+    HORNET 0.4.0-7c7c2d1
     ```
 
 :::success: Congratulations :tada:
@@ -108,6 +110,14 @@ You've built Hornet from source.
 ## Next steps
 
 To run Hornet, you just need to execute the `hornet` file: `./hornet`.
+
+For more information about configuring Hornet, see the following guides:
+
+- [Securing your API](../guides/securing-your-api.md)
+- [Enabling remote proof of work](../guides/allowing-remote-pow.md)
+- [Configuring local snapshots](../guides/configuring-snapshots.md)
+- [Managing fixed neighbors](../guides/managing-neighbors.md)
+- [Setting up your dashboard](../guides/setting-up-dashboard.md)
 
 Try using one of the client libraries to send transactions to the nodes in your private Tangle:
 
@@ -120,5 +130,3 @@ Try using one of the client libraries to send transactions to the nodes in your 
 - [JavaScript](root://core/1.0/getting-started/get-started-js.md)
 
 - [Python](root://core/1.0/getting-started/get-started-python.md)
-
-If you want to continue learning how to customize and secure your node, see the [Guides](../guides/securing-your-node.md) section, or continue with the [next tutorial](../tutorials/set-up-reverse-proxy.md).
