@@ -28,7 +28,7 @@ yarn add @iota/core @iota/converter @iota/tryte-compress
 
 ## IOTA network
 
-In this tutorial, we connect to a node on the [Devnet](root://getting-started/0.1/network/iota-networks.md#devnet).
+In this tutorial, we connect to an IOTA node on the [Devnet](root://getting-started/0.1/network/iota-networks.md#devnet).
 
 ## Code walkthrough
 
@@ -77,13 +77,13 @@ In this tutorial, we connect to a node on the [Devnet](root://getting-started/0.
     ];
     ```
 
-5. Create a bundle from the `transfers` object, store the returned trytes in a global variable, then send them to the node
+5. Create a bundle from the `transfers` object, store the returned trytes in a global variable, then send them to the IOTA node
 
     ```js
 
     let bundleTrytes;
 
-    iota.prepareTransfers(seed, transfers)
+   IOTA.prepareTransfers(seed, transfers)
     .then(trytes => {
         // Store the trytes in a global variable
         bundleTrytes = trytes[0];
@@ -151,7 +151,7 @@ const Converter = require('@iota/converter');
 const fs = require('fs');
 
 // Create a new instance of the IOTA object
-// Use the `provider` field to specify which IRI node to connect to
+// Use the `provider` field to specify which node to connect to
 const iota = Iota.composeAPI({
 provider: 'https://nodes.devnet.iota.org:443'
 });
@@ -211,7 +211,7 @@ Use the [trytes compressor utility](https://utils.iota.org/compress) to compress
 
 ![Compressor](../images/compress.png)
 
-Use the trytes compressor API to decompress the trytes before resending them to a node. For example, you could do the following:
+Use the trytes compressor API to decompress the trytes before resending them to an IOTA node. For example, you could do the following:
 
 ```js
 function readCompressedTailTransaction (file){

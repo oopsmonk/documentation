@@ -4,7 +4,7 @@
 
 ## IOTA network
 
-In this tutorial, we connect to a node on the [Devnet](root://getting-started/0.1/network/iota-networks.md#devnet).
+In this tutorial, we connect to an IOTA node on the [Devnet](root://getting-started/0.1/network/iota-networks.md#devnet).
 
 ## Code walkthrough
 
@@ -22,10 +22,10 @@ In this tutorial, we connect to a node on the [Devnet](root://getting-started/0.
     import org.iota.jota.model.Transaction;
     import org.iota.jota.utils.TrytesConverter;
     ```
-2. Connect to a node
+2. Connect to an IOTA node
 
     ```java
-    IotaAPI api = new IotaAPI.Builder()
+   IOTAAPI api = new IotaAPI.Builder()
             .protocol("https")
             .host("nodes.devnet.thetangle.org")
             .port(443)

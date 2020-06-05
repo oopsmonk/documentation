@@ -4,7 +4,7 @@
 
 ## IOTA network
 
-In this tutorial, we connect to a node on the [Devnet](root://getting-started/0.1/network/iota-networks.md#devnet).
+In this tutorial, we connect to an IOTA node on the [Devnet](root://getting-started/0.1/network/iota-networks.md#devnet).
 
 The network settings are defined in a `config.h` file, which we create in the [getting started guide](../../getting-started/c-quickstart.md).
 
@@ -54,9 +54,9 @@ The network settings are defined in a `config.h` file, which we create in the [g
 
     // Find any transactions that were sent to the address
     if ((ret_code = iota_client_find_transaction_objects(s, find_tran, out_tx_objs)) == RC_OK) {
-        // Print the total number of transactions that the node returned
+        // Print the total number of transactions that the IOTA node returned
         printf("find transaction count: %lu\n", transaction_array_len(out_tx_objs));
-        iota_transaction_t *tx1 = transaction_array_at(out_tx_objs, TX_INDEX);
+       IOTA_transaction_t *tx1 = transaction_array_at(out_tx_objs, TX_INDEX);
         // Print information about the first transaction that was found
         if (tx1) {
             printf("dump first transaction:\n");

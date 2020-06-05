@@ -20,7 +20,7 @@ yarn add @iota/core
 
 ## IOTA network
 
-In this tutorial, we connect to a node on the [Devnet](root://getting-started/0.1/network/iota-networks.md#devnet) with the following network settings:
+In this tutorial, we connect to an IOTA node on the [Devnet](root://getting-started/0.1/network/iota-networks.md#devnet) with the following network settings:
 
 - **[Minimum weight magnitude](root://getting-started/0.1/network/minimum-weight-magnitude.md)**: 9
 
@@ -34,10 +34,10 @@ In this tutorial, we connect to a node on the [Devnet](root://getting-started/0.
     Click a transaction hash in the Latest milestones box, then click the branch transaction hash. This transaction is referenced and approved by the milestone, so it is in a confirmed state.
     :::
 
-2. Pass the transaction hash to the [`getLatestInclusion()`](https://github.com/iotaledger/iota.js/blob/next/api_reference.md#module_core.getLatestInclusion) method to check if the node's latest solid subtangle milestone approves it
+2. Pass the transaction hash to the [`getLatestInclusion()`](https://github.com/iotaledger/iota.js/blob/next/api_reference.md#module_core.getLatestInclusion) method to check if the IOTA node's latest solid subtangle milestone approves it
 
     ```js
-    iota.getLatestInclusion(['TRANSACTION HASH'])
+   IOTA.getLatestInclusion(['TRANSACTION HASH'])
     .then(states => console.log(states));
     ```
 
@@ -49,10 +49,10 @@ In this tutorial, we connect to a node on the [Devnet](root://getting-started/0.
     Click a transaction hash in the Latest transactions box. This transaction is a tip, so it is in a pending state.
     :::
 
-6. Pass the transaction hash to the `getLatestInclusion()` method to check if the IRI node's latest solid subtangle milestone approves it
+6. Pass the transaction hash to the `getLatestInclusion()` method to check if the IOTA node's latest solid subtangle milestone approves it
 
     ```js
-    iota.getLatestInclusion(['TRANSACTION HASH'])
+   IOTA.getLatestInclusion(['TRANSACTION HASH'])
     .then(states => console.log(states));
     ```
 

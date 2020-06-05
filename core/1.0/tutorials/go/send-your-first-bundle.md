@@ -37,7 +37,7 @@ In this tutorial, we connect to a [node](root://getting-started/0.1/network/node
     )
     ```
     
-2. Connect to a node
+2. Connect to an IOTA node
 
     ```go
     var node = "https://nodes.devnet.thetangle.org"
@@ -98,7 +98,7 @@ In this tutorial, we connect to a [node](root://getting-started/0.1/network/node
     }
     ```
 
-8. To create a bundle from your `transfers` object, pass it to the [`PrepareTransfers()`](https://github.com/iotaledger/iota.go/blob/master/.docs/iota.go/reference/api_prepare_transfers.md) method. Then, pass the returned bundle trytes to the [`SendTrytes()`](https://github.com/iotaledger/iota.go/blob/master/.docs/iota.go/reference/api_send_trytes.md) method, which handles [tip selection](root://getting-started/0.1/network/tip-selection.md), [remote proof of work](root://getting-started/0.1/transactions/proof-of-work.md), and sending the bundle to the node
+8. To create a bundle from your `transfers` object, pass it to the [`PrepareTransfers()`](https://github.com/iotaledger/iota.go/blob/master/.docs/iota.go/reference/api_prepare_transfers.md) method. Then, pass the returned bundle trytes to the [`SendTrytes()`](https://github.com/iotaledger/iota.go/blob/master/.docs/iota.go/reference/api_send_trytes.md) method, which handles [tip selection](root://getting-started/0.1/network/tip-selection.md), [remote proof of work](root://getting-started/0.1/transactions/proof-of-work.md), and sending the bundle to the IOTA node
 
     ```go
     trytes, err := api.PrepareTransfers(seed, transfers, PrepareTransfersOptions{})
@@ -119,7 +119,7 @@ You can use this tail transaction hash to read the transaction from the Tangle.
 :::
 
 :::warning:
-Nodes can delete old transactions from their local copies of the Tangle. Therefore, a time may come where you request your transaction from a node, but the node doesn't have it anymore.
+Nodes can delete old transactions from their local copies of the Tangle. Therefore, a time may come where you request your transaction from an IOTA node, but the IOTA node doesn't have it anymore.
 
 If you want to store data on the Tangle for extended periods of time, we recommend [running your own node](root://node-software/1.0/overview.md).
 :::

@@ -20,7 +20,7 @@ yarn add @iota/core
 
 ## IOTA network
 
-In this tutorial, we connect to a node on the [Devnet](root://getting-started/0.1/network/iota-networks.md#devnet) with the following network settings:
+In this tutorial, we connect to an IOTA node on the [Devnet](root://getting-started/0.1/network/iota-networks.md#devnet) with the following network settings:
 
 - **[Minimum weight magnitude](root://getting-started/0.1/network/minimum-weight-magnitude.md)**: 9
 
@@ -67,7 +67,7 @@ If the tail transaction isn't promotable, the [`replayBundle()`](https://github.
 
 ```js
 function autoPromoteReattach (tail) {
-  iota.isPromotable(tail)
+ IOTA.isPromotable(tail)
     .then(promote => promote
     ? iota.promoteTransaction(tail, 3, 14)
         .then(()=> {
@@ -104,7 +104,7 @@ If a tail transaction has been confirmed, it's logged to the console along with 
 ```js
 function autoConfirm(tails){
 console.log(tails);
-    iota.getLatestInclusion(tails)
+   IOTA.getLatestInclusion(tails)
         .then(states => {
             // Check that none of the transactions have been confirmed
             if (states.indexOf(true) === -1) {

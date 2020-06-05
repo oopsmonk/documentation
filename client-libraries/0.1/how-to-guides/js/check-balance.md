@@ -20,7 +20,7 @@ yarn add @iota/core
 
 ## IOTA network
 
-In this tutorial, we connect to a node on the [Devnet](root://getting-started/0.1/network/iota-networks.md#devnet).
+In this tutorial, we connect to an IOTA node on the [Devnet](root://getting-started/0.1/network/iota-networks.md#devnet).
 
 ## Code walkthrough
 
@@ -30,7 +30,7 @@ In this tutorial, we connect to a node on the [Devnet](root://getting-started/0.
     const Iota = require('@iota/core');
     ```
 
-2. Connect to a node
+2. Connect to an IOTA node
 
     ```js
     const iota = Iota.composeAPI({
@@ -45,10 +45,10 @@ In this tutorial, we connect to a node on the [Devnet](root://getting-started/0.
     'NBZLOBCWG9BAQTODDKNF9LYYTBOUWSQSGCWFQVZZR9QXCOAIBRYDTZOEGBGMZKJYZOPPGRGFFWTXUKUKW';
     ```
 
-4. Use the [`getBalances()`](https://github.com/iotaledger/iota.js/blob/next/api_reference.md#module_core.getBalances) method to ask the node for the current balance of the address
+4. Use the [`getBalances()`](https://github.com/iotaledger/iota.js/blob/next/api_reference.md#module_core.getBalances) method to ask the IOTA node for the current balance of the address
 
     ```js
-    iota.getBalances([address], 100)
+   IOTA.getBalances([address], 100)
       .then(({ balances }) => {
       console.log(balances)
       })

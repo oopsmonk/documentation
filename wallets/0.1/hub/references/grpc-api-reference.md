@@ -451,7 +451,7 @@ These are all the error codes that can be returned by the Hub.
 | SIGNING_FAILED                  | 12     | Call to rpc signing_server failed (GetSignatureForUUID)      |
 | GET_ADDRESS_FAILED              | 13     | Call to rpc signing_server failed (GetAddressForUUID)        |
 | GET_SECURITY_LEVEL_FAILED       | 14     | Call to rpc signing_server failed (GetSecurityLevel)         |
-| IRI_CLIENT_UNAVAILABLE|15|Call to the node's API failed|
+| IRI_CLIENT_UNAVAILABLE|15|Call to the IOTA node's API failed|
 |ADDRESS_WAS_ALREADY_SPENT |16|Provided address is already spent|
 |INVALID_UUID|17|Provided UUID is invalid|
 | WRONG_USER_ADDRESS|18|Provided address does not belong to a user|

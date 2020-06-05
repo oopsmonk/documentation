@@ -125,7 +125,7 @@ Use these settings to customize how your node validates and confirms transaction
 
 | **CL flags** |**Configuration file parameters** |  **Description**| **Accepted values** | **Default value**|**Notes** |
 | :------------------------ | :--------------- | :--------- | :--------| :------------|:-----|:----|
-|<a name="testnet"></a>`--testnet` |`TESTNET`|Enable the node to run on a network other than the Mainnet |boolean |false|This parameter must be set to `true` for the IRI to read any other testnet parameters. If you include only this flag, the default testnet configuration options are for the Devnet.|
+|<a name="testnet"></a>`--testnet` |`TESTNET`|Enable the IOTA node to run on a network other than the Mainnet |boolean |false|This parameter must be set to `true` for the IRI to read any other testnet parameters. If you include only this flag, the default testnet configuration options are for the Devnet.|
 | `--testnet-coordinator`|`COORDINATOR` | Set the 81-trytes address of the testnet Coordinator|81-tryte string |"EQQFCZBIHRHWPXKMTOLMYUYPCN9XLMJPYZVFJSAY9FQHCCLWTOLLUGKKMXYFDBOOYFBLBI9WUEILGECYM"|This address is the Coordinator's Merkle root|
 |`--testnet-no-coo-validation`|`DONT_VALIDATE_TESTNET_MILESTONE_SIG`|Disable the validation of milestones |boolean|false |
 | `--testnet-coordinator-security-level`|`COORDINATOR_SECURITY_LEVEL`|Set the security level of the Coordinator's addresses and private keys|number|1|
@@ -134,10 +134,10 @@ Use these settings to customize how your node validates and confirms transaction
 | |`LOCAL_SNAPSHOTS_BASE_PATH`|Set the base path for any snapshot files|"testnet"|
 |`--snapshot` |`SNAPSHOT_FILE`|Set the path to the snapshot `.txt` file|string|"/snapshotTestnet.txt"|This path must be relative to the local-snapshots base path|
 |`--snapshot-sig` |`SNAPSHOT_SIG`|Set the path to the signature for the snapshot file|string|"/snapshotTestnet.sig"|This path must be relative to the local-snapshots base path|
-|`--snapshot-timestamp` |`SNAPSHOT_TIME`|Set the oldest attachment time that new transactions can have so that the node can validate them |Unix epoch|1522306500|
-|`----milestone-start` |`MILESTONE_START_INDEX`|Set the starting milestone index that the node should use to validate and confirm transactions|number|434525|
-||`DB_PATH`|Set the path that the node can use to save the ledger|"testnetdb"|
-||`DB_LOG_PATH`|Set the path that the node can use to save the log file|"testnetdb.log"|
+|`--snapshot-timestamp` |`SNAPSHOT_TIME`|Set the oldest attachment time that new transactions can have so that the IOTA node can validate them |Unix epoch|1522306500|
+|`----milestone-start` |`MILESTONE_START_INDEX`|Set the starting milestone index that the IOTA node should use to validate and confirm transactions|number|434525|
+||`DB_PATH`|Set the path that the IOTA node can use to save the ledger|"testnetdb"|
+||`DB_LOG_PATH`|Set the path that the IOTA node can use to save the log file|"testnetdb.log"|
 
 ## Tip selection
 

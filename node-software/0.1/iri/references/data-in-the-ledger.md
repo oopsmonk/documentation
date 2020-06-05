@@ -21,9 +21,9 @@ The following table contains the metadata that an IRI node appends to the `trans
 |**Field**|**Data** |**Description**|
 |:--------|:---------------|:-------|
 |`validity`|-1, 0, or 1|This value is set by the [bundle validator](../concepts/transaction-validation.md#bundle-validator). The value can be -1 (invalid), 1 (valid), 0 (unknown)|
-|`type`|`PREFILLED_SLOT` or `FILLED SLOT` |`PREFILLED_SLOT` means that the transaction hash exists, but the node doesn't have it in its ledger. `FILLED_SLOT` means that the node has the transaction hash in its ledger.|
-|`arrivalTime`|integer |This value is the time in milliseconds that the node received the transaction|
+|`type`|`PREFILLED_SLOT` or `FILLED SLOT` |`PREFILLED_SLOT` means that the transaction hash exists, but the IOTA node doesn't have it in its ledger. `FILLED_SLOT` means that the IOTA node has the transaction hash in its ledger.|
+|`arrivalTime`|integer |This value is the time in milliseconds that the IOTA node received the transaction|
 |`parsed`|boolean |This value is used internally to check whether the metadata has been parsed|
 |`solid`|boolean|This value is set to `true` only if this transaction and the history of all transactions that it approves are in the ledger|
-|`sender`|URL or IP address|URL or the IP address of the node that sent the transaction|
+|`sender`|URL or IP address|URL or the IP address of the IOTA node that sent the transaction|
 |`snapshot`|Milestone index|Milestone index of the first milestone transaction that confirmed this transaction|

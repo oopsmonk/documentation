@@ -25,13 +25,13 @@ These references form a transaction's history, whereby if a transaction is a **c
 
 A transaction can be valid only if it references two other transaction's whose history does not conflict with it.
 
-For example, if transaction 6 instructs a node to withdraw 10 Mi of [IOTA tokens](root://getting-started/0.1/clients/token.md) from an [address](root://getting-started/0.1/clients/addresses.md), the history of that transaction's parents must lead to a point where that address is sent at least 10 Mi.
+For example, if transaction 6 instructs an IOTA node to withdraw 10 Mi of [IOTA tokens](root://getting-started/0.1/clients/token.md) from an [address](root://getting-started/0.1/clients/addresses.md), the history of that transaction's parents must lead to a point where that address is sent at least 10 Mi.
 
 ## Transaction states
 
 Because transactions can be attached to any part (subtangle) of the Tangle, it can grow in many different directions. Some of these directions may lead to a valid history, while others may lead to inconsistencies such as double spends (where the same IOTA tokens are spent in two different transactions).
 
-As a result, all transactions start in a pending state and stay that way until the nodes reach a consensus on whether a transaction is confirmed.
+As a result, all transactions start in a pending state and stay that way until the IOTA nodes reach a consensus on whether a transaction is confirmed.
 
 At the moment, nodes consider a transaction confirmed if it is **directly or indirectly referenced by a transaction that's created and sent by the [Coordinator](../network/the-coordinator.md)** (milestone).
 
@@ -45,4 +45,4 @@ Tip transactions are those that are not yet referenced by others. These transact
 
 ## Inconsistent subtangle
 
-If a tip transaction is not valid, the nodes will not select it. As a result, the transaction and its history will never be confirmed. Those invalid transaction are sometimes called an inconsistent subtangle.
+If a tip transaction is not valid, the IOTA nodes will not select it. As a result, the transaction and its history will never be confirmed. Those invalid transaction are sometimes called an inconsistent subtangle.

@@ -104,7 +104,7 @@ Create a new file called `contract.txt` in your working directory, then add the 
 5. At the end of the `publish` function, verify that the hash of the file still matches the one that was attached to the Tangle
 
     ```js
-    // Set the node to check for the transaction
+    // Set the IOTA node to check for the transaction
     tailTransaction.provider = 'https://nodes.devnet.iota.org:443';
 
     // Verifying if the file is unchanged

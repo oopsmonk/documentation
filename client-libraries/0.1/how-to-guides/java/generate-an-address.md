@@ -18,10 +18,10 @@ In this tutorial, we connect to a [node](root://getting-started/0.1/network/node
     import org.iota.jota.dto.response.GetNewAddressResponse;
     import org.iota.jota.error.ArgumentException;
     ```
-2. Connect to a node
+2. Connect to an IOTA node
 
     ```java
-    IotaAPI api = new IotaAPI.Builder()
+   IOTAAPI api = new IotaAPI.Builder()
             .protocol("https")
             .host("nodes.devnet.thetangle.org")
             .port(443)
@@ -57,10 +57,10 @@ Starting from the given index, the connected node checks if the address is spent
 - Search its view of the Tangle for input transactions that withdraw from the address
 - Search for the address in the list of spent addresses
 
-If an address with the given index is spent, the index is incremented until the node finds one that isn't spent.
+If an address with the given index is spent, the index is incremented until the IOTA node finds one that isn't spent.
 
 :::warning:
-This way of generating addresses replies on the node to return valid data about your addresses. To have more control over your addresses, we recommend using the [account module](../../account-module/introduction/overview.md) to keep track of spent addresses in your own local database.
+This way of generating addresses replies on the IOTA node to return valid data about your addresses. To have more control over your addresses, we recommend using the [account module](../../account-module/introduction/overview.md) to keep track of spent addresses in your own local database.
 :::
 
 In the console, you should see an address.

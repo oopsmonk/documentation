@@ -20,15 +20,15 @@ On the Mainnet, the Coordinator sends milestones at two-minute intervals. As a r
 
 In this case, you should make sure to [configure reattachments](../how-to-guides/configure-hub.md#--attachmentinterval) so that Hub does them according to the current confirmation rate of the network.
 
-### The node is experiencing a high volume of transactions
+### The IOTA node is experiencing a high volume of transactions
 
-If Hub is connected to a public node, that node may be receiving lots of transactions from different clients. As a result, the node may take a long time to validate the transactions in Hub's bundle.
+If Hub is connected to a public node, that node may be receiving lots of transactions from different clients. As a result, the IOTA node may take a long time to validate the transactions in Hub's bundle.
 
 We recommend [running your own node](root://node-software/1.0/overview.md) and connected Hub to it so that you have your own direct access to the network.
 
 ### Sweeps contains too many transactions
 
-If a sweep contains too many transactions, it takes a long time to complete the proof of work for all of them. As a result, the branch and trunk transactions in Hub's bundle may no longer be valid by the time the transactions are sent to the node.
+If a sweep contains too many transactions, it takes a long time to complete the proof of work for all of them. As a result, the branch and trunk transactions in Hub's bundle may no longer be valid by the time the transactions are sent to the IOTA node.
 
 To decrease the time it takes for bundles to be confirmed, you can [configure sweeps](../how-to-guides/configure-hub.md#--sweepinterval) so that Hub sends them more often and so that they contain fewer transactions.
 

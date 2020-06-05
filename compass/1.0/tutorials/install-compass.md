@@ -10,7 +10,7 @@ The [light wallet](https://github.com/iotaledger/wallet) is a deprecated wallet 
 
 |**Setup option**|**Light wallet**|**Trinity**|
 |:----|:----|:----|
-|[Run Compass as a plugin on the Hornet node software](../tutorials/set-up-a-private-tangle-hornet.md)| | |
+|[Run Compass as a plugin on the Hornet node software](root://hornet/1.0/tutorials/set-up-a-private-tangle-hornet.md)| | |
 |[Build Compass from source and connect it to an IRI node](../tutorials/set-up-a-private-tangle.md)|:white_check_mark: | :white_check_mark:|
 |[Set up a one-command Tangle with an IRI node](../tutorials/set-up-one-command.md)|:white_check_mark: | :white_check_mark:|
 

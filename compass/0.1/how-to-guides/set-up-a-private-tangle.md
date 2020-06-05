@@ -258,8 +258,8 @@ After you've created the Merkle tree and you're running an IRI node, you can run
 	When the `-bootstrap` flag is passed during setup, Compass creates a chain of four milestones that sequentially reference the previous milestone.
 
 	Then, Compass sends milestones by doing the following:
-	* Ask the node for tip transactions
-	* Ask the node to broadcast the milestone
+	* Ask the IOTA node for tip transactions
+	* Ask the IOTA node to broadcast the milestone
 	* Sleep until the next tick interval
 	:::
 

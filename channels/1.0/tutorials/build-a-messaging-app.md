@@ -42,12 +42,18 @@ In this step, you use Cargo to create a new project and install the dependencies
 2. Open the `Cargo.toml` file, and add the following dependencies under the `[DEPENDENCIES]` section
 
     ```bash
-    iota-streams = { git = "https://github.com/iotaledger/streams" }
+   IOTA-streams = { git = "https://github.com/iotaledger/streams" }
     failure = "0.1"
-    iota-lib-rs = "0.4"
+   IOTA-lib-rs = "0.4"
     ```
 
 Now you have all the dependencies, you're ready to start coding.
+
+You're project structure should look like so:
+
+```
+
+```
 
 ## Step 2. Announce the API channel
 
@@ -71,7 +77,7 @@ In this step, you write a function that announces a new channel. This channel is
 
     As well as the author, this function takes a generic type that implements the [`Transport`](https://github.com/iotaledger/streams/blob/master/iota-streams-app/src/transport/tangle/client.rs) trait for sending and receiving messages on a communication channel.
 
-    In Channels, the IOTA client library is extended to implement this trait, which means that we can use it to create a [bundle](root://getting-started/0.1/transactions/bundles.md) from messages and send them to a node.
+    In Channels, the IOTA client library is extended to implement this trait, which means that we can use it to create a [bundle](root://getting-started/0.1/transactions/bundles.md) from messages and send them to an IOTA node.
 
     :::info:
     In Rust, it's best practice to follow the convention of using underscores to separate words (snake_case) in the names of functions and variables.
@@ -94,9 +100,9 @@ In this step, you write a function that announces a new channel. This channel is
     println!("Channel published");
     ```
 
-    The `send_message_with_options()` method uses the IOTA client library to convert messages into bundles and send the resulting transactions to a node.
+    The `send_message_with_options()` method uses the IOTA client library to convert messages into bundles and send the resulting transactions to an IOTA node.
 
-    This method returns an error only if the bundle was not sent to the node. Therefore, if you see no error, the bundle was sent.
+    This method returns an error only if the bundle was not sent to the IOTA node. Therefore, if you see no error, the bundle was sent.
 
 6. Return the `Announce` message identifier
 

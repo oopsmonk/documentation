@@ -21,7 +21,7 @@ The IOTA network in which your node runs is determined by the following configur
 
 ### MWM
 
-The [minimum weight magnitude](root://getting-started/0.1/network/minimum-weight-magnitude.md) (MWM) is important because nodes use this setting to determine whether transactions are valid. To be valid, transactions must contain a [proof of work](root://getting-started/0.1/transactions/proof-of-work.md) that used at least the MWM in the node's configuration.
+The [minimum weight magnitude](root://getting-started/0.1/network/minimum-weight-magnitude.md) (MWM) is important because nodes use this setting to determine whether transactions are valid. To be valid, transactions must contain a [proof of work](root://getting-started/0.1/transactions/proof-of-work.md) that used at least the MWM in the IOTA node's configuration.
 
 ### NEIGHBORS
 
@@ -61,9 +61,9 @@ After a local snapshot, nodes store the state of the ledger in snapshot files, w
 
 If you want to create snapshot files, you need to make sure that the [`LOCAL_SNAPSHOTS_ENABLED`](../references/iri-configuration-options.md#local-snapshots) configuration option is set to `true`. Then, change the value of the `LOCAL_SNAPSHOTS_DEPTH` configuration option, depending on how often you want to create snapshot files.
 
-If the node is synchronized, it creates snapshot files at the milestone intervals that are defined in the [`LOCAL_SNAPSHOTS_INTERVAL_SYNCED`](../references/iri-configuration-options.md#local-snapshots-interval-synced) configuration option.
+If the IOTA node is synchronized, it creates snapshot files at the milestone intervals that are defined in the [`LOCAL_SNAPSHOTS_INTERVAL_SYNCED`](../references/iri-configuration-options.md#local-snapshots-interval-synced) configuration option.
 
-If the node isn't synchronized, it creates snapshot files at the milestone intervals that are defined in the [`LOCAL_SNAPSHOTS_INTERVAL_UNSYNCED`](../references/iri-configuration-options.md#local-snapshots-interval-unsynced) configuration option.
+If the IOTA node isn't synchronized, it creates snapshot files at the milestone intervals that are defined in the [`LOCAL_SNAPSHOTS_INTERVAL_UNSYNCED`](../references/iri-configuration-options.md#local-snapshots-interval-unsynced) configuration option.
 
 :::info:
 At each interval, the snapshot file is overwritten.
@@ -84,13 +84,13 @@ These files are located in the path of the [`LOCAL_SNAPSHOTS_BASE_PATH`](../refe
 |:--------------------------|:----------------|
 |200|`LOCAL_SNAPSHOTS_DEPTH=100` `LOCAL_SNAPSHOTS_INTERVAL_SYNCED=10`|
 
-In this scenario, the node is synchronized. So, at milestone 210, it will do the following:
+In this scenario, the IOTA node is synchronized. So, at milestone 210, it will do the following:
 
 - Take the previous 100 milestones and add them to the snapshot.meta file as seen milestones
 - Find the solid transactions and add them to the ledger as solid entry points
 - In the snapshot.state file, add a list of all addresses and their balances
 
-When the node restarts, it can use the snapshot files as the entry point to synchronize its ledger.
+When the IOTA node restarts, it can use the snapshot files as the entry point to synchronize its ledger.
 
 ## Deleting old transactions
 
@@ -120,7 +120,7 @@ Milestones are sent approximately every two minute. So, use the following formul
 |:--------------------------|:----------------|
 |990,100|`LOCAL_SNAPSHOTS_PRUNING_DELAY=50,000` `LOCAL_SNAPSHOTS_DEPTH= 100`|
 
-In this scenario, the sum of `LOCAL_SNAPSHOTS_PRUNING_DELAY` + `LOCAL_SNAPSHOTS_DEPTH` is 50,100. Therefore, the node will prune transactions that were confirmed by any milestone with an index lower than 940,000 (990,100 - 50,100). As a result all transactions between milestones 940,000 and 990,100 will be kept in the ledger.
+In this scenario, the sum of `LOCAL_SNAPSHOTS_PRUNING_DELAY` + `LOCAL_SNAPSHOTS_DEPTH` is 50,100. Therefore, the IOTA node will prune transactions that were confirmed by any milestone with an index lower than 940,000 (990,100 - 50,100). As a result all transactions between milestones 940,000 and 990,100 will be kept in the ledger.
 
 ## Configuring the ledger
 

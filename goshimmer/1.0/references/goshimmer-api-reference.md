@@ -1,14 +1,18 @@
 # GoShimmer API reference
 
-**The GoShimmer API provides a simple and consistent way to get transactions from the Tangle, get a node's neighbors, or send new transactions. This API accepts HTTP requests and responds with JSON data.**
+**The GoShimmer API provides a simple and consistent way to get transactions from the Tangle, get an IOTA node's neighbors, or send new transactions. This API accepts HTTP requests and responds with JSON data.**
 
 :::info:
 You can also use the [GoShimmer client library](https://github.com/iotaledger/goshimmer/tree/master/client) to call these API endpoints, using Go.
 :::
 
-## Base URLs
+## Base URL
 
 All requests to this API should be prefixed with the URL of a GoShimmer node.
+
+If you don't already have an IOTA node to connect to, we recommend [running your own](root://node-software/1.0/overview.md).
+
+Running your own node has many benefits, of which the most important is that you don't need to trust a potentially malicious third-party node. If you were to connect to a malicious node, it could give you incorrect information about balances and transactions, leading to stolen IOTA tokens.
 
 <h1 id="transactions"></h1>
 
@@ -157,7 +161,7 @@ Status Code **400**
 
 Gets any transaction hashes that were sent to the given addresses.
 
-Searches the Tangle for transactions that contain the given addresses and returns an array of the transactions hashes that were found. The transaction hashes are returned in the same order as the given addresses. For example, if the node doesn't have any transaction hashes for a given address, the value at that index in the returned array is empty.
+Searches the Tangle for transactions that contain the given addresses and returns an array of the transactions hashes that were found. The transaction hashes are returned in the same order as the given addresses. For example, if the IOTA node doesn't have any transaction hashes for a given address, the value at that index in the returned array is empty.
 
 ### Body parameters
 
@@ -797,9 +801,9 @@ print r.json()
 
 ## GET /getNeighbors
 
-Gets the node's chosen and accepted neighbors.
+Gets the IOTA node's chosen and accepted neighbors.
 
-Returns the node's chosen and accepted neighbors. Optionally, you can pass the `known=1` query parameter to return all known peers.
+Returns the IOTA node's chosen and accepted neighbors. Optionally, you can pass the `known=1` query parameter to return all known peers.
 
 <h3 id="get__getneighbors-parameters">Body parameters</h3>
 

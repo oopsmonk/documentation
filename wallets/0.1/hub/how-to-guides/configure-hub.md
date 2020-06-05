@@ -6,7 +6,7 @@
 
 If you start Hub and have data in the database, you must delete that data before changing any of these options:
 
-- [`--apiAddress`](../references/command-line-options.md#apiAddress): Nodes in an IOTA network keep a record of the balances of addresses. If you connect to a node in a different [IOTA network](root://getting-started/0.1/network/iota-networks.md), that node will not have the same record, so any balances in Hub will be invalid.
+- [`--apiAddress`](../references/command-line-options.md#apiAddress): Nodes in an IOTA network keep a record of the balances of addresses. If you connect to an IOTA node in a different [IOTA network](root://getting-started/0.1/network/iota-networks.md), that node will not have the same record, so any balances in Hub will be invalid.
 
 - [`--salt`](../references/command-line-options.md#salt): If you change the salt, Hub won't be able to generate the seed for any deposit addresses that are already in the database. As a result, Hub won't be able to generate the correct private keys to be able to sign sweeps that withdraw from those deposit addresses.
 
@@ -28,21 +28,21 @@ When choosing an IOTA network, you need to consider the following options:
 
 ### --apiAddress
 
-Hub needs to connect to a node's API to be able to interact with the [Tangle](root://getting-started/0.1/network/the-tangle.md). To avoid connecting to a malicious node, we recommend connecting Hub to a local node that you control. If you don't have a local node, read about the [IRI node software](root://iri/1.0/overview.md) for guides on setting one up.
+Hub needs to connect to an IOTA node's API to be able to interact with the [Tangle](root://getting-started/0.1/network/the-tangle.md). To avoid connecting to a malicious node, we recommend connecting Hub to a local node that you control. If you don't have a local node, read about the [IRI node software](root://iri/1.0/overview.md) for guides on setting one up.
 
 #### Development environment
 
-When testing Hub in a development environment, you should consider connecting to a node on the [Devnet](root://getting-started/0.1/network/iota-networks.md#devnet). This IOTA network requires less [proof of work](root://getting-started/0.1/transactions/proof-of-work.md), which reduces the time it takes to create [sweeps](../concepts/sweeps.md), and it uses [free test IOTA tokens](root://getting-started/0.1/tutorials/get-test-tokens.md).
+When testing Hub in a development environment, you should consider connecting to an IOTA node on the [Devnet](root://getting-started/0.1/network/iota-networks.md#devnet). This IOTA network requires less [proof of work](root://getting-started/0.1/transactions/proof-of-work.md), which reduces the time it takes to create [sweeps](../concepts/sweeps.md), and it uses [free test IOTA tokens](root://getting-started/0.1/tutorials/get-test-tokens.md).
 
-As well as the Devnet, you can also connect to a node in a [private Tangle](root://compass/1.0/overview.md), which allows you to configure your own IOTA network.
+As well as the Devnet, you can also connect to an IOTA node in a [private Tangle](root://compass/1.0/overview.md), which allows you to configure your own IOTA network.
 
 #### Production environment
 
-When deploying Hub in a production environment, you should connect to a node on the [Mainnet](root://getting-started/0.1/network/iota-networks.md#mainnet). 
+When deploying Hub in a production environment, you should connect to an IOTA node on the [Mainnet](root://getting-started/0.1/network/iota-networks.md#mainnet). 
 
 ### --minWeightMagnitude
 
-Depending on the IOTA network of the node, set the correct [minimum weight magnitude](root://getting-started/0.1/network/minimum-weight-magnitude.md).
+Depending on the IOTA network of the IOTA node, set the correct [minimum weight magnitude](root://getting-started/0.1/network/minimum-weight-magnitude.md).
 
 ### --powMode
 
@@ -86,7 +86,7 @@ For example, if you use security level 3 in the [--keySecLevel](../references/co
 
 ### --attachmentInterval
 
-When Hub sends a sweep to a node, it monitors it to check for confirmation. If the sweep takes longer than the attachment interval to become confirmed, Hub [promotes and reattaches](root://getting-started/0.1/transactions/reattach-rebroadcast-promote.md) its tail transaction.
+When Hub sends a sweep to an IOTA node, it monitors it to check for confirmation. If the sweep takes longer than the attachment interval to become confirmed, Hub [promotes and reattaches](root://getting-started/0.1/transactions/reattach-rebroadcast-promote.md) its tail transaction.
 
 The attachment interval you choose should depend on the current rate of confirmed transactions per second (CTPS) on the Tangle. To check the current rate, see [tanglebeat.com](http://tanglebeat.com/).
 

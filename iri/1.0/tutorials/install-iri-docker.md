@@ -9,7 +9,7 @@ To complete this tutorial, you need the following:
 - 4GB RAM
 - 64-bit processor
 - A [public IP address](root://general/0.1/how-to-guides/expose-your-local-device.md) that's either static or connected to a dynamic DNS service such as [duckdns.org](https://www.duckdns.org)
-- Ports 15600 and 14265 must be open. One way of opening ports is by [forwarding them](root://general/0.1/how-to-guides/expose-your-local-device.md) to the device that's running the node.
+- Ports 15600 and 14265 must be open. One way of opening ports is by [forwarding them](root://general/0.1/how-to-guides/expose-your-local-device.md) to the device that's running the IOTA node.
 - [Docker](https://docs.docker.com/install/#supported-platforms).
 
 :::info:
@@ -77,13 +77,13 @@ To have the IRI Docker container restart on every reboot, add the `--restart=alw
 Now that your node is up and running, it'll start to synchronize its ledger with the network. Give your node some time to synchronize.
 :::
 
-## Step 2. Check that the node is synchronized
+## Step 2. Check that the IOTA node is synchronized
 
-A node is considered synchronized when the `latestMilestoneIndex` field is equal to the `latestSolidSubtangleMilestoneIndex` field:
+An IOTA node is considered synchronized when the `latestMilestoneIndex` field is equal to the `latestSolidSubtangleMilestoneIndex` field:
 
-- `latestMilestoneIndex`: Index of the latest milestone that the node has received from its neighbors. This field is accurate only when the node is connected to synchronized neighbors.
+- `latestMilestoneIndex`: Index of the latest milestone that the IOTA node has received from its neighbors. This field is accurate only when the IOTA node is connected to synchronized neighbors.
 
-- `latestSolidSubtangleMilestoneIndex`: Index of the latest solid milestone that's in the node's ledger
+- `latestSolidSubtangleMilestoneIndex`: Index of the latest solid milestone that's in the IOTA node's ledger
 
 1. To check the current `latestMilestoneIndex` field, go to our [Discord](https://discord.iota.org) and enter **!milestone** in the #botbox channel
 

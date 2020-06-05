@@ -27,10 +27,10 @@ In this tutorial, we connect to a [node](root://getting-started/0.1/network/node
     import org.iota.jota.utils.TrytesConverter;
     ```
     
-2. Connect to a node
+2. Connect to an IOTA node
 
     ```java
-    IotaAPI api = new IotaAPI.Builder()
+   IOTAAPI api = new IotaAPI.Builder()
             .protocol("https")
             .host("nodes.devnet.thetangle.org")
             .port(443)
@@ -89,7 +89,7 @@ In this tutorial, we connect to a [node](root://getting-started/0.1/network/node
     transfers.add(zeroValueTransaction);
     ```
 
-8. To create a bundle from your `Transfers` object, pass it to the [`sendTransfer()`](https://github.com/iotaledger/iota-java/blob/dev/docs/iota-java/sendTransfer.md) method, which handles [tip selection](root://getting-started/0.1/network/tip-selection.md), [remote proof of work](root://getting-started/0.1/transactions/proof-of-work.md), and sending the bundle to the node
+8. To create a bundle from your `Transfers` object, pass it to the [`sendTransfer()`](https://github.com/iotaledger/iota-java/blob/dev/docs/iota-java/sendTransfer.md) method, which handles [tip selection](root://getting-started/0.1/network/tip-selection.md), [remote proof of work](root://getting-started/0.1/transactions/proof-of-work.md), and sending the bundle to the IOTA node
 
     ```java
     try { 
@@ -110,7 +110,7 @@ You can use this tail transaction hash to read the transaction from the Tangle.
 :::
 
 :::warning:
-Nodes can delete old transactions from their local copies of the Tangle. Therefore, a time may come where you request your transaction from a node, but the node doesn't have it anymore.
+Nodes can delete old transactions from their local copies of the Tangle. Therefore, a time may come where you request your transaction from an IOTA node, but the IOTA node doesn't have it anymore.
 
 If you want to store data on the Tangle for extended periods of time, we recommend [running your own node](root://node-software/1.0/overview.md).
 :::

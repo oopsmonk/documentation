@@ -1,6 +1,6 @@
 # Chronicle
 
-**Chronicle is a permanode solution that takes transactions from a node and stores them in a distributed database that's secure and scales well.**
+**Chronicle is a permanode solution that takes transactions from an IOTA node and stores them in a distributed database that's secure and scales well.**
 
 By running Chronicle, you have the following benefits:
 

@@ -2,7 +2,7 @@
 
 **The following information describes what IRI does when a client calls the [getTransactionsToApprove](root://iri/1.0/references/iri-api-reference.md#getTransactionsToApprove) endpoint.**
 
-When this endpoint is called, a node starts the tip selection algorithm, which is separated into the following stages:
+When this endpoint is called, an IOTA node starts the tip selection algorithm, which is separated into the following stages:
 
 1. Preparation
 2. Rating calculation

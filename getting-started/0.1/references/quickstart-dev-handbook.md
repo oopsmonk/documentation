@@ -6,7 +6,7 @@ This handbook gives you a walk through the IOTA technology to help you to identi
 
 An IOTA network is a collection of interconnected nodes that each store a copy of the Tangle. In each IOTA network, the Tangle contains different transactions, so the distribution of IOTA tokens is different in each one.
 
-The IOTA Foundation maintains two permissionless networks, where anyone can run a node, connect to them, and read/write transactions.
+The IOTA Foundation maintains two permissionless networks, where anyone can run an IOTA node, connect to them, and read/write transactions.
 
 Permissionless networks are public, so any data you send in a transaction is open to anyone. But, you can always protect the data in transactions through encryption and the use of MAM channels. 
 
@@ -41,7 +41,7 @@ This option will require minimum cost associated with the deployment (physical o
 
 The easiest way to send transactions on the Mainnet is to use our client libraries to build the IOTA logic of your application.
 
-Your application or service needs to connect to a node on the IOTA Mainnet. In the client libraries such as JavaScript, you usually define which node to connect to in the `provider` field.
+Your application or service needs to connect to an IOTA node on the IOTA Mainnet. In the client libraries such as JavaScript, you usually define which node to connect to in the `provider` field.
 
 ```js
 // Require the core package
@@ -59,10 +59,10 @@ See a [partial list of available Mainnet nodes](https://iota.dance/).
 :::
 
 :::warning:
-Not all the nodes support remote proof of work (PoW). So, if you want to send a transaction to one of these nodes, you will have to use [another PoW option](root://getting-started/0.1/transactions/proof-of-work.md#options-for-doing-proof-of-work).
+Not all the IOTA nodes support remote proof of work (PoW). So, if you want to send a transaction to one of these nodes, you will have to use [another PoW option](root://getting-started/0.1/transactions/proof-of-work.md#options-for-doing-proof-of-work).
 :::
 
-When you're connected to a node, you need to build a transfer object that specifies what you want to send and to which address.
+When you're connected to an IOTA node, you need to build a transfer object that specifies what you want to send and to which address.
 
 ```js
 const transfers = [
@@ -110,7 +110,7 @@ To set up a private Tangle you need to run a local node and an instance of Compa
 
 ### Useful links
 
-- [Run a node on Amazon Web Services (AWS)](https://gitlab.com/iot.fabian.rami/iota-aws-full-node) (not tested)
+- [Run an IOTA node on Amazon Web Services (AWS)](https://gitlab.com/iot.fabian.rami/iota-aws-full-node) (not tested)
 - [Read our application blueprints](root://blueprints/0.1/introduction/overview.md) to see how you can create an application on IOTA
 
 ## IOTA and the Internet of Things

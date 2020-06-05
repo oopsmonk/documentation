@@ -1,11 +1,11 @@
 # Install a proof-of-work proxy server
 
-**The `attachToTangle` endpoint is resource intensive. As a result, many calls to this endpoint can sometimes cause a node to crash. To resolve this problem, you can install a dedicated proxy server to do proof of work (PoW) for your node.**
+**The `attachToTangle` endpoint is resource intensive. As a result, many calls to this endpoint can sometimes cause an IOTA node to crash. To resolve this problem, you can install a dedicated proxy server to do proof of work (PoW) for your node.**
 
-The PoW proxy server is an implementation of [Caddy](https://caddyserver.com/) that uses IOTA middleware. This middleware allows the server to intercept calls to an IRI node's `attachToTangle` endpoint and do the PoW.
+The PoW proxy server is an implementation of [Caddy](https://caddyserver.com/) that uses IOTA middleware. This middleware allows the server to intercept calls to an IOTA node's `attachToTangle` endpoint and do the PoW.
 
 :::info:
-All requests to the other IRI API endpoints are forwarded to the IRI node.
+All requests to the other IRI API endpoints are forwarded to the IOTA node.
 :::
 
 ## Prerequisites
@@ -75,9 +75,9 @@ To complete this tutorial, you need the following:
     limits 10mb
 
     # Intercept calls that have a maximum MWM of 14 and include a maximum of 20 transactions per call
-    iota 14 20
+   IOTA 14 20
 
-    # Set up a reverse proxy to your IRI node
+    # Set up a reverse proxy to your node
     # In this example, we connect to a public Devnet node, but you can also connect to your own node
     proxy / https://nodes.devnet.iota.org:443 {
         header_upstream X-IOTA-API-VERSION 1.4
@@ -114,7 +114,7 @@ To complete this tutorial, you need the following:
     const Converter = require('@iota/converter');
 
     // Create a new instance of the IOTA object
-    // Use the `provider` field to specify which IRI node to connect to
+    // Use the `provider` field to specify which node to connect to
     const iota = Iota.composeAPI({
     provider: 'http://127.0.0.1:15265'
     });
@@ -132,7 +132,7 @@ To complete this tutorial, you need the following:
     }
     ];
 
-    iota.prepareTransfers(seed, transfers)
+   IOTA.prepareTransfers(seed, transfers)
     .then(trytes => {
     return iota.sendTrytes(trytes, 3/*depth*/, 9/*MWM*/)
     })
@@ -160,6 +160,6 @@ To complete this tutorial, you need the following:
     :::
 
 :::success:Congratulations :tada:
-You have a dedicated proxy server that handles proof of work for your IRI node.
+You have a dedicated proxy server that handles proof of work for your node.
 :::
 

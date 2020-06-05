@@ -1,11 +1,11 @@
 # Set up a proof of work proxy server
 
-**In this tutorial, you install a dedicated proxy server that does local proof of work by intercepting calls to a node's `attachToTangle` endpoint.**
+**In this tutorial, you install a dedicated proxy server that does local proof of work by intercepting calls to an IOTA node's `attachToTangle` endpoint.**
 
-The PoW proxy server is an implementation of [Caddy](https://caddyserver.com/) that uses IOTA middleware. This middleware allows the server to intercept calls to an IRI node's `attachToTangle` endpoint and do the PoW.
+The PoW proxy server is an implementation of [Caddy](https://caddyserver.com/) that uses IOTA middleware. This middleware allows the server to intercept calls to an IOTA node's `attachToTangle` endpoint and do the PoW.
 
 :::info:
-All requests to the other IRI API endpoints are forwarded to the IRI node.
+All requests to the other IRI API endpoints are forwarded to the IOTA node.
 :::
 
 ## Prerequisites
@@ -75,9 +75,9 @@ To complete this tutorial, you need the following:
     limits 10mb
 
     # Intercept calls that have a maximum MWM of 14 and include a maximum of 20 transactions per call
-    iota 14 20
+   IOTA 14 20
 
-    # Set up a reverse proxy to your IRI node
+    # Set up a reverse proxy to your node
     # In this example, we connect to a public Devnet node, but you can also connect to your own node
     proxy / https://nodes.devnet.iota.org:443 {
         header_upstream X-IOTA-API-VERSION 1.4
@@ -114,7 +114,7 @@ To complete this tutorial, you need the following:
     const Converter = require('@iota/converter');
 
     // Create a new instance of the IOTA object
-    // Use the `provider` field to specify which IRI node to connect to
+    // Use the `provider` field to specify which node to connect to
     const iota = Iota.composeAPI({
     provider: 'http://127.0.0.1:15265'
     });
@@ -132,7 +132,7 @@ To complete this tutorial, you need the following:
     }
     ];
 
-    iota.prepareTransfers(seed, transfers)
+   IOTA.prepareTransfers(seed, transfers)
     .then(trytes => {
     return iota.sendTrytes(trytes, 3/*depth*/, 9/*MWM*/)
     })

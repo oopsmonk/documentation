@@ -4,7 +4,7 @@
 
 ## IOTA network
 
-In this tutorial, we connect to a node on the [Devnet](root://getting-started/0.1/network/iota-networks.md#devnet).
+In this tutorial, we connect to an IOTA node on the [Devnet](root://getting-started/0.1/network/iota-networks.md#devnet).
 
 ## Code walkthrough
 
@@ -17,10 +17,10 @@ In this tutorial, we connect to a node on the [Devnet](root://getting-started/0.
     import org.iota.jota.error.ArgumentException;
     ```
 
-2. Connect to a node
+2. Connect to an IOTA node
 
     ```java
-    IotaAPI api = new IotaAPI.Builder()
+   IOTAAPI api = new IotaAPI.Builder()
             .protocol("https")
             .host("nodes.devnet.thetangle.org")
             .port(443)
@@ -38,7 +38,7 @@ In this tutorial, we connect to a node on the [Devnet](root://getting-started/0.
     This address must include a [checksum](root://getting-started/0.1/clients/checksums.md).
     :::
 
-4. Use the `getBalance()` method to ask the node for the current balance of the address
+4. Use the `getBalance()` method to ask the IOTA node for the current balance of the address
 
     ```java
     try {
