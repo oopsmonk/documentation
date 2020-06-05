@@ -24,6 +24,6 @@ Helping others is an important part of any open source ecosystem.
 
 By sharing your knowledge with others, you can provide a lot of value to the community and maybe inspire someone else to learn and contribute.
 
-Take a look at what discussions are going on in the #iri-discussion channel on [Discord](https://discord.iota.org).
+Take a look at what discussions are going on in the #hornet channel on [Discord](https://discord.iota.org).
 
 Thanks :heart:

@@ -23,6 +23,7 @@
 
 [Tutorials/Linux/Set a limit on requests to your node's API](/tutorials/set-up-reverse-proxy.md)
 [Tutorials/Linux/Add HTTPS support to your node](/tutorials/add-https.md)
+[Tutorials/Linux/Set up a Grafana dashboard](/tutorials/set-up-grafana.md)
 [Tutorials/Linux/Set up a private Tangle](/tutorials/set-up-a-private-tangle-hornet.md)
 
 [References/API reference](root://iri/1.0/references/iri-api-reference.md)

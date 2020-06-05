@@ -12,7 +12,7 @@ To complete this tutorial, you need the following:
 
 ## Step 1. Generate certificates
 
-In this step, you use [Let's Encrypt](https://letsencrypt.org/how-it-works/) to generate SSL certificate files
+In this step, you use [Let's Encrypt](https://letsencrypt.org/how-it-works/) to generate SSL certificate files.
 
 Replace the `$YOUR_EMAIL` and `$YOUR_DOMAIN` placeholders with your email address and domain name.
 

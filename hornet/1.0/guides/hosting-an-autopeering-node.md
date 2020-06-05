@@ -54,4 +54,4 @@ By doing so, your entry node may be monitored by any other nodes through the `he
 
 - You should be experienced with servers and server security
 - You should have a domain name with both an A (IPv4) and AAAA (IPv6) record
-- You must be able to update your entry node after every new HORNET release
+- You must be able to update your entry node after every new Hornet release

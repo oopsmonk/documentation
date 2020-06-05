@@ -1,6 +1,6 @@
 # Migrating from IRI to Hornet
 
-**This topic explains how to migrate to a Hornet node from IRI. It introduces the different options that you have, depending on whether you want to keep the existing transactions in your  ledger.**
+**This topic explains how to migrate to a Hornet node from IRI. It introduces the different options that you have, depending on whether you want to keep the existing transactions in your ledger.**
 
 If you run an IRI node, we recommend migrating to Hornet because IRI will be updated only with bug fixes rather than future changes to the IOTA protocol.
 
@@ -28,7 +28,7 @@ Before using this tool, you must do the following:
 
 ### Configuring Hornet to start from a global snapshot
 
-Hornet will not accept transactions if their timestamps are older than the first milestone in its ledger. Therefore, unless you know that your transactions are younger than the [oldest recorded local snapshot](https://dbfiles.iota.org/?prefix=mainnet/hornet/) (31 May 2020), you should start Hornet from the last global snapshot (July 2018).
+Hornet will not accept transactions if their timestamps are older than the first milestone in its ledger. Therefore, unless you know that your transactions are younger than the [oldest recorded local snapshot](https://dbfiles.iota.org/?prefix=mainnet/hornet/) (31 May 2020), you should start Hornet from the last global snapshot (July 2019).
 
 1. Install Hornet. See [Choose an installation method](../tutorials/install-hornet.md).
 
@@ -75,14 +75,14 @@ Hornet will not accept transactions if their timestamps are older than the first
 
 5. To make sure that Hornet accepts your IRI node as a neighbor, add it to the `peering.json` file.
 
-```json
-"peers": [
-    {
-      "identity": "your.iri-node.com:15600",
-      "alias": "IRI",
-      "preferIPv6": false
-    }
-```
+    ```json
+    "peers": [
+        {
+        "identity": "your.iri-node.com:15600",
+        "alias": "IRI",
+        "preferIPv6": false
+        }
+    ```
 
 6. Restart Hornet
 
