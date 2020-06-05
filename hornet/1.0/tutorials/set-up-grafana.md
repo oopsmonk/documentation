@@ -43,7 +43,7 @@ iota_info_app{name="HORNET",version="0.4.0-rc13-7c7c2d1"} 1
 # HELP iota_info_latest_milestone Latest milestone.
 ```
 
-This data includes the metrics that Hornet is now exposing.
+This data includes the metrics that Hornet is now exposing. You'll use this later to configure a panel on your dashboard.
 
 ## Step 2. Run a Prometheus server
 
@@ -133,6 +133,8 @@ In this step, you configure a Grafana panel on your dashboard to display your Ho
 5. In the top right-hand corner, click **Apply**
 
 You should see your panel displayed on your dashboard.
+
+![Dashboard example](../images/dashboard-example.png)
 
 :::success: Congratulations! :tada:
 You now have a Grafana dashboard that you can use to monitor your node.
