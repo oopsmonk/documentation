@@ -16,7 +16,7 @@ For a client application, it's best to use an instance of a serverless architect
 #### **Core** ####
 [Link](root://core/1.0/overview.md)
 
-Use your favourite language to send requests to a node's HTTP API, create transactions, and convert data to or from trytes and trits.
+Use your favourite language to send requests to an IOTA node's HTTP API, create transactions, and convert data to or from trytes and trits.
 ---
 
 #### **Account module** ####
@@ -75,5 +75,5 @@ For community projects, see the [IOTA community GitHub repository](https://githu
 #### **Proof of work proxy server** ####
 [Link](root://proof-of-work-proxy/1.0/overview.md)
 
-Install a dedicated proxy server to do proof of work (PoW) for your transactions by intercepting calls to the node's API.
+Install a dedicated proxy server to do proof of work (PoW) for your transactions by intercepting calls to the IOTA node's API.
 ---------------

@@ -15,7 +15,7 @@ Every node in the same [IOTA network](../network/iota-networks.md) is hard-coded
 * The milestone came from the Coordinator's address
 * The milestone doesn't reference any invalid transactions
 
-As a result, if the Coordinator were to ever send an invalid milestone such as one that references counterfeit transactions, the rest of the nodes would not accept it.
+As a result, if the Coordinator were to ever send an invalid milestone such as one that references counterfeit transactions, the rest of the IOTA nodes would not accept it.
 
 :::info:
 The Coordinator can't lose tokens or reverse transactions.
@@ -62,7 +62,7 @@ Node 1 is a hash of the result of hashing leaf 1 and leaf 2. Node 2 is a hash of
 To prove to nodes that it owns the address, the Coordinator's bundles contain the following:
 
 - Enough zero-value transactions to contain the fragmented signature
-- One transaction whose [`signatureMessageFragment` field](../transactions/transactions.md#signatureMessageFragment) contains enough missing data from the Merkle tree to allow the node to rebuild it
+- One transaction whose [`signatureMessageFragment` field](../transactions/transactions.md#signatureMessageFragment) contains enough missing data from the Merkle tree to allow the IOTA node to rebuild it
 
 When nodes see a transaction that's been sent from the Coordinator's address, they validate it by doing the following:
 
@@ -75,7 +75,7 @@ To verify the signature, nodes use the information in the milestones to rebuild 
 
 ### Example milestone validation
 
-For example, as a node, we have seen a bundle that was signed with the private key of leaf 1.
+For example, as an IOTA node, we have seen a bundle that was signed with the private key of leaf 1.
 
 First, we [validate the signature](../clients/signatures.md#how-nodes-validate-signatures) to find out the address in leaf 1.
 

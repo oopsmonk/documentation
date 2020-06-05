@@ -20,7 +20,7 @@ yarn add zeromq
 
 ## IOTA network
 
-In this tutorial, we connect to a node on the [Devnet](root://getting-started/0.1/network/iota-networks.md#devnet).
+In this tutorial, we connect to an IOTA node on the [Devnet](root://getting-started/0.1/network/iota-networks.md#devnet).
 
 ## Code walkthrough
 
@@ -31,7 +31,7 @@ In this tutorial, we connect to a node on the [Devnet](root://getting-started/0.
     const sock = zmq.socket('sub');
     ```
 
-2. Connect the socket to a node's ZMQ port
+2. Connect the socket to an IOTA node's ZMQ port
 
     ```js
     sock.connect('tcp://zmq.devnet.iota.org:5556');
@@ -49,7 +49,7 @@ In this tutorial, we connect to a node on the [Devnet](root://getting-started/0.
         console.log('pass the address to the `node` command as a command-line argument.');
         console.log('For example: node 6-zmq-listen.js AN...ADDRESS')
 
-        // Subscribe to all transactions that the node receives
+        // Subscribe to all transactions that the IOTA node receives
         sock.subscribe('tx');
     } else {
         console.log('Listening for transactions sent to this address: ' + process.argv[2])
@@ -64,7 +64,7 @@ In this tutorial, we connect to a node on the [Devnet](root://getting-started/0.
     All events must be in lowercase letters except the trytes of the address event, which must be in uppercase letters.
     :::
 
-4. Process the event data that the node returns
+4. Process the event data that the IOTA node returns
 
     ```js
     sock.on('message', msg => {
@@ -74,7 +74,7 @@ In this tutorial, we connect to a node on the [Devnet](root://getting-started/0.
             // Use index 0 to match the name of the topic
             data[0]
         ) {
-            // Display all transactions as the node receives them
+            // Display all transactions as the IOTA node receives them
             case 'tx': 
                 console.log(`I'm a transaction!`, data)
                 break
@@ -110,7 +110,7 @@ In this tutorial, we connect to a node on the [Devnet](root://getting-started/0.
     ```
 
 :::success:Congratulations :tada:
-You're monitoring a node for incoming transactions.
+You're monitoring an IOTA node for incoming transactions.
 :::
 
 ## Run the code
@@ -120,7 +120,7 @@ We use the [REPL.it tool](https://repl.it) to allow you to run sample code in th
 Click the green button to run the sample code in this tutorial and see the results in the window.
 
 :::info:
-It may take a minute or two to receive data from the node.
+It may take a minute or two to receive data from the IOTA node.
 :::
 
 <iframe height="600px" width="100%" src="https://repl.it/@jake91/ZMQ-example-Nodejs?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>

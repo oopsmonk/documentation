@@ -16,11 +16,11 @@ You have the following options for doing PoW.
 
 ### Remote proof of work
 
-Remote PoW is when you ask a node to do PoW for a transaction. You do this by calling the [`attachToTangle` endpoint](root://iri/1.0/references/iri-api-reference.md#attachToTangle).
+Remote PoW is when you ask an IOTA node to do PoW for a transaction. You do this by calling the [`attachToTangle` endpoint](root://iri/1.0/references/iri-api-reference.md#attachToTangle).
 
 ### Local proof of work
 
-Local PoW is when your local device does PoW for each transaction before sending it to a node. 
+Local PoW is when your local device does PoW for each transaction before sending it to an IOTA node. 
 
 ### Outsourced proof of work
 
@@ -36,7 +36,7 @@ Each option for proof of work has its advantages and disadvantages.
 
 |**Option**|**Advantages**|**Disadvantages**|
 |:-------|:---------|:------------|
-|Remote PoW| You can avoid using the computational power needed to do PoW.|Depending on how powerful the node is and how many requests it receives, it may time out and not complete the PoW. |
+|Remote PoW| You can avoid using the computational power needed to do PoW.|Depending on how powerful the IOTA node is and how many requests it receives, it may time out and not complete the PoW. |
 |Do local PoW|You aren't reliant on nodes to do PoW.|Your device may not be powerful enough to complete PoW in a satisfactory amount of time.|
 |Outsource PoW to a paid service|PoW is usually done faster more more reliably than remote or local PoW.|It costs money to use the service and you don't have control over it|
 |Outsource PoW to a proxy server|PoW is usually done faster and more reliably than remote or local PoW|You need to maintain the PoW proxy server|

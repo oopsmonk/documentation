@@ -114,7 +114,7 @@
                 "status": "preferred"
             },
             "solid": {
-                "definition": "State of a transaction when a node has its entire history in its ledger",
+                "definition": "State of a transaction when an IOTA node has its entire history in its ledger",
                 "pos": "noun",
                 "status": "preferred"
             },
@@ -144,7 +144,7 @@
                 "status": "preferred"
             },
             "rebroadcast": {
-                "definition": "Send the same transaction to a node again",
+                "definition": "Send the same transaction to an IOTA node again",
                 "pos": "verb",
                 "status": "preferred"
             },
@@ -154,7 +154,7 @@
                 "status": "preferred"
             },
             "tip selection": {
-                "definition": "Process whereby a node selects two tip transactions from the Tangle",
+                "definition": "Process whereby an IOTA node selects two tip transactions from the Tangle",
                 "pos": "noun",
                 "status": "preferred"
             },

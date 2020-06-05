@@ -37,7 +37,7 @@ IOTA networks are peer-to-peer networks where no central authority controls the 
 
 IOTA is free to use. You don't need to pay a subscription, or sign a contract. Even transactions are feeless.
 
-You can store data on the Tangle with no restrictions. All you need is a node to which you can send transactions.
+You can store data on the Tangle with no restrictions. All you need is an IOTA node to which you can send transactions.
 
 ### Scalability
 
@@ -59,7 +59,7 @@ Clients are the devices that connect to nodes to transact or store data on the T
 
 All clients in an IOTA network have a secret password called a [seed](../clients/seeds.md), which acts as their identity. Seeds give clients access to [addresses](../clients/addresses.md), which are like accounts with a balance of IOTA tokens.
 
-To transfer IOTA tokens or even to send only data, clients package the transfer instructions into objects called transactions and send them to a node to attach to the Tangle.
+To transfer IOTA tokens or even to send only data, clients package the transfer instructions into objects called transactions and send them to an IOTA node to attach to the Tangle.
 
 ## What are some example use cases?
 

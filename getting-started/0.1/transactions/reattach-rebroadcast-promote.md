@@ -22,9 +22,9 @@ When you reattach a bundle that transfers IOTA tokens, only one will ever be con
 
 ## Rebroadcast
 
-While your transactions are being sent to a node, it may go offline. In this case, the node may not forward your transactions to its neighbors, and the rest of the network won't ever see your transactions. As a result, that transaction will never be referenced by the [Coordinator](../network/the-coordinator.md), thus it will never be confirmed.
+While your transactions are being sent to an IOTA node, it may go offline. In this case, the IOTA node may not forward your transactions to its neighbors, and the rest of the network won't ever see your transactions. As a result, that transaction will never be referenced by the [Coordinator](../network/the-coordinator.md), thus it will never be confirmed.
 
-To rebroadcast a bundle means to send the same bundle to a node again. This way, you give your transactions another chance at being forwarded to the rest of the network.
+To rebroadcast a bundle means to send the same bundle to an IOTA node again. This way, you give your transactions another chance at being forwarded to the rest of the network.
 
 ## Promote
 

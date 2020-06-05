@@ -20,7 +20,7 @@ yarn add @iota/core @iota/extract-json
 
 ## IOTA network
 
-In this tutorial, we connect to a node on the [Devnet](root://getting-started/0.1/network/iota-networks.md#devnet).
+In this tutorial, we connect to an IOTA node on the [Devnet](root://getting-started/0.1/network/iota-networks.md#devnet).
 
 ## Code walkthrough
 
@@ -31,7 +31,7 @@ In this tutorial, we connect to a node on the [Devnet](root://getting-started/0.
     const Extract = require('@iota/extract-json');
     ```
 
-2. Connect to a node
+2. Connect to an IOTA node
 
     ```js
     const iota = Iota.composeAPI({
@@ -55,7 +55,7 @@ In this tutorial, we connect to a node on the [Devnet](root://getting-started/0.
 4. Use the [`getBundle()`](https://github.com/iotaledger/iota.js/blob/next/api_reference.md#module_core.getBundle) method to get all transactions in the tail transaction's bundle. Then, use the [`extractJSON()`](https://github.com/iotaledger/iota.js/tree/next/packages/extract-json) method to decode the JSON messages in the `signatureMessageFragment` fields of the bundle's transactions and print them to the console
 
     ```js
-    iota.getBundle(tailTransactionHash)
+   IOTA.getBundle(tailTransactionHash)
     .then(bundle => {
         console.log(JSON.parse(Extract.extractJson(bundle)));
     })

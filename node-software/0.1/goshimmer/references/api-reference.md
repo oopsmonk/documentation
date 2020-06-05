@@ -1,6 +1,6 @@
 # GoShimmer API v0.1.0
 
-The GoShimmer API provides a simple and consistent way to get transactions from the Tangle, get a node's neighbors, or send new transactions.<br></br>This API accepts HTTP requests and responds with JSON data.
+The GoShimmer API provides a simple and consistent way to get transactions from the Tangle, get an IOTA node's neighbors, or send new transactions.<br></br>This API accepts HTTP requests and responds with JSON data.
 
 :::info:
 You can also use the [Go client library](https://github.com/iotaledger/goshimmer/tree/master/client) to call these API endpoints.
@@ -161,7 +161,7 @@ Status Code **400**
 
 Gets any transaction hashes that were sent to the given addresses.
 
-Searches the Tangle for transactions that contain the given addresses and returns an array of the transactions hashes that were found. The transaction hashes are returned in the same order as the given addresses. For example, if the node doesn't have any transaction hashes for a given address, the value at that index in the returned array is empty.
+Searches the Tangle for transactions that contain the given addresses and returns an array of the transactions hashes that were found. The transaction hashes are returned in the same order as the given addresses. For example, if the IOTA node doesn't have any transaction hashes for a given address, the value at that index in the returned array is empty.
 
 ### Body parameters
 
@@ -801,9 +801,9 @@ print r.json()
 
 ## GET /getNeighbors
 
-Gets the node's chosen and accepted neighbors.
+Gets the IOTA node's chosen and accepted neighbors.
 
-Returns the node's chosen and accepted neighbors. Optionally, you can pass the `known=1` query parameter to return all known peers.
+Returns the IOTA node's chosen and accepted neighbors. Optionally, you can pass the `known=1` query parameter to return all known peers.
 
 <h3 id="get__getneighbors-parameters">Body parameters</h3>
 

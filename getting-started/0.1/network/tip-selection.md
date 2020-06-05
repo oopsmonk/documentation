@@ -1,20 +1,20 @@
 # Tip selection
 
-**Each transaction in the Tangle must reference two previous transactions. Tip selection is the process whereby a node selects two random tip transactions from a subgraph of its ledger.**
+**Each transaction in the Tangle must reference two previous transactions. Tip selection is the process whereby an IOTA node selects two random tip transactions from a subgraph of its ledger.**
 
 In general, the tip selection algorithm selects transactions that have no parents. These transactions are called tips, hence the name 'tip selection'.
 
-Although the tip selection algorithm is embedded in the [IRI node software](root://iri/1.0/overview.md), it isn't enforced by the network. Instead, nodes are given an incentive to use the tip selection algorithm.
+Although the tip selection algorithm is embedded in the IOTA node software, it isn't enforced by the network. Instead, nodes are given an incentive to use the tip selection algorithm.
 
 ## The tip selection process
 
-When a client calls the [`getTransactionsToApprove`](root://iri/1.0/references/iri-api-reference.md#getTransactionsToApprove) API endpoint, the node selects a subgraph (also known as a subtangle) of the ledger and does two weighted random walks through it. Each weighted random walk returns a tip transaction hash.
+When a client calls the [`getTransactionsToApprove`](root://iri/1.0/references/iri-api-reference.md#getTransactionsToApprove) API endpoint, the IOTA node selects a subgraph (also known as a subtangle) of the ledger and does two weighted random walks through it. Each weighted random walk returns a tip transaction hash.
 
 ### Subgraph selection
 
 A subgraph is a section of the ledger that contains all transactions between a milestone transaction and tip transactions.
 
-The tip selection is done on a subgraph of the ledger to save computational power. The more transactions that a node includes in the weighted random walk, the longer the tip selection process takes.
+The tip selection is done on a subgraph of the ledger to save computational power. The more transactions that an IOTA node includes in the weighted random walk, the longer the tip selection process takes.
 
 For the tip selection process, the milestone transaction for the subgraph is defined by the client, and is calculated by doing the following:
 
@@ -32,7 +32,7 @@ The cumulative weight of a transaction is calculated using the following variabl
 - **Future set:** Transactions that approves the transaction
 - **`ALPHA` configuration parameter:** A number that affects the randomness of the tip selection process
 
-Nodes gives a high rating to a transaction with a large future set because it has a higher probability of being confirmed than one with a small future set. However, if a node were to rate transactions based only on this variable, the ledger would become a long, narrow chain of transactions, which are referenced by many other transactions. This would slow the rate of new transactions being appended to the ledger because new transactions would have to wait until they had a large enough future set before other transactions would reference them. So, to increase the speed at which new transactions are appended to the ledger, nodes also use the `ALPHA` configuration parameter to calculate the cumulative weight.
+Nodes gives a high rating to a transaction with a large future set because it has a higher probability of being confirmed than one with a small future set. However, if an IOTA node were to rate transactions based only on this variable, the ledger would become a long, narrow chain of transactions, which are referenced by many other transactions. This would slow the rate of new transactions being appended to the ledger because new transactions would have to wait until they had a large enough future set before other transactions would reference them. So, to increase the speed at which new transactions are appended to the ledger, nodes also use the `ALPHA` configuration parameter to calculate the cumulative weight.
 
 The `ALPHA` configuration parameter makes sure that the cumulative weight of each transaction is calculated with an element of randomness. This parameter allows nodes to select some transactions that have a small future set and by doing so, increase the speed at which new transactions are appended to the ledger.  
 
@@ -48,7 +48,7 @@ The two tip transactions are checked for consistency between each other to make 
 
 The tip selection algorithm is not enforced. Instead, nodes have an incentive to use it to have the best chance of their transactions becoming confirmed.
 
-It's impossible to check if a node used the tip selection algorithm or even changed it to return custom tip transactions for its own purposes.
+It's impossible to check if an IOTA node used the tip selection algorithm or even changed it to return custom tip transactions for its own purposes.
 
 However, as discussed in the [whitepaper](https://iota.org/IOTA_Whitepaper.pdf), it's necessary that tip transactions are selected at random. 
 

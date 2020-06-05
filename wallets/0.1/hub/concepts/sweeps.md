@@ -22,6 +22,6 @@ If the total amount of deposited IOTA tokens is less than the total amount of wi
 
 ![Sweep interval](../images/sweepInterval.png)
 
-After Hub sends the sweep to a node, Hub monitors the tail transaction for confirmation and [reattaches and promotes](root://getting-started/0.1/transactions/reattach-rebroadcast-promote.md) it until it's confirmed.
+After Hub sends the sweep to an IOTA node, Hub monitors the tail transaction for confirmation and [reattaches and promotes](root://getting-started/0.1/transactions/reattach-rebroadcast-promote.md) it until it's confirmed.
 
 ![Reattachment interval](../images/reattachmentInterval.png)

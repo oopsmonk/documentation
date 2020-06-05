@@ -1,6 +1,6 @@
 # C quickstart
 
-**In this quickstart, you learn the basics of IOTA development in C, from setting up a development environment to connecting to a node.**
+**In this quickstart, you learn the basics of IOTA development in C, from setting up a development environment to connecting to an IOTA node.**
 
 In this quickstart, you will learn how to:
 
@@ -8,7 +8,7 @@ In this quickstart, you will learn how to:
 
 2. Install packages
 
-3. Connect to a node
+3. Connect to an IOTA node
 
 ## Step 1. Set up a developer environment
 
@@ -58,7 +58,7 @@ The core C client library is organized in packages, which contain related method
 
     load("@rules_iota//:defs.bzl", "iota_deps")
 
-    iota_deps()
+   IOTA_deps()
     ```
 
 2. Create an `iota_client_service` directory in which to store configuration files and the networking code
@@ -97,7 +97,7 @@ The core C client library is organized in packages, which contain related method
             "rqXRfboQnoZsG4q5WTP468SQvvG5\r\n" \
             "-----END CERTIFICATE-----\r\n"
 
-    // A sensible depth for the node to use for tip selection
+    // A sensible depth for the IOTA node to use for tip selection
     #define DEPTH 3
 
     // The minimum weight magnitude for the Devnet (for the Mainnet use 14)
@@ -135,12 +135,12 @@ The core C client library is organized in packages, which contain related method
         service->http.ca_pem = NULL;
     #endif
         service->serializer_type = SR_JSON;
-        iota_client_core_init(service);
-        iota_client_extended_init();
+       IOTA_client_core_init(service);
+       IOTA_client_extended_init();
     }
     ```
 
-    This code handles the [service](https://github.com/iotaledger/entangled/blob/develop/cclient/service.h) connection to the node.
+    This code handles the [service](https://github.com/iotaledger/entangled/blob/develop/cclient/service.h) connection to the IOTA node.
 
 4. In the `iota_client_service` directory, create a `client_service.h` file and add the following:
 
@@ -175,13 +175,13 @@ The core C client library is organized in packages, which contain related method
 
     This code creates the rules for building the configuration and service targets that you just wrote.
 
-Now you can request information from the node.
+Now you can request information from the IOTA node.
 
-## Step 3. Connect to a node
+## Step 3. Connect to an IOTA node
 
 It's best practice to make sure that you're connected to a [synchronized node](root://getting-started/0.1/network/nodes.md#synchronized-nodes) before you start sending transactions to it. This way, you know that it has an up-to-date view of [the Tangle](root://getting-started/0.1/network/the-tangle.md).
 
-Whenever you connect to a node, you need to know which [IOTA network](root://getting-started/0.1/network/iota-networks.md) it's in. Here, we connect to a node on the Devnet, which is the IOTA networks that you can use for testing.
+Whenever you connect to an IOTA node, you need to know which [IOTA network](root://getting-started/0.1/network/iota-networks.md) it's in. Here, we connect to an IOTA node on the Devnet, which is the IOTA networks that you can use for testing.
 
 1. Go to the IOTA Foundation [Discord](https://discord.iota.org) and enter **!milestone** in the `botbox` channel
 
@@ -203,13 +203,13 @@ Whenever you connect to a node, you need to know which [IOTA network](root://get
 
     retcode_t get_iota_node_info(iota_client_service_t *iota_client_service, get_node_info_res_t *node_response) {
         retcode_t ret = RC_ERROR;
-        // Connect to the node
+        // Connect to the IOTA node
         ret = iota_client_get_node_info(iota_client_service, node_response);
 
         // Define variables to determine whether trit conversion succeeds
         trit_t trytes_out[NUM_TRYTES_HASH + 1];
         size_t trits_count = 0;
-        // If the node returned data, print it to the console
+        // If the IOTA node returned data, print it to the console
         if (ret == RC_OK) {
             printf("appName %s \n", node_response->app_name->data);
             printf("appVersion %s \n", node_response->app_version->data);
@@ -243,7 +243,7 @@ Whenever you connect to a node, you need to know which [IOTA network](root://get
             }
 
         } else {
-            printf("Failed to connect to the node.");
+            printf("Failed to connect to the IOTA node.");
         }
 
         done:
@@ -255,7 +255,7 @@ Whenever you connect to a node, you need to know which [IOTA network](root://get
 
     int main(void) {
         // Create the client service
-        iota_client_service_t iota_client_service;
+       IOTA_client_service_t iota_client_service;
         init_iota_client(&iota_client_service);
         // Allocate a response object
         get_node_info_res_t *node_response = get_node_info_res_new();
@@ -286,7 +286,7 @@ Whenever you connect to a node, you need to know which [IOTA network](root://get
     bazel run -c opt examples:hello_world
     ```
 
-The node returns something like the following:
+The IOTA node returns something like the following:
 
 ``` 
 appName IRI Devnet
@@ -307,7 +307,7 @@ loadBalancer
 
 ### Reading the response object
 
-If the `latestMilestoneIndex` field is equal to the one you got from Discord and the `latestSolidSubtangleMilestoneIndex` field, the node is synchronized.
+If the `latestMilestoneIndex` field is equal to the one you got from Discord and the `latestSolidSubtangleMilestoneIndex` field, the IOTA node is synchronized.
 
 If not, try connecting to a different node. The [iota.dance website](https://iota.dance/) includes a list of Mainnet nodes. Or, you can [run your own node](root://node-software/1.0/overview.md).
 

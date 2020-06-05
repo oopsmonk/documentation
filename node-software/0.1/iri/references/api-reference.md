@@ -1,6 +1,6 @@
 # API reference
 
-**This list contains the commands for communicating with a node through the HTTP API.**
+**This list contains the commands for communicating with an IOTA node through the HTTP API.**
 
 All the following commands must include an HTTP header.
 
@@ -17,10 +17,10 @@ This API is a beta product and subject to change.
 
 ## addNeighbors
 
-Adds a list of temporary neighbors to a node.
+Adds a list of temporary neighbors to an IOTA node.
 
 :::info:
-The neighbors are removed if the node restarts. If you want to permanently add the neighbors to your own node, add their URIs to the [`NEIGHBORS`](../references/iri-configuration-options.md#neighbors) configuration option.
+The neighbors are removed if the IOTA node restarts. If you want to permanently add the neighbors to your own node, add their URIs to the [`NEIGHBORS`](../references/iri-configuration-options.md#neighbors) configuration option.
 :::
 
  ### Parameters
@@ -260,7 +260,7 @@ The last 243 trytes of the return value consist of the following:
 
 ## broadcastTransactions
 
-Sends transaction trytes to a node. 
+Sends transaction trytes to an IOTA node. 
 
  ### Parameters
 
@@ -362,7 +362,7 @@ curl http://localhost:14265 \
 ## checkConsistency
 
 Checks the consistency of transactions. A consistent transaction is one where the following statements are true:
-- The node isn't missing the transaction's branch or trunk transactions
+- The IOTA node isn't missing the transaction's branch or trunk transactions
 - The transaction's bundle is valid
 - The transaction's branch and trunk transactions are valid
 
@@ -594,7 +594,7 @@ An array of transaction hashes, is returned in the same order for all individual
 
 ## getNodeAPIConfiguration
 
-Gets a node's API configuration settings.
+Gets an IOTA node's API configuration settings.
 
 ### Examples
 --------------------
@@ -678,7 +678,7 @@ curl http://localhost:14265 \
 
 ### Results
 
-The [configuration settings](../references/iri-configuration-options.md) that the node is using.
+The [configuration settings](../references/iri-configuration-options.md) that the IOTA node is using.
 
 ## getBalances
 
@@ -687,7 +687,7 @@ Gets the confirmed balance of an address.
 If the `tips` parameter is missing, the returned balance is correct as of the latest confirmed milestone.
 
 :::info:
-This API endpoint returns data only if the node is synchronized.
+This API endpoint returns data only if the IOTA node is synchronized.
 :::
 
  ### Parameters
@@ -807,7 +807,7 @@ Gets the inclusion states of a set of transactions.
 This endpoint determines if a transaction is confirmed by the network (referenced by a valid milestone).
 
 :::info:
-This endpoint returns data only if the node is synchronized.
+This endpoint returns data only if the IOTA node is synchronized.
 :::
 
  ### Parameters
@@ -918,7 +918,7 @@ curl http://localhost:14265 \
 
 ## getMissingTransactions
 
-Gets all transaction hashes that a node is currently requesting from its neighbors.
+Gets all transaction hashes that an IOTA node is currently requesting from its neighbors.
 
 ### Examples
 --------------------
@@ -1004,7 +1004,7 @@ curl http://localhost:14265 \
 
 ## getNeighbors
 
-Gets a node's neighbors and their activity.
+Gets an IOTA node's neighbors and their activity.
 
 ### Examples
 --------------------
@@ -1093,7 +1093,7 @@ curl http://localhost:14265 \
 ### Results
 
 :::info:
-The activity accumulates until the node restarts.
+The activity accumulates until the IOTA node restarts.
 :::
 
 |**Return field**| **Description** |
@@ -1103,7 +1103,7 @@ The activity accumulates until the node restarts.
 
 ## getNodeInfo
 
-Gets information about a node.
+Gets information about an IOTA node.
 
 ### Examples
 --------------------
@@ -1210,7 +1210,7 @@ curl http://localhost:14265 \
 |--|--|
 | `appName` | Name of the IRI network |
 | `appVersion` | Version of the IRI |
-| `jreAvailableProcessors` | Available CPU cores on the node |
+| `jreAvailableProcessors` | Available CPU cores on the IOTA node |
 | `jreFreeMemory` | Amount of free memory in the Java virtual machine |
 | `jreMaxMemory` | Maximum amount of memory that the Java virtual machine can use |
 | `jreTotalMemory` | Total amount of memory in the Java virtual machine|
@@ -1219,16 +1219,16 @@ curl http://localhost:14265 \
 | `latestMilestoneIndex` | Index of the latest milestone |
 | `latestSolidSubtangleMilestone` | Transaction hash of the latest solid milestone |
 | `latestSolidSubtangleMilestoneIndex` | Index of the latest solid milestone |
-| `milestoneStartIndex` | The index of the milestone from which the node started synchronizing when it first joined the network. This index will not change unless the node's ledger is deleted and the node starts synchronizing from a new milestone index.|
-|`lastSnapshottedMilestoneIndex`|Index of the last milestone that triggered a [local snapshot](root://getting-started/0.1/network/nodes.md#local-snapshots) on the node |
+| `milestoneStartIndex` | The index of the milestone from which the IOTA node started synchronizing when it first joined the network. This index will not change unless the IOTA node's ledger is deleted and the IOTA node starts synchronizing from a new milestone index.|
+|`lastSnapshottedMilestoneIndex`|Index of the last milestone that triggered a [local snapshot](root://getting-started/0.1/network/nodes.md#local-snapshots) on the IOTA node |
 | `neighbors` | Total number of connected neighbor nodes  |
 | `packetsQueueSize` | Size of the packet queue |
 | `time` | Current UNIX timestamp |
 | `tips` | Number of tips in the network |
-| `transactionsToRequest` | Total number of transactions that the node is missing in its ledger|
+| `transactionsToRequest` | Total number of transactions that the IOTA node is missing in its ledger|
 | `features` | Enabled configuration options|
 | `coordinatorAddress` | Address (Merkle root) of the Coordinator|
-| `dbSizeInBytes` |The current number of bytes in the node's database|
+| `dbSizeInBytes` |The current number of bytes in the IOTA node's database|
 | `duration` | Number of milliseconds it took to complete the request |
 
 ## getTips
@@ -1237,7 +1237,7 @@ curl http://localhost:14265 \
 This endpoint is no longer available in version 1.8.6 or later of IRI.
 :::
 
-Gets tip transaction hashes from a node.
+Gets tip transaction hashes from an IOTA node.
 
 ### Examples
 --------------------
@@ -1329,7 +1329,7 @@ curl http://localhost:14265 \
 Gets two consistent tip transaction hashes to use as branch/trunk transactions.
 
 :::info:
-This endpoint returns data only if the node is synchronized.
+This endpoint returns data only if the IOTA node is synchronized.
 :::
 
 ### Parameters
@@ -1546,7 +1546,7 @@ You can convert the returned trytes to ASCII characters by using the client libr
 | `duration` | Number of milliseconds it took to complete the request |
 
 :::info:
-If the node doesn't have the trytes for a given transaction hash in its ledger, a `null` value is returned.
+If the IOTA node doesn't have the trytes for a given transaction hash in its ledger, a `null` value is returned.
 :::
 
 ## interruptAttachingToTangle
@@ -1635,10 +1635,10 @@ curl http://localhost:14265 \
 
 ## removeNeighbors
 
-Temporarily removes a list of neighbors from a node.
+Temporarily removes a list of neighbors from an IOTA node.
 
 :::info:
-The neighbors are added again if the node restarts. If you want to permanently remove the neighbors from your own node, remove their URIs from the [`NEIGHBORS`](../references/iri-configuration-options.md#neighbors) configuration option. 
+The neighbors are added again if the IOTA node restarts. If you want to permanently remove the neighbors from your own node, remove their URIs from the [`NEIGHBORS`](../references/iri-configuration-options.md#neighbors) configuration option. 
 :::
 
 ### Parameters
@@ -1731,7 +1731,7 @@ curl http://localhost:14265 \
 
 ## storeTransactions
 
-Stores transactions in a node's local storage.
+Stores transactions in an IOTA node's local storage.
 
 ### Parameters
 

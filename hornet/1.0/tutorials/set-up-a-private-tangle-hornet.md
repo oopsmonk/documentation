@@ -1,41 +1,26 @@
 # Set up a private Tangle as a Hornet plugin
 
-**In this tutorial, you install a private Tangle, which consists of a Hornet node and Compass on the same server or virtual machine.**
+**In this tutorial, you configure your Hornet node as a private Tangle, using the `Coordinator` plugin to create an instance of [Compass](root://compass/1.0/overview.md).**
 
-![Single-node private Tangle](../images/single-node-tangle.svg)
+![Single-node private Tangle](../images/private-tangle.png)
 
 ## Prerequisites
 
-A Linux server with the following minimum requirements. If you are on a Windows or macOS operating system, you can [create a Linux server in a virtual machine](root://general/0.1/how-to-guides/set-up-virtual-machine.md).
+To complete this tutorial, you need a Hornet node that's running on a Linux operating system.
 
-- A new installation of an Ubuntu 18.04 server
-- 1 GB RAM
-- 4+ CPU cores, the more cores the faster the Merkle tree will be generated
-- 10 GB of disk space
+For tutorials, see [Choose an installation method](../tutorials/install-hornet.md). After installing your node, make a note of where your `config.json` file is. You'll need it in this tutorial.
 
-## Step 1. Install Hornet
-
-Hornet is node software that comes with a default plugin for running Compass.
-
-You can find [instructions for running Hornet](https://github.com/gohornet/hornet/wiki/Tutorials%3A-Linux%3A-Install-HORNET) on the GitHub wiki.
-
-:::warning:You must not start Hornet yet
-In the Installation section, ignore the steps that say to start Hornet.
-:::
-
-## Step 2. Compute the Merkle tree
+## Step 1. Generate the Merkle tree
 
 In this step, you generate a [Merkle tree](root://getting-started/0.1/network/the-tangle.md#milestones) for Compass to use to sign milestones.
 
 Hornet includes a tool for computing a Merkle tree signature scheme for Compass to use.
 
-1. Open your Hornet configuration file
+1. Open your `config.json` file
 
-	```bash
-	sudo nano /var/lib/hornet/config.json
-	```
+	The location of this file depends on how you installed Hornet.
 
-2. Enable the Compass (Coordinator) plugin
+2. Enable the plugin
 
 	```bash
 	"node":{
@@ -46,7 +31,7 @@ Hornet includes a tool for computing a Merkle tree signature scheme for Compass 
 	},
 	```
 
-3. Configure the `snapshots` object to make sure the node doesn't load any default transactions from another network
+3. Configure the `snapshots` object to make sure your node loads your custom snapshot file
 
 	```bash
 	"snapshots": {
@@ -59,9 +44,9 @@ Hornet includes a tool for computing a Merkle tree signature scheme for Compass 
 	},
 	```
 
-3. Configure the `coordinator` object to customize Compass
+3. Configure the `coordinator` object to customize your Compass instance
 
-	```
+	```json
 	"coordinator":{
     "merkleTreeDepth":16,
     "mwm":5,
@@ -86,7 +71,7 @@ Hornet includes a tool for computing a Merkle tree signature scheme for Compass 
 	cat /dev/urandom |LC_ALL=C tr -dc 'A-Z9' | fold -w 81 | head -n 1 
 	```
 
-	If you're just testing the setup, you can use this example seed. But, make sure to change this before exposing your private Tangle to the Internet.
+	If you're just testing the setup, you can use this example seed. But, make sure to change it before exposing your private Tangle to the Internet.
 
 	```bash
 	PUEOTSEITFEVEWCWBTSIZM9NKRGJEIMXTULBACGFRQK9IMGICLBKW9TTEVSDQMGWKBXPVCBMMCXWMNPDX
@@ -98,10 +83,10 @@ Hornet includes a tool for computing a Merkle tree signature scheme for Compass 
 	An attacker with the seed could send fraudulent milestones and disrupt the operation of the network.
 	:::
 
-6. Generate the Merkle tree. Replace the `$YOURSEED` placeholder with your seed.
+6. Generate the Merkle tree. Replace the `$YOURSEED` placeholder with your seed, and the `$HORNETPATH` variable to the path where your configuration files were installed
 
 	```bash
-	sudo -u hornet COO_SEED="$YOURSEED" hornet -d /var/lib/hornet tool merkle
+	sudo -u hornet COO_SEED="$YOURSEED" hornet -d $HORNETPATH tool merkle
 	```
 
 	You should see something like the following:
@@ -144,11 +129,7 @@ Hornet includes a tool for computing a Merkle tree signature scheme for Compass 
 
 7. Copy the Merkle tree root from the output of the previous command
 
-8. Open your Hornet configuration file
-
-	```bash
-	sudo nano /var/lib/hornet/config.json
-	```
+8. Open your `config.json` file
 
 9. Paste the Merkle root into the `address` field of the `coordinator` object
 
@@ -165,9 +146,9 @@ Hornet includes a tool for computing a Merkle tree signature scheme for Compass 
 	},
 	```
 
-## Step 3. Distribute some IOTA tokens in your network
+## Step 2. Distribute some IOTA tokens in your network
 
-In this step, you configure your private Tangle so that one of your own addresses contains the total supply of IOTA tokens.
+In this step, you create your snapshot file so that one of your own addresses contains the total supply of IOTA tokens.
 
 1. Create a new seed and generate an address for it
 
@@ -189,29 +170,17 @@ In this step, you configure your private Tangle so that one of your own addresse
 	An attacker with the seed could steal all the IOTA tokens from your address.
 	:::
 
-3. Change into the `hornet` directory
-
-	```bash
-	cd /var/lib/hornet
-	```
-	
-4. Create a new file called `snapshot.csv` and assign the total supply of IOTA tokens to your address. Replace the `$YOURADDRESS` placeholder with your own address
+3. In your `hornet` directory, create a new file called `snapshot.csv` and assign the total supply of IOTA tokens to your address. Replace the `$YOURADDRESS` placeholder with your own address
 
 	```bash
 	$YOURADDRESS;2779530283277761
 	```
 
-## Step 4. Start Compass
+## Step 3. Run your private Tangle
 
-In this step, you run Hornet with the Coordinator plugin so that it can start confirming transactions on your private Tangle.
+In this step, you run Hornet with your new configuration so that Compass can start attaching milestones to your private Tangle.
 
-1. Change into the `hornet` directory
-
-	```bash
-	cd /var/lib/hornet
-	```
-
-2. Run Hornet. Replace the `$YOURSEED` placeholder with your seed.
+1. Change into the `hornet` directory, and run Hornet. Replace the `$YOURSEED` placeholder with your seed.
 
 	```bash
 	sudo COO_SEED="$YOURSEED" -u hornet hornet --cooBootstrap
@@ -233,101 +202,46 @@ In this step, you run Hornet with the Coordinator plugin so that it can start co
 	sudo systemctl enable hornet.service
 	sudo service hornet start
 	```
-
-:::success:Congratulations :tada:
-You have a private Tangle in which you own the total supply of IOTA tokens.
-:::
-
-## Step 5. Test your network
-
-In this step, you interact with the network through the node's API port at the following address: http://localhost:14265.
-
-For a list of API endpoints see the [node API reference](root://iri/1.0/references/iri-api-reference.md).
-
---------------------
-### getBalances
-Call the [`getBalances`](root://iri/1.0/references/iri-api-reference.md#getbalances) endpoint to get the total balance of your seed.
-
- ```js
- var request = require('request');
-
- const iota = require('@iota/core');
-
- Iota = iota.composeAPI({
-     provider: 'http://localhost:14265'
- });
-
- const address = "HYHSSNWMLOSRLV9ULBYTAFVQUPZLBKAGSRJOVD9X9MBELPKNMX9SWKFNYGBHQVCHLXKRIRNOAUD9MPNCW";
-
- getBalance(address);
-
- function getBalance(address) {
-
-     var command = {
-     'command': 'getBalances',
-     'addresses': [
-     address
-     ],
-     'threshold':100
-     }
-
-     var options = {
-     url: 'http://localhost:14265',
-     method: 'POST',
-     headers: {
-     'Content-Type': 'application/json',
-     'X-IOTA-API-Version': '1'
-     },
-     json: command
-     };
-
-     request(options, function (error, response, data) {
-         if (!error && response.statusCode == 200) {
-         console.log(JSON.stringify(data,null,1));
-         }
-     });
- }
- ```
----
-### Example response
-
-This example response shows that you have a balance of 2.7Pi.
-
-```json
-{
- "balances": [
-  "2779530283277761"
- ],
- "references": [
-  "BDZPAONKWQTVCXFFO9GBTJ9GGWPRLITXZ9BMYALTCVWNOLFYPNHFJHPDWICRPGCZWUNDQHV9UDEXGW999"
- ],
- "milestoneIndex": 7,
- "duration": 1
-}
-```
---------------------
  
-## Step 6. Add more Hornet nodes to your private Tangle
+## Step 4. Add more Hornet nodes to your private Tangle
 
-In this step, you add more nodes to your network. The more nodes you have, the more nodes are validating transactions, making your network more distributed.
+In this step, you add more nodes to your network. The more nodes you have, the more nodes validate transactions, making your network more distributed.
+
+![Multi-node private Tangle](../images/hornet-multi-node.png)
 
 1. Install another Hornet node
 
-2. Copy the `config.json` and `snapshot.csv` files from your Compass node and add them to the `/var/lib/hornet` directory of your new node
+2. Copy the `config.json` and `snapshot.csv` files from your Compass node and add them to the `hornet` directory of your new node
 
-3. In the `config.json` file of your new node, disable the Coordinator plugin
+3. In the `config.json` file of your new node, remove the Coordinator plugin
 
 	```bash
 	"node":{
     "alias": "node1",
     "showAliasInGetNodeInfo": false,
     "disablePlugins": [],
-    "enablePlugins": [""]
+    "enablePlugins": []
 	},
 	```
 
 4. Start your new node
 
+Repeat this process for each new node that you want to add.
+
+:::success:Congratulations :tada:
+You have a private Tangle in which you own the total supply of IOTA tokens.
+:::
+
 ## Next steps
 
-See the [Hornet FAQ](https://github.com/gohornet/hornet/wiki/FAQ) for more information.
+Try using one of the client libraries to send transactions to the nodes in your private Tangle:
+
+- [C](root://core/1.0/getting-started/get-started-c.md)
+
+- [Go](root://core/1.0/getting-started/get-started-go.md)
+
+- [Java](root://core/1.0/getting-started/get-started-java.md)
+
+- [JavaScript](root://core/1.0/getting-started/get-started-js.md)
+
+- [Python](root://core/1.0/getting-started/get-started-python.md)

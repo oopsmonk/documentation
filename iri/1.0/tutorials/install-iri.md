@@ -1,6 +1,6 @@
 # Choose an installation method
 
-**In this topic, you choose how to install and run the IRI node software to turn your device into a node on an IOTA network.**
+**In this topic, you choose how to install and run the IRI node software to turn your device into an IOTA node.**
 
 You have two options for running IRI:
 

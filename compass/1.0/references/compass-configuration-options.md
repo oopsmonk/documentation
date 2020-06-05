@@ -9,5 +9,5 @@
 |`depth`|Exponent that affects how many private key/address pairs Compass has. The total number of pairs depends on this formula: 2<sup>depth</sup>.|The greater the depth, the longer it takes to compute the Merkle tree, but the more bundles Compass can sign and send. The maximum depth you can use depends on the [`MAX_DEPTH` parameter](root://iri/1.0/references/iri-configuration-options.md#max-depth) of your node.|
 |`mwm`|[Minimum weight magnitude](root://getting-started/0.1/transactions/proof-of-work.md#minimum-weight-magnitude)|The higher the MWM, the harder it is to do the proof of work for a transaction.|
 |`tick`|Number of milliseconds Compass waits after creating a milestone|The longer the tick, the fewer transactions can be confirmed in your network, but the more uptime your network will have. The interval between milestones also depends on the length of time it takes Compass to create, sign and send a milestone bundle after the tick. |
-|`host`|URL of the node to which Compass sends milestones||
+|`host`|URL of the IOTA node to which Compass sends milestones||
 

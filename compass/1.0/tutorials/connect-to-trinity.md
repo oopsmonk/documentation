@@ -34,9 +34,9 @@ To complete this tutorial, you need the following:
     docker-compose -f docker-compose.yml -f docker-compose-ssl.yml up
     ```
 
-3. In a web browser, go to the URL of your IRI node. For example, if your domain name is `privatetangle.com`, go to `https://privatetangle.com`
+3. In a web browser, go to the URL of your node. For example, if your domain name is `privatetangle.com`, go to `https://privatetangle.com`
 
-    The web browser will display the following, which means that your IRI node is exposed to the Internet on port 443:
+    The web browser will display the following, which means that your node is exposed to the Internet on port 443:
 
     ```
     {
@@ -45,7 +45,7 @@ To complete this tutorial, you need the following:
     }
     ```
 
-    Now, you can connect to the IRI node.
+    Now, you can connect to the IOTA node.
 
 4. In Trinity, [create an account](root://wallets/0.1/trinity/how-to-guides/create-an-account.md) with your seed
 
@@ -53,7 +53,7 @@ To complete this tutorial, you need the following:
     SEED99999999999999999999999999999999999999999999999999999999999999999999999999999
     ```
 
-5. Go to **Settings** > **Node** > **Add custom nodes**,  and enter the URL of your IRI node
+5. Go to **Settings** > **Node** > **Add custom nodes**,  and enter the URL of your node
 
 6. Disable the **Automatic node management** option, the **Primary node autoswitching** option, and the **Use remote list** option 
 
@@ -62,5 +62,5 @@ To complete this tutorial, you need the following:
 8. Click **Save**
 
 :::success:Congratulations! :tada:
-Trinity is now connected to the node in your private Tangle.
+Trinity is now connected to the IOTA node in your private Tangle.
 :::

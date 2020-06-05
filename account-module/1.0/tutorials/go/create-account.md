@@ -16,7 +16,7 @@ go get github.com/iotaledger/iota.go/trinary
 
 ## IOTA network
 
-In this tutorial, we connect to a node on the [Devnet](root://getting-started/0.1/network/iota-networks.md#devnet) with the following network settings:
+In this tutorial, we connect to an IOTA node on the [Devnet](root://getting-started/0.1/network/iota-networks.md#devnet) with the following network settings:
 
 - **[Minimum weight magnitude](root://getting-started/0.1/network/minimum-weight-magnitude.md)**: 9
 
@@ -53,7 +53,7 @@ $b=[byte[]] (1..81);(new-object Security.Cryptography.RNGCryptoServiceProvider).
 var seed = trinary.Trytes("PUEOTSEITFEVEWCWBTSIZM9NKRGJEIMXTULBACGFRQK9IMGICLBKW9TTEVSDQMGWKBXPVCBMMCXWMNPDX")
 ```
 
-3\. Connect to a node
+3\. Connect to an IOTA node
    
 ```go
 apiSettings := api.HTTPClientSettings{URI: "https://nodes.devnet.iota.org:443"}
@@ -81,7 +81,7 @@ timesource := timesrc.NewNTPTimeSource("time.google.com")
 
 ```go
 account, err := builder.NewBuilder().
-    // Connect to a node
+    // Connect to an IOTA node
     WithAPI(iotaAPI).
     // Create the database
     WithStore(store).

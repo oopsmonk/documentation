@@ -66,10 +66,10 @@ Starting from the given `start` index, the connected node checks if the address 
 - Search its view of the Tangle for input transactions that withdraw from the address
 - Search for the address in the list of spent addresses
 
-If an address with the given index is spent, the index is incremented until the node finds one that isn't spent.
+If an address with the given index is spent, the index is incremented until the IOTA node finds one that isn't spent.
 
 :::warning:
-This way of generating addresses replies on the node to return valid data about your addresses. To have more control over your addresses, we recommend keeping track of spent addresses in your own local database.
+This way of generating addresses replies on the IOTA node to return valid data about your addresses. To have more control over your addresses, we recommend keeping track of spent addresses in your own local database.
 :::
 
 In the console, you should see an address.

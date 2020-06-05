@@ -13,7 +13,7 @@ go get github.com/iotaledger/iota.go/trinary
 
 ## IOTA network
 
-In this tutorial, we connect to a node on the [Devnet](root://getting-started/0.1/network/iota-networks.md#devnet).
+In this tutorial, we connect to an IOTA node on the [Devnet](root://getting-started/0.1/network/iota-networks.md#devnet).
 
 ## Code walkthrough
 
@@ -28,7 +28,7 @@ In this tutorial, we connect to a node on the [Devnet](root://getting-started/0.
         "fmt"
     )
     ```
-2. Connect to a node
+2. Connect to an IOTA node
 
     ```go
     var node = "https://nodes.devnet.thetangle.org"
@@ -42,7 +42,7 @@ In this tutorial, we connect to a node on the [Devnet](root://getting-started/0.
     const address = trinary.Trytes("MBYBBFONQZPYZYZHSEZJ9EBEBAFHAZKUFSPBM9YOXJUUAMBUCQQABOWFNPEAGXIGMAVWWFZWDCZJGUTBBZYDSALMPA")
     ```
 
-4. Use the [`GetBalances()`](https://github.com/iotaledger/iota.go/blob/master/.docs/iota.go/reference/api_get_balances.md) method to ask the node for the current balance of the address
+4. Use the [`GetBalances()`](https://github.com/iotaledger/iota.go/blob/master/.docs/iota.go/reference/api_get_balances.md) method to ask the IOTA node for the current balance of the address
 
     ```go
     balances, err := api.GetBalances(trinary.Hashes{address}, 100)

@@ -22,7 +22,7 @@ yarn add @iota/core @iota/converter @iota/bundle @iota/transaction @iota/transac
 
 ## IOTA network
 
-In this tutorial, we connect to a node on the [Devnet](root://getting-started/0.1/network/iota-networks.md#devnet).
+In this tutorial, we connect to an IOTA node on the [Devnet](root://getting-started/0.1/network/iota-networks.md#devnet).
 
 ## Code walkthrough
 
@@ -36,7 +36,7 @@ In this tutorial, we connect to a node on the [Devnet](root://getting-started/0.
     const { asTransactionTrytes } = require('@iota/transaction-converter');
     ```
 
-2. Connect to a node
+2. Connect to an IOTA node
 
     ```js
     const iota = Iota.composeAPI({
@@ -59,7 +59,7 @@ In this tutorial, we connect to a node on the [Devnet](root://getting-started/0.
 4. Use the [`getBundle()`](https://github.com/iotaledger/iota.js/blob/next/api_reference.md#module_core.getBundle) method to get all transactions in the tail transaction's bundle
 
     ```js
-    iota.getBundle(tail).then(bundle => {
+   IOTA.getBundle(tail).then(bundle => {
 
     });
     ```
@@ -106,10 +106,10 @@ In this tutorial, we connect to a node on the [Devnet](root://getting-started/0.
     }
     ```
 
-9. Send your copy to a node
+9. Send your copy to an IOTA node
 
     ```js
-    iota.sendTrytes(newTrytes.reverse(),3,9).then(transactions => {
+   IOTA.sendTrytes(newTrytes.reverse(),3,9).then(transactions => {
     // Print your new tail transaction hash to the console
     console.log(transactions[0].hash);
     })
@@ -126,7 +126,7 @@ You've just changed the message of a tail transaction in a bundle and reattached
 :::
 
 :::warning:
-If your original tail transaction belongs to a transfer bundle, the nodes will mark either your copy or the original bundle as a double spend. Therefore, only one of them will be confirmed.
+If your original tail transaction belongs to a transfer bundle, the IOTA nodes will mark either your copy or the original bundle as a double spend. Therefore, only one of them will be confirmed.
 :::
 
 ## Run the code

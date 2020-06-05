@@ -38,7 +38,7 @@ To verify the authenticity of Trinity Desktop, you can check its SHA256 hash and
 
     DigiCert
     DigiCert SHA2 Assured Code Signing CA
-    IOTA Stiftung
+   IOTA Stiftung
 
 4. Make sure that the Certificate status reads "This certificate is OK."
 

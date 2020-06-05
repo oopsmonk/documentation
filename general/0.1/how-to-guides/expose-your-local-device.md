@@ -19,7 +19,7 @@ To complete this tutorial, you must have a Linux Ubuntu 18.04 server. If you don
 ---
 
 :::info:
-You can get a static IP on your local network in many ways. This guide is just one way of doing so.
+You can get a static IP on your local network in many ways. This tutorial is just one way of doing so.
 :::
 
 1. Find your gateway IP address (router's IP address) and make a note of it

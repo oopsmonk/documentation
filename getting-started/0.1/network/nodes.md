@@ -11,7 +11,7 @@ Nodes are the core of an IOTA network, and are responsible for the following key
 - Attaching valid transactions to the Tangle
 
 :::info:
-Many applications such as [Trinity](root://wallets/0.1/trinity/introduction/overview.md) interact with a node's API through the [client libraries](root://client-libraries/1.0/overview.md).
+Many applications such as [Trinity](root://wallets/0.1/trinity/introduction/overview.md) interact with an IOTA node's API through the [client libraries](root://client-libraries/1.0/overview.md).
 :::
 
 ## Validation
@@ -29,7 +29,7 @@ Nodes don't know which client owns an address because they don't have the client
 
 Neighbors are nodes that are mutually connected and that communicate directly with each other on the same IOTA network. To synchronize their ledgers with the rest of the network, all nodes send and receive transactions among their neighbors.
 
-After receiving a new transaction, nodes check that they have the transaction's history in its ledger. If a node is missing any transactions, it starts to ask its neighbors for them to become synchronized with the rest of the network.
+After receiving a new transaction, nodes check that they have the transaction's history in its ledger. If an IOTA node is missing any transactions, it starts to ask its neighbors for them to become synchronized with the rest of the network.
 
 ## Synchronized nodes
 
@@ -39,19 +39,19 @@ The transactions in any node's ledger make up its **view of the Tangle**.
 
 To make sure that all nodes eventually have the same view of the Tangle, they must synchronize with the rest of the network.
 
-A node is synchronized when it has solidified all milestones up to the latest one.
+An IOTA node is synchronized when it has solidified all milestones up to the latest one.
 
-In the IRI and cIRI [node software](root://node-software/1.0/overview.md), which runs the Mainnet, a node is synchronized when the values of the  `latestMilestoneIndex` and `latestSolidSubtangleMilestoneIndex` fields are equal.
+In the IRI and cIRI [node software](root://node-software/1.0/overview.md), which runs the Mainnet, an IOTA node is synchronized when the values of the  `latestMilestoneIndex` and `latestSolidSubtangleMilestoneIndex` fields are equal.
 
 :::info:
-The `latestMilestoneIndex` field is accurate only when the node is connected to synchronized neighbors.
+The `latestMilestoneIndex` field is accurate only when the IOTA node is connected to synchronized neighbors.
 :::
 
 ### Solidification
 
-Solidification is the process in which a node asks its neighbors for the history of all [milestones](../network/the-coordinator.md#milestones) in the Tangle, starting from an **entry point milestone** and ending at the latest one.
+Solidification is the process in which an IOTA node asks its neighbors for the history of all [milestones](../network/the-coordinator.md#milestones) in the Tangle, starting from an **entry point milestone** and ending at the latest one.
 
-When a node has a milestone's history up to the entry point milestone, it marks that milestone as **solid**, and starts the process again from the next milestone.
+When an IOTA node has a milestone's history up to the entry point milestone, it marks that milestone as **solid**, and starts the process again from the next milestone.
 
 As a result, the older the entry point milestone, the longer solidification takes.
 
@@ -65,9 +65,9 @@ A transaction is considered confirmed when it's solid and it's directly or indir
 
 ## Node quorums
 
-A node quorum is a group of nodes to which you send the same request and compare the responses for consistency.
+An IOTA node quorum is a group of nodes to which you send the same request and compare the responses for consistency.
 
-When you rely only on one node as a source of information from the Tangle, you can't be confident that it's correct. For example, that node could send you the wrong information about your available balance. To increase your confidence in a node, you can request information from a node quorum.
+When you rely only on one node as a source of information from the Tangle, you can't be confident that it's correct. For example, that node could send you the wrong information about your available balance. To increase your confidence in an IOTA node, you can request information from an IOTA node quorum.
 
 ## Local snapshots
 
@@ -75,7 +75,7 @@ IOTA is a permissionless network. For 24 hours a day, 7 days a week, anyone can 
 
 As a result, the size of the databases that contain the Tangle are always growing, and this storage space costs a lot of money. To stop their ledgers from becoming too large, nodes often do local snapshots.
 
-A local snapshot is the process in which a node records the state of its ledger in snapshot files. Using these files, nodes can synchronizing with their neighbors a lot faster because the Tangle contains fewer transactions.
+A local snapshot is the process in which an IOTA node records the state of its ledger in snapshot files. Using these files, nodes can synchronizing with their neighbors a lot faster because the Tangle contains fewer transactions.
 
 ## Permanodes
 

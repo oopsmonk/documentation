@@ -84,7 +84,7 @@ yarn add iotaledger/client-load-balancer
     });
     ```
 
-    If the API connects to the node, you should see a response object.
+    If the API connects to the IOTA node, you should see a response object.
 
     If not, the API will try the other node.
 

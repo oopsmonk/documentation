@@ -8,7 +8,7 @@
 
 A script for installing and running GoShimmer.
 ---
-#### __HORNET node software__ ####
+#### __Hornet node software__ ####
 [Hornet](https://github.com/gohornet/hornet)
 
 A lightweight alternative to IRI that runs on low-powered devices.

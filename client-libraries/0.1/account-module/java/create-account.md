@@ -4,7 +4,7 @@
 
 ## IOTA network
 
-In this tutorial, we connect to a node on the [Devnet](root://getting-started/0.1/network/iota-networks.md#devnet) with the following network settings:
+In this tutorial, we connect to an IOTA node on the [Devnet](root://getting-started/0.1/network/iota-networks.md#devnet) with the following network settings:
 
 - **[Minimum weight magnitude](root://getting-started/0.1/network/minimum-weight-magnitude.md)**: 9
 
@@ -41,7 +41,7 @@ $b=[byte[]] (1..81);(new-object Security.Cryptography.RNGCryptoServiceProvider).
 String mySeed = "PUEOTSEITFEVEWCWBTSIZM9NKRGJEIMXTULBACGFRQK9IMGICLBKW9TTEVSDQMGWKBXPVCBMMCXWMNPDX";
 ```
 
-3\. Connect to a node
+3\. Connect to an IOTA node
    
 ```java
 IotaAPI api = new IotaAPI.Builder()
@@ -67,7 +67,7 @@ AccountStore store = new AccountFileStore(file);
 
 ```java
 IotaAccount account = new IotaAccount.Builder(mySeed)
-    // Connect to a node
+    // Connect to an IOTA node
     .api(api)
     // Connect to the database
     .store(store)

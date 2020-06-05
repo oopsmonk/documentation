@@ -28,7 +28,7 @@ Because a transaction's `signatureMessageFragment` field can contain only 2,187 
 
 Nodes validate a signature in a transaction by using the signature and the bundle hash to find the address of the transaction.
 
-To validate a signature, nodes normalize the bundle hash. Then, depending on the length of the signature, the node selects 27, 54, or 81 trytes of the normalized bundle hash. These trytes correspond to the number of segments in a signature fragment. The selected trytes of the normalized bundle hash are [converted to their decimal values](../introduction/ternary.md#tryte-encoding). Then, the following calculation is performed on each of them:
+To validate a signature, nodes normalize the bundle hash. Then, depending on the length of the signature, the IOTA node selects 27, 54, or 81 trytes of the normalized bundle hash. These trytes correspond to the number of segments in a signature fragment. The selected trytes of the normalized bundle hash are [converted to their decimal values](../introduction/ternary.md#tryte-encoding). Then, the following calculation is performed on each of them:
 
 ```
 13 + decimal value

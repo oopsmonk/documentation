@@ -28,7 +28,7 @@ In this tutorial, we connect to a [node](root://getting-started/0.1/network/node
     seed = 'PUETPSEITFEVEWCWBTSIZM9NKRGJEIMXTULBACGFRQK9IMGICLBKW9TTEVSDQMGWKBXPVCBMMCXWMNPDX'
     ```
 
-3. Connect to a node
+3. Connect to an IOTA node
 
     ```python
     api = Iota('https://nodes.devnet.iota.org:443', seed, testnet = True)
@@ -44,7 +44,7 @@ In this tutorial, we connect to a [node](root://getting-started/0.1/network/node
     security_level = 2
     ```
 
-5. Use the [`get_new_addresses()`](https://pyota.readthedocs.io/en/latest/api.html#get-new-addresses) method to generate an unspent address. If the connected node has an input transaction that withdraws from the address with the given index, the node knows that the address is spent, so the library returns the next unspent address.
+5. Use the [`get_new_addresses()`](https://pyota.readthedocs.io/en/latest/api.html#get-new-addresses) method to generate an unspent address. If the connected node has an input transaction that withdraws from the address with the given index, the IOTA node knows that the address is spent, so the library returns the next unspent address.
 
     ```python
     address = api.get_new_addresses(index=0, count=1, security_level = security_level)['addresses'][0]
@@ -52,9 +52,9 @@ In this tutorial, we connect to a [node](root://getting-started/0.1/network/node
 
     Starting from the given index, the connected node checks its view of the Tangle for any input transactions (pending or confirmed) that withdraw from the address.
 
-    If an address with the given index has any input transactions associated with it on the Tangle, the index is incremented until the node finds an unspent one.
+    If an address with the given index has any input transactions associated with it on the Tangle, the index is incremented until the IOTA node finds an unspent one.
 
-6. Check if the address is in the node's list of spent addresses
+6. Check if the address is in the IOTA node's list of spent addresses
 
     ```py
     is_spent = api.were_addresses_spent_from([address])['states'][0]
@@ -70,7 +70,7 @@ In this tutorial, we connect to a [node](root://getting-started/0.1/network/node
     :::
 
     :::warning:
-    This way of generating addresses replies on the node to return valid data about your addresses. To have more control over your addresses, we recommend keeping a record of spent ones in your own local database.
+    This way of generating addresses replies on the IOTA node to return valid data about your addresses. To have more control over your addresses, we recommend keeping a record of spent ones in your own local database.
     :::
 
 In the console, you should see an address.

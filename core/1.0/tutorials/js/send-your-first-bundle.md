@@ -35,7 +35,7 @@ In this tutorial, we connect to a [node](root://getting-started/0.1/network/node
     const Converter = require('@iota/converter');
     ```
 
-2. Connect to a node
+2. Connect to an IOTA node
 
     ```js
     const iota = Iota.composeAPI({
@@ -97,10 +97,10 @@ In this tutorial, we connect to a [node](root://getting-started/0.1/network/node
     ];
     ```
 
-8. To create a bundle from your `transfers` object, pass it to the [`prepareTransfers()`](https://github.com/iotaledger/iota.js/blob/next/api_reference.md#module_core.prepareTransfers) method. Then, pass the returned bundle trytes to the [`sendTrytes()`](https://github.com/iotaledger/iota.js/blob/next/api_reference.md#module_core.sendTrytes) method, which handles [tip selection](root://getting-started/0.1/network/tip-selection.md), [remote proof of work](root://getting-started/0.1/transactions/proof-of-work.md), and sending the bundle to the node
+8. To create a bundle from your `transfers` object, pass it to the [`prepareTransfers()`](https://github.com/iotaledger/iota.js/blob/next/api_reference.md#module_core.prepareTransfers) method. Then, pass the returned bundle trytes to the [`sendTrytes()`](https://github.com/iotaledger/iota.js/blob/next/api_reference.md#module_core.sendTrytes) method, which handles [tip selection](root://getting-started/0.1/network/tip-selection.md), [remote proof of work](root://getting-started/0.1/transactions/proof-of-work.md), and sending the bundle to the IOTA node
 
     ```js
-    iota.prepareTransfers(seed, transfers)
+   IOTA.prepareTransfers(seed, transfers)
         .then(trytes => {
             return iota.sendTrytes(trytes, depth, minimumWeightMagnitude);
         })
@@ -121,7 +121,7 @@ You can use this tail transaction hash to read the transaction from the Tangle.
 :::
 
 :::warning:
-Nodes can delete old transactions from their local copies of the Tangle. Therefore, a time may come where you request your transaction from a node, but the node doesn't have it anymore.
+Nodes can delete old transactions from their local copies of the Tangle. Therefore, a time may come where you request your transaction from an IOTA node, but the IOTA node doesn't have it anymore.
 
 If you want to store data on the Tangle for extended periods of time, we recommend [running your own node](root://node-software/1.0/overview.md).
 :::

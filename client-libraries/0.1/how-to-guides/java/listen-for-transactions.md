@@ -4,7 +4,7 @@
 
 ## IOTA network
 
-In this tutorial, we connect to a node on the [Devnet](root://getting-started/0.1/network/iota-networks.md#devnet).
+In this tutorial, we connect to an IOTA node on the [Devnet](root://getting-started/0.1/network/iota-networks.md#devnet).
 
 ## Code walkthrough
 
@@ -16,7 +16,7 @@ In this tutorial, we connect to a node on the [Devnet](root://getting-started/0.
     import org.zeromq.ZMQ;
     ```
 
-2. Connect the socket to a node's ZMQ port
+2. Connect the socket to an IOTA node's ZMQ port
 
     ```java
 	ZMQ.Context context = ZMQ.context(1);
@@ -32,7 +32,7 @@ In this tutorial, we connect to a node on the [Devnet](root://getting-started/0.
     socket.subscribe("sn");
     ```
 
-4. Process the event data that the node returns
+4. Process the event data that the IOTA node returns
 
     ```java
     while(true) {

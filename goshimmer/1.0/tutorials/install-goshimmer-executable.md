@@ -1,13 +1,13 @@
 # Install GoShimmer from the pre-built executable
 
-**In this tutorial, you run a node on your native filesystem, using the pre-built executable file on the GoShimmer GitHub repository.**
+**In this tutorial, you run an IOTA node on your native filesystem, using the pre-built executable file on the GoShimmer GitHub repository.**
 
 ## Prerequisites
 
-To run a node, you need the following:
+To run an IOTA node, you need the following:
 
 - [Git](https://git-scm.com/downloads)
-- Ports 14626(TCP/UDP) and 14666 (TCP) forwarded to the device that will run the node
+- Ports 14626(TCP/UDP) and 14666 (TCP) forwarded to the device that will run the IOTA node
 - A public IP address
 
 ---
@@ -37,11 +37,11 @@ You're now running a GoShimmer node.
 
 The status screen displays the following statistics in the top-right corner:
 
-- **TPS:** The number of transactions per second, which are separated into two categories. The **received** transactions are those that the node has just appended to its ledger. The **new** transactions are solid transactions.
-- **Node ID:** The node's public key that gives it a unique identity
-- **Neighbors:** The number of neighbors that the node is connected to. All nodes can have a maximum of 8 neighbors. Each node chooses 4 neighbors to connect to and accepts incoming connections from 4 other neighbors that chose it.
-- **Known peers:** The total number of nodes in the network. At the moment, the number of **neighborhood** nodes is the same as the number of **total** nodes. When the network allows sharding, the **neighborhood** nodes will be those that are in the node's shard.
-- **Uptime:** The total amount of time during which the node has been running
+- **TPS:** The number of transactions per second, which are separated into two categories. The **received** transactions are those that the IOTA node has just appended to its ledger. The **new** transactions are solid transactions.
+- **Node ID:** The IOTA node's public key that gives it a unique identity
+- **Neighbors:** The number of neighbors that the IOTA node is connected to. All nodes can have a maximum of 8 neighbors. Each node chooses 4 neighbors to connect to and accepts incoming connections from 4 other neighbors that chose it.
+- **Known peers:** The total number of nodes in the network. At the moment, the number of **neighborhood** nodes is the same as the number of **total** nodes. When the network allows sharding, the **neighborhood** nodes will be those that are in the IOTA node's shard.
+- **Uptime:** The total amount of time during which the IOTA node has been running
 
 :::info:
 If you don't have any accepted neighbors, make sure that you've forwarded your `autopeering` TCP/UDP port (14626) to your device.

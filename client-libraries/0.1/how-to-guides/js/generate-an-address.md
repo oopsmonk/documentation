@@ -20,7 +20,7 @@ yarn add @iota/core
 
 ## IOTA network
 
-In this tutorial, we connect to a node on the [Devnet](root://getting-started/0.1/network/iota-networks.md#devnet).
+In this tutorial, we connect to an IOTA node on the [Devnet](root://getting-started/0.1/network/iota-networks.md#devnet).
 
 ## Code walkthrough
 
@@ -30,7 +30,7 @@ In this tutorial, we connect to a node on the [Devnet](root://getting-started/0.
     const Iota = require('@iota/core');
     ```
 
-2. Connect to a node
+2. Connect to an IOTA node
 
     ```js
     const iota = Iota.composeAPI({
@@ -54,7 +54,7 @@ In this tutorial, we connect to a node on the [Devnet](root://getting-started/0.
 5. Use the [`getNewAddress()`](https://github.com/iotaledger/iota.js/blob/next/api_reference.md#module_core.getNewAddress) method to generate an unspent address
 
     ```js
-    iota.getNewAddress(seed, { index: 0, securityLevel: securityLevel, total: 1 })
+   IOTA.getNewAddress(seed, { index: 0, securityLevel: securityLevel, total: 1 })
         .then(address => {
             console.log('Your address is: ' + address);
         })
@@ -68,10 +68,10 @@ Starting from the given index, the connected node checks if the address is spent
 - Search its view of the Tangle for input transactions that withdraw from the address
 - Search for the address in the list of spent addresses
 
-If an address with the given index is spent, the index is incremented until the node finds one that isn't spent.
+If an address with the given index is spent, the index is incremented until the IOTA node finds one that isn't spent.
 
 :::warning:
-This way of generating addresses replies on the node to return valid data about your addresses. To have more control over your addresses, we recommend using the [account module](../../account-module/introduction/overview.md) to keep track of spent addresses in your own local database.
+This way of generating addresses replies on the IOTA node to return valid data about your addresses. To have more control over your addresses, we recommend using the [account module](../../account-module/introduction/overview.md) to keep track of spent addresses in your own local database.
 :::
 
 In the console, you should see an address.

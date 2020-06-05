@@ -4,7 +4,7 @@
 
 ## Prerequisites
 
-To use the account module, you need a Go development environment. If you're new to IOTA, we recommend completing our [core getting started guide](root://client-libraries/1.0/getting-started/go-quickstart.md), where you will learn how to set up a development environment and connect to a node.
+To use the account module, you need a Go development environment. If you're new to IOTA, we recommend completing our [core getting started guide](root://client-libraries/1.0/getting-started/go-quickstart.md), where you will learn how to set up a development environment and connect to an IOTA node.
 
 :::info:
 The sample code for these tutorials is hosted on [GitHub](https://github.com/iota-community/account-module).
