@@ -10,7 +10,7 @@
 [Guides/Securing your node](/guides/securing-your-node.md)
 [Guides/Setting up your dashboard](/guides/setting-up-dashboard.md)
 [Guides/Securing your API](/guides/securing-your-api.md)
-[Guides/Allowing remote proof of work](/guides/allowing-remote-pow.md)
+[Guides/Enabling remote proof of work](/guides/allowing-remote-pow.md)
 [Guides/Managing fixed neighbors](/guides/managing-neighbors.md)
 [Guides/Hosting an autopeering entry node](/guides/hosting-an-autopeering-node.md)
 [Guides/Connecting to a custom autopeering entry node](/guides/connecting-to-entry.md)

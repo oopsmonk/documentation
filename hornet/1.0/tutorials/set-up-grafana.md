@@ -92,7 +92,7 @@ You should see that your server is running and scraping data from Hornet.
 
 ![Prometheus user interface](../images/prometheus-ui.png)
 
-## Step 3. Connect Grafana to you Prometheus server
+## Step 3. Connect Grafana to your Prometheus server
 
 In this step, you install Grafana and connect it to your Prometheus server. This way, you can use Grafana to display the data in graphs.
 

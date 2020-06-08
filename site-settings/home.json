@@ -40,20 +40,20 @@
     ],
     "popularTopics": [
         {
-            "query": "iri",
-            "name": "IRI"
+            "query": "channels",
+            "name": "Encrypted messaging"
         },
         {
-            "query": "hub",
-            "name": "Hub"
+            "query": "hornet",
+            "name": "Hornet node software"
+        },
+        {
+            "query": "private tangle",
+            "name": "Private Tangle"
         },
         {
             "query": "trinity",
-            "name": "Trinity"
-        },
-        {
-            "query": "set up a private tangle",
-            "name": "Private Tangle"
+            "name": "Trinity wallet"
         }
     ],
     "cards": [
@@ -70,7 +70,7 @@
         {
             "href": "/docs/blueprints/0.1/introduction/overview",
             "image": "3.png",
-            "name": "Explore application blueprints"
+            "name": "Explore applications"
         }
     ]
 }
