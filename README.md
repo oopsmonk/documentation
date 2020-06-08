@@ -1,7 +1,7 @@
 <h2 align="center">Developer Documentation for IOTA technology</h2>
 
 <p align="center">
-    <a href="https://docs.iota.org/docs/wallets/0.1/hub/introduction/overview" style="text-decoration:none;">
+    <a href="https://docs.iota.org/" style="text-decoration:none;">
     <img src="https://img.shields.io/badge/Documentation%20portal-blue.svg?style=for-the-badge" alt="Developer documentation portal">
 </p>
 <p align="center">
