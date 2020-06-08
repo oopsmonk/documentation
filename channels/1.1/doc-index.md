@@ -4,6 +4,7 @@
 
 [Introduction/How Channels works](/how-it-works.md)
 
+[Guides/Designing the messaging workflow](/guides/designing-the-workflow.md)
 [Guides/Creating a new channel](/guides/creating-a-new-channel.md)
 [Guides/Creating a subscriber](/guides/creating-a-subscriber.md)
 [Guides/Sending links](/guides/sending-links.md)
