@@ -14,8 +14,6 @@ Sending a transaction includes the following steps:
 - Doing proof of work
 - Sending the transaction to a node
 
-image
-
 ## Choosing an IOTA network
 
 The first step in sending a transaction is to choose a node to send it to. This node is your entry point to the Tangle of an IOTA network. See [IOTA networks](../networks/overview.md) for an overview of the different networks.

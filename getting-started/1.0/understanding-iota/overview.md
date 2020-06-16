@@ -2,8 +2,6 @@
 
 **This topic gives you a high level overview of how IOTA works.**
 
-Image
-
 ## The Tangle
 
 The Tangle is a public ledger that's shared across devices called nodes in an IOTA network. All data in the Tangle is stored in objects called transactions. When a transaction is attached to the Tangle, it cannot be changed: It's immutable. The integrity of the Tangle is guaranteed by cryptography.
