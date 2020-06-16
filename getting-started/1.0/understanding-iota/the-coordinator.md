@@ -44,7 +44,7 @@ In this example, the Merkle tree's depth is 2, resulting in 4 public keys. As a 
 To allow nodes to verify a transaction's signature where the address is the Merkle root, the bundle must contain the following:
 
 - Enough zero-value transactions to contain the fragmented signature
-- One transaction whose [`signatureMessageFragment` field](../transactions/transactions.md#signatureMessageFragment) contains enough missing data from the Merkle tree to allow the node to rebuild the Merkle root
+- One transaction whose `signatureMessageFragment` field contains enough missing data from the Merkle tree to allow the node to rebuild the Merkle root
 
 If the rebuilt Merkle root is the same as the transaction's address, the signature is valid.
 

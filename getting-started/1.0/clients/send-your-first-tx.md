@@ -95,7 +95,6 @@ In this step, you connect to a node on the Devnet.
     const Iota = require('@iota/core');
     const Converter = require('@iota/converter');
 
-
     // Create a new instance of the IOTA API object
     // Use the `provider` field to specify which node to connect to
     const iota = Iota.composeAPI({

@@ -4,6 +4,7 @@
 
 [Understanding IOTA/How IOTA works](/understanding-iota/overview.md)
 [Understanding IOTA/Nodes](/understanding-iota/nodes.md)
+[Understanding IOTA/The Coordinator](/understanding-iota/the-coordinator.md)
 [Understanding IOTA/The Tangle](/understanding-iota/the-tangle.md)
 [Understanding IOTA/IOTA tokens](/understanding-iota/token.md)
 [Understanding IOTA/Transactions](/understanding-iota/transactions.md)

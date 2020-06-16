@@ -4,5 +4,4 @@
 
 Use the following resources to transfer up to 1 Ki of IOTA tokens to one of your addresses:
 
-- **[Official faucet](https://faucet.devnet.iota.org/):** Distributes tokens in batches of 1 Ki
 - **[Community faucet](https://faucet.einfachiota.de/):** Distributes tokens in batches of up to 1 Ki
