@@ -20,7 +20,7 @@ The Tangle Utilities website includes useful tools for working with the Tangle.
 
 - [Search for transactions that include a particular address](https://utils.iota.org/)
 
-[Search for transactions in a given bundle](https://utils.iota.org/)
+- [Search for transactions in a given bundle](https://utils.iota.org/)
 
 ## Development quickstart
 
