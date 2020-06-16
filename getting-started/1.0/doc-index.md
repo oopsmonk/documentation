@@ -39,6 +39,8 @@
 [Going further/Upcoming developments](/going-further/upcoming-developments.md)
 
 [References/Terminology](/references/glossary.md)
+[References/Changelog](changelog.md)
+
 
 
 
