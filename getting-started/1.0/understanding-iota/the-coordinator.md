@@ -60,5 +60,3 @@ Then, the node looks at the rest of the bundle for the following:
 Using this information, the node hashes public keys 1 and 2. Then, the node hashes that hash along with the hash of public key 3 and 4 to find the Merkle root.
 
 If the Merkle root is the same as the transaction's address, the signature is valid.
-
-![Example Merkle tree](../images/merkle-tree.png) 
