@@ -1,6 +1,6 @@
 # IRI API reference
 
-**The IRI API provides a simple and consistent way to get transactions from the Tangle, get an IOTA node's neighbors, or send new transactions. This API accepts HTTP requests and responds with JSON data.**
+**The IRI API provides a simple and consistent way to get transactions from the Tangle, get a node's neighbors, or send new transactions. This API accepts HTTP requests and responds with JSON data.**
 
 :::info:
 You can also use a [client library](root://client-libraries/1.0/overview.md) to call these API endpoints.
@@ -31,13 +31,13 @@ This API is in beta and subject to change. We do not recommend using this API in
 
 All requests to this API should be sent to the URL of an IRI or Hornet node.
 
-If you don't already have an IOTA node to connect to, we recommend [running your own](root://node-software/1.0/overview.md).
+If you don't already have a node to connect to, we recommend [running your own](root://node-software/1.0/overview.md).
 
 Running your own node has many benefits, of which the most important is that you don't need to trust a potentially malicious third-party node. If you were to connect to a malicious node, it could give you incorrect information about balances and transactions, leading to stolen IOTA tokens.
 
 ## addNeighbors
 
-Adds a list of temporary neighbors to an IOTA node.
+Adds a list of temporary neighbors to a node.
 
 :::info:
 The neighbors are removed if the IOTA node restarts. If you want to permanently add the neighbors to your own node, add their URIs to the [`NEIGHBORS`](../references/iri-configuration-options.md#neighbors) configuration option.
@@ -153,7 +153,7 @@ curl http://localhost:14265 \
 
 ## attachToTangle
 
-Does [proof of work](root://getting-started/0.1/transactions/proof-of-work.md) for the given transaction trytes.
+Does [proof of work](root://getting-started/1.0/references/glossary.md#proof-of-work) for the given transaction trytes.
 
  ### Parameters
 
@@ -163,7 +163,7 @@ Does [proof of work](root://getting-started/0.1/transactions/proof-of-work.md) f
 |--|--|--|--|
 | `trunkTransaction` |Required| Trunk transaction hash | string|
 | `branchTransaction` |Required| Branch transaction hash | string|
-| `minWeightMagnitude` |Required| [Minimum weight magnitude](root://getting-started/0.1/transactions/proof-of-work.md#minimum-weight-magnitude) | integer|
+| `minWeightMagnitude` |Required| [minimum weight magnitude](root://getting-started/1.0/references/glossary.md#minimum-weight-magnitude) | integer|
 | `trytes` |Required| String of transaction trytes. When sending transactions in a bundle, make sure that the trytes of the last transaction in the bundle are in index 0 of the array. |array of strings|
 
 ### Examples
@@ -280,7 +280,7 @@ The last 243 trytes of the return value consist of the following:
 
 ## broadcastTransactions
 
-Sends transaction trytes to an IOTA node. 
+Sends transaction trytes to a node. 
 
  ### Parameters
 
@@ -614,7 +614,7 @@ An array of transaction hashes, is returned in the same order for all individual
 
 ## getNodeAPIConfiguration
 
-Gets an IOTA node's API configuration settings.
+Gets a node's API configuration settings.
 
 ### Examples
 --------------------
@@ -938,7 +938,7 @@ curl http://localhost:14265 \
 
 ## getMissingTransactions
 
-Gets all transaction hashes that an IOTA node is currently requesting from its neighbors.
+Gets all transaction hashes that a node is currently requesting from its neighbors.
 
 ### Examples
 --------------------
@@ -1024,7 +1024,7 @@ curl http://localhost:14265 \
 
 ## getNeighbors
 
-Gets an IOTA node's neighbors and their activity.
+Gets a node's neighbors and their activity.
 
 ### Examples
 --------------------
@@ -1123,7 +1123,7 @@ The activity accumulates until the IOTA node restarts.
 
 ## getNodeInfo
 
-Gets information about an IOTA node.
+Gets information about a node.
 
 ### Examples
 --------------------
@@ -1240,7 +1240,7 @@ curl http://localhost:14265 \
 | `latestSolidSubtangleMilestone` | Transaction hash of the latest solid milestone |
 | `latestSolidSubtangleMilestoneIndex` | Index of the latest solid milestone |
 | `milestoneStartIndex` | The index of the milestone from which the IOTA node started synchronizing when it first joined the network. This index will not change unless the IOTA node's ledger is deleted and the IOTA node starts synchronizing from a new milestone index.|
-|`lastSnapshottedMilestoneIndex`|Index of the last milestone that triggered a [local snapshot](root://getting-started/0.1/network/nodes.md#local-snapshots) on the IOTA node |
+|`lastSnapshottedMilestoneIndex`|Index of the last milestone that triggered a local snapshot on the IOTA node |
 | `neighbors` | Total number of connected neighbor nodes  |
 | `packetsQueueSize` | Size of the packet queue |
 | `time` | Current UNIX timestamp |
@@ -1257,7 +1257,7 @@ curl http://localhost:14265 \
 This endpoint is no longer available in version 1.8.6 or later of IRI.
 :::
 
-Gets tip transaction hashes from an IOTA node.
+Gets tip transaction hashes from a node.
 
 ### Examples
 --------------------
@@ -1655,7 +1655,7 @@ curl http://localhost:14265 \
 
 ## removeNeighbors
 
-Temporarily removes a list of neighbors from an IOTA node.
+Temporarily removes a list of neighbors from a node.
 
 :::info:
 The neighbors are added again if the IOTA node restarts. If you want to permanently remove the neighbors from your own node, remove their URIs from the [`NEIGHBORS`](../references/iri-configuration-options.md#neighbors) configuration option. 
@@ -1751,7 +1751,7 @@ curl http://localhost:14265 \
 
 ## storeTransactions
 
-Stores transactions in an IOTA node's local storage.
+Stores transactions in a node's local storage.
 
 ### Parameters
 

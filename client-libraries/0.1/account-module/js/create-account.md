@@ -20,11 +20,11 @@ yarn add @iota/account ntp-client
 
 ## IOTA network
 
-In this tutorial, we connect to an IOTA node on the [Devnet](root://getting-started/0.1/network/iota-networks.md#devnet) with the following network settings:
+In this tutorial, we connect to a node on the [Devnet](root://getting-started/1.0/networks/overview.md) with the following network settings:
 
-- **[Minimum weight magnitude](root://getting-started/0.1/network/minimum-weight-magnitude.md)**: 9
+- **[minimum weight magnitude](root://getting-started/1.0/references/glossary.md#minimum-weight-magnitude)**: 9
 
-- **[Depth](root://getting-started/0.1/transactions/depth.md)**: 3
+- **[Depth](root://getting-started/1.0/clients/sending-a-transaction.md#choosing-a-depth)**: 3
 
 ## Code walkthrough
 
@@ -83,7 +83,7 @@ const maxDepth = 6;
 const timeSource = () => util.promisify(ntpClient.getNetworkTime)("time.google.com", 123);
 ```
 
-5\. Create your account and connect it to an IOTA node
+5\. Create your account and connect it to a node
    
 ```js
 const account = createAccount({

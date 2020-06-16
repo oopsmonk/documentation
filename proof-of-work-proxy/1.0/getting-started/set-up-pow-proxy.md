@@ -1,8 +1,8 @@
 # Set up a proof of work proxy server
 
-**In this tutorial, you install a dedicated proxy server that does local proof of work by intercepting calls to an IOTA node's `attachToTangle` endpoint.**
+**In this tutorial, you install a dedicated proxy server that does local proof of work by intercepting calls to a node's `attachToTangle` endpoint.**
 
-The PoW proxy server is an implementation of [Caddy](https://caddyserver.com/) that uses IOTA middleware. This middleware allows the server to intercept calls to an IOTA node's `attachToTangle` endpoint and do the PoW.
+The PoW proxy server is an implementation of [Caddy](https://caddyserver.com/) that uses IOTA middleware. This middleware allows the server to intercept calls to a node's `attachToTangle` endpoint and do the PoW.
 
 :::info:
 All requests to the other IRI API endpoints are forwarded to the IOTA node.

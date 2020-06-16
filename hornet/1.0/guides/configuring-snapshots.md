@@ -1,6 +1,6 @@
 # Configuring local snapshots
 
-**Over time, your node's ledger accumulates many transactions, which use a lot of memory. This topic discusses how to configure [local snapshots](root://getting-started/0.1/network/nodes.md#local-snapshots) to delete old transactions from your node's ledger and to create backup snapshot files.**
+**Over time, your node's ledger accumulates many transactions, which use a lot of memory. This topic discusses how to configure local snapshots to prune old transactions from your node's database and to create backup snapshot files.**
 
 ## Enabling local snapshots
 

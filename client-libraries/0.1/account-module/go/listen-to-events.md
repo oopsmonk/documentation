@@ -19,7 +19,7 @@ go get github.com/iotaledger/iota.go/account
 
 ## IOTA network
 
-In this tutorial, we connect to an IOTA node on the [Devnet](root://getting-started/0.1/network/iota-networks.md#devnet).
+In this tutorial, we connect to a node on the [Devnet](root://getting-started/1.0/networks/overview.md).
 
 ## Code walkthrough
 
@@ -27,7 +27,7 @@ In this tutorial, we connect to an IOTA node on the [Devnet](root://getting-star
 
     ```go
     account, err = builder.NewBuilder().
-        // Connect to an IOTA node
+        // Connect to a node
 		WithAPI(iotaAPI).
 		// Create the database
 		WithStore(store).

@@ -7,9 +7,13 @@
 To complete this tutorial, you need the following:
 
 - A [Linux Ubuntu operating system](https://ubuntu.com/download#download)
-- 1 GB RAM
+- 2 GB RAM
+- A dual-core CPU
+- SSD storage
 - A public IP address
 - Ports 15600 and 14626 must be exposed to the Internet
+
+The amount of storage you need will depend on whether you plan on pruning transactions from your local database.
 
 ## Step 1. Install the APT repository
 
@@ -42,13 +46,7 @@ This repository is maintained by the Hornet developers. It installs Hornet as a 
     sudo systemctl enable hornet.service
     ```
 
-In the `/var/lib/hornet` directory, you now have all the configuration files:
-
-- **`config.json`:** The main configuration file for network and plugin settings with default settings for the Mainnet
-- **`config_comnet.json`:** A copy of the main configuration file with default settings for the Comnet
-- **`peering.json`:** Defines fixed neighbors
-- **`profiles.json`:** Defines transaction cache settings
-- **`mqtt_config.json`:** Defines settings for the MQTT plugin
+In the `/var/lib/hornet` directory, you now have all the configuration files.
     
 ## Step 2. Start your node
 
@@ -70,7 +68,7 @@ To stop displaying the log messages press **Ctrl**+**C**. Hornet will continue r
 
 ## Step 3. Check that Hornet is synchronized
 
-An IOTA node is considered synchronized when the `latestMilestoneIndex` (LMI) field is equal to the `latestSolidSubtangleMilestoneIndex` (LSMI) field:
+A node is considered synchronized when the `latestMilestoneIndex` (LMI) field is equal to the `latestSolidSubtangleMilestoneIndex` (LSMI) field:
 
 - `latestMilestoneIndex`: Index of the latest milestone that the IOTA node has received from its neighbors. This field is accurate only when the IOTA node is connected to synchronized neighbors.
 
@@ -128,4 +126,4 @@ Try using one of the client libraries to send transactions to the nodes in your 
 
 - [Python](root://core/1.0/getting-started/get-started-python.md)
 
-If you want to continue learning how to customize and secure your node, see the [Guides](../guides/securing-your-node.md) section, or continue with the [next tutorial](../tutorials/set-up-reverse-proxy.md).
+If you want to continue learning how to customize and secure your node, see the Guides section, or continue with the [next tutorial](../tutorials/set-up-reverse-proxy.md).

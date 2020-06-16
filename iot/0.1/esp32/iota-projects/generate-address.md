@@ -55,15 +55,15 @@ To run this application on Windows, enter the following commands in Git Bash.
     You can also see your ESP32 configuration in the `sdkconfig` file.
     :::
     
-5. If you want to monitor the balance of a single fixed address and display it in a QR code, set the `Receiver address` option to a valid address with or without a [checksum](root://getting-started/0.1/clients/checksums.md)
+5. If you want to monitor the balance of a single fixed address and display it in a QR code, set the `Receiver address` option to a valid address with or without a [checksum](root://getting-started/1.0/cryptography/checksums.md)
     
 6. If you want the application to monitor the address for withdrawals and be able to update the QR code to a new unspent one, set the following configuration options:
     
     |**Configuration option**|**Description**|**Notes**|
     |:----|:-----|:-----|
     |`Auto refresh address`|Set this option to `y` to allow the application to generate a new address from your seed and security level whenever you withdraw from the displayed address|
-    |`Seed`|Set this option to the [seed](root://getting-started/0.1/clients/seeds.md) that you want the application to use to generate addresses|This option is displayed only when you set the `Auto refresh address` to `y`. The seed you enter must be a valid 81-tryte seed.|
-    |`Security Level`| Set this option to the [security level](root://getting-started/0.1/clients/security-levels.md) that you want the application to use to generate addresses from your seed| This option is displayed only when you set the `Auto refresh address` to `y`. You must enter a valid security level (1, 2, or 3).|
+    |`Seed`|Set this option to the seed that you want the application to use to generate addresses|This option is displayed only when you set the `Auto refresh address` to `y`. The seed you enter must be a valid 81-tryte seed.|
+    |`Security Level`| Set this option to the security level that you want the application to use to generate addresses from your seed| This option is displayed only when you set the `Auto refresh address` to `y`. You must enter a valid security level (1, 2, or 3).|
 
 5. Flash the application to your ESP32. Replace the `$USB_PORT` placeholder with the port that the ESP32 is connected to.
 
@@ -104,7 +104,7 @@ Use the `help` command for more details, or press `Ctrl` + `]` to exit.
 
 ## See the application in action
 
-The application monitors the Tangle for confirmed transactions that deposit IOTA tokens into the dispayed address and updates the balance when if it finds any.
+The application monitors the Tangle for confirmed transactions that transfer IOTA tokens to the dispayed address and updates the balance when if it finds any.
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/Vp9J2ntikcc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 

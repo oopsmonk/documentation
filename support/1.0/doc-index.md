@@ -1,3 +1,0 @@
-# Index
-
-[Support](support.md)

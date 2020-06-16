@@ -14,7 +14,7 @@ Elixir and ScyllaDB have built-in protection, but securing the administrator acc
 
 ## Performance goals
 
-Chronicle is distributed so it has no single point of failure. This avoids data loss and unavailability in case an IOTA node is not reachable.
+Chronicle is distributed so it has no single point of failure. This avoids data loss and unavailability in case a node is not reachable.
 
 Chronicle strives to save a large number of transactions in a short time frame.  For example, suppose 300,000 vehicles can send one transaction every 5 minutes.
 Past transactions should be retrieved within a time comparable to state of the art cloud solutions. Using the Chronicle API is the best way to search for transactions and retrieve data quickly.  

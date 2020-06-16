@@ -1,6 +1,6 @@
 # GoShimmer API reference
 
-**The GoShimmer API provides a simple and consistent way to get transactions from the Tangle, get an IOTA node's neighbors, or send new transactions. This API accepts HTTP requests and responds with JSON data.**
+**The GoShimmer API provides a simple and consistent way to get transactions from the Tangle, get a node's neighbors, or send new transactions. This API accepts HTTP requests and responds with JSON data.**
 
 :::info:
 You can also use the [GoShimmer client library](https://github.com/iotaledger/goshimmer/tree/master/client) to call these API endpoints, using Go.
@@ -10,7 +10,7 @@ You can also use the [GoShimmer client library](https://github.com/iotaledger/go
 
 All requests to this API should be prefixed with the URL of a GoShimmer node.
 
-If you don't already have an IOTA node to connect to, we recommend [running your own](root://node-software/1.0/overview.md).
+If you don't already have a node to connect to, we recommend [running your own](root://node-software/1.0/overview.md).
 
 Running your own node has many benefits, of which the most important is that you don't need to trust a potentially malicious third-party node. If you were to connect to a malicious node, it could give you incorrect information about balances and transactions, leading to stolen IOTA tokens.
 
@@ -146,7 +146,7 @@ Status Code **200**
 
 |**Field**|**Type**|**Description**|
 |---|---|---|
-|» hash|string|The transaction's hash on the Tangle.|
+|» hash|string|The transaction's hash in the Tangle.|
 
 Status Code **400**
 

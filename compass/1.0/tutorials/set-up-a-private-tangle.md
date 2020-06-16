@@ -64,7 +64,7 @@ Compass uses [Bazel](https://bazel.build/) to build and [Docker](https://www.doc
 
 ## Step 2. Compute the Merkle tree
 
-In this step, you generate a [Merkle tree](root://getting-started/0.1/network/the-tangle.md#milestones) for Compass to use to sign milestones.
+In this step, you generate a Merkle tree for Compass to use to sign milestones.
 
 The `Compass` repository includes a tool to compute a Merkle tree and save it in a `data` directory for Compass to use later on. 
 
@@ -221,7 +221,7 @@ The `snapshot.example.txt` file puts the total IOTA supply of 2.7Pi in the first
 :::danger:Important
 If the IRI node to which Compass is connected becomes compromised, an attacker could manipulate Compass to receive favorable treatment. Possible scenarios include the following:
 - Return tip transactions that prioritize the attackers transactions over the regular tip selection algorithm.
-- Return tip transactions that conflict with the ledger state (double spend IOTA tokens) causing Compass to send an inconsistent milestone. IRI nodes will not accept this milestone and no more transactions will be confirmed.
+- Return tip transactions that lead to double spends, causing Compass to send an inconsistent milestone. IRI nodes will not accept this milestone and no more transactions will be confirmed.
 - Stop propagating milestone transactions to the rest of the network, causing no more transactions to be confirmed.
 :::
 
@@ -343,6 +343,6 @@ We have two wallets that you can use:
 
 ## Next steps
 
-Try adding more nodes to your network to make a similar architecture to the [Devnet](root://getting-started/0.1/network/iota-networks.md)
+Try adding more nodes to your network to make a similar architecture to the [Devnet](root://getting-started/1.0/networks/overview.md)
 
 ![Multi-node private Tangle](../images/multi-node-tangle.svg)

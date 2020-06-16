@@ -1,6 +1,6 @@
 # GoShimmer API v0.1.0
 
-The GoShimmer API provides a simple and consistent way to get transactions from the Tangle, get an IOTA node's neighbors, or send new transactions.<br></br>This API accepts HTTP requests and responds with JSON data.
+The GoShimmer API provides a simple and consistent way to get transactions from the Tangle, get a node's neighbors, or send new transactions.<br></br>This API accepts HTTP requests and responds with JSON data.
 
 :::info:
 You can also use the [Go client library](https://github.com/iotaledger/goshimmer/tree/master/client) to call these API endpoints.
@@ -146,7 +146,7 @@ Status Code **200**
 
 |**Field**|**Type**|**Description**|
 |---|---|---|
-|» hash|string|The transaction's hash on the Tangle.|
+|» hash|string|The transaction's hash in the Tangle.|
 
 Status Code **400**
 

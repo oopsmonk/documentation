@@ -1,15 +1,15 @@
 # Prove that a file is unchanged
 
-**Files are important for transporting information such as contracts among different parties. Sometimes, one party may change a file without the others knowing. So, all parties need a way to reliably prove that a file has not been changed so they can trust it. To prove that a file is unchanged, you can use this library to hash the file's contents and attach it to the Tangle. This way, any party can later hash the file and compare it to the immutable one on the Tangle. If the hashes are the same, the file is unchanged.**
+**Files are important for transporting information such as contracts among different parties. Sometimes, one party may change a file without the others knowing. So, all parties need a way to reliably prove that a file has not been changed so they can trust it. To prove that a file is unchanged, you can use this library to hash the file's contents and attach it to the Tangle. This way, any party can later hash the file and compare it to the immutable one in the Tangle. If the hashes are the same, the file is unchanged.**
 
 ##
 
 In this tutorial, you use the [proof-of-existence library](https://github.com/iotaledger/iota-poex-tool) to prove that a file is unchanged.
 
-First, we create a file that we later want to prove is unchanged. Then, we hash the file and add its hash to a transaction before attaching it to the [Devnet](root://getting-started/0.1/network/iota-networks.md#devnet) Tangle. The Devnet is similar to the Mainnet, except the tokens are free. Any transactions that you send to the Devnet do not exist on other networks such as the Mainnet.
+First, we create a file that we later want to prove is unchanged. Then, we hash the file and add its hash to a transaction before attaching it to the [Devnet](root://getting-started/1.0/networks/overview.md) Tangle. The Devnet is similar to the Mainnet, except the tokens are free. Any transactions that you send to the Devnet do not exist on other networks such as the Mainnet.
 
 :::info:
-Transactions on the Tangle are immutable, so we can use the transaction as a source of truth.
+Transactions in the Tangle are immutable, so we can use the transaction as a source of truth.
 :::
 
 Then, we read the transaction from the Tangle to retrieve the file hash. When we have the file hash, we hash the original file again and compare the two. If both hashes are the same, the original file is unchanged.
@@ -109,8 +109,8 @@ Create a new file called `contract.txt` in your working directory, then add the 
 
     // Verifying if the file is unchanged
     const verified = PoEx.verify(tailTransaction, false, file);
-    verified? console.log('File verified: The file matches the hash on the Tangle')
-    : ('Something has changed. The hash on the Tangle is no longer a match.');
+    verified? console.log('File verified: The file matches the hash in the Tangle')
+    : ('Something has changed. The hash in the Tangle is no longer a match.');
     ```
 
     :::info:
@@ -118,7 +118,7 @@ Create a new file called `contract.txt` in your working directory, then add the 
 
     The transaction is attached to the Devnet Tangle, so it does not exist on any other networks such as the Mainnet.
 
-    [Find out more about IOTA networks](root://getting-started/0.1/network/iota-networks.md).
+    [Find out more about IOTA networks](root://getting-started/1.0/networks/overview.md).
     :::
 
 :::success:Congratulations :tada:
@@ -144,11 +144,11 @@ node index.js
 If the file is a match, you should see the following output:
 
 ```
-File verified: The file matches the hash on the Tangle
+File verified: The file matches the hash in the Tangle
 ```
 
 ## Next steps
 
-Use what you've learned to build an application that secures signed documents on the Tangle. You can use the [document immutability blueprint](root://blueprints/0.1/doc-immutability/overview.md) for inspiration.
+Use what you've learned to build an application that secures signed documents in the Tangle. You can use the [document immutability blueprint](root://blueprints/0.1/doc-immutability/overview.md) for inspiration.
 
 Use the user interface to [upload a file hash to the Tangle](https://iota-poex.dag.sh).

@@ -1,6 +1,6 @@
 # Run a cIRI node on Linux
 
-**When you run the cIRI on a Linux server, it becomes a cIRI node that gives you direct access to an IOTA network. By running an IOTA node, you help the IOTA network to become more distributed by adding to the number of ledgers and validating your neighbors' transactions.**
+**When you run the cIRI on a Linux server, it becomes a cIRI node that gives you direct access to an IOTA network. By running a node, you help the IOTA network to become more distributed by adding to the number of ledgers and validating your neighbors' transactions.**
 
 :::warning:Warning
 cIRI is still under development. You shouldn't use cIRI in a production environment.

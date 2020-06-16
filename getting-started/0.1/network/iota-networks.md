@@ -22,7 +22,7 @@ Cryptocurrency exchanges sell IOTA tokens in units of Mega IOTA (1,000,000), whi
 
 ### Minimum weight magnitude
 
-Transactions on the Mainnet must use a [minimum weight magnitude](root://getting-started/0.1/transactions/proof-of-work.md#minimum-weight-magnitude) (MWM) of 14 to be valid.
+Transactions on the Mainnet must use a [minimum weight magnitude](root://getting-started/1.0/references/glossary.md#minimum-weight-magnitude) (MWM) of 14 to be valid.
 
 ### Coordinator address
 
@@ -52,7 +52,7 @@ On this network, you can test your applications and build proofs of concept that
 
 ### Minimum weight magnitude
 
-Transactions on the Devnet must use a [minimum weight magnitude](root://getting-started/0.1/transactions/proof-of-work.md#minimum-weight-magnitude) (MWM) of 9 to be valid.
+Transactions on the Devnet must use a [minimum weight magnitude](root://getting-started/1.0/references/glossary.md#minimum-weight-magnitude) (MWM) of 9 to be valid.
 
 ### Coordinator address
 
@@ -68,7 +68,7 @@ The IOTA Foundation hosts the following nodes that you can use to connect to the
 
 #### Load balancer node
 
-This endpoint gives you access to a high-availability proxy server, which is running an IOTA node on the Devnet.
+This endpoint gives you access to a high-availability proxy server, which is running a node on the Devnet.
 
 Use the load balancer for sending transactions and requesting information about the ledger from the IOTA node.
 
@@ -76,15 +76,15 @@ Use the load balancer for sending transactions and requesting information about 
 
 #### ZMQ node
 
-This endpoint gives you access to the zero message queue of an IOTA node on the Devnet.
+This endpoint gives you access to the zero message queue of a node on the Devnet.
 
-Use the ZMQ node to listen for live transaction on the Tangle.
+Use the ZMQ node to listen for live transaction in the Tangle.
 
 **URL:** tcp://zmq.devnet.iota.org:5556
 
 #### PoW node
 
-This endpoint gives you access to an IOTA node that can do remote proof of work.
+This endpoint gives you access to a node that can do remote proof of work.
 
 Use the PoW node to save power on small devices.
 
@@ -96,7 +96,7 @@ When choosing a minimum weight magnitude, you should consider the following ques
 
 ### Do you want to send test transactions that transfer IOTA tokens?
 
-When testing IOTA in a development environment, you should consider connecting to an IOTA node on the [Devnet](root://getting-started/0.1/network/iota-networks.md#devnet). This IOTA network requires less [proof of work](root://getting-started/0.1/transactions/proof-of-work.md), which reduces the time it takes to create transactions, and it uses [free test IOTA tokens](root://getting-started/0.1/tutorials/get-test-tokens.md).
+When testing IOTA in a development environment, you should consider connecting to a node on the [Devnet](root://getting-started/1.0/networks/overview.md). This IOTA network requires less [proof of work](root://getting-started/1.0/references/glossary.md#proof-of-work), which reduces the time it takes to create transactions, and it uses [free test IOTA tokens](root://getting-started/1.0/clients/getting-test-tokens.md).
 
 ### Do you want to control the performance of the network?
 
@@ -104,7 +104,7 @@ When testing IOTA, you may want more control over the performance of an IOTA net
 
 ### Do you want to use the valuable IOTA token?
 
-When deploying your application in a production environment, you should connect to an IOTA node on the [Mainnet](root://getting-started/0.1/network/iota-networks.md#mainnet). This network uses the IOTA token that's traded on cryptocurrency exchanges.
+When deploying your application in a production environment, you should connect to a node on the [Mainnet](root://getting-started/1.0/networks/overview.md#mainnet). This network uses the IOTA token that's traded on cryptocurrency exchanges.
 
 ### Should you use a third-party node?
 
@@ -117,8 +117,8 @@ Connecting to third-party nodes is convenient, but comes at a disadvantage if yo
 
 To overcome these disadvantages, we recommend that you run your own node and connect your application to it for direct access to the Tangle. Your own node gives you more control on how fast your transactions are attached to the Tangle and allows you to store them permanently.
 
-A public IOTA network is one that anyone can join and use. All transactions in a public IOTA network are transparent, and anyone can see them and the balances of all addresses by connecting to an IOTA node.
+A public IOTA network is one that anyone can join and use. All transactions in a public IOTA network are transparent, and anyone can see them and the balances of all addresses by connecting to a node.
 
 ## Related guides
 
-[Connect to an IOTA node in JavaScript](root://client-libraries/1.0/getting-started/js-quickstart.md).
+[Connect to a node in JavaScript](root://client-libraries/1.0/getting-started/js-quickstart.md).

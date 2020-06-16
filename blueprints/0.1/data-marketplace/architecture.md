@@ -26,8 +26,8 @@ This backend has an [API]https://data.iota.org/static/docs) that allows you to m
 
 The API triggers cloud functions, which allow you to configure the following:
 
-- [`depth`](root://getting-started/0.1/transactions/depth.md)
-- [`minWeightMagnitude`](root://getting-started/0.1/network/minimum-weight-magnitude.md)
+- [`depth`](root://getting-started/1.0/clients/sending-a-transaction.md#choosing-a-depth)
+- [`minWeightMagnitude`](root://getting-started/1.0/networks/overview.md)
 - Whitelist page, where administrator users with predefined email addresses are allowed to administer devices
 
 ### Sensor MAM channel
@@ -36,7 +36,7 @@ The device in the Data Marketplace are usually sensors that publish their data t
 
 #### Data fields
 
-For each of your sensors, you have to define the correct data fields, which will be stored on the Tangle, and displayed on the Data Marketplace web portal for the purchaser. In general, just be descriptive with the data that you want to store and sell.
+For each of your sensors, you have to define the correct data fields, which will be stored in the Tangle, and displayed on the Data Marketplace web portal for the purchaser. In general, just be descriptive with the data that you want to store and sell.
  
 #### Example sensors
 

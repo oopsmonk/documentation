@@ -261,11 +261,11 @@ Now, when you click **Deposit** > **Request one** in the user interface, a new d
 
 ![New deposit address](../images/fakexchange-deposit-address.png)
 
-To deposit IOTA tokens into your exchange account, you can send IOTA tokens to this address. But, the exchange will not recognize your updated balance yet.
+To transfer IOTA tokens to your exchange account, you can transfer IOTA tokens to this address. But, the exchange will not recognize your updated balance yet.
 
 ## Step 4. Monitor user accounts for balance changes
 
-At the moment, if you send IOTA tokens to the deposit address, the balance in the user's exchange account doesn't update.
+At the moment, if you transfer IOTA tokens to the deposit address, the balance in the user's exchange account doesn't update.
 
 To make sure this balance is kept up to date, you can monitor Hub user addresses for balance changes, using the [`BalanceSubscription`](../references/restful-api-reference.md#BalanceSubscription) endpoint
 
@@ -497,7 +497,7 @@ To withdraw IOTA tokens from their accounts, users need to request a withdrawal 
 
     This code iterates through any user withdrawal requests and actions them from the hot user account.
 
-Now, if you request another deposit address and send IOTA tokens to it, you can withdraw those token by going to **Withdraw** and completing the fields.
+Now, if you request another deposit address and transfer IOTA tokens to it, you can withdraw those token by going to **Withdraw** and completing the fields.
 
 ![Withdraw IOTA tokens](../images/fakexchange-withdrawal.png)
 

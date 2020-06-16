@@ -6,9 +6,9 @@
 The client libraries are currently in beta development, and you should not use them in production environments.
 :::
 
-# Best practice
+The client libraries with official support are maintained by the IOTA Foundation, and their source code can be found on the iotaledger GitHub repository.
 
-For a client application, it's best to use an instance of a serverless architecture such as [AWS Lambda](https://aws.amazon.com/lambda/). This way, your application is not restricted by hardware and has a high availability.
+The client libraries with community support are maintained by the IOTA community and can be found on the iota-community GitHub repository.
 
 ### **Official support** ###
 
@@ -16,7 +16,7 @@ For a client application, it's best to use an instance of a serverless architect
 #### **Core** ####
 [Link](root://core/1.0/overview.md)
 
-Use your favourite language to send requests to an IOTA node's HTTP API, create transactions, and convert data to or from trytes and trits.
+Send API requests to a node, create transactions, and convert data to or from trytes and trits.
 ---
 
 #### **Account module** ####
@@ -27,7 +27,7 @@ Simplify IOTA payments without the worry of withdrawing from spent addresses or 
 #### **Channels** ####
 [Link](root://channels/1.1/overview.md)
 
-Build secure messaging applications where users can prove a message's integrity and authenticity.
+Build secure messaging applications where users can encrypt messages and prove its integrity and authenticity.
 ---
 #### **IOTA Area Codes** ####
 [Link](root://iota-area-codes/1.0/overview.md)
@@ -43,7 +43,7 @@ Configure the core client library with backup nodes in case of request errors
 #### **Proof of existence** ####
 [Link](root://proof-of-existence/1.0/overview.md)
 
-Prove that a file is unchanged on the Tangle so that all parties that trust it.
+Prove that a file is unchanged in the Tangle so that all parties can trust it.
 ---
 
 #### **Trytes compressor** ####
@@ -55,13 +55,13 @@ Store transaction trytes in a smaller memory space so you can later rebroadcast 
 #### **Tangle certificates** ####
 [Link](root://tangle-certificate/1.0/overview.md)
 
-Create a custom immutable certificate and control who can issue it.
+Create immutable certificates and control who can issue them.
 ---
 
-#### **MAM (deprecated)** ####
+#### **MAM** ####
 [Link](root://mam/1.0/overview.md)
 
-Publish public or private data streams, called channels, in transactions on the Tangle.
+Attach public or private data to the Tangle.
 
 ---------------
 

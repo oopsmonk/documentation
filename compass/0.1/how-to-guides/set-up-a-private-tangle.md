@@ -2,7 +2,7 @@
 
 **A private Tangle is one that you control and that contains only nodes that you know. You may want to set up a private Tangle if you want to test an application without using a public IOTA network such as the Mainnet or the Devnet where everyone can see your transactions in the public Tangle.**
 
-For this basic setup, you'll install an IRI node and Compass on the same server or virtual machine with the same configuration settings as the [Devnet](root://getting-started/0.1/network/iota-networks.md).
+For this basic setup, you'll install an IRI node and Compass on the same server or virtual machine with the same configuration settings as the [Devnet](root://getting-started/1.0/networks/overview.md).
 
 ![Single-node private Tangle](../images/single-node-tangle.svg)
 
@@ -74,7 +74,7 @@ Compass uses [Bazel](https://bazel.build/) to build and [Docker](https://www.doc
 
 ## Step 2. Compute the Merkle tree
 
-For this guide, we use a [Merkle tree](root://getting-started/0.1/network/the-tangle.md#milestones) with a [depth](../references/compass-configuration-options.md) of 16, which allows Compass to send milestones for around 45 days, depending on the interval between them.
+For this guide, we use a Merkle tree with a depth of 16, which allows Compass to send milestones for around 45 days, depending on the interval between them.
 
 :::info:
 [See our example Merkle tree compute times](../references/merkle-tree-compute-times.md) that show how the `depth` parameter affects both the time it takes to compute the Merkle tree and the total network uptime.
@@ -223,9 +223,9 @@ The `snapshot.example.txt` file puts the total IOTA supply of 2.7Pi in the first
 4. Press **Ctrl** + **C** in the command-line interface. IRI will continue to run in the background.
 
 :::danger:Important
-If the IRI node to which Compass is connected becomes compromised, an attacker could manipulate Compass to receive favorable treatment. Possible scenarios include the following:
+If the node to which Compass is connected becomes compromised, an attacker could manipulate Compass to receive favorable treatment. Possible scenarios include the following:
 - Return tip transactions that prioritize the attackers transactions over the regular tip selection algorithm.
-- Return tip transactions that conflict with the ledger state (double spend IOTA tokens) causing Compass to send an inconsistent milestone. IRI nodes will not accept this milestone and no more transactions will be confirmed.
+- Return tip transactions that lead to double spends, causing Compass to send an inconsistent milestone. IRI nodes will not accept this milestone and no more transactions will be confirmed.
 - Stop propagating milestone transactions to the rest of the network, causing no more transactions to be confirmed.
 :::
 
@@ -357,6 +357,6 @@ If you want to send and receive transactions on the network through a user inter
 
 ## Next steps
 
-- Try adding multiple nodes to your network to make a similar architecture to the [Devnet](root://getting-started/0.1/network/iota-networks.md)
+- Try adding multiple nodes to your network to make a similar architecture to the [Devnet](root://getting-started/1.0/networks/overview.md)
 
 ![Multi-node private Tangle](../images/multi-node-tangle.svg)

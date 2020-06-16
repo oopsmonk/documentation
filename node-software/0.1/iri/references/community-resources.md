@@ -3,7 +3,7 @@
 **The community builds and maintains tools, utilites, and node software to support the development of IRI. This guide includes links to relevant community projects related to IRI.**
 
 ---------------
-#### __HORNET node software__ ####
+#### __Hornet node software__ ####
 [Hornet](https://github.com/gohornet/hornet)
 
 A lightweight alternative to IRI that runs on low-powered devices.

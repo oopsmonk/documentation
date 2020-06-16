@@ -1,6 +1,6 @@
 # Troubleshooting
 
-**Use this reference article to resolve issues related to running an IOTA node.**
+**Use this reference article to resolve issues related to running a node.**
 
 ## Broadcasting transaction failed
 

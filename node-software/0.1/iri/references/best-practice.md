@@ -1,10 +1,10 @@
-# Best practices for running an IOTA node
+# Best practices for running a node
 
-**When you run an IOTA node, you have lots of different options for setting up a reliable architecture. This article gives you some advice that we often give to our partners.**
+**When you run a node, you have lots of different options for setting up a reliable architecture. This article gives you some advice that we often give to our partners.**
 
 Often, our partners leverage the Tangle to store and distribute a hash of their data for verification purposes.
 
-At each point along the supply chain, any important data is stored on a cloud server then hashed and attached to the Tangle. With the hash on the Tangle, anyone with access to the cloud can verify the integrity of the cloud data by hashing it and comparing it to the immutable hash on the Tangle.
+At each point along the supply chain, any important data is stored on a cloud server then hashed and attached to the Tangle. With the hash in the Tangle, anyone with access to the cloud can verify the integrity of the cloud data by hashing it and comparing it to the immutable hash in the Tangle.
 ​
 :::info:
 [Read our blog post to find out more about how EVRYTHNG uses IOTA](https://blog.iota.org/iota-evrythng-2a9b4b9d922d).
@@ -20,13 +20,13 @@ To host these nodes it's best to make sure that the host device has enough compu
 
 ### Proof of work
 
-When you're setting up your nodes, you have the option to allow them to do [proof of work](root://getting-started/0.1/transactions/proof-of-work.md). When this feature is enabled, client applications can ask your node to do proof of work by calling the `attachToTangle` API endpoint. This option is called remote proof of work.
+When you're setting up your nodes, you have the option to allow them to do [proof of work](root://getting-started/1.0/references/glossary.md#proof-of-work). When this feature is enabled, client applications can ask your node to do proof of work by calling the `attachToTangle` API endpoint. This option is called remote proof of work.
 
 ![Remote proof of work](../images/remote-pow.png)
 
 Proof of work takes time and uses your node's computational power. So, depending on how often you send transactions to your nodes, you may want to keep this feature disabled by default in the [remote-limit-api](../references/iri-configuration-options.md#remote-limit-api) configuration option.
 
-This way, client applications can use [other options for proof of work](root://getting-started/0.1/transactions/proof-of-work.md#minimum-weight-magnitude#options-for-doing-proof-of-work) such as doing it themselves (local PoW) or outsourcing it to a PoW proxy server.
+This way, client applications can use other options for proof of work such as doing it themselves (local PoW) or outsourcing it to a PoW proxy server. See [Sending a transaction](root://getting-started/1.0/clients/sending-a-transaction.md).
 
 ![Local proof of work](../images/local-pow.png)
 
@@ -46,7 +46,7 @@ When you have a client application and some nodes, it's best practice to make su
 
 To evenly distribute the API calls among all your nodes, you can run a reverse proxy server that will act as a load balancer.
 
-This way, you can even have one domain name for your reverse proxy server that all nodes will send their API calls to. But, on the backend, the IOTA nodes with the most spare computational power will process the request and return the response to the reverse proxy server.
+This way, you can even have one domain name for your reverse proxy server that all nodes will send their API calls to. But, on the backend, nodes with the most spare computational power will process the request and return the response to the reverse proxy server.
 
 :::info:
 Read our guide on [setting up a reverse proxy server](../how-to-guides/set-up-a-reverse-proxy.md) for your node.

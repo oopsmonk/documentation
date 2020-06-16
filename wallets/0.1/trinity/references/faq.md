@@ -24,13 +24,13 @@ The Coordinator will be restarted on 10 March 2020 to give users enough time to 
 
 ## The Coordinator was paused, does this mean that IOTA is centralized?
 
-The [Coordinator](root://getting-started/0.1/network/the-coordinator.md) is a centralized finality device, which provides security during the network’s infancy.
+The Coordinator is a centralized finality device, which provides security during the network’s infancy.
 
 The Coordinator will be removed when we have an implementation of all [Coordicide](https://coordicide.iota.org/) modules.
 
 ## How do I transfer my IOTA tokens?
 
-While the [Coordinator](root://getting-started/0.1/network/the-coordinator.md) is paused, no one can transfer their IOTA tokens on the Mainnet.
+While the Coordinator is paused, no one can transfer their IOTA tokens on the Mainnet.
 
 We recommend reading [this guide](../how-to-guides/protect-trinity-account.md) if you want to migrate your IOTA tokens to a new seed before the Coordinator is restarted.
 
@@ -44,7 +44,7 @@ Never share your seed or Ledger phrases with anyone.
 
 ## Can the Coordinator repay the stolen IOTA tokens?
 
-No. The [Coordinator](root://getting-started/0.1/network/the-coordinator.md) cannot transfer IOTA tokens.
+No. The Coordinator cannot transfer IOTA tokens.
 
 However, the IOTA Foundation may consult with community node owners to discuss the option of a global snapshot.
 

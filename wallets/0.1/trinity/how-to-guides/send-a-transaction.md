@@ -1,6 +1,6 @@
 # Send a transaction
 
-**In Trinity, you can send a transaction to a [node](root://getting-started/0.1/network/nodes.md) by entering an [address](root://getting-started/0.1/clients/addresses.md), a message, and/or an amount of [IOTA tokens](root://getting-started/0.1/clients/token.md). In this tutorial, you learn how to send a transaction in Trinity.**
+**In Trinity, you can send a transaction to a node by entering an address, a message, and/or an amount of IOTA tokens. In this tutorial, you learn how to send a transaction in Trinity.**
 
 :::danger:
 On 11 February 2020, the IOTA Foundation became aware of an attack on the Trinity wallet, during which some users’ seeds and Trinity passwords were compromised. Please check our advice for [protecting your Trinity account](../how-to-guides/protect-trinity-account.md).
@@ -14,7 +14,7 @@ The Addresses field is displayed only in [Advanced mode](../how-to-guides/change
 
 ## Step 1. Choose an IOTA network
 
-You can send transaction to an IOTA node on any [IOTA network](root://getting-started/0.1/network/iota-networks.md).
+You can send transaction to a node on any [IOTA network](root://getting-started/1.0/networks/overview.md).
 
 By default, Trinity connects to a [quorum](../concepts/node-quorum.md) of Mainnet nodes, which maintain the main IOTA network where IOTA tokens have a value.
 
@@ -22,7 +22,7 @@ If you're testing IOTA, you may want to [connect to a Devnet node](../how-to-gui
 
 ## Step 2. Send a transaction
 
-When you're connected to an IOTA node on your chosen IOTA network, you can send it a transaction.
+When you're connected to a node on your chosen IOTA network, you can send it a transaction.
 
 1. Click **Send**
 
@@ -35,7 +35,7 @@ When you're connected to an IOTA node on your chosen IOTA network, you can send 
 3. Enter either a message, or an amount of IOTA tokens, or both
 
     :::info:
-    The amount to send can be entered in [units of IOTA tokens](root://getting-started/0.1/clients/token.md#units-of-iota-tokens) or in the [currency of your choice](../how-to-guides/change-the-general-settings.md). Pay close attention to the amount that you're sending.
+    The amount to send can be entered in units of IOTA tokens or in the currency of your choice. Pay close attention to the amount that you're sending.
     :::
 
     :::info:

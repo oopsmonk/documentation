@@ -1,6 +1,6 @@
 # Recover IOTA tokens from a spent address
 
-**Sometimes users deposit IOTA tokens into [spent addresses](root://getting-started/0.1/clients/addresses.md#spent-addresses) that have already been included in a [sweep](../concepts/sweeps.md). In this case, the address is at risk of an attacker trying to brute force its signature to steal its tokens. To recover the tokens from the spent address, you can try to transfer them to a new address before a potential attacker can. Doing so exposes more of the address's private key, but this is inevitable to transfer the IOTA tokens to a safe address.**
+**Sometimes users transfer IOTA tokens to [spent addresses](root://getting-started/1.0/references/glossary.md#spent-address) that have already been included in a [sweep](../concepts/sweeps.md). In this case, the address is at risk of an attacker trying to brute force its signature to steal its tokens. To recover the tokens from the spent address, you can try to transfer them to a new address before a potential attacker can. Doing so exposes more of the address's private key, but this is inevitable to transfer the IOTA tokens to a safe address.**
 
 In this tutorial, we use the `signBundle()` gRPC method to recover IOTA tokens from a spent address. This method is useful for creating a custom bundle that deposits any amount of the spent address's total balance into one or more output addresses.
 
@@ -13,7 +13,7 @@ To transfer the total balance of a spent address into a single output address, i
 To complete this tutorial, you need the following:
 
 - An [instance of Hub](../how-to-guides/install-hub.md)
-- [An IOTA node.js developer environment](root://client-libraries/1.0/getting-started/js-quickstart.md)
+- [A node.js developer environment](root://client-libraries/1.0/getting-started/js-quickstart.md)
 - The [`@iota/bundle`](https://github.com/iotaledger/iota.js/tree/next/packages/bundle), [`@iota/core`](https://github.com/iotaledger/iota.js/tree/next/packages/core), [`@iota/converter`](https://github.com/iotaledger/iota.js/tree/next/packages/converter), and [`@iota/transaction`](https://github.com/iotaledger/iota.js/tree/next/packages/transaction) packages
 - The [`SignBundle_enabled` flag](../references/command-line-options.md#signBundle) set to `true`.
 
@@ -130,9 +130,9 @@ Hub has a `signBundle()` gRPC method, which allows you to sign bundles that with
    The third argument specifies the first transaction in the bundle to which to start adding the signature fragments. In our example, the first transaction is the output transaction, so it doesn't need a signature.
    :::
 
-## Step 3. Send the signed bundle to an IOTA node
+## Step 3. Send the signed bundle to a node
 
-After adding the signature fragments to the input transactions in your bundle, it's now signed and ready to be sent to an IOTA node.
+After adding the signature fragments to the input transactions in your bundle, it's now signed and ready to be sent to a node.
 
 1. Convert the transactions in the signed bundle to trytes and push them into a new array
 
@@ -143,7 +143,7 @@ After adding the signature fragments to the input transactions in your bundle, i
    }
    ```
 
-2. Connect to an IOTA node by adding the URL of one to the `provider` field
+2. Connect to a node by adding the URL of one to the `provider` field
 
    ```js
    const iota = Iota.composeAPI({

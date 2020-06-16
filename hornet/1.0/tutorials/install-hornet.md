@@ -1,6 +1,14 @@
 # Choose an installation method
 
-**In this topic, you choose how to install and run the Hornet node software to turn your device into an IOTA node.**
+**In this topic, you choose how to install and run the Hornet node software to turn your device into a node.**
+
+## Prerequisites
+
+To make sure that your device meets the minimum requirements for running a node, see [Getting started as a node](root://getting-started/1.0/nodes/overview.md).
+
+## Choose a method
+
+Use the following table to select an installation method, depending on your operating system.
 
 |**Operating system**|**Installation method**|**Tutorial**|
 |:-------------------|:----------------------|:-----------|

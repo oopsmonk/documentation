@@ -1,6 +1,6 @@
 # Generate an address in Python
 
-**In this tutorial, you learn how to generate a new address for a [seed](root://getting-started/0.1/clients/seeds.md) with a given [security level](root://getting-started/0.1/clients/security-levels.md).**
+**In this tutorial, you learn how to generate a new address for a seed with a given security level.**
 
 ## Packages
 
@@ -12,7 +12,7 @@ pip install pyota
 
 ## IOTA network
 
-In this tutorial, we connect to a [node](root://getting-started/0.1/network/nodes.md) on the [Devnet](root://getting-started/0.1/network/iota-networks.md#devnet).
+In this tutorial, we connect to a node on the [Devnet](root://getting-started/1.0/networks/overview.md).
 
 ## Code walkthrough
 
@@ -28,14 +28,14 @@ In this tutorial, we connect to a [node](root://getting-started/0.1/network/node
     seed = 'PUETPSEITFEVEWCWBTSIZM9NKRGJEIMXTULBACGFRQK9IMGICLBKW9TTEVSDQMGWKBXPVCBMMCXWMNPDX'
     ```
 
-3. Connect to an IOTA node
+3. Connect to a node
 
     ```python
     api = Iota('https://nodes.devnet.iota.org:443', seed, testnet = True)
     ```
 
     :::info:
-    The `testnet` argument sets the [minimum weight magnitude](root://getting-started/0.1/network/minimum-weight-magnitude.md) to 9.
+    The `testnet` argument sets the [minimum weight magnitude](root://getting-started/1.0/references/glossary.md#minimum-weight-magnitude) to 9.
     :::
 
 4. Define the security level that you want to use for your address
@@ -52,7 +52,7 @@ In this tutorial, we connect to a [node](root://getting-started/0.1/network/node
 
     Starting from the given index, the connected node checks its view of the Tangle for any input transactions (pending or confirmed) that withdraw from the address.
 
-    If an address with the given index has any input transactions associated with it on the Tangle, the index is incremented until the IOTA node finds an unspent one.
+    If an address with the given index has any input transactions associated with it in the Tangle, the index is incremented until the IOTA node finds an unspent one.
 
 6. Check if the address is in the IOTA node's list of spent addresses
 

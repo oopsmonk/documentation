@@ -4,7 +4,7 @@
 
 ## How the IOTA token was created
 
-The IOTA token was launched on the Mainnet in June 2017. At this point, the IOTA nodes in the network were hard-coded with a total supply of 2,779,530,283 277,761.
+The IOTA token was launched on the Mainnet in June 2017. At this point, nodes in the network were hard-coded with a total supply of 2,779,530,283 277,761.
 
 This large supply allows each of the billions of devices, which are expected to be a part of the Internet of Things, to have its own wallet and transact micropayments with other devices.
 

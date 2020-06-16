@@ -1,11 +1,11 @@
 # Streams overview
 
-**Streams is a cryptographic framework for building cryptographic messaging protocols in the [Rust programming language](https://www.rust-lang.org/). Streams comes with a built-in method of sending messages to IOTA nodes, but it's also flexible enough to allow you to extend it to send messages in other ways such as in HTTP URLs.**
+**Streams is a cryptographic framework for building cryptographic messaging protocols in the [Rust programming language](https://www.rust-lang.org/). Streams comes with a built-in method of sending messages to nodes, but it's also flexible enough to allow you to extend it to send messages in other ways such as in HTTP URLs.**
 
 Here are just a few ideas of what you can build with Streams:
 
 - An API service that encrypts data if it's behind a paywall
-- A marketing subscription service that keeps an auditible record of subscriptions on the Tangle
+- A marketing subscription service that keeps an auditible record of subscriptions in the Tangle
 - A secure messaging protocol that relies on cryptographic keys to identify users
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/jDCMuML1QBo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

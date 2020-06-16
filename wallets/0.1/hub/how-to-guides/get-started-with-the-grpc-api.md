@@ -1,6 +1,6 @@
 # Get started with the gRPC API
 
-**Hub exposes some gRPC methods that you can call using any gRPC client. These methods allow you to manage users' tokens by interfacing with the Hub database and an IOTA node. In this tutorial, you learn the basics of the gRPC API to create a new user with some new deposit addresses.**
+**Hub exposes some gRPC methods that you can call using any gRPC client. These methods allow you to manage users' tokens by interfacing with the Hub database and a node. In this tutorial, you learn the basics of the gRPC API to create a new user with some new deposit addresses.**
 
 ## Prerequisites
 
@@ -110,7 +110,7 @@ When you have a gRPC client, you can use it to send API calls to Hub to manage u
 3. Send some IOTA tokens to one of the user's deposit addresses
 
     :::info:
-    [Trinity](root://wallets/0.1/trinity/introduction/overview.md) is the official IOTA wallet, which makes it easy to send IOTA tokens.
+    [Trinity](root://wallets/0.1/trinity/introduction/overview.md) is the official IOTA wallet, which makes it easy to transfer IOTA tokens.
     ::: 
 
 4. Get the balance and history for the user  
@@ -119,7 +119,7 @@ When you have a gRPC client, you can use it to send API calls to Hub to manage u
 	client.getBalance({userId: "Jake"}, pr)
 	```
 
-If you sent IOTA tokens to the deposit address, the output should display something like the following:
+If you transferred IOTA tokens to the deposit address, the output should display something like the following:
 
 ```shell
 10 i available for 'Jake'

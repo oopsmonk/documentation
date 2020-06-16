@@ -36,9 +36,9 @@ To deploy this application on your local network, complete the following instruc
 
     |**Configuration option**|**Description**|**Notes**|
     |:---|:-----|:----|
-    |`node` (required)|Set the `provider` field to the URL of an IOTA node. Set the `depth` field to a valid [depth](root://getting-started/0.1/transactions/depth.md), and the `mwm` field to a valid [minimum weight magnitude](root://getting-started/0.1/network/minimum-weight-magnitude.md).|When choosing an IOTA node, consider the [IOTA network](root://getting-started/0.1/network/iota-networks.md) that you want to use|
+    |`node` (required)|The IOTA network settings|When choosing a node, consider the IOTA network that you want to use|
     |`ipfs` (required)|Set the `provider` field to the URL of your IPFS node. If your IPFS node requires an authentication token, set this in the `token` field.||
-    |`dynamoDbConnection` (required)| Set these fields to the settings for your DynamoDB instance|This database is needed to keep track of transaction data so that it is never lost on the Tangle after a snapshot|
+    |`dynamoDbConnection` (required)| Set these fields to the settings for your DynamoDB instance|This database is needed to keep track of transaction data so that it is never lost in the Tangle after a snapshot|
     |`allowedDomains`| Set this field to the domains that may access the API.||
 
 5. From the `api` directory, start the API server in development mode
@@ -99,7 +99,7 @@ This page is the front end to the application, which you can use to test it.
 
     ![Retrieve File for IOTA IPFS Data Storage PoC](../images/data-storage-upload-validated.png)
 
-This completes the full lifecycle for storing, retrieving, and validating a file. The file metadata, SHA256 hash and IPFS hash that are stored in a transaction on the Tangle are immutable. If the file contents that you retrieve from the IPFS node don't match the ones on the Tangle, then the contents of that file can no longer be trusted.
+This completes the full lifecycle for storing, retrieving, and validating a file. The file metadata, SHA256 hash and IPFS hash that are stored in a transaction in the Tangle are immutable. If the file contents that you retrieve from the IPFS node don't match the ones in the Tangle, then the contents of that file can no longer be trusted.
 
 ## Next steps
 
