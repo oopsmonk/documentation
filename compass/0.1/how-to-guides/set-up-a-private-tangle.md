@@ -226,7 +226,7 @@ The `snapshot.example.txt` file puts the total IOTA supply of 2.7Pi in the first
 If the node to which Compass is connected becomes compromised, an attacker could manipulate Compass to receive favorable treatment. Possible scenarios include the following:
 - Return tip transactions that prioritize the attackers transactions over the regular tip selection algorithm.
 - Return tip transactions that lead to double spends, causing Compass to send an inconsistent milestone. IRI nodes will not accept this milestone and no more transactions will be confirmed.
-- Stop propagating milestone transactions to the rest of the network, causing no more transactions to be confirmed.
+- Stop gossiping milestone transactions to the rest of the network, causing no more transactions to be confirmed.
 :::
 
 ## Step 4. Run Compass

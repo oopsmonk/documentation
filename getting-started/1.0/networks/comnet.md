@@ -19,7 +19,7 @@ Transactions on the Comnet must use a minimum weight magnitude (MWM) of 10 to be
 Nodes on the Comnet use a Coordinator that is run by the IOTA community with the following address:
 
 ```
-BODHQPXSMDNHBWVZHVATBAHQGZSKWQLXYZNOXMKNUCOZCPTWHHNFBBHFOEGPTWGGUVDJPZAYZIMXIIGVD
+YBWDHGHUEB9KSOPONTLTOSSKITIBE9MXPASCLREDNV9HEABYBPTHRQGWNJWQFSYAYZRDXXIOZHWBC9DWC
 ```
 
 

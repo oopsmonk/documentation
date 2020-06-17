@@ -150,7 +150,7 @@
             },
             "solidify": {
                 "definition": "Request the past cone of all milestones in the Tangle from neighbors, starting from an entry point milestone and ending at the latest one",
-                "pos": "noun",
+                "pos": "verb",
                 "status": "preferred",
                 "image": ""
             },
@@ -192,7 +192,7 @@
                 "image": ""
             },
             "child": {
-                "definition": "Relationship between a transaction and those to which it is attached in the Tangle",
+                "definition": "A transaction that is directly attached to others in the Tangle",
                 "pos": "noun",
                 "status": "preferred",
                 "image": ""
@@ -264,7 +264,7 @@
                 "image": ""
             },
             "parent": {
-                "definition": "Transaction that is directly referenced by a child transaction",
+                "definition": "A transaction that has others directly attached to it",
                 "pos": "noun",
                 "status": "preferred",
                 "image": ""

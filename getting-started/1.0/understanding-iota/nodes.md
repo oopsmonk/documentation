@@ -37,7 +37,7 @@ Only when a transaction is confirmed, can nodes update their record of balances.
 
 ## Deciding which transactions are confirmed
 
-All transactions remain in this pending state until the node is sure of its validity. For a definition of a valid transaction, see [Transactions](../understanding-iota/transactions.md).
+All transactions remain in a pending state until the node is sure of its validity. For a definition of a valid transaction, see [Transactions](../understanding-iota/transactions.md).
 
 However, even when a transaction is valid, nodes may not be able to make a decision like in the case of a [double spend](../references/glossary.md#double-spend).
 
@@ -47,7 +47,7 @@ When nodes detect double spends they must decide which transaction to consider c
 
 All transactions must be attached to two existing transactions in the Tangle.
 
-To request tip transactions from the Tangle, clients use the node's API.
+To request tip transactions from the Tangle, clients use the node's `getTransactionsToApprove` API endpoint.
 
 All IOTA node software includes an algorithm for selecting tip transactions. These algorithms aim to select valid tip transactions with the best chance of being confirmed.
 
