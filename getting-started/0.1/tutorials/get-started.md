@@ -82,8 +82,8 @@ To use the library, your computer must have one of the following supported versi
 
 To install the library packages, you must have one of the following package managers:
 
-* [npm](https://www.npmjs.com/) (included in Node.js downloads)
-* [Yarn](https://yarnpkg.com/)
+- [npm](https://www.npmjs.com/) (included in Node.js downloads)
+- [Yarn](https://yarnpkg.com/)
 
 Install the library with npm:
 

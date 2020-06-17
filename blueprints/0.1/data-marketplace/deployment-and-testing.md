@@ -9,10 +9,10 @@ To submit sensor data to the Data Marketplace, you must have the following:
 ### Hardware
 
 - A sensor or device that generates data such as the following:
-    * [Netatmo Weather Station](https://www.netatmo.com/en-us/weather)
-    * [Bosch XDK](https://xdk.bosch-connectivity.com/) 
-    * [Nordic Semiconductor Thingy:52](https://www.nordicsemi.com/Software-and-Tools/Development-Tools/Nordic-Thingy-52-App)
-    * [Raspberry Pi with a sensor kit](https://www.adafruit.com/product/2733) 
+    - [Netatmo Weather Station](https://www.netatmo.com/en-us/weather)
+    - [Bosch XDK](https://xdk.bosch-connectivity.com/) 
+    - [Nordic Semiconductor Thingy:52](https://www.nordicsemi.com/Software-and-Tools/Development-Tools/Nordic-Thingy-52-App)
+    - [Raspberry Pi with a sensor kit](https://www.adafruit.com/product/2733) 
 
 ### Software
 
@@ -25,22 +25,22 @@ To submit sensor data to the Data Marketplace, you must have the following:
 Choose from one of the following cloud services:
 
 - Google Cloud
-    * [Web server](https://firebase.google.com/docs/hosting/)
-    * [Authentication service](https://firebase.google.com/docs/auth/)
-    * [NoSQL database](https://firebase.google.com/docs/firestore/)
-    * [Background tasks and API server](https://firebase.google.com/docs/functions)
+    - [Web server](https://firebase.google.com/docs/hosting/)
+    - [Authentication service](https://firebase.google.com/docs/auth/)
+    - [NoSQL database](https://firebase.google.com/docs/firestore/)
+    - [Background tasks and API server](https://firebase.google.com/docs/functions)
 
 - Amazon
-    * [Web server](https://aws.amazon.com/s3/)
-    * [API server](https://aws.amazon.com/api-gateway/)
-    * [NoSQL database](https://aws.amazon.com/dynamodb/)
-    * [Background tasks](https://aws.amazon.com/lambda/)
+    - [Web server](https://aws.amazon.com/s3/)
+    - [API server](https://aws.amazon.com/api-gateway/)
+    - [NoSQL database](https://aws.amazon.com/dynamodb/)
+    - [Background tasks](https://aws.amazon.com/lambda/)
 
 - Azure
-    * [Web server](https://azure.microsoft.com/en-us/services/storage/)
-    * [API server](https://azure.microsoft.com/en-us/services/app-service/)
-    * [NoSQL database](https://azure.microsoft.com/en-us/services/cosmos-db/)
-    * [Background tasks](https://azure.microsoft.com/en-us/services/functions/)
+    - [Web server](https://azure.microsoft.com/en-us/services/storage/)
+    - [API server](https://azure.microsoft.com/en-us/services/app-service/)
+    - [NoSQL database](https://azure.microsoft.com/en-us/services/cosmos-db/)
+    - [Background tasks](https://azure.microsoft.com/en-us/services/functions/)
 
 ### Programming knowledge
 

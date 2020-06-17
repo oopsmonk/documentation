@@ -26,10 +26,10 @@ To deploy the P2P energy grid app, you must have the following:
 Choose from one of the following cloud services or a local server:
 
 - Amazon
-    * [Web server](https://aws.amazon.com/s3/)
-    * [API server](https://aws.amazon.com/api-gateway/)
-    * [NoSQL database](https://aws.amazon.com/dynamodb/)
-    * [Background tasks](https://aws.amazon.com/lambda/)
+    - [Web server](https://aws.amazon.com/s3/)
+    - [API server](https://aws.amazon.com/api-gateway/)
+    - [NoSQL database](https://aws.amazon.com/dynamodb/)
+    - [Background tasks](https://aws.amazon.com/lambda/)
 
 - Local server
     * Storage: local file system
