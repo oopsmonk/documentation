@@ -2,7 +2,7 @@
     "headerTitle": "Developer Documentation",
     "headerTopLinks": [
         {
-            "href": "https://iota.org",
+            "href": "https://www.iota.org",
             "name": "iota.org"
         },
         {
@@ -12,10 +12,6 @@
         {
             "href": "https://ecosystem.iota.org/",
             "name": "ecosystem"
-        },
-        {
-            "href": "https://qubic.iota.org/",
-            "name": "qubic"
         },
         {
             "href": "https://roadmap.iota.org/",
