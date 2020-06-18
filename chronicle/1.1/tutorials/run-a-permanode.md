@@ -1,35 +1,76 @@
-# Run Chronicle on a Linux server
+# Run the permanode service
 
-**In this tutorial, you configure, compile, run, and test Chronicle**
+**In this tutorial, you use Chronicle's built-in permanode service to start storing transactions on a local Scylla node.**
 
 ## Prerequisites
 
 To complete this tutorial, you need the following:
 
-- [A Scylla cluster on a single data center](https://docs.scylladb.com/operating-scylla/procedures/cluster-management/create_cluster/) (Scylla version 4 or later). At the moment, Chronicle supports only clusters in a single data center.
+- A [Linux Ubuntu operating system](https://ubuntu.com/download#download)
+- [Rust](https://www.rust-lang.org/tools/install)
+- (Optional) An IDE that supports Rust autocompletion such as [Visual Studio Code](https://code.visualstudio.com/Download) with the [rust-analyzer](https://marketplace.visualstudio.com/items?itemName=matklad.rust-analyzer) extension
 
-- [Elixir](https://elixir-lang.org/install.html) version 1.8.1 or later and Erlang VM version 22 or later (included with Elixir). If your package manager doesn't offer these versions, use [this tool](https://github.com/asdf-vm/asdf ).
+## Step 1. Set up a Scylla node
 
-- [Phoenix](https://hexdocs.pm/phoenix/installation.html)
+For the purposes of this tutorial, you can start a local Scylla node in a Docker container. See the [Scylla documentation](https://docs.scylladb.com/operating-scylla/procedures/tips/best_practices_scylla_on_docker/#starting-a-single-scylla-node).
 
-- [Bazel](https://docs.bazel.build/versions/master/install.html)
+:::info:
+For production applications, it's best to set up many Scylla nodes so that you can recover data in the event that a node goes down.
+:::
 
-## Step 1. Configure Chronicle
+## Step 2. Install and configure the service
 
-1. Clone the repo and change into the `chronicle` directory
+In this step, you download the code from GitHub and configure it to connect to your Scylla node.
+
+To reduce the latency between Chronicle and the Scylla node, it's best to install Chronicle in the same datacenter as your Scylla node. For more information about datacenters, see the [Scylla University](https://university.scylladb.com/courses/scylla-essentials-overview/lessons/architecture/topic/datacenter/).
+
+1. Clone the repository and change into the `chronicle.rs` directory
 
     ```bash
-    git clone https://github.com/iotaledger/chronicle.git
-    cd chronicle
+    git clone https://github.com/iotaledger/chronicle.rs.git
+    cd chronicle.rs
     ```
 
-2. Open the core `config.exs` file
+2. Open the `examples/chronicle-alpha-v0_0_1/config.toml` file
 
     ```bash
-    sudo nano apps/core/config/config.exs
+    sudo nano examples/chronicle-alpha-v0_0_1/config.toml
     ```
 
-3. In the `__ DATA_CENTERS__` object, change the IP address from `127.0.0.1` to the IP address of your Scylla cluster
+3. Add the IP address of your Scylla node. Replace the`$IPADDRESS` placeholder with your Scylla node's IP address.
+
+    ```bash
+    [scylla_cluster]
+    addresses = ["172.17.0.2:9042"]
+    ```
+
+4. Set the `replication_factor_per_data_center` to 1
+
+    ```bash
+    replication_factor_per_data_center = 2
+    ```
+
+    :::info:
+    The replication factor is equivalent to the number of Scylla nodes on which you want to store the transactions.
+
+    Because you have only one Scylla node, you can change the replication factor to 1.
+
+    For details about this concept, see the [Scylla University](https://university.scylladb.com/courses/scylla-essentials-overview/lessons/high-availability/topic/fault-tolerance-replication-factor/).
+    :::
+
+5. If you want to load historical transactions into your Scylla node, download them from the [IOTA Foundation's archive](https://dbfiles.iota.org/?prefix=mainnet/history/), and add the file paths to the `files` field
+
+6. If you want to get transactions from more than one IOTA node, add their URLs to the `trytes_nodes` and `sn_trytes_nodes` fields
+
+    :::info:
+    The permanode service will get all transactions that include a valid proof of work from the nodes in the `trytes_nodes` field.
+
+    The permanode service will get all confirmed transactions from the nodes in the `sn_trytes_nodes` field.
+    :::
+
+## Step 3. Run the service
+
+In this step, you run the permanode service, and examine the logs to make sure that it is receiving and storing transactions.
 
 4. Open the broker `config.exs` file
 
@@ -142,12 +183,6 @@ You should see something like the following:
 The `snapshotIndex` field is the index of the milestone that confirmed the transaction.
 
 If this field is `null`, the transaction is pending.
-:::
-
-:::warning:
-At the moment, Chronicle does not know when a transaction is confirmed.
-
-This issue will be solved when the next version of the IRI is released with [this  pull request](https://github.com/iotaledger/iri/pull/1551).
 :::
 
 :::success: Congratulations :tada:
