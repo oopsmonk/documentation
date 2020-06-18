@@ -56,7 +56,7 @@ This solution leads to the following benefits:
 - Custodians can save costs associated with supporting requests for returnable assets that are declared missing
 
 :::info:
-Future scenarios the use of the IOTA token (and Qubic smart contracts) could allow you to create incentives to reward custodians who participate in tracking and tracing returnable assets, despite the country and the currency in which the assets are handled.
+Future scenarios the use of the IOTA token (and smart contracts) could allow you to create incentives to reward custodians who participate in tracking and tracing returnable assets, despite the country and the currency in which the assets are handled.
 :::
 
 This image presents a simplified stakeholders map and the different actions each stakeholder should perform when in contact with a returnable asset.
