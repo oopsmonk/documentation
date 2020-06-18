@@ -10,11 +10,11 @@ If you can't find the solution to your issue, reach out to the Trinity team on t
 
 ## Incorrect balance
 
-Trinity regularly updates your balance by asking [nodes](root://getting-started/0.1/network/nodes.md) for the balance of all [addresses](root://getting-started/0.1/clients/addresses.md) associated with your [seed](root://getting-started/0.1/clients/seeds.md).
+Trinity regularly updates your balance by asking nodes for the balance of all addresses associated with your seed.
 
-If Trinity can't connect to an IOTA node, it may display an incorrect balance.
+If Trinity can't connect to a node, it may display an incorrect balance.
 
-To fix this problem, Trinity keeps a list of your generated addresses so that you can re-synchronize it the next time Trinity connects to an IOTA node.
+To fix this problem, Trinity keeps a list of your generated addresses so that you can re-synchronize it the next time Trinity connects to a node.
 
 If you think your balance is wrong, you can synchronize Trinity by going to **Settings** > **Account** > **Account management** > **Tools** > **Sync account**, or you can [perform a snapshot transition](../how-to-guides/perform-a-snapshot-transition.md).
 
@@ -40,7 +40,7 @@ Trinity is stateful, which means that it stores a local copy of your transaction
 
 ## Pending transaction
 
-If a transaction on the [Tangle](root://getting-started/0.1/network/the-tangle.md) is pending for a long time, make sure that the [Auto-promotion setting](../how-to-guides/auto-promote.md) is set to **Enabled**.
+If a transaction on the Tangleis pending for a long time, make sure that the [Auto-promotion setting](../how-to-guides/auto-promote.md) is set to **Enabled**.
 
 :::info:
 Auto-promotion is available on mobile devices only when Trinity is in the foreground.
@@ -50,7 +50,7 @@ Auto-promotion is available on mobile devices only when Trinity is in the foregr
 
 Trinity may stop you from sending a transaction for any of the following reasons:
 
-- If you have funds on a [spent address]root://getting-started/0.1/clients/addresses.md#spent-addresses, Trinity stops you withdrawing from that address to protect your IOTA tokens.
+- If you have funds on a [spent address]root://getting-started/1.0/references/glossary.md#spent-address, Trinity stops you withdrawing from that address to protect your IOTA tokens.
 - If the address you are sending to is spent, Trinity will stop you from sending to that address to protect your IOTA tokens. In this case, ask the recipient for a new address.
 - If you are sending more than one transaction, you may need to wait for your first transaction to be confirmed before sending another one
 

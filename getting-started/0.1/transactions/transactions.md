@@ -74,7 +74,7 @@ For example, this input transaction contains an instruction to withdraw 100 Mi f
 
 ### Output transactions
 
-Output transactions deposit IOTA tokens into an address.
+Output transactions transfer IOTA tokens to an address.
 
 A valid output transaction must always contain the following:
 

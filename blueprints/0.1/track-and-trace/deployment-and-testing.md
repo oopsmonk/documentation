@@ -1,6 +1,6 @@
 # Deploy and test the track and trace demo
 
-**To start tracking data on the Tangle, deploy the application and use our graphical user interface to trace existing assets and create new ones.**
+**To start tracking data in the Tangle, deploy the application and use our graphical user interface to trace existing assets and create new ones.**
 
 ## Prerequisites
 

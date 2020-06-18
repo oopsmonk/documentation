@@ -7,7 +7,7 @@
 ## Learn about the software that runs the IOTA Mainnet and how you could benefit the network by running it
 
 [Chronicle](root://chronicle/1.0/overview.md)
-## Run an IOTA node that keeps all transactions in a separate distributed database to record all historic transactions
+## Run a node that keeps all transactions in a separate distributed database to record all historic transactions
 
 [GoShimmer](root://goshimmer/1.0/overview.md)
 ## Experiment with the prototype node software that does not have a Coordinator

@@ -1,6 +1,6 @@
 # Send a micropayment in Python
 
-**In this tutorial, you send a micropayment of 1 IOTA by sending a [transfer bundle](root://getting-started/0.1/transactions/bundles.md) to a [node](root://getting-started/0.1/network/nodes.md).**
+**In this tutorial, you send a micropayment of 1 IOTA to a node.**
 
 ## Packages
 
@@ -12,15 +12,15 @@ pip install pyota
 
 ## IOTA network
 
-In this tutorial, we connect to a [node](root://getting-started/0.1/network/nodes.md) on the [Devnet](root://getting-started/0.1/network/iota-networks.md#devnet) with the following network settings:
+In this tutorial, we connect to a node on the [Devnet](root://getting-started/1.0/networks/overview.md) with the following network settings:
 
-- **[Minimum weight magnitude](root://getting-started/0.1/network/minimum-weight-magnitude.md)**: 9
+- **[minimum weight magnitude](root://getting-started/1.0/references/glossary.md#minimum-weight-magnitude)**: 9
 
-- **[Depth](root://getting-started/0.1/transactions/depth.md)**: 3
+- **[Depth](root://getting-started/1.0/clients/sending-a-transaction.md#choosing-a-depth)**: 3
 
 ## Step 1. Get test IOTA tokens
 
-To send test IOTA tokens on the Devnet, the IOTA nodes must have a record of a greater than 0 balance for one of the addresses that belongs to your seed. To get test IOTA tokens to use on the Devnet, you can use the Devnet faucet.
+To send test IOTA tokens on the Devnet, nodes must have a record of a greater than 0 balance for one of the addresses that belongs to your seed. To get test IOTA tokens to use on the Devnet, you can use the Devnet faucet.
 
 1\. Create a new seed and back it up
 
@@ -75,14 +75,14 @@ To transfer your test tokens from one address to another, you need to create and
     Because this bundle transfers IOTA tokens, the seed is used to sign it. Therefore, this seed's addresses must contain at least 1 IOTA token.
     :::
 
-3. Connect to an IOTA node
+3. Connect to a node
 
     ```python
     api = Iota('https://nodes.devnet.iota.org:443', seed, testnet = True)
     ```
 
     :::info:
-    The `testnet` argument sets the [minimum weight magnitude](root://getting-started/0.1/network/minimum-weight-magnitude.md) to 9.
+    The `testnet` argument sets the [minimum weight magnitude](root://getting-started/1.0/references/glossary.md#minimum-weight-magnitude) to 9.
     :::
 
 4. Define the address to which you want to send your IOTA token
@@ -100,7 +100,7 @@ To transfer your test tokens from one address to another, you need to create and
     )
     ```
 
-6. To create a transfer bundle from your `ProposedTransaction` object, pass it to the [`send_transfer()`](https://pyota.readthedocs.io/en/latest/api.html#send-transfer) method, which handles [tip selection](root://getting-started/0.1/network/tip-selection.md), [remote proof of work](root://getting-started/0.1/transactions/proof-of-work.md), and sending the bundle to the [node](root://getting-started/0.1/network/nodes.md)
+6. To create a transfer bundle from your `ProposedTransaction` object, pass it to the [`send_transfer()`](https://pyota.readthedocs.io/en/latest/api.html#send-transfer) method, which handles tip selection, remote proof of work, and sending the bundle to the node. For details about this process, see [Sending a transaction](root://getting-started/1.0/clients/sending-a-transaction.md).
 
     ```python
     result = api.send_transfer(transfers=[tx] )

@@ -18,7 +18,7 @@
 
 [How-to guides/C/Send a "hello world" transaction](/how-to-guides/c/send-your-first-bundle.md)
 
-[How-to guides/C/Read transactions on the Tangle](/how-to-guides/c/read-transactions.md)
+[How-to guides/C/Read transactions in the Tangle](/how-to-guides/c/read-transactions.md)
 
 [How-to guides/C/Generate a new address](/how-to-guides/c/generate-an-address.md)
 
@@ -38,7 +38,7 @@
 
 [How-to guides/Go/Check the balance of an address](/how-to-guides/go/check-balance.md)
 
-[How-to guides/Go/Listen for live transactions on the Tangle](/how-to-guides/go/listen-for-transactions.md)
+[How-to guides/Go/Listen for live transactions in the Tangle](/how-to-guides/go/listen-for-transactions.md)
 
 [How-to guides/Java/Get started](/how-to-guides/java/get-started.md)
 
@@ -52,7 +52,7 @@
 
 [How-to guides/Java/Check the balance of an address](/how-to-guides/java/check-balance.md)
 
-[How-to guides/Java/Listen for live transactions on the Tangle](/how-to-guides/java/listen-for-transactions.md)
+[How-to guides/Java/Listen for live transactions in the Tangle](/how-to-guides/java/listen-for-transactions.md)
 
 [How-to guides/JavaScript/Get started](/how-to-guides/js/get-started.md)
 
@@ -66,7 +66,7 @@
 
 [How-to guides/JavaScript/Check the balance of an address](/how-to-guides/js/check-balance.md)
 
-[How-to guides/JavaScript/Listen for live transactions on the Tangle](/how-to-guides/js/listen-for-transactions.md)
+[How-to guides/JavaScript/Listen for live transactions in the Tangle](/how-to-guides/js/listen-for-transactions.md)
 
 [How-to guides/JavaScript/Check if a transaction is confirmed](/how-to-guides/js/check-transaction-confirmation.md)
 
@@ -90,7 +90,7 @@
 
 [How-to guides/Python/Check the balance of an address](/how-to-guides/python/check-balance.md)
 
-[How-to guides/Python/Listen for live transactions on the Tangle](/how-to-guides/python/listen-for-transactions.md)
+[How-to guides/Python/Listen for live transactions in the Tangle](/how-to-guides/python/listen-for-transactions.md)
 
 [Account module/Introduction/Overview](/account-module/introduction/overview.md)
 

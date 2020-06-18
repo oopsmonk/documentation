@@ -6,7 +6,7 @@
 Running an open source project, like any human endeavor, involves uncertainty and trade-offs. We hope the architecture described below helps you to deploy similar systems, but it may include mistakes, and can’t address every situation. If you have any questions about your project, we encourage you to do your own research, seek out experts, and discuss them with the IOTA community.
 :::
 
-This blueprint uses the following architecture whereby clients upload files to the API server, which sends the files to an InterPlanetary File System (IPFS) node and attaches the IPFS hashes to transactions on the Tangle.
+This blueprint uses the following architecture whereby clients upload files to the API server, which sends the files to an InterPlanetary File System (IPFS) node and attaches the IPFS hashes to transactions in the Tangle.
 
 ![Data Storage PoC - IOTA/IPFS - Architecture](../images/data-storage-ipfs.png)
 
@@ -98,7 +98,7 @@ const tanglePayload = {
    ipfs: addResponse[0].hash
 };
 
-// Connect to an IOTA node
+// Connect to a node
 const iota = composeAPI({
         provider: config.provider
     });
@@ -120,7 +120,7 @@ const trytes = await iota.prepareTransfers(
 const bundle = await iota.sendTrytes(trytes, config.depth, config.mwm);
 ```
 
-The bundle returned from the `sendTrytes()` method contains the transaction hash, which is returned to the client to use for reading the data on the Tangle.
+The bundle returned from the `sendTrytes()` method contains the transaction hash, which is returned to the client to use for reading the data in the Tangle.
 
 ## retrieveFile()
 
@@ -137,7 +137,7 @@ To retrieve a file and validate its contents, the client does the following:
 To get the file data from the Tangle, we request the transaction from the IOTA node, using the transaction hash.
 
 ```javascript
-// Connect to an IOTA node
+// Connect to a node
 const iota = composeAPI({
         provider: config.provider
     });

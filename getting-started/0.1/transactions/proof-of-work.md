@@ -6,7 +6,7 @@
 
 To calculate the PoW for a [transaction](../transactions/transactions.md), the values of all the transaction fields are converted to [trits](../introduction/ternary.md) and hashed, using the [Curl](https://github.com/iotaledger?utf8=%E2%9C%93&q=curl&type=&language=) [hash function](https://en.wikipedia.org/wiki/Hash_function).
 
-This process continues until the transaction hash ends in the same number of 0 trits as the ([minimum weight magnitude](root://getting-started/0.1/transactions/proof-of-work.md#minimum-weight-magnitude)).
+This process continues until the transaction hash ends in the same number of 0 trits as the ([minimum weight magnitude](root://getting-started/1.0/references/glossary.md#minimum-weight-magnitude)).
 
 Whenever the transaction hash doesn't end in the correct number of 0 trits, the value of the transaction's `nonce` field is incremented and the transaction hash is hashed again.
 
@@ -16,11 +16,11 @@ You have the following options for doing PoW.
 
 ### Remote proof of work
 
-Remote PoW is when you ask an IOTA node to do PoW for a transaction. You do this by calling the [`attachToTangle` endpoint](root://iri/1.0/references/iri-api-reference.md#attachToTangle).
+Remote PoW is when you ask a node to do PoW for a transaction. You do this by calling the [`attachToTangle` endpoint](root://iri/1.0/references/iri-api-reference.md#attachToTangle).
 
 ### Local proof of work
 
-Local PoW is when your local device does PoW for each transaction before sending it to an IOTA node. 
+Local PoW is when your local device does PoW for each transaction before sending it to a node. 
 
 ### Outsourced proof of work
 

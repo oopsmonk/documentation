@@ -1,20 +1,14 @@
 # Send a micropayment in C
 
-**In this tutorial, you send a micropayment of 1 IOTA by sending a [transfer bundle](root://getting-started/0.1/transactions/bundles.md) to a [node](root://getting-started/0.1/network/nodes.md).**
+**In this tutorial, you send a micropayment of 1 IOTA to a node.**
 
 ## IOTA network
 
-In this tutorial, we connect to a [node](root://getting-started/0.1/network/nodes.md) on the [Devnet](root://getting-started/0.1/network/iota-networks.md#devnet) with the following network settings:
-
-- **[Minimum weight magnitude](root://getting-started/0.1/network/minimum-weight-magnitude.md)**: 9
-
-- **[Depth](root://getting-started/0.1/transactions/depth.md)**: 3
-
-These settings are defined in a `config.h` file, which is created in the [getting started guide](root://client-libraries/1.0/getting-started/c-quickstart.md).
+The network settings are defined in a `config.h` file. See [C quickstart](root://client-libraries/1.0/getting-started/c-quickstart.md).
 
 ## Step 1. Get test IOTA tokens
 
-To send test IOTA tokens on the Devnet, the IOTA nodes must have a record of a greater than 0 balance for one of the addresses that belongs to your seed. To get test IOTA tokens to use on the Devnet, you can use the Devnet faucet.
+To send test IOTA tokens on the Devnet, nodes must have a record of a greater than 0 balance for one of the addresses that belongs to your seed. To get test IOTA tokens to use on the Devnet, you can use the Devnet faucet.
 
 1\. Create a new seed and back it up
 
@@ -98,7 +92,7 @@ To transfer your test tokens from one address to another, you need to create and
     transfer_array_add(transfers, &tf);
     ```
 
-5. To create a bundle from your `transfers` array, pass it to the [`iota_client_send_transfer()`](https://github.com/iotaledger/entangled/blob/develop/cclient/api/extended/send_transfer.h) method, which handles [tip selection](root://getting-started/0.1/network/tip-selection.md), [remote proof of work](root://getting-started/0.1/transactions/proof-of-work.md), and sending the bundle to the IOTA node
+5. To create a bundle from your `transfers` array, pass it to the [`iota_client_send_transfer()`](https://github.com/iotaledger/entangled/blob/develop/cclient/api/extended/send_transfer.h) method, which handles tip selection, remote proof of work, and sending the bundle to the node. For details about this process, see [Sending a transaction](root://getting-started/1.0/clients/sending-a-transaction.md).
 
     ```go
     // Create a bundle from the transfers array and send it to the IOTA node
@@ -173,7 +167,7 @@ In this scenario, you wouldn't know in advance whether the address is spent duri
 
 For example, you are online shopping and the checkout has a QR code that gives you the option to pay in IOTA tokens. This QR code contains an address that is auto-populated in Trinity.
 
-During the time it takes you to complete the checkout and send your transfer bundle, the website owner withdraws IOTA tokens from the address in the QR code. Now that address is spent, and you have just sent IOTA tokens to it.
+During the time it takes you to complete the checkout and send your transfer bundle, the website owner withdraws IOTA tokens from the address in the QR code. Now that address is spent, and you have just transferred IOTA tokens to it.
 
 To help stop this from happening, we recommend using the [account module](root://account-module/1.0/overview.md) to create conditional deposit addresses that specify whether they are active or expired.
 

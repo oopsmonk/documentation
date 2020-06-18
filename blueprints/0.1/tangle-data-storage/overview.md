@@ -16,7 +16,7 @@ A common requirement for nearly all use cases or applications is that data must 
 However, the Tangle is not a database. The Tangle is an immutable, distributed ledger which allows you to store a hash of data and a pointer to its location in third-party data storage.
 
 :::info:
-Although permanent storage on the Tangle isn't currently possible, the IOTA Foundation are developing a solution called [Chronicle](root://chronicle/1.0/overview.md).
+Although permanent storage in the Tangle isn't currently possible, the IOTA Foundation are developing a solution called [Chronicle](root://chronicle/1.0/overview.md).
 :::
 
 ### Solution
@@ -45,5 +45,5 @@ Learn how to use the JavaScript client library to create, send, and receive tran
 #### IPFS ####
 [Link](https://ipfs.io/)
 
-This blueprint stores files on IPFS, then attaches the immutable, permanent IPFS links to the Tangle. This secures your content, without having to put the whole file on the Tangle.
+This blueprint stores files on IPFS, then attaches the immutable, permanent IPFS links to the Tangle. This secures your content, without having to put the whole file in the Tangle.
 ---------------

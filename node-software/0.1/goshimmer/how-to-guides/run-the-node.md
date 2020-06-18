@@ -1,15 +1,15 @@
 # Run a GoShimmer node
 
-**In this tutorial, you install and run an IOTA node on the GoShimmer network to test the network and keep up to date with regular changes.**
+**In this tutorial, you install and run a node on the GoShimmer network to test the network and keep up to date with regular changes.**
 
-You have the following options for running an IOTA node:
+You have the following options for running a node:
 
 - Quickstart
 - Native install
 
 ## Prerequisites
 
-To run an IOTA node, you need the following:
+To run a node, you need the following:
 
 - [Git](https://git-scm.com/downloads)
 - [Forward ports](root://general/0.1/how-to-guides/expose-your-local-device.md) 14626(TCP/UDP) and 14666 (TCP) to the device that's running the IOTA node
@@ -17,7 +17,7 @@ To run an IOTA node, you need the following:
 
 ## Quickstart
 
-In this section, you run an IOTA node on your native filesystem, using the pre-built executable file on the GoShimmer GitHub repository. 
+In this section, you run a node on your native filesystem, using the pre-built executable file on the GoShimmer GitHub repository. 
 
 1. Go to the [GoShimmer release page](https://github.com/iotaledger/goshimmer/releases)
 

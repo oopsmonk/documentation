@@ -1,10 +1,10 @@
 # Listen for live transactions in Java
 
-**In this tutorial, you listen to the Tangle for recent transactions by subscribing to the [zero message queue (ZMQ)](https://zeromq.org/) on [nodes](root://getting-started/0.1/network/nodes.md).**
+**In this tutorial, you listen to the Tangle for recent transactions by subscribing to events on a node.**
 
 ## IOTA network
 
-In this tutorial, we connect to an IOTA node on the [Devnet](root://getting-started/0.1/network/iota-networks.md#devnet).
+In this tutorial, we connect to a node on the [Devnet](root://getting-started/1.0/networks/overview.md).
 
 ## Code walkthrough
 
@@ -16,7 +16,7 @@ In this tutorial, we connect to an IOTA node on the [Devnet](root://getting-star
     import org.zeromq.ZMQ;
     ```
 
-2. Connect the socket to an IOTA node's ZMQ port
+2. Connect the socket to a node's ZMQ port
 
     ```java
 	ZMQ.Context context = ZMQ.context(1);

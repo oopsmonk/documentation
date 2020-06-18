@@ -5,7 +5,7 @@
 With Channels, you can:
 
 - Sign and encrypt messages, allowing others to verify your identity on the channel
-- Publish messages on the Tangle, making them transparent and tamperproof
+- Publish messages in the Tangle, making them transparent and tamperproof
 - Give permission to others to encrypt and decrypt messages
 
 ## Limitations

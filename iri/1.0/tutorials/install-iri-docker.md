@@ -27,7 +27,7 @@ These are some example configurations:
 --------------------
 ### Mainnet
 
-This file configures IRI to run on the Mainnet, exposes the API on port 14265, and keeps all transactions in the ledger instead of doing [local snapshots](root://getting-started/0.1/network/nodes.md#local-snapshots).
+This file configures IRI to run on the Mainnet, exposes the API on port 14265, and keeps all transactions in the database.
 
 ```bash
 [IRI]
@@ -79,7 +79,7 @@ Now that your node is up and running, it'll start to synchronize its ledger with
 
 ## Step 2. Check that the IOTA node is synchronized
 
-An IOTA node is considered synchronized when the `latestMilestoneIndex` field is equal to the `latestSolidSubtangleMilestoneIndex` field:
+A node is considered synchronized when the `latestMilestoneIndex` field is equal to the `latestSolidSubtangleMilestoneIndex` field:
 
 - `latestMilestoneIndex`: Index of the latest milestone that the IOTA node has received from its neighbors. This field is accurate only when the IOTA node is connected to synchronized neighbors.
 

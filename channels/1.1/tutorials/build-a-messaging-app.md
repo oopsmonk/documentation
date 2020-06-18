@@ -104,7 +104,7 @@ In this step, you write a function that announces a new channel. This channel is
     The [`?`](https://doc.rust-lang.org/edition-guide/rust-2018/error-handling-and-panics/the-question-mark-operator-for-easier-error-handling.html) operator is for handling any errors that may be produced while creating the message.
     :::
 
-    The `send_message_with_options()` method uses the IOTA client library to convert messages into bundles and send the resulting transactions to an IOTA node.
+    The `send_message_with_options()` method uses the IOTA client library to convert messages into bundles and send the resulting transactions to a node.
 
     This method returns an error only if the bundle was not sent to the IOTA node. Therefore, if you see no error, the bundle was sent.
 
@@ -161,7 +161,7 @@ In this step, you write a function that creates and publishes an alert about bre
 
     For more information about linking, see [Linking messages](../guides/linking-messages.md).
 
-4. Convert the public payload to a `Trytes` type to be able to send it to an IOTA node
+4. Convert the public payload to a `Trytes` type to be able to send it to a node
 
     ```rust
     let public_payload = Trytes(Tbits::from_str(&public_payload).unwrap());
@@ -218,7 +218,7 @@ In this step, you create the main function that calls the ones you just created.
     use crate::api_author::send_message::send_signed_message;
     ```
 
-2. In the `main()` function, connect to an IOTA node and change the default settings to use [remote proof of work](root://getting-started/0.1/transactions/proof-of-work.md)
+2. In the `main()` function, connect to a node and change the default settings to use remote proof of work
 
     ```rust
     let mut client = iota_client::Client::new("https://nodes.devnet.iota.org:443");
@@ -372,14 +372,14 @@ In this step, you write a function to read the API author's message from the Tan
     }
     ```
 
-8. In the `main()` function, add the code to connect to an IOTA node, and call the functions
+8. In the `main()` function, add the code to connect to a node, and call the functions
 
     ```rust
     // Create a new subscriber
     // REPLACE THE SECRET WITH YOUR OWN
     let mut subscriber = Subscriber::new("MYSUBSCRIBERSECRETSTRING", true);
 
-    // Connect to an IOTA node
+    // Connect to a node
     let mut client = iota_client::Client::new("https://nodes.devnet.iota.org:443");
 
     // Get the arugments that were passed to the subscriber

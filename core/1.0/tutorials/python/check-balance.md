@@ -1,6 +1,6 @@
 # Check the balance of an address in Python
 
-**In this tutorial, you request the total balance of [IOTA tokens](root://getting-started/0.1/clients/token.md) on a seed's [addresses](root://getting-started/0.1/clients/addresses.md) from a [node](root://getting-started/0.1/network/nodes.md).**
+**In this tutorial, you request the total balance of IOTA tokens on a seed's addresses from a node.**
 
 ## Packages
 
@@ -12,7 +12,7 @@ pip install pyota
 
 ## IOTA network
 
-In this tutorial, we connect to an IOTA node on the [Devnet](root://getting-started/0.1/network/iota-networks.md#devnet).
+In this tutorial, we connect to a node on the [Devnet](root://getting-started/1.0/networks/overview.md).
 
 ## Code walkthrough
 
@@ -28,7 +28,7 @@ In this tutorial, we connect to an IOTA node on the [Devnet](root://getting-star
     seed = 'JBN9ZRCOH9YRUGSWIQNZWAIFEZUBDUGTFPVRKXWPAUCEQQFS9NHPQLXCKZKRHVCCUZNF9CZZWKXRZVCWQ'
     ```
 
-3. Connect to an IOTA node
+3. Connect to a node
 
     ```python
     api = Iota('https://nodes.devnet.iota.org:443', seed)
@@ -65,6 +65,6 @@ Click the green button to run the sample code in this tutorial and see the resul
 
 ## Next steps
 
-[Listen for live transactions on the Tangle](../python/listen-for-transactions.md).
+[Listen for live transactions in the Tangle](../python/listen-for-transactions.md).
 
 You can also check the balance of an address, using a utility such as the [Tangle explorer](https://utils.iota.org).

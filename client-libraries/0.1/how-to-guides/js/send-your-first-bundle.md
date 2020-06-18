@@ -1,6 +1,6 @@
 # Send a "hello world" transaction in Node.js
 
-**In this tutorial, you send a "hello world" message in a zero-value transaction. These transactions are useful for storing messages on the [Tangle](root://getting-started/0.1/network/the-tangle.md) without having to send any [IOTA tokens](root://getting-started/0.1/clients/token.md).**
+**In this tutorial, you send a "hello world" message in a zero-value transaction. These transactions are useful for storing messages on the Tanglewithout having to send any IOTA tokens.**
 
 ## Packages
 
@@ -20,11 +20,11 @@ yarn add @iota/core @iota/converter
 
 ## IOTA network
 
-In this tutorial, we connect to a [node](root://getting-started/0.1/network/nodes.md) on the [Devnet](root://getting-started/0.1/network/iota-networks.md#devnet) with the following network settings:
+In this tutorial, we connect to a node on the [Devnet](root://getting-started/1.0/networks/overview.md) with the following network settings:
 
-- **[Minimum weight magnitude](root://getting-started/0.1/network/minimum-weight-magnitude.md)**: 9
+- **[minimum weight magnitude](root://getting-started/1.0/references/glossary.md#minimum-weight-magnitude)**: 9
 
-- **[Depth](root://getting-started/0.1/transactions/depth.md)**: 3
+- **[Depth](root://getting-started/1.0/clients/sending-a-transaction.md#choosing-a-depth)**: 3
 
 ## Code walkthrough
 
@@ -35,7 +35,7 @@ In this tutorial, we connect to a [node](root://getting-started/0.1/network/node
     const Converter = require('@iota/converter');
     ```
 
-2. Connect to an IOTA node
+2. Connect to a node
 
     ```js
     const iota = Iota.composeAPI({
@@ -50,7 +50,7 @@ In this tutorial, we connect to a [node](root://getting-started/0.1/network/node
     const minimumWeightMagnitude = 9;
     ```
 
-4. Define an [address](root://getting-started/0.1/clients/addresses.md) to which you want to send a message
+4. Define an address to which you want to send a message
 
     ```js
     const address =
@@ -58,7 +58,7 @@ In this tutorial, we connect to a [node](root://getting-started/0.1/network/node
     ```
 
     :::info:
-    This address does not have to belong to anyone. To be valid, the address just needs to consist of 81 [trytes](root://getting-started/0.1/introduction/ternary.md).
+    This address does not have to belong to anyone. To be valid, the address just needs to consist of 81 trytes. For more information about trytes, see [Ternary](root://getting-started/1.0/understanding-iota/ternary.md).
     :::
 
 5. Define a seed
@@ -97,7 +97,7 @@ In this tutorial, we connect to a [node](root://getting-started/0.1/network/node
     ];
     ```
 
-8. To create a bundle from your `transfers` object, pass it to the [`prepareTransfers()`](https://github.com/iotaledger/iota.js/blob/next/api_reference.md#module_core.prepareTransfers) method. Then, pass the returned bundle trytes to the [`sendTrytes()`](https://github.com/iotaledger/iota.js/blob/next/api_reference.md#module_core.sendTrytes) method, which handles [tip selection](root://getting-started/0.1/network/tip-selection.md), [remote proof of work](root://getting-started/0.1/transactions/proof-of-work.md), and sending the bundle to the IOTA node
+8. To create a bundle from your `transfers` object, pass it to the [`prepareTransfers()`](https://github.com/iotaledger/iota.js/blob/next/api_reference.md#module_core.prepareTransfers) method. Then, pass the returned bundle trytes to the [`sendTrytes()`](https://github.com/iotaledger/iota.js/blob/next/api_reference.md#module_core.sendTrytes) method, which handles tip selection, remote proof of work, and sending the bundle to the node. For details about this process, see [Sending a transaction](root://getting-started/1.0/clients/sending-a-transaction.md).
 
     ```js
    IOTA.prepareTransfers(seed, transfers)
@@ -121,9 +121,9 @@ You can use this tail transaction hash to read the transaction from the Tangle.
 :::
 
 :::warning:
-Nodes can delete old transactions from their local copies of the Tangle. Therefore, a time may come where you request your transaction from an IOTA node, but the IOTA node doesn't have it anymore.
+Nodes can delete old transactions from their local copies of the Tangle. Therefore, a time may come where you request your transaction from a node, but the IOTA node doesn't have it anymore.
 
-If you want to store data on the Tangle for extended periods of time, we recommend [running your own node](root://node-software/1.0/overview.md).
+If you want to store data in the Tangle for extended periods of time, we recommend [running your own node](root://node-software/1.0/overview.md).
 :::
 
 ## Run the code

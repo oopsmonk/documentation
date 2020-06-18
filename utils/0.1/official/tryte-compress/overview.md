@@ -1,6 +1,6 @@
 # Trytes compressor
 
-**When you send a bundle of transactions to an IOTA node, sometimes those transactions don't reach the rest of the network, so they will never be confirmed. For example, an IOTA node may go offline before it can forward your transactions to its neighbors. As a result, we recommend that you store the transaction trytes so that you can later rebroadcast or reattach them. To store transaction trytes in a smaller memory space, use the trytes compressor tool to compress the trytes into bytes.**
+**When you send a bundle of transactions to a node, sometimes those transactions don't reach the rest of the network, so they will never be confirmed. For example, a node may go offline before it can forward your transactions to its neighbors. As a result, we recommend that you store the transaction trytes so that you can later rebroadcast or reattach them. To store transaction trytes in a smaller memory space, use the trytes compressor tool to compress the trytes into bytes.**
 
 The algorithm that compresses the trytes uses a combination of run-length encoding and huffman encoding based on a static huffman tree to reduce the amount of memory space that they occupy by up to 75%.
 
@@ -8,7 +8,7 @@ This algorithm is also lightweight enough to be used by embedded devices.
 
 ## Compress and store a zero-value transaction
 
-In this example, we create and send a transaction on the [Devnet](root://getting-started/0.1/network/iota-networks.md#devnet). The Devnet is similar to the Mainnet, except the tokens are free. Any transactions that you send to the Devnet do not exist on other networks such as the Mainnet.
+In this example, we create and send a transaction on the [Devnet](root://getting-started/1.0/networks/overview.md). The Devnet is similar to the Mainnet, except the tokens are free. Any transactions that you send to the Devnet do not exist on other networks such as the Mainnet.
 
 Then, we use the [trytes compressor API](https://github.com/iotaledger/tryte-compress-js/blob/master/docs/api.md) to compress the transaction trytes and store them in a binary file on the local device.
 
@@ -217,7 +217,7 @@ Use the [trytes compressor utility](https://utils.iota.org/compress) to compress
 
     ![Compressor](../images/compress.png)
 
-Use the trytes compressor API to decompress the trytes before resending them to an IOTA node. For example, you could do the following:
+Use the trytes compressor API to decompress the trytes before resending them to a node. For example, you could do the following:
 
     ```js
     function readCompressedTailTransaction (file){

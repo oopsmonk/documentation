@@ -1,6 +1,6 @@
 # Run IRI
 
-**In this tutorial, you install and run the IRI node software, which turns your device into an IOTA node on an IOTA network.**
+**In this tutorial, you install and run the IRI node software, which turns your device into a node on an IOTA network.**
 
 :::warning:
 This software is now in maintenance mode. Only critical fixes will be made. We recommend using [Hornet](root://hornet/1.0/overview.md).
@@ -51,7 +51,7 @@ These are some example configurations:
 --------------------
 ### Mainnet
 
-This file configures IRI to run on the Mainnet, exposes the API on port 14265, and keeps all transactions in the ledger instead of doing [local snapshots](root://getting-started/0.1/network/nodes.md#local-snapshots).
+This file configures IRI to run on the Mainnet, exposes the API on port 14265, and keeps all transactions in the database.
 
 ```bash
 [IRI]
@@ -287,7 +287,7 @@ These are some example configurations:
 --------------------
 ### Mainnet
 
-This file configures IRI to run on the Mainnet, exposes the API on port 14265, and keeps all transactions in the ledger instead of doing [local snapshots](root://getting-started/0.1/network/nodes.md#local-snapshots).
+This file configures IRI to run on the Mainnet, exposes the API on port 14265, and keeps all transactions in the database.
 
 ```bash
 [IRI]
@@ -485,7 +485,7 @@ java -jar /home/jake/node/iri${VERSION}.jar --debug
 
 ## Step 5. Check that the IOTA node is synchronized
 
-An IOTA node is considered synchronized when the `latestMilestoneIndex` field is equal to the `latestSolidSubtangleMilestoneIndex` field:
+A node is considered synchronized when the `latestMilestoneIndex` field is equal to the `latestSolidSubtangleMilestoneIndex` field:
 
 - `latestMilestoneIndex`: Index of the latest milestone that the IOTA node has received from its neighbors. This field is accurate only when the IOTA node is connected to synchronized neighbors.
 

@@ -1,10 +1,10 @@
 # Install GoShimmer from the pre-built executable
 
-**In this tutorial, you run an IOTA node on your native filesystem, using the pre-built executable file on the GoShimmer GitHub repository.**
+**In this tutorial, you run a node on your native filesystem, using the pre-built executable file on the GoShimmer GitHub repository.**
 
 ## Prerequisites
 
-To run an IOTA node, you need the following:
+To run a node, you need the following:
 
 - [Git](https://git-scm.com/downloads)
 - Ports 14626(TCP/UDP) and 14666 (TCP) forwarded to the device that will run the IOTA node

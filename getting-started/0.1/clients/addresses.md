@@ -66,11 +66,11 @@ Each key fragment is hashed once to generate one key digest for each security le
 
 You can use the following IOTA Tangle Utilities with addresses:
 
-* [Convert an address into a QR code](https://utils.iota.org/qr-create)
+- [Convert an address into a QR code](https://utils.iota.org/qr-create)
 
-* [Read an address from a QR code](https://utils.iota.org/qr-scan)
+- [Read an address from a QR code](https://utils.iota.org/qr-scan)
 
-* [Search for transactions that include an address](https://utils.iota.org/)
+- [Search for transactions that include an address](https://utils.iota.org/)
 
 ## Related guides
 

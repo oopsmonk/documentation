@@ -1,16 +1,10 @@
 # Send a "hello world" transaction in C
 
-**In this tutorial, you send a "hello world" message in a zero-value transaction. These transactions are useful for storing messages on the [Tangle](root://getting-started/0.1/network/the-tangle.md) without having to send any [IOTA tokens](root://getting-started/0.1/clients/token.md).**
+**In this tutorial, you send a "hello world" message in a zero-value transaction. These transactions are useful for storing messages on the Tanglewithout having to send any IOTA tokens.**
 
 ## IOTA network
 
-In this tutorial, we connect to a [node](root://getting-started/0.1/network/nodes.md) on the [Devnet](root://getting-started/0.1/network/iota-networks.md#devnet) with the following network settings:
-
-- **[Minimum weight magnitude](root://getting-started/0.1/network/minimum-weight-magnitude.md)**: 9
-
-- **[Depth](root://getting-started/0.1/transactions/depth.md)**: 3
-
-These settings are defined in a `config.h` file, which is created in the [getting started guide](root://client-libraries/1.0/getting-started/c-quickstart.md).
+The network settings are defined in a `config.h` file. See [C quickstart](root://client-libraries/1.0/getting-started/c-quickstart.md).
 
 ## Code walkthrough
 
@@ -26,7 +20,7 @@ These settings are defined in a `config.h` file, which is created in the [gettin
     #include "iota_client_service/client_service.h"
     ```
     
-2. Define an [address](root://getting-started/0.1/clients/addresses.md) to which you want to send a message
+2. Define an address to which you want to send a message
 
     ```cpp
     static tryte_t const *const ADDRESS =
@@ -34,7 +28,7 @@ These settings are defined in a `config.h` file, which is created in the [gettin
     ```
 
     :::info:
-    This address does not have to belong to anyone. To be valid, the address just needs to consist of 81 [trytes](root://getting-started/0.1/introduction/ternary.md).
+    This address does not have to belong to anyone. To be valid, the address just needs to consist of 81 trytes. For more information about trytes, see [Ternary](root://getting-started/1.0/understanding-iota/ternary.md).
     :::
 
 3. Create a message that you want to send to the address
@@ -69,7 +63,7 @@ These settings are defined in a `config.h` file, which is created in the [gettin
 
     The library expects the values of the transaction fields in trits, so we convert the trytes to trits before adding them to the `transfer` object.
 
-5. To create a bundle from your `transfers` array, pass it to the [`iota_client_send_transfer()`](https://github.com/iotaledger/entangled/blob/develop/cclient/api/extended/send_transfer.h) method, which handles [tip selection](root://getting-started/0.1/network/tip-selection.md), [remote proof of work](root://getting-started/0.1/transactions/proof-of-work.md), and sending the bundle to the IOTA node
+5. To create a bundle from your `transfers` array, pass it to the [`iota_client_send_transfer()`](https://github.com/iotaledger/entangled/blob/develop/cclient/api/extended/send_transfer.h) method, which handles tip selection, remote proof of work, and sending the bundle to the node. For details about this process, see [Sending a transaction](root://getting-started/1.0/clients/sending-a-transaction.md).
 
     ```cpp
     // Create a bundle from the transfers array and send it to the IOTA node

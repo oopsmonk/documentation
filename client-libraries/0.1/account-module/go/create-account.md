@@ -16,11 +16,11 @@ go get github.com/iotaledger/iota.go/trinary
 
 ## IOTA network
 
-In this tutorial, we connect to an IOTA node on the [Devnet](root://getting-started/0.1/network/iota-networks.md#devnet) with the following network settings:
+In this tutorial, we connect to a node on the [Devnet](root://getting-started/1.0/networks/overview.md) with the following network settings:
 
-- **[Minimum weight magnitude](root://getting-started/0.1/network/minimum-weight-magnitude.md)**: 9
+- **[minimum weight magnitude](root://getting-started/1.0/references/glossary.md#minimum-weight-magnitude)**: 9
 
-- **[Depth](root://getting-started/0.1/transactions/depth.md)**: 3
+- **[Depth](root://getting-started/1.0/clients/sending-a-transaction.md#choosing-a-depth)**: 3
 
 ## Code walkthrough
 
@@ -53,7 +53,7 @@ $b=[byte[]] (1..81);(new-object Security.Cryptography.RNGCryptoServiceProvider).
 var seed = trinary.Trytes("PUEOTSEITFEVEWCWBTSIZM9NKRGJEIMXTULBACGFRQK9IMGICLBKW9TTEVSDQMGWKBXPVCBMMCXWMNPDX")
 ```
 
-3\. Connect to an IOTA node
+3\. Connect to a node
    
 ```go
 apiSettings := api.HTTPClientSettings{URI: "https://nodes.devnet.iota.org:443"}
@@ -81,7 +81,7 @@ timesource := timesrc.NewNTPTimeSource("time.google.com")
 
 ```go
 account, err := builder.NewBuilder().
-    // Connect to an IOTA node
+    // Connect to a node
     WithAPI(iotaAPI).
     // Create the database
     WithStore(store).
@@ -99,7 +99,7 @@ The default plugins include the `transfer-poller` and the `promoter-reattacher` 
 
 Every 30 seconds, the `transfer-poller` plugin checks whether withdrawals have been confirmed or whether any deposits are pending.
 
-The `promoter-reattacher` plugin [promotes or reattaches](root://getting-started/0.1/transactions/reattach-rebroadcast-promote.md) any pending withdrawal transactions that the `transfer-poller` finds.
+The `promoter-reattacher` plugin [promotes or reattaches](root://getting-started/1.0/clients/helping-a-transaction-confirm.md) any pending withdrawal transactions that the `transfer-poller` finds.
 
 :::info:
 The default security level for CDAs is 2. You can change this setting by passing a new security level to the `WithSecurityLevel()` method.

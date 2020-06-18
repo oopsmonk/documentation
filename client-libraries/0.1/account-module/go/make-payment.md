@@ -1,6 +1,6 @@
 # Make payments with your account in Go
 
-**In this tutorial, you use your account to deposit IOTA tokens into a pre-defined conditional deposit address (CDA).**
+**In this tutorial, you use your account to transfer IOTA tokens to a pre-defined conditional deposit address (CDA).**
 
 ## Packages
 
@@ -18,7 +18,7 @@ go get github.com/iotaledger/iota.go/api
 
 ## IOTA network
 
-In this tutorial, we connect to an IOTA node on the [Devnet](root://getting-started/0.1/network/iota-networks.md#devnet).
+In this tutorial, we connect to a node on the [Devnet](root://getting-started/1.0/networks/overview.md).
 
 ## Step 1. Create an oracle
 
@@ -91,7 +91,7 @@ To make a payment, your account needs to have one or more CDAs that contains IOT
     Sent deposit to DL9CSYICJVKQRUTWBFUCZJQZ9WNBSRJOA9MGOISQZGGHOCZTXVSKDIZN9HBORNGDWRBBAFTKXGEJIAHKDTMAUX9ILA in the bundle with the following tail transaction hash WZEATTRJYENRALJTWPVGDQZHETIDJXPUROUM9BBPS9RJEELDMU9YNZFBSDGPQHZHMXBVCKITSMDEEQ999
     ```
 
-Your account will [reattach and promote](root://getting-started/0.1/transactions/reattach-rebroadcast-promote.md) your bundle until it's confirmed.
+Your account will [reattach and promote](root://getting-started/1.0/clients/helping-a-transaction-confirm.md) your bundle until it's confirmed.
 
 ## Run the code
 

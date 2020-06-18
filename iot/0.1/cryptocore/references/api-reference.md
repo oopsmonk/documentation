@@ -426,7 +426,7 @@ the `signatureMessageFragment` field.
 This command returns the transaction trytes (including proof of work) of
 the zero-value transaction.
 
-These trytes are ready for sending to an IOTA node.
+These trytes are ready for sending to a node.
 
 ### Parameters
 
@@ -441,7 +441,7 @@ These trytes are ready for sending to an IOTA node.
 |`data`      |   JSON    |    JSON data to add to the transaction's `signatureMessageFragment` field|
 
 :::warning:
-Nodes check that the `attachmentTimestamp` is no older than their oldest recorded milestone. Therefore, if the `timestamp` field is not valid, the IOTA nodes will return an `invalid trytes` error.
+Nodes check that the `attachmentTimestamp` is no older than their oldest recorded milestone. Therefore, if the `timestamp` field is not valid, nodes will return an `invalid trytes` error.
 :::
 
 ### Example Request

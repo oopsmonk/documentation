@@ -37,7 +37,7 @@ IOTA networks are peer-to-peer networks where no central authority controls the 
 
 IOTA is free to use. You don't need to pay a subscription, or sign a contract. Even transactions are feeless.
 
-You can store data on the Tangle with no restrictions. All you need is an IOTA node to which you can send transactions.
+You can store data in the Tangle with no restrictions. All you need is a node to which you can send transactions.
 
 ### Scalability
 
@@ -55,11 +55,11 @@ Interconnected nodes form an IOTA network by running the same [node software](ro
 
 ### Clients
 
-Clients are the devices that connect to nodes to transact or store data on the Tangle.
+Clients are the devices that connect to nodes to transact or store data in the Tangle.
 
 All clients in an IOTA network have a secret password called a [seed](../clients/seeds.md), which acts as their identity. Seeds give clients access to [addresses](../clients/addresses.md), which are like accounts with a balance of IOTA tokens.
 
-To transfer IOTA tokens or even to send only data, clients package the transfer instructions into objects called transactions and send them to an IOTA node to attach to the Tangle.
+To transfer IOTA tokens or even to send only data, clients package the transfer instructions into objects called transactions and send them to a node to attach to the Tangle.
 
 ## What are some example use cases?
 
@@ -76,7 +76,7 @@ These are some applications of IOTA:
 | **Company**  | **Description** |  **References** |
 | :-------:| :-------:| :---------: |
 | bIOTAsphere|bIOTAsphere connected a Tesla car to an IOTA network. The car buys dynamic insurance with IOTA tokens |[YouTube video that showcases this use case](https://www.youtube.com/watch?v=2zvrA5KqeYw) |
-| iampass|iampass is an identity and access management system that authenticates users by taking an encrypted scan of their palms and checking for that data on the Tangle in an IOTA network  | [iampass website](https://iampass.io/)|
+| iampass|iampass is an identity and access management system that authenticates users by taking an encrypted scan of their palms and checking for that data in the Tangle in an IOTA network  | [iampass website](https://iampass.io/)|
 |+CityxChange consortium |CityxChange consortium is a project that builds smart cities, which use IOTA as the secure data transfer layer |[+CityxChange website](http://cityxchange.eu/)|
 eCl@ss|eCl@ss is cooperating with IOTA to share and store ISO/IEC-compliant product classifications and descriptions|[eCl@ss website](https://www.eclass.eu/en/association/cooperation.html)|
 |Elaadnl| Elaadnl is creating electric car chargers that accept payment in IOTA tokens| [Elaadnl website](https://www.elaad.nl/news/worlds-first-iota-charging-station-released/)

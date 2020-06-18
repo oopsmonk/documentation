@@ -87,7 +87,7 @@ The official forum where you can ask or answer technical questions about IOTA.
 #### __Tangle explorer__ ####
 [Link](https://thetangle.org)
 
-A community tool for searching transactions on the Tangle.
+A community tool for searching transactions in the Tangle.
 
 ---------------
 

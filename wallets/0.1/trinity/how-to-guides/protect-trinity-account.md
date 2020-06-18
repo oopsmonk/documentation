@@ -16,7 +16,7 @@ For other questions, see [Seed migration FAQ](../references/faq.md).
 
 To stop attackers from further transferring IOTA tokens, the IOTA Foundation paused the Coordinator and [released an updated version of Trinity](#install-the-latest-version-of-trinity). This version is no longer vulnerable to the attack.
 
-While the [Coordinator](root://getting-started/0.1/network/the-coordinator.md) is paused, no one can transfer their IOTA tokens on the Mainnet.
+While the [Coordinator](root://getting-started/1.0/references/glossary.md#coordinator) is paused, no one can transfer their IOTA tokens on the Mainnet.
 
 To help you to secure your IOTA tokens before the Coordinator is restarted, the IOTA Foundation built the Seed Migration Tool, which does the following:
 

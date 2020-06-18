@@ -1,19 +1,19 @@
 # IOTA is a distributed ledger technology (DLT) that allows devices in an IOTA network to transact in micropayments and to send each other immutable data.
 
-[What is IOTA?](/0.1/introduction/overview.md)
-## Learn what makes IOTA unique and how you can leverage it in your apps
+[What is IOTA?](/1.0/introduction/overview.md)
+## Learn what IOTA is and who it is for
 
-[Seeds](/0.1/clients/seeds.md)
-## Discover how everyone and everything in IOTA can transact
+[Understanding IOTA](/1.0/understanding-iota/overview.md)
+## Explore the nuts and bolts of how everyone and everything in IOTA can transact
 
-[Transactions](/0.1/transactions/transactions.md)
-## Learn how data and value are sent using IOTA
+[Getting started as a client](/1.0/clients/overview.md)
+## Find out everything you need to know to use IOTA
 
-[The token](/0.1/clients/token.md)
-## Learn about the IOTA token, what is can be used for, and why it's valuable
+[Sending transactions](/1.0/clients/sending-a-transaction.md)
+## Follow a high-level overview of how transactions are sent
 
-[Nodes](/0.1/network/nodes.md)
-## Find out how nodes work together to validate and store transactions
+[Getting started as a node](/1.0/nodes/overview.md)
+## Get helpful tips for running your own node in an IOTA network
 
-[The Tangle](/0.1/network/the-tangle.md)
-## Explore the immutable data structure that contains all IOTA transactions
+[Developer tools](/1.0/clients/tools.md)
+## Search for helpful resources

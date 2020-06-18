@@ -26,7 +26,7 @@ The primary key is a unique identifier for each row in a table. A partition key 
 
 Storing and retrieving data is faster when the data is organized into distinct collections called shards. A Scylla partition is a logical storage unit that holds the rows identified by a partition key. A shard is a group of data with the same partition key. 
 
-To ensure reliability and fault tolerance, Scylla stores data replicas on multiple nodes. These nodes are called replican IOTA nodes. Partitions are repeated on replican IOTA nodes. You can set the number of replicas by setting the replication factor (RF).
+To ensure reliability and fault tolerance, Scylla stores data replicas on multiple nodes. These nodes are called replica nodes. Partitions are repeated on replica nodes. You can set the number of replicas by setting the replication factor (RF).
 
 :::info:
 [Learn more about fault tolerance in Scylla](https://docs.scylladb.com/architecture/architecture-fault-tolerance/).

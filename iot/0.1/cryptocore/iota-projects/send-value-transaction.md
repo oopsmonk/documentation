@@ -77,10 +77,10 @@ In this step, you write a script that uses the Javascript client library to crea
     const savedTransactionDirectory = process.argv[6];
     ```
 
-2. Use the first argument to connect to an IOTA node on either the Devnet or the Mainnet
+2. Use the first argument to connect to a node on either the Devnet or the Mainnet
 
     ```js
-    // Define an IOTA node for each IOTA network
+    // Define a node for each IOTA network
     const nodes = {
             devnet: 'https://nodes.devnet.thetangle.org:443',
             mainnet: `https://nodes.iota.org:443`
@@ -305,15 +305,11 @@ In this step, you write a bash script that signs the bundle hash.
     done
     ```
 
-4. Set the default [security level](root://getting-started/0.1/clients/security-levels.md) to use to generate an input address
+4. Set the default security level to use to generate addresses
 
     ```bash
     securityLevel=2
     ```
-
-    :::info:
-    Input addresses are those that are used in [input transactions](root://getting-started/0.1/transactions/transactions.md#input-transactions), which withdraw IOTA tokens from addresses.
-    :::
 
 5. Create a file to keep track of the address index that you are using to generate an input address
 
@@ -340,7 +336,7 @@ In this step, you write a bash script that signs the bundle hash.
     ```
 
     :::info:
-    By keeping track of the address index, you can be sure that you aren't generating [spent addresses](root://getting-started/0.1/clients/addresses.md#spent-addresses).
+    By keeping track of the address index, you can be sure that you aren't generating [spent addresses](root://getting-started/1.0/references/glossary.md#spent-address).
     :::
     
 6. Generate an input address, using the CryptoCore [`getAddress`](../references/api-reference.md#getaddress) command
@@ -428,13 +424,13 @@ In this step, you write a script that adds a signature to the bundle that you sa
     sudo nano add-signature-to-bundle.js.
     ```
 
-2. Use the first argument that is passed to the script to connect to an IOTA node on either the Devnet or the Mainnet
+2. Use the first argument that is passed to the script to connect to a node on either the Devnet or the Mainnet
 
     ```js
     // This argument should be a minimum weight magnitude (14 or 9)
     const network = parseInt(process.argv[2]);
 
-    // Define an IOTA node for each IOTA network
+    // Define a node for each IOTA network
     const nodes = {
             devnet: 'https://nodes.devnet.iota.org:443',
             mainnet: `https://nodes.iota.org:443`
@@ -593,7 +589,7 @@ Bundle sent.
 Tail transaction hash:EIFWPZBERTVIEPQVGXNXCBILS9G9MLZYOHEAHTCZKXSSVLENKDVBPYATVTEZYBDRTATYKXHEZQTANQ999
 ```
 
-To see your bundle on the Tangle, copy the tail transaction hash and paste it into a [Tangle explorer](https://utils.iota.org/).
+To see your bundle in the Tangle, copy the tail transaction hash and paste it into a [Tangle explorer](https://utils.iota.org/).
 
 If the Tangle explorer doesn't display your transaction after 5 minutes, the IOTA node may not have sent your transaction to its neighbors.
 

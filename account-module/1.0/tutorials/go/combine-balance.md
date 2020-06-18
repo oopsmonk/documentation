@@ -18,7 +18,7 @@ go get github.com/iotaledger/iota.go/api
 
 ## IOTA network
 
-In this tutorial, we connect to an IOTA node on the [Devnet](root://getting-started/0.1/network/iota-networks.md#devnet).
+In this tutorial, we connect to a node on the [Devnet](root://getting-started/1.0/networks/overview.md).
 
 ## Code walkthrough
 
@@ -39,7 +39,7 @@ In this tutorial, we connect to an IOTA node on the [Devnet](root://getting-star
     ```
 
     :::info:
-    You account's available balance is the total balance of all expired CDAs. This balance is safe to withdraw because no one should send IOTA tokens to an expired CDA.
+    You account's available balance is the total balance of all expired CDAs. This balance is safe to withdraw because no one should transfer IOTA tokens to an expired CDA.
 
     Your account's total balance includes CDAs that are still active as well as expired.
     :::

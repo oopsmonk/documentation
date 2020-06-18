@@ -1,7 +1,7 @@
 # Run a cIRI node on a single-board computer
 
 **When you run the cIRI on an SBC (single-board computer), it becomes a cIRI node that gives you direct access to an IOTA network. 
-By running an IOTA node, you help the IOTA network to become more distributed by adding to the number of ledgers and validating your neighbors' transactions.**
+By running a node, you help the IOTA network to become more distributed by adding to the number of ledgers and validating your neighbors' transactions.**
 
 :::info:
 This guide cross compiles cIRI. You can also use the [Run a cIRI node on Linux](run-a-ciri-node-on-linux.md).
@@ -74,7 +74,7 @@ uname -m
 You can customize these commands by editing the build flags.
 
 
-1. Choose which [IOTA network](root://getting-started/0.1/network/iota-networks.md) you want your node to run on. Replace `value` with `mainnet` or `testnet`.
+1. Choose which IOTA network you want your node to run on. Replace `value` with `mainnet` or `testnet`.
 
 
     ```bash

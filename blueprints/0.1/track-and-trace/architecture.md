@@ -6,7 +6,7 @@
 Running an open source project, like any human endeavor, involves uncertainty and trade-offs. We hope the architecture described below helps you to deploy similar systems, but it may include mistakes, and can’t address every situation. If you have any questions about your project, we encourage you to do your own research, seek out experts, and discuss them with the IOTA community.
 :::
 
-This blueprint uses the following architecture whereby trackers register their ownership of returnable assets and attach proof of this ownership to a MAM channel on the Tangle. Whenever new trackers receive the asset, they update the MAM channel with their own custodian ID, as well as the asset's new location and its status. This way, tracers can find out where the asset is at any time by monitoring the MAM channel.
+This blueprint uses the following architecture whereby trackers register their ownership of returnable assets and attach proof of this ownership to a MAM channel in the Tangle. Whenever new trackers receive the asset, they update the MAM channel with their own custodian ID, as well as the asset's new location and its status. This way, tracers can find out where the asset is at any time by monitoring the MAM channel.
 
 ![Track and Trace](../images/track-and-trace-architecture.png)
 
@@ -91,7 +91,7 @@ To allow trackers to use the API to update the MAM channel, the `assetUniqueID` 
 
 |**Field**|**Description**|**Notes**|
 |:--|:---|:---|
-|`channelRoot`|The root of the MAM channel, which allows the API to find it on the Tangle|If the MAM channel is public, this is the address of the first transaction in the channel|
+|`channelRoot`|The root of the MAM channel, which allows the API to find it in the Tangle|If the MAM channel is public, this is the address of the first transaction in the channel|
 |`channelSideKey>`|If the MAM channel is restricted, this field contains its side key, which allows the API to encrypt and decrypt the MAM messages||
 
 The `createItem()` function is used to save the necessary data in the database when the asset is created.

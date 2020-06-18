@@ -1,6 +1,6 @@
 # Process ZMQ events in near real-time with Apache Flink
 
-**When you subscribe to ZMQ events, you receive near real-time Tangle data from an IOTA node. To process this data, you can use a stream processing framework such as the open-source [Apache Flink](https://flink.apache.org/).**
+**When you subscribe to ZMQ events, you receive near real-time Tangle data from a node. To process this data, you can use a stream processing framework such as the open-source [Apache Flink](https://flink.apache.org/).**
 
 This guide uses the [Flink Tangle source library](https://github.com/Citrullin/flink-tangle-source) to use process ZMQ data with Flink. 
 
@@ -102,7 +102,7 @@ You must have [downloaded and installed the libraries](#download-and-install-the
 
 ---
 
-Set up the stream by connecting to an IOTA node
+Set up the stream by connecting to a node
 
 ```scala
 val unconfirmedMessageDescriptorName = UnconfirmedTransactionMessage.scalaDescriptor.fullName
@@ -113,7 +113,7 @@ val env: StreamExecutionEnvironment = StreamExecutionEnvironment.getExecutionEnv
 val stream = env.addSource(new TangleSource(zeroMQHost, zeroMQPort, ""))
 ```
 :::info:
-Here, we connect to an IOTA node by its hostname and port. We could subscribe to a specific topic such as the [tx](../references/zmq-events.md#tx) event:
+Here, we connect to a node by its hostname and port. We could subscribe to a specific topic such as the [tx](../references/zmq-events.md#tx) event:
 
 ```scala
 val stream = env.addSource(new TangleSource(zeroMQHost, zeroMQPort, "tx"))

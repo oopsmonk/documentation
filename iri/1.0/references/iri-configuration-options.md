@@ -7,9 +7,9 @@ To make it easier to find the options you want to change, we've separated them i
 - **API:** How the API responds and which hosts can access it
 - **IXI:** How your node uses IXI modules
 - **Database:** What your node does with its ledger
-- **Local snapshots:** How and when your node does [local snapshots](root://getting-started/0.1/network/nodes.md#local-snapshots)
+- **Local snapshots:** How and when your node does local snapshots
 - **Network:** How your node communicates with neighbors
-- **Proof of work:** How your node does [proof of work](root://getting-started/0.1/transactions/proof-of-work.md)
+- **Proof of work:** How your node does proof of work
 - **Protocol:** What transactions will be accepted by the network, and how they will be propagated to other nodes
 - **Testnet:** Which Coordinator your node should follow when it's not running on the Mainnet
 - **Tip selection:** The length and randomness of the weighted random walk during tip selection
@@ -35,7 +35,7 @@ Use these settings to customize how the API behaves and which hosts can access i
 |<a name="max-find-transactions"></a>`--max-find-transactions` |`MAX_FIND_TRANSACTIONS`|Set a maximum number of transactions that may be requested by the [`findTransactions` endpoint](../references/iri-api-reference.md#findTransactions) |number | 100,000 | If the number of requested transactions exceeds this number, an error is returned
 |<a name="max-requests-list"></a>`--max-requests-list` |`MAX_REQUESTS_LIST`|Set a maximum number of parameters in an API call |number |1,000 | If the number of parameters exceeds this number, an error is returned
 |<a name="max-get-trytes"></a>`--max-get-trytes` |`MAX_GET_TRYTES`|Set a maximum number of trytes that may be requested by the [getTrytes endpoint](../references/iri-api-reference.md#getTrytes)  |number |10,000 | If the number of requested trytes exceeds this number, an error is returned
-| <a name="mwm"></a>`--mwm`|`MWM`|Set the [minimum weight magnitude](root://getting-started/0.1/network/minimum-weight-magnitude.md)|number|9|
+| <a name="mwm"></a>`--mwm`|`MWM`|Set the [minimum weight magnitude](root://getting-started/1.0/references/glossary.md#minimum-weight-magnitude)|number|9|
 |<a name="remote"></a> ` --remote `|-|Open the API interface to any host |boolean | false| When set to true, this option is equivalent to setting the `API_HOST` option to 0.0.0.0. You must add a `true` or `false` value after this flag.
 |<a name="remote-auth"></a>`--remote-auth` |`REMOTE_AUTH`|Add basic authentication for API calls in the form of username:password  | string| ""|You can use a plain text or a hashed password|
 |<a name="remote-limit-api"></a>`--remote-limit-api` |`REMOTE_LIMIT_API`|Ignore requests to certain API endpoints |array of strings |[[addNeighbors](../references/iri-api-reference.md#addNeighbors), [getNeighbors](../references/iri-api-reference.md#getNeighbors), [removeNeighbors](../references/iri-api-reference.md#removeNeighbors), [attachToTangle](../references/iri-api-reference.md#attachToTangle), [interruptAttachToTangle](../references/iri-api-reference.md#interruptAttachToTangle)] | This option allows you to protect your node against spammers that know the IRI node's URL or IP address.
@@ -67,7 +67,7 @@ Use these settings to customize how your node uses IXI modules.
 
 ## Local snapshot
 
-Use these settings to customize how and when your node does [local snapshots](root://getting-started/0.1/network/nodes.md#local-snapshots).
+Use these settings to customize how and when your node does local snapshots.
 
 | **CL flags** |**Configuration file parameters** |  **Description**| **Accepted values** | **Default value**|**Notes** |
 | :------------------------ | :--------------- | :--------- | :--------| :------------|:-----|
@@ -101,7 +101,7 @@ Use these settings to customize how your node communicates with neighbors.
 
 ## Proof of work
 
-Use these settings to customize how your node does [proof of work](root://getting-started/0.1/transactions/proof-of-work.md).
+Use these settings to customize how your node does [proof of work](root://getting-started/1.0/references/glossary.md#proof-of-work).
 
 | **CL flags** |**Configuration file parameters** |  **Description**| **Accepted values** | **Default value**|**Notes** |
 | :------------------------ | :--------------- | :--------- | :--------| :------------|:-----|
@@ -147,7 +147,7 @@ Use these settings to customize the length and randomness of the weighted random
 | :------------------------ | :--------------- | :--------- | :--------| :------------|:-----|
 |<a name="alpha"></a>`--alpha`| `ALPHA`|Set the randomness of the tip selection process             |   number between 0 and infinity  |  0.001     | The number 0 is the most random and infinity is the most deterministic. For an in-depth explanation of this option, [see our blog post](https://blog.iota.org/alpha-d176d7601f1c).|
 |<a name="max-analyzed-transactions"></a>`--max-analyzed-transactions` |`MAX_ANALYZED_TXS`|Set the maximum number of unconfirmed transactions that may be analyzed during tip selection to find the latest milestone that references a transaction |number |20,000 |
-|  <a name="maxdepth"></a>`--max-depth` |`MAX_DEPTH`|Set the maximum number of previous milestones (depth) from where the IRI will start the tip selection |number |15 | This value should be both small enough to allow the weighted random walk to finish in a reasonable amount of time and large enough in include enough new transactions in the subgraph
+|  <a name="maxdepth"></a>`--max-depth` |`MAX_DEPTH`|Set the maximum number of previous milestones (depth) from where the IRI will start the tip selection |number |15 | This value should be both small enough to allow the weighted random walk to finish in a reasonable amount of time and large enough in include enough new transactions in the subtangle
 |<a name="tip-selection-timeout-sec"></a>`--tip-selection-timeout-sec` |`TIP_SELECTION_TIMEOUT_SEC`|Set the maximum number of seconds that the IRI can spend to complete tip selection |number | 60|This option stops your node from stalling if tip selection takes too long|
 
 ## ZMQ

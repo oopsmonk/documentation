@@ -1,6 +1,6 @@
 # Community resources
 
-**The community builds and maintains tools, utilites, and node software to support the development of IOTA nodes. This guide includes links to community projects for node software.**
+**The community builds and maintains tools, utilites, and node software to support the development of nodes. This guide includes links to community projects for node software.**
 
 ---------------
 #### __GoShimmer playbook__ ####

@@ -1,6 +1,6 @@
 # Data in the snapshot metadata file
 
-**This table contains the data that's added to the snapshot.meta file during a [local snapshot](root://getting-started/0.1/network/nodes.md#local-snapshots).**
+**This table contains the data that's added to the snapshot.meta file during a local snapshot.**
 
 | **Data**|    **Description** |                                      
 | :-----: |  :---------------: | 

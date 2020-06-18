@@ -28,7 +28,7 @@ yarn add @iota/core @iota/converter @iota/tryte-compress
 
 ## IOTA network
 
-In this tutorial, we connect to an IOTA node on the [Devnet](root://getting-started/0.1/network/iota-networks.md#devnet).
+In this tutorial, we connect to a node on the [Devnet](root://getting-started/1.0/networks/overview.md).
 
 ## Code walkthrough
 
@@ -211,7 +211,7 @@ Use the [trytes compressor utility](https://utils.iota.org/compress) to compress
 
 ![Compressor](../images/compress.png)
 
-Use the trytes compressor API to decompress the trytes before resending them to an IOTA node. For example, you could do the following:
+Use the trytes compressor API to decompress the trytes before resending them to a node. For example, you could do the following:
 
 ```js
 function readCompressedTailTransaction (file){

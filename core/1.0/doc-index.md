@@ -14,7 +14,7 @@
 
 [Tutorials/C/Send a "hello world" transaction](/tutorials/c/send-your-first-bundle.md)
 
-[Tutorials/C/Read transactions on the Tangle](/tutorials/c/read-transactions.md)
+[Tutorials/C/Read transactions in the Tangle](/tutorials/c/read-transactions.md)
 
 [Tutorials/C/Generate a new address](/tutorials/c/generate-an-address.md)
 
@@ -32,7 +32,7 @@
 
 [Tutorials/Go/Check the balance of an address](/tutorials/go/check-balance.md)
 
-[Tutorials/Go/Listen for live transactions on the Tangle](/tutorials/go/listen-for-transactions.md)
+[Tutorials/Go/Listen for live transactions in the Tangle](/tutorials/go/listen-for-transactions.md)
 
 [Tutorials/Java/Send a "hello world" transaction](/tutorials/java/send-your-first-bundle.md)
 
@@ -44,7 +44,7 @@
 
 [Tutorials/Java/Check the balance of an address](/tutorials/java/check-balance.md)
 
-[Tutorials/Java/Listen for live transactions on the Tangle](/tutorials/java/listen-for-transactions.md)
+[Tutorials/Java/Listen for live transactions in the Tangle](/tutorials/java/listen-for-transactions.md)
 
 [Tutorials/JavaScript/Send a "hello world" transaction](/tutorials/js/send-your-first-bundle.md)
 
@@ -56,7 +56,7 @@
 
 [Tutorials/JavaScript/Check the balance of an address](/tutorials/js/check-balance.md)
 
-[Tutorials/JavaScript/Listen for live transactions on the Tangle](/tutorials/js/listen-for-transactions.md)
+[Tutorials/JavaScript/Listen for live transactions in the Tangle](/tutorials/js/listen-for-transactions.md)
 
 [Tutorials/JavaScript/Check if a transaction is confirmed](/tutorials/js/check-transaction-confirmation.md)
 
@@ -78,7 +78,7 @@
 
 [Tutorials/Python/Check the balance of an address](/tutorials/python/check-balance.md)
 
-[Tutorials/Python/Listen for live transactions on the Tangle](/tutorials/python/listen-for-transactions.md)
+[Tutorials/Python/Listen for live transactions in the Tangle](/tutorials/python/listen-for-transactions.md)
 
 [References/API reference/C](https://github.com/iotaledger/iota.c/tree/master/cclient/api)
 

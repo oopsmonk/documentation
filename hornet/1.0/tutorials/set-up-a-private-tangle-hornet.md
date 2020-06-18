@@ -12,7 +12,7 @@ For tutorials, see [Choose an installation method](../tutorials/install-hornet.m
 
 ## Step 1. Generate the Merkle tree
 
-In this step, you generate a [Merkle tree](root://getting-started/0.1/network/the-tangle.md#milestones) for Compass to use to sign milestones.
+In this step, you generate a Merkle tree for Compass to use to sign milestones.
 
 Hornet includes a tool for computing a Merkle tree signature scheme for Compass to use.
 

@@ -25,7 +25,7 @@ The IOTA network in which your node runs is determined by the following configur
 
 ### MWM
 
-The [minimum weight magnitude](root://getting-started/0.1/network/minimum-weight-magnitude.md) (MWM) is important because nodes use this setting to determine whether transactions are valid. To be valid, transactions must contain a [proof of work](root://getting-started/0.1/transactions/proof-of-work.md) that used at least the MWM in the IOTA node's configuration.
+The [minimum weight magnitude](root://getting-started/1.0/references/glossary.md#minimum-weight-magnitude) (MWM) is important because nodes use this setting to determine whether transactions are valid. To be valid, transactions must contain a [proof of work](root://getting-started/1.0/references/glossary.md#proof-of-work) that used at least the MWM in the IOTA node's configuration.
 
 ### NEIGHBORS
 
@@ -43,7 +43,7 @@ To run on another network such as a private Tangle, you must configure the other
 
 ## Do you want your node to do proof of work?
 
-[Proof of work](root://getting-started/0.1/transactions/proof-of-work.md) (PoW) is a resource-intensive operation that uses computational power on your device.
+[proof of work](root://getting-started/1.0/references/glossary.md#proof-of-work) (PoW) is a resource-intensive operation that uses computational power on your device.
 
 Allowing your node to do remote PoW, means that anyone who sends a request to the [`attachToTangle`](../references/api-reference.md#attachToTangle) endpoint can ask your node to do proof of work for their transactions.
 

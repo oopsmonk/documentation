@@ -1,6 +1,6 @@
 # Python quickstart
 
-**In this quickstart, you learn the basics of IOTA development in Python, from setting up a development environment to connecting to an IOTA node.**
+**In this quickstart, you learn the basics of IOTA development in Python, from setting up a development environment to connecting to a node.**
 
 In this quickstart, you will learn how to:
 
@@ -8,7 +8,7 @@ In this quickstart, you will learn how to:
 
 2. Install packages
 
-3. Connect to an IOTA node
+3. Connect to a node
 
 ## Step 1. Set up a developer environment
 
@@ -81,17 +81,17 @@ After installing a package, you'll have the client library code and its dependen
 
 Now you can start coding.
 
-## Step 3. Connect to an IOTA node
+## Step 3. Connect to a node
 
-It's best practice to make sure that you're connected to a [synchronized node](root://getting-started/0.1/network/nodes.md#synchronized-nodes) before you start sending transactions to it. This way, you know that it has an up-to-date view of [the Tangle](root://getting-started/0.1/network/the-tangle.md).
+It's best practice to make sure that you're connected to a synchronized node before you start sending transactions to it. This way, you know that it has an up-to-date view of the Tangle. For more information, see [Nodes](root://getting-started/1.0/understanding-iota/nodes.md).
 
-Whenever you connect to an IOTA node, you need to know which [IOTA network](root://getting-started/0.1/network/iota-networks.md) it's in. Here, we connect to an IOTA node on the Devnet, which is the IOTA networks that you can use for testing.
+Whenever you connect to a node, you need to know which IOTA network it's in. Here, we connect to a node on the Devnet, which is the IOTA networks that you can use for testing.
 
 1. Go to the IOTA Foundation [Discord](https://discord.iota.org) and enter **!milestone** in the `botbox` channel
 
     ![Entering !milestone on Discord](../images/discord-milestone-check.PNG)
 
-    The Discord bot should return the current `latestMilestoneIndex` field from a [node quorum](root://getting-started/0.1/network/nodes.md#node-quorum).
+    The Discord bot should return the current `latestMilestoneIndex` field from a [node quorum](root://getting-started/1.0/references/glossary.md#node-quorum).
 
 2. In the directory where you initialized your project, create a new file called `index.py`
 
@@ -149,7 +149,7 @@ If the `latestMilestoneIndex` field is equal to the one you got from Discord and
 
 If not, try connecting to a different node. The [iota.dance website](https://iota.dance/) includes a list of Mainnet nodes. Or, you can [run your own node](root://node-software/1.0/overview.md).
 
-In the `features` array, you can see that this node also support [remote proof of work](root://getting-started/0.1/transactions/proof-of-work.md) (RemotePOW). As a result, you can use this node to do proof of work instead of doing it on your local device.
+In the `features` array, you can see that this node also support [remote proof of work](root://getting-started/1.0/references/glossary.md#remote-proof-of-work) (RemotePOW). As a result, you can use this node to do proof of work instead of doing it on your local device.
 
 Also, this node has its zero message queue (ZMQ) enabled, so you can use it to [listen for live transactions](root://core/1.0/tutorials/python/listen-for-transactions.md).
 
@@ -185,6 +185,6 @@ We have many channels, including the following:
 
 Continue learning with our [Python workshop](root://core/1.0/getting-started/get-started-python.md).
 
-Read our [developer's handbook](root://getting-started/0.1/references/quickstart-dev-handbook.md) for guidance on whether you should run your own node, whether you need a private IOTA network, and what you need to consider for both.
+
 
 Find the in-depth Python library documentation on the [PyOTA documentation page](https://pyota.readthedocs.io/en/latest/).

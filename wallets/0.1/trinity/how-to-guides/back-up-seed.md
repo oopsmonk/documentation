@@ -1,6 +1,6 @@
 # Back up your seed
 
-**Trinity secures and stores your [seed](root://getting-started/0.1/clients/seeds.md) on your device. As a result, if you were to ever lose your mobile device or computer, your seed would be lost. To avoid losing your seed (and your IOTA tokens), you must back it up and keep the backup in a safe place. In this tutorial, you learn how to back up your seed.**
+**Trinity secures and stores your seed on your device. As a result, if you were to ever lose your mobile device or computer, your seed would be lost. To avoid losing your seed (and your IOTA tokens), you must back it up and keep the backup in a safe place. In this tutorial, you learn how to back up your seed.**
 
 :::danger:
 On 11 February 2020, the IOTA Foundation became aware of an attack on the Trinity wallet, during which some users’ seeds and Trinity passwords were compromised. Please check our advice for [protecting your Trinity account](../how-to-guides/protect-trinity-account.md).
@@ -26,7 +26,7 @@ You can export and store your seed in SeedVault or in the KeePass password manag
 
 Write your seed from left to right, top to bottom. **Check that your seed is written correctly.**
 
-Make sure to write your seed's 3-letter [checksum](root://getting-started/0.1/clients/checksums.md) and keep it separate from your seed. This checksum is a safety mechanism that allows you to check whether you entered the correct seed. If you enter one wrong character, the checksum that's displayed in Trinity will be different.
+Make sure to write your seed's 3-letter [checksum](root://getting-started/1.0/cryptography/checksums.md) and keep it separate from your seed. This checksum is a safety mechanism that allows you to check whether you entered the correct seed. If you enter one wrong character, the checksum that's displayed in Trinity will be different.
 
 ## Print your seed
 
