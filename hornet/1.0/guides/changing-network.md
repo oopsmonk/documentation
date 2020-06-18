@@ -18,7 +18,7 @@ Therefore, to connect to a different IOTA network, you must check these configur
 
 Because Hornet is a community project, it comes with a configuration file that includes the network configuration for the community network. This file is called `config_comnet.json`.
 
-To connect to the Comnet, you can start Hornet with the following option `-c config-comnet`.
+To connect to the Comnet, you can start Hornet with the following option `-c config_comnet`.
 
 
 
