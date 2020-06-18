@@ -3,7 +3,7 @@
 **The role of an entry nodes is to send a list of neighbors to new nodes on an IOTA network so that they can connect to them. This topic explains how to use your node as an entry node to help others to autopeer with neighbors in your IOTA network.**
 
 :::info:
-By using a Hornet node as an entry node, it will no longer participate in gossipping or consensus.
+By using a Hornet node as an entry node, it will no longer participate in gossiping or consensus.
 :::
 
 ## Generating a seed

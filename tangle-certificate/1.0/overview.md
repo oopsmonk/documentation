@@ -1,6 +1,6 @@
 # Tangle certificates
 
-**A certificate is an official document that proves a fact about the bearer. But, when certificates are digital, they are subject to fraud. Digital certificates can be copied and edited, which affects their authenticity and credibility. The Tangle certificates library allows you to prove that a certificate is authentic, credible, and unchanged by attaching it to the [Tangle](root://getting-started/0.1/network/the-tangle.md).**
+**A certificate is an official document that proves a fact about the bearer. But, when certificates are digital, they are subject to fraud. Digital certificates can be copied and edited, which affects their authenticity and credibility. The Tangle certificates library allows you to prove that a certificate is authentic, credible, and unchanged by attaching it to the Tangle.**
 
 With the Tangle certificates API, you can:
 

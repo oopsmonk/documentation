@@ -23,7 +23,7 @@ This API is in beta, and is subject to change. We recommend that you don't use t
 
 All requests to this API should be sent to the URL of a Chronicle node.
 
-If you don't already have an IOTA node to connect to, we recommend [running your own](root://node-software/1.0/overview.md).
+If you don't already have a node to connect to, we recommend [running your own](root://node-software/1.0/overview.md).
 
 Running your own node has many benefits, of which the most important is that you don't need to trust a potentially malicious third-party node. If you were to connect to a malicious node, it could give you incorrect information about balances and transactions, leading to stolen IOTA tokens.
 

@@ -22,13 +22,13 @@ When you reattach a bundle that transfers IOTA tokens, only one will ever be con
 
 ## Rebroadcast
 
-While your transactions are being sent to an IOTA node, it may go offline. In this case, the IOTA node may not forward your transactions to its neighbors, and the rest of the network won't ever see your transactions. As a result, that transaction will never be referenced by the [Coordinator](../network/the-coordinator.md), thus it will never be confirmed.
+While your transactions are being sent to a node, it may go offline. In this case, the IOTA node may not forward your transactions to its neighbors, and the rest of the network won't ever see your transactions. As a result, that transaction will never be referenced by the [Coordinator](../network/the-coordinator.md), thus it will never be confirmed.
 
-To rebroadcast a bundle means to send the same bundle to an IOTA node again. This way, you give your transactions another chance at being forwarded to the rest of the network.
+To rebroadcast a bundle means to send the same bundle to a node again. This way, you give your transactions another chance at being forwarded to the rest of the network.
 
 ## Promote
 
-To promote a bundle means to increase its chances of being selected during [tip selection](root://getting-started/0.1/network/tip-selection.md) by increasing the cumulative weight of its tail transaction. When you promote a bundle, you create and send a zero-value transaction that references both its tail transaction and the latest milestone.
+To promote a bundle means to increase its chances of being selected during tip selection by increasing the cumulative weight of its tail transaction. When you promote a bundle, you create and send a zero-value transaction that references both its tail transaction and the latest milestone.
 
 Promoting a bundle is often more effective than reattaching a bundle, unless the bundle you're promoting leads to an inconsistent state (double spend) or is older than the last six milestones.
 

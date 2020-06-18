@@ -7,7 +7,6 @@
 [Private Tangle](/compass)
 [Streams](/iota-streams)
 [Wallets](/wallets)
-[Support](/support)
 [Core](/core)
 [Account Module](/account-module)
 [Channels](/channels)

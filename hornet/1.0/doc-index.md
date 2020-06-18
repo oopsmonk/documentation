@@ -2,12 +2,12 @@
 
 [Introduction/Overview](overview.md)
 
-[Installation/Install Hornet](/tutorials/install-hornet.md)
+[Installation/Choose an installation method](/tutorials/install-hornet.md)
 [Installation/Run Hornet in a Docker container](/tutorials/install-hornet-docker.md)
 [Installation/Run Hornet on a Linux Ubuntu server](/tutorials/install-hornet-linux.md)
 [Installation/Build Hornet from source](/tutorials/build-from-source.md)
+[Installation/Migrating from IRI to Hornet](/guides/migrating-from-iri.md)
 
-[Guides/Securing your node](/guides/securing-your-node.md)
 [Guides/Setting up your dashboard](/guides/setting-up-dashboard.md)
 [Guides/Securing your API](/guides/securing-your-api.md)
 [Guides/Enabling remote proof of work](/guides/allowing-remote-pow.md)
@@ -18,8 +18,6 @@
 [Guides/Sending automated spam transactions](/guides/sending-spam.md)
 [Guides/Connecting to a different IOTA network](/guides/changing-network.md)
 [Guides/Configuring local snapshots](/guides/configuring-snapshots.md)
-[Guides/Migrating from IRI to Hornet](/guides/migrating-from-iri.md)
-
 
 [Tutorials/Linux/Set a limit on requests to your node's API](/tutorials/set-up-reverse-proxy.md)
 [Tutorials/Linux/Add HTTPS support to your node](/tutorials/add-https.md)

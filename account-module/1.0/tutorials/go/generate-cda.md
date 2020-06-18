@@ -17,7 +17,7 @@ go get github.com/iotaledger/iota.go/trinary
 
 ## IOTA network
 
-In this tutorial, we connect to an IOTA node on the [Devnet](root://getting-started/0.1/network/iota-networks.md#devnet).
+In this tutorial, we connect to a node on the [Devnet](root://getting-started/1.0/networks/overview.md).
 
 ## Code walkthrough
 
@@ -90,7 +90,7 @@ You should see the magnet link in the console.
 iota://DL9CSYICJVKQRUTWBFUCZJQZ9WNBSRJOA9MGOISQZGGHOCZTXVSKDIZN9HBORNGDWRBBAFTKXGEJIAHKDJUYJJCFHC/?timeout_at=1574514007&multi_use=1&expected_amount=0
 ```
 
-You can copy this magnet link and send it to someone else so they can deposit IOTA tokens into it.
+You can copy this magnet link and send it to someone else so they can transfer IOTA tokens to the address.
 
 ## Next steps
 

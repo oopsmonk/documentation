@@ -1,6 +1,6 @@
 # Listen for live transactions in Node.js
 
-**In this tutorial, you listen to the Tangle for recent transactions by subscribing to the [zero message queue (ZMQ)](https://zeromq.org/) on [nodes](root://getting-started/0.1/network/nodes.md).**
+**In this tutorial, you listen to the Tangle for recent transactions by subscribing to events on a node.**
 
 ## Packages
 
@@ -20,7 +20,7 @@ yarn add zeromq
 
 ## IOTA network
 
-In this tutorial, we connect to an IOTA node on the [Devnet](root://getting-started/0.1/network/iota-networks.md#devnet).
+In this tutorial, we connect to a node on the [Devnet](root://getting-started/1.0/networks/overview.md).
 
 ## Code walkthrough
 
@@ -31,7 +31,7 @@ In this tutorial, we connect to an IOTA node on the [Devnet](root://getting-star
     const sock = zmq.socket('sub');
     ```
 
-2. Connect the socket to an IOTA node's ZMQ port
+2. Connect the socket to a node's ZMQ port
 
     ```js
     sock.connect('tcp://zmq.devnet.iota.org:5556');
@@ -110,7 +110,7 @@ In this tutorial, we connect to an IOTA node on the [Devnet](root://getting-star
     ```
 
 :::success:Congratulations :tada:
-You're monitoring an IOTA node for incoming transactions.
+You're monitoring a node for incoming transactions.
 :::
 
 ## Run the code
@@ -127,6 +127,6 @@ It may take a minute or two to receive data from the IOTA node.
 
 ## Next steps
 
-[Start using Masked Authenticated Messaging](root://mam/1.0/overview.md) to send encrypted streams of data that others can subscribe to on the Tangle.
+[Start using Masked Authenticated Messaging](root://mam/1.0/overview.md) to send encrypted streams of data that others can subscribe to in the Tangle.
 
 Take a look at our [app blueprints](root://blueprints/0.1/introduction/overview.md) for inspiration.

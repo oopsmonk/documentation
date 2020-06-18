@@ -2,6 +2,18 @@
 
 **The Internet of Things (IoT) is an umbrella term for billions of Internet-connected devices that share data with each other. Thanks to this data-sharing network, IoT is becoming the driving force in creating more efficient communication across many aspects of our lives. IOTA allows these devices to use the Tangle as a single source of truth, where they can buy, sell, or simply send data among each other for zero fees.**
 
+## IOTA and the Internet of Things
+
+The goal of IOTA is to allow devices on the Internet of Things (IoT) to transfer data and make payments among each other.
+
+While most IoT devices have enough computational power to sign and send IOTA transactions, some low-end devices are not powerful enough to calculate the necessary proof of work. For these devices, we recommend choosing another option for calculating proof of work.
+
+:::info:
+An example of a device that can do proof of work is the [STM X-Cube-IOTA1](https://www.st.com/en/embedded-software/x-cube-iota1.html). This devices uses the IOTA C client library as middleware.
+:::
+
+We are also currently working on how best to integrate IOTA into cloud IoT environments (such as AWS IoT and Google Cloud IoT). This integration will allow you to seamlessly transfer IoT data among physical devices through the Tangle.
+
 In this series of articles, we start from the basics to show you how to set up small devices such as microcontrollers on the Internet of Things. Then, as you become more confident, we connect these devices to the Tangle, so that you can attach immutable sensor data to it for other devices to read or even buy.
 
 ## Supported boards

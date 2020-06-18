@@ -15,7 +15,7 @@ On 11 February 2020, the IOTA Foundation became aware of an attack on the Trinit
 
 3. Create a deep link, using the new address
 
-    All deep links must start with the `iota://` URI followed by a 90-tryte address (with [checksum](root://getting-started/0.1/clients/checksums.md)).
+    All deep links must start with the `iota://` URI followed by a 90-tryte address (with [checksum](root://getting-started/1.0/cryptography/checksums.md)).
 
     If you want to specify an amount or message, you can use the following query parameters after the address:
 
@@ -44,7 +44,7 @@ Beware of phishing scams. Make sure the link opens the official Trinity wallet.
 
 3. Create a deep link, using the new address
 
-    All deep links must start with the `iota://` URI followed by a 90-tryte address (with [checksum](root://getting-started/0.1/clients/checksums.md)).
+    All deep links must start with the `iota://` URI followed by a 90-tryte address (with [checksum](root://getting-started/1.0/cryptography/checksums.md)).
 
     If you want to specify an amount or message, you can use the following query parameters after the address:
 

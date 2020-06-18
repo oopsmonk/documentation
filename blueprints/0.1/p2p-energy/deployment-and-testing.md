@@ -26,10 +26,10 @@ To deploy the P2P energy grid app, you must have the following:
 Choose from one of the following cloud services or a local server:
 
 - Amazon
-    * [Web server](https://aws.amazon.com/s3/)
-    * [API server](https://aws.amazon.com/api-gateway/)
-    * [NoSQL database](https://aws.amazon.com/dynamodb/)
-    * [Background tasks](https://aws.amazon.com/lambda/)
+    - [Web server](https://aws.amazon.com/s3/)
+    - [API server](https://aws.amazon.com/api-gateway/)
+    - [NoSQL database](https://aws.amazon.com/dynamodb/)
+    - [Background tasks](https://aws.amazon.com/lambda/)
 
 - Local server
     * Storage: local file system
@@ -56,20 +56,20 @@ The deployment instructions are documented in the [GitHub repository](https://gi
 
 Sources running on RPi need the following:
 - Local area network (LAN) or wide area network (WAN) connection to the grid
-- Connection to an IOTA node (can be internal)
+- Connection to a node (can be internal)
 - [Node.js](https://github.com/audstanley/NodeJs-Raspberry-Pi)
 
 Producers running on RPi need the following:
 - Local area network (LAN) or wide area network (WAN) connection to the grid
-- Connection to an IOTA node (can be internal)
+- Connection to a node (can be internal)
 - [Node.js](https://github.com/audstanley/NodeJs-Raspberry-Pi)
 
 Consumers running on RPi need the following:
 - Local area network (LAN) or wide area network (WAN) connection to the grid
-- Connection to an IOTA node (can be internal)
+- Connection to a node (can be internal)
 - [Node.js](https://github.com/audstanley/NodeJs-Raspberry-Pi)
 
 Grids running in the cloud or on a local server need the following:
 - WAN connection
-- Connection to an IOTA node
+- Connection to a node
 -->

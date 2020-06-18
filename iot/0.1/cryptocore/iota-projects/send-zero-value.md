@@ -5,7 +5,7 @@
 This guide walks you through the process of writing the following scripts:
 
 - **`create_tx.sh`:** Uses the CryptoCore to create a zero-value transaction
-- **`send-tx.js`:** Connects to an IOTA node and sends the transaction to it
+- **`send-tx.js`:** Connects to a node and sends the transaction to it
 
 :::info:
 These code samples are also hosted on [GitHub](https://github.com/iota-community/cryptocore-scripts).
@@ -71,7 +71,7 @@ In this step, you write the `create_tx.sh` script that prompts the user for the 
     read -p "Are you sending this transaction to the Devnet or the Mainnet? " MWM
     ```
 
-4. Use a regular expression to check if the user's answer begins with an 'm' and set the [minimum weight magnitude](root://getting-started/0.1/network/minimum-weight-magnitude.md) (MWM) according to the outcome
+4. Use a regular expression to check if the user's answer begins with an 'm' and set the [minimum weight magnitude](root://getting-started/1.0/references/glossary.md#minimum-weight-magnitude) (MWM) according to the outcome
 
     ```bash
     if [[ $MWM =~ ^[mM] ]]
@@ -184,13 +184,13 @@ In this step, you use the Javascript client library to attach the saved transact
     sudo nano send-tx.js
     ```
 
-4. Use the first argument that was passed to the script to connect to an IOTA node on either the Devnet or the Mainnet
+4. Use the first argument that was passed to the script to connect to a node on either the Devnet or the Mainnet
 
     ```js 
     // This argument should be a minimum weight magnitude (14 or 9)
     const network = process.argv[2];
 
-    // Define an IOTA node for each IOTA network
+    // Define a node for each IOTA network
     const nodes = {
             devnet: 'https://nodes.devnet.iota.org:443',
             mainnet: `https://nodes.iota.org:443`

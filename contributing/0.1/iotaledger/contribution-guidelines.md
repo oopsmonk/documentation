@@ -90,7 +90,7 @@ Blueprint demos are example applications of how IOTA technology can be used to s
 
 - [Industry Marketplace](https://github.com/iotaledger/industry-marketplace) Allows devices to buy and sell goods, data, and services in a vendor-neutral marketplace 
 
-- [HyperLedger bridge](https://github.com/iotaledger/HyperledgerFabric-IOTA-Connector) Allows users to connect to trigger transactions on the Tangle, using HyperLedger smart contracts
+- [HyperLedger bridge](https://github.com/iotaledger/HyperledgerFabric-IOTA-Connector) Allows users to connect to trigger transactions in the Tangle, using HyperLedger smart contracts
 
 - [Container tracking](https://github.com/iotaledger/trade-poc) Allows users to track and trace assets in the supply chain
 

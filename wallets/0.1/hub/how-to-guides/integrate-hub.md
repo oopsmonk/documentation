@@ -51,7 +51,7 @@ If you store IOTA tokens outside of Hub, you may need to transfer them back into
 
 1. Stop Hub
 
-2. Set the `is_cold_storage` field to 0 for any Hub addresses in the `hub_address` table row to which you want to send IOTA tokens
+2. Set the `is_cold_storage` field to 0 for any Hub addresses in the `hub_address` table row to which you want to transfer IOTA tokens
 
 3. Save the seed UUIDs for the Hub addresses in the Hub database
 

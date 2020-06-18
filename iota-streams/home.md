@@ -6,5 +6,5 @@
 [How Streams works](/1.0/get-started/building-a-protocol.md)
 ## Learn how to build your own Streams protocols
 
-[Get started with Channels](root://channels/1.0/overview.md)
+[Get started with Channels](root://channels/1.1/overview.md)
 ## Learn about the built-in Streams protocol and go from the basics to creating your own simple app

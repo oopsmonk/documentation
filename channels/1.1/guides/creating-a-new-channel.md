@@ -10,9 +10,9 @@ To create a channel, you must start with this simple workflow.
 
 Messages can be published on any communication channel.
 
-By default, Channels comes with an API for publishing messages on the [Tangle](root://getting-started/0.1/network/the-tangle.md) with an `Address` link type.
+By default, Channels comes with an API for publishing messages on the Tangle with an `Address` link type.
 
-The `Address` link type includes the channel address in the `address` field of a [transaction](root://getting-started/0.1/transactions/transactions.md) and the message identifier in the `tag` field.
+The `Address` link type includes the channel address in the `address` field of a [transaction](root://getting-started/1.0/understanding-iota/transactions.md) and the message identifier in the `tag` field.
 
 ![Header structure](../images/header-structure.png)
 
@@ -43,7 +43,9 @@ The third argument defines whether the author has an [encryption key pair](#encr
 
 Only authors have signature keys to sign messages and prove ownership of the channel.
 ​
-To sign messages, the `Author` object uses a [Merkle signature scheme (MSS)](https://en.wikipedia.org/wiki/Merkle_signature_scheme). This signature scheme uses a pseudo-random number generator and a secret string to generate [Winternitz one-time signature keys](https://en.wikipedia.org/wiki/Hash-based_cryptography#One-time_signature_schemes). These signatures are quantum robust, meaning that they are resistant against attacks by quantum computers. However, the 'one-time' part, means that each private key can be used only once. Therefore, authors need to decide in advance how many private keys to pre-generate because the public half of these keys is then used to generate the channel address, which is also the Merkle root.
+To sign messages, the `Author` object uses the Winternitz one-time signature (W-OTS) scheme combined with a Merkle signature scheme. These signatures are quantum robust, meaning that they are resistant against attacks by quantum computers. For more information about how signatures are generated and verified, see [Signatures](root://getting-started/1.0/cryptography/signatures.md) .
+
+To generate the private signature keys, the `Author` object uses a pseudo-random number generator and a secret string. The public half of these keys is then used to generate the channel address.
 ​
 ![Example of a Merkle tree](../images/merkle-tree-channel.png)
 
@@ -59,7 +61,7 @@ let announcement = author.announce();
 
 ## Publishing the message
 
-To publish a message on the Tangle, you need the following:
+To publish a message in the Tangle, you need the following:
 
 - An instance of the IOTA Rust client library
 - The default node options, including the minimum weight magnitude, and whether to do local or remote proof of work
@@ -71,13 +73,13 @@ use iota_streams::app::transport::tangle::client::SendTrytesOptions;
 use iota_streams::app_channels::api::tangle::{Transport};
 ```
 
-Then, you can use the `iota_client` object to connect to an IOTA node and publish the message on the Tangle.
+Then, you can use the `iota_client` object to connect to a node and publish the message in the Tangle.
 
-The `iota_client` object is extended to implement the [`Transport` trait for the Tangle](https://github.com/iotaledger/streams/blob/master/iota-streams-app/src/transport/tangle/client.rs), which means that you can use it to create a [bundle](root://getting-started/0.1/transactions/bundles.md) from messages.
+The `iota_client` object is extended to implement the [`Transport` trait for the Tangle](https://github.com/iotaledger/streams/blob/master/iota-streams-app/src/transport/tangle/client.rs), which means that you can use it to create a bundle from messages.
 
 
 ```rust
-// Connect to an IOTA node
+// Connect to a node
 let mut client = iota_client::Client::new("https://nodes.devnet.iota.org:443");
 
 // Change the default settings to use a lower minimum weight magnitude for the Devnet

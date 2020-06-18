@@ -1,12 +1,10 @@
 # Check the balance of an address in C
 
-**In this tutorial, you request the balance of [IOTA tokens](root://getting-started/0.1/clients/token.md) on [addresses](root://getting-started/0.1/clients/addresses.md) from a [node](root://getting-started/0.1/network/nodes.md).**
+**In this tutorial, you request the balance of IOTA tokens on addresses from a node.**
 
 ## IOTA network
 
-In this tutorial, we connect to an IOTA node on the [Devnet](root://getting-started/0.1/network/iota-networks.md#devnet).
-
-The network settings are defined in a `config.h` file, which is created in the [getting started guide](root://client-libraries/1.0/getting-started/c-quickstart.md).
+The network settings are defined in a `config.h` file. See [C quickstart](root://client-libraries/1.0/getting-started/c-quickstart.md).
 
 ## Code walkthrough
 

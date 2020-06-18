@@ -1,6 +1,6 @@
 # Get started with the RESTful API
 
-**When you expose Hub's RESTful API server, you can interact with it through HTTP endpoints. These endpoints allow you to manage users' IOTA tokens by interfacing with the Hub database and a [node](root://getting-started/0.1/network/nodes.md). In this tutorial, you learn the basics of the RESTful API to create a new user with some new deposit addresses.**
+**When you expose Hub's RESTful API server, you can interact with it through HTTP endpoints. These endpoints allow you to manage users' IOTA tokens by interfacing with the Hub database and a node. In this tutorial, you learn the basics of the RESTful API to create a new user with some new deposit addresses.**
 
 ## Prerequisites
 
@@ -89,7 +89,7 @@ You should see an empty object in the console, which means that the user was cre
 You can see this user in the Hub database by [querying the `user_account` table](../how-to-guides/query-the-database.md).
 :::
 
-2\. Create a new deposit address with a [checksum](root://getting-started/0.1/clients/checksums.md) 
+2\. Create a new deposit address with a [checksum](root://getting-started/1.0/cryptography/checksums.md) 
 
 --------------------
 ### Python
@@ -175,7 +175,7 @@ In the database, addresses are always saved without the checksum.
 3\. Send some IOTA tokens to the user's deposit addresses
 
 :::info:
-You can use the [official Trinity wallet](root://wallets/0.1/trinity/introduction/overview.md) to send IOTA tokens.
+You can use the [official Trinity wallet](root://wallets/0.1/trinity/introduction/overview.md) to transfer IOTA tokens.
 ::: 
 
 4\. Get the balance and history for the user 
@@ -248,7 +248,7 @@ curl http://localhost:50051 \
 ```
 --------------------
 
-If you sent IOTA tokens to the deposit address, the output should display something like the following:
+If you transferred IOTA tokens to the deposit address, the output should display something like the following:
 
 ```shell
 10 i available for 'Jake'

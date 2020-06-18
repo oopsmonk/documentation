@@ -2,6 +2,8 @@
 
 [Introduction/Overview](overview.md)
 
+[Getting started/Choose a language](/getting-started/quickstart.md)
+
 [Getting started/C](/getting-started/c-quickstart.md)
 
 [Getting started/Go](/getting-started/go-quickstart.md)

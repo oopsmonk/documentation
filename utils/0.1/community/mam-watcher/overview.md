@@ -64,7 +64,7 @@ In the console, you should see that the `sender.js` window sends transactions an
 
 ## Make your message more private
 
-Until now, anyone who was able to find your transactions on the Tangle could decrypt the message using the address as the key.
+Until now, anyone who was able to find your transactions in the Tangle could decrypt the message using the address as the key.
 
 To make your message more private and to have more control over who can decrypt it, you can make your channel restricted.
 
@@ -117,7 +117,7 @@ To make your message more private and to have more control over who can decrypt 
     ```
 
 :::success:Congratulations!
-Now, only those with the side key can decrypt your message, even if they find your transactions on the Tangle.
+Now, only those with the side key can decrypt your message, even if they find your transactions in the Tangle.
 :::
 
 ## Next steps

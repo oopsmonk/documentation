@@ -2,7 +2,7 @@
 
 **The following information describes what IRI does when a client calls the [getTransactionsToApprove](root://iri/1.0/references/iri-api-reference.md#getTransactionsToApprove) endpoint.**
 
-When this endpoint is called, an IOTA node starts the tip selection algorithm, which is separated into the following stages:
+When this endpoint is called, a node starts the tip selection algorithm, which is separated into the following stages:
 
 1. Preparation
 2. Rating calculation
@@ -12,17 +12,17 @@ When this endpoint is called, an IOTA node starts the tip selection algorithm, w
 
 The algorithm's goal is to return two non-conflicting tip transactions as a successful result of the API call.
 
-The algorithm selects a subgraph of the ledger and does two weighted random walks through it. Each weighted random walk returns a tip transaction hash.
+The algorithm selects a subtangle of the ledger and does two weighted random walks through it. Each weighted random walk returns a tip transaction hash.
 
 Both [weighted random walks](#weighted-random-walk) start from the same milestone transaction (`latestSolidMilestone - depth`).
 
-If the client specifies a `reference` argument to the API call, the `branchTransaction` walk will start from the transaction in the `reference` argument only if that transaction is in the subgraph.
+If the client specifies a `reference` argument to the API call, the `branchTransaction` walk will start from the transaction in the `reference` argument only if that transaction is in the subtangle.
 
 If the transaction in the `reference` argument is older than the `depth` milestone index, the API call fails with the following error message: Reference transaction is too old.
 
 ### Rating calculation
 
-The algorithm computes the rating of every transaction in the subgraph. These ratings will be subsequently transformed into weights during the weighted random walk to bias the walker's path.
+The algorithm computes the rating of every transaction in the subtangle. These ratings will be subsequently transformed into weights during the weighted random walk to bias the walker's path.
 
 The rating calculation is performed only once, and used to select both tip transactions.
 
@@ -38,7 +38,7 @@ Every rating calculator, being invoked with an `entryPoint` transaction, should 
 
 #### Future set creation
 
-For every transaction included in our sorted subgraph, a future set is created, containing direct and indirect approvers. The rating of each transaction is the size of its future set + 1 (the transaction's own weight).
+For every transaction included in our sorted subtangle, a future set is created, containing direct and indirect approvers. The rating of each transaction is the size of its future set + 1 (the transaction's own weight).
 
 ```java
 entryPoint = latestSolidMilestone - depth
@@ -55,11 +55,11 @@ class CumulativeWeightCalculator(RatingCalculator):
 
         rating = dict()
 
-        subgraph = Tangle(startTx)
+        subtangle = Tangle(startTx)
 
-        topologicalSubgraph = sortTopologically(subgraph)
+        topologicalSubtangle = sortTopologically(subtangle)
 
-        for tx in topologicalSubgraph:
+        for tx in topologicalSubtangle:
 
             rating[tx] = len(futureSet(tx)) + 1
 
@@ -71,7 +71,7 @@ class CumulativeWeightCalculator(RatingCalculator):
 
 - In order to preserve space while storing transaction's identifiers, we only store a portion of the transaction's hash bytes, truncating it to the `PREFIX_LENGTH` length. Currently, this value has been hardcoded to 44 bytes, corresponding to 220 trits.
 
-- In order to cap the memory consumption of the algorithm, we allow to store up to `MAX_FUTURE_SET_SIZE` number of approvers for the transaction we are considering, under the assumption that a higher rating score won't contribute significantly to bias the walker. This value has been heuristically hardcoded to 5000. Please note that this optimization, while capping memory usage during runtime, makes the walk to behave more randomly closer the beginning of the considered subgraph since the future sets of those transactions are more likely to have been capped to `MAX_FUTURE_SET_SIZE`. The desired behavior is instead the contrary: we would like the beginning of the walk to be strongly biased towards the main branch while being more random closer to the tips, spreading the chance for any of them to get selected. 
+- In order to cap the memory consumption of the algorithm, we allow to store up to `MAX_FUTURE_SET_SIZE` number of approvers for the transaction we are considering, under the assumption that a higher rating score won't contribute significantly to bias the walker. This value has been heuristically hardcoded to 5000. Please note that this optimization, while capping memory usage during runtime, makes the walk to behave more randomly closer the beginning of the considered subtangle since the future sets of those transactions are more likely to have been capped to `MAX_FUTURE_SET_SIZE`. The desired behavior is instead the contrary: we would like the beginning of the walk to be strongly biased towards the main branch while being more random closer to the tips, spreading the chance for any of them to get selected. 
 
 ### Weighted random walk
 

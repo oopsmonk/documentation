@@ -2,7 +2,7 @@
 
 **In this tutorial, you learn how to create a copy of a bundle and change the message in the tail transaction.**
 
-Messages in transactions are stored in their `signatureMessageFragment` field, which isn't included in the [bundle essence](root://getting-started/0.1/transactions/bundles.md#bundle-essence). Therefore, you can change the value of this field without changing the bundle hash.
+Messages in transactions are stored in their `signatureMessageFragment` field, which isn't included in the [bundle essence](root://getting-started/1.0/references/glossary.md#bundle-essence). Therefore, you can change the value of this field without changing the bundle hash.
 
 ## Packages
 
@@ -22,7 +22,7 @@ yarn add @iota/core @iota/converter @iota/bundle @iota/transaction @iota/transac
 
 ## IOTA network
 
-In this tutorial, we connect to an IOTA node on the [Devnet](root://getting-started/0.1/network/iota-networks.md#devnet).
+In this tutorial, we connect to a node on the [Devnet](root://getting-started/1.0/networks/overview.md).
 
 ## Code walkthrough
 
@@ -36,7 +36,7 @@ In this tutorial, we connect to an IOTA node on the [Devnet](root://getting-star
     const { asTransactionTrytes } = require('@iota/transaction-converter');
     ```
 
-2. Connect to an IOTA node
+2. Connect to a node
 
     ```js
     const iota = Iota.composeAPI({
@@ -106,7 +106,7 @@ In this tutorial, we connect to an IOTA node on the [Devnet](root://getting-star
     }
     ```
 
-9. Send your copy to an IOTA node
+9. Send your copy to a node
 
     ```js
    IOTA.sendTrytes(newTrytes.reverse(),3,9).then(transactions => {
@@ -119,14 +119,14 @@ In this tutorial, we connect to an IOTA node on the [Devnet](root://getting-star
     You reverse the bundle array because the library expects bundles to be sent head first.
     :::
 
-Now, you can [search for your new tail transaction](https://devnet.thetangle.org/) on the Tangle and see that it's in a bundle with the same bundle hash as the original.
+Now, you can [search for your new tail transaction](https://devnet.thetangle.org/) in the Tangle and see that it's in a bundle with the same bundle hash as the original.
 
 :::success:Congratulations :tada:
 You've just changed the message of a tail transaction in a bundle and reattached a copy of that bundle to the Tangle.
 :::
 
 :::warning:
-If your original tail transaction belongs to a transfer bundle, the IOTA nodes will mark either your copy or the original bundle as a double spend. Therefore, only one of them will be confirmed.
+If your original tail transaction belongs to a transfer bundle, nodes will mark either your copy or the original bundle as a double spend. Therefore, only one of them will be confirmed.
 :::
 
 ## Run the code

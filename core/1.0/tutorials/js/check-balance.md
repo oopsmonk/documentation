@@ -1,6 +1,6 @@
 # Check the balance of an address in Node.js
 
-**In this tutorial, you request the balance of [IOTA tokens](root://getting-started/0.1/clients/token.md) on [addresses](root://getting-started/0.1/clients/addresses.md) from a [node](root://getting-started/0.1/network/nodes.md).**
+**In this tutorial, you request the balance of IOTA tokens on addresses from a node.**
 
 ## Packages
 
@@ -20,7 +20,7 @@ yarn add @iota/core
 
 ## IOTA network
 
-In this tutorial, we connect to an IOTA node on the [Devnet](root://getting-started/0.1/network/iota-networks.md#devnet).
+In this tutorial, we connect to a node on the [Devnet](root://getting-started/1.0/networks/overview.md).
 
 ## Code walkthrough
 
@@ -30,7 +30,7 @@ In this tutorial, we connect to an IOTA node on the [Devnet](root://getting-star
     const Iota = require('@iota/core');
     ```
 
-2. Connect to an IOTA node
+2. Connect to a node
 
     ```js
     const iota = Iota.composeAPI({
@@ -77,6 +77,6 @@ Click the green button to run the sample code in this tutorial and see the resul
 
 ## Next steps
 
-[Listen for live transactions on the Tangle](../js/listen-for-transactions.md).
+[Listen for live transactions in the Tangle](../js/listen-for-transactions.md).
 
 You can also check the balance of an address, using a utility such as the [Tangle explorer](https://utils.iota.org).

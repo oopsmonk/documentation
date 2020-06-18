@@ -1,6 +1,6 @@
 # Send a "hello world" transaction in Python
 
-**In this tutorial, you send a "hello world" message in a zero-value transaction. These transactions are useful for storing messages on the [Tangle](root://getting-started/0.1/network/the-tangle.md) without having to send any [IOTA tokens](root://getting-started/0.1/clients/token.md).**
+**In this tutorial, you send a "hello world" message in a zero-value transaction. These transactions are useful for storing messages on the Tanglewithout having to send any IOTA tokens.**
 
 ## Packages
 
@@ -12,11 +12,11 @@ pip install pyota
 
 ## IOTA network
 
-In this tutorial, we connect to a [node](root://getting-started/0.1/network/nodes.md) on the [Devnet](root://getting-started/0.1/network/iota-networks.md#devnet) with the following network settings:
+In this tutorial, we connect to a node on the [Devnet](root://getting-started/1.0/networks/overview.md) with the following network settings:
 
-- **[Minimum weight magnitude](root://getting-started/0.1/network/minimum-weight-magnitude.md)**: 9
+- **[minimum weight magnitude](root://getting-started/1.0/references/glossary.md#minimum-weight-magnitude)**: 9
 
-- **[Depth](root://getting-started/0.1/transactions/depth.md)**: 3
+- **[Depth](root://getting-started/1.0/clients/sending-a-transaction.md#choosing-a-depth)**: 3
 
 1. Import the packages
 
@@ -28,24 +28,24 @@ In this tutorial, we connect to a [node](root://getting-started/0.1/network/node
     from iota import TryteString
     ```
 
-2. Connect to an IOTA node
+2. Connect to a node
 
     ```python
     api = Iota('https://nodes.devnet.iota.org:443', testnet = True) 
     ```
 
     :::info:
-    The `testnet` argument sets the [minimum weight magnitude](root://getting-started/0.1/network/minimum-weight-magnitude.md) to 9.
+    The `testnet` argument sets the [minimum weight magnitude](root://getting-started/1.0/references/glossary.md#minimum-weight-magnitude) to 9.
     :::
 
-3. Define an [address](root://getting-started/0.1/clients/addresses.md) to which you want to send a message
+3. Define an address to which you want to send a message
 
     ```python
     address = 'ZLGVEQ9JUZZWCZXLWVNTHBDX9G9KZTJP9VEERIIFHY9SIQKYBVAHIMLHXPQVE9IXFDDXNHQINXJDRPFDXNYVAPLZAW'
     ```
 
     :::info:
-    This address does not have to belong to anyone. To be valid, the address just needs to consist of 81 [trytes](root://getting-started/0.1/introduction/ternary.md).
+    This address does not have to belong to anyone. To be valid, the address just needs to consist of 81 trytes. For more information about trytes, see [Ternary](root://getting-started/1.0/understanding-iota/ternary.md).
     :::
 
 4. Define a message that you want to send to the address and convert it to trytes
@@ -72,7 +72,7 @@ In this tutorial, we connect to a [node](root://getting-started/0.1/network/node
     The Python library makes a disctinction between proposed and regular transaction objects. Proposed transaction objects are those that you can edit because they are not yet attached to the Tangle. In contrast, regular transaction objects are immutable because they are already attached to the Tangle.
     :::
 
-6. Pass your `ProposedTransaction` object to the [`send_transfer()`](https://pyota.readthedocs.io/en/latest/api.html#send-transfer) method to do [tip selection](root://getting-started/0.1/network/tip-selection.md), [remote proof of work](root://getting-started/0.1/transactions/proof-of-work.md), and to send the bundle to the IOTA node
+6. Pass your `ProposedTransaction` object to the [`send_transfer()`](https://pyota.readthedocs.io/en/latest/api.html#send-transfer) method to do tip selection, remote proof of work, and to send the bundle to the node. For details about this process, see [Sending a transaction](root://getting-started/1.0/clients/sending-a-transaction.md).
 
     ```python
     result = api.send_transfer(transfers = [tx])
@@ -89,9 +89,9 @@ You can use this tail transaction hash to read the transaction from the Tangle.
 :::
 
 :::warning:
-Nodes can delete old transactions from their local copies of the Tangle. Therefore, a time may come where you request your transaction from an IOTA node, but the IOTA node doesn't have it anymore.
+Nodes can delete old transactions from their local copies of the Tangle. Therefore, a time may come where you request your transaction from a node, but the IOTA node doesn't have it anymore.
 
-If you want to store data on the Tangle for extended periods of time, we recommend [running your own node](root://node-software/1.0/overview.md).
+If you want to store data in the Tangle for extended periods of time, we recommend [running your own node](root://node-software/1.0/overview.md).
 :::
 
 ## Run the code

@@ -2,7 +2,7 @@
 
 [Introduction/Overview](overview.md)
 
-[Installation/Install GoShimmer](/tutorials/install-goshimmer.md)
+[Installation/Choose an installation method](/tutorials/install-goshimmer.md)
 [Installation/Run the pre-built GoShimmer executable](/tutorials/install-goshimmer-executable.md)
 [Installation/Build GoShimmer from source](/tutorials/install-goshimmer-native.md)
 

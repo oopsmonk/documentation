@@ -6,7 +6,7 @@ This guide walks you through the process of writing the following scripts:
 
 - **`create_bundle.sh`:** Creates a bundle of eight zero-value transactions without a proof of work
 - **`do_pow.sh`:** Uses the CryptoCore to do proof of work for the bundle
-- **`send-bundle.js`:** Connects to an IOTA node and sends the bundle's transactions to it
+- **`send-bundle.js`:** Connects to a node and sends the bundle's transactions to it
 
 :::info:
 These code samples are also hosted on [GitHub](https://github.com/iota-community/cryptocore-scripts).
@@ -57,14 +57,14 @@ In this step, you write a script that creates eight zero-value transactions, cha
     sudo nano create-bundle.js
     ```
 
-2. Use the first argument that is passed to the script to connect to an IOTA node on either the Devnet or the Mainnet
+2. Use the first argument that is passed to the script to connect to a node on either the Devnet or the Mainnet
 
     ```js
     
     // This argument should be a minimum weight magnitude (14 or 9)
     const network = process.argv[2];
 
-    // Define an IOTA node for each IOTA network
+    // Define a node for each IOTA network
     const nodes = {
             devnet: 'https://nodes.devnet.iota.org:443',
             mainnet: `https://nodes.iota.org:443`
@@ -92,7 +92,7 @@ In this step, you write a script that creates eight zero-value transactions, cha
     // Create one transfer object for each transaction that you want to send
     var transfers = [{
         'address': address,
-        // These transactions do not send IOTA tokens
+        // These transactions do not transfer IOTA tokens
         'value': 0,
         // The `asciiToTrytes()` method supports only basic ASCII characters. As a result, diacritical marks such as accents and umlauts aren't supported and result in an `INVALID_ASCII_CHARS` error.
         'message': Converter.asciiToTrytes('Hello, this is my first message on a CryptoCore'),
@@ -184,7 +184,7 @@ In this step, you use the CryptoCore API to do proof of work for the eight trans
     read -p "Are you sending this transaction to the Devnet or the Mainnet? " MWM
     ```
 
-3. Use a regular expression to check if the user's answer begins with an 'm' and set the [minimum weight magnitude](root://getting-started/0.1/network/minimum-weight-magnitude.md) (MWM) according to the outcome
+3. Use a regular expression to check if the user's answer begins with an 'm' and set the [minimum weight magnitude](root://getting-started/1.0/references/glossary.md#minimum-weight-magnitude) (MWM) according to the outcome
 
     ```bash
     if [[ $MWM =~ ^[mM] ]]
@@ -274,13 +274,13 @@ In this step, you write a script that attaches a bundle of transactions to the T
     sudo nano send-bundle.js
     ```
 
-2. Use the first argument that was passed to the script to connect to an IOTA node on either the Devnet or the Mainnet
+2. Use the first argument that was passed to the script to connect to a node on either the Devnet or the Mainnet
 
     ```js
     // This argument should be a minimum weight magnitude (14 or 9)
     const network = process.argv[2];
 
-    // Define an IOTA node for each IOTA network
+    // Define a node for each IOTA network
     const nodes = {
             devnet: 'https://nodes.devnet.iota.org:443',
             mainnet: `https://nodes.iota.org:443`
@@ -389,7 +389,7 @@ Tail transaction hash:
 "XDAHIDSSUXIPWPUSVBUWPMYIXWAWPTKLUAHUCVGQRHH9MYGUGVVNVDPRMKULLWTPYQRKSWNTXUQMA9999"
 ```
 
-To see your bundle on the Tangle, copy the tail transaction hash and paste it into a [Tangle explorer](https://utils.iota.org/).
+To see your bundle in the Tangle, copy the tail transaction hash and paste it into a [Tangle explorer](https://utils.iota.org/).
 
 If the Tangle explorer doesn't display your transaction after 5 minutes, the IOTA node may not have sent your transaction to its neighbors.
 

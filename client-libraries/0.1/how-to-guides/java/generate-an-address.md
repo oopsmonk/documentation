@@ -1,10 +1,10 @@
 # Generate an address in Java
 
-**In this tutorial, you learn how to generate a new address for a [seed](root://getting-started/0.1/clients/seeds.md) with a given [security level](root://getting-started/0.1/clients/security-levels.md).**
+**In this tutorial, you learn how to generate a new address for a seed with a given security level.**
 
 ## IOTA network
 
-In this tutorial, we connect to a [node](root://getting-started/0.1/network/nodes.md) on the [Devnet](root://getting-started/0.1/network/iota-networks.md#devnet).
+In this tutorial, we connect to a node on the [Devnet](root://getting-started/1.0/networks/overview.md).
 
 ## Code walkthrough
 
@@ -18,7 +18,7 @@ In this tutorial, we connect to a [node](root://getting-started/0.1/network/node
     import org.iota.jota.dto.response.GetNewAddressResponse;
     import org.iota.jota.error.ArgumentException;
     ```
-2. Connect to an IOTA node
+2. Connect to a node
 
     ```java
    IOTAAPI api = new IotaAPI.Builder()

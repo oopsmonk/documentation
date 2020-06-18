@@ -1,10 +1,10 @@
 # Check the balance of an address in Java
 
-**In this tutorial, you request the balance of [IOTA tokens](root://getting-started/0.1/clients/token.md) on [addresses](root://getting-started/0.1/clients/addresses.md) from a [node](root://getting-started/0.1/network/nodes.md).**
+**In this tutorial, you request the balance of IOTA tokens on addresses from a node.**
 
 ## IOTA network
 
-In this tutorial, we connect to an IOTA node on the [Devnet](root://getting-started/0.1/network/iota-networks.md#devnet).
+In this tutorial, we connect to a node on the [Devnet](root://getting-started/1.0/networks/overview.md).
 
 ## Code walkthrough
 
@@ -17,7 +17,7 @@ In this tutorial, we connect to an IOTA node on the [Devnet](root://getting-star
     import org.iota.jota.error.ArgumentException;
     ```
 
-2. Connect to an IOTA node
+2. Connect to a node
 
     ```java
    IOTAAPI api = new IotaAPI.Builder()
@@ -35,7 +35,7 @@ In this tutorial, we connect to an IOTA node on the [Devnet](root://getting-star
     ```
 
     :::info:
-    This address must include a [checksum](root://getting-started/0.1/clients/checksums.md).
+    This address must include a [checksum](root://getting-started/1.0/cryptography/checksums.md).
     :::
 
 4. Use the `getBalance()` method to ask the IOTA node for the current balance of the address
@@ -96,6 +96,6 @@ Your balance is 500
 
 ## Next steps
 
-[Listen for live transactions on the Tangle](../java/listen-for-transactions.md).
+[Listen for live transactions in the Tangle](../java/listen-for-transactions.md).
 
 You can also check the balance of an address, using a utility such as the [Tangle explorer](https://utils.iota.org).

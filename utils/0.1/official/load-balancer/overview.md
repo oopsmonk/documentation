@@ -34,9 +34,9 @@ Each instance of the client load balancer can include the following options:
 - [nodeWalkStrategy](https://github.com/iotaledger/client-load-balancer/blob/master/docs/classes/loadbalancersettings.md#nodewalkstrategy) (required): How and when you want the API to select new nodes to connect to
 - [successMode](https://github.com/iotaledger/client-load-balancer/blob/master/docs/classes/loadbalancersettings.md#optional-successmode): Whether you want stay connected to the current node after a successful request or try to connect to the next node in the list
 - [failMode](https://github.com/iotaledger/client-load-balancer/blob/master/docs/classes/loadbalancersettings.md#optional-failmode): Whether you want to throw an exception after a single request failure or try to connect to all nodes before throwing an exception
-- [failNodeCallback](https://github.com/iotaledger/client-load-balancer/blob/master/docs/classes/loadbalancersettings.md#optional-failnodecallback): A callback which is called when an IOTA node fails
+- [failNodeCallback](https://github.com/iotaledger/client-load-balancer/blob/master/docs/classes/loadbalancersettings.md#optional-failnodecallback): A callback which is called when a node fails
 - [tryNodeCallback](https://github.com/iotaledger/client-load-balancer/blob/master/docs/classes/loadbalancersettings.md#optional-trynodecallback): A callback which is called when a new node is about to be sent a request
-- [timeoutMs](https://github.com/iotaledger/client-load-balancer/blob/master/docs/classes/loadbalancersettings.md#optional-timeoutms): The amount of time in milliseconds that you want to wait for a response from an IOTA node before using the fail mode
+- [timeoutMs](https://github.com/iotaledger/client-load-balancer/blob/master/docs/classes/loadbalancersettings.md#optional-timeoutms): The amount of time in milliseconds that you want to wait for a response from a node before using the fail mode
 - [snapshotAware](https://github.com/iotaledger/client-load-balancer/blob/master/docs/classes/loadbalancersettings.md#optional-snapshotaware): Whether to log a message to the console if the requested transactions have been deleted by the IOTA node during a snapshot
 
 In this tutorial, we use a random walk strategy that selects the next node in the list after every successful request and that tries all nodes before throwing an exception.
@@ -47,7 +47,7 @@ In this tutorial, we use a random walk strategy that selects the next node in th
     const { composeAPI, FailMode, RandomWalkStrategy, SuccessMode } = require('@iota/client-load-balancer');
     ```
 
-2. Configure an API object with two [Devnet](root://getting-started/0.1/network/iota-networks.md#devnet) nodes 
+2. Configure an API object with two [Devnet](root://getting-started/1.0/networks/overview.md) nodes 
 
     ```js
     const devnetApi = composeAPI({

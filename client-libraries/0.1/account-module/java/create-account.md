@@ -4,11 +4,11 @@
 
 ## IOTA network
 
-In this tutorial, we connect to an IOTA node on the [Devnet](root://getting-started/0.1/network/iota-networks.md#devnet) with the following network settings:
+In this tutorial, we connect to a node on the [Devnet](root://getting-started/1.0/networks/overview.md) with the following network settings:
 
-- **[Minimum weight magnitude](root://getting-started/0.1/network/minimum-weight-magnitude.md)**: 9
+- **[minimum weight magnitude](root://getting-started/1.0/references/glossary.md#minimum-weight-magnitude)**: 9
 
-- **[Depth](root://getting-started/0.1/transactions/depth.md)**: 3
+- **[Depth](root://getting-started/1.0/clients/sending-a-transaction.md#choosing-a-depth)**: 3
 
 ## Code walkthrough
 
@@ -41,7 +41,7 @@ $b=[byte[]] (1..81);(new-object Security.Cryptography.RNGCryptoServiceProvider).
 String mySeed = "PUEOTSEITFEVEWCWBTSIZM9NKRGJEIMXTULBACGFRQK9IMGICLBKW9TTEVSDQMGWKBXPVCBMMCXWMNPDX";
 ```
 
-3\. Connect to an IOTA node
+3\. Connect to a node
    
 ```java
 IotaAPI api = new IotaAPI.Builder()
@@ -67,7 +67,7 @@ AccountStore store = new AccountFileStore(file);
 
 ```java
 IotaAccount account = new IotaAccount.Builder(mySeed)
-    // Connect to an IOTA node
+    // Connect to a node
     .api(api)
     // Connect to the database
     .store(store)
@@ -90,7 +90,7 @@ When you start the account, you also start any of your account's plugins. The de
 
 - `OutgoingTransferChecker`: Every 10 seconds, this plugin checks whether deposits into your account have been confirmed
 
-- `PromoterReattacher`: Every 10 seconds, this plugin [promotes or reattaches](root://getting-started/0.1/transactions/reattach-rebroadcast-promote.md) any pending withdrawal or deposit transactions that the `TransferChecker` plugins find 
+- `PromoterReattacher`: Every 10 seconds, this plugin [promotes or reattaches](root://getting-started/1.0/clients/helping-a-transaction-confirm.md) any pending withdrawal or deposit transactions that the `TransferChecker` plugins find 
 
 :::info:
 You can customize the behavior of these plugins or build your own.

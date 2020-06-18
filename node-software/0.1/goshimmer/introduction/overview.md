@@ -1,6 +1,6 @@
 # GoShimmer
 
-**GoShimmer is a work-in-progress prototype of an IOTA node software that allows nodes to reach a consensus without the Coordinator, allowing IOTA networks to be decentralized.**
+**GoShimmer is a work-in-progress prototype of a node software that allows nodes to reach a consensus without the Coordinator, allowing IOTA networks to be decentralized.**
 
 GoShimmer nodes run the prototype software that includes the following Coordicide modules:
 

@@ -1,6 +1,6 @@
 # Read transactions from the Tangle in Go
 
-**In this tutorial, you read your "hello world" [transaction](root://getting-started/0.1/transactions/transactions.md) from the Tangle by giving a [node](root://getting-started/0.1/network/nodes.md) your tail transaction hash.**
+**In this tutorial, you read your "hello world" [transaction](root://getting-started/1.0/understanding-iota/transactions.md) from the Tangle by giving a node your tail transaction hash.**
 
 ## Packages
 
@@ -14,7 +14,7 @@ go get github.com/iotaledger/iota.go/transaction
 
 ## IOTA network
 
-In this tutorial, we connect to an IOTA node on the [Devnet](root://getting-started/0.1/network/iota-networks.md#devnet).
+In this tutorial, we connect to a node on the [Devnet](root://getting-started/1.0/networks/overview.md).
 
 ## Code walkthrough
 
@@ -31,7 +31,7 @@ In this tutorial, we connect to an IOTA node on the [Devnet](root://getting-star
     )
     ```
 
-2. Connect to an IOTA node
+2. Connect to a node
 
     ```go
     var node = "https://nodes.devnet.thetangle.org"

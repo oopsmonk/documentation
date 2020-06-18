@@ -1,18 +1,18 @@
 # Send a micropayment in Java
 
-**In this tutorial, you send a micropayment of 1 IOTA by sending a [transfer bundle](root://getting-started/0.1/transactions/bundles.md) to a [node](root://getting-started/0.1/network/nodes.md).**
+**In this tutorial, you send a micropayment of 1 IOTA to a node.**
 
 ## IOTA network
 
-In this tutorial, we connect to an IOTA node on the [Devnet](root://getting-started/0.1/network/iota-networks.md#devnet) with the following network settings:
+In this tutorial, we connect to a node on the [Devnet](root://getting-started/1.0/networks/overview.md) with the following network settings:
 
-- **[Minimum weight magnitude](root://getting-started/0.1/network/minimum-weight-magnitude.md)**: 9
+- **[minimum weight magnitude](root://getting-started/1.0/references/glossary.md#minimum-weight-magnitude)**: 9
 
-- **[Depth](root://getting-started/0.1/transactions/depth.md)**: 3
+- **[Depth](root://getting-started/1.0/clients/sending-a-transaction.md#choosing-a-depth)**: 3
 
 ## Step 1. Get test IOTA tokens
 
-To send test IOTA tokens on the Devnet, the IOTA nodes must have a record of a greater than 0 balance for one of the addresses that belongs to your seed. To get test IOTA tokens to use on the Devnet, you can use the Devnet faucet.
+To send test IOTA tokens on the Devnet, nodes must have a record of a greater than 0 balance for one of the addresses that belongs to your seed. To get test IOTA tokens to use on the Devnet, you can use the Devnet faucet.
 
 1\. Create a new seed and back it up
 
@@ -54,7 +54,7 @@ To transfer your test tokens from one address to another, you need to create and
     import org.iota.jota.model.Transfer;
     ```
 
-2. Connect to an IOTA node
+2. Connect to a node
 
     ```java
    IOTAAPI api = new IotaAPI.Builder()
@@ -99,7 +99,7 @@ To transfer your test tokens from one address to another, you need to create and
     transfers.add(Transaction);
     ```
 
-7. To create a transfer bundle from your `Transfers` object, pass it to the [`sendTransfer()`](https://github.com/iotaledger/iota-java/blob/dev/docs/iota-java/sendTransfer.md) method, which handles [tip selection](root://getting-started/0.1/network/tip-selection.md), [remote proof of work](root://getting-started/0.1/transactions/proof-of-work.md), and sending the bundle to the IOTA node
+7. To create a transfer bundle from your `Transfers` object, pass it to the [`sendTransfer()`](https://github.com/iotaledger/iota-java/blob/dev/docs/iota-java/sendTransfer.md) method, which handles tip selection, remote proof of work, and sending the bundle to the node. For details about this process, see [Sending a transaction](root://getting-started/1.0/clients/sending-a-transaction.md).
 
     ```java
     try {
@@ -166,6 +166,6 @@ In this scenario, you wouldn't know in advance whether the address is spent duri
 
 For example, you are online shopping and the checkout has a QR code that gives you the option to pay in IOTA tokens. This QR code contains an address that is auto-populated in Trinity.
 
-During the time it takes you to complete the checkout and send your transfer bundle, the website owner withdraws IOTA tokens from the address in the QR code. Now that address is spent, and you have just sent IOTA tokens to it.
+During the time it takes you to complete the checkout and send your transfer bundle, the website owner withdraws IOTA tokens from the address in the QR code. Now that address is spent, and you have just transferred IOTA tokens to it.
 
 To help stop this from happening, we recommend using the [account module](root://account-module/1.0/overview.md) to create conditional deposit addresses that specify whether they are active or expired.

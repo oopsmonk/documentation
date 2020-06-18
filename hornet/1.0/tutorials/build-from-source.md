@@ -7,9 +7,13 @@
 To complete this tutorial, you need the following:
 
 - A [Linux Ubuntu operating system](https://ubuntu.com/download#download)
-- 1 GB RAM
+- 2 GB RAM
+- A dual-core CPU
+- SSD storage
 - A public IP address
 - Ports 15600 and 14626 must be exposed to the Internet
+
+The amount of storage you need will depend on whether you plan on pruning transactions from your local database.
 
 ## Step 1. Install the dependencies
 

@@ -4,7 +4,7 @@
 
 [Getting started/Get started](/getting-started/quickstart.md)
 
-[Installation/Install IRI](/tutorials/install-iri.md)
+[Installation/Choose an installation method](/tutorials/install-iri.md)
 [Installation/Run an IRI node in a Docker container](/tutorials/install-iri-docker.md)
 [Installation/Run an IRI node on a Linux Ubuntu server](/tutorials/install-iri-linux.md)
 
