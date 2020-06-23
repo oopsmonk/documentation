@@ -56,7 +56,6 @@
         "PoW",
         "prepareTransfers",
         "PyOTA",
-        "Qubic",
         "RocksDB",
         "ScyllaDB",
         "SeedVault",
