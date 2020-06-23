@@ -1,19 +1,19 @@
 # Run a Hornet node from the APT repository
 
-**In this tutorial, you install and run Hornet as a service on Linux Ubuntu, using the APT repository. This tutorial has been tested on [Ubuntu 18.04](http://releases.ubuntu.com/18.04).**
+**In this tutorial, you install and run Hornet as a service on Linux Ubuntu, using the APT repository.**
 
 ## Prerequisites
 
 To complete this tutorial, you need the following:
 
-- A [Linux Ubuntu operating system](https://ubuntu.com/download#download)
+- A Linux LTS operating system (this tutorial has been tested on [Ubuntu 18.04](https://ubuntu.com/download#download))
 - 2 GB RAM
 - A dual-core CPU
 - SSD storage
 - A public IP address
 - Ports 15600 and 14626 must be exposed to the Internet
 
-The amount of storage you need will depend on whether you plan on pruning transactions from your local database.
+The amount of storage you need depends on whether you plan on pruning transactions from your node's local database. If you don't want to prune transactions at regular intervals, you will need enough storage space to keep all transactions that are attached to the Tangle after your node starts running.
 
 ## Step 1. Install the APT repository
 
@@ -113,6 +113,8 @@ sudo systemctl stop hornet
 ```
 
 ## Next steps
+
+For a video tutorial with all the steps for setting up a node on a virtual private server (VPS), see our [IOTA HORNET Node Installation Party](https://youtu.be/nfBhdRCV2kw) video on YouTube.
 
 Try using one of the client libraries to send transactions to the nodes in your private Tangle:
 

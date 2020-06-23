@@ -12,7 +12,7 @@ Use the following table to select an installation method, depending on your oper
 
 |**Operating system**|**Installation method**|**Tutorial**|
 |:-------------------|:----------------------|:-----------|
-|Linux and Raspberry Pi OS|Use the `hornet` apt repository|[Run a Hornet node from the APT repository](../tutorials/install-hornet-linux.md)|
+|Linux and Raspberry Pi OS|Use the `hornet` apt repository|[Run a Hornet node from the APT repository](../tutorials/install-hornet-linux.md) or for a video tutorial with all the steps for setting up a node on a virtual private server (VPS), see our [IOTA HORNET Node Installation Party](https://youtu.be/nfBhdRCV2kw) video on YouTube|
 | |Build from source on [GitHub](https://github.com/gohornet/hornet)| [Build Hornet from source](../tutorials/build-from-source.md)|
 | |Use a Docker image| [Run a Hornet node in a Docker container](../tutorials/install-hornet-docker.md)
 | |Use a pre-built binary file in the [GitHub release assets](https://github.com/gohornet/hornet/releases)| |
