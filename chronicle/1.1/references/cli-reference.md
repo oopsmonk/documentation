@@ -8,6 +8,6 @@ What is does
 
 Description and explanation
 
-|Flag|Description|
+|**Flag**|**Description**|
 |:---|:----------|
 | | |

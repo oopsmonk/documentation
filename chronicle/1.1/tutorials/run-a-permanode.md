@@ -1,4 +1,4 @@
-# Run a permanode
+# Run the permanode CLI
 
 **In this tutorial, you use Chronicle's built-in permanode CLI to start storing transactions on a local Scylla node.**
 
