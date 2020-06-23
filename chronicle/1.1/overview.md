@@ -1,8 +1,8 @@
 # Chronicle
 
-**Chronicle is a framework for building efficient and reliable services in Rust.**
+**Chronicle is a framework for building efficient and reliable permanodes in Rust.**
 
-By using Chronicle, you can take advantage of the built-in permanode service that allows you to do the following:
+By using Chronicle, you can take advantage of the built-in permanode CLI that allows you to do the following:
 
 - Store transactions in real time, using one or more Scylla clusters
 - Configure the storage settings to meet your needs
@@ -10,11 +10,13 @@ By using Chronicle, you can take advantage of the built-in permanode service tha
 
 ## Limitations
 
-At the moment, it's not possible to filter transactions before storing them.
+This alpha version of Chronicle includes the following limitations:
 
-If Chronicle loses power, it will stop receiving transactions and will have no way of knowing which ones it missed. Therefore, devices that run Chronicle should have a backup power supply and a stable Internet connection.
+- It's not possible to filter transactions before storing them.
 
-Chronicle stores transactions outside of the Tangle, therefore the immutablity of transactions is dependent on the security of your database and the trustworthiness of your administrators. See the [Scylla Security Checklist](https://docs.scylladb.com/operating-scylla/security/security_checklist/) in the Scylla documentation to secure your Scylla cluster.
+- If Chronicle loses power, it will stop receiving transactions and will have no way of knowing which ones it missed. Therefore, devices that run Chronicle should have a backup power supply and a stable Internet connection.
+
+- Chronicle stores transactions outside of the Tangle, therefore the immutablity of transactions is dependent on the security of your database and the trustworthiness of your administrators. See the [Scylla Security Checklist](https://docs.scylladb.com/operating-scylla/security/security_checklist/) in the Scylla documentation to secure your Scylla cluster.
 
 ## Roadmap
 
@@ -39,4 +41,4 @@ The source code for this project is hosted on [Github](https://github.com/iotale
 
 ## Next steps
 
-[Run the CLI permanode service](tutorials/install-chronicle.md) to start storing your own transactions.
+[Run the permanode service](tutorials/run-a-permanode.md) to start storing your own transactions.

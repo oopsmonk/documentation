@@ -1,27 +1,34 @@
-# Permanode API reference
+# Chronicle API reference
 
-**This API provides a simple and consistent way to get transactions from the permanode service.**
+**This API provides a simple and consistent way to get transactions from a Chronicle permanode.**
+
+:::warning:
+This API is in beta and subject to change. We do not recommend using this API in production applications.
+:::
 
 ## Headers
 
-All commands must include the `X-IOTA-API-Version` header set to 1.
+All requests must include a header that defines at least the API version.
 
-All resources expect and return JSON response bodies. Error responses will also be sent as JSON.
+### Versioning
 
-In practice this means that you'll always get a response with a `Content-Type` header set to `application/json`.
+When backwards-incompatible changes are made to the API, a new version is released. The current version is 1.
 
-| **Header**       | **Value** | **Required or Optional** |
-|:---------------|:--------|:--------|
-| `X-IOTA-API-Version` | 1 | Required |
-| `Content-Type` | `application/json` | Optional |
+To set the API version on a specific request, send an `X-IOTA-API-Version` header.
 
-:::warning:
-This API is in beta, and is subject to change. We recommend that you don't use this API in production applications.
-:::
+### Content type
+
+All resources expect and return JSON response bodies. [Error responses](#error-responses) will also be sent as JSON.
+
+In practice, this means that you'll always get a response with a `Content-Type` header set to `application/json`.
+
+### Authentication 
+
+Chronicle does not support authentication yet.
 
 ## Base URL
 
-All requests to this API should be sent to the URL of the permanode service.
+All requests to this API should be sent to the URL of a Chronicle instance.
 
 If you don't already have a service to connect to, we recommend [running your own](root://chronicle/1.0/overview.md).
 
