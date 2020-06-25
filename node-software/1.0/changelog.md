@@ -4,4 +4,5 @@
 
 |**Date**|**Change summary**|**GitHub pull request**|
 |:-------|:-----------------|:----------------------|
+|June 25, 2020|Reordered the node software options to make IRI less prominent|[#748](https://github.com/iotaledger/documentation/pull/748)|
 |May 26, 2020|Restructured the content architecture so that each node software has its own documentation set | [#700](https://github.com/iotaledger/documentation/pull/700)|
