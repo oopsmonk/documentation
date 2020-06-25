@@ -1,6 +1,6 @@
-# Permanode CLI reference
+# %product% CLI reference
 
-**This reference topic documents every command and flag available in the permanode command-line interface.**
+**This reference topic documents every command and flag available in the %product% command-line interface.**
 
 ## command [flags]
 
