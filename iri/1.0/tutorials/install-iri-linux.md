@@ -186,7 +186,7 @@ LOCAL_SNAPSHOTS_PRUNING_ENABLED = true
 ```
 --------------------
 
-3\. Download the latest spent addresses file and snapshot files, which contains the latest data for the Devnet and Mainnet IOTA networks. This directory is available on [the IOTA Foundation's website](https://dbfiles.iota.org/?prefix=mainnet/iri/local-snapshots-and-spent-addresses/)
+3\. Download the latest spent addresses file and snapshot files, which contains the latest data for the Devnet and Mainnet IOTA networks. This directory is available on [the IOTA Foundation's archive](https://dbfiles.iota.org/?prefix=mainnet/iri/local-snapshots-and-spent-addresses/)
 
 :::info:
 Make sure you download the correct directory for your chosen IOTA network.

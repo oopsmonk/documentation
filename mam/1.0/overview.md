@@ -15,7 +15,7 @@ With MAM, you can:
 ---------------
 
 #### **JavaScript** ####
-[Link](tutorials/js)
+[Link](tutorials/js/create-public-channel.md)
 ---
 
 ---------------
