@@ -137,9 +137,7 @@ To reduce the latency between Chronicle and the Scylla node, it's best to instal
     files = [["./path/to/file/6000.dmp", 6000]]
     ```
 
-5. If your device has only 2 CPU cores, change the `core_threads` field to 2
-
-    If you have more than 4 CPU cores, you may want to increase this field, but it's not necessary.
+5. If your device has more than 2 CPU cores and you want to use them, increment the `core_threads` field
 
 6. If you want to get transactions from more than one IOTA node, add their URLs to the `trytes_nodes` and `sn_trytes_nodes` fields
 
