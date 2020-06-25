@@ -10,7 +10,7 @@ IRI is the original IOTA reference implementation for the IOTA Mainnet. This sof
 
 -------------------------
 ![Chronicle](images/Chronicle.png)
-## [Chronicle](root://chronicle/1.0/overview.md)
+## [Chronicle](root://chronicle/1.1/overview.md)
 Chronicle is an addition to the IRI node software that allows you to store all transactions in a separate distributed database that's secure and scalable.
 -------------------------
 

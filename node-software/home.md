@@ -6,7 +6,7 @@
 [IRI](root://iri/1.0/overview.md)
 ## Learn about the software that runs the IOTA Mainnet and how you could benefit the network by running it
 
-[Chronicle](root://chronicle/1.0/overview.md)
+[Chronicle](root://chronicle/1.1/overview.md)
 ## Run a node that keeps all transactions in a separate distributed database to record all historic transactions
 
 [GoShimmer](root://goshimmer/1.0/overview.md)

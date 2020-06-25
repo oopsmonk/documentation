@@ -30,7 +30,7 @@ Chronicle does not support authentication yet.
 
 All requests to this API should be sent to the URL of a Chronicle instance.
 
-If you don't already have a service to connect to, we recommend [running your own](root://chronicle/1.0/overview.md).
+If you don't already have a service to connect to, we recommend [running your own](root://chronicle/1.1/overview.md).
 
 Running your own node has many benefits, of which the most important is that you don't need to trust a potentially malicious third-party node. If you were to connect to a malicious node, it could give you incorrect information about transactions.
 
