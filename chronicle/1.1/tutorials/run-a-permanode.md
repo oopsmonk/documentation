@@ -8,7 +8,9 @@ To complete this tutorial, you need the following:
 
 - A Linux LTS operating system such as [Ubuntu](https://ubuntu.com/download#download)
 
-- [Rust](https://www.rust-lang.org/tools/install)
+- 4 GB RAM
+
+- 64-bit processor
 
 - At least 2 CPU cores
 
@@ -17,6 +19,8 @@ To complete this tutorial, you need the following:
     ```bash
     nproc
     ```
+
+- [Rust](https://www.rust-lang.org/tools/install)
 
 - The `build-essentials`, `pkg-config`, and `libzmq3-dev` packages
 
