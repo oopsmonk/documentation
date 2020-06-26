@@ -76,9 +76,9 @@ For the purposes of this tutorial, you can start a local Scylla node in a Docker
     Note: Non-system keyspaces don't have the same replication settings, effective ownership information is meaningless
     ```
 
-4. Make a note of your Scylla node's internal IP address, you'll need this to connect Chronicle to your Scylla node
+4. Make a note of your Scylla node's address, you'll need this to connect Chronicle to your Scylla node
 
-    In the example above, the internal IP address is 172.17.0.2.
+    In the example above, the address is 172.17.0.2.
 
 :::info:
 Running Scylla in a Docker container is recommended only testing purposes.
@@ -125,7 +125,11 @@ In this step, you download Chronicle from GitHub and configure it to connect to 
     sudo nano examples/permanode/config.toml
     ```
 
-3. Add the IP address of your Scylla node to the `addresses` field
+3. Add the IP address of your Scylla node to the `addresses` field followed by the CQL port (9042)
+
+    ```bash
+    addresses["IP:9042"]
+    ```
 
 4. If you downloaded historical transactions from the archive, add the path to your files in the `files` field, followed by the number in the filename
 
