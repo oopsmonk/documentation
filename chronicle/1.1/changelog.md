@@ -4,4 +4,4 @@
 
 |**Date**|**Change summary**|**GitHub pull request**|
 |:-------|:-----------------|:----------------------|
-|June 25, 2020|Updated content to reflect the changes in alpha 0.1.0 release of Chronicle | [#746](https://github.com/iotaledger/documentation/pull/746)|
+|June 25, 2020|Updated content to reflect the changes in alpha 0.1.0 release of Chronicle | [#747](https://github.com/iotaledger/documentation/pull/747)|
