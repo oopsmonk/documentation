@@ -3,6 +3,8 @@
 [Introduction/Overview](overview.md)
 
 [Tutorials/Run the permanode CLI](/tutorials/run-a-permanode.md)
+[References/CLI reference](/references/cli-reference.md)
+
 [References/API reference](/references/chronicle-api-reference.md)
 [References/Changelog](changelog.md)
 

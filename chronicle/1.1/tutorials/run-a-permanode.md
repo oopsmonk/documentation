@@ -1,6 +1,6 @@
 # Run the permanode CLI
 
-**In this tutorial, you use Chronicle's built-in permanode CLI to start storing Mainnet transactions on a local Scylla node.**
+**In this tutorial, you use Chronicle's built-in permanode CLI to start storing confirmed Mainnet transactions on a local Scylla node.**
 
 ## Prerequisites
 
@@ -112,8 +112,6 @@ By default, Chronicle starts storing transactions from the moment it starts runn
 
 In this step, you download Chronicle from GitHub and configure it to connect to your local Scylla node.
 
-To reduce the latency between Chronicle and the Scylla node, it's best to install Chronicle in the same datacenter as your Scylla node. For more information about datacenters, see the [Scylla University](https://university.scylladb.com/courses/scylla-essentials-overview/lessons/architecture/topic/datacenter/).
-
 1. Clone the repository and change into the `chronicle.rs` directory
 
     ```bash
@@ -138,18 +136,6 @@ To reduce the latency between Chronicle and the Scylla node, it's best to instal
     ```
 
 5. If your device has more than 2 CPU cores and you want to use them, increment the `core_threads` field
-
-6. If you want to get transactions from more than one IOTA node, add their URLs to the `trytes_nodes` and `sn_trytes_nodes` fields
-
-    :::warning:
-    The default nodes are on the Mainnet. If you want to store transactions from another network, remove the default nodes first.
-    :::
-
-    :::info:
-    Chronicle will get all transactions that include a valid proof of work from the nodes in the `trytes_nodes` field.
-
-    Chronicle will get all confirmed transactions from the nodes in the `sn_trytes_nodes` field.
-    :::
 
 ## Step 3. Run the permanode CLI
 
