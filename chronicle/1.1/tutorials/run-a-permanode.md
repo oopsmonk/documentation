@@ -141,7 +141,7 @@ In this step, you download Chronicle from GitHub and configure it to connect to 
 
 5. If your device has more than 2 CPU cores and you want to use them, increment the `core_threads` field
 
-## Step 3. Run the permanode CLI
+## Step 4. Run the permanode CLI
 
 In this step, you run the permanode CLI and examine the logs to make sure that it is receiving and storing transactions.
 
@@ -175,7 +175,7 @@ If you ever want to stop Chronicle, press **Ctrl**+**C**.
 
 To check that Chronicle is storing transactions see the next step for sending an API request.
 
-## Step 4. Test the API
+## Step 5. Test the API
 
 In this step, you use the API to query your Scylla node for the transactions that it has stored.
 
@@ -216,13 +216,13 @@ You now have a Chronicle permanode that is saving all new and confirmed transact
 
 These are known issues that you may find while following this tutorial and some suggested steps to resolve them.
 
-### linker `cc` not found
+### linker cc not found
 
 You may see this error after executing the `cargo run` command.
 
 To fix this error, [make sure you have the `build-essentials` installed](#prerequisites).
 
-### failed to run custom build command for `zmq-sys v0.11.0`
+### failed to run custom build command for zmq-sys v0.11.0
 
 You may see this error after executing the `cargo run` command.
 
