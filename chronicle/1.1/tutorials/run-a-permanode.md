@@ -81,7 +81,7 @@ For the purposes of this tutorial, you can start a local Scylla node in a Docker
     In the example above, the address is 172.17.0.2.
 
 :::info:
-Running Scylla in a Docker container is recommended only testing purposes.
+Running Scylla in a Docker container is recommended only for testing purposes.
 
 For production applications, it's best to do the following:
 - Install Scylla on a native operating system
