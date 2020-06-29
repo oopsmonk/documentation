@@ -3,11 +3,11 @@
 [Overview](/1.0/overview.md)
 ## See an overview of the available node APIs
 
-[IRI](/1.0/iri-api-reference.md)
+[IRI](root://iri/1.0/references/iri-api-reference.md)
 ## Use the IRI API to attach transactions to the Tangle, find the balance of addresses, and find transactions.
 
-[Chronicle](/1.0/chronicle-api-reference.md)
+[Chronicle](root://chronicle/1.0/references/chronicle-api-reference.md)
 ## Use the Chronicle API to find historical transactions.
 
-[GoShimmer](/1.0/goshimmer-api-reference.md)
+[GoShimmer](root://goshimmer/1.0/references/goshimmer-api-reference.md)
 ## Use the GoShimmer API to interact with the prototype IOTA network that's being developed without a Coordinator.

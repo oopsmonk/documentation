@@ -281,7 +281,13 @@ The last 243 trytes of the return value consist of the following fields:
 
 ## broadcastTransactions
 
-Sends transaction trytes to a node. 
+Sends transaction trytes to a node.
+
+:::info:
+In the Hornet node software, transactions in requests to this endpoint are also attached to the node's view of the Tangle.
+
+In the IRI node software, you must also call the `storeTransactions` endpoint to attach the transactions to the node's view of the Tangle.
+:::
 
  ### Parameters
 
@@ -1665,7 +1671,13 @@ curl http://localhost:14265 \
 
 ## storeTransactions
 
-Stores transactions in a node's local storage.
+Stores transactions in a node's view of the Tangle.
+
+:::info:
+In the Hornet node software, transactions in requests to this endpoint are also gossiped to the node's neighbors.
+
+In the IRI node software, you must also call the `broadcastTransactions` endpoint to gossip the transactions to neighbors.
+:::
 
 ### Parameters
 
@@ -1746,7 +1758,6 @@ curl http://localhost:14265 \
 ### 200
 ```json
 {
-"trytes": ["JJSLJFJD9HMHHMKAJNRODFHUN ..."],
 "duration": 982
 }
 ```
@@ -1769,7 +1780,7 @@ curl http://localhost:14265 \
 
 Checks if an address was ever withdrawn from, either in the current epoch or in any previous epochs.
 
-If an address has a pending transaction, it's also considered 'spent'.
+If a pending input transaction exists in the Tangle for an address, it's also considered spent.
 
 ### Parameters
 
