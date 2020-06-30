@@ -2,6 +2,10 @@
 
 **By default, nodes communicate over HTTP, which is an unsecured connection. In this tutorial, you add HTTPS support to your node, using Nginx.**
 
+:::warning: This guide is outdated
+Let's Encrypt changed the way that you generate certificates. For an up-to-date tutorial on adding HTTPS support to your node, see the [Certbot documentation](https://certbot.eff.org/lets-encrypt/ubuntubionic-nginx).
+:::
+
 ## Prerequisites
 
 To complete this tutorial, you need the following:
