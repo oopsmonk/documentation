@@ -3,9 +3,9 @@
 **If you're new to IRI, you can follow this workflow topic to start learning from the beginning.**
 
 :::warning:
-This software is now in maintenance mode. Only critical fixes will be made. We recommend using [Hornet](root://hornet/1.0/overview.md).
+This software is now in maintenance mode. Only critical fixes will be made. We recommend using [Hornet](root://hornet/1.1/overview.md).
 
-If you already have an IRI node, see [Migrating from IRI to Hornet](root://hornet/1.0/guides/migrating-from-iri.md).
+If you already have an IRI node, see [Migrating from IRI to Hornet](root://hornet/1.1/guides/migrating-from-iri.md).
 :::
 
 ## What you will learn

@@ -3,7 +3,7 @@
 [Introduction/Overview](overview.md)
 
 [Installation/Install a private Tangle](/tutorials/install-compass.md)
-[Installation/Run Compass as a plugin on the Hornet node software](root://hornet/1.0/tutorials/set-up-a-private-tangle-hornet.md)
+[Installation/Run Compass as a plugin on the Hornet node software](root://hornet/1.1/tutorials/set-up-a-private-tangle-hornet.md)
 [Installation/Build Compass from source and connect it to an IRI node](/tutorials/set-up-a-private-tangle.md)
 [Installation/Set up a one-command private Tangle](/tutorials/set-up-one-command.md)
 
