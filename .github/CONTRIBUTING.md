@@ -91,7 +91,7 @@ Otherwise, your content may not be approved at all.
 To build a new feature, check out a new branch based on the `develop` branch, and be sure to consider the following:
 
 - Choose an appropriate location for your content
-- Choose a [template](../templates)
+- Choose a [template](/templates)
 - Follow the [documentation style guide](STYLEGUIDE.md)
 
 </details>
