@@ -70,7 +70,7 @@ Discuss your idea in the #documentation-discussion channel on [Discord](https://
 To build a new feature, check out a new branch based on the `develop` branch, and be sure to consider the following:
 
 - Choose an appropriate location for your content
-- Choose a [template](https://github.com/iotaledger/documentation/tree/develop/templates)
+- Choose a [template](https://github.com/iotaledger/documentation/tree/develop/.github/templates)
 - Write your content and follow the [documentation style guide](../documentation/style-guide.md)
 
 ## Suggest a new documentation feature
