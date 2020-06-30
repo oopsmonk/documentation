@@ -1,14 +1,12 @@
 # Contribute to the developer documentation
 
-This document describes how to contribute to the IOTA developer documentation.
+**This document describes how to contribute to the IOTA developer documentation.**
 
-We encourage everyone with knowledge of IOTA technology to contribute.
+We encourage everyone to contribute.
 
 Thanks! :heart:
 
-
 ## Do you have a question :question:
-
 
 If you have a general or technical question, you can use one of the following resources instead of submitting an issue:
 
@@ -16,12 +14,7 @@ If you have a general or technical question, you can use one of the following re
 - [**IOTA cafe:**](https://iota.cafe/) For discussing technical questions with the Research Department at the IOTA Foundation
 - [**StackExchange:**](https://iota.stackexchange.com/) For asking technical questions
 
-
-
-
-
 ## Ways to contribute :mag:
-
 
 To contribute, you can:
 
@@ -30,12 +23,7 @@ To contribute, you can:
 - Write new content
 - Suggest a new documentation feature
 
-
-
-
-
 ## Report a mistake :bug:
-
 
 This section guides you through reporting a typo or any type of mistake in the content. Following these guidelines helps maintainers and the community verify and and fix mistakes.
 
@@ -46,19 +34,16 @@ Please check the following list:
 - **Ensure the mistake has not already been reported** by searching on GitHub under [**Issues**](https://github.com/iotaledger/documentation/issues). If the mistake has already been reported **and the issue is still open**, add a comment to the existing issue instead of opening a new one.
 
 :::info:
-If you find a **Closed** issue that seems similar to what you're experiencing, open a new issue and include a link to the original issue in the body of your new one.
+If you find a **Closed** issue that seems similar to what you're experiencing, open a new issue and include a link to the original one.
 :::
 
 ### Reporting a mistake
 
-To report a mistake, [open a new issue](https://github.com/iotaledger/documentation/issues/new), and be sure to include as many details as possible, using the template.
+To report a mistake, [open a new issue](https://github.com/iotaledger/documentation/issues/new), and be sure to include as many details as possible.
 
 If you also want to fix the mistake, submit a [pull request](#pull-requests) and reference the issue.
 
-
-
 ## Suggest new content :bulb:
-
 
 This section guides you through suggesting new content. Following these guidelines helps maintainers and the community collaborate to find the best possible way forward with your suggestion.
 
@@ -72,31 +57,25 @@ To suggest new content, talk to the IOTA community and IOTA Foundation members i
 
 If your suggestion is approved, the team will create an issue to include it.
 
-
-
-
-
 ## Write new content :pencil2:
-
 
 This section guides you through writing content for the documentation portal. Following these guidelines helps give your content the best chance of being approved and merged.
 
 ### Before writing
 
-Make sure to discuss your idea in the #documentation-discussion channel on [Discord](https://discord.iota.org/).
-
-Otherwise, your content may not be approved at all.
+Discuss your idea in the #documentation-discussion channel on [Discord](https://discord.iota.org/). This way, you can find out if the idea has already been discussed or has not been included for a reason.
 
 ### Writing new content
 
 To build a new feature, check out a new branch based on the `develop` branch, and be sure to consider the following:
 
 - Choose an appropriate location for your content
-- Follow the [documentation style guide](../documentation/style-guide.md)
+- Choose a [template](https://github.com/iotaledger/documentation/tree/develop/.github/templates)
+- Write your content and follow the [documentation style guide](../documentation/style-guide.md)
 
 ## Suggest a new documentation feature
 
-To suggest new features for the documentation portal:
+To suggest new features for the documentation portal such as support for tooltips:
 
 1. Go to the [`iotaledger/documentation-platform`](https://github.com/iotaledger/documentation-platform/issues) repository
 2. If no existing issues address your suggestion, create a new issue and describe your feature idea
@@ -105,7 +84,7 @@ To suggest new features for the documentation portal:
 
 Our documentation is hosted on GitHub, which is a version control tool. To create new content, or suggest changes to existing content, you must use either Git or GitHub.
 
-If you already have a GitHub account and Git is set up on your device, go straight to [Create a new branch](#create-a-new-branch).
+If you already have a GitHub account and Git is set up on your device, go straight to [Create a new branch](#create-a-new-branch). Otherwise, start here at step 1.
 
 1. [Create a new GitHub account](https://github.com/) if you don't already have one
 
@@ -119,7 +98,7 @@ If you already have a GitHub account and Git is set up on your device, go straig
     git clone https://github.com/$USERNAME/documentation
     ```
 
-5. Create a reference to our repository from your fork
+5. Create a reference to your repository from your fork
 
     ```bash
     cd documentation
@@ -131,10 +110,10 @@ Now, your `documentation` directory will contain all the documentation files.
 
 To find an existing article, you can use the URL of the documentation portal as a reference. The path to the article comes after `docs`.
 
-For example, to find the article about minimum weight magnitude, which has the following URL, you would look in the `getting-started/0.1/network` directory, and find the article called `minimum-weight-magnitude.md`:
+For example, to find the overview article about chronicle you would look for the `chronicle/1.0/overview.md` because it has the following URL:
 
 ```
-https://docs.iota.org/docs/getting-started/0.1/network/minimum-weight-magnitude
+https://docs.iota.org/docs/chronicle/1.0/overview
 ```
 
 ### Create a new branch

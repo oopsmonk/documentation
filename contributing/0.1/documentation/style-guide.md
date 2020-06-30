@@ -1,5 +1,7 @@
 # Style guide
 
+**This document is a reference for anyone who is writing content for the documentation portal.**
+
 If you are creating or editing an article, please follow our style guide to help us do the following:
 
 - Create and maintain a consistent tone of voice 
@@ -226,66 +228,19 @@ We always write in US English.
 
 ## Article titles
 
-| **Rule** | **Example** |
-| :----| :-------|
-|Use sentence case for titles. Do not use title case.|'The distributed ledger', not 'The Distributed Ledger'|
-|Article titles in the 'Concepts' sections should always be nouns|'Tip selection' not 'What is tip selection?' or 'Understanding tip selection'|
-|Article titles in the 'How-to guides' section should always start with an infinitive| 'Run the IRI' not 'Running the IRI'|
-|Article titles in the 'References' section should always be plural nouns| 'IRI configuration options' not 'IRI configuration' or 'Configuring the IRI'|
+|Use sentence case for titles. Do not use title case.
 
-## First paragraph
+## Guides
 
-Always embolden the first paragraph of an article. This paragraph should explain the main purpose or point of the article in as few words as possible.
+A guide is an article that helps experienced users achieve a task or a set of related tasks.
 
-Make sure you answer the following questions:
-- What is the article about?
-- Why do users care about or need the information in the article?
+Each guide should explain not only **how** to perform the scenario, but also **why** a user would want to perform the scenario. What does it achieve? Why is it needed?
 
-## How-to guides
+A brief introduction in the form of a **what** is the scenario about. A **when** section to put the scenario in context with other scenarios.
 
-A how-to guide is an article that helps users achieve a task.
+## Tutorials
 
-When you write how-to guides, follow these general guidelines:
-
-- [Write one task per article](#write-one-task-per-article)
-- [Create subtasks to organize long how-to guides](#create-subtasks-to-organize-long-how-to-guides)
-
-Each how-to guide should explain not only **how** to perform the scenario, but also **why** a user would want to perform the scenario. What does it achieve? Why is it needed?
-
-A brief introduction in the form of a **what** is the scenario about. A **when** section to put the scenario in context with other scenarios. For example, a scenario on **Running IRI** should mention that you need to **Download and install IRI** first.
-
-The general flow of a how-to guide would be:
-
-1. A short description (overview of the task, benefits and importance of the task, brief conceptual information, and links to longer conceptual information, if necessary)
-3. Prerequisites (things that the user must have or do before they can complete the task)
-4. Steps (how to do the task)
-5. Summary of what the user has accomplished
-
-### Write one task per article
-
-When a how-to guide contains one task, it's easier to manage, organize, and reuse to help users find specific tasks when they need them.
-
-For example, don't combine the tasks for installing and uninstalling software in a single article. Users typically won't need these tasks at the same time.
-
-### Create subtasks to organize long how-to guides
-
-Tasks that are more than 10 steps can be difficult to follow, especially if they're complicated and include substeps.
-
-If you start writing a task that contains more than 10 steps, separate them into subtasks by using headings.
-
-## Concept articles
-
-Concept articles can be written to do any of the following:
-
-- Describe a system, product, or solution
-- Introduce tools and technology
-- Explain features, components, characteristics, restrictions, and capabilities
-- Define terms in more details than you would find in a glossary
-- Describe benefits or help users to make choices between options
-
-You should write concept articles to support tasks and user goals.
-
-Concept articles must not include task information or reference information.
+A tutorial is an article for newcomers to a product that provides step-by-step instructions on how to complete a specific task.
 
 ## Code formatting
 
@@ -298,11 +253,11 @@ Bash code blocks shall not contain the path.
 Instead of:
 
 ```bash
-user@hostname:~/tmp$ mkdir whatever
+user@hostname:~/tmp$ mkdir iota
 ```
 
 Use a standalone statement:
 
 ```bash
-mkdir whatever
+mkdir iota
 ```
