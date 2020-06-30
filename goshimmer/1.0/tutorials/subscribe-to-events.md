@@ -2,6 +2,10 @@
 
 **When your node receives transactions, it publishes them as a transaction event to a service called zero message queue (ZMQ). As a client, you can subscribe to this event to monitor your node for incoming transactions.**
 
+:::warning: This documentation is not up to date
+The GoShimmer documentation has moved to a [GitHub wiki](https://github.com/iotaledger/goshimmer/wiki).
+:::
+
 :::info:
 The latest version of GoShimmer no longer supports ZMQ.
 

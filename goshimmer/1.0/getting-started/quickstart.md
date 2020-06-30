@@ -2,6 +2,10 @@
 
 **If you're new to GoShimmer, you can follow this workflow topic to start learning from the beginning.**
 
+:::warning: This documentation is not up to date
+The GoShimmer documentation has moved to a [GitHub wiki](https://github.com/iotaledger/goshimmer/wiki).
+:::
+
 ## Workflow
 
 If you complete this workflow from beginning to end, you'll learn how to install, run, and manage your node.

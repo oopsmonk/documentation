@@ -2,6 +2,10 @@
 
 **GoShimmer is a work-in-progress prototype of a node software that allows nodes to reach a consensus without the Coordinator, allowing IOTA networks to be decentralized.**
 
+:::warning: This documentation is not up to date
+The GoShimmer documentation has moved to a [GitHub wiki](https://github.com/iotaledger/goshimmer/wiki).
+:::
+
 GoShimmer nodes run the prototype software that includes the following Coordicide modules:
 
 - **Autopeering:** Each new node on the network tries to connect to four neighbors and accepts connections from a further four neighbors
