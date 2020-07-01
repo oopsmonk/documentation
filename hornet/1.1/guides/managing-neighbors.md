@@ -21,6 +21,10 @@ To add fixed neighbors, add their IP addresses or URLs to the `peers.identity` f
     }
 ```
 
+:::info:
+These neighbors must also add you.
+:::
+
 ## Removing fixed neighbors
 
 To remove fixed neighbors, delete their IP addresses or URLs from the `peers.identity` field in your `peering.json` file.
