@@ -28,7 +28,7 @@ When choosing an IOTA network, you need to consider the following options:
 
 ### --apiAddress
 
-Hub needs to connect to a node's API to be able to interact with the Tangle. To avoid connecting to a malicious node, we recommend connecting Hub to a local node that you control. If you don't have a local node, see the [Hornet node software](root://hornet/1.0/overview.md) for guides on setting one up.
+Hub needs to connect to a node's API to be able to interact with the Tangle. To avoid connecting to a malicious node, we recommend connecting Hub to a local node that you control. If you don't have a local node, see the [Hornet node software](root://hornet/1.1/overview.md) for guides on setting one up.
 
 #### Development environment
 

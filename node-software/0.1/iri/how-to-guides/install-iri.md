@@ -3,9 +3,9 @@
 **In this tutorial, you install and run the IRI node software, which turns your device into a node on an IOTA network.**
 
 :::warning:
-This software is now in maintenance mode. Only critical fixes will be made. We recommend using [Hornet](root://hornet/1.0/overview.md).
+This software is now in maintenance mode. Only critical fixes will be made. We recommend using [Hornet](root://hornet/1.1/overview.md).
 
-If you already have an IRI node, see [Migrating from IRI to Hornet](root://hornet/1.0/guides/migrating-from-iri.md).
+If you already have an IRI node, see [Migrating from IRI to Hornet](root://hornet/1.1/guides/migrating-from-iri.md).
 :::
 
 You have two options for running IRI:

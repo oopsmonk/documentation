@@ -5,3 +5,5 @@
 [Documentation/Documentation style guide](documentation/style-guide.md)
 
 [IOTAledger/Contribute to an IOTA project](iotaledger/contribution-guidelines.md)
+
+[References/Changelog](changelog.md)

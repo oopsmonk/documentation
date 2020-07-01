@@ -150,7 +150,7 @@
 
 [MAM/API reference/MAM API reference](/mam/api-reference/mam-api-reference.md)
 
-[API reference/Node APIs](root://api-reference/1.0/overview.md)
+[API reference/Node APIs](root://api-reference/1.1/overview.md)
 
 [API reference/C](https://github.com/iotaledger/entangled/tree/develop/cclient/api)
 

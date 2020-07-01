@@ -2,6 +2,10 @@
 
 **In this tutorial, you build the GoShimmer executable file from source and run it.**
 
+:::warning: This documentation is not up to date
+The GoShimmer documentation has moved to a [GitHub wiki](https://github.com/iotaledger/goshimmer/wiki).
+:::
+
 ## Prerequisites
 
 To complete this tutorial, you need the following:
