@@ -31,7 +31,7 @@ Transactions on the Devnet must use a minimum weight magnitude (MWM) of at least
 Nodes on the Devnet use a Coordinator that is run by the IOTA Foundation with the following address:
 
 ```
-EQQFCZBIHRHWPXKMTOLMYUYPCN9XLMJPYZVFJSAY9FQHCCLWTOLLUGKKMXYFDBOOYFBLBI9WUEILGECYM
+GYISMBVRKSCEXXTUPBWTIHRCZIKIRPDYAHAYKMNTPZSCSDNADDWAEUNHKUERZCTVAYJCNFXGTNUH9OGTW
 ```
 
 

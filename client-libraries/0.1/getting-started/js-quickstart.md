@@ -142,7 +142,7 @@ The IOTA node returns something like the following:
     "tips": 153,
     "transactionsToRequest": 0,
     "features": ["snapshotPruning", "dnsRefresher", "testnet", "zeroMessageQueue", "tipSolidification", "RemotePOW"],
-    "coordinatorAddress": "EQQFCZBIHRHWPXKMTOLMYUYPCN9XLMJPYZVFJSAY9FQHCCLWTOLLUGKKMXYFDBOOYFBLBI9WUEILGECYM",
+    "coordinatorAddress": "GYISMBVRKSCEXXTUPBWTIHRCZIKIRPDYAHAYKMNTPZSCSDNADDWAEUNHKUERZCTVAYJCNFXGTNUH9OGTW",
     "dbSizeInBytes": 144800000,
     "duration": 0
 }
