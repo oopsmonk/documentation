@@ -39,6 +39,17 @@ The latest snapshot data contains transactions from a certain point in history. 
     The Docker container runs under a user with uid 39999.
     :::
 
+3. Create a snapshot directory for each of the public IOTA networks
+
+    ```bash
+    mkdir snapshots/mainnet
+    mkdir snapshots/devnet
+    mkdir snapshots/comnet
+    chown 39999:39999 snapshots/mainnet
+    chown 39999:39999 snapshots/devnet
+    chown 39999:39999 snapshots/comnet
+    ```
+
 ## Step 2. Start your node
 
 In this step, you use the Docker image to start running Hornet on the Mainnet in a Docker container.
