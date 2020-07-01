@@ -59,7 +59,7 @@ Transactions on the Devnet must use a [minimum weight magnitude](root://getting-
 Nodes on the Devnet are all hard-coded with the following address for the [Coordinator](../network/the-coordinator.md):
 
 ```
-EQQFCZBIHRHWPXKMTOLMYUYPCN9XLMJPYZVFJSAY9FQHCCLWTOLLUGKKMXYFDBOOYFBLBI9WUEILGECYM
+GYISMBVRKSCEXXTUPBWTIHRCZIKIRPDYAHAYKMNTPZSCSDNADDWAEUNHKUERZCTVAYJCNFXGTNUH9OGTW
 ```
 
 ### Nodes

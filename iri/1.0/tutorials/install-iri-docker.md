@@ -2,6 +2,10 @@
 
 **In this tutorial, you download the IRI Docker image and run it in a Docker container.**
 
+:::info:
+This software is now in maintenance mode. Only critical fixes will be made. We recommend using [Hornet](root://hornet/1.0/overview.md) if you are setting up your first node.
+:::
+
 ## Prerequisites
 
 To complete this tutorial, you need the following:
@@ -22,12 +26,7 @@ To run IRI, you download and run the [IRI Docker image](https://hub.docker.com/r
     
 1\. Create a `config.ini` file in a new directory, and add your configuration options to it
 
-These are some example configurations:
-
---------------------
-### Mainnet
-
-This file configures IRI to run on the Mainnet, exposes the API on port 14265, and keeps all transactions in the database.
+For example, this file configures IRI to run on the Mainnet, exposes the API on port 14265, and keeps all transactions in the database.
 
 ```bash
 [IRI]
@@ -41,25 +40,6 @@ LOCAL_SNAPSHOTS_PRUNING_ENABLED = false
 MWM = 14
 ```
 ---
-
-### Devnet
-
-This file configures IRI to run on the Devnet, exposes the API on port 14265, and does local snapshots.
-
-These neighbors have autopeering enabled, so they will automatically add you as a neighbor.
-
-```shell
-[IRI]
-PORT = 14265
-TESTNET = true
-NEIGHBORING_SOCKET_PORT = 15600
-NEIGHBORS = tcp://p101.testnet.iota.cafe:14666 tcp://p102.testnet.iota.cafe:14666 tcp://p103.testnet.iota.cafe:14666 tcp://p104.testnet.iota.cafe:14666
-IXI_DIR = ixi
-DEBUG = false
-LOCAL_SNAPSHOTS_ENABLED = true
-LOCAL_SNAPSHOTS_PRUNING_ENABLED = true
-```
---------------------
 
 2\. Download the IRI Docker image and run it. Replace the `$PATH_TO_DIRECTORY` placeholder with the path to the directory where you saved the configuration file.
 

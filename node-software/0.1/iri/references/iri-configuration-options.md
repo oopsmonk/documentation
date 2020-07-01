@@ -126,7 +126,7 @@ Use these settings to customize how your node validates and confirms transaction
 | **CL flags** |**Configuration file parameters** |  **Description**| **Accepted values** | **Default value**|**Notes** |
 | :------------------------ | :--------------- | :--------- | :--------| :------------|:-----|:----|
 |<a name="testnet"></a>`--testnet` |`TESTNET`|Enable the IOTA node to run on a network other than the Mainnet |boolean |false|This parameter must be set to `true` for the IRI to read any other testnet parameters. If you include only this flag, the default testnet configuration options are for the Devnet.|
-| `--testnet-coordinator`|`COORDINATOR` | Set the 81-trytes address of the testnet Coordinator|81-tryte string |"EQQFCZBIHRHWPXKMTOLMYUYPCN9XLMJPYZVFJSAY9FQHCCLWTOLLUGKKMXYFDBOOYFBLBI9WUEILGECYM"|This address is the Coordinator's Merkle root|
+| `--testnet-coordinator`|`COORDINATOR` | Set the 81-trytes address of the testnet Coordinator|81-tryte string |"GYISMBVRKSCEXXTUPBWTIHRCZIKIRPDYAHAYKMNTPZSCSDNADDWAEUNHKUERZCTVAYJCNFXGTNUH9OGTW"|This address is the Coordinator's Merkle root|
 |`--testnet-no-coo-validation`|`DONT_VALIDATE_TESTNET_MILESTONE_SIG`|Disable the validation of milestones |boolean|false |
 | `--testnet-coordinator-security-level`|`COORDINATOR_SECURITY_LEVEL`|Set the security level of the Coordinator's addresses and private keys|number|1|
 |`--testnet-coordinator-signature-mode` |`COORDINATOR_SIGNATURE_MODE`|Set the signature mode that the testnet Coordinator uses to sign milestones|string(KERL, CURLP27, or CURLP81)|CURLP27|
