@@ -4,7 +4,7 @@
 
 ## Nodes
 
-It's best practice to run your own node to have direct access to the Tangle, instead of relying on third-party nodes to receive your transactions. See the [Hornet node software](root://hornet/1.0/overview.md).
+It's best practice to run your own node to have direct access to the Tangle, instead of relying on third-party nodes to receive your transactions. See the [Hornet node software](root://hornet/1.1/overview.md).
 
 However, if you want to test the Mainnet, you can find a list of nodes on the following IOTA community websites:
 
