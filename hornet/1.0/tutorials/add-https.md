@@ -2,6 +2,10 @@
 
 **By default, nodes communicate over HTTP, which is an unsecured connection. In this tutorial, you add HTTPS support to your node, using Nginx.**
 
+:::warning: This guide is outdated
+Let's Encrypt changed the way that you generate certificates. For an up-to-date tutorial on adding HTTPS support to your node, see the [Certbot documentation](https://certbot.eff.org/lets-encrypt/ubuntubionic-nginx).
+:::
+
 ## Prerequisites
 
 To complete this tutorial, you need the following:
@@ -55,7 +59,9 @@ In this step, you configure your node to use your certificate files.
 
 ## Step 3. Set up automatic renewal
 
-3. Install a script that automatically renews your certificate
+In this step, you install a script that automatically renews your certificate before it expires.
+
+1. Install the script 
 
     ```bash
     echo "0 0,12 * * * root python -c 'import random; import time; time.sleep(random.random() * 3600)' && /usr/local/bin/certbot-auto renew && /bin/systemctl reload openresty" | sudo tee /etc/cron.d/cert_renew > /dev/null
@@ -65,18 +71,18 @@ In this step, you configure your node to use your certificate files.
     After installing this script, you can ignore any expiration notification emails from Let's Encrypt.
     :::
 
-5. Load your new configuration into Nginx
+2. Load your new configuration into Nginx
 
     ```bash
     sudo systemctl daemon-reload
     sudo systemctl start nginx
     ```
 
-6. Open port 443 on your server
+3. Open port 443 on your server
 
     For more information on opening ports, see [How to Open Ports](https://www.wikihow.com/Open-Ports) on wikiHow.
 
-7. Send a request to your node's API, using HTTPS
+4. Send a request to your node's API, using HTTPS
 
 :::success: Congratulations :tada:
 You can now communicate with your node over HTTPS.

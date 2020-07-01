@@ -1,31 +1,30 @@
-# IRI API reference
+# Node API reference
 
-**The IRI API provides a simple and consistent way to get transactions from the Tangle, get a node's neighbors, or send new transactions. This API accepts HTTP requests and responds with JSON data.**
-
-:::info:
-You can also use a [client library](root://client-libraries/1.0/overview.md) to call these API endpoints.
-:::
-
-## Headers
-
-All commands must include the `X-IOTA-API-Version` header set to 1.
-
-All resources expect and return JSON response bodies. [Error responses](#error-responses) will also be sent as JSON.
-
-In practice this means that you'll always get a response with a `Content-Type` header set to `application/json`.
-
-If the IOTA node expects requests to be authenticated, you must also include an `Authorization` header with the access token.
-
-| **Header**       | **Value** | **Required or Optional** |
-|:---------------|:--------|:--------|
-| `X-IOTA-API-Version` | 1 | Required |
-| `Content-Type` | application/json | Optional |
-| `Authorization`  | Bearer {token} | Optional  |
-
+**The Node API provides a simple and consistent way to get transactions from the Tangle, get a node's neighbors, or send new transactions. This API accepts HTTP requests and responds with JSON data.**
 
 :::warning:
 This API is in beta and subject to change. We do not recommend using this API in production applications.
 :::
+
+## Headers
+
+All requests must include a header that defines at least the API version.
+
+### Versioning
+
+When backwards-incompatible changes are made to the API, a new version is released. The current version is 1.
+
+To set the API version on a specific request, send an `X-IOTA-API-Version` header.
+
+### Content type
+
+All endpoints expect and return JSON response bodies. [Error responses](#error-responses) are also sent as JSON.
+
+In practice, this means that requests and responses always set the `Content-Type` header to `application/json`.
+
+### Authentication 
+
+If the node is set up to expect authenticated requests, you must also include an `Authorization` header with the username and password.
 
 ## Base URL
 
@@ -33,19 +32,19 @@ All requests to this API should be sent to the URL of an IRI or Hornet node.
 
 If you don't already have a node to connect to, we recommend [running your own](root://node-software/1.0/overview.md).
 
-Running your own node has many benefits, of which the most important is that you don't need to trust a potentially malicious third-party node. If you were to connect to a malicious node, it could give you incorrect information about balances and transactions, leading to stolen IOTA tokens.
+Running your own node has many benefits, the most important of which is that you don't need to trust a potentially malicious third-party node. If you were to connect to a malicious node, it could give you incorrect information about balances and transactions.
 
 ## addNeighbors
 
 Adds a list of temporary neighbors to a node.
 
 :::info:
-The neighbors are removed if the IOTA node restarts. If you want to permanently add the neighbors to your own node, add their URIs to the [`NEIGHBORS`](../references/iri-configuration-options.md#neighbors) configuration option.
+The neighbors are removed if the node restarts. If you want to permanently add the neighbors to your own node, add their URIs to your node's configuration settings.
 :::
 
- ### Parameters
+### Parameters
 
- The URI format for adding neighbors is `"tcp://IPADDRESS:PORT"`.
+The URI format for adding neighbors is `"tcp://IPADDRESS:PORT"`.
 	
 |**Parameter** | **Required or Optional**|**Description** | **Type**|
 |--|--|--|--|
@@ -164,7 +163,7 @@ Does [proof of work](root://getting-started/1.0/references/glossary.md#proof-of-
 | `trunkTransaction` |Required| Trunk transaction hash | string|
 | `branchTransaction` |Required| Branch transaction hash | string|
 | `minWeightMagnitude` |Required| [minimum weight magnitude](root://getting-started/1.0/references/glossary.md#minimum-weight-magnitude) | integer|
-| `trytes` |Required| String of transaction trytes. When sending transactions in a bundle, make sure that the trytes of the last transaction in the bundle are in index 0 of the array. |array of strings|
+| `trytes` |Required| String of transaction trytes |array of strings|
 
 ### Examples
 --------------------
@@ -270,9 +269,11 @@ curl http://localhost:14265 \
 
 ### Results
 
-The last 243 trytes of the return value consist of the following:
+The last 243 trytes of the return value consist of the following fields:
 
-`trunkTransaction` + `branchTransaction` + `nonce`.
+- `trunkTransaction`
+- `branchTransaction`
+- `nonce`
 
 |**Return field** | **Description** |
 |--|--|
@@ -280,11 +281,17 @@ The last 243 trytes of the return value consist of the following:
 
 ## broadcastTransactions
 
-Sends transaction trytes to a node. 
+Sends transaction trytes to a node.
+
+:::info:
+In the Hornet node software, transactions in requests to this endpoint are also attached to the node's view of the Tangle.
+
+In the IRI node software, you must also call the `storeTransactions` endpoint to attach the transactions to the node's view of the Tangle.
+:::
 
  ### Parameters
 
-The `trytes` parameter for this endpoint must include proof of work, which is done by the [`attachToTangle`](#attachToTangle) endpoint.
+Transaction trytes must include a proof of work (valid `nonce` field), which may be done by the [`attachToTangle`](#attachToTangle) endpoint.
 	
 |**Parameters** |**Required or Optional** |**Description** |**Type**
 |--|--|--|--|
@@ -382,7 +389,7 @@ curl http://localhost:14265 \
 ## checkConsistency
 
 Checks the consistency of transactions. A consistent transaction is one where the following statements are true:
-- The IOTA node isn't missing the transaction's branch or trunk transactions
+- The node is not missing the transaction's branch or trunk transactions
 - The transaction's bundle is valid
 - The transaction's branch and trunk transactions are valid
 
@@ -499,7 +506,9 @@ curl http://localhost:14265 \
 Finds transactions that contain the given values in their transaction fields.
 The parameters define the transaction fields to search for, including `bundles`, `addresses`, `tags`, and `approvees`.
 
-**Using multiple transaction fields, returns transactions hashes at the intersection of those values.** 
+:::info:
+If you search by more than one transaction field, this endpoint returns transactions hashes only if they include all the searched values.
+:::
 
 ### Parameters
 	
@@ -605,7 +614,7 @@ curl http://localhost:14265 \
 
 ### Results
 
-An array of transaction hashes, is returned in the same order for all individual elements.
+An array of transaction hashes.
 
 |**Return field** | **Description** |
 |--|--|
@@ -698,7 +707,7 @@ curl http://localhost:14265 \
 
 ### Results
 
-The [configuration settings](../references/iri-configuration-options.md) that the IOTA node is using.
+The [configuration settings](../references/iri-configuration-options.md) that the node is using.
 
 ## getBalances
 
@@ -707,7 +716,7 @@ Gets the confirmed balance of an address.
 If the `tips` parameter is missing, the returned balance is correct as of the latest confirmed milestone.
 
 :::info:
-This API endpoint returns data only if the IOTA node is synchronized.
+This API endpoint returns data only if the node is synchronized.
 :::
 
  ### Parameters
@@ -827,7 +836,7 @@ Gets the inclusion states of a set of transactions.
 This endpoint determines if a transaction is confirmed by the network (referenced by a valid milestone).
 
 :::info:
-This endpoint returns data only if the IOTA node is synchronized.
+This endpoint returns data only if the node is synchronized.
 :::
 
  ### Parameters
@@ -1113,7 +1122,7 @@ curl http://localhost:14265 \
 ### Results
 
 :::info:
-The activity accumulates until the IOTA node restarts.
+The activity accumulates until the node restarts.
 :::
 
 |**Return field**| **Description** |
@@ -1226,11 +1235,15 @@ curl http://localhost:14265 \
 
 ### Results
 
+:::info:
+The `jre` fields are returned only by IRI nodes.
+:::
+
 |**Return field** | **Description** |
 |--|--|
 | `appName` | Name of the IRI network |
 | `appVersion` | Version of the IRI |
-| `jreAvailableProcessors` | Available CPU cores on the IOTA node |
+| `jreAvailableProcessors` | Available CPU cores on the IRI node |
 | `jreFreeMemory` | Amount of free memory in the Java virtual machine |
 | `jreMaxMemory` | Maximum amount of memory that the Java virtual machine can use |
 | `jreTotalMemory` | Total amount of memory in the Java virtual machine|
@@ -1239,109 +1252,16 @@ curl http://localhost:14265 \
 | `latestMilestoneIndex` | Index of the latest milestone |
 | `latestSolidSubtangleMilestone` | Transaction hash of the latest solid milestone |
 | `latestSolidSubtangleMilestoneIndex` | Index of the latest solid milestone |
-| `milestoneStartIndex` | The index of the milestone from which the IOTA node started synchronizing when it first joined the network. This index will not change unless the IOTA node's ledger is deleted and the IOTA node starts synchronizing from a new milestone index.|
-|`lastSnapshottedMilestoneIndex`|Index of the last milestone that triggered a local snapshot on the IOTA node |
+| `milestoneStartIndex` | The index of the milestone from which the node started synchronizing when it first joined the network. This index will not change unless the node's database is deleted and the node starts synchronizing from a new milestone index.|
+|`lastSnapshottedMilestoneIndex`|Index of the last milestone that triggered a local snapshot on the node |
 | `neighbors` | Total number of connected neighbor nodes  |
 | `packetsQueueSize` | Size of the packet queue |
 | `time` | Current UNIX timestamp |
 | `tips` | Number of tips in the network |
-| `transactionsToRequest` | Total number of transactions that the IOTA node is missing in its ledger|
+| `transactionsToRequest` | Total number of transactions that the node is missing in its database|
 | `features` | Enabled configuration options|
 | `coordinatorAddress` | Address (Merkle root) of the Coordinator|
-| `dbSizeInBytes` |The current number of bytes in the IOTA node's database|
-| `duration` | Number of milliseconds it took to complete the request |
-
-## getTips
-
-:::info:
-This endpoint is no longer available in version 1.8.6 or later of IRI.
-:::
-
-Gets tip transaction hashes from a node.
-
-### Examples
---------------------
-### Python
-```python
-import urllib2
-import json
-
-command = {"command": "getTips"}
-
-stringified = json.dumps(command)
-
-headers = {
-    'content-type': 'application/json',
-    'X-IOTA-API-Version': '1'
-}
-
-request = urllib2.Request(url="http://localhost:14265", data=stringified, headers=headers)
-returnData = urllib2.urlopen(request).read()
-
-jsonData = json.loads(returnData)
-
-print jsonData
-```
----
-### Node.js
-```js
-var request = require('request');
-
-var command = {"command": "getTips"}
-
-var options = {
-  url: 'http://localhost:14265',
-  method: 'POST',
-  headers: {
-    'Content-Type': 'application/json',
-    'X-IOTA-API-Version': '1'
-  },
-  json: command
-};
-
-request(options, function (error, response, data) {
-  if (!error && response.statusCode == 200) {
-    console.log(data);
-  }
-});
-```
----
-### cURL
-```bash
-curl http://localhost:14265 \
--X POST \
--H 'Content-Type: application/json' \
--H 'X-IOTA-API-Version: 1' \
--d '{"command": "getTips"}'
-```
---------------------
-
-### Response examples
---------------------
-### 200
-```json
-{
-  "hashes": [
-    "P9KFSJVGSPLXAEBJSHWFZLGP9GGJTIO9YITDEHATDTGAFLPLBZ9FOFWWTKMAZXZHFGQHUOXLXUALY9999", 
-    "P9KFSJVGSPLXAEBJSHWFZLGP9GGJTIO9YITDEHATDTGAFLPLBZ9FOFWWTKMAZXZHFGQHUOXLXUALY9999"
-  ],
-  "duration": 17
-}
-```
----
-### 400
-```json
-{
-  "error": "'command' parameter has not been specified"
-}
-```
---------------------
-
-### Results
-
-|**Return field**| **Description** |
-|--|--|
-| `hashes` | Array of tip transaction hashes |
+| `dbSizeInBytes` |The current number of bytes in the node's database|
 | `duration` | Number of milliseconds it took to complete the request |
 
 ## getTransactionsToApprove
@@ -1349,7 +1269,7 @@ curl http://localhost:14265 \
 Gets two consistent tip transaction hashes to use as branch/trunk transactions.
 
 :::info:
-This endpoint returns data only if the IOTA node is synchronized.
+This endpoint returns data only if the node is synchronized.
 :::
 
 ### Parameters
@@ -1566,7 +1486,7 @@ You can convert the returned trytes to ASCII characters by using the client libr
 | `duration` | Number of milliseconds it took to complete the request |
 
 :::info:
-If the IOTA node doesn't have the trytes for a given transaction hash in its ledger, a `null` value is returned.
+If the node doesn't have the trytes for a given transaction hash in its database, a `null` value is returned.
 :::
 
 ## interruptAttachingToTangle
@@ -1658,7 +1578,7 @@ curl http://localhost:14265 \
 Temporarily removes a list of neighbors from a node.
 
 :::info:
-The neighbors are added again if the IOTA node restarts. If you want to permanently remove the neighbors from your own node, remove their URIs from the [`NEIGHBORS`](../references/iri-configuration-options.md#neighbors) configuration option. 
+The neighbors are added again if the node restarts. If you want to permanently remove the neighbors from your own node, remove their URIs from your node's configuration settings. 
 :::
 
 ### Parameters
@@ -1751,7 +1671,13 @@ curl http://localhost:14265 \
 
 ## storeTransactions
 
-Stores transactions in a node's local storage.
+Stores transactions in a node's view of the Tangle.
+
+:::info:
+In the Hornet node software, transactions in requests to this endpoint are also gossiped to the node's neighbors.
+
+In the IRI node software, you must also call the `broadcastTransactions` endpoint to gossip the transactions to neighbors.
+:::
 
 ### Parameters
 
@@ -1832,7 +1758,6 @@ curl http://localhost:14265 \
 ### 200
 ```json
 {
-"trytes": ["JJSLJFJD9HMHHMKAJNRODFHUN ..."],
 "duration": 982
 }
 ```
@@ -1855,7 +1780,7 @@ curl http://localhost:14265 \
 
 Checks if an address was ever withdrawn from, either in the current epoch or in any previous epochs.
 
-If an address has a pending transaction, it's also considered 'spent'.
+If a pending input transaction exists in the Tangle for an address, it's also considered spent.
 
 ### Parameters
 
@@ -1989,9 +1914,9 @@ Addresses must contain only 81 trytes. If your address contains 90 trytes, the l
 
 Make sure that the value of the `depth` parameter is a number, not a string.
 
-Decrement the value of the `depth` parameter. The IOTA node may limit the maximum accepted value.
+Decrement the value of the `depth` parameter. The node may limit the maximum accepted value.
 
-If you're making the request to your own IRI node, check the configuration for the IOTA node's maximum depth.
+If you're making the request to your own IRI node, check the configuration for the node's maximum depth.
 
 ### 400: Invalid parameters
 

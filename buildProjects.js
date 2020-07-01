@@ -1,8 +1,9 @@
 /* eslint-disable no-console */
 const fs = require('fs');
+const remark = require('remark');
 const fsPromises = require('fs').promises;
+const strip = require('strip-markdown');
 const path = require('path');
-const axios = require('axios');
 const emoji = require('node-emoji');
 const emojiRegex = require('emoji-regex');
 const emojiUnicode = require('emoji-unicode');
@@ -189,11 +190,13 @@ async function buildSingleVersion(docsFolder, projectFolder, version) {
                         link: match[2]
                     });
                 } else {
-                    const { toc, assets } = await extractTocAndValidateAssets(docsFolder, projectFolder, version, match[2], docIndexFile);
+                    const { toc, assets, tags, description } = await extractTocAndValidateAssets(docsFolder, projectFolder, version, match[2], docIndexFile);
                     versions.push({
                         name: match[1],
                         link: `/${docsFolder}/${projectFolder}/${version}/${sanitizeLink(match[2])}`,
                         toc,
+                        tags,
+                        description,
                         assets: assets.length > 0 ? assets : undefined
                     });
                 }
@@ -211,6 +214,8 @@ async function extractTocAndValidateAssets(docsFolder, projectFolder, version, d
     // the headers to create a toc
     const toc = [];
     const assets = [];
+    let tags;
+    let description;
 
     const docName = webifyPath(path.join(`${docsFolder}/${projectFolder}/${version}/`, doc));
 
@@ -219,6 +224,19 @@ async function extractTocAndValidateAssets(docsFolder, projectFolder, version, d
             await reportEntry(`\t\t\tTOC: '${docName}'`);
 
             let doc = (await fsPromises.readFile(docName)).toString();
+
+            let markdownStructure;
+            await remark()
+                .use(() => {
+                    return (ms) => { markdownStructure = ms; };
+                })
+                .use(strip)
+                .process(doc);
+
+            const descriptionObject = findItem(markdownStructure, 'text', 50);
+            if (descriptionObject) {
+                description = descriptionObject.value;
+            }
 
             await assetHtmlImage(doc, docName, assets);
             await assetMarkdownImage(doc, docName, assets);
@@ -236,7 +254,7 @@ async function extractTocAndValidateAssets(docsFolder, projectFolder, version, d
             // ## Blah blah
             // But not inside our tab controls or project topics
 
-            doc = removeMarkdownCode(doc);
+            doc = removeMarkdownCode(doc);            
             doc = removeTabControls(doc);
             doc = removeProjectTopics(doc);
 
@@ -254,6 +272,13 @@ async function extractTocAndValidateAssets(docsFolder, projectFolder, version, d
                 }
             } while (matchHeader);
 
+            const reTags = /> search-tags: (.*)/gm;
+            const matchTags = reTags.exec(doc);
+
+            if (matchTags && matchTags.length === 2) {
+                tags = matchTags[1].split(',').map(t => t.trim());
+            }
+
             for (let i = 0; i < toc.length; i++) {
                 await reportEntry(`\t\t\t\t${toc[i].level}: ${toc[i].name}`);
             }
@@ -270,7 +295,22 @@ async function extractTocAndValidateAssets(docsFolder, projectFolder, version, d
         await reportError(`'${docIndexFile}' referenced '${docName}' but validating content failed see ${projectsFile} for more details`, err);
     }
 
-    return { toc, assets };
+    return { toc, assets, tags, description };
+}
+
+function findItem(elem, findType, minLength) {
+    if (elem.type === findType && elem.value && elem.value.length >= minLength) {
+        return elem;
+    }
+
+    if (elem.children) {
+        for (let i = 0; i < elem.children.length; i++) {
+            const f = findItem(elem.children[i], findType, minLength);
+            if (f) {
+                return f;
+            }
+        }
+    }
 }
 
 function extractContent(markdown) {
@@ -318,6 +358,20 @@ function removeTabControls(markdown) {
 function removeProjectTopics(markdown) {
     const re = /#### (.*)\n(\[.*\]\((.*)\))?([\S\s]*?)---/gm;
     return markdown.replace(re, '');
+}
+
+function removeAllCode(markdown) {
+    const re = /^```[\S\s]*?```/gm;
+
+    let match;
+    do {
+        match = re.exec(markdown);
+        if (match) {
+            markdown = markdown.replace(match[0], '');
+        }
+    } while (match);
+
+    return markdown;
 }
 
 function removeMarkdownCode(markdown) {
@@ -398,9 +452,11 @@ async function assetMarkdownImage(markdown, docPath, assets) {
 async function markdownLinks(markdown, docPath) {
     const re = /(?:!)?\[(.*?)\]\((.*?)\)/gm;
 
+    const stripped = removeAllCode(markdown);
+
     let match;
     do {
-        match = re.exec(markdown);
+        match = re.exec(stripped);
 
         if (match && match.length === 3) {
             if (isRemote(match[2])) {
@@ -490,7 +546,7 @@ async function spellCheck(projectFolder, markdown, docPath) {
     if (checkSpelling) {
         let final = markdown;
         for (const pre of dictionaryPre) {
-            final = final.replace(new RegExp(pre.from, "gi"), pre.to);
+            final = final.replace(new RegExp(pre.from, 'gi'), pre.to);
         }
 
         const html = md({ html: true }).render(final);
@@ -697,7 +753,9 @@ function sanitizeLink(item) {
 async function checkRemote(url) {
     if (remoteCheck) {
         try {
-            await axios.head(url);
+            await fetch(url, {
+                method: 'HEAD'
+            });
         } catch (err) {
             if (err.message.indexOf('404') >= 0) {
                 return 'Not found';

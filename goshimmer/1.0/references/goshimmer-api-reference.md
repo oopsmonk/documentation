@@ -2,6 +2,10 @@
 
 **The GoShimmer API provides a simple and consistent way to get transactions from the Tangle, get a node's neighbors, or send new transactions. This API accepts HTTP requests and responds with JSON data.**
 
+:::warning: This documentation is not up to date
+The GoShimmer documentation has moved to a [GitHub wiki](https://github.com/iotaledger/goshimmer/wiki).
+:::
+
 :::info:
 You can also use the [GoShimmer client library](https://github.com/iotaledger/goshimmer/tree/master/client) to call these API endpoints, using Go.
 :::

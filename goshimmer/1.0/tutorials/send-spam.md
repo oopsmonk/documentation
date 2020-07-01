@@ -2,6 +2,10 @@
 
 **In this tutorial, you test how many transactions per second your node can process by using the `spammer` API endpoint to send it spam transactions.**
 
+:::warning: This documentation is not up to date
+The GoShimmer documentation has moved to a [GitHub wiki](https://github.com/iotaledger/goshimmer/wiki).
+:::
+
 ## Prerequisites
 
 To complete this tutorial, you need the following:

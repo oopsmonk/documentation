@@ -2,6 +2,10 @@
 
 **In this tutorial, you run a node on your native filesystem, using the pre-built executable file on the GoShimmer GitHub repository.**
 
+:::warning: This documentation is not up to date
+The GoShimmer documentation has moved to a [GitHub wiki](https://github.com/iotaledger/goshimmer/wiki).
+:::
+
 ## Prerequisites
 
 To run a node, you need the following:
