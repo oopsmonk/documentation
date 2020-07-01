@@ -21,32 +21,43 @@ In our guides, we use a Linux [Ubuntu 18.04 LTS](https://www.ubuntu.com/download
 1. [Install the Bazel build tool](https://docs.bazel.build/versions/master/install.html)
 
     :::info:
-    If you're new to [Bazel](https://docs.bazel.build/versions/master/getting-started.html), we recommend reading their getting-started documentation.
+    If you're new to Bazel, we recommend reading the [Bazel documentation](https://docs.bazel.build/versions/master/getting-started.html).
     :::
 
 2. Create a directory for your project
 
 	```bash
 	sudo mkdir my-c-iota-project
+    cd my-c-iota-project
 	```
 
 Now you're ready to start installing packages.
 
 ## Step 2. Install packages
 
-The core C client library is organized in packages, which contain related methods. All the IOTA-related methods such as requesting information from nodes, creating transactions, and sending them to nodes, are located in the [`api` package](https://github.com/iotaledger/entangled/tree/develop/cclient/api).
+The core C client library is organized in packages, which contain related methods. All the IOTA related methods such as requesting information from nodes, creating transactions, and sending them to nodes, are located in the [`api` package](https://github.com/iotaledger/entangled/tree/develop/cclient/api).
 
-1. In the root of your project directory, create a file called `WORKSPACE` and add the following content, which loads the library's dependencies.
+1. In the root of your project directory, create a file called `WORKSPACE` and add the following content to load the library's dependencies.
 
-    Replace the `$ENTANGLED_COMMIT_HASH` placeholder with the latest Git commit hash of the `entangled` repository. 
+    Replace the `$CCLIENT_COMMIT_HASH` placeholder with the latest Git commit hash of the `master` branch in the [`iota.c` repository](https://github.com/iotaledger/iota.c).
+    
+    Replace the `$COMMON_COMMIT_HASH` placeholder with the latest Git commit hash of the `master` branch in the [`iota_common` repository](https://github.com/iotaledger/iota_common).
 
-    Replace the `$RULES_IOTA_COMMIT_HASH` placeholder with the latest Git commit hash of the `rules_iota` repository. 
+    Replace the `$RULES_IOTA_COMMIT_HASH` placeholder with the latest Git commit hash of the `master` branch in the [`rules_iota` repository](https://github.com/iotaledger/rules_iota). 
 
     ```bash
+    load("@bazel_tools//tools/build_defs/repo:git.bzl", "git_repository", "new_git_repository")
+
     git_repository(
-        name = "entangled",
-        commit = "$ENTANGLED_COMMIT_HASH",
-        remote = "https://github.com/iotaledger/entangled.git",
+    name = "org_iota_common",
+    commit = "$COMMON_COMMIT_HASH",
+     remote = "https://github.com/iotaledger/iota_common.git",
+    )
+    
+    git_repository(
+        name = "org_iota_client",
+        commit = "$CCLIENT_COMMIT_HASH",
+        remote = "https://github.com/iotaledger/iota.c.git",
     )
 
     # external library build rules
@@ -58,23 +69,28 @@ The core C client library is organized in packages, which contain related method
 
     load("@rules_iota//:defs.bzl", "iota_deps")
 
-   IOTA_deps()
+    iota_deps()
     ```
 
 2. Create an `iota_client_service` directory in which to store configuration files and the networking code
+
+    ```bash
+    sudo mkdir iota_client_service
+    cd iota_client_service
+    ```
 
 3. In the `iota_client_service` directory, create a `config.h` file and add the following:
 
     ```cpp
     // The IOTA node to connect to and its port
-    #define CONFIG_IRI_NODE_URI "nodes.devnet.thetangle.org"
+    #define CONFIG_IRI_NODE_URI "nodes.devnet.iota.org"
 
     #define CONFIG_IRI_NODE_PORT 443
 
-    // Whether your server has TLS enabled
+    // Whether your server has HTTPS enabled
     #define CONFIG_ENABLE_HTTPS
 
-    // If your server has TLS enabled, this constant defines your TLS certificate
+    // If your server has HTTPS enabled, this constant defines your certificate
     #define TLS_CERTIFICATE_PEM \
             "-----BEGIN CERTIFICATE-----\r\n" \
             "MIIDQTCCAimgAwIBAgITBmyfz5m/jAo54vB4ikPmljZbyjANBgkqhkiG9w0BAQsF\r\n" \
@@ -106,8 +122,6 @@ The core C client library is organized in packages, which contain related method
     // The security level to use for your addresses
     #define SECURITY_LEVEL 2
     ```
-
-    In this example, you connect to the Devnet.
 
 3. In the `iota_client_service` directory, create a `client_service.c` file and add the following:
 
@@ -168,7 +182,7 @@ The core C client library is organized in packages, which contain related method
             "config.h"
         ],
         deps = [
-            "@entangled//cclient/api",
+            "@org_iota_client//cclient/api",
         ],
     )
     ```
@@ -264,14 +278,14 @@ Whenever you connect to a node, you need to know which IOTA network it's in. Her
     }
     ```
 
-4. In the `examples` directory, create a `BUILD` file that builds your code
+4. In the `examples` directory, create a `BUILD` file to build your code
 
     ```bash
     package(default_visibility = ["//visibility:public"])
 
     cc_binary(
         name = "hello_world",
-        srcs = ["e01_hello_world.c"],
+        srcs = ["hello_world.c"],
         copts = ["-DLOGGER_ENABLE"],
         linkopts = ["-pthread"],
         deps = [
@@ -307,7 +321,7 @@ loadBalancer
 
 ### Reading the response object
 
-If the `latestMilestoneIndex` field is equal to the one you got from Discord and the `latestSolidSubtangleMilestoneIndex` field, the IOTA node is synchronized.
+If the `latestMilestoneIndex` field is equal to the one you got from Discord and the `latestSolidSubtangleMilestoneIndex` field, the node is synchronized.
 
 If not, try connecting to a different node. The [iota.dance website](https://iota.dance/) includes a list of Mainnet nodes. Or, you can [run your own node](root://node-software/1.0/overview.md).
 
