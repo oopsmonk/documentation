@@ -25,6 +25,7 @@
 [Tutorials/Linux/Set up a private Tangle](/tutorials/set-up-a-private-tangle-hornet.md)
 
 [References/API reference](root://iri/1.0/references/iri-api-reference.md)
+[References/Troubleshooting](/references/troubleshooting.md)
 [References/Configuration options](https://github.com/gohornet/hornet/wiki/Configuration)
 [References/Plugins](https://github.com/gohornet/hornet/wiki/Plugins)
 [References/Tools](https://github.com/gohornet/hornet/wiki/Tools)
