@@ -17,10 +17,7 @@ The network settings are defined in a `config.h` file. See [C quickstart](root:/
     #include "common/trinary/tryte_ascii.h"
     #include "utils/time.h"
     #include <inttypes.h>
-    #include "iota_client_service/config.h"
-    #include "iota_client_service/client_service.h"
-
-    #include "iota_client_service/config.h"
+    #include "config.h"
     ```
 
 2. Define a seed for which to generate an address
@@ -30,33 +27,54 @@ The network settings are defined in a `config.h` file. See [C quickstart](root:/
         (tryte_t *)"G9JEMIRJKUXDKUPPAIMEQSGVADYLSJRSBTEIRDWSCTLCVQOJWBM9XESTWTSONOTDDQUXMYCNVAKZWPPYW";
     ```
 
-3. Use the [`get_new_address()`](https://github.com/iotaledger/entangled/blob/develop/cclient/api/extended/get_new_address.h) method to generate an unspent address
+3. Use the [`get_new_address()`](https://github.com/iotaledger/iota.c/blob/master/cclient/api/extended/get_new_address.h) method to generate an unspent address
 
     ```cpp
-    flex_trit_t seed[FLEX_TRIT_SIZE_243];
+    retcode_t get_new_address(iota_client_service_t *s) {
+        retcode_t ret = RC_ERROR;
+        flex_trit_t seed[FLEX_TRIT_SIZE_243];
+        hash243_queue_t addresses = NULL;
+        // Set the options to get one new address
+        address_opt_t opt = {.security = SECURITY_LEVEL, .start = 0, .total = 0};
 
-    // Convert the seed from trytes to trits
-    // For more information about trits and trytes, see the IOTA documentation portal: https://docs.iota.org/docs/getting-started/0.1/introduction/ternary
-    if (flex_trits_from_trytes(seed, NUM_TRITS_ADDRESS, SEED, NUM_TRYTES_ADDRESS, NUM_TRYTES_ADDRESS) == 0) {
-        printf("Failed to convert trytes to trits\n");
+        // Convert the seed from trytes to trits
+        // For more information about trits and trytes, see the IOTA documentation portal: https://docs.iota.org/docs/getting-started/0.1/introduction/ternary
+        if (flex_trits_from_trytes(seed, NUM_TRITS_ADDRESS, SEED, NUM_TRYTES_ADDRESS, NUM_TRYTES_ADDRESS) == 0) {
+            printf("Failed to convert trytes to trits\n");
+            return ret;
+        }
+
+        // Generate an unspent address with security level 2
+        if ((ret = iota_client_get_new_address(s, seed, opt, &addresses)) == RC_OK) {
+            printf("Your new address is: ");
+            flex_trit_print(addresses->prev->hash, NUM_TRITS_ADDRESS);
+            printf("\n");
+        } else {
+            printf("Failed to get a new address: Error code %s\n", error_2_string(ret));
+        }
+        hash243_queue_free(&addresses);
+
         return ret;
     }
 
-    // Set the options to get one new address
-    address_opt_t opt = {.security = SECURITY_LEVEL, .start = 0, .total = 0};
+    int main(void){
+        iota_client_service_t *iota_client_service;
 
-    // Get the new address and print it to the console
-    if ((ret = iota_client_get_new_address(s, seed, opt, &addresses)) == RC_OK) {
-        printf("Your new address is: ");
-        flex_trit_print(addresses->prev->hash, NUM_TRITS_ADDRESS);
-        printf("\n");
-    } else {
-        printf("Failed to get a new address: Error code %s\n", error_2_string(ret));
+    #ifdef CONFIG_ENABLE_HTTPS
+        iota_client_service = iota_client_core_init(CONFIG_IRI_NODE_URI, CONFIG_IRI_NODE_PORT, TLS_CERTIFICATE_PEM);
+    #else
+        iota_client_service = iota_client_core_init(CONFIG_IRI_NODE_URI, CONFIG_IRI_NODE_PORT, NULL);
+    #endif
+
+        retcode_t ret = RC_ERROR;
+        ret = get_new_address(iota_client_service);
+
+        if(ret == RC_OK){
+            printf("Addresses generated.\n");
+        }else{
+            printf("Addresses generated with error code: %i\n", ret);
+        }
     }
-    // Free the object
-    hash243_queue_free(&addresses);
-
-    return ret;
     ```
 
 Starting from the given `start` index, the connected node checks if the address is spent by doing the following:
@@ -70,7 +88,7 @@ If an address with the given index is spent, the index is incremented until the 
 This way of generating addresses replies on the IOTA node to return valid data about your addresses. To have more control over your addresses, we recommend keeping track of spent addresses in your own local database.
 :::
 
-In the console, you should see an address.
+When you run this code, you should see an address.
 
 ```
 Your address is: WKJDF9LVQCVKEIVHFAOMHISHXJSGXWBJFYEQPOQKSVGZZFLTUUPBACNQZTAKXR9TFVKBGYSNSPHRNKKHA
@@ -94,12 +112,6 @@ In the command-line, do the following:
 git clone https://github.com/iota-community/c-iota-workshop.git
 cd c-iota-workshop
 bazel run -c opt examples:generate_address
-```
-
-In the console, you should see an address.
-
-```
-Your address is: WKJDF9LVQCVKEIVHFAOMHISHXJSGXWBJFYEQPOQKSVGZZFLTUUPBACNQZTAKXR9TFVKBGYSNSPHRNKKHA
 ```
 
 ## Next steps
