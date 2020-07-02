@@ -6,25 +6,31 @@ In this quickstart, you will learn how to:
 
 1. Set up a developer environment
 
-2. Install packages
+2. Install a library
 
 3. Connect to a node
 
 ## Step 1. Set up a developer environment
 
-To use the C client library, you need a set of programming tools, which make up a development environment.
+To use a C client library, you need a set of programming tools, which make up a development environment.
 
-:::info:
-In our guides, we use a Linux [Ubuntu 18.04 LTS](https://www.ubuntu.com/download/server) operating system. If you are on a Windows or Mac operating system, you can try and run these examples on your operating system, or you can [create a Linux server in a virtual machine](root://general/0.1/how-to-guides/set-up-virtual-machine.md).
-:::
+Throughout this documentation, we use a Linux [Ubuntu 18.04 LTS](https://www.ubuntu.com/download/server) operating system. If you are on a Windows or macOS, you can try to run these examples on your operating system, or you can [create a Linux server in a virtual machine](root://general/0.1/how-to-guides/set-up-virtual-machine.md).
 
 1. [Install the Bazel build tool](https://docs.bazel.build/versions/master/install.html)
 
-    :::info:
-    If you're new to Bazel, we recommend reading the [Bazel documentation](https://docs.bazel.build/versions/master/getting-started.html).
-    :::
+    This tool is used to build and compile your C code into machine code.
 
-2. Create a directory for your project
+    If you're new to Bazel, we recommend reading the [Bazel documentation](https://docs.bazel.build/versions/master/getting-started.html).
+
+2. Install Git
+
+    ```bash
+    sudo apt install git
+    ```
+
+    Git is used to download the library and its dependencies from GitHub.
+
+3. Create a directory for your project
 
 	```bash
 	sudo mkdir my-c-iota-project
@@ -33,14 +39,22 @@ In our guides, we use a Linux [Ubuntu 18.04 LTS](https://www.ubuntu.com/download
 
 Now you're ready to start installing packages.
 
-## Step 2. Install packages
+## Step 2. Install a library
 
-The core C client library is organized in packages, which contain related methods. All the IOTA related methods such as requesting information from nodes, creating transactions, and sending them to nodes, are located in the [`api` package](https://github.com/iotaledger/entangled/tree/develop/cclient/api).
+In this step, you install the core client library, which allows you to connect to an IOTA node.
 
-1. In the root of your project directory, create a file called `WORKSPACE` and add the following content to load the library's dependencies.
+1. In the `my-c-iota-project` directory, create a file called `WORKSPACE`
+
+    ```bash
+    sudo nano WORKSPACE
+    ```
+
+2. Add the following content to load the library's dependencies:
 
     Replace the `$CCLIENT_COMMIT_HASH` placeholder with the latest Git commit hash of the `master` branch in the [`iota.c` repository](https://github.com/iotaledger/iota.c).
-    
+
+    ![Example of finding a Git commit hash](../images/get-commit-hash.gif)
+
     Replace the `$COMMON_COMMIT_HASH` placeholder with the latest Git commit hash of the `master` branch in the [`iota_common` repository](https://github.com/iotaledger/iota_common).
 
     Replace the `$RULES_IOTA_COMMIT_HASH` placeholder with the latest Git commit hash of the `master` branch in the [`rules_iota` repository](https://github.com/iotaledger/rules_iota). 
@@ -51,11 +65,11 @@ The core C client library is organized in packages, which contain related method
     git_repository(
     name = "org_iota_common",
     commit = "$COMMON_COMMIT_HASH",
-     remote = "https://github.com/iotaledger/iota_common.git",
+        remote = "https://github.com/iotaledger/iota_common.git",
     )
-    
+
     git_repository(
-        name = "org_iota_client",
+        name = "cclient",
         commit = "$CCLIENT_COMMIT_HASH",
         remote = "https://github.com/iotaledger/iota.c.git",
     )
@@ -72,25 +86,38 @@ The core C client library is organized in packages, which contain related method
     iota_deps()
     ```
 
-2. Create an `iota_client_service` directory in which to store configuration files and the networking code
+Now you're ready to write your own code to connect to a node.
+
+## Step 3. Connect to a node
+
+In this step, you write the code that will connect to a node and call its `getNodeInfo` endpoint.
+
+1. Create an `examples` directory in which to store your application code
 
     ```bash
-    sudo mkdir iota_client_service
-    cd iota_client_service
+    sudo mkdir examples
+    cd examples
     ```
 
-3. In the `iota_client_service` directory, create a `config.h` file and add the following:
+    Now your directory structure should look like the following:
+
+    ```bash
+    |-- WORKSPACE
+    |-- examples
+    ```
+
+2. In the `examples` directory, create a `config.h` file with your global configuration settings for your application
 
     ```cpp
-    // The IOTA node to connect to and its port
+    // The IOTA node to connect to and its API port
+    // This node is a Devnet node
     #define CONFIG_IRI_NODE_URI "nodes.devnet.iota.org"
-
     #define CONFIG_IRI_NODE_PORT 443
 
-    // Whether your server has HTTPS enabled
+    // Whether your node has HTTPS enabled
     #define CONFIG_ENABLE_HTTPS
 
-    // If your server has HTTPS enabled, this constant defines your certificate
+    // If your node has HTTPS enabled, this constant defines your certificate
     #define TLS_CERTIFICATE_PEM \
             "-----BEGIN CERTIFICATE-----\r\n" \
             "MIIDQTCCAimgAwIBAgITBmyfz5m/jAo54vB4ikPmljZbyjANBgkqhkiG9w0BAQsF\r\n" \
@@ -113,7 +140,7 @@ The core C client library is organized in packages, which contain related method
             "rqXRfboQnoZsG4q5WTP468SQvvG5\r\n" \
             "-----END CERTIFICATE-----\r\n"
 
-    // A sensible depth for the IOTA node to use for tip selection
+    // A sensible depth for the node to use for tip selection
     #define DEPTH 3
 
     // The minimum weight magnitude for the Devnet (for the Mainnet use 14)
@@ -123,107 +150,34 @@ The core C client library is organized in packages, which contain related method
     #define SECURITY_LEVEL 2
     ```
 
-3. In the `iota_client_service` directory, create a `client_service.c` file and add the following:
-
-    ```cpp
-    #include "cclient/api/core/core_api.h"
-    #include "cclient/api/extended/extended_api.h"
-
-    #include "common/trinary/tryte_ascii.h"
-    #include <inttypes.h>
-
-    #include "config.h"
-    #include "client_service.h"
-
-    void init_iota_client(iota_client_service_t *const service)
-    {
-        service->http.path = "/";
-        service->http.content_type = "application/json";
-        service->http.accept = "application/json";
-        service->http.host = CONFIG_IRI_NODE_URI;
-        service->http.port = CONFIG_IRI_NODE_PORT;
-        service->http.api_version = 1;
-    #ifdef CONFIG_ENABLE_HTTPS
-        service->http.ca_pem = TLS_CERTIFICATE_PEM;
-    #else
-        service->http.ca_pem = NULL;
-    #endif
-        service->serializer_type = SR_JSON;
-       IOTA_client_core_init(service);
-       IOTA_client_extended_init();
-    }
-    ```
-
-    This code handles the [service](https://github.com/iotaledger/entangled/blob/develop/cclient/service.h) connection to the IOTA node.
-
-4. In the `iota_client_service` directory, create a `client_service.h` file and add the following:
-
-    ```cpp
-    #include "cclient/api/core/core_api.h"
-    #include "cclient/api/extended/extended_api.h"
-
-    void init_iota_client(iota_client_service_t *const service);
-    ```
-    
-    This code declares the `init_iota_client()` function. This way, your compiled program will contain just one copy of the function, and every module in your program can use it.
-
-5. In the `iota_client_service` directory, create a `BUILD` file and add the following:
+    Now your directory structure should look like the following:
 
     ```bash
-    package(default_visibility = ["//visibility:public"])
-
-    cc_library(
-        name = "service",
-        srcs = [
-            "client_service.c",
-        ],
-        hdrs = [
-            "client_service.h",
-            "config.h"
-        ],
-        deps = [
-            "@org_iota_client//cclient/api",
-        ],
-    )
+    |-- WORKSPACE
+    |-- examples
+        |-- config.h
     ```
 
-    This code creates the rules for building the configuration and service targets that you just wrote.
-
-Now you can request information from the IOTA node.
-
-## Step 3. Connect to a node
-
-It's best practice to make sure that you're connected to a synchronized node before you start sending transactions to it. This way, you know that it has an up-to-date view of the Tangle. For more information, see [Nodes](root://getting-started/1.0/understanding-iota/nodes.md).
-
-Whenever you connect to a node, you need to know which IOTA network it's in. Here, we connect to a node on the Devnet, which is the IOTA networks that you can use for testing.
-
-1. Go to the IOTA Foundation [Discord](https://discord.iota.org) and enter **!milestone** in the `botbox` channel
-
-    ![Entering !milestone on Discord](../images/discord-milestone-check.PNG)
-
-    The Discord bot should return the current `latestMilestoneIndex` field from a [node quorum](root://getting-started/1.0/references/glossary.md#node-quorum).
-
-2. In the root of your project directory, create a new directory called `examples`
-
-3. In the `examples` directory, create a file called `hello_world.c` and add the following:
+3. In the `examples` directory, create a `hello_world.c` file and add the following to call its `geNodeInfo` endpoint:
 
     ```cpp
     #include "cclient/api/core/core_api.h"
     #include "cclient/api/extended/extended_api.h"
 
     #include <inttypes.h>
-    #include "iota_client_service/config.h"
-    #include "iota_client_service/client_service.h"
+    #include "config.h"
 
     retcode_t get_iota_node_info(iota_client_service_t *iota_client_service, get_node_info_res_t *node_response) {
         retcode_t ret = RC_ERROR;
-        // Connect to the IOTA node
+
+        // Connect to the node
         ret = iota_client_get_node_info(iota_client_service, node_response);
 
         // Define variables to determine whether trit conversion succeeds
         trit_t trytes_out[NUM_TRYTES_HASH + 1];
         size_t trits_count = 0;
-        // If the IOTA node returned data, print it to the console
+
+        // If the node returned data, print it to the console
         if (ret == RC_OK) {
             printf("appName %s \n", node_response->app_name->data);
             printf("appVersion %s \n", node_response->app_version->data);
@@ -234,12 +188,14 @@ Whenever you connect to a node, you need to know which IOTA network it's in. Her
                                             node_response->latest_milestone, NUM_TRITS_HASH,
                                             NUM_TRITS_HASH);
             if (trits_count == 0) {
-                printf("trit converting failed\n");
+                printf("Failed to convert trits to trytes\n");
                 goto done;
             }
-            // Empty this string: we don't need it anymore
+
+            // Empty this string. It's not needed anymore
             trytes_out[NUM_TRYTES_HASH] = '\0';
 
+            // Print the results to the console
             printf("latestMilestone %s \n", trytes_out);
             printf("latestMilestoneIndex %u\n", (uint32_t) node_response->latest_milestone_index);
             printf("latestSolidSubtangleMilestoneIndex %u\n", (uint32_t)
@@ -250,14 +206,14 @@ Whenever you connect to a node, you need to know which IOTA network it's in. Her
             printf("packetsQueueSize %d \n", node_response->packets_queue_size);
             printf("tips %u \n", node_response->tips);
             printf("transactionsToRequest %u\n", node_response->transactions_to_request);
+            printf("features: ");
             size_t num_features = get_node_info_req_features_num(node_response);
             for (; num_features > 0; num_features--) {
-              printf("%s, ", get_node_info_res_features_at(node_response, num_f$
-              printf("\n");
+            printf("%s, ", get_node_info_res_features_at(node_response, num_features - 1));
+            printf("\n");
             }
-
         } else {
-            printf("Failed to connect to the IOTA node.");
+            printf("Failed to connect to the node.");
         }
 
         done:
@@ -268,88 +224,103 @@ Whenever you connect to a node, you need to know which IOTA network it's in. Her
     }
 
     int main(void) {
-        // Create the client service
-       IOTA_client_service_t iota_client_service;
-        init_iota_client(&iota_client_service);
+        iota_client_service_t *iota_client_service;
+
+    #ifdef CONFIG_ENABLE_HTTPS
+        iota_client_service = iota_client_core_init(CONFIG_IRI_NODE_URI, CONFIG_IRI_NODE_PORT, TLS_CERTIFICATE_PEM);
+    #else
+        iota_client_service = iota_client_core_init(CONFIG_IRI_NODE_URI, CONFIG_IRI_NODE_PORT, NULL);
+    #endif
         // Allocate a response object
         get_node_info_res_t *node_response = get_node_info_res_new();
         // Call the getNodeInfo endpoint
-        get_iota_node_info(&iota_client_service, node_response);
+        get_iota_node_info(iota_client_service, node_response);
     }
     ```
 
-4. In the `examples` directory, create a `BUILD` file to build your code
+    Now your directory structure should look like the following:
+
+    ```bash
+    |-- WORKSPACE
+    |-- examples
+        |-- config.h
+        |-- hello_world.c
+    ```
+
+4. In the `examples` directory, create a `BUILD` file and add the following:
 
     ```bash
     package(default_visibility = ["//visibility:public"])
 
     cc_binary(
         name = "hello_world",
-        srcs = ["hello_world.c"],
+        srcs = ["hello_world.c", "config.h",],
         copts = ["-DLOGGER_ENABLE"],
         linkopts = ["-pthread"],
-        deps = [
-            "//iota_client_service:service",
-        ],
+        deps = ["@cclient//cclient/api",],
+        visibility = ["//visibility:public"],
     )
     ```
 
-5. Execute the file
+    This code creates the rules for building and compiling your `hello_world.c` file.
+
+Now your directory structure should look like the following:
+
+```bash
+|-- WORKSPACE
+|-- examples
+    |-- BUILD
+    |-- config.h
+    |-- hello_world.c
+```
+
+## Step 4. Run the code
+
+It's best practice to make sure that you're connected to a synchronized node before you start sending transactions to it. This way, you know that it has an up-to-date view of the Tangle. For more information, see [Nodes](root://getting-started/1.0/understanding-iota/nodes.md).
+
+In this step, you run the code and check if it is synchronized.
+
+1. Go to the IOTA Foundation [Discord](https://discord.iota.org) and enter **!milestone** in the `botbox` channel
+
+    ![Entering !milestone on Discord](../images/discord-milestone-check.PNG)
+
+    The Discord bot should return the current `latestMilestoneIndex` field from a [node quorum](root://getting-started/1.0/references/glossary.md#node-quorum).
+
+2. Run your `hello_world.c` file
 
     ```bash
     bazel run -c opt examples:hello_world
     ```
 
-The IOTA node returns something like the following:
+The node returns something like the following:
 
 ``` 
-appName IRI Devnet
-appVersion 1.8.1
-latestMilestone SFQXAJ9MXLHTVHWVKGYYOOCECPIMSZUYYCFORHBRRQUCWLV9SJHOOYNLSSHIJHUKAJAEIBSBOFBCNR999
-latestMilestoneIndex 1429040
-latestSolidSubtangleMilestoneIndex 1429040
-milestoneStartIndex 434527
-neighbors 8
+appName HORNET
+appVersion 0.4.0
+latestMilestone 9SF9HY9ZSTGSK9ZSHPCLPPFWZFVWEYRUKYU9TEEZMPZAFJUWQRUBUIVXHOOCTXYYISNVVWLUFYNCIP999
+latestMilestoneIndex 1670581
+latestSolidSubtangleMilestoneIndex 1670581
+milestoneStartIndex 1651535
+neighbors 3
 packetsQueueSize 0
-tips 4478
+tips 0
 transactionsToRequest 0
-features: testnet,
-RemotePOW,
-snapshotPruning,
-loadBalancer
+features: RemotePOW,
 ```
-
-### Reading the response object
 
 If the `latestMilestoneIndex` field is equal to the one you got from Discord and the `latestSolidSubtangleMilestoneIndex` field, the node is synchronized.
 
 If not, try connecting to a different node. The [iota.dance website](https://iota.dance/) includes a list of Mainnet nodes. Or, you can [run your own node](root://node-software/1.0/overview.md).
 
+:::info:
 In the `features` list, you can see that this node also support [remote proof of work](root://getting-started/1.0/references/glossary.md#remote-proof-of-work) (RemotePOW). As a result, you can use this node to do proof of work instead of doing it on your local device.
 
 For more information about these fields, see the [node API reference](root://iri/1.0/references/iri-api-reference.md#getNodeInfo).
+:::
 
 :::success: Congratulations :tada:
 You've confirmed your connection to a synchronized node.
 :::
-
-## Run the code
-
-These code samples are hosted on [GitHub](https://github.com/iota-community/c-iota-workshop).
-
-To get started you need [Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) installed on your device.
-
-You also need a C development environment.
-
-In the command-line, do the following:
-
-```bash
-git clone https://github.com/iota-community/c-iota-workshop.git
-cd c-iota-workshop
-bazel run -c opt examples:hello_world
-```
-
-In the console, you should see the response object.
 
 ## Get involved
 
