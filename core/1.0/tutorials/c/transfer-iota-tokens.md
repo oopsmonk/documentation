@@ -47,8 +47,7 @@ To transfer your test tokens from one address to another, you need to create and
     #include "utils/time.h"
     #include <inttypes.h>
 
-    #include "iota_client_service/config.h"
-    #include "iota_client_service/client_service.h"
+    #include "config.h"
     ```
 
 2. Define your seed. Replace this seed with one that owns an address with test IOTA tokens
@@ -92,7 +91,7 @@ To transfer your test tokens from one address to another, you need to create and
     transfer_array_add(transfers, &tf);
     ```
 
-5. To create a bundle from your `transfers` array, pass it to the [`iota_client_send_transfer()`](https://github.com/iotaledger/entangled/blob/develop/cclient/api/extended/send_transfer.h) method, which handles tip selection, remote proof of work, and sending the bundle to the node. For details about this process, see [Sending a transaction](root://getting-started/1.0/clients/sending-a-transaction.md).
+5. To create a bundle from your `transfers` array, pass it to the [`iota_client_send_transfer()`](https://github.com/iotaledger/iota.c/blob/master/cclient/api/extended/send_transfer.h) method, which handles tip selection, remote proof of work, and sending the bundle to the node. For details about this process, see [Sending a transaction](root://getting-started/1.0/clients/sending-a-transaction.md).
 
     ```go
     // Create a bundle from the transfers array and send it to the IOTA node

@@ -18,28 +18,43 @@ The network settings are defined in a `config.h` file. See [C quickstart](root:/
     #include "utils/time.h"
     #include <inttypes.h>
 
-    #include "iota_client_service/config.h"
-    #include "iota_client_service/client_service.h"
+    #include "config.h"
     ```
 
-2. Define the address whose balance you want to check and convert it to trits
+2. Define the address whose balance you want to check
 
     ```cpp
     static tryte_t const *const ADDRESS =
         (tryte_t *)"TOKLOARHKXQCVPPVVIPIJGLUTLTKFHYGMBBLOXJFYGSARLOTYFFSDZNYCOBOCNPGRMJWZCQBNOROUCE9G";
+    ```
 
+3. Use the [`get_balances()`](https://github.com/iotaledger/iota.c/blob/master/cclient/api/core/get_balances.h) method to ask the IOTA node for the current balance of the address
+
+    ```cpp
+    retcode_t get_balance(iota_client_service_t *service) {
+    retcode_t ret_code = RC_OK;
     flex_trit_t hash[FLEX_TRIT_SIZE_243];
+    get_balances_req_t *balance_req = get_balances_req_new();
+    get_balances_res_t *balance_res = get_balances_res_new();
 
-    // Convert the trytes to trits
+    if (!balance_req || !balance_res) {
+        printf("Error: OOM\n");
+        goto done;
+    }
+
+    // Convert the address to trits
+    // For more information about trits and trytes, see the IOTA documentation portal: https://docs.iota.org/docs/getting-started/0.1/introduction/ternary
     if (flex_trits_from_trytes(hash, NUM_TRITS_HASH, ADDRESS, NUM_TRYTES_HASH, NUM_TRYTES_HASH) == 0) {
         printf("Error: converting flex_trit failed\n");
         goto done;
     }
-    ```
 
-3. Use the [`get_balances()`](https://github.com/iotaledger/entangled/blob/develop/cclient/api/core/get_balances.h) method to ask the IOTA node for the current balance of the address
+    // Add address trits to get_balances_req_t
+    if ((ret_code = hash243_queue_push(&balance_req->addresses, hash)) != RC_OK) {
+        printf("Error: Adding hash to list failed!\n");
+        goto done;
+    }
 
-    ```cpp
     // Set the threshold (this is not used but we must set it)
     balance_req->threshold = 100;
 
@@ -66,9 +81,29 @@ The network settings are defined in a `config.h` file. See [C quickstart](root:/
     get_balances_res_free(&balance_res);
 
     return ret_code;
+    }
+
+    int main(void){
+        iota_client_service_t *iota_client_service;
+
+    #ifdef CONFIG_ENABLE_HTTPS
+        iota_client_service = iota_client_core_init(CONFIG_IRI_NODE_URI, CONFIG_IRI_NODE_PORT, TLS_CERTIFICATE_PEM);
+    #else
+        iota_client_service = iota_client_core_init(CONFIG_IRI_NODE_URI, CONFIG_IRI_NODE_PORT, NULL);
+    #endif
+
+        retcode_t ret = RC_ERROR;
+        ret = get_balance(iota_client_service);
+
+        if(ret == RC_OK){
+            printf("Check balances done\n");
+        }else{
+            printf("Failed to check balances: Error code: %i\n", ret);
+        }
+    }
     ```
 
-    In the console, you should see a balance of IOTA tokens as well as the transaction hash of the latest milestone that confirmed your balance:
+    When you run this code, you should see a balance of IOTA tokens as well as the transaction hash of the latest milestone that confirmed your balance:
 
     ```
     balances: [ 0 ]
@@ -94,14 +129,6 @@ In the command-line, do the following:
 git clone https://github.com/iota-community/c-iota-workshop.git
 cd c-iota-workshop
 bazel run -c opt examples:check_balances
-```
-
-In the console, you should see a balance of IOTA tokens as well as the transaction hash of the latest milestone that confirmed your balance:
-
-```
-balances: [ 0 ]
-Milestone tail transaction hash: MY9BYZKEPBBKBKNIJZSHVTRDVFLCJWVPQPTYUJ9FZ9XG9YRYMSERPBOK9OGOEEYIWLOCHOJNLRKIXW999
-Check balances done
 ```
 
 ## Next steps

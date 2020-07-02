@@ -16,8 +16,7 @@ The network settings are defined in a `config.h` file. See [C quickstart](root:/
 
     #include "common/trinary/tryte_ascii.h"
     #include <inttypes.h>
-    #include "iota_client_service/config.h"
-    #include "iota_client_service/client_service.h"
+    #include "config.h"
     ```
     
 2. Define an address to which you want to send a message
@@ -63,7 +62,7 @@ The network settings are defined in a `config.h` file. See [C quickstart](root:/
 
     The library expects the values of the transaction fields in trits, so we convert the trytes to trits before adding them to the `transfer` object.
 
-5. To create a bundle from your `transfers` array, pass it to the [`iota_client_send_transfer()`](https://github.com/iotaledger/entangled/blob/develop/cclient/api/extended/send_transfer.h) method, which handles tip selection, remote proof of work, and sending the bundle to the node. For details about this process, see [Sending a transaction](root://getting-started/1.0/clients/sending-a-transaction.md).
+5. To create a bundle from your `transfers` array, pass it to the [`iota_client_send_transfer()`](https://github.com/iotaledger/iota.c/blob/master/cclient/api/extended/send_transfer.h) method, which handles tip selection, remote proof of work, and sending the bundle to the node. For details about this process, see [Sending a transaction](root://getting-started/1.0/clients/sending-a-transaction.md).
 
     ```cpp
     // Create a bundle from the transfers array and send it to the IOTA node
@@ -114,8 +113,6 @@ git clone https://github.com/iota-community/c-iota-workshop.git
 cd c-iota-workshop
 bazel run -c opt examples:send_hello
 ```
-
-In the console, you should see the bundle hash of the transaction you just sent.
 
 ## Next steps
 

@@ -18,32 +18,37 @@ The network settings are defined in a `config.h` file. See [C quickstart](root:/
     #include "utils/time.h"
     #include <inttypes.h>
 
-    #include "iota_client_service/config.h"
-    #include "iota_client_service/client_service.h"
+   #include "config.h"
     ```
 
-2. Define the address that you want to use to filter transactions and convert it to trits
+2. Define the address that you want to use to filter transactions
 
     ```cpp
     static tryte_t const *const ADDRESS =
         (tryte_t *)"ZLGVEQ9JUZZWCZXLWVNTHBDX9G9KZTJP9VEERIIFHY9SIQKYBVAHIMLHXPQVE9IXFDDXNHQINXJDRPFDXNYVAPLZAW";
+    ```
+
+3. Use the [`find_transaction_objects()`](https://github.com/iotaledger/iota.c/blob/master/cclient/api/extended/find_transaction_objects.h) method to get transactions by the value of their `address` field. Then, decode the message in the `signatureMessageFragment` fields of the transactions and print it to the console
+
+    ```cpp
+    retcode_t find_transaction(iota_client_service_t *s, tryte_t const *const address) {
+    retcode_t ret_code = RC_ERROR;
+    find_transactions_req_t *find_tran = find_transactions_req_new();
+    transaction_array_t *out_tx_objs = transaction_array_new();
+    if (!find_tran || !out_tx_objs) {
+        printf("Error: Out of memory\n");
+        goto done;
+    }
 
     flex_trit_t hash[FLEX_TRIT_SIZE_243];
 
     // Convert the address from trytes to trits
+    // For more information about trits and trytes, see the IOTA documentation portal: https://docs.iota.org/docs/getting-started/0.1/introduction/ternary
     if (flex_trits_from_trytes(hash, NUM_TRITS_HASH, address, NUM_TRYTES_HASH, NUM_TRYTES_HASH) == 0) {
         printf("Failed to convert trytes to trits\n");
         goto done;
     }
-    ```
 
-    :::info:
-    The C library expects all transaction fields to be in trits.
-    :::
-
-3. Use the [`find_transaction_objects()`](https://github.com/iotaledger/entangled/blob/develop/cclient/api/extended/find_transaction_objects.h) method to get transactions by the value of their `address` field. Then, decode the message in the `signatureMessageFragment` fields of the transactions and print it to the console
-
-    ```cpp
     // Add the address trits to find_transactions_req_t
     if ((ret_code = hash243_queue_push(&find_tran->addresses, hash)) != RC_OK) {
         printf("Error: push queue %s\n", error_2_string(ret_code));
@@ -52,9 +57,9 @@ The network settings are defined in a `config.h` file. See [C quickstart](root:/
 
     // Find any transactions that were sent to the address
     if ((ret_code = iota_client_find_transaction_objects(s, find_tran, out_tx_objs)) == RC_OK) {
-        // Print the total number of transactions that the IOTA node returned
+        // Print the total number of transactions that the node returned
         printf("find transaction count: %lu\n", transaction_array_len(out_tx_objs));
-       IOTA_transaction_t *tx1 = transaction_array_at(out_tx_objs, TX_INDEX);
+        iota_transaction_t *tx1 = transaction_array_at(out_tx_objs, 0);
         // Print information about the first transaction that was found
         if (tx1) {
             printf("dump first transaction:\n");
@@ -83,9 +88,29 @@ The network settings are defined in a `config.h` file. See [C quickstart](root:/
     transaction_array_free(out_tx_objs);
 
     return ret_code;
+    }
+
+    int main(void){
+        iota_client_service_t *iota_client_service;
+
+    #ifdef CONFIG_ENABLE_HTTPS
+        iota_client_service = iota_client_core_init(CONFIG_IRI_NODE_URI, CONFIG_IRI_NODE_PORT, TLS_CERTIFICATE_PEM);
+    #else
+        iota_client_service = iota_client_core_init(CONFIG_IRI_NODE_URI, CONFIG_IRI_NODE_PORT, NULL);
+    #endif
+
+        retcode_t ret = RC_ERROR;
+        ret = find_transaction(iota_client_service, ADDRESS);
+
+        if(ret == RC_OK){
+            printf("Transaction read.\n");
+        }else{
+            printf("Transaction could not be received. Error code: %i\n", ret);
+        }
+    }
     ```
 
-    In the console, you should see information about the transaction and its message:
+    When you run the code, you should see information about the transaction and its message:
 
     ```
     find transaction count: 84
@@ -114,17 +139,6 @@ In the command-line, do the following:
 git clone https://github.com/iota-community/c-iota-workshop.git
 cd c-iota-workshop
 bazel run -c opt examples:receive_hello
-```
-
-In the console, you should see information about the transaction and its message:
-
-```
-find transaction count: 84
-dump first transaction:
-value = 0, curr_index = 0, last_index = 0
-addr: ZLGVEQ9JUZZWCZXLWVNTHBDX9G9KZTJP9VEERIIFHY9SIQKYBVAHIMLHXPQVE9IXFDDXNHQINXJDRPFDX
-data: Hello world
-Transaction read
 ```
 
 ## Next steps
