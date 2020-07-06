@@ -52,7 +52,7 @@ The way that you define the transaction fields, depends on whether you're storin
 
 When storing data in the Tangle, you need to send one or more zero-value transactions. For more information about transaction types, see [Transactions](../understanding-iota/transactions.md).
 
-### Tranferring IOTA tokens
+### Transferring IOTA tokens
 
 When transferring IOTA tokens, you need a bundle that contains enough input, and output transactions to complete the transfer.
 

@@ -5,7 +5,7 @@
 :::warning:
 The migration period is now over.
 
-If you did not use the Seed Migration Tool, we recommend creating a new Trinity account and tranferring your IOTA tokens to a new seed.
+If you did not use the Seed Migration Tool, we recommend creating a new Trinity account and transferring your IOTA tokens to a new seed.
 
 If you did use the Seed Migration Tool, open Trinity, create a new account, and import your new SeedVault file.
 
