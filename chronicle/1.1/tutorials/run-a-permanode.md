@@ -24,10 +24,10 @@ To complete this tutorial, you need the following:
 
 - The `build-essentials`, `pkg-config`, and `libzmq3-dev` packages
 
-    You can install these packages, using the following command:
+    You can use the following command to install these packages:
 
     ```bash
-    sudo apt update && sudo apt install build-essentials sudo apt install pkg-config && sudo apt install -y --no-install-recommends libzmq3-dev
+    sudo apt update && sudo apt install build-essential && sudo apt install pkg-config && sudo apt install -y --no-install-recommends libzmq3-dev
     ```
 
 ## Step 1. Set up a Scylla node
@@ -143,14 +143,19 @@ In this step, you download Chronicle from GitHub and configure it to connect to 
 
 ## Step 4. Run the permanode CLI
 
-In this step, you run the permanode CLI and examine the logs to make sure that it is receiving and storing transactions.
+In this step, you run the permanode CLI and examine the logs to make sure that it is receiving and storing transactions. Replace the `$CONFIGPATH` placeholder with the path to your `config.toml` file.
 
 
 ```bash
-cargo run --release --example permanode /home/jake/chronicle.rs/examples/permanode/config.toml
+cd examples
+cargo run --release --example permanode $CONFIGPATH/config.toml
 ```
 
-You should see something like the following:
+:::info:
+The first time that you execute this command, it may take a few minutes for Rust to compile the code.
+:::
+
+When the compilation is finished, you should see something like the following:
 
 ```bash
 Welcome to Chronicle Permanode Alpha v0.1.0
@@ -232,15 +237,7 @@ To fix this error, [make sure you have the `libzmq3-dev` installed](#prerequisit
 
 You may see this error after executing the `cargo run` command.
 
-To fix this error, delete your Scylla Docker container and run it again.
-
-```
-sudo systemctl start docker
-sudo systemctl enable docker
-sudo docker stop /my-node
-sudo docker rm /my-node
-sudo docker run -p 9042:9042/tcp --name my-node --hostname my-node -d scylladb/scylla
-```
+To fix this error, try running the command again.
 
 ### failed to add nodes
 
