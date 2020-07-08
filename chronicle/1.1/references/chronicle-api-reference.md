@@ -26,6 +26,12 @@ In practice, this means that you'll always get a response with a `Content-Type` 
 
 Chronicle does not support authentication yet.
 
+## Pagination
+
+Queries to the `findTransactions` endpoint can return an unknown amount of data. The exact amount is known only after the query has been executed. Therefore, this endpoint returns a limited amount of transactions that you can set in a `page_size` parameter.
+
+If you receive a `paging_state` cookie, more transactions are available for your request. To request these transactions, call the endpoint again, using the returned `hints` from the first call as a parameter.
+
 ## Base URL
 
 All requests to this API should be sent to the URL of a Chronicle instance.
