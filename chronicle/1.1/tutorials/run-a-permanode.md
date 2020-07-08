@@ -92,7 +92,7 @@ For production applications, it's best to do the following:
 - Set up many Scylla nodes so that you can recover data if any of them go down
 - Set up security for your Scylla nodes
 
-For more information, see [Best practices](../references/best-practice.md).
+For more information, see [Best practices](../guides/best-practice.md).
 :::
 
 ## Step 2. (Optional) Download historical transactions
@@ -277,8 +277,8 @@ sudo docker run -p 9042:9042/tcp --name my-node --hostname my-node -d scylladb/s
 
 ## Next steps
 
-If you're interested in contributing to the project, find out [how you can contribute](../contribute.md).
+This tutorial was an introduction to setting up a permanode. If you want to set up a permanode for production applications, see the [Best practices](../guides/best-practice.md) guide, which includes advice for setting up a more reliable architecture.
 
-To convert the returned transaction trytes to a readable object, see the [asTransactionTrytes()](https://github.com/iotaledger/iota.js/tree/next/packages/transaction-converter#module_transaction-converter.asTransactionObject) method.
+If you're interested in contributing to the project, find out [how you can contribute](../contribute.md).
 
 
