@@ -18,7 +18,7 @@ Currently, only one service is available: `permanode`.
 
 The URLs or IP addresses of any Scylla nodes that you want to query for transactions.
 
-The default setting is `172.17.0.2:9042`, which is usually the default address of a Scylla node that is run in a Docker container.
+The default setting is `172.17.0.2:9042`, which is usually the default address of a Scylla node in a Docker container.
 
 If you want to store transactions on these Scylla nodes, make sure to add the name of their datacenters to the `data_centers` setting. Otherwise, your Scylla node will not have access to the transactions and will return an error.
 
@@ -37,8 +37,6 @@ The number of Scylla nodes in a datacenter on which to store the same transactio
 The default setting is `1`.
 
 For example, a replication factor of 1 means that there is only one copy of transactions in a cluster, and there is no way to recover the data if the node is compromised or goes down.
-
-If you have more than one Scylla node, you should increase this setting.
 
 ## data_centers
 

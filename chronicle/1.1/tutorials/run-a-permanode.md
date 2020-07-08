@@ -12,6 +12,10 @@ To complete this tutorial, you need the following:
 
 - 64-bit processor
 
+- At least 32 GB of disk space
+
+- At least a 10 Gbps network connection 
+
 - At least 2 CPU cores
 
     You can check how many CPU cores your device has, using the following command:
@@ -20,7 +24,7 @@ To complete this tutorial, you need the following:
     nproc
     ```
 
-- [Rust](https://www.rust-lang.org/tools/install)
+- The latest stable version of [Rust](https://www.rust-lang.org/tools/install)
 
 - The `build-essentials`, `pkg-config`, and `libzmq3-dev` packages
 
@@ -86,8 +90,9 @@ Running Scylla in a Docker container is recommended only for testing purposes.
 For production applications, it's best to do the following:
 - Install Scylla on a native operating system
 - Set up many Scylla nodes so that you can recover data if any of them go down
+- Set up security for your Scylla nodes
 
-For more information about Scylla, see the [Scylla documentation](https://www.scylladb.com).
+For more information, see [Best practices](../references/best-practice.md).
 :::
 
 ## Step 2. (Optional) Download historical transactions

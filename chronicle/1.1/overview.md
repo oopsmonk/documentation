@@ -4,7 +4,7 @@
 
 By using Chronicle, you can take advantage of the built-in permanode CLI that allows you to do the following:
 
-- Store transactions in real time, using one or more Scylla clusters
+- Store transactions in real time from an IOTA node's ZMQ feed
 - Configure the storage settings to meet your needs
 - Search for all stored transactions, using an HTTP API
 
