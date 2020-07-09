@@ -4,68 +4,37 @@
 
 The ScyllaDB data model includes the following tables:
 
-- **Bundle:** Stores transaction bundles
+- **Transaction:** Stores transactions by their hash
 
-- **Edge:** Provides secondary indexes
+- **Edge:** Provides secondary indexes to look up value transactions by specific fields
 
-- **Tag:** Limits the amount of time you can search by tag
+- **Data:** Stores zero-value transactions by month
 
-- **Zero-value:** Stores spam and data transactions by month
+## Transaction table
 
-We use the following abbreviations to describe the data in these tables:
+This table is the single source of truth for transactions. For example, selecting a transaction with a specific hash is done through the transaction table.
 
-|**Abbreviation**|**Description**|
-|:------------|:------------|
-|BH|Bundle hash|
-|H_hash|Head transaction hash (IX == LX)|
-|TS|Timestamp|
-|TX_HASH|Transaction hash|
-|TTL|Time to live|
-|EL|Extra Label|
-|EX|Extra Vertex|
-|LB|Label|
-|V1|Vertex One|
-|V2|Vertex Two|
-|IX|Current Index|
-|LX|Last Index|
-|SX|Snapshot Index|
+The partition key for this table is the transaction hash, which means that transactions are spread evenly across partitions.
 
-## Bundle table
-
-The bundle tables stores all bundle data in the following fields:
-
-- `bundle_hash`: Main partition key. All bundles with same bundle hash are stored on the same Scylla nodes.
-
-- `outputs`: Addresses used in output transactions
-
-- `inputs`: Addresses used in input transactions
-
-- `transactions_hashes`: All transaction hashes in the bundle
-
-![bundle table sample](../images/bundle-table.png)
+![Transaction table](../images/tx-table.png)
 
 ## Edge table
 
-The edge tables stores transaction data, where the partion key can be any of the following fields:
+This table acts as a way to query value transactions by their fields. For example, selecting an address which has been used as an input or output within a time-range is done through the edge table.
 
-- `address`: Address that was used in a bundle
+The partition key can be any field such as `address`, `trunkTransaction`, `branchTransaction`, and `bundle`. All the rows with the same partition key are stored in the same partition and replicated across the same nodes.
 
-- `transaction_hash`: Transaction hash
+![Edge table](../images/edge-table.png)
 
-- `tip`: Trunk or branch transactions of the head transaction of the bundle
+## Data table
 
-![edge table sample](../images/edge-table.png)
+This table acts as a way to query zero-value transactions by their fields.
 
-All the rows with the same partition key are stored on the same nodes. This allows you to look up data by any partition key.
+The schema is almost identical to the edge table, except the partition key is a composite partition key (vertex, year, month).
 
-## Tag table
+This table is useful because, unlike value transactions, there may be unbounded zero-value transactions on the same address, which results in an unbounded partition for that address.
 
-A tag table can be one of two types:
+![Data table](../images/data-table.png)
 
-- Full tag (27 trytes)
 
-- Full tag and IOTA area code
 
-## Zero_value table
-
-This table stores the same data as the edge table, except the partition key is a composite partition key composed of address, year, month. This means that only the monthly activities for that address will exist in the same shard. 
