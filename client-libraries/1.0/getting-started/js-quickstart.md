@@ -96,11 +96,11 @@ Whenever you connect to a node, you need to know which IOTA network it's in. Her
 
     ```js
     // Require the IOTA library
-    const IotaCore = require('@iota/core');
+    const Iota = require('@iota/core');
 
     // Create a new instance of the IOTA API object
     // Use the `provider` field to specify which node to connect to
-    const iota = IotaCore.composeAPI({
+    const iota = Iota.composeAPI({
         provider: 'https://nodes.devnet.iota.org:443'
     });
 
