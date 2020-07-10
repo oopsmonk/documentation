@@ -28,7 +28,7 @@ In this tutorial, we connect to a node on the [Devnet](root://getting-started/1.
 
 ## Code walkthrough
 
-1. Go to [devnet.thetangle.org](https://devnet.thetangle.org/) and find a confirmed transaction
+1. Go to [utils.iota.org](https://utils.iota.org/) and find a confirmed transaction
 
     :::info:Can't find a confirmed transaction?
     Click a transaction hash in the Latest milestones box, then click the branch transaction hash. This transaction is referenced and approved by the milestone, so it is in a confirmed state.
@@ -37,7 +37,7 @@ In this tutorial, we connect to a node on the [Devnet](root://getting-started/1.
 2. Pass the transaction hash to the [`getLatestInclusion()`](https://github.com/iotaledger/iota.js/blob/next/api_reference.md#module_core.getLatestInclusion) method to check if the IOTA node's latest solid subtangle milestone approves it
 
     ```js
-   IOTA.getLatestInclusion(['TRANSACTION HASH'])
+   iota.getLatestInclusion(['TRANSACTION HASH'])
     .then(states => console.log(states));
     ```
 
@@ -47,7 +47,7 @@ In this tutorial, we connect to a node on the [Devnet](root://getting-started/1.
     You could also use the `getInclusionStates()` method to check if a transaction is approved by an array of your own chosen transactions.
     :::
 
-5. Go to [devnet.thetangle.org](https://devnet.thetangle.org) and find a pending transaction
+5. Go to [utils.iota.org](https://utils.iota.org) and find a pending transaction
 
     :::info:Can't find a pending transaction?
     Click a transaction hash in the Latest transactions box. This transaction is a tip, so it is in a pending state.
@@ -56,7 +56,7 @@ In this tutorial, we connect to a node on the [Devnet](root://getting-started/1.
 6. Pass the transaction hash to the `getLatestInclusion()` method to check if the IOTA node's latest solid subtangle milestone approves it
 
     ```js
-   IOTA.getLatestInclusion(['TRANSACTION HASH'])
+   iota.getLatestInclusion(['TRANSACTION HASH'])
     .then(states => console.log(states));
     ```
 
