@@ -42,9 +42,9 @@ In this step, you use Cargo to create a new project and install the dependencies
 2. Open the `Cargo.toml` file, and add the following dependencies under the `[DEPENDENCIES]` section
 
     ```bash
-   IOTA-streams = { git = "https://github.com/iotaledger/streams" }
+   iota-streams = { git = "https://github.com/iotaledger/streams" }
     failure = "0.1"
-   IOTA-lib-rs = "0.4"
+   iota-lib-rs = "0.4"
     ```
 
 Now you have all the dependencies, you're ready to start coding.

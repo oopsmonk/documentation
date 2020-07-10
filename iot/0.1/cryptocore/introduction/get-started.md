@@ -22,7 +22,6 @@ To complete this tutorial, you need the following:
 
   :::info:
   We recommend these external guides for setting up your Raspberry Pi:
-
   - [Install Raspian](https://www.raspberrypi.org/documentation/installation/installing-images/README.md)
   - [Connect to WiFi and enable SSH](https://www.e-tinkers.com/2017/03/boot-raspberry-pi-with-wifi-on-first-boot/)
   - [Enable the serial interface](https://www.raspberrypi.org/documentation/configuration/raspi-config.md)

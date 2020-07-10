@@ -1,18 +1,10 @@
 # Prove that a file is unchanged
 
-**Files are important for transporting information such as contracts among different parties. Sometimes, one party may change a file without the others knowing. So, all parties need a way to reliably prove that a file has not been changed so they can trust it. To prove that a file is unchanged, you can use this library to hash the file's contents and attach it to the Tangle. This way, any party can later hash the file and compare it to the immutable one in the Tangle. If the hashes are the same, the file is unchanged.**
+**In this tutorial, you use the prove that a file is unchanged by hashing the file's contents and attaching it to the Tangle.**
 
-##
+First, you create a file that you later want to prove is unchanged. Then, you hash the file and add its hash to a transaction before attaching it to the [Devnet](root://getting-started/1.0/networks/overview.md) Tangle.
 
-In this tutorial, you use the [proof-of-existence library](https://github.com/iotaledger/iota-poex-tool) to prove that a file is unchanged.
-
-First, we create a file that we later want to prove is unchanged. Then, we hash the file and add its hash to a transaction before attaching it to the [Devnet](root://getting-started/1.0/networks/overview.md) Tangle. The Devnet is similar to the Mainnet, except the tokens are free. Any transactions that you send to the Devnet do not exist on other networks such as the Mainnet.
-
-:::info:
-Transactions in the Tangle are immutable, so we can use the transaction as a source of truth.
-:::
-
-Then, we read the transaction from the Tangle to retrieve the file hash. When we have the file hash, we hash the original file again and compare the two. If both hashes are the same, the original file is unchanged.
+Then, you read the transaction from the Tangle to get the file hash. When you have the file hash, you hash the original file again and compare the two. If both hashes are the same, the original file is unchanged.
 
 ### Prerequisites
 
@@ -42,9 +34,9 @@ yarn add @iota/poex-tool regenerator-runtime
 
 Create a new file called `contract.txt` in your working directory, then add the following text to it
 
-    ```
-    My super secret contract.
-    ```
+```
+My super secret contract.
+```
 
 ### Step 2. Set up the sample
 

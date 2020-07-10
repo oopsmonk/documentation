@@ -10,7 +10,7 @@ Use the IRI API to attach transactions to the Tangle, find the balance of addres
 
 -------------------------
 ![Chronicle](images/Chronicle.png)
-## [Chronicle](root://chronicle/1.0/references/chronicle-api-reference.md)
+## [Chronicle](root://chronicle/1.1/references/chronicle-api-reference.md)
 Use the Chronicle API to find historical transactions.
 -------------------------
 

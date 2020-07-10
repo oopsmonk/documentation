@@ -6,8 +6,6 @@
 The GoShimmer documentation has moved to a [GitHub wiki](https://github.com/iotaledger/goshimmer/wiki).
 :::
 
-When you send your node spam transactions, it processes them, adds them to its ledger, and forwards them to its neighbors for processing.
-
 ## Prerequisites
 
 To complete this tutorial, you need the following:

@@ -215,6 +215,12 @@
                 "status": "preferred",
                 "image": ""
             },
+            "entry point milestone":{
+                "definition": "The first milestone in a node's database",
+                "pos": "noun",
+                "status": "preferred",
+                "image": ""
+            },
             "future cone": {
                 "definition": "A group of decendant transactions in the Tangle, starting from and including a child transaction",
                 "pos": "noun",
