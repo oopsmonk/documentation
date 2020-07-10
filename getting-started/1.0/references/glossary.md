@@ -157,7 +157,7 @@ The terms in this category are related to IOTA networks
 
 |**Definition**|**Part of speech**|**Status**|
 |:---------|:-------------|:-----|
-|Request the past cone of all milestones in the Tangle from neighbors, starting from an entry point milestone and ending at the latest one|noun|preferred|
+|Request the past cone of all milestones in the Tangle from neighbors, starting from an entry point milestone and ending at the latest one|verb|preferred|
 
 ### subgraph
 
@@ -197,7 +197,7 @@ The terms in this category are related to transactions
 
 |**Definition**|**Part of speech**|**Status**|
 |:---------|:-------------|:-----|
-|Relationship between a transaction and those to which it is attached in the Tangle|noun|preferred|
+|A transaction that is directly attached to others in the Tangle|noun|preferred|
 
 ### confirmed
 
@@ -217,11 +217,17 @@ The terms in this category are related to transactions
 |:---------|:-------------|:-----|
 |A state in the Tangle when two or more transactions try to transfer the same IOTA tokens from an address|noun|preferred|
 
+### entry point milestone
+
+|**Definition**|**Part of speech**|**Status**|
+|:---------|:-------------|:-----|
+|The first milestone in a node's database|noun|preferred|
+
 ### future cone
 
 |**Definition**|**Part of speech**|**Status**|
 |:---------|:-------------|:-----|
-|A group of attached transactions in the Tangle, starting from and including a child transaction|noun|preferred|
+|A group of decendant transactions in the Tangle, starting from and including a child transaction|noun|preferred|
 
 ### head transaction
 
@@ -269,7 +275,7 @@ The terms in this category are related to transactions
 
 |**Definition**|**Part of speech**|**Status**|
 |:---------|:-------------|:-----|
-|Transaction that is directly referenced by a child transaction|noun|preferred|
+|A transaction that has others directly attached to it|noun|preferred|
 
 ### past cone
 

@@ -14,7 +14,7 @@ Although you can store anything in the Tangle, You should consider doing so only
 
 Data in the Tangle is not guaranteed to be stored forever because nodes have the ability to prune transactions from their local databases.
 
-If you want to be able to store data for long periods of time, see [Chronicle](root://chronicle/1.0/overview.md).
+If you want to be able to store data for long periods of time, see [Chronicle](root://chronicle/1.1/overview.md).
 
 ## Next steps
 

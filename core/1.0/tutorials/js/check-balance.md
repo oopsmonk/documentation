@@ -48,7 +48,7 @@ In this tutorial, we connect to a node on the [Devnet](root://getting-started/1.
 4. Use the [`getBalances()`](https://github.com/iotaledger/iota.js/blob/next/api_reference.md#module_core.getBalances) method to ask the IOTA node for the current balance of the address
 
     ```js
-   IOTA.getBalances([address], 100)
+   iota.getBalances([address], 100)
       .then(({ balances }) => {
       console.log(balances)
       })

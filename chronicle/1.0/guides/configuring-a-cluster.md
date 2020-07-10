@@ -4,7 +4,7 @@
 
 ## Data transmission
 
-We recommend frames with an MTU (maximum transmission unit) of at least 9000 bytes for communications between ScyllaDB and Chronicle.  
+We recommend jumboframes with an MTU (maximum transmission unit) of at least 9000 bytes for communications between ScyllaDB and Chronicle.  
 
 ## Power outage
 

@@ -55,7 +55,7 @@ In this tutorial, we connect to a node on the [Devnet](root://getting-started/1.
 4. Use the [`getBundle()`](https://github.com/iotaledger/iota.js/blob/next/api_reference.md#module_core.getBundle) method to get all transactions in the tail transaction's bundle. Then, use the [`extractJSON()`](https://github.com/iotaledger/iota.js/tree/next/packages/extract-json) method to decode the JSON messages in the `signatureMessageFragment` fields of the bundle's transactions and print them to the console
 
     ```js
-   IOTA.getBundle(tailTransactionHash)
+   iota.getBundle(tailTransactionHash)
     .then(bundle => {
         console.log(JSON.parse(Extract.extractJson(bundle)));
     })

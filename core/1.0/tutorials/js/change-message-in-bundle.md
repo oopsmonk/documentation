@@ -59,7 +59,7 @@ In this tutorial, we connect to a node on the [Devnet](root://getting-started/1.
 4. Use the [`getBundle()`](https://github.com/iotaledger/iota.js/blob/next/api_reference.md#module_core.getBundle) method to get all transactions in the tail transaction's bundle
 
     ```js
-   IOTA.getBundle(tail).then(bundle => {
+   iota.getBundle(tail).then(bundle => {
 
     });
     ```
@@ -109,7 +109,7 @@ In this tutorial, we connect to a node on the [Devnet](root://getting-started/1.
 9. Send your copy to a node
 
     ```js
-   IOTA.sendTrytes(newTrytes.reverse(),3,9).then(transactions => {
+   iota.sendTrytes(newTrytes.reverse(),3,9).then(transactions => {
     // Print your new tail transaction hash to the console
     console.log(transactions[0].hash);
     })
@@ -119,7 +119,7 @@ In this tutorial, we connect to a node on the [Devnet](root://getting-started/1.
     You reverse the bundle array because the library expects bundles to be sent head first.
     :::
 
-Now, you can [search for your new tail transaction](https://devnet.thetangle.org/) in the Tangle and see that it's in a bundle with the same bundle hash as the original.
+Now, you can [search for your new tail transaction](https://utils.iota.org/) in the Tangle and see that it's in a bundle with the same bundle hash as the original.
 
 :::success:Congratulations :tada:
 You've just changed the message of a tail transaction in a bundle and reattached a copy of that bundle to the Tangle.

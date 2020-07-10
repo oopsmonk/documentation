@@ -6,7 +6,7 @@
 
 To complete this tutorial, you need the following:
 
-- [A Scylla cluster on a single data center](https://docs.scylladb.com/operating-scylla/procedures/cluster-management/create_cluster/) (Scylla version 3.0.6 or later). At the moment, Chronicle supports only clusters in a single data center.
+- [A Scylla cluster on a single data center](https://docs.scylladb.com/operating-scylla/procedures/cluster-management/create_cluster/) (Scylla version 4 or later). At the moment, Chronicle supports only clusters in a single data center.
 
 - [Elixir](https://elixir-lang.org/install.html) version 1.8.1 or later and Erlang VM version 22 or later (included with Elixir). If your package manager doesn't offer these versions, use [this tool](https://github.com/asdf-vm/asdf ).
 

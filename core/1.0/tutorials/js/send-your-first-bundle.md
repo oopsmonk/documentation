@@ -1,6 +1,6 @@
 # Send a "hello world" transaction in Node.js
 
-**In this tutorial, you send a "hello world" message in a zero-value transaction. These transactions are useful for storing messages on the Tanglewithout having to send any IOTA tokens.**
+**In this tutorial, you send a "hello world" message in a zero-value transaction. These transactions are useful for storing messages on the Tangle without having to send any IOTA tokens.**
 
 ## Packages
 
@@ -100,7 +100,7 @@ In this tutorial, we connect to a node on the [Devnet](root://getting-started/1.
 8. To create a bundle from your `transfers` object, pass it to the [`prepareTransfers()`](https://github.com/iotaledger/iota.js/blob/next/api_reference.md#module_core.prepareTransfers) method. Then, pass the returned bundle trytes to the [`sendTrytes()`](https://github.com/iotaledger/iota.js/blob/next/api_reference.md#module_core.sendTrytes) method, which handles tip selection, remote proof of work, and sending the bundle to the node. For details about this process, see [Sending a transaction](root://getting-started/1.0/clients/sending-a-transaction.md).
 
     ```js
-   IOTA.prepareTransfers(seed, transfers)
+   iota.prepareTransfers(seed, transfers)
         .then(trytes => {
             return iota.sendTrytes(trytes, depth, minimumWeightMagnitude);
         })
