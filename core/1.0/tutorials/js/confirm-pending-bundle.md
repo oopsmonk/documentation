@@ -67,7 +67,7 @@ If the tail transaction isn't promotable, the [`replayBundle()`](https://github.
 
 ```js
 function autoPromoteReattach (tail) {
- IOTA.isPromotable(tail)
+ iota.isPromotable(tail)
     .then(promote => promote
     ? iota.promoteTransaction(tail, 3, 14)
         .then(()=> {
@@ -104,7 +104,7 @@ If a tail transaction has been confirmed, it's logged to the console along with 
 ```js
 function autoConfirm(tails){
 console.log(tails);
-   IOTA.getLatestInclusion(tails)
+   iota.getLatestInclusion(tails)
         .then(states => {
             // Check that none of the transactions have been confirmed
             if (states.indexOf(true) === -1) {
@@ -136,7 +136,7 @@ Click the green button to run the sample code in this tutorial and see the resul
 Before you run this sample code, find a pending tail transaction hash and store it in the `tails` array.
 
 :::info:Can't find a pending transaction?
-Go to [devnet.thetangle.org](https://devnet.thetangle.org) and click a transaction hash in the Latest transactions box. This transaction is a tip, so it is in a pending state.
+Go to [iota.utils.org](https://iota.utils..org) and click a transaction hash in the Latest transactions box. This transaction is a tip, so it is in a pending state.
 :::
 
 <iframe height="500px" width="100%" src="https://repl.it/@jake91/Confirm-pending-bundle?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>

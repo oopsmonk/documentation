@@ -42,7 +42,7 @@ In this tutorial, we connect to a node on the [Devnet](root://getting-started/1.
     ```js
     // Check for a command-line argument
     if (!process.argv[2]) {
-        // Prompt user to add an address to the commmand line
+        // Prompt user to add an address to the command line
         console.log('Listening for all transactions')
         console.log('---------------------')
         console.log('If you want to listen for transactions that are sent to a particular address,');
@@ -54,7 +54,7 @@ In this tutorial, we connect to a node on the [Devnet](root://getting-started/1.
     } else {
         console.log('Listening for transactions sent to this address: ' + process.argv[2])
         console.log(
-            'Remember to send a transaction to this address, and be patient: It can take 30seconds for the transaction to appear.')
+            'Remember to send a transaction to this address, and be patient: It can take 30 seconds for the transaction to appear.')
         // Subscribe to the address thats passed in via the CLI
         sock.subscribe(process.argv[2])
     }

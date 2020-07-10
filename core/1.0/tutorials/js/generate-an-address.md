@@ -54,7 +54,7 @@ In this tutorial, we connect to a node on the [Devnet](root://getting-started/1.
 5. Use the [`getNewAddress()`](https://github.com/iotaledger/iota.js/blob/next/api_reference.md#module_core.getNewAddress) method to generate an unspent address
 
     ```js
-   IOTA.getNewAddress(seed, { index: 0, securityLevel: securityLevel, total: 1 })
+   iota.getNewAddress(seed, { index: 0, securityLevel: securityLevel, total: 1 })
         .then(address => {
             console.log('Your address is: ' + address);
         })
