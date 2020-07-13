@@ -42,7 +42,7 @@ Running your own node has many benefits, of which the most important is that you
 
 ## getTrytes
 
-Gets transaction trytes by its transaction hash.
+Gets transaction trytes by a transaction hash.
 
 ### Parameters
 
