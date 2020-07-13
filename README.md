@@ -8,7 +8,7 @@
   <a href="https://discord.iota.org/" style="text-decoration:none;"><img src="https://img.shields.io/badge/Discord-9cf.svg?logo=discord" alt="Discord"></a>
     <a href="https://iota.stackexchange.com/" style="text-decoration:none;"><img src="https://img.shields.io/badge/StackExchange-9cf.svg?logo=stackexchange" alt="StackExchange"></a>
     <a href="https://raw.githubusercontent.com/iotaledger/documentation/develop/LICENSE" style="text-decoration:none;"><img src="https://img.shields.io/github/license/iotaledger/documentation.svg" alt="Creative Commons 4.0 license"></a>
-    <a href="https://buildkite.com/iota-foundation/documentation-platform-build-and-deploy" style="text-decoration:none;"><img src="https://badge.buildkite.com/f736fdb29f0102a9e640363d347bd7332ec2002aeb69916556.svg" alt="Build status"></a>
+    <a href="https://github.com/iotaledger/documentation/workflows" style="text-decoration:none;"><img src="https://github.com/iotaledger/documentation/workflows/Client%20Build%20and%20Deploy%20Production/badge.svg" alt="Build status"></a>
 </p>
       
 <p align="center">
