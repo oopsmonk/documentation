@@ -70,8 +70,7 @@ Using the [core JavaScript client library](root://core/1.0/overview.md) with Nod
      'command': 'getBalances',
      'addresses': [
      address
-     ],
-     'threshold':100
+     ]
      }
 
      var options = {
