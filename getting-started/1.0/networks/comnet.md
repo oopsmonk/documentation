@@ -1,6 +1,6 @@
 # The Comnet
 
-**The Devnet is similar to the Devnet, except it's maintained by the IOTA community. This topic lists some practical information for connecting to the Comnet.**
+**The Comnet is similar to the [Devnet](../networks/devnet.md), except it's maintained by the IOTA community. This topic lists some practical information for connecting to the Comnet.**
 
 ## Nodes
 
