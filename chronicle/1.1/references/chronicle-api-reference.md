@@ -28,9 +28,9 @@ Chronicle does not support authentication yet.
 
 ## Pagination
 
-Queries to the `findTransactions` endpoint can return an unknown amount of data. The exact amount is known only after the query has been executed. Therefore, this endpoint returns a limited amount of transactions that you can set in a `page_size` parameter The default page size is 255.
+Queries to the `findTransactions` endpoint can return an unknown amount of zero-value transaction hashes. The exact amount is known only after the query has been executed. Therefore, this endpoint returns a limited amount of transaction hashes.
 
-If you receive a `paging_state` array, more transactions are available for your request. To request these transactions, call the endpoint again, using the returned `hints` from the first call as a parameter.
+If you receive a `hints.paging_state` array, more transaction hashes are available for your request. To request these transaction hashes, call the endpoint again, using the returned `hints` from the first call as a parameter.
 
 ## Base URL
 
@@ -143,9 +143,9 @@ curl http://localhost:4000 \
 
 Gets the transaction hashes of transactions that contain the given values in their transaction fields.
 
-To find value transactions, you must use the `addresses`, `approvees`, or `bundles` parameters.
+To find only value transactions, you must use the `addresses` parameter.
 
-To find zero-value transaction, you must use the `hints` parameter.
+To find only zero-value transaction, you must use the `hints` parameter.
 
 :::info:
 You can search for either `hints.address` or `hints.tag`, but not both at the same time.
@@ -156,14 +156,13 @@ You can search for either `hints.address` or `hints.tag`, but not both at the sa
 |**Parameters** |**Description** | **Type**
 |--|--|--|
 | `addresses` | Addresses to search for in value transactions (do not include the checksum) | array of strings |
-| `approvees` | Child transaction hashes to search for in value transactions | array of strings |
-| `bundles` | Bundle hashes to search for in value transactions | array of strings |
+| `approvees` | Child transaction hashes to search for in all transactions | array of strings |
+| `bundles` | Bundle hashes to search for in all transactions | array of strings |
 |`hints`|Search fields for zero-value transactions|array of objects|
 |`hints.address`|Address to search for in zero-value transactions|string|
 | `hints.tags` | Tag to search for in zero-value transactions | string |
-|`hints.month`|The month to search for in the `attachmentTimestamp` field of zero-value transacions| integer|
-|`hints.year`|The year to search for in the `attachmentTimestamp` field of zero-value transacions|integer|
-|`hints.page_size`|The maximum number of transaction hashes to return|integer|
+|`hints.month`|The month to search for in the `attachmentTimestamp` field of zero-value transactions| integer|
+|`hints.year`|The year to search for in the `attachmentTimestamp` field of zero-value transactions|integer|
 
 ### Examples
 --------------------
@@ -175,7 +174,7 @@ import json
 command = {
   "command": "findTransactions",
   "hints": [
-  {"tag":"POWSRV","month":8,"year":2019, "page_size": 500}
+  {"tag":"POWSRV","month":8,"year":2019}
   ]
 }
 
@@ -201,7 +200,7 @@ var request = require('request');
 var command = {
   "command": "findTransactions",
   "hints": [
-  {"tag":"POWSRV","month":8,"year":2019, "page_size": 500}
+  {"tag":"POWSRV","month":8,"year":2019}
   ]
 };
 
@@ -232,7 +231,7 @@ curl http://localhost:4000 \
 -d '{
   "command": "findTransactions",
   "hints": [
-  {"tag":"POWSRV","month":8,"year":2019, "page_size": 500}
+  {"tag":"POWSRV","month":8,"year":2019}
   ]
 }'
 ```
@@ -246,7 +245,7 @@ curl http://localhost:4000 \
   "hashes":["YBOCSXAPQ9ZRKLPZTPUAHIEYZMM9WILR9ELGKMJ9DPKEQLVWHPBPXHDBXVDNBOTHSCLHSKMV9VXWZ9999","Y9CPOZPBICEGGYZUG9ORWDODJLWSFFFMKGVUQWTTWVHAYXO9TTLFLZIPTPVONUGMCVUWCVNM9EQJA9999","..."
   ],
   "hints":[
-    {"month":8,"page_size":500,"paging_state":[0,0,0,0,20,1,0,0,32,0,0,0,4,0,0,0,2,0,0,0,73,79,2,0,0,0,84,65,2,0,0,0,7,227,2,0,0,0,0,8,1,136,0,0,0,5,0,0,0,2,0,0,0,73,83,2,0,0,0,65,83,19,0,0,0,67,65,77,57,57,57,57,57,57,57,57,57,57,57,57,57,57,57,57,4,0,0,0,93,105,39,120,81,0,0,0,89,66,79,67,83,88,65,80,81,57,90,82,75,76,80,90,84,80,85,65,72,73,69,89,90,77,77,57,87,73,76,82,57,69,76,71,75,77,74,57,68,80,75,69,81,76,86,87,72,80,66,80,88,72,68,66,88,86,68,78,66,79,84,72,83,67,76,72,83,75,77,86,57,86,88,87,90,57,57,57,57,11,254,255,127,64,75,209,157,39,39,44,67,150,117,165,64,16,45,245,135,1,0,0,0,57,0,0,0,1,25,0,0,0,20,0,0,0,1,0,0,0,8,0,0,0,210,169,0,71,3,23,125,133,1,1,25,0,0,0,20,0,0,0,1,0,0,0,8,0,0,0,210,169,0,71,3,23,125,133,1,1,1,0,0,0,177,75,216,214,96,152,70,193,205,202,198,226,80,81,213,128,1,2],"tag":"POWSRV","year":2019
+    {"month":8,"paging_state":[0,0,0,0,20,1,0,0,32,0,0,0,4,0,0,0,2,0,0,0,73,79,2,0,0,0,84,65,2,0,0,0,7,227,2,0,0,0,0,8,1,136,0,0,0,5,0,0,0,2,0,0,0,73,83,2,0,0,0,65,83,19,0,0,0,67,65,77,57,57,57,57,57,57,57,57,57,57,57,57,57,57,57,57,4,0,0,0,93,105,39,120,81,0,0,0,89,66,79,67,83,88,65,80,81,57,90,82,75,76,80,90,84,80,85,65,72,73,69,89,90,77,77,57,87,73,76,82,57,69,76,71,75,77,74,57,68,80,75,69,81,76,86,87,72,80,66,80,88,72,68,66,88,86,68,78,66,79,84,72,83,67,76,72,83,75,77,86,57,86,88,87,90,57,57,57,57,11,254,255,127,64,75,209,157,39,39,44,67,150,117,165,64,16,45,245,135,1,0,0,0,57,0,0,0,1,25,0,0,0,20,0,0,0,1,0,0,0,8,0,0,0,210,169,0,71,3,23,125,133,1,1,25,0,0,0,20,0,0,0,1,0,0,0,8,0,0,0,210,169,0,71,3,23,125,133,1,1,1,0,0,0,177,75,216,214,96,152,70,193,205,202,198,226,80,81,213,128,1,2],"tag":"POWSRV","year":2019
     }
   ]
 }
