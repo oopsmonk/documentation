@@ -55,9 +55,6 @@ The network settings are defined in a `config.h` file. See [C quickstart](root:/
         goto done;
     }
 
-    // Set the threshold (this is not used but we must set it)
-    balance_req->threshold = 100;
-
     if ((ret_code = iota_client_get_balances(service, balance_req, balance_res)) == RC_OK) {
         hash243_queue_entry_t *q_iter = NULL;
         size_t balance_cnt = get_balances_res_balances_num(balance_res);

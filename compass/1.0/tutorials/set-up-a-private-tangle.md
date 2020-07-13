@@ -292,8 +292,7 @@ Call the [`getBalances`](root://iri/1.0/references/iri-api-reference.md#getbalan
      'command': 'getBalances',
      'addresses': [
      address
-     ],
-     'threshold':100
+     ]
      }
 
      var options = {
