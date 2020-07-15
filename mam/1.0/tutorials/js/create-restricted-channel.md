@@ -43,7 +43,7 @@ In this tutorial, we connect to a node on the [Devnet](root://getting-started/1.
   const provider = 'https://nodes.devnet.iota.org';
   const providerName = 'devnet';
 
-  const mamExplorerLink = `https://utils.iota.org`;
+  const mamExplorerLink = 'https://utils.iota.org';
   ```
 
 3. Initialize the MAM state
