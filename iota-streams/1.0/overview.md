@@ -1,6 +1,6 @@
 # Streams overview
 
-**Streams is a cryptographic framework for building cryptographic messaging protocols in the [Rust programming language](https://www.rust-lang.org/). Streams comes with a built-in method of sending messages to nodes, but it's also flexible enough to allow you to extend it to send messages in other ways such as in HTTP URLs.**
+**Streams is a framework for building cryptographic messaging protocols in the [Rust programming language](https://www.rust-lang.org/). Streams comes with a built-in protocol for attaching messages to the Tangle, but it's also flexible enough to allow you to extend it to send messages in other ways such as in HTTP URLs.**
 
 Here are just a few ideas of what you can build with Streams:
 
