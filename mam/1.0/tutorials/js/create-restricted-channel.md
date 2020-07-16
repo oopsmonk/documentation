@@ -1,4 +1,4 @@
-# Publish restricted messages
+# Publish secret messages
 
 **If you want to publish secret messages to a channel that only permitted users can read, you can use a restricted channel. These channels are open for any user to find, but only those with the side key can decrypt it. This type of channel is useful for private communications.**
 
@@ -38,11 +38,12 @@ In this tutorial, we connect to a node on the [Devnet](root://getting-started/1.
 2. Set the privacy mode to restricted, choose, a side key, connect to a Devnet node, and set the MAM explorer URL to use for seeing messages in a user interface
 
   ```js
-  const mode = 'restricted'
-  const sideKey = 'VERYSECRETKEY'
-  const provider = 'https://nodes.devnet.iota.org'
+  const mode = 'restricted';
+  const sideKey = 'VERYSECRETKEY';
+  const provider = 'https://nodes.devnet.iota.org';
+  const providerName = 'devnet';
 
-  const mamExplorerLink = `https://mam-explorer.firebaseapp.com/?provider=${encodeURIComponent(provider)}&mode=${mode}&key=${sideKey.padEnd(81, '9')}&root=`
+  const mamExplorerLink = 'https://utils.iota.org/mam';
   ```
 
 3. Initialize the MAM state
@@ -63,10 +64,10 @@ In this tutorial, we connect to a node on the [Devnet](root://getting-started/1.
       // Save your new mamState
       mamState = message.state;
       // Attach the message to the Tangle
-      await Mam.attach(message.payload, message.address, 3, 9)
+      await Mam.attach(message.payload, message.address, 3, 9);
 
       console.log('Published', packet, '\n');
-      return message.root
+      return message.root;
   }
   ```
 
@@ -81,19 +82,19 @@ In this tutorial, we connect to a node on the [Devnet](root://getting-started/1.
     const root = await publish({
       message: 'Message from Alice',
       timestamp: (new Date()).toLocaleString()
-    })
+    });
 
     await publish({
       message: 'Message from Bob',
       timestamp: (new Date()).toLocaleString()
-    })
+    });
 
     await publish({
       message: 'Message from Charlie',
       timestamp: (new Date()).toLocaleString()
-    })
+    });
 
-    return root
+    return root;
   }
   ```
 
@@ -106,14 +107,14 @@ In this tutorial, we connect to a node on the [Devnet](root://getting-started/1.
   publishAll()
     .then(async root => {
 
-    const result = await Mam.fetch(root, mode, sideKey)
+    const result = await Mam.fetch(root, mode, sideKey);
     result.messages.forEach(message => console.log('Fetched and parsed', JSON.parse(trytesToAscii(message)), '\n'));
   ```
 
 7. Print the link to the console to see these messages in the MAM Explorer
 
   ```js
-      console.log(`Verify with MAM Explorer:\n${mamExplorerLink}${root}\n`);
+      console.log(`Verify with MAM Explorer:\n${mamExplorerLink}/${root}/${mode}/${sideKey.padEnd(81, '9')}/${providerName}\n`);
     });
   ```
 
@@ -139,7 +140,7 @@ Fetched and parsed { message: 'Message from Charlie',
   timestamp: '9/11/2019, 4:39:34 PM' }
 
 Verify with MAM Explorer:
-https://mam-explorer.firebaseapp.com/?provider=https%3A%2F%2Fnodes.devnet.iota.org&mode=restricted&key=VERYSECRETKEY99999999999999999999999999999999999999999999999999999999999999999999&root=DNIBZEUZNILPOZMGVWKKSHUECHFZEPRCMF9WRFPMSBRBKZWFFTTBIUYQNUBYB9NPHGHU9KPVRH9HD9JXO
+https://utils.iota.org/mam/DNIBZEUZNILPOZMGVWKKSHUECHFZEPRCMF9WRFPMSBRBKZWFFTTBIUYQNUBYB9NPHGHU9KPVRH9HD9JXO/restricted/VERYSECRETKEY99999999999999999999999999999999999999999999999999999999999999999999/devnet
 ```
 
 :::success:Congratulations :tada:
