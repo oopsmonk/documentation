@@ -1,6 +1,6 @@
 # Publish and display public messages on a webpage
 
-**In the `mam` package is a minified JavaScript file that you can use in webpages. This way, you can build web applications that publish MAM messages and display them.**
+**In the `mam` package there is a minified JavaScript file that you can use in webpages. This way, you can build web applications that publish MAM messages and display them.**
 
 ## IOTA network
 
@@ -59,10 +59,9 @@ In this tutorial, we connect to a node on the [Devnet](root://getting-started/1.
 
     ```js
         (async function () {
-            const mode = 'public'
-            const provider = 'https://nodes.devnet.iota.org'
-
-            const mamExplorerLink = `https://mam-explorer.firebaseapp.com/?provider=${encodeURIComponent(provider)}&mode=${mode}&root=`
+            const mode = 'public';
+            const provider = 'https://nodes.devnet.iota.org';
+            const providerName = 'devnet';
 
             const outputHtml = document.querySelector("#output");
 
@@ -72,45 +71,45 @@ In this tutorial, we connect to a node on the [Devnet](root://getting-started/1.
             // Publish to tangle
             const publish = async packet => {
                 // Create MAM Payload - STRING OF TRYTES
-                const trytes = asciiToTrytes(JSON.stringify(packet))
-                const message = Mam.create(mamState, trytes)
+                const trytes = asciiToTrytes(JSON.stringify(packet));
+                const message = Mam.create(mamState, trytes);
 
                 // Save new mamState
-                mamState = message.state
+                mamState = message.state;
 
                 // Attach the payload
-                await Mam.attach(message.payload, message.address, 3, 9)
+                await Mam.attach(message.payload, message.address, 3, 9);
 
                 outputHtml.innerHTML += `Published: ${packet}<br/>`;
-                return message.root
-            }
+                return message.root;
+            };
 
             const publishAll = async () => {
-                    const root = await publish('ALICE')
+                    const root = await publish('ALICE');
 
-                    await publish('BOB')
+                    await publish('BOB');
 
-                    await publish('CHARLIE')
+                    await publish('CHARLIE');
 
-                    return root
-            }
+                    return root;
+            };
 
             // Callback used to pass data out of the fetch
             const logData = data => outputHtml.innerHTML += `Fetched and parsed ${JSON.parse(trytesToAscii(data))}<br/>`;
 
             const root = await publishAll();
 
-            // Output asyncronously using "logData" callback function
-            await Mam.fetch(root, mode, null, logData)
+            // Output asynchronously using "logData" callback function
+            await Mam.fetch(root, mode, null, logData);
 
             // Output synchronously once fetch is completed
-            const result = await Mam.fetch(root, mode)
+            const result = await Mam.fetch(root, mode);
             result.messages.forEach(message => {
-                outputHtml.innerHTML += `Fetched and parsed ${JSON.parse(trytesToAscii(message))}<br/>`
+                outputHtml.innerHTML += `Fetched and parsed ${JSON.parse(trytesToAscii(message))}<br/>`;
             });
-
-            outputHtml.innerHTML += `Verify with MAM Explorer:<br/><a target="_blank" href="${mamExplorerLink}${root}">${mamExplorerLink}${root}</a>`;
-            })();
+            const mamExplorerLink = `https://utils.iota.org/mam/${root}/${mode}/${providerName}`;
+            outputHtml.innerHTML += `Verify with MAM Explorer:<br/><a target="_blank" href="${mamExplorerLink}">${mamExplorerLink}</a>`;
+          })();
             </script>
         </body>
     </html>
@@ -123,6 +122,9 @@ Published: ALICE
 Published: BOB
 Published: CHARLIE
 
+Fetched and parsed ALICE
+Fetched and parsed BOB
+Fetched and parsed CHARLIE
 Fetched and parsed ALICE
 Fetched and parsed BOB
 Fetched and parsed CHARLIE
