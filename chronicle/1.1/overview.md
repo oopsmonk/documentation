@@ -16,7 +16,7 @@ This alpha version of Chronicle includes the following limitations:
 
 - If Chronicle loses power, it will stop receiving transactions and will have no way of knowing which ones it missed. Therefore, devices that run Chronicle should have a backup power supply and a stable Internet connection.
 
-- Chronicle stores transactions outside of the Tangle, therefore the immutablity of transactions is dependent on the security of your database and the trustworthiness of your administrators. See the [Scylla Security Checklist](https://docs.scylladb.com/operating-scylla/security/security_checklist/) in the Scylla documentation to secure your Scylla cluster.
+- Chronicle stores transactions outside of the Tangle, therefore the immutability of transactions is dependent on the security of your database and the trustworthiness of your administrators. See the [Scylla Security Checklist](https://docs.scylladb.com/operating-scylla/security/security_checklist/) in the Scylla documentation to secure your Scylla cluster.
 
 ## Roadmap
 

@@ -1,4 +1,4 @@
-# Immutablity in the Tangle
+# Immutability in the Tangle
 
 **This topic explains what makes transactions immutable when they are attached to the Tangle.**
 
