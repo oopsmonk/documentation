@@ -16,7 +16,7 @@ You can generate an unspent address, using any of the following options:
 - [Trinity wallet](root://wallets/0.1/trinity/how-to-guides/receive-a-transaction.md)
 
 :::danger:Important
-If you own IOTA tokens on the Mainnet, we recommend [creating a new seed](../tutorials/create-a-seed.md) to use on the Devnet.
+If you own IOTA tokens on the Mainnet, we recommend [creating a new seed](../tutorials/create-a-seed.md) to use in the Devnet.
 :::
 
 ---
@@ -37,9 +37,9 @@ To get some test tokens, you need to request some from a Devnet faucet website, 
 
 5. Click **Check balance**
 
-This link takes you to a Devnet Tangle explorer, which connects to nodes on the Devnet and requests information from them about the bundle that just transferred the free tokens to your address. When the bundle is confirmed, 1 Ki will be added to the balance of your address.
+This link takes you to a Devnet Tangle explorer, which connects to nodes in the Devnet and requests information from them about the bundle that just transferred the free tokens to your address. When the bundle is confirmed, 1 Ki will be added to the balance of your address.
 
-:::info:These tokens are valid only on the Devnet
+:::info:These tokens are valid only in the Devnet
 You can use these tokens only when you're connected to a Devnet node. Other IOTA networks have neither received nor validated the bundle that transferred the tokens to your address. As a result, they haven't updated the balance of your address.
 :::
 
@@ -49,7 +49,7 @@ If the Devnet faucet is not working, feel free to try the [community-built fauce
 
 ## Next steps
 
-You can transfer these tokens on the Devnet, using Trinity or one of the client libraries:
+You can transfer these tokens in the Devnet, using Trinity or one of the client libraries:
 
 - [Transfer your test tokens with Trinity](root://wallets/0.1/trinity/how-to-guides/send-a-transaction.md)
 

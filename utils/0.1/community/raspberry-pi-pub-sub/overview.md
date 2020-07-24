@@ -62,7 +62,7 @@ Before we start looking at the details, run the application so you can see how q
   ```
 
 :::success:Congratulations! :tada:
-In the console, you should see that the current temperature in Celcius is sent as a transaction to a node on the Devnet.
+In the console, you should see that the current temperature in Celcius is sent as a transaction to a node in the Devnet.
 
 If you wait for around a minute, you should see the ZMQ event trigger when the transaction is confirmed.
 :::
@@ -73,7 +73,7 @@ If you wait for around a minute, you should see the ZMQ event trigger when the t
 
 One of the most important benefits of IOTA is that transactions in the Tangle are immutable (can't be changed).
 
-If you want to check that your transaction is on the Devnet Tangle, you can copy the value of the `hash` field and paste it into the search bar of the [Devnet explorer](https://devnet.thetangle.org/).
+If you want to check that your transaction is in the Devnet Tangle, you can copy the value of the `hash` field and paste it into the search bar of the [Devnet explorer](https://devnet.thetangle.org/).
 
 On this page, you can check that your data is unchanged by checking the `message` field and comparing it to the value that your sensor returned in the console.
  

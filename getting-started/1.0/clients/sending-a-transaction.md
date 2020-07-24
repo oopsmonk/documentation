@@ -28,7 +28,7 @@ provider: 'https://nodes.devnet.iota.org:443'
 
 ### Testing IOTA
 
-When testing IOTA in a development environment, you should consider connecting to a node on the Devnet, Comnet, or your own private Tangle. These IOTA network require less proof of work (PoW), which reduces the time it takes to create transactions.
+When testing IOTA in a development environment, you should consider connecting to a node in the Devnet, Comnet, or your own private Tangle. These IOTA network require less proof of work (PoW), which reduces the time it takes to create transactions.
 
 ### Using the valuable IOTA token
 

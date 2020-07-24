@@ -68,7 +68,7 @@ MWM = 14
 
 ### Devnet
 
-This file configures IRI to run on the Devnet, exposes the API on port 14265, and does local snapshots.
+This file configures IRI to run in the Devnet, exposes the API on port 14265, and does local snapshots.
 
 These neighbors have autopeering enabled, so they will automatically add you as a neighbor.
 
@@ -152,7 +152,7 @@ You have two options for downloading the latest IRI software:
 
 #### Download the pre-built IRI Java file
 
-The pre-built IRI Java file is available on the [IOTA GitHub repository](https://github.com/iotaledger/iri/releases). Downloading this file is the quickest and simplest way to install the IRI.
+The pre-built IRI Java file is available in the [IOTA GitHub repository](https://github.com/iotaledger/iri/releases). Downloading this file is the quickest and simplest way to install the IRI.
 
 1. Install the latest security patches for your system
 

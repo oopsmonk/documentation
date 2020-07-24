@@ -71,7 +71,7 @@ When you rely only on one node as a source of information from the Tangle, you c
 
 ## Local snapshots
 
-IOTA is a permissionless network. For 24 hours a day, 7 days a week, anyone can store any amount of data in the Tangle for free (just a small amount of [proof of work](root://getting-started/1.0/references/glossary.md#proof-of-work) per transaction)
+IOTA is a permissionless network. For 24 hours a day, 7 days a week, anyone can store any amount of data in the Tangle for free (just a small amount of [proof of work](root://getting-started/1.1/references/glossary.md#proof-of-work) per transaction)
 
 As a result, the size of the databases that contain the Tangle are always growing, and this storage space costs a lot of money. To stop their ledgers from becoming too large, nodes often do local snapshots.
 

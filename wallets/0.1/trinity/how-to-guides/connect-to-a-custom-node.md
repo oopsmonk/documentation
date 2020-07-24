@@ -1,6 +1,6 @@
 # Connect to custom nodes
 
-**Trinity interacts with the Tanglethrough a [quorum](../concepts/node-quorum.md) of default nodes. In this tutorial, you learn how to add one of your own nodes to the quorum, connect to a quorum of custom nodes such as those on the [Devnet](root://getting-started/1.0/networks/overview.md), or connect to a specific node to use for outsourced proof of work.**
+**Trinity interacts with the Tanglethrough a [quorum](../concepts/node-quorum.md) of default nodes. In this tutorial, you learn how to add one of your own nodes to the quorum, connect to a quorum of custom nodes such as those in the [Devnet](root://getting-started/1.1/networks/overview.md), or connect to a specific node to use for outsourced proof of work.**
 
 :::danger:
 On 11 February 2020, the IOTA Foundation became aware of an attack on the Trinity wallet, during which some users’ seeds and Trinity passwords were compromised. Please check our advice for [protecting your Trinity account](../how-to-guides/protect-trinity-account.md).
@@ -19,7 +19,7 @@ As well as connecting to a single custom node, you can also add multiple custom 
 
     All nodes in Trinity must communicate over HTTPS.
 
-2. If you want to outsource [proof of work](root://getting-started/1.0/references/glossary.md#proof-of-work), enable the **Outsource proof of work** option
+2. If you want to outsource [proof of work](root://getting-started/1.1/references/glossary.md#proof-of-work), enable the **Outsource proof of work** option
 
     By default proof of work is done on the device that is running Trinity.
 
@@ -43,7 +43,7 @@ As well as connecting to a single custom node, you can also add multiple custom 
 
     All nodes in Trinity must communicate over HTTPS.
 
-2. If you want to outsource [proof of work](root://getting-started/1.0/references/glossary.md#proof-of-work), enable the **Outsource proof of work** option
+2. If you want to outsource [proof of work](root://getting-started/1.1/references/glossary.md#proof-of-work), enable the **Outsource proof of work** option
 
     By default proof of work is done on the device that is running Trinity.
 

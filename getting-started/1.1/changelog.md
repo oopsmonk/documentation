@@ -4,4 +4,4 @@
 
 |**Date**|**Change summary**|**GitHub pull request**|
 |:-------|:-----------------|:----------------------|
-|June 16, 2020|Restructured the content architecture to better reflect the upcoming changes to the protocol| [#735](https://github.com/iotaledger/documentation/pull/735)|
+|July 24, 2020|Restructured the content architecture to promote a learning path| [#783](https://github.com/iotaledger/documentation/pull/735)|

@@ -9,3 +9,7 @@ This process continues until the transaction hash ends in the same number of 0 t
 Whenever the transaction hash doesn't end in the correct number of 0 trits, the value of the transaction's `nonce` field is incremented and the transaction hash is hashed again.
 
 To verify that proof of work was done, nodes can then simply hash all the transaction fields and check how many 0 trits the hash ends in.
+
+## Next steps
+
+[Learn how signatures are created and verified](../cryptography/signatures.md).

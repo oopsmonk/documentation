@@ -16,3 +16,7 @@ The length of a checksum depends on whether it's for an address or a seed: Addre
 :::info:
 As a security precaution, some applications allow you to enter addresses only if they include a checksum.
 :::
+
+## Next steps
+
+[Learn how proof of work is calculated](../cryptography/proof-of-work.md).

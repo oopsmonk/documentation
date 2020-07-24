@@ -14,7 +14,7 @@ Use this URL for sending transactions and requesting information about the Tangl
 
 Transactions on the Comnet must use a minimum weight magnitude (MWM) of 10 to be valid.
 
-## Consensus rules
+## Coordinator address
 
 Nodes on the Comnet use a Coordinator that is run by the IOTA community with the following address:
 

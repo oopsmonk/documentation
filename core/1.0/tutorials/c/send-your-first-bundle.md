@@ -27,7 +27,7 @@ The network settings are defined in a `config.h` file. See [C quickstart](root:/
     ```
 
     :::info:
-    This address does not have to belong to anyone. To be valid, the address just needs to consist of 81 trytes. For more information about trytes, see [Ternary](root://getting-started/1.0/understanding-iota/ternary.md).
+    This address does not have to belong to anyone. To be valid, the address just needs to consist of 81 trytes.
     :::
 
 3. Create a message that you want to send to the address
@@ -62,7 +62,7 @@ The network settings are defined in a `config.h` file. See [C quickstart](root:/
 
     The library expects the values of the transaction fields in trits, so we convert the trytes to trits before adding them to the `transfer` object.
 
-5. To create a bundle from your `transfers` array, pass it to the [`iota_client_send_transfer()`](https://github.com/iotaledger/iota.c/blob/master/cclient/api/extended/send_transfer.h) method, which handles tip selection, remote proof of work, and sending the bundle to the node. For details about this process, see [Sending a transaction](root://getting-started/1.0/clients/sending-a-transaction.md).
+5. To create a bundle from your `transfers` array, pass it to the [`iota_client_send_transfer()`](https://github.com/iotaledger/iota.c/blob/master/cclient/api/extended/send_transfer.h) method, which handles tip selection, remote proof of work, and sending the bundle to the node. For details about this process, see [Sending transactions](root://getting-started/1.1/first-steps/sending-transactions.md).
 
     ```cpp
     // Create a bundle from the transfers array and send it to the IOTA node

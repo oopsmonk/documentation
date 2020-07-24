@@ -4,11 +4,13 @@
 
 In this section, you learn the steps involved in the following cryptographic processes:
 
-- How addresses are generated
+- [How addresses are generated](../cryptography/addresses.md)
 
-- How checksums are generated
+- [How Merkle root addresses are generated](../cryptography/merkle-tree-address.md)
 
-- How proof of work is calculated
+- [How checksums are generated](../cryptography/checksums.md)
 
-- How signatures are created and verified
+- [How proof of work is calculated](../cryptography/proof-of-work.md)
+
+- [How signatures are created and verified](../cryptography/signatures.md)
 

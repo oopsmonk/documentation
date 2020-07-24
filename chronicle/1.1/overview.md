@@ -20,7 +20,7 @@ This alpha version of Chronicle includes the following limitations:
 
 ## Roadmap
 
-In a future release, Chronicle will include an option to [solidify](root://getting-started/1.0/references/glossary.md#solidify) transactions as well as a dashboard for managing applications.
+In a future release, Chronicle will include an option to [solidify](root://getting-started/1.1/references/glossary.md#solidify) transactions as well as a dashboard for managing applications.
 
 See the [roadmap](https://roadmap.iota.org/permanode) for more information.
 

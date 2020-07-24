@@ -12,7 +12,7 @@ The IOTA Foundation hosts many nodes behind the following load balancer:
 
 **URL:** https://nodes.devnet.iota.org
 
-Use this URL for sending transactions and requesting information about the Tangle from nodes on the Devnet.
+Use this URL for sending transactions and requesting information about the Tangle from nodes in the Devnet.
 
 ### ZMQ node
 
@@ -24,11 +24,11 @@ Use this endpoint to poll the node for new transactions.
 
 ## Minimum weight magnitude
 
-Transactions on the Devnet must use a minimum weight magnitude (MWM) of at least 9 to be valid.
+Transactions in the Devnet must use a minimum weight magnitude (MWM) of at least 9 to be valid.
 
 ## Consensus rules
 
-Nodes on the Devnet use a Coordinator that is run by the IOTA Foundation with the following address:
+Nodes in the Devnet use a Coordinator that is run by the IOTA Foundation with the following address:
 
 ```
 GYISMBVRKSCEXXTUPBWTIHRCZIKIRPDYAHAYKMNTPZSCSDNADDWAEUNHKUERZCTVAYJCNFXGTNUH9OGTW

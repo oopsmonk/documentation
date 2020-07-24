@@ -42,11 +42,11 @@ Browse and clone working sample integrations from GitHub, using the [application
 
 ## YouTube tutorials
 
-Watch developer tutorials on the [IOTA Foundation YouTube channel](https://www.youtube.com/playlist?list=PLMbc46iGTB_TIkwgBrAMSi4NbjPKkxrr4).
+Watch developer tutorials in the [IOTA Foundation YouTube channel](https://www.youtube.com/playlist?list=PLMbc46iGTB_TIkwgBrAMSi4NbjPKkxrr4).
 
 ## Ecosystem tutorials
 
-Follow community tutorials on the [IOTA Ecosystem website](https://ecosystem.iota.org/).
+Follow community tutorials in the [IOTA Ecosystem website](https://ecosystem.iota.org/).
 
 ## Twitter updates
 

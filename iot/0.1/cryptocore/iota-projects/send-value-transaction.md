@@ -336,7 +336,7 @@ In this step, you write a bash script that signs the bundle hash.
     ```
 
     :::info:
-    By keeping track of the address index, you can be sure that you aren't generating [spent addresses](root://getting-started/1.0/references/glossary.md#spent-address).
+    By keeping track of the address index, you can be sure that you aren't generating [spent addresses](root://getting-started/1.1/references/glossary.md#spent-address).
     :::
     
 6. Generate an input address, using the CryptoCore [`getAddress`](../references/api-reference.md#getaddress) command

@@ -16,7 +16,7 @@ However, if you want to test the Mainnet, you can find a list of nodes on the fo
 
 Transactions on the Mainnet must use a minimum weight magnitude (MWM) of at least 14 to be valid.
 
-## Consensus rules
+## Coordinator address
 
 Nodes on the Mainnet use a Coordinator that is run by the IOTA Foundation with the following address:
 

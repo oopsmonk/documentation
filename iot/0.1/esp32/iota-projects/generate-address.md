@@ -55,7 +55,7 @@ To run this application on Windows, enter the following commands in Git Bash.
     You can also see your ESP32 configuration in the `sdkconfig` file.
     :::
     
-5. If you want to monitor the balance of a single fixed address and display it in a QR code, set the `Receiver address` option to a valid address with or without a [checksum](root://getting-started/1.0/cryptography/checksums.md)
+5. If you want to monitor the balance of a single fixed address and display it in a QR code, set the `Receiver address` option to a valid address with or without a [checksum](root://getting-started/1.1/accounts/checksums.md)
     
 6. If you want the application to monitor the address for withdrawals and be able to update the QR code to a new unspent one, set the following configuration options:
     

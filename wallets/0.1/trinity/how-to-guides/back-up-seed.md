@@ -26,7 +26,7 @@ You can export and store your seed in SeedVault or in the KeePass password manag
 
 Write your seed from left to right, top to bottom. **Check that your seed is written correctly.**
 
-Make sure to write your seed's 3-letter [checksum](root://getting-started/1.0/cryptography/checksums.md) and keep it separate from your seed. This checksum is a safety mechanism that allows you to check whether you entered the correct seed. If you enter one wrong character, the checksum that's displayed in Trinity will be different.
+Make sure to write your seed's 3-letter [checksum](root://getting-started/1.1/accounts/checksums.md) and keep it separate from your seed. This checksum is a safety mechanism that allows you to check whether you entered the correct seed. If you enter one wrong character, the checksum that's displayed in Trinity will be different.
 
 ## Print your seed
 

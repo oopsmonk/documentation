@@ -2,15 +2,9 @@
 
 **This topic describes how signatures in transactions are created and verified.**
 
-## Signature scheme
+## How bundle hashes are signed with a private key
 
-IOTA uses the Winternitz one-time signature scheme (W-OTS) to generate digital signatures. This signature scheme is quantum robust, meaning that signatures are resistant to attacks from quantum computers. But, the scheme also reveals an unknown amount of the private key. As a result, it's safe to withdraw from an address only once, after which it is a [spent address](../references/glossary.md#spent-address).
-
-For more information about this signature scheme, see [One-time signature schemes](https://en.wikipedia.org/wiki/Hash-based_cryptography#One-time_signature_schemes) on Wikipedia.
-
-## How bundles are signed with a private key
-
-To make sure that it's always safe to sign a bundle once, first the bundle hash is normalized so that only half of the private key is revealed in the signature.
+To make sure that it's always safe to sign a bundle hash once, first it is normalized so that only half of the private key is revealed in the signature.
 
 Depending on the number of key fragments that a private key has, 27, 54, or 81 trytes of the normalized bundle hash are selected. For more information about key fragments, see [How addresses are generated](../cryptography/addresses.md).
 
@@ -20,11 +14,11 @@ The selected trytes of the normalized bundle hash are converted to their decimal
 13 - decimal value
 ```
 
-The result of this calculation is the number of times that each of the 27 segments in the private key are hashed, using the [Kerl](https://github.com/iotaledger/kerl) [hash function](https://en.wikipedia.org/wiki/Hash_function).
+The result of this calculation is the number of times that each of the 27 segments in the private key are hashed, using the [Kerl](https://github.com/iotaledger/kerl) hash function.
 
 Each hash of 27 segments is a signature fragment, which contains 2,187 trytes.
 
-Because a transaction's `signatureMessageFragment` field can contain only 2,187 trytes, any address with a security level greater than 1 results in a signature that's too large to fit in one transaction. As a result, the rest of the signature is fragmented across zero-value transactions in the same bundle. See [Generating an address](../clients/generating-an-address.md) for more information.
+Because a transaction's `signatureMessageFragment` field can contain only 2,187 trytes, any address with a security level greater than 1 results in a signature that's too large to fit in one transaction. As a result, the rest of the signature is fragmented across zero-value transactions in the same bundle.
 
 ## How a signature is verified
 

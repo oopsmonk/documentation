@@ -35,7 +35,7 @@ Now you have a `package.json` file, which includes the packages and applications
 
 The JavaScript client library is organized in packages, which contain related methods. For example, the `core` package contains methods for requesting information from nodes, creating transactions, and sending them to nodes.
 
-All the packages are listed on the [iota.js GitHub repository](https://github.com/iotaledger/iota.js/tree/next/packages).
+All the packages are listed in the [iota.js GitHub repository](https://github.com/iotaledger/iota.js/tree/next/packages).
 
 To install the library packages, you can use one of the following package managers:
 
@@ -78,7 +78,7 @@ It's best practice to make sure that you're connected to a synchronized node bef
 
 Whenever you connect to a node, you need to know which IOTA network it's in. 
 
-In this step, you connect to a node on the Devnet.
+In this step, you connect to a node in the Devnet.
 
 1. Go to the IOTA Foundation [Discord](https://discord.iota.org) and enter **!milestone** in the `botbox` channel
 

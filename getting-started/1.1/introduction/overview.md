@@ -1,49 +1,73 @@
-# IOTA
+# Getting started
 
-**IOTA is an open source, feeless, and scalable distributed ledger technology, designed to support frictionless data and value transfer.**
+**To get you up and running with IOTA as quickly as possible, this documentation combines hands-on JavaScript tutorials as well as explanations of essential concepts.**
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/ivWqqfzunhI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+## What you will learn
 
-## Why use IOTA
+At the end of this section, you will have a fundamental understanding of how IOTA works and the knowledge to explore other IOTA products with confidence.
 
-As a distributed ledger technology, IOTA provides a trust layer for any devices that are connected to the global Internet.
+## Running code in the browser
 
-Through its open network of nodes, IOTA allows you and your devices to:
+For a better experience, tutorials come with complete IOTA code samples that you can run in the browser.
 
-- Use the network as a source of truth for data
-- Transfer value in IOTA tokens
+This code is available under headings labelled **Run the code**.
 
-![IOTA benefits](../images/iota-benefits.png)
+# Content Overview
 
-## Who is IOTA for
-
-IOTA can benefit many people, including the following important groups.
-
-### Anyone who does not trust centralized networks
-
-IOTA networks are peer-to-peer networks where no central authority controls the data. Instead, all nodes hold a copy of it and reach a consensus on its contents.
-
-### Anyone who wants to secure their data
-
-Everything in the Tangle is immutable and transparent. Through cryptography, you can prove that data has not changed.
-
-### Anyone who values security
-
-IOTA uses quantum-robust signatures to protect the network against the next generation of computing power.
-
-### Anyone who wants the freedom to transact
-
-IOTA is free to use. You don't need to pay a subscription, sign a contract, or have any form of official identification. Even transactions are feeless.
-
-
-
-
-
-
-
-
-
-
-
-
-
+- Introduction
+    - About IOTA
+    - Architecture overview
+- First steps
+    - Set up your developer environment
+    - Hello world!
+    - Sending transactions
+- The Tangle
+    - About the Tangle
+    - Differences between the Tangle and blockchains
+    - Ternary
+    - Types of transactions
+    - Immutability in the Tangle
+    - Storing data in the Tangle
+    - Origin of the IOTA token
+    - How IOTA tokens are transferred
+    - The Coordinator
+- Networks
+    - IOTA networks
+    - Mainnet
+    - Devnet
+    - Comnet
+- IOTA accounts
+    - About accounts
+    - Seeds
+    - Addresses
+    - Signatures
+    - Wallets
+    - Checksums
+- Transferring tokens
+    - Steps involved
+    - Step 1. Create a seed
+    - Step 2. Generate two addresses
+    - Step 3. Get test IOTA tokens
+    - Step 4. Transfer your IOTA tokens
+    - Checking for confirmation
+    - Reattach, rebroadcast, and promote
+- Running a node
+    - About nodes
+    - Getting started as a node
+- Cryptography in IOTA
+    - How one-time addresses are generated
+    - How Merkle root addresses are generated
+    - How checksums are generated
+    - How proof of work is calculated
+    - How signatures are generated and verified
+- Going further
+    - Joining the community
+    - Navigating the docs
+    - Upcoming developments
+- References
+    - Faucets
+    - Production checklist
+    - Tools
+    - Transaction fields
+    - Units of IOTA
+    - Terminology

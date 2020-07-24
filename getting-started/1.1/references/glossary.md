@@ -17,6 +17,8 @@ The terms in this category are related to clients on an IOTA network
 |:---------|:-------------|:-----|
 |A public key that belongs to a seed and that has a balance of IOTA tokens on IOTA networks|noun|preferred|
 
+![address](../images/addresses.png)
+
 ### faucet
 
 |**Definition**|**Part of speech**|**Status**|
@@ -46,6 +48,8 @@ The terms in this category are related to clients on an IOTA network
 |**Definition**|**Part of speech**|**Status**|
 |:---------|:-------------|:-----|
 |Unique password that is used to generate addresses, private keys, and signatures|noun|preferred|
+
+![seed](../images/seed.png)
 
 ### wallet
 
@@ -187,6 +191,8 @@ The terms in this category are related to transactions
 |:---------|:-------------|:-----|
 |Chain of transactions that are ordered by their `currentIndex` field and that are considered atomic by nodes|noun|preferred|
 
+![bundle](../images/bundle.png)
+
 ### bundle essence
 
 |**Definition**|**Part of speech**|**Status**|
@@ -317,7 +323,7 @@ The terms in this category are related to transactions
 
 |**Definition**|**Part of speech**|**Status**|
 |:---------|:-------------|:-----|
-|Proof of work that is done on a node by calling its `getTransactionsToApprove` endpoint|noun|preferred|
+|Proof of work that is done by a node|noun|preferred|
 
 ### solid
 

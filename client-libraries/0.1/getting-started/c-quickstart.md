@@ -181,13 +181,13 @@ Now you can request information from the IOTA node.
 
 It's best practice to make sure that you're connected to a synchronized node before you start sending transactions to it. This way, you know that it has an up-to-date view of the Tangle.
 
-Whenever you connect to a node, you need to know which [IOTA network](root://getting-started/1.0/networks/overview.md) it's in. Here, we connect to a node on the Devnet, which is the IOTA networks that you can use for testing.
+Whenever you connect to a node, you need to know which [IOTA network](root://getting-started/1.1/networks/overview.md) it's in. Here, we connect to a node in the Devnet, which is the IOTA networks that you can use for testing.
 
 1. Go to the IOTA Foundation [Discord](https://discord.iota.org) and enter **!milestone** in the `botbox` channel
 
     ![Entering !milestone on Discord](../images/discord-milestone-check.PNG)
 
-    The Discord bot should return the current `latestMilestoneIndex` field from a [node quorum](root://getting-started/1.0/references/glossary.md#node-quorum).
+    The Discord bot should return the current `latestMilestoneIndex` field from a [node quorum](root://getting-started/1.1/references/glossary.md#node-quorum).
 
 2. In the root of your project directory, create a new directory called `examples`
 
@@ -311,7 +311,7 @@ If the `latestMilestoneIndex` field is equal to the one you got from Discord and
 
 If not, try connecting to a different node. The [iota.dance website](https://iota.dance/) includes a list of Mainnet nodes. Or, you can [run your own node](root://node-software/1.0/overview.md).
 
-In the `features` list, you can see that this node also support [remote proof of work](root://getting-started/1.0/references/glossary.md#remote-proof-of-work) (RemotePOW). As a result, you can use this node to do proof of work instead of doing it on your local device.
+In the `features` list, you can see that this node also support [remote proof of work](root://getting-started/1.1/references/glossary.md#remote-proof-of-work) (RemotePOW). As a result, you can use this node to do proof of work instead of doing it on your local device.
 
 For more information about these fields, see the [node API reference](root://iri/1.0/references/iri-api-reference.md#getNodeInfo).
 

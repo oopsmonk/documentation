@@ -10,7 +10,7 @@ When choosing a minimum weight magnitude, you should consider the following ques
 
 All nodes accept transactions whose hashes end in the same or higher number of 0 trits as their predefined MWM. If a transaction ends in fewer 0 trits than the MWM, nodes in that network will reject it.
 
-For example, on the Mainnet, you must use at least a MWM of 14. If you were to send a transaction whose hash ended in nine (the MWM on the Devnet) 0 trits, nodes on the Mainnet would not accept it. Those nodes would expect the transaction hash to end in at least fourteen 0 trits.
+For example, on the Mainnet, you must use at least a MWM of 14. If you were to send a transaction whose hash ended in nine (the MWM in the Devnet) 0 trits, nodes on the Mainnet would not accept it. Those nodes would expect the transaction hash to end in at least fourteen 0 trits.
 
 ### Are you testing IOTA?
 

@@ -29,9 +29,7 @@ The IOTA community maintains the following permissionless network, where anyone 
 
 All nodes in the same IOTA network must accept transactions with the same or higher [minimum weight magnitude](../references/glossary.md#minimum-weight-magnitude) (MWM). If a transaction has a MWM that's too low, nodes in that network will reject it.
 
-:::info:
 Every increment of the MWM triples the difficulty of the PoW.
-:::
 
 ## Coordinator address
 

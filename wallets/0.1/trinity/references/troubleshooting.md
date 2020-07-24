@@ -50,7 +50,7 @@ Auto-promotion is available on mobile devices only when Trinity is in the foregr
 
 Trinity may stop you from sending a transaction for any of the following reasons:
 
-- If you have funds on a [spent address]root://getting-started/1.0/references/glossary.md#spent-address, Trinity stops you withdrawing from that address to protect your IOTA tokens.
+- If you have funds on a [spent address]root://getting-started/1.1/references/glossary.md#spent-address, Trinity stops you withdrawing from that address to protect your IOTA tokens.
 - If the address you are sending to is spent, Trinity will stop you from sending to that address to protect your IOTA tokens. In this case, ask the recipient for a new address.
 - If you are sending more than one transaction, you may need to wait for your first transaction to be confirmed before sending another one
 
