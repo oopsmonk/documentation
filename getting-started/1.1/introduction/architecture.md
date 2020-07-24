@@ -2,7 +2,7 @@
 
 **This topic give you a high-level overview of the architecture in IOTA.**
 
-Image
+![IOTA architecture](../images/architecture.png)
 
 The IOTA architecture involves the following components:
 

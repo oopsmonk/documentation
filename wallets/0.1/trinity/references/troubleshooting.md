@@ -40,7 +40,7 @@ Trinity is stateful, which means that it stores a local copy of your transaction
 
 ## Pending transaction
 
-If a transaction on the Tangleis pending for a long time, make sure that the [Auto-promotion setting](../how-to-guides/auto-promote.md) is set to **Enabled**.
+If a transaction in the Tangle is pending for a long time, make sure that the [Auto-promotion setting](../how-to-guides/auto-promote.md) is set to **Enabled**.
 
 :::info:
 Auto-promotion is available on mobile devices only when Trinity is in the foreground.

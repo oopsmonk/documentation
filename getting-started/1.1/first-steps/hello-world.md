@@ -102,7 +102,7 @@ In this step, you create a zero-value transaction that contains a "Hello world" 
     MAXPIKYYYNPRXXVIKNPZ9TSAVYTDEDAJOJHJVXGKLJADWDNHYNNNJJYSO9LYNVTXLJ9URVGMAEDPA9999
     ```
 
-8. To see your transaction on the Tangle, search for your transaction hash in a Tangle explorer such as [utils.iota.org](https://utils.iota.org/)
+8. To see your transaction in the Tangle, search for your transaction hash in a Tangle explorer such as [utils.iota.org](https://utils.iota.org/)
 
     Make sure to select the Devnet network.
 

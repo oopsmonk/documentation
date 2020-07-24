@@ -39,5 +39,5 @@ The value of the IOTA token is determined by supply and demand on any of the [av
 
 ## Next steps
 
-See [what happens on the Tangle to transfer IOTA tokens](../the-tangle/how-transfer-tokens.md) from one address to another.
+See [what happens in the Tangle to transfer IOTA tokens](../the-tangle/how-transfer-tokens.md) from one address to another.
 

@@ -10,7 +10,7 @@ To create a channel, you must start with this simple workflow.
 
 Messages can be published on any communication channel.
 
-By default, Channels comes with an API for publishing messages on the Tangle with an `Address` link type.
+By default, Channels comes with an API for publishing messages in the Tangle with an `Address` link type.
 
 The `Address` link type includes the channel address in the [`address`](root://getting-started/1.1/references/transaction-fields.md) field of a transaction and the message identifier in the `tag` field.
 

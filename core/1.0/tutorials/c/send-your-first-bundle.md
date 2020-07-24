@@ -1,6 +1,6 @@
 # Send a "hello world" transaction in C
 
-**In this tutorial, you send a "hello world" message in a zero-value transaction. These transactions are useful for storing messages on the Tanglewithout having to send any IOTA tokens.**
+**In this tutorial, you send a "hello world" message in a zero-value transaction. These transactions are useful for storing messages in the Tanglewithout having to send any IOTA tokens.**
 
 ## IOTA network
 
