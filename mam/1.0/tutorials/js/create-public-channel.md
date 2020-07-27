@@ -41,7 +41,8 @@ In this tutorial, we connect to a node on the [Devnet](root://getting-started/1.
   const mode = 'public';
   const provider = 'https://nodes.devnet.iota.org';
 
-  const mamExplorerLink = `https://mam-explorer.firebaseapp.com/?provider=${encodeURIComponent(provider)}&mode=${mode}&root=`;
+  const providerName = 'devnet';
+  const mamExplorerLink = 'https://utils.iota.org/mam';
   ```
 
 3. Initialize the MAM state
@@ -61,10 +62,10 @@ In this tutorial, we connect to a node on the [Devnet](root://getting-started/1.
       // Save your new mamState
       mamState = message.state;
       // Attach the message to the Tangle
-      await Mam.attach(message.payload, message.address, 3, 9)
+      await Mam.attach(message.payload, message.address, 3, 9);
 
       console.log('Published', packet, '\n');
-      return message.root
+      return message.root;
   }
   ```
 
@@ -79,19 +80,19 @@ In this tutorial, we connect to a node on the [Devnet](root://getting-started/1.
     const root = await publish({
       message: 'Message from Alice',
       timestamp: (new Date()).toLocaleString()
-    })
+    });
 
     await publish({
       message: 'Message from Bob',
       timestamp: (new Date()).toLocaleString()
-    })
+    });
 
     await publish({
       message: 'Message from Charlie',
       timestamp: (new Date()).toLocaleString()
-    })
+    });
 
-    return root
+    return root;
   }
   ```
 
@@ -99,24 +100,24 @@ In this tutorial, we connect to a node on the [Devnet](root://getting-started/1.
 
   ```js
   // Callback used to pass data out of the fetch
-  const logData = data => console.log('Fetched and parsed', JSON.parse(trytesToAscii(data)), '\n')
+  const logData = data => console.log('Fetched and parsed', JSON.parse(trytesToAscii(data)), '\n');
 
   publishAll()
     .then(async root => {
 
       // Output asynchronously using "logData" callback function
-      await Mam.fetch(root, mode, null, logData)
+      await Mam.fetch(root, mode, null, logData);
 
       // Output synchronously once fetch is completed
-      const result = await Mam.fetch(root, mode)
-      result.messages.forEach(message => console.log('Fetched and parsed', JSON.parse(trytesToAscii(message)), '\n'))
+      const result = await Mam.fetch(root, mode);
+      result.messages.forEach(message => console.log('Fetched and parsed', JSON.parse(trytesToAscii(message)), '\n'));
   ```
 
 7. Print the link to the console to see these messages in the MAM Explorer
 
   ```js
-      console.log(`Verify with MAM Explorer:\n${mamExplorerLink}${root}\n`);
-    })
+      console.log(`Verify with MAM Explorer:\n${mamExplorerLink}/${root}/${mode}/${providerName}\n`);
+    });  
   ```
 
 You should see something like the following in the console:
@@ -150,11 +151,11 @@ Fetched and parsed { message: 'Message from Charlie',
   timestamp: '9/12/2019, 10:08:08 AM' } 
 
 Verify with MAM Explorer:
-https://mam-explorer.firebaseapp.com/?provider=https%3A%2F%2Fnodes.devnet.iota.org&mode=public&root=9LBMBRUAJIRNASMNJP99ZMNVKNOER9XGVSLJLECEXBTNADHPWGO9FMBRRAGZPKEPSRLJ9SZYQU9EVLMPC
+https://utils.iota.org/mam/9LBMBRUAJIRNASMNJP99ZMNVKNOER9XGVSLJLECEXBTNADHPWGO9FMBRRAGZPKEPSRLJ9SZYQU9EVLMPC/public/devnet
 ```
 
 :::success:Congratulations :tada:
-You've published messages to a restricted MAM channel. Anything you publish to this channel can be decrypted only by those to whom you give the side key.
+You've published messages to a public MAM channel. 
 :::
 
 ## Run the code
