@@ -25,7 +25,7 @@ When you have a seed, add it to the `network.autopeering.seed` field in your con
     "autopeering": {
         "bindAddress": "0.0.0.0:14626",
         "runAsEntryNode": true,
-        "seed": "YOUR9ENTRY9NODE9SEED9HERE"
+        "seed": "7xFNTP5Fc3wnD78LarNTrvRoKiLESA9qecn3eR5HSVBj"
     }
 }
 ```
