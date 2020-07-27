@@ -15,7 +15,7 @@ To explain these points, you need to understand the differences between the data
 
 The blockchain data structure consists of a chain of sequential blocks, where each block contains a limited number of transactions.
 
-As a result, you can attach new transaction to only one place: A block at the end of the chain. Due to this limitation, blockchain networks often experience slow confirmation times. This limitation is known as the _blockchain bottleneck_.
+As a result, you can attach new transactions to only one place: A block at the end of the chain. Due to this limitation, blockchain networks often experience slow confirmation times. This limitation is known as the _blockchain bottleneck_.
 
 ![Blockchain bottleneck](../images/blockchain-bottleneck.gif)
 
