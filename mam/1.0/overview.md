@@ -31,7 +31,9 @@ An overview of MAM.
 
 ## Source code
 
-The source code for this project is hosted on [Github](https://github.com/iotaledger/mam.js).
+The source code for this project is hosted on [Github](https://github.com/iotaledger/mam).
+
+An alternative, smaller, pure Javascript implementation (offering the same functionality but a slightly different API) is [MAM.js](https://github.com/iotaledger/mam.js).
 
 ## Next steps
 
