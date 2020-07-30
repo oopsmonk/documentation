@@ -35,6 +35,10 @@ IOTA uses quantum-robust signatures to protect the network against the next gene
 
 IOTA is free to use. You don't need to pay a subscription, sign a contract, or have any form of official identification. Even transactions are feeless.
 
+## Next steps
+
+[See a high-level overview of the IOTA architecture](../introduction/architecture.md).
+
 
 
 

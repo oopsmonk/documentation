@@ -123,13 +123,13 @@ In the console, you'll see the transaction objects in your bundle. For example:
 --------------------
 ### Tail transaction
 
-The first transaction is the tail transaction in your bundle. You can tell that this is the tail transaction because it's `currentIndex` field is 0. The total number of transactions in your bundle is 4 because the `lastIndex` field is 3.
+The first transaction is the tail transaction in your bundle. You can tell that this is the tail transaction because it's `currentIndex` field is 0. The total number of transactions in this bundle is 4 because the `lastIndex` field is 3.
 
-All the transactions in your bundle have the same bundle hash, which makes your bundle essence immutable. See [Immutability in the Tangle](../the-tangle/immutability.md) for more information about the bundle hash.
+All the transactions in a bundle have the same bundle hash, which makes the bundle essence immutable. See [Immutability in the Tangle](../the-tangle/immutability.md) for more information about the bundle hash.
 
 In this example, the tail transaction is an [output](../the-tangle/transaction-types.md#value-transactions) because it deposits 1 Ki into the address that you added to the `receivingAddress` variable.
 
-The `signatureMessageFragment` field of this transaction contains only 9s, meaning that this field is empty.
+The `signatureMessageFragment` field of this transaction contains only 9s, meaning that this field is empty because it does not need to contain ownership of the address.
 
 ```js
 {
