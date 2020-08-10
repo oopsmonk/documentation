@@ -28,7 +28,7 @@ In this tutorial, we connect to a node on the [Devnet](root://getting-started/1.
 
 ## Code walkthrough
 
-1. Go to [devnet.thetangle.org](https://devnet.thetangle.org/) and find a confirmed transaction
+1. Go to [utils.iota.org](https://utils.iota.org/) and find a confirmed transaction
 
     :::info:Can't find a confirmed transaction?
     Click a transaction hash in the Latest milestones box, then click the branch transaction hash. This transaction is referenced and approved by the milestone, so it is in a confirmed state.
