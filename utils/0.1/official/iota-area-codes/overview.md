@@ -221,7 +221,7 @@ Use the [IAC finder utility](https://utils.iota.org/area-codes) to find the loca
 ![IAC finder](../images/iac-finder.png)
 
 :::info:
-The [Devnet Tangle explorer](https://devnet.thetangle.org/) also uses the IAC API to decode IACs for you.
+The [Devnet Tangle explorer](https://utils.iota.org/) also uses the IAC API to decode IACs for you.
 Just search for your transaction and scroll down.
 :::
 
