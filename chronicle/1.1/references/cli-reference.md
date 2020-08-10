@@ -106,9 +106,7 @@ If you want to get transactions from more than one IOTA node, add their URLs or 
 Make sure that the nodes are in the same IOTA network, otherwise your Scylla nodes will contain transactions from both.
 :::
 
-The default setting is `tcp://zmq.iota.org:5556`.
-
-This IOTA node runs on the Mainnet.
+The default setting is a Mainnet node.
 
 ## sn_trytes_nodes
 
@@ -120,6 +118,4 @@ If you want to get transactions from more than one IOTA node, add their URLs or 
 Make sure that the nodes are in the same IOTA network, otherwise your Scylla nodes will contain transactions from both.
 :::
 
-The default setting is `tcp://zmq.iota.org:5556`.
-
-This IOTA node runs on the Mainnet.
+The default setting is a Mainnet node.

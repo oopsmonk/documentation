@@ -28,9 +28,11 @@ Chronicle does not support authentication yet.
 
 ## Pagination
 
-Requests to the `findTransactions` endpoint can return an unknown amount of zero-value transaction hashes. The exact amount is known only after the query has been executed. Therefore, this endpoint returns a limited amount of transaction hashes.
+Requests to the `findTransactions` endpoint can return an unknown amount of transaction hashes. The exact amount is known only after the query has been executed. Therefore, this endpoint returns a limited amount of transaction hashes.
 
 If you receive a `hints.paging_state` array, more transaction hashes are available for your request. To request these transaction hashes, call the endpoint again, using the returned `hints` field from the first call as a parameter.
+
+Transaction hashes are returned in order from newest to oldest, according to the transactions' `attachmentTimestamp` fields.
 
 ## Base URL
 
@@ -136,7 +138,7 @@ curl http://localhost:4000/api \
 |**Return field** |**Description**|
 |--|--|
 | `trytes` | Array of transaction trytes for the given transaction hashes (in the same order as the parameters) |
-| `milestones` | Array of transaction hashes of the milestones that confirmed the transaction|
+| `milestones` | Array of transaction hashes of the milestones that confirmed the transactions (in the same order as the parameters)|
 
 ## findTransactions
 
@@ -146,8 +148,10 @@ To find only value transactions, you must use the `addresses` parameter.
 
 To find only zero-value transaction, you must use the `hints` parameter.
 
+findTransactions returns values/milestones/timestamps beside hashes
+
 :::info:
-You can search for either `hints.address` or `hints.tag`, but not both at the same time.
+addresses/bundles/approvees/tags might return hints which indicates the need for further calls to fetch the remaining pages
 :::
 
 ### Parameters
@@ -157,11 +161,9 @@ You can search for either `hints.address` or `hints.tag`, but not both at the sa
 | `addresses` | Addresses to search for in value transactions (do not include the checksum) | array of strings |
 | `approvees` | Child transaction hashes to search for in all transactions | array of strings |
 | `bundles` | Bundle hashes to search for in all transactions | array of strings |
-|`hints`|Search fields for zero-value transactions|array of objects|
-|`hints.address`|Address to search for in zero-value transactions|string|
-| `hints.tags` | Tag to search for in zero-value transactions | string |
-|`hints.month`|The month to search for in the `attachmentTimestamp` field of zero-value transactions| integer|
-|`hints.year`|The year to search for in the `attachmentTimestamp` field of zero-value transactions|integer|
+|`hashes`|Transaction hashes to search for|array of strings|
+|`tags`|Tags to search for|array of strings|
+|`hints`|Part of a tag (at least 4 trytes) or an address to search for by the transaction's attachment timestamp. You can specify the attachment timestamp to search for in the `month` and `year` properties|array of objects|
 
 ### Examples
 --------------------
@@ -170,10 +172,10 @@ You can search for either `hints.address` or `hints.tag`, but not both at the sa
 import urllib3
 import json
 command = {
-    "command": "findTransactions",
-    "hints": [
-        {"tag":"IOTAJAMMER99999999999999999","month":7,"year":2020}
-    ]
+  "command": "findTransactions",
+  "bundles": [
+    "BUNDLE_HASH_1", "BUNDLE_HASH_N"
+  ]
 }
 stringified = json.dumps(command).encode('utf-8')
 http = urllib3.PoolManager()
@@ -193,8 +195,8 @@ var request = require('request');
 
 var command = {
   "command": "findTransactions",
-  "hints": [
-  {"tag":"IOTAJAMMER99999999999999999","month":7,"year":2020}
+  "bundles": [
+    "BUNDLE_HASH_1", "BUNDLE_HASH_N"
   ]
 };
 
@@ -226,8 +228,8 @@ curl http://localhost:4000/api \
 -H 'X-IOTA-API-Version: 1' \
 -d '{
   "command": "findTransactions",
-  "hints": [
-  {"tag":"IOTAJAMMER99999999999999999","month":7,"year":2020}
+  "bundles": [
+    "BUNDLE_HASH_1", "BUNDLE_HASH_N"
   ]
 }'
 ```
