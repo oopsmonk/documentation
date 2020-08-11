@@ -29,10 +29,16 @@ See the [roadmap](https://roadmap.iota.org/permanode) for more information.
 Read the following blog posts about Chronicle:
 
 ---------------
+#### **Chronicle: Our Full Permanode Framework for Decentralized Storage on the IOTA Network** ####
+[Chronicle: Our Full Permanode Framework for Decentralized Storage On the IOTA Network](https://blog.iota.org/chronicle-our-full-permanode-framework-for-decentralized-storage-on-the-iota-network-18cf5062a016)
+
+An update on what changed in the current alpha release of Chronicle.
+---
+
 #### **Introducing Chronicle - A Permanode Solution** ####
 [Introducing Chronicle - A Permanode Solution](https://blog.iota.org/introducing-chronicle-a-permanode-solution-8e506a2e0813)
 
-An overview of the alpha release of Chronicle.
+An overview of the first release of Chronicle.
 ---------------
 
 ## Source code
