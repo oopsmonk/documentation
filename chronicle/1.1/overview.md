@@ -49,4 +49,4 @@ The source code for this project is hosted on [Github](https://github.com/iotale
 
 ## Next steps
 
-[Run the permanode service](tutorials/run-a-permanode.md) to start storing your own transactions.
+[Learn how Chronicle works](how-it-works.md).

@@ -6,7 +6,7 @@ The ScyllaDB data model includes the following tables:
 
 - **Transaction:** Stores transactions by their hash
 
-- **Edge:** Provides secondary indexes to look up value transactions by specific fields
+- **Hints:** Provides secondary indexes to look up value transactions by specific fields
 
 - **Data:** Stores zero-value transactions by month
 
@@ -18,7 +18,7 @@ The partition key for this table is the transaction hash, which means that trans
 
 ![Transaction table](../images/tx-table.png)
 
-## Edge table
+## Hints table
 
 This table acts as a way to query value transactions by their fields. For example, selecting an address which has been used as an input or output within a time-range is done through the edge table.
 
