@@ -28,12 +28,12 @@ To complete this tutorial, you need the following:
 
 - The latest stable version of [Rust](https://www.rust-lang.org/tools/install)
 
-- The `build-essentials` and `pkg-config` packages
+- The `build-essentials` package
 
     You can use the following command to install these packages:
 
     ```bash
-    sudo apt update && sudo apt install build-essential && sudo apt install pkg-config
+    sudo apt-get install build-essential gcc make cmake cmake-gui cmake-curses-gui
     ```
 
 ## Step 1. Set up a Scylla node
