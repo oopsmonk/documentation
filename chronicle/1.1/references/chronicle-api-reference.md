@@ -171,13 +171,17 @@ This endpoint accepts only one of the following parameters.
 |`hints.timeline.month`|The month of the attachment timestamp to search for|integer|
 |`page_size`|The number of results to return (the default `page_size` is 5000)|integer|
 
+
 Example `hints` objects:
 
-```json=
-{ "tag": "some-tag-27-trytes", "timeline": [{"year": .., "month": ..}, etc], "paging_state": .., "page_size": ..}
-{ "address": "some-address-81-trytes", "timeline": [{"year": .., "month": ..}, etc], "paging_state": .., "page_size": ..}
-{ "bundle": "some-bundle-81-trytes", "timeline": [{"year": .., "month": ..}, etc], "paging_state": .., "page_size": ..}
-{ "approvee": "some-approvee-81-trytes", "timeline": [{"year": .., "month": ..}, etc], "paging_state": .., "page_size": ..}
+```json
+{ "tag": "some-tag-27-trytes", "timeline": [{"year": , "month": }], "page_size": }
+
+{ "address": "some-address-81-trytes", "timeline": [{"year": , "month": }], "page_size": }
+
+{ "bundle": "some-bundle-81-trytes", "timeline": [{"year": , "month": }], "page_size": }
+
+{ "approvee": "some-approvee-81-trytes", "timeline": [{"year": , "month": }], "paging_state": , "page_size": }
 ```
 
 ### Examples
@@ -284,8 +288,8 @@ If you searched for transactions by addresses, approvees, bundles, or tags this 
 
 |**Return field** | **Description** |**Type**|
 |--|--|--|
-| `hashes` | The transaction hashes|array|
-|`values`| The `value` fields of the transactions|array|
-|`milestones`|The indexes of the transactions' confirmation milestones|array|
-|`timestamps`|The transactions' `attachmentTimestamp` fields|array|
-|`hints`|A [`hints` parameter](#hints) to use to request the next set of transactions|object|
+| `hashes` | The transaction hashes|array of strings|
+|`values`| The `value` fields of the transactions|array of integers|
+|`milestones`|The indexes of the transactions' confirmation milestones|array of integers|
+|`timestamps`|The transactions' `attachmentTimestamp` fields|array of integers|
+|`hints`|A [`hints` parameter](#hints) to use to request the next set of transactions|array of objects|
