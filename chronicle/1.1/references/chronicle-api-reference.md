@@ -286,6 +286,6 @@ If you searched for transactions by addresses, approvees, bundles, or tags this 
 |--|--|--|
 | `hashes` | The transaction hashes|array|
 |`values`| The `value` fields of the transactions|array|
-|`milestones`|The hashes of the transactions' confirmation milestones|array|
+|`milestones`|The indexes of the transactions' confirmation milestones|array|
 |`timestamps`|The transactions' `attachmentTimestamp` fields|array|
 |`hints`|A [`hints` parameter](#hints) to use to request the next set of transactions|object|
