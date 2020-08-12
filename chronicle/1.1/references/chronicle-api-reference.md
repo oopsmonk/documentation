@@ -28,17 +28,15 @@ Chronicle does not support authentication yet.
 
 ## Pagination
 
-Requests to the `findTransactions` endpoint can return an unknown amount of transaction hashes. The exact amount is known only after the query has been executed. Therefore, this endpoint returns a limited amount of transaction hashes.
+Requests to the `findTransactions` endpoint can return an unknown amount of results. The exact amount is known only after the query has been executed. Therefore, this endpoint returns a limited amount of transaction hashes.
 
-If you receive a `hints.paging_state` array, more transaction hashes are available for your request. To request these transaction hashes, call the endpoint again, using the returned `hints` field from the first call as a parameter.
-
-Transaction hashes are returned in order from newest to oldest, according to the transactions' `attachmentTimestamp` fields.
+If you receive a `hints.paging_state` array, more transaction hashes are available for your request. To request these transaction hashes, call the endpoint again, using the returned `hints` array as a parameter.
 
 ## Base URL
 
-All requests to this API should be sent to the URL of a Chronicle instance.
+All requests to this API should be sent to the URL of a Chronicle node.
 
-If you don't already have a service to connect to, we recommend [running your own](root://chronicle/1.1/tutorials/run-a-permanode.md).
+If you don't already have a service to connect to, we recommend [running your own](../tutorials/run-a-permanode.md).
 
 Running your own node has many benefits, of which the most important is that you don't need to trust a potentially malicious third-party node. If you were to connect to a malicious node, it could give you incorrect information about transactions.
 
@@ -142,28 +140,45 @@ curl http://localhost:4000/api \
 
 ## findTransactions
 
-Gets the transaction hashes of transactions that contain the given values in their transaction fields.
+Returns the hashes of transactions that contain the given values in their transaction fields.
 
-To find only value transactions, you must use the `addresses` parameter.
+If you use the `addresses`, `approvees`, `bundles`, or `tags` parameters, this endpoint may return a `hints` object. See [Pagination](#pagination) for more information.
 
-To find only zero-value transaction, you must use the `hints` parameter.
+Use the `hints` parameter if you want to:
 
-findTransactions returns values/milestones/timestamps beside hashes
+- Search for transactions by their `attachmentTimestamp` field
+- Get the remaining results of a previous request
 
 :::info:
-addresses/bundles/approvees/tags might return hints which indicates the need for further calls to fetch the remaining pages
+This endpoint accepts only one of the following parameters.
 :::
 
 ### Parameters
 	
 |**Parameters** |**Description** | **Type**
 |--|--|--|
-| `addresses` | Addresses to search for in value transactions (do not include the checksum) | array of strings |
+| `addresses` | Addresses to search for (do not include the checksum) | array of strings |
 | `approvees` | Child transaction hashes to search for in all transactions | array of strings |
 | `bundles` | Bundle hashes to search for in all transactions | array of strings |
-|`hashes`|Transaction hashes to search for|array of strings|
 |`tags`|Tags to search for|array of strings|
-|`hints`|Part of a tag (at least 4 trytes) or an address to search for by the transaction's attachment timestamp. You can specify the attachment timestamp to search for in the `month` and `year` properties|array of objects|
+|<a name="hints"></a>`hints`|Either an address, approvee, bundle, or tag to search for|array of objects|
+|`hints.address`|The address to search for|string|
+|`hints.approvee`|The parent transaction hash to search for|string|
+|`hints.bundle`|The bundle hash to search for|string|
+|`hints.tag`|The tag to search for|string|
+|`hints.timeline`|The attachment timestamp to search for|array of objects|
+|`hints.timeline.year`|The year of the attachment timestamp to search for|integer|
+|`hints.timeline.month`|The month of the attachment timestamp to search for|integer|
+|`page_size`|The number of results to return (the default `page_size` is 5000)|integer|
+
+Example `hints` objects:
+
+```json=
+{ "tag": "some-tag-27-trytes", "timeline": [{"year": .., "month": ..}, etc], "paging_state": .., "page_size": ..}
+{ "address": "some-address-81-trytes", "timeline": [{"year": .., "month": ..}, etc], "paging_state": .., "page_size": ..}
+{ "bundle": "some-bundle-81-trytes", "timeline": [{"year": .., "month": ..}, etc], "paging_state": .., "page_size": ..}
+{ "approvee": "some-approvee-81-trytes", "timeline": [{"year": .., "month": ..}, etc], "paging_state": .., "page_size": ..}
+```
 
 ### Examples
 --------------------
@@ -240,15 +255,21 @@ curl http://localhost:4000/api \
 ### 200
 ```json
 {
-  "hashes":["YBOCSXAPQ9ZRKLPZTPUAHIEYZMM9WILR9ELGKMJ9DPKEQLVWHPBPXHDBXVDNBOTHSCLHSKMV9VXWZ9999","Y9CPOZPBICEGGYZUG9ORWDODJLWSFFFMKGVUQWTTWVHAYXO9TTLFLZIPTPVONUGMCVUWCVNM9EQJA9999","..."
+  "hashes":["YBOCSXAPQ9ZRKLPZTPUAHIEYZMM9WILR9ELGKMJ9DPKEQLVWHPBPXHDBXVDNBOTHSCLHSKMV9VXWZ9999","Y9CPOZPBICEGGYZUG9ORWDODJLWSFFFMKGVUQWTTWVHAYXO9TTLFLZIPTPVONUGMCVUWCVNM9EQJA9999"
   ],
+  "values":[100,-100,0],
+  "milestones":["M9VINLQAOOCWGVK9FBLLN9XFCFZJYDTR9DNTFZUOTLVMETTAIRIGWPFWEUWBDUPBMZJVQTJQTGXT99999"],
+  "timestamps":[1572010100517,1572076153742,1572076153764],
   "hints":
   [
     {
-      "tag":"IOTAJAMMER99999999999999999",
-      "year":2020,
-      "month":7,
-      "paging_state":[0,0,0,0,18,1,0,0,50,0,0,0,3,0,0,0,27,0,0,0,73,79,84,65,74,65,77,77,69,82,57,57,57,57,57,57,57,57,57,57,57,57,57,57,57,57,57,2,0,0,0,7,228,1,0,0,0,7,1,112,0,0,0,3,0,0,0,3,0,0,0,116,97,103,8,0,0,0,0,0,0,0,95,4,62,142,81,0,0,0,74,75,71,74,88,81,83,80,73,71,68,78,84,88,79,79,88,68,70,84,79,78,88,72,72,82,86,88,85,77,90,78,81,86,90,71,84,89,78,73,75,69,70,57,89,57,65,87,89,67,84,70,66,85,71,80,66,68,79,72,89,67,79,80,67,90,86,77,67,67,69,57,75,87,76,66,90,57,57,57,57,0,255,255,255,202,67,100,113,202,178,210,211,113,45,171,66,43,39,248,185,1,0,0,0,57,0,0,0,1,25,0,0,0,20,0,0,0,1,0,0,0,8,0,0,0,192,9,67,188,78,93,12,64,1,1,25,0,0,0,20,0,0,0,1,0,0,0,8,0,0,0,192,9,67,188,78,93,12,64,1,1,1,0,0,0,74,64,240,75,108,25,215,194,210,250,149,1,83,32,238,142,1,0,0,0,0,0]
+      "bundle":"BUNDLE_HASH",
+      "timeline":[{
+              "year":2019,
+              "month":10
+        }],
+      "paging_state":[0,0,0,0,18,1,0,0,50,0,0,0,3,0,0,0,27,0,0,0,73,79,84,65,74,65,77,77,69,82,57,57,57,57,57,57,57,57,57,57,57,57,57,57,57,57,57,2,0,0,0,7,228,1,0,0,0,7,1,112,0,0,0,3,0,0,0,3,0,0,0,116,97,103,8,0,0,0,0,0,0,0,95,4,62,142,81,0,0,0,74,75,71,74,88,81,83,80,73,71,68,78,84,88,79,79,88,68,70,84,79,78,88,72,72,82,86,88,85,77,90,78,81,86,90,71,84,89,78,73,75,69,70,57,89,57,65,87,89,67,84,70,66,85,71,80,66,68,79,72,89,67,79,80,67,90,86,77,67,67,69,57,75,87,76,66,90,57,57,57,57,0,255,255,255,202,67,100,113,202,178,210,211,113,45,171,66,43,39,248,185,1,0,0,0,57,0,0,0,1,25,0,0,0,20,0,0,0,1,0,0,0,8,0,0,0,192,9,67,188,78,93,12,64,1,1,25,0,0,0,20,0,0,0,1,0,0,0,8,0,0,0,192,9,67,188,78,93,12,64,1,1,1,0,0,0,74,64,240,75,108,25,215,194,210,250,149,1,83,32,238,142,1,0,0,0,0,0],
+      "page_size": 5000
     }
   ]
 }
@@ -257,11 +278,14 @@ curl http://localhost:4000/api \
 
 ### Results
 
-An array of transaction hashes is returned in the same order for all individual elements.
+An array of result objects is returned in the same order as the parameters.
 
-|**Return field** | **Description** |
-|--|--|
-| `hashes` | Transactions hashes|
-|`hints`|A `hints` field|
+If you searched for transactions by addresses, approvees, bundles, or tags this endpoint may return a `hints` parameter which indicates that more results are available for your search criteria. To request the remaining results, pass the returned `hints` object back to the `findTransactions` endpoint.
 
-If the `hints` field includes a non-empty `paging_state` array, you can use it to request more results for your search criteria.
+|**Return field** | **Description** |**Type**|
+|--|--|--|
+| `hashes` | The transaction hashes|array|
+|`values`| The `value` fields of the transactions|array|
+|`milestones`|The hashes of the transactions' confirmation milestones|array|
+|`timestamps`|The transactions' `attachmentTimestamp` fields|array|
+|`hints`|A [`hints` parameter](#hints) to use to request the next set of transactions|object|
