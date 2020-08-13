@@ -28,7 +28,7 @@ yarn add @iota/core @iota/converter @iota/tryte-compress
 
 ## IOTA network
 
-In this tutorial, we connect to a node on the [Devnet](root://getting-started/1.0/networks/overview.md).
+In this tutorial, we connect to a node in the [Devnet](root://getting-started/1.1/networks/overview.md).
 
 ## Code walkthrough
 

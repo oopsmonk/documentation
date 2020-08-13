@@ -152,7 +152,7 @@ curl http://localhost:14265 \
 
 ## attachToTangle
 
-Does [proof of work](root://getting-started/1.0/references/glossary.md#proof-of-work) for the given transaction trytes.
+Does [proof of work](root://getting-started/1.1/references/glossary.md#proof-of-work) for the given transaction trytes.
 
  ### Parameters
 
@@ -162,7 +162,7 @@ Does [proof of work](root://getting-started/1.0/references/glossary.md#proof-of-
 |--|--|--|--|
 | `trunkTransaction` |Required| Trunk transaction hash | string|
 | `branchTransaction` |Required| Branch transaction hash | string|
-| `minWeightMagnitude` |Required| [minimum weight magnitude](root://getting-started/1.0/references/glossary.md#minimum-weight-magnitude) | integer|
+| `minWeightMagnitude` |Required| [minimum weight magnitude](root://getting-started/1.1/first-steps/sending-transactions.md#doing-proof-of-work) | integer|
 | `trytes` |Required| String of transaction trytes |array of strings|
 
 ### Examples

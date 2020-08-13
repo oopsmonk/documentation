@@ -4,11 +4,11 @@
 
 ## Prerequisites
 
-To make sure that your device meets the minimum requirements for running a node, see [Getting started as a node](root://getting-started/1.0/nodes/overview.md).
+To make sure that your device meets the minimum requirements for running a node, see [Getting started as a node](root://getting-started/1.1/running-nodes/running-a-node.md).
 
-## Choose a method
+## Operating systems
 
-Use the following table to select an installation method, depending on your operating system.
+Use the following table to select an installation method for your operating system.
 
 |**Operating system**|**Installation method**|**Tutorial**|
 |:-------------------|:----------------------|:-----------|
@@ -20,3 +20,9 @@ Use the following table to select an installation method, depending on your oper
 | |Use a pre-built binary file in the [GitHub release assets](https://github.com/gohornet/hornet/releases)
 |Windows|Use a Docker image| |
 | |Use a pre-built binary file in the [GitHub release assets](https://github.com/gohornet/hornet/releases) | |
+
+## Cloud providers
+
+Hornet is available as a one-click setup on the Amazon Web Services (AWS) Marketplace.
+
+For installation instructions, see the [IOTA Hornet Node page](https://aws.amazon.com/marketplace/pp/B08CGPLSYZ) on the AWS Marketplace.

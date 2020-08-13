@@ -4,7 +4,7 @@
 
 ## IOTA network
 
-In this tutorial, we connect to a node on the [Devnet](root://getting-started/1.0/networks/overview.md).
+In this tutorial, we connect to a node in the [Devnet](root://getting-started/1.1/networks/overview.md).
 
 ## Code walkthrough
 
@@ -42,7 +42,7 @@ In this tutorial, we connect to a node on the [Devnet](root://getting-started/1.
     Sent deposit to DL9CSYICJVKQRUTWBFUCZJQZ9WNBSRJOA9MGOISQZGGHOCZTXVSKDIZN9HBORNGDWRBBAFTKXGEJIAHKDTMAUX9ILA in the bundle with the following tail transaction hash WZEATTRJYENRALJTWPVGDQZHETIDJXPUROUM9BBPS9RJEELDMU9YNZFBSDGPQHZHMXBVCKITSMDEEQ999
     ```
 
-Your account will [reattach and promote](root://getting-started/1.0/clients/helping-a-transaction-confirm.md) your bundle until it's confirmed.
+Your account will [reattach and promote](root://getting-started/1.1/transfer-tokens/helping-a-transaction-confirm.md) your bundle until it's confirmed.
 
 ## Run the code
 

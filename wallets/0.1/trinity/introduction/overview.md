@@ -28,6 +28,10 @@ If you find a vulnerability and you report it to us, you'll receive a monetary r
 
 Trinity mobile does not support background processes. If you navigate to another app while an action (for example, logging in, sending transactions, and refreshing your balance) is ongoing, that action **won't** be completed.
 
+If you use a Ledger Nano S with Trinity, you can't withdraw from more than two addresses in the same transaction.
+
+For more information about this limitation, see this [community blog post](https://medium.com/@hbmy289/how-to-access-iota-funds-spread-over-too-many-inputs-on-ledger-nano-s-74708548fa6e).
+
 ## Blog posts
 
 Read the following blog posts about Trinity:

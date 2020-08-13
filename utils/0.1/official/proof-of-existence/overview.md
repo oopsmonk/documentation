@@ -6,7 +6,7 @@
 
 In this example, we use the [proof-of-existence library](https://github.com/iotaledger/iota-poex-tool) to prove that a file is unchanged.
 
-First, we create a file that we later want to prove is unchanged. Then, we hash the file and add its hash to a transaction before attaching it to the [Devnet](root://getting-started/1.0/networks/overview.md) Tangle. The Devnet is similar to the Mainnet, except the tokens are free. Any transactions that you send to the Devnet do not exist on other networks such as the Mainnet.
+First, we create a file that we later want to prove is unchanged. Then, we hash the file and add its hash to a transaction before attaching it to the [Devnet](root://getting-started/1.1/networks/overview.md) Tangle. The Devnet is similar to the Mainnet, except the tokens are free. Any transactions that you send to the Devnet do not exist on other networks such as the Mainnet.
 
 :::info:
 Transactions in the Tangle are immutable, so we can use the transaction as a source of truth.
@@ -118,7 +118,7 @@ Create a new file called `contract.txt` in your working directory, then add the 
 
     The transaction is attached to the Devnet Tangle, so it does not exist on any other networks such as the Mainnet.
 
-    [Find out more about IOTA networks](root://getting-started/1.0/networks/overview.md).
+    [Find out more about IOTA networks](root://getting-started/1.1/networks/overview.md).
     :::
 
 :::success:Congratulations :tada:

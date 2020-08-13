@@ -24,9 +24,9 @@ The message identifier differentiates individual messages on a channel.
 
 Links can be of many types, depending on the communication channel. For example, for HTTP, the link type could be a URL.
 
-By default, Channels comes with an API for publishing messages on the Tangle and addressing them by an `Address` link type.
+By default, Channels comes with an API for publishing messages in the Tangle and addressing them by an `Address` link type.
 
-The `Address` link type includes the channel address in the `address` field of a [transaction](root://getting-started/1.0/understanding-iota/transactions.md) and the message identifier in the `tag` field.
+The `Address` link type includes the channel address in the [`address`](root://getting-started/1.1/references/transaction-fields.md) field of a transaction and the message identifier in the `tag` field.
 
 ![Header structure](images/header-structure.png)
 

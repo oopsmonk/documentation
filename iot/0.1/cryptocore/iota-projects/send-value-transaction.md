@@ -82,7 +82,7 @@ In this step, you write a script that uses the Javascript client library to crea
     ```js
     // Define a node for each IOTA network
     const nodes = {
-            devnet: 'https://nodes.devnet.thetangle.org:443',
+            devnet: 'https://nodes.devnet.iota.org:443',
             mainnet: `https://nodes.iota.org:443`
     }
 
@@ -336,7 +336,7 @@ In this step, you write a bash script that signs the bundle hash.
     ```
 
     :::info:
-    By keeping track of the address index, you can be sure that you aren't generating [spent addresses](root://getting-started/1.0/references/glossary.md#spent-address).
+    By keeping track of the address index, you can be sure that you aren't generating [spent addresses](root://getting-started/1.1/references/glossary.md#spent-address).
     :::
     
 6. Generate an input address, using the CryptoCore [`getAddress`](../references/api-reference.md#getaddress) command

@@ -8,7 +8,7 @@ The network settings are defined in a `config.h` file. See [C quickstart](root:/
 
 ## Step 1. Get test IOTA tokens
 
-To send test IOTA tokens on the Devnet, nodes must have a record of a greater than 0 balance for one of the addresses that belongs to your seed. To get test IOTA tokens to use on the Devnet, you can use the Devnet faucet.
+To send test IOTA tokens in the Devnet, nodes must have a record of a greater than 0 balance for one of the addresses that belongs to your seed. To get test IOTA tokens to use in the Devnet, you can use the Devnet faucet.
 
 1\. Create a new seed and back it up
 
@@ -91,7 +91,7 @@ To transfer your test tokens from one address to another, you need to create and
     transfer_array_add(transfers, &tf);
     ```
 
-5. To create a bundle from your `transfers` array, pass it to the [`iota_client_send_transfer()`](https://github.com/iotaledger/iota.c/blob/master/cclient/api/extended/send_transfer.h) method, which handles tip selection, remote proof of work, and sending the bundle to the node. For details about this process, see [Sending a transaction](root://getting-started/1.0/clients/sending-a-transaction.md).
+5. To create a bundle from your `transfers` array, pass it to the [`iota_client_send_transfer()`](https://github.com/iotaledger/iota.c/blob/master/cclient/api/extended/send_transfer.h) method, which handles tip selection, remote proof of work, and sending the bundle to the node. For details about this process, see [Sending transactions](root://getting-started/1.1/first-steps/sending-transactions.md).
 
     ```go
     // Create a bundle from the transfers array and send it to the IOTA node

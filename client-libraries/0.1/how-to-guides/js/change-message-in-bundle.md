@@ -2,7 +2,7 @@
 
 **In this tutorial, you learn how to create a copy of a bundle and change the message in the tail transaction.**
 
-Messages in transactions are stored in their `signatureMessageFragment` field, which isn't included in the [bundle essence](root://getting-started/1.0/references/glossary.md#bundle-essence). Therefore, you can change the value of this field without changing the bundle hash.
+Messages in transactions are stored in their `signatureMessageFragment` field, which isn't included in the [bundle essence](root://getting-started/1.1/references/glossary.md#bundle-essence). Therefore, you can change the value of this field without changing the bundle hash.
 
 ## Packages
 
@@ -22,7 +22,7 @@ yarn add @iota/core @iota/converter @iota/bundle @iota/transaction @iota/transac
 
 ## IOTA network
 
-In this tutorial, we connect to a node on the [Devnet](root://getting-started/1.0/networks/overview.md).
+In this tutorial, we connect to a node in the [Devnet](root://getting-started/1.1/networks/overview.md).
 
 ## Code walkthrough
 
@@ -119,7 +119,7 @@ In this tutorial, we connect to a node on the [Devnet](root://getting-started/1.
     You reverse the bundle array because the library expects bundles to be sent head first.
     :::
 
-Now, you can [search for your new tail transaction](https://devnet.thetangle.org/) in the Tangle and see that it's in a bundle with the same bundle hash as the original.
+Now, you can [search for your new tail transaction](https://utils.iota.org/) in the Tangle and see that it's in a bundle with the same bundle hash as the original.
 
 :::success:Congratulations :tada:
 You've just changed the message of a tail transaction in a bundle and reattached a copy of that bundle to the Tangle.

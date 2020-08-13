@@ -43,9 +43,11 @@ It's best to connect to at least two IOTA nodes so that you have a backup in cas
 You can define which IOTA nodes to connect to in the [`trytes_nodes` and `sn_trytes_nodes` settings](../references/cli-reference.md#trytes_nodes).
 :::
 
-## Provisioning Scylla nodes with enough memory
+## Provisioning Scylla nodes with enough disk space
 
 The Tangle is a permissionless ledger, meaning that anyone can attach transactions to it at any time. Therefore, you must provision your Scylla nodes with enough memory to be able to store those transactions.
+
+As a guide, it's best to have at least 1 TB of disk space available, depending on your replication factor.
 
 ## Controlling access to transactions on your Scylla nodes
 

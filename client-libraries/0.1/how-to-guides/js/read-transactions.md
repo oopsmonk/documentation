@@ -1,6 +1,6 @@
 # Read transactions from the Tangle in Node.js
 
-**In this tutorial, you read your "hello world" [transaction](root://getting-started/1.0/understanding-iota/transactions.md) from the Tangle by giving a node your tail transaction hash.**
+**In this tutorial, you read your "hello world" transaction from the Tangle by giving a node your tail transaction hash.**
 
 ## Packages
 
@@ -20,7 +20,7 @@ yarn add @iota/core @iota/extract-json
 
 ## IOTA network
 
-In this tutorial, we connect to a node on the [Devnet](root://getting-started/1.0/networks/overview.md).
+In this tutorial, we connect to a node in the [Devnet](root://getting-started/1.1/networks/overview.md).
 
 ## Code walkthrough
 

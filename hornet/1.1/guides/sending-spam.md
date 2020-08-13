@@ -19,7 +19,7 @@ You can enable the `Spammer` plugin by adding it to the `enablePlugins` field of
 
 The `Spammer` plugin allows your node to send a number of zero-value transactions at regular intervals.
 
-The interval is set in the `tpsratelimit` field, which is the number of transactions per second (TPS) that the plugin should try to send. See the [Hornet wiki](https://github.com/gohornet/hornet/wiki/Configuration#Spammer) for more information about configuration options.
+The interval is set in the `tpsRateLimit` field, which is the number of transactions per second (TPS) that the plugin should try to send. See the [Hornet wiki](https://github.com/gohornet/hornet/wiki/Configuration#Spammer) for more information about configuration options.
 
 For example, this configuration sends 1 transaction every 10 seconds.
 
@@ -29,7 +29,7 @@ For example, this configuration sends 1 transaction every 10 seconds.
     "depth": 3,
     "message": "Spamming with HORNET tipselect",
     "tag": "HORNET99INTEGRATED99SPAMMER",
-    "tpsratelimit": 0.1,
+    "tpsRateLimit": 0.1,
     "cpuMaxUsage": 0.5,
     "workers": 1
   }

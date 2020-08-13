@@ -83,15 +83,15 @@ Now you can start coding.
 
 ## Step 3. Connect to a node
 
-It's best practice to make sure that you're connected to a synchronized node before you start sending transactions to it. This way, you know that it has an up-to-date view of the Tangle. For more information, see [Nodes](root://getting-started/1.0/understanding-iota/nodes.md).
+It's best practice to make sure that you're connected to a synchronized node before you start sending transactions to it. This way, you know that it has an up-to-date view of the Tangle. For more information, see [About nodes](root://getting-started/1.1/running-nodes/overview.md).
 
-Whenever you connect to a node, you need to know which IOTA network it's in. Here, we connect to a node on the Devnet, which is the IOTA networks that you can use for testing.
+Whenever you connect to a node, you need to know which IOTA network it's in. Here, we connect to a node in the Devnet, which is the IOTA networks that you can use for testing.
 
 1. Go to the IOTA Foundation [Discord](https://discord.iota.org) and enter **!milestone** in the `botbox` channel
 
     ![Entering !milestone on Discord](../images/discord-milestone-check.PNG)
 
-    The Discord bot should return the current `latestMilestoneIndex` field from a [node quorum](root://getting-started/1.0/references/glossary.md#node-quorum).
+    The Discord bot should return the current `latestMilestoneIndex` field from a [node quorum](root://getting-started/1.1/references/glossary.md#node-quorum).
 
 2. In the directory where you initialized your project, create a new file called `index.py`
 
@@ -150,7 +150,7 @@ If the `latestMilestoneIndex` field is equal to the one you got from Discord and
 
 If not, try connecting to a different node. The [iota.dance website](https://iota.dance/) includes a list of Mainnet nodes. Or, you can [run your own node](root://node-software/1.0/overview.md).
 
-In the `features` array, you can see that this node also support [remote proof of work](root://getting-started/1.0/references/glossary.md#remote-proof-of-work) (RemotePOW). As a result, you can use this node to do proof of work instead of doing it on your local device.
+In the `features` array, you can see that this node also support [remote proof of work](root://getting-started/1.1/references/glossary.md#remote-proof-of-work) (RemotePOW). As a result, you can use this node to do proof of work instead of doing it on your local device.
 
 Also, this node has its zero message queue (ZMQ) enabled, so you can use it to [listen for live transactions](../how-to-guides/python/listen-for-transactions.md).
 
@@ -188,4 +188,4 @@ Continue learning with our [Python workshop](../how-to-guides/python/get-started
 
 
 
-Find the in-depth Python library documentation on the [PyOTA documentation page](https://pyota.readthedocs.io/en/latest/).
+Find the in-depth Python library documentation in the [PyOTA documentation page](https://pyota.readthedocs.io/en/latest/).

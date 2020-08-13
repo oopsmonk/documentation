@@ -10,7 +10,7 @@ IOTA uses the Winternitz [one-time signature scheme](https://en.wikipedia.org/wi
 
 To make sure that it's always safe to sign a bundle once, first the [bundle](../transactions/bundles.md) hash is [normalized](https://en.wikipedia.org/wiki/Canonical_form#Computing) so that only half of the private key is revealed in the signature.
 
-Depending on the [number of key fragments that a private key has](../clients/addresses.md#how-addresses-are-generated), 27, 54, or 81 trytes of the normalized bundle hash are selected.
+Depending in the [number of key fragments that a private key has](../clients/addresses.md#how-addresses-are-generated), 27, 54, or 81 trytes of the normalized bundle hash are selected.
 
 The selected trytes of the normalized bundle hash are [converted to their decimal values](../introduction/ternary.md#tryte-encoding). Then, the following calculation is performed on each of them:
 

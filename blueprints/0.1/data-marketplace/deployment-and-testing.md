@@ -125,7 +125,7 @@ Alternatively, you can [use the API to fund a wallet](https://data.iota.org/stat
 
 ### Fund an existing wallet
 
-If your wallet balance is low, you can fund it with more Devnet tokens by using the [IOTA faucet](root://getting-started/1.0/clients/getting-test-tokens.md).
+If your wallet balance is low, you can fund it with more Devnet tokens by using the [IOTA faucet](root://getting-started/1.1/references/faucets.md).
 
 :::info:
 You can a new address to which to send the tokens by calling the [`getUser`](https://data.iota.org/static/docs#get-user) endpoint.

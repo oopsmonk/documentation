@@ -7,7 +7,7 @@
                 "definition": "A public key that belongs to a seed and that has a balance of IOTA tokens on IOTA networks",
                 "pos": "noun",
                 "status": "preferred",
-                "image": ""
+                "image": "../images/addresses.png"
             },
             "faucet": {
                 "definition": "A tool that transfers IOTA tokens to a given address",
@@ -37,7 +37,7 @@
                 "definition": "Unique password that is used to generate addresses, private keys, and signatures",
                 "pos": "noun",
                 "status": "preferred",
-                "image": ""
+                "image": "../images/seed.png"
             },
             "wallet": {
                 "definition": "Application for managing private keys and addresses",
@@ -183,7 +183,7 @@
                 "definition": "Chain of transactions that are ordered by their `currentIndex` field and that are considered atomic by nodes",
                 "pos": "noun",
                 "status": "preferred",
-                "image": ""
+                "image": "../images/bundle.png"
             },
             "bundle essence": {
                 "definition": "The `address`, `value`, `obsoleteTag`, `currentIndex`, `lastIndex`, and `timestamp` fields of transactions in a bundle",
@@ -312,7 +312,7 @@
                 "image": ""
             },
             "remote proof of work": {
-                "definition": "Proof of work that is done on a node by calling its `getTransactionsToApprove` endpoint",
+                "definition": "Proof of work that is done by a node",
                 "pos": "noun",
                 "status": "preferred",
                 "image": ""

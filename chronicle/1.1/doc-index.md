@@ -1,6 +1,7 @@
 # Index
 
 [Introduction/Overview](overview.md)
+[Introduction/How Chronicle works](how-it-works.md)
 
 [Tutorials/Run the permanode CLI](/tutorials/run-a-permanode.md)
 

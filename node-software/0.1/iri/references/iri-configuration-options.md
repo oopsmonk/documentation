@@ -35,7 +35,7 @@ Use these settings to customize how the API behaves and which hosts can access i
 |<a name="max-find-transactions"></a>`--max-find-transactions` |`MAX_FIND_TRANSACTIONS`|Set a maximum number of transactions that may be requested by the [`findTransactions` endpoint](../references/api-reference.md#findTransactions) |number | 100,000 | If the number of requested transactions exceeds this number, an error is returned
 |<a name="max-requests-list"></a>`--max-requests-list` |`MAX_REQUESTS_LIST`|Set a maximum number of parameters in an API call |number |1,000 | If the number of parameters exceeds this number, an error is returned
 |<a name="max-get-trytes"></a>`--max-get-trytes` |`MAX_GET_TRYTES`|Set a maximum number of trytes that may be requested by the [getTrytes endpoint](../references/api-reference.md#getTrytes)  |number |10,000 | If the number of requested trytes exceeds this number, an error is returned
-| <a name="mwm"></a>`--mwm`|`MWM`|Set the [minimum weight magnitude](root://getting-started/1.0/references/glossary.md#minimum-weight-magnitude)|number|9|
+| <a name="mwm"></a>`--mwm`|`MWM`|Set the [minimum weight magnitude](root://getting-started/1.1/references/glossary.md#minimum-weight-magnitude)|number|9|
 |<a name="remote"></a> ` --remote `|-|Open the API interface to any host |boolean | false| When set to true, this option is equivalent to setting the `API_HOST` option to 0.0.0.0. You must add a `true` or `false` value after this flag.
 |<a name="remote-auth"></a>`--remote-auth` |`REMOTE_AUTH`|Add basic authentication for API calls in the form of username:password  | string| ""|You can use a plain text or a hashed password|
 |<a name="remote-limit-api"></a>`--remote-limit-api` |`REMOTE_LIMIT_API`|Ignore requests to certain API endpoints |array of strings |[[addNeighbors](../references/api-reference.md#addNeighbors), [getNeighbors](../references/api-reference.md#getNeighbors), [removeNeighbors](../references/api-reference.md#removeNeighbors), [attachToTangle](../references/api-reference.md#attachToTangle), [interruptAttachToTangle](../references/api-reference.md#interruptAttachToTangle)] | This option allows you to protect your node against spammers that know the IRI node's URL or IP address.
@@ -101,7 +101,7 @@ Use these settings to customize how your node communicates with neighbors.
 
 ## Proof of work
 
-Use these settings to customize how your node does [proof of work](root://getting-started/1.0/references/glossary.md#proof-of-work).
+Use these settings to customize how your node does [proof of work](root://getting-started/1.1/references/glossary.md#proof-of-work).
 
 | **CL flags** |**Configuration file parameters** |  **Description**| **Accepted values** | **Default value**|**Notes** |
 | :------------------------ | :--------------- | :--------- | :--------| :------------|:-----|

@@ -2,7 +2,7 @@
 
 **In this tutorial, you use the prove that a file is unchanged by hashing the file's contents and attaching it to the Tangle.**
 
-First, you create a file that you later want to prove is unchanged. Then, you hash the file and add its hash to a transaction before attaching it to the [Devnet](root://getting-started/1.0/networks/overview.md) Tangle.
+First, you create a file that you later want to prove is unchanged. Then, you hash the file and add its hash to a transaction before attaching it to the [Devnet](root://getting-started/1.1/networks/overview.md) Tangle.
 
 Then, you read the transaction from the Tangle to get the file hash. When you have the file hash, you hash the original file again and compare the two. If both hashes are the same, the original file is unchanged.
 
@@ -110,7 +110,7 @@ My super secret contract.
 
     The transaction is attached to the Devnet Tangle, so it does not exist on any other networks such as the Mainnet.
 
-    [Find out more about IOTA networks](root://getting-started/1.0/networks/overview.md).
+    [Find out more about IOTA networks](root://getting-started/1.1/networks/overview.md).
     :::
 
 :::success:Congratulations :tada:

@@ -4,17 +4,17 @@
 
 ## IOTA network
 
-In this tutorial, we connect to a node on the [Devnet](root://getting-started/1.0/networks/overview.md) with the following network settings:
+In this tutorial, we connect to a node in the [Devnet](root://getting-started/1.1/networks/overview.md) with the following network settings:
 
-- **[minimum weight magnitude](root://getting-started/1.0/references/glossary.md#minimum-weight-magnitude)**: 9
+- **[minimum weight magnitude](root://getting-started/1.1/first-steps/sending-transactions.md#doing-proof-of-work)**: 9
 
-- **[Depth](root://getting-started/1.0/clients/sending-a-transaction.md#choosing-a-depth)**: 3
+- **[Depth](root://getting-started/1.1/first-steps/sending-transactions.md#choosing-a-depth)**: 3
 
 These settings are defined in a `config.h` file, which we create in the [getting started guide](../../getting-started/c-quickstart.md).
 
 ## Step 1. Get test IOTA tokens
 
-To send test IOTA tokens on the Devnet, nodes must have a record of a greater than 0 balance for one of the addresses that belongs to your seed. To get test IOTA tokens to use on the Devnet, you can use the Devnet faucet.
+To send test IOTA tokens in the Devnet, nodes must have a record of a greater than 0 balance for one of the addresses that belongs to your seed. To get test IOTA tokens to use in the Devnet, you can use the Devnet faucet.
 
 1\. Create a new seed and back it up
 
@@ -98,7 +98,7 @@ To transfer your test tokens from one address to another, you need to create and
     transfer_array_add(transfers, &tf);
     ```
 
-5. To create a bundle from your `transfers` array, pass it to the [`iota_client_send_transfer()`](https://github.com/iotaledger/entangled/blob/develop/cclient/api/extended/send_transfer.h) method, which handles tip selection, remote proof of work, and sending the bundle to the node. For details about this process, see [Sending a transaction](root://getting-started/1.0/clients/sending-a-transaction.md).
+5. To create a bundle from your `transfers` array, pass it to the [`iota_client_send_transfer()`](https://github.com/iotaledger/entangled/blob/develop/cclient/api/extended/send_transfer.h) method, which handles tip selection, remote proof of work, and sending the bundle to the node. For details about this process, see [Sending transactions](root://getting-started/1.1/first-steps/sending-transactions.md).
 
     ```go
     // Create a bundle from the transfers array and send it to the IOTA node

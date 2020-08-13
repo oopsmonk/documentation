@@ -89,7 +89,7 @@ You should see an empty object in the console, which means that the user was cre
 You can see this user in the Hub database by [querying the `user_account` table](../how-to-guides/query-the-database.md).
 :::
 
-2\. Create a new deposit address with a [checksum](root://getting-started/1.0/cryptography/checksums.md) 
+2\. Create a new deposit address with a [checksum](root://getting-started/1.1/accounts/checksums.md) 
 
 --------------------
 ### Python

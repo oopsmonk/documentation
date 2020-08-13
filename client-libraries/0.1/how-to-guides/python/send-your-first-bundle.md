@@ -1,6 +1,6 @@
 # Send a "hello world" transaction in Python
 
-**In this tutorial, you send a "hello world" message in a zero-value transaction. These transactions are useful for storing messages on the Tanglewithout having to send any IOTA tokens.**
+**In this tutorial, you send a "hello world" message in a zero-value transaction. These transactions are useful for storing messages in the Tanglewithout having to send any IOTA tokens.**
 
 ## Packages
 
@@ -12,11 +12,11 @@ pip install pyota
 
 ## IOTA network
 
-In this tutorial, we connect to a node on the [Devnet](root://getting-started/1.0/networks/overview.md) with the following network settings:
+In this tutorial, we connect to a node in the [Devnet](root://getting-started/1.1/networks/overview.md) with the following network settings:
 
-- **[minimum weight magnitude](root://getting-started/1.0/references/glossary.md#minimum-weight-magnitude)**: 9
+- **[minimum weight magnitude](root://getting-started/1.1/first-steps/sending-transactions.md#doing-proof-of-work)**: 9
 
-- **[Depth](root://getting-started/1.0/clients/sending-a-transaction.md#choosing-a-depth)**: 3
+- **[Depth](root://getting-started/1.1/first-steps/sending-transactions.md#choosing-a-depth)**: 3
 
 1. Import the packages
 
@@ -35,7 +35,7 @@ In this tutorial, we connect to a node on the [Devnet](root://getting-started/1.
     ```
 
     :::info:
-    The `testnet` argument sets the [minimum weight magnitude](root://getting-started/1.0/references/glossary.md#minimum-weight-magnitude) to 9.
+    The `testnet` argument sets the [minimum weight magnitude](root://getting-started/1.1/first-steps/sending-transactions.md#doing-proof-of-work) to 9.
     :::
 
 3. Define an address to which you want to send a message
@@ -45,7 +45,7 @@ In this tutorial, we connect to a node on the [Devnet](root://getting-started/1.
     ```
 
     :::info:
-    This address does not have to belong to anyone. To be valid, the address just needs to consist of 81 trytes. For more information about trytes, see [Ternary](root://getting-started/1.0/understanding-iota/ternary.md).
+    This address does not have to belong to anyone. To be valid, the address just needs to consist of 81 trytes.
     :::
 
 4. Define a message that you want to send to the address and convert it to trytes
@@ -72,7 +72,7 @@ In this tutorial, we connect to a node on the [Devnet](root://getting-started/1.
     The Python library makes a disctinction between proposed and regular transaction objects. Proposed transaction objects are those that you can edit because they are not yet attached to the Tangle. In contrast, regular transaction objects are immutable because they are already attached to the Tangle.
     :::
 
-6. Pass your `ProposedTransaction` object to the [`send_transfer()`](https://pyota.readthedocs.io/en/latest/api.html#send-transfer) method to do tip selection, remote proof of work, and to send the bundle to the node. For details about this process, see [Sending a transaction](root://getting-started/1.0/clients/sending-a-transaction.md).
+6. Pass your `ProposedTransaction` object to the [`send_transfer()`](https://pyota.readthedocs.io/en/latest/api.html#send-transfer) method to do tip selection, remote proof of work, and to send the bundle to the node. For details about this process, see [Sending transactions](root://getting-started/1.1/first-steps/sending-transactions.md).
 
     ```python
     result = api.send_transfer(transfers = [tx])

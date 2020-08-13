@@ -4,11 +4,11 @@
 
 ## IOTA network
 
-In this tutorial, we connect to a node on the [Devnet](root://getting-started/1.0/networks/overview.md) with the following network settings:
+In this tutorial, we connect to a node in the [Devnet](root://getting-started/1.1/networks/overview.md) with the following network settings:
 
-- **[minimum weight magnitude](root://getting-started/1.0/references/glossary.md#minimum-weight-magnitude)**: 9
+- **[minimum weight magnitude](root://getting-started/1.1/first-steps/sending-transactions.md#doing-proof-of-work)**: 9
 
-- **[Depth](root://getting-started/1.0/clients/sending-a-transaction.md#choosing-a-depth)**: 3
+- **[Depth](root://getting-started/1.1/first-steps/sending-transactions.md#choosing-a-depth)**: 3
 
 ## Code walkthrough
 
@@ -90,7 +90,7 @@ When you start the account, you also start any of your account's plugins. The de
 
 - `OutgoingTransferChecker`: Every 10 seconds, this plugin checks whether deposits into your account have been confirmed
 
-- `PromoterReattacher`: Every 10 seconds, this plugin [promotes or reattaches](root://getting-started/1.0/clients/helping-a-transaction-confirm.md) any pending withdrawal or deposit transactions that the `TransferChecker` plugins find 
+- `PromoterReattacher`: Every 10 seconds, this plugin [promotes or reattaches](root://getting-started/1.1/transfer-tokens/helping-a-transaction-confirm.md) any pending withdrawal or deposit transactions that the `TransferChecker` plugins find 
 
 :::info:
 You can customize the behavior of these plugins or build your own.

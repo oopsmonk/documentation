@@ -71,7 +71,7 @@ In this step, you write the `create_tx.sh` script that prompts the user for the 
     read -p "Are you sending this transaction to the Devnet or the Mainnet? " MWM
     ```
 
-4. Use a regular expression to check if the user's answer begins with an 'm' and set the [minimum weight magnitude](root://getting-started/1.0/references/glossary.md#minimum-weight-magnitude) (MWM) according to the outcome
+4. Use a regular expression to check if the user's answer begins with an 'm' and set the [minimum weight magnitude](root://getting-started/1.1/first-steps/sending-transactions.md#doing-proof-of-work) (MWM) according to the outcome
 
     ```bash
     if [[ $MWM =~ ^[mM] ]]

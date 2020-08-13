@@ -1,6 +1,6 @@
 # IOTA reference implementation
 
-**The IRI (IOTA reference implementation) is open-source Java software for the IOTA protocol. This software currently runs on nodes in the [public IOTA networks](root://getting-started/1.0/networks/overview.md), where clients can transfer the IOTA token among each other.**
+**The IRI (IOTA reference implementation) is open-source Java software for the IOTA protocol. This software currently runs on nodes in the [public IOTA networks](root://getting-started/1.1/networks/overview.md), where clients can transfer the IOTA token among each other.**
 
 :::warning:
 This software is now in maintenance mode. Only critical fixes will be made. We recommend using [Hornet](root://hornet/1.1/overview.md).

@@ -19,7 +19,7 @@ Hub comes with the following security features, making it a robust option for se
 
 ### Transaction monitoring
 
-To avoid delays in transaction confirmation, Hub keeps a database of pending transactions so that it can automatically [promote and reattach](root://getting-started/1.0/clients/helping-a-transaction-confirm.md) them.
+To avoid delays in transaction confirmation, Hub keeps a database of pending transactions so that it can automatically [promote and reattach](root://getting-started/1.1/transfer-tokens/helping-a-transaction-confirm.md) them.
 
 ### Seed management
 
@@ -36,7 +36,7 @@ For additional security, the communication between Hub and the signing server ca
 
 ### Token protection
 
-To help users not to withdraw from [spent addresses](root://getting-started/1.0/references/glossary.md#spent-address), Hub has the following features:
+To help users not to withdraw from [spent addresses](root://getting-started/1.1/references/glossary.md#spent-address), Hub has the following features:
 
 - **Withdrawal management:** Before withdrawing tokens from a user's address, Hub makes sure that no deposits are pending for that same address, and that all previous deposits have been confirmed. To keep track of which addresses are spent, Hub stores them in the database. When an address is spent, Hub stops users from withdrawing from that same address again.
  
