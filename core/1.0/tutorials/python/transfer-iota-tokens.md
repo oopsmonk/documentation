@@ -12,15 +12,15 @@ pip install pyota
 
 ## IOTA network
 
-In this tutorial, we connect to a node on the [Devnet](root://getting-started/1.0/networks/overview.md) with the following network settings:
+In this tutorial, we connect to a node in the [Devnet](root://getting-started/1.1/networks/overview.md) with the following network settings:
 
-- **[minimum weight magnitude](root://getting-started/1.0/references/glossary.md#minimum-weight-magnitude)**: 9
+- **[minimum weight magnitude](root://getting-started/1.1/first-steps/sending-transactions.md#doing-proof-of-work)**: 9
 
-- **[Depth](root://getting-started/1.0/clients/sending-a-transaction.md#choosing-a-depth)**: 3
+- **[Depth](root://getting-started/1.1/first-steps/sending-transactions.md#choosing-a-depth)**: 3
 
 ## Step 1. Get test IOTA tokens
 
-To send test IOTA tokens on the Devnet, nodes must have a record of a greater than 0 balance for one of the addresses that belongs to your seed. To get test IOTA tokens to use on the Devnet, you can use the Devnet faucet.
+To send test IOTA tokens in the Devnet, nodes must have a record of a greater than 0 balance for one of the addresses that belongs to your seed. To get test IOTA tokens to use in the Devnet, you can use the Devnet faucet.
 
 1\. Create a new seed and back it up
 
@@ -82,7 +82,7 @@ To transfer your test tokens from one address to another, you need to create and
     ```
 
     :::info:
-    The `testnet` argument sets the [minimum weight magnitude](root://getting-started/1.0/references/glossary.md#minimum-weight-magnitude) to 9.
+    The `testnet` argument sets the [minimum weight magnitude](root://getting-started/1.1/first-steps/sending-transactions.md#doing-proof-of-work) to 9.
     :::
 
 4. Define the address to which you want to send your IOTA token
@@ -100,7 +100,7 @@ To transfer your test tokens from one address to another, you need to create and
     )
     ```
 
-6. To create a transfer bundle from your `ProposedTransaction` object, pass it to the [`send_transfer()`](https://pyota.readthedocs.io/en/latest/api.html#send-transfer) method, which handles tip selection, remote proof of work, and sending the bundle to the node. For details about this process, see [Sending a transaction](root://getting-started/1.0/clients/sending-a-transaction.md).
+6. To create a transfer bundle from your `ProposedTransaction` object, pass it to the [`send_transfer()`](https://pyota.readthedocs.io/en/latest/api.html#send-transfer) method, which handles tip selection, remote proof of work, and sending the bundle to the node. For details about this process, see [Sending transactions](root://getting-started/1.1/first-steps/sending-transactions.md).
 
     ```python
     result = api.send_transfer(transfers=[tx] )

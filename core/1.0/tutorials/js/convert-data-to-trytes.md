@@ -1,6 +1,6 @@
 # Convert data to/from ternary
 
-**The values of transaction fields must be represented in trytes. For more information about trytes, see [Ternary](root://getting-started/1.0/understanding-iota/ternary.md). To facilitate data conversion, the IOTA client libraries have built-in functions to convert data to/from trytes, trits, and ASCII characters.**
+**The values of transaction fields must be represented in trytes. To facilitate data conversion, the IOTA client libraries have built-in functions to convert data to/from trytes, trits, and ASCII characters.**
 
 ## Packages
 

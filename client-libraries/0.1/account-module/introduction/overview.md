@@ -121,7 +121,7 @@ These are examples of exported seed states in Go, Java, and JavaScript:
 
 One of the many benefits of using accounts is that you can define conditions in which your addresses are active or expired. These conditions help senders to decide whether it's safe to send tokens to an address. For this reason, addresses in accounts are called _conditional deposit addresses_ (CDA).
 
-Accounts use CDAs to help reduce the risk of withdrawing from [spent addresses](root://getting-started/1.0/references/glossary.md#spent-address). When you request IOTA tokens from someone, you can create a CDA that's active for a certain period of time. This way, you let the sender know that you intend to withdraw from that address only after that time. As a result, the sender can decide whether to make a deposit, depending on how much time is left on a CDA.
+Accounts use CDAs to help reduce the risk of withdrawing from [spent addresses](root://getting-started/1.1/references/glossary.md#spent-address). When you request IOTA tokens from someone, you can create a CDA that's active for a certain period of time. This way, you let the sender know that you intend to withdraw from that address only after that time. As a result, the sender can decide whether to make a deposit, depending on how much time is left on a CDA.
 
 ### Conditions of a CDA
 

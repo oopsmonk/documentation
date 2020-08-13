@@ -10,7 +10,7 @@ function capitalize(string)
 }
 
 function convertToDefinitionList (termsObj) {
-    var newFile = fs.createWriteStream('getting-started/1.0/references/glossary.md');
+    var newFile = fs.createWriteStream('getting-started/1.1/references/glossary.md');
 
     newFile.write('# Terminology\r\n\r\n**This termbase contains definitions of terms that are used in IOTA.**\r\n\r\nIn the interests of efficient and accurate translations, we do not use synonyms. Instead, terms have one of the following statuses:\r\n\r\n- **Preferred:** This term is used in our documentation\r\n- **Deprecated:** This term is banned, out-of-date, or obsolete');
 

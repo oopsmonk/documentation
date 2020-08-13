@@ -14,7 +14,7 @@ The test network runs one [IRI node](root://iri/1.0/overview.md) and an instance
 
 The IRI node receives transactions, validates them, and keeps an up-to-date record of users' balances.
 
-At regular intervals, Compass sends the IRI node zero-value transactions called [milestones](root://getting-started/1.0/references/glossary.md#milestone) that reference other transactions. Any transaction that's referenced by a milestone is considered confirmed. At this point, the IOTA node updates any balances that were affected by the confirmed transaction.
+At regular intervals, Compass sends the IRI node zero-value transactions called [milestones](root://getting-started/1.1/references/glossary.md#milestone) that reference other transactions. Any transaction that's referenced by a milestone is considered confirmed. At this point, the IOTA node updates any balances that were affected by the confirmed transaction.
 
 The total supply of tokens are stored on the first address of this seed: `SEED99999999999999999999999999999999999999999999999999999999999999999999999999999`.
 

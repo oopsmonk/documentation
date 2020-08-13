@@ -6,7 +6,7 @@
 
 If you start Hub and have data in the database, you must delete that data before changing any of these options:
 
-- [`--apiAddress`](../references/command-line-options.md#apiAddress): Nodes in an IOTA network keep a record of the balances of addresses. If you connect to a node in a different [IOTA network](root://getting-started/1.0/networks/overview.md), that node will not have the same record, so any balances in Hub will be invalid.
+- [`--apiAddress`](../references/command-line-options.md#apiAddress): Nodes in an IOTA network keep a record of the balances of addresses. If you connect to a node in a different [IOTA network](root://getting-started/1.1/networks/overview.md), that node will not have the same record, so any balances in Hub will be invalid.
 
 - [`--salt`](../references/command-line-options.md#salt): If you change the salt, Hub won't be able to generate the seed for any deposit addresses that are already in the database. As a result, Hub won't be able to generate the correct private keys to be able to sign sweeps that withdraw from those deposit addresses.
 
@@ -32,21 +32,21 @@ Hub needs to connect to a node's API to be able to interact with the Tangle. To 
 
 #### Development environment
 
-When testing Hub in a development environment, you should consider connecting to a node on the [Devnet](root://getting-started/1.0/networks/overview.md). This IOTA network requires less proof of work, which reduces the time it takes to create sweeps, and it uses free test IOTA tokens.
+When testing Hub in a development environment, you should consider connecting to a node in the [Devnet](root://getting-started/1.1/networks/overview.md). This IOTA network requires less proof of work, which reduces the time it takes to create sweeps, and it uses free test IOTA tokens.
 
 As well as the Devnet, you can also connect to a node in a [private Tangle](root://compass/1.0/overview.md), which allows you to configure your own IOTA network.
 
 #### Production environment
 
-When deploying Hub in a production environment, you should connect to a node on the [Mainnet](root://getting-started/1.0/networks/overview.md#mainnet). 
+When deploying Hub in a production environment, you should connect to a node in the [Mainnet](root://getting-started/1.1/networks/overview.md#mainnet). 
 
 ### --minWeightMagnitude
 
-Depending on the IOTA network of the IOTA node, set the correct [minimum weight magnitude](root://getting-started/1.0/references/glossary.md#minimum-weight-magnitude).
+Depending on the IOTA network of the IOTA node, set the correct [minimum weight magnitude](root://getting-started/1.1/references/glossary.md#minimum-weight-magnitude).
 
 ### --powMode
 
-Some nodes do not support remote [proof of work](root://getting-started/1.0/references/glossary.md#proof-of-work). In this case, configure Hub to use local proof of work. This option uses computational power on the device that is running Hub.
+Some nodes do not support remote [proof of work](root://getting-started/1.1/references/glossary.md#proof-of-work). In this case, configure Hub to use local proof of work. This option uses computational power on the device that is running Hub.
 
 ### --useHttpsIRI
 
@@ -78,7 +78,7 @@ As a result, you should also consider the maximum amount of withdrawals and depo
 
 #### Maximum number of withdrawals and deposits
 
-In a sweep, each deposit consists of an output transaction, and each withdrawal consists of at least one input transaction, depending on the security level of addresses in Hub. See [Generating addresses](root://getting-started/1.0/clients/generating-an-address.md) for more information.
+In a sweep, each deposit consists of an output transaction, and each withdrawal consists of at least one input transaction, depending on the security level of addresses in Hub.
 
 To limit the amount of time it takes to create a sweep and for the transactions in it to be confirmed, you should consider the maximum amount of deposits and withdrawals that should be included in a sweep.
 
@@ -86,7 +86,7 @@ For example, if you use security level 3 in the [--keySecLevel](../references/co
 
 ### --attachmentInterval
 
-When Hub sends a sweep to a node, it monitors it to check for confirmation. If the sweep takes longer than the attachment interval to become confirmed, Hub [promotes and reattaches](root://getting-started/1.0/clients/helping-a-transaction-confirm.md) its tail transaction.
+When Hub sends a sweep to a node, it monitors it to check for confirmation. If the sweep takes longer than the attachment interval to become confirmed, Hub [promotes and reattaches](root://getting-started/1.1/transfer-tokens/helping-a-transaction-confirm.md) its tail transaction.
 
 The attachment interval you choose should depend on the current rate of confirmed transactions per second (CTPS) in the Tangle. To check the current rate, see [tanglebeat.com](http://tanglebeat.com/).
 

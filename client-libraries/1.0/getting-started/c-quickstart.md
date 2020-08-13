@@ -276,7 +276,7 @@ Now your directory structure should look like the following:
 
 ## Step 4. Run the code
 
-It's best practice to make sure that you're connected to a synchronized node before you start sending transactions to it. This way, you know that it has an up-to-date view of the Tangle. For more information, see [Nodes](root://getting-started/1.0/understanding-iota/nodes.md).
+It's best practice to make sure that you're connected to a synchronized node before you start sending transactions to it. This way, you know that it has an up-to-date view of the Tangle.
 
 In this step, you run the code and check if it is synchronized.
 
@@ -284,7 +284,7 @@ In this step, you run the code and check if it is synchronized.
 
     ![Entering !milestone on Discord](../images/discord-milestone-check.PNG)
 
-    The Discord bot should return the current `latestMilestoneIndex` field from a [node quorum](root://getting-started/1.0/references/glossary.md#node-quorum).
+    The Discord bot should return the current `latestMilestoneIndex` field from a [node quorum](root://getting-started/1.1/references/glossary.md#node-quorum).
 
 2. Run your `hello_world.c` file
 
@@ -313,7 +313,7 @@ If the `latestMilestoneIndex` field is equal to the one you got from Discord and
 If not, try connecting to a different node. The [iota.dance website](https://iota.dance/) includes a list of Mainnet nodes. Or, you can [run your own node](root://node-software/1.0/overview.md).
 
 :::info:
-In the `features` list, you can see that this node also support [remote proof of work](root://getting-started/1.0/references/glossary.md#remote-proof-of-work) (RemotePOW). As a result, you can use this node to do proof of work instead of doing it on your local device.
+In the `features` list, you can see that this node also support [remote proof of work](root://getting-started/1.1/references/glossary.md#remote-proof-of-work) (RemotePOW). As a result, you can use this node to do proof of work instead of doing it on your local device.
 
 For more information about these fields, see the [node API reference](root://iri/1.0/references/iri-api-reference.md#getNodeInfo).
 :::

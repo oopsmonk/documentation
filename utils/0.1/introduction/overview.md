@@ -40,7 +40,7 @@ Store transaction trytes in a smaller memory space so you can later rebroadcast 
 
 The following utilities were built by the IOTA community. Use these links to find instructions for using the utilities and information about how they work.
 
-More community utilities are available on the [iota-community GitHub repository](https://github.com/iota-community).
+More community utilities are available in the [iota-community GitHub repository](https://github.com/iota-community).
 
 ---------------
 #### __MAM watcher__ ####

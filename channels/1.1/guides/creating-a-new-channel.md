@@ -10,9 +10,9 @@ To create a channel, you must start with this simple workflow.
 
 Messages can be published on any communication channel.
 
-By default, Channels comes with an API for publishing messages on the Tangle with an `Address` link type.
+By default, Channels comes with an API for publishing messages in the Tangle with an `Address` link type.
 
-The `Address` link type includes the channel address in the `address` field of a [transaction](root://getting-started/1.0/understanding-iota/transactions.md) and the message identifier in the `tag` field.
+The `Address` link type includes the channel address in the [`address`](root://getting-started/1.1/references/transaction-fields.md) field of a transaction and the message identifier in the `tag` field.
 
 ![Header structure](../images/header-structure.png)
 
@@ -43,7 +43,7 @@ The third argument defines whether the author has an [encryption key pair](#encr
 
 Only authors have signature keys to sign messages and prove ownership of the channel.
 ​
-To sign messages, the `Author` object uses the Winternitz one-time signature (W-OTS) scheme combined with a Merkle signature scheme. These signatures are quantum robust, meaning that they are resistant against attacks by quantum computers. For more information about how signatures are generated and verified, see [Signatures](root://getting-started/1.0/cryptography/signatures.md) .
+To sign messages, the `Author` object uses the Winternitz one-time signature (W-OTS) scheme combined with a Merkle signature scheme. These signatures are quantum robust, meaning that they are resistant against attacks by quantum computers.
 
 To generate the private signature keys, the `Author` object uses a pseudo-random number generator and a secret string. The public half of these keys is then used to generate the channel address.
 ​

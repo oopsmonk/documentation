@@ -92,7 +92,7 @@ iota.prepareTransfers(seed, transfers)
 
 The Devnet is similar to the Mainnet, except the tokens are free. Any transactions that you send to the Devnet do not exist on other networks such as the Mainnet.
 
-In the same way as you use the Mainnet, the easiest way to send transactions on the Devnet is to use our client libraries to build the IOTA logic of your application.
+In the same way as you use the Mainnet, the easiest way to send transactions in the Devnet is to use our client libraries to build the IOTA logic of your application.
 
 To switch between the Devnet and Mainnet, just change the `provider` field to the URL of a Devnet node such as https://nodes.devnet.iota.org:443, and change the minimum weight magnitude to 9.
 

@@ -6,7 +6,7 @@
 
 To calculate the PoW for a [transaction](../transactions/transactions.md), the values of all the transaction fields are converted to [trits](../introduction/ternary.md) and hashed, using the [Curl](https://github.com/iotaledger?utf8=%E2%9C%93&q=curl&type=&language=) [hash function](https://en.wikipedia.org/wiki/Hash_function).
 
-This process continues until the transaction hash ends in the same number of 0 trits as the ([minimum weight magnitude](root://getting-started/1.0/references/glossary.md#minimum-weight-magnitude)).
+This process continues until the transaction hash ends in the same number of 0 trits as the ([minimum weight magnitude](root://getting-started/1.1/first-steps/sending-transactions.md#doing-proof-of-work)).
 
 Whenever the transaction hash doesn't end in the correct number of 0 trits, the value of the transaction's `nonce` field is incremented and the transaction hash is hashed again.
 

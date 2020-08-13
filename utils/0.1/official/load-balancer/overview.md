@@ -47,7 +47,7 @@ In this tutorial, we use a random walk strategy that selects the next node in th
     const { composeAPI, FailMode, RandomWalkStrategy, SuccessMode } = require('@iota/client-load-balancer');
     ```
 
-2. Configure an API object with two [Devnet](root://getting-started/1.0/networks/overview.md) nodes 
+2. Configure an API object with two [Devnet](root://getting-started/1.1/networks/overview.md) nodes 
 
     ```js
     const devnetApi = composeAPI({

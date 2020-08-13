@@ -183,7 +183,7 @@ The `latestMilestoneIndex` and `latestSolidSubtangleMilestoneIndex` fields are a
 2. To check if your node is synchronized, call the `getNodeInfo()` method
 
     :::info:
-    Here, we connect to a node on the Devnet, which is one of the [IOTA networks](../references/iota-networks.md) that you can use for testing. The Devnet is similar to the Mainnet, except the tokens are free.
+    Here, we connect to a node in the Devnet, which is one of the [IOTA networks](../references/iota-networks.md) that you can use for testing. The Devnet is similar to the Mainnet, except the tokens are free.
     :::
 
 --------------------

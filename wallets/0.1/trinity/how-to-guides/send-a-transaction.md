@@ -14,7 +14,7 @@ The Addresses field is displayed only in [Advanced mode](../how-to-guides/change
 
 ## Step 1. Choose an IOTA network
 
-You can send transaction to a node on any [IOTA network](root://getting-started/1.0/networks/overview.md).
+You can send transaction to a node on any [IOTA network](root://getting-started/1.1/networks/overview.md).
 
 By default, Trinity connects to a [quorum](../concepts/node-quorum.md) of Mainnet nodes, which maintain the main IOTA network where IOTA tokens have a value.
 

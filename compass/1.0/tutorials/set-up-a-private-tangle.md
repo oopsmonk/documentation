@@ -342,6 +342,6 @@ We have two wallets that you can use:
 
 ## Next steps
 
-Try adding more nodes to your network to make a similar architecture to the [Devnet](root://getting-started/1.0/networks/overview.md)
+Try adding more nodes to your network to make a similar architecture to the [Devnet](root://getting-started/1.1/networks/overview.md)
 
 ![Multi-node private Tangle](../images/multi-node-tangle.svg)

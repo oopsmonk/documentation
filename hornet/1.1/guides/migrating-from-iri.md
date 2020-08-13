@@ -95,7 +95,7 @@ If your IRI node is connected to more than one neighbor, the migration tool will
 - Remove all your neighbors
 - Add your Hornet node as a neighbor
 
-After completing these tasks, you can follow the instructions on the [migration tool GitHub repository](https://github.com/acha-bill/iri-db-migration) to migrate your transactions from IRI to your Hornet.
+After completing these tasks, you can follow the instructions in the [migration tool GitHub repository](https://github.com/acha-bill/iri-db-migration) to migrate your transactions from IRI to your Hornet.
 
 ## Configuring your Hornet node
 

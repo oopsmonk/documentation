@@ -2,7 +2,7 @@
 
 **In this tutorial, you learn how to create a copy of a bundle and change the message in the tail transaction.**
 
-Messages in transactions are stored in their `signatureMessageFragment` field, which isn't included in the [bundle essence](root://getting-started/1.0/references/glossary.md#bundle-essence). Therefore, you can change the value of this field without changing the bundle hash.
+Messages in transactions are stored in their `signatureMessageFragment` field, which isn't included in the [bundle essence](root://getting-started/1.1/references/glossary.md#bundle-essence). Therefore, you can change the value of this field without changing the bundle hash.
 
 ## Packages
 
@@ -22,7 +22,7 @@ yarn add @iota/core @iota/converter @iota/bundle @iota/transaction @iota/transac
 
 ## IOTA network
 
-In this tutorial, we connect to a node on the [Devnet](root://getting-started/1.0/networks/overview.md).
+In this tutorial, we connect to a node in the [Devnet](root://getting-started/1.1/networks/overview.md).
 
 ## Code walkthrough
 
@@ -73,7 +73,7 @@ In this tutorial, we connect to a node on the [Devnet](root://getting-started/1.
         // Fill the bundle with the transaction trits from the bundle
         newBundle.set(Converter.trytesToTrits(asTransactionTrytes(bundle[i])), i * TRANSACTION_LENGTH);
     }
-  ```
+    ```
 
 6. Use the [`addSignatureOrMessage()`](https://github.com/iotaledger/iota.js/tree/next/packages/bundle#bundleaddsignatureormessagebundle-signatureormessage-index) method to add a new message to the tail transaction of your copy
 

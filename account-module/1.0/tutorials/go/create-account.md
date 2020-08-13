@@ -16,11 +16,11 @@ go get github.com/iotaledger/iota.go/trinary
 
 ## IOTA network
 
-In this tutorial, we connect to a node on the [Devnet](root://getting-started/1.0/networks/overview.md) with the following network settings:
+In this tutorial, we connect to a node in the [Devnet](root://getting-started/1.1/networks/overview.md) with the following network settings:
 
-- **[minimum weight magnitude](root://getting-started/1.0/references/glossary.md#minimum-weight-magnitude)**: 9
+- **[minimum weight magnitude](root://getting-started/1.1/first-steps/sending-transactions.md#doing-proof-of-work)**: 9
 
-- **[Depth](root://getting-started/1.0/clients/sending-a-transaction.md#choosing-a-depth)**: 3
+- **[Depth](root://getting-started/1.1/first-steps/sending-transactions.md#choosing-a-depth)**: 3
 
 ## Code walkthrough
 
@@ -99,7 +99,7 @@ The default plugins include the `transfer-poller` and the `promoter-reattacher` 
 
 Every 30 seconds, the `transfer-poller` plugin checks whether withdrawals have been confirmed or whether any deposits are pending.
 
-The `promoter-reattacher` plugin [promotes or reattaches](root://getting-started/1.0/clients/helping-a-transaction-confirm.md) any pending withdrawal transactions that the `transfer-poller` finds.
+The `promoter-reattacher` plugin [promotes or reattaches](root://getting-started/1.1/transfer-tokens/helping-a-transaction-confirm.md) any pending withdrawal transactions that the `transfer-poller` finds.
 
 :::info:
 The default security level for CDAs is 2. You can change this setting by passing a new security level to the `WithSecurityLevel()` method.

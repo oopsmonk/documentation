@@ -1,6 +1,6 @@
 # Check if a transaction is confirmed
 
-**Before IOTA tokens can be transferred, the transactions must be confirmed. Transactions in a bundle remain in a pending state until the tail transaction is referenced and approved by a [milestone](root://getting-started/1.0/references/glossary.md#milestone).**
+**Before IOTA tokens can be transferred, the transactions must be confirmed. Transactions in a bundle remain in a pending state until the tail transaction is referenced and approved by a [milestone](root://getting-started/1.1/the-tangle/the-coordinator.md).**
 
 ## Packages
 
@@ -20,11 +20,11 @@ yarn add @iota/core
 
 ## IOTA network
 
-In this tutorial, we connect to a node on the [Devnet](root://getting-started/1.0/networks/overview.md) with the following network settings:
+In this tutorial, we connect to a node in the [Devnet](root://getting-started/1.1/networks/overview.md) with the following network settings:
 
-- **[minimum weight magnitude](root://getting-started/1.0/references/glossary.md#minimum-weight-magnitude)**: 9
+- **[minimum weight magnitude](root://getting-started/1.1/first-steps/sending-transactions.md#doing-proof-of-work)**: 9
 
-- **[Depth](root://getting-started/1.0/clients/sending-a-transaction.md#choosing-a-depth)**: 3
+- **[Depth](root://getting-started/1.1/first-steps/sending-transactions.md#choosing-a-depth)**: 3
 
 ## Code walkthrough
 

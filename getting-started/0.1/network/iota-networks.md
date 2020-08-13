@@ -12,7 +12,7 @@ IOTA has the following public networks:
 
 The Mainnet is the IOTA network that uses the [IOTA tokens](../clients/token.md), which are traded on cryptocurrency exchanges.
 
-Production applications use this network after they have tested IOTA on the [Devnet](#devnet) or a [private Tangle](root://compass/1.0/overview.md).
+Production applications use this network after they have tested IOTA in the [Devnet](#devnet) or a [private Tangle](root://compass/1.0/overview.md).
 
 :::info:
 Cryptocurrency exchanges sell IOTA tokens in units of Mega IOTA (1,000,000), which is also written as MIOTA or Mi.
@@ -22,7 +22,7 @@ Cryptocurrency exchanges sell IOTA tokens in units of Mega IOTA (1,000,000), whi
 
 ### Minimum weight magnitude
 
-Transactions on the Mainnet must use a [minimum weight magnitude](root://getting-started/1.0/references/glossary.md#minimum-weight-magnitude) (MWM) of 14 to be valid.
+Transactions on the Mainnet must use a [minimum weight magnitude](root://getting-started/1.1/first-steps/sending-transactions.md#doing-proof-of-work) (MWM) of 14 to be valid.
 
 ### Coordinator address
 
@@ -52,11 +52,11 @@ On this network, you can test your applications and build proofs of concept that
 
 ### Minimum weight magnitude
 
-Transactions on the Devnet must use a [minimum weight magnitude](root://getting-started/1.0/references/glossary.md#minimum-weight-magnitude) (MWM) of 9 to be valid.
+Transactions in the Devnet must use a [minimum weight magnitude](root://getting-started/1.1/first-steps/sending-transactions.md#doing-proof-of-work) (MWM) of 9 to be valid.
 
 ### Coordinator address
 
-Nodes on the Devnet are all hard-coded with the following address for the [Coordinator](../network/the-coordinator.md):
+Nodes in the Devnet are all hard-coded with the following address for the [Coordinator](../network/the-coordinator.md):
 
 ```
 GYISMBVRKSCEXXTUPBWTIHRCZIKIRPDYAHAYKMNTPZSCSDNADDWAEUNHKUERZCTVAYJCNFXGTNUH9OGTW
@@ -68,7 +68,7 @@ The IOTA Foundation hosts the following nodes that you can use to connect to the
 
 #### Load balancer node
 
-This endpoint gives you access to a high-availability proxy server, which is running a node on the Devnet.
+This endpoint gives you access to a high-availability proxy server, which is running a node in the Devnet.
 
 Use the load balancer for sending transactions and requesting information about the ledger from the IOTA node.
 
@@ -76,7 +76,7 @@ Use the load balancer for sending transactions and requesting information about 
 
 #### ZMQ node
 
-This endpoint gives you access to the zero message queue of a node on the Devnet.
+This endpoint gives you access to the zero message queue of a node in the Devnet.
 
 Use the ZMQ node to listen for live transaction in the Tangle.
 
@@ -96,7 +96,7 @@ When choosing a minimum weight magnitude, you should consider the following ques
 
 ### Do you want to send test transactions that transfer IOTA tokens?
 
-When testing IOTA in a development environment, you should consider connecting to a node on the [Devnet](root://getting-started/1.0/networks/overview.md). This IOTA network requires less [proof of work](root://getting-started/1.0/references/glossary.md#proof-of-work), which reduces the time it takes to create transactions, and it uses [free test IOTA tokens](root://getting-started/1.0/clients/getting-test-tokens.md).
+When testing IOTA in a development environment, you should consider connecting to a node in the [Devnet](root://getting-started/1.1/networks/overview.md). This IOTA network requires less [proof of work](root://getting-started/1.1/references/glossary.md#proof-of-work), which reduces the time it takes to create transactions, and it uses [free test IOTA tokens](root://getting-started/1.1/transfer-tokens/get-test-tokens.md).
 
 ### Do you want to control the performance of the network?
 
@@ -104,7 +104,7 @@ When testing IOTA, you may want more control over the performance of an IOTA net
 
 ### Do you want to use the valuable IOTA token?
 
-When deploying your application in a production environment, you should connect to a node on the [Mainnet](root://getting-started/1.0/networks/overview.md#mainnet). This network uses the IOTA token that's traded on cryptocurrency exchanges.
+When deploying your application in a production environment, you should connect to a node in the [Mainnet](root://getting-started/1.1/networks/overview.md#mainnet). This network uses the IOTA token that's traded on cryptocurrency exchanges.
 
 ### Should you use a third-party node?
 

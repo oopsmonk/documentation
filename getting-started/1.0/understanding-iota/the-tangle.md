@@ -4,7 +4,7 @@
 
 The Tangle is a single source of truth. Any client, anywhere in the world, is able to send valid transactions to any node, and that transaction will be replicated across the rest of the network to form one version of truth: The Tangle.
 
-## Immutablity in the Tangle
+## Immutability in the Tangle
 
 To make the Tangle immutable, each transaction in it is attached to two previous transactions by their transaction hashes. See the `branchTransaction` and `trunkTransaction` fields in [Transactions](../understanding-iota/transactions.md).
 

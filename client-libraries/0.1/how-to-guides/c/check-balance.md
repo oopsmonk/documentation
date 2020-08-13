@@ -4,7 +4,7 @@
 
 ## IOTA network
 
-In this tutorial, we connect to a node on the [Devnet](root://getting-started/1.0/networks/overview.md).
+In this tutorial, we connect to a node in the [Devnet](root://getting-started/1.1/networks/overview.md).
 
 The network settings are defined in a `config.h` file, which we create in the [getting started guide](../../getting-started/c-quickstart.md).
 

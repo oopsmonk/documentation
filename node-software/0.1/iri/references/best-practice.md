@@ -20,13 +20,13 @@ To host these nodes it's best to make sure that the host device has enough compu
 
 ### Proof of work
 
-When you're setting up your nodes, you have the option to allow them to do [proof of work](root://getting-started/1.0/references/glossary.md#proof-of-work). When this feature is enabled, client applications can ask your node to do proof of work by calling the `attachToTangle` API endpoint. This option is called remote proof of work.
+When you're setting up your nodes, you have the option to allow them to do [proof of work](root://getting-started/1.1/references/glossary.md#proof-of-work). When this feature is enabled, client applications can ask your node to do proof of work by calling the `attachToTangle` API endpoint. This option is called remote proof of work.
 
 ![Remote proof of work](../images/remote-pow.png)
 
 Proof of work takes time and uses your node's computational power. So, depending on how often you send transactions to your nodes, you may want to keep this feature disabled by default in the [remote-limit-api](../references/iri-configuration-options.md#remote-limit-api) configuration option.
 
-This way, client applications can use other options for proof of work such as doing it themselves (local PoW) or outsourcing it to a PoW proxy server. See [Sending a transaction](root://getting-started/1.0/clients/sending-a-transaction.md).
+This way, client applications can use other options for proof of work such as doing it themselves (local PoW) or outsourcing it to a PoW proxy server.
 
 ![Local proof of work](../images/local-pow.png)
 

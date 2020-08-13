@@ -12,7 +12,7 @@ pip install pyota
 
 ## IOTA network
 
-In this tutorial, we connect to a node on the [Devnet](root://getting-started/1.0/networks/overview.md).
+In this tutorial, we connect to a node in the [Devnet](root://getting-started/1.1/networks/overview.md).
 
 ## Code walkthrough
 
@@ -35,7 +35,7 @@ In this tutorial, we connect to a node on the [Devnet](root://getting-started/1.
     ```
 
     :::info:
-    The `testnet` argument sets the [minimum weight magnitude](root://getting-started/1.0/references/glossary.md#minimum-weight-magnitude) to 9.
+    The `testnet` argument sets the [minimum weight magnitude](root://getting-started/1.1/first-steps/sending-transactions.md#doing-proof-of-work) to 9.
     :::
 
 4. Define the security level that you want to use for your address

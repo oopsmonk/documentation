@@ -1,6 +1,6 @@
 # Send a "hello world" transaction in Node.js
 
-**In this tutorial, you send a "hello world" message in a zero-value transaction. These transactions are useful for storing messages on the Tanglewithout having to send any IOTA tokens.**
+**In this tutorial, you send a "hello world" message in a zero-value transaction. These transactions are useful for storing messages in the Tanglewithout having to send any IOTA tokens.**
 
 ## Packages
 
@@ -20,11 +20,11 @@ yarn add @iota/core @iota/converter
 
 ## IOTA network
 
-In this tutorial, we connect to a node on the [Devnet](root://getting-started/1.0/networks/overview.md) with the following network settings:
+In this tutorial, we connect to a node in the [Devnet](root://getting-started/1.1/networks/overview.md) with the following network settings:
 
-- **[minimum weight magnitude](root://getting-started/1.0/references/glossary.md#minimum-weight-magnitude)**: 9
+- **[minimum weight magnitude](root://getting-started/1.1/first-steps/sending-transactions.md#doing-proof-of-work)**: 9
 
-- **[Depth](root://getting-started/1.0/clients/sending-a-transaction.md#choosing-a-depth)**: 3
+- **[Depth](root://getting-started/1.1/first-steps/sending-transactions.md#choosing-a-depth)**: 3
 
 ## Code walkthrough
 
@@ -58,7 +58,7 @@ In this tutorial, we connect to a node on the [Devnet](root://getting-started/1.
     ```
 
     :::info:
-    This address does not have to belong to anyone. To be valid, the address just needs to consist of 81 trytes. For more information about trytes, see [Ternary](root://getting-started/1.0/understanding-iota/ternary.md).
+    This address does not have to belong to anyone. To be valid, the address just needs to consist of 81 trytes.
     :::
 
 5. Define a seed
@@ -97,7 +97,7 @@ In this tutorial, we connect to a node on the [Devnet](root://getting-started/1.
     ];
     ```
 
-8. To create a bundle from your `transfers` object, pass it to the [`prepareTransfers()`](https://github.com/iotaledger/iota.js/blob/next/api_reference.md#module_core.prepareTransfers) method. Then, pass the returned bundle trytes to the [`sendTrytes()`](https://github.com/iotaledger/iota.js/blob/next/api_reference.md#module_core.sendTrytes) method, which handles tip selection, remote proof of work, and sending the bundle to the node. For details about this process, see [Sending a transaction](root://getting-started/1.0/clients/sending-a-transaction.md).
+8. To create a bundle from your `transfers` object, pass it to the [`prepareTransfers()`](https://github.com/iotaledger/iota.js/blob/next/api_reference.md#module_core.prepareTransfers) method. Then, pass the returned bundle trytes to the [`sendTrytes()`](https://github.com/iotaledger/iota.js/blob/next/api_reference.md#module_core.sendTrytes) method, which handles tip selection, remote proof of work, and sending the bundle to the node. For details about this process, see [Sending transactions](root://getting-started/1.1/first-steps/sending-transactions.md).
 
     ```js
    IOTA.prepareTransfers(seed, transfers)

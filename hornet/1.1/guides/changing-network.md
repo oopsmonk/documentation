@@ -10,7 +10,7 @@ To connect to a different IOTA network, you need to either remove those fixed ne
 
 ## Changing the network configuration
 
-Each network may use a different Coordinator and may also accept a different minimum weight magnitude, which both affect consensus. See [IOTA networks](root://getting-started/1.0/networks/overview.md) for more information.
+Each network may use a different Coordinator and may also accept a different minimum weight magnitude, which both affect consensus. See [IOTA networks](root://getting-started/1.1/networks/overview.md) for more information.
 
 Therefore, to connect to a different IOTA network, you must check these configuration fields in your configuration file.
 

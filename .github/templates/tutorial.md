@@ -1,6 +1,6 @@
 # Action-based title that starts with an imperative such as "Send your first transaction"
 
-**Short description to capture the user's attention. State the goal of the tutorial here. For example, "In this tutorial, you send a transaction to a node on the Devnet and use a Tangle explorer to inspect your transaction on the Tangle."**
+**Short description to capture the user's attention. State the goal of the tutorial here. For example, "In this tutorial, you send a transaction to a node in the Devnet and use a Tangle explorer to find your transaction in the Tangle."**
 
 ## Prerequisites
 
@@ -27,7 +27,7 @@ For example:
 ```
 ## Step 1. Connect to a node
 
-In this step, you connect to a node on the Devnet so that you ca later send it a transaction.
+In this step, you connect to a node in the Devnet so that you ca later send it a transaction.
 
 1. ...
 2. ...
@@ -39,7 +39,7 @@ For example:
 
 ```
 :::success: Congratulations :tada:
-You sucessfully sent your first transaction and you were able to use a Tangle explorer to find it on the Tangle.
+You sucessfully sent your first transaction and you were able to use a Tangle explorer to find it in the Tangle.
 :::
 ```
 

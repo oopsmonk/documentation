@@ -2,7 +2,7 @@
 
 **A private Tangle is one that you control and that contains only nodes that you know. You may want to set up a private Tangle if you want to test an application without using a public IOTA network such as the Mainnet or the Devnet where everyone can see your transactions in the public Tangle.**
 
-For this basic setup, you'll install an IRI node and Compass on the same server or virtual machine with the same configuration settings as the [Devnet](root://getting-started/1.0/networks/overview.md).
+For this basic setup, you'll install an IRI node and Compass on the same server or virtual machine with the same configuration settings as the [Devnet](root://getting-started/1.1/networks/overview.md).
 
 ![Single-node private Tangle](../images/single-node-tangle.svg)
 
@@ -356,6 +356,6 @@ If you want to send and receive transactions on the network through a user inter
 
 ## Next steps
 
-- Try adding multiple nodes to your network to make a similar architecture to the [Devnet](root://getting-started/1.0/networks/overview.md)
+- Try adding multiple nodes to your network to make a similar architecture to the [Devnet](root://getting-started/1.1/networks/overview.md)
 
 ![Multi-node private Tangle](../images/multi-node-tangle.svg)

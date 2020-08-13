@@ -25,7 +25,7 @@ You have two options for downloading the latest IRI software:
 
 ### Download the pre-built IRI Java file
 
-The pre-built IRI Java file is available on the [IOTA GitHub repository](https://github.com/iotaledger/iri/releases). Downloading this file is the quickest and simplest way to install the IRI.
+The pre-built IRI Java file is available in the [IOTA GitHub repository](https://github.com/iotaledger/iri/releases). Downloading this file is the quickest and simplest way to install the IRI.
 
 1. Install the latest security patches for your system
 

@@ -101,7 +101,7 @@ By default, Chronicle starts storing transactions from the moment it starts runn
 
 1. Go to the [archive](https://dbfiles.iota.org/?prefix=mainnet/history/).
 
-    This archive contains historical transactions in `.dmp` files. The number in the filename is the [entry point milestone](root://getting-started/1.0/references/glossary.md#entry-point-milestone). The smaller this number, the older the transactions.
+    This archive contains historical transactions in `.dmp` files. The number in the filename is the [entry point milestone](root://getting-started/1.1/references/glossary.md#entry-point-milestone). The smaller this number, the older the transactions.
 
     ![Archive](../images/archive.jpg)
 

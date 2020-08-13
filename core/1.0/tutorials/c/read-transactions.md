@@ -1,6 +1,6 @@
 # Read transactions from the Tangle in C
 
-**In this tutorial, you get [transactions](root://getting-started/1.0/understanding-iota/transactions.md) from the Tangle by connecting to a node and asking it to filter them by their addresses. Then, you decode the message in the transaction and print it to the console.**
+**In this tutorial, you get transactions from the Tangle by connecting to a node and asking it to filter them by their addresses. Then, you decode the message in the transaction and print it to the console.**
 
 ## IOTA network
 

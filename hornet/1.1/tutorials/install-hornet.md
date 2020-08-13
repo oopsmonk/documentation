@@ -4,7 +4,7 @@
 
 ## Prerequisites
 
-To make sure that your device meets the minimum requirements for running a node, see [Getting started as a node](root://getting-started/1.0/nodes/overview.md).
+To make sure that your device meets the minimum requirements for running a node, see [Getting started as a node](root://getting-started/1.1/running-nodes/running-a-node.md).
 
 ## Operating systems
 
