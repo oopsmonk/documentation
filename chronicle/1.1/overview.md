@@ -4,7 +4,7 @@
 
 By using Chronicle, you can take advantage of the built-in permanode CLI that allows you to do the following:
 
-- Store transactions in real time from an IOTA node's ZMQ feed
+- Store transactions in real time from the MQTT events of one or more IOTA nodes
 - Configure the storage settings to meet your needs
 - Search for all stored transactions, using an HTTP API
 
@@ -12,7 +12,9 @@ By using Chronicle, you can take advantage of the built-in permanode CLI that al
 
 This alpha version of Chronicle includes the following limitations:
 
-- It's not possible to filter transactions before storing them.
+- Chronicle must be connected to [Hornet nodes](root://hornet/1.1/overview.md)
+
+- It's not possible to filter transactions before storing them
 
 - If Chronicle loses power, it will stop receiving transactions and will have no way of knowing which ones it missed. Therefore, devices that run Chronicle should have a backup power supply and a stable Internet connection.
 
@@ -47,4 +49,4 @@ The source code for this project is hosted on [Github](https://github.com/iotale
 
 ## Next steps
 
-[Run the permanode service](tutorials/run-a-permanode.md) to start storing your own transactions.
+[Learn how Chronicle works](how-it-works.md).

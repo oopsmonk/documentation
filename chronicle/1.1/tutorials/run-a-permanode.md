@@ -1,6 +1,8 @@
 # Run the permanode CLI
 
-**In this tutorial, you use Chronicle's built-in permanode CLI to start storing confirmed Mainnet transactions on a local Scylla node.**
+**In this tutorial, you use Chronicle's built-in permanode CLI to start storing confirmed Mainnet transactions that are received by a Hornet node.**
+
+![Chronicle example architecture](../images/chronicle.svg)
 
 ## Prerequisites
 
@@ -26,12 +28,12 @@ To complete this tutorial, you need the following:
 
 - The latest stable version of [Rust](https://www.rust-lang.org/tools/install)
 
-- The `build-essentials`, `pkg-config`, and `libzmq3-dev` packages
+- The `build-essentials` package
 
     You can use the following command to install these packages:
 
     ```bash
-    sudo apt update && sudo apt install build-essential && sudo apt install pkg-config && sudo apt install -y --no-install-recommends libzmq3-dev
+    sudo apt-get install build-essential gcc make cmake cmake-gui cmake-curses-gui
     ```
 
 ## Step 1. Set up a Scylla node
@@ -87,12 +89,7 @@ For the purposes of this tutorial, you can start a local Scylla node in a Docker
 :::info:
 Running Scylla in a Docker container is recommended only for testing purposes.
 
-For production applications, it's best to do the following:
-- Install Scylla on a native operating system
-- Set up many Scylla nodes so that you can recover data if any of them go down
-- Set up security for your Scylla nodes
-
-For more information, see [Best practices](../guides/best-practice.md).
+For production applications install Scylla on a native operating system and follow [best practices](../guides/best-practice.md).
 :::
 
 ## Step 2. (Optional) Download historical transactions
@@ -153,7 +150,7 @@ In this step, you run the permanode CLI and examine the logs to make sure that i
 
 ```bash
 cd examples
-cargo run --release --example permanode $CONFIGPATH/config.toml
+cargo run --release --features "mainnet" --example permanode $CONFIGPATH/config.toml
 ```
 
 :::info:
@@ -231,12 +228,6 @@ These are known issues that you may find while following this tutorial and some 
 You may see this error after executing the `cargo run` command.
 
 To fix this error, [make sure you have the `build-essentials` installed](#prerequisites).
-
-### failed to run custom build command for zmq-sys v0.11.0
-
-You may see this error after executing the `cargo run` command.
-
-To fix this error, [make sure you have the `libzmq3-dev` installed](#prerequisites).
 
 ### failed to create keyspace
 
