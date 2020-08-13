@@ -4,25 +4,47 @@
 
 One of the most fundamental properties of the Tangle is that it is immutable. After a transaction is attached to the Tangle, it cannot be changed.
 
-To understand what makes the Tangle immutable, you need to know what a hashing algorithm is.
+This immutability is thanks to the unique properties of hashing algorithms.
 
-A hashing algorithm is a mathematical function that converts an input value into another compressed value. The input to the hashing algorithm can be of any length, but the output is always a fixed length.
+## Understanding hashing algorithms
 
-Values returned by a hashing algorithm are called message digests or simply hashes. For an explanation of hashing algorithms, see [Hashing Algorithms and Security](https://youtu.be/b4b8ktEV4Bg) on YouTube.
+A hashing algorithm is a mathematical function that converts an input value of any length into another compressed value of a fixed length. Values returned by a hashing algorithm are called message digests or simply hashes.
 
-## Transaction hash
+In IOTA, the hashing algorithm that's used is called [Curl](../references/glossary.md#Curl), which takes [ternary](../the-tangle/ternary.md) input values called trits and always outputs a 243-trit hash.
 
-A transaction's hash is a hash of all the values in its [transaction fields](../references/transaction-fields.md). If any of the values in a transaction's fields were to change, the transaction hash would also change.
+For example, a Curl hash of "Hello world" is the same length as a hash of all the text in this topic.
+
+Try changing the "Hello world" message to something else, and see how different the resulting hash is.
+
+:::info:
+This example converts the trits to trytes for better readability.
+:::
+
+<iframe height="400px" width="100%" src="https://repl.it/@jake91/hashing-example?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+
+## Transaction hashes and references
+
+In IOTA all the [fields of a transaction](../references/transaction-fields.md) are hashed to generate its transaction hash.
 
 To make the Tangle immutable, each transaction in it is attached to two previous transactions by referencing their transaction hashes in the `branchTransaction` and `trunkTransaction` fields.
 
 Therefore, a change to any transaction would also invalidate any transactions that are [directly or indirectly attached to it](../the-tangle/overview.md#references).
 
-## Bundle hash
+![Invalid hashes](../images/broken-hash.svg)
 
-All transactions in the same [bundle](../the-tangle/transaction-types.md#bundles) have the same bundle hash in their `bundle` field to tie them all together.
+To keep this example image simple, only the first 5 trytes of the transaction hash are displayed.
 
-This hash is derived from the **bundle essence**, which is a hash of the values of the following transaction fields:
+:::info:
+After doing [proof of work](../cryptography/proof-of-work.md), a transaction hash must end in a certain number of 0 trits.
+
+Because three 0 trits is [encoded](../the-tangle/ternary.md) as the number 9, transaction hashes often end in 9s when they include a proof of work.
+:::
+
+## Bundle hashes
+
+All transactions in the same [bundle](../the-tangle/transaction-types.md#bundles) also have the same bundle hash in their `bundle` field to tie them all together.
+
+This hash is a Curl hash of the **bundle essence**, which includes the following transaction fields:
 
 - `address`
 - `value`
@@ -34,13 +56,11 @@ This hash is derived from the **bundle essence**, which is a hash of the values 
 As a result, if any values of the bundle essence were to change, the bundle hash would change, invalidating all transactions in the bundle.
 
 :::info:
-You could change any other transaction fields in a bundle and keep the same bundle hash.
-
-As a result, only a transaction hash should be used to look up a unique transaction.
-
-For an example of changing a transaction's fields and keeping the same bundle hash, see [Change the messages in a bundle](root://core/1.0/tutorials/js/change-message-in-bundle.md).
+You could change any other transaction fields in a bundle and keep the same bundle hash. As a result, only a tail transaction hash should be used to look up a unique transaction.
 :::
 
 ## Next steps
 
 Find out what [type of data you should store in the Tangle](../the-tangle/storing-data.md).
+
+For an example of changing a transaction's fields and keeping the same bundle hash, see [Change the messages in a bundle](root://core/1.0/tutorials/js/change-message-in-bundle.md).

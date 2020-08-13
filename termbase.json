@@ -4,46 +4,53 @@
         "definition": "The terms in this category are related to clients on an IOTA network",
         "EN": {
             "address": {
-                "definition": "A public key that belongs to a seed and that has a balance of IOTA tokens on IOTA networks",
+                "definition": "A public key that belongs to a seed and that has a balance of [IOTA tokens](#iota-token) on IOTA networks",
                 "pos": "noun",
                 "status": "preferred",
-                "image": "../images/addresses.png"
-            },
+                "image": "../images/addresses.png",
+				"seeAlso":"[IOTA accounts](../accounts/overview.md)"
+			},
             "faucet": {
-                "definition": "A tool that transfers IOTA tokens to a given address",
+                "definition": "A tool that transfers [IOTA tokens](#iota-token) to a given [address](#address)",
                 "pos": "noun",
                 "status": "preferred",
-                "image": ""
-            },
+                "image": "",
+				"seeAlso":"[Available faucets](../references/faucets.md)"
+			},
             "private key": {
-                "definition": "A secret key that is derived from a seed and can be used to prove ownership of an address",
+                "definition": "A secret key that is derived from a seed and can be used to prove ownership of an address or a message in a transaction",
                 "pos": "noun",
                 "status": "preferred",
-                "image": ""
-            },
+                "image": "",
+				"seeAlso":""
+			},
             "spent address": {
                 "definition": "An address that has already been withdrawn from in a signed input transaction in the Tangle and that is unsafe to withdraw from again",
                 "pos": "noun",
                 "status": "preferred",
-                "image": ""
-            },
+                "image": "",
+				"seeAlso":"[IOTA accounts](../accounts/overview.md)"
+			},
             "security level": {
                 "definition": "Parameter that affects the security of one-time signatures",
                 "pos": "noun",
                 "status": "preferred",
-                "image": ""
-            },
+                "image": "",
+				"seeAlso":""
+			},
             "seed": {
-                "definition": "Unique password that is used to generate addresses, private keys, and signatures",
+                "definition": "Unique password that is used to generate [addresses](#address), [private keys](#private-key), and signatures",
                 "pos": "noun",
                 "status": "preferred",
-                "image": "../images/seed.png"
-            },
+                "image": "../images/seed.png",
+				"seeAlso":"[IOTA accounts](../accounts/overview.md)"
+			},
             "wallet": {
-                "definition": "Application for managing private keys and addresses",
+                "definition": "Application for managing [addresses](#address) and [private keys](#private-key)",
                 "pos": "noun",
                 "status": "preferred",
-                "image": ""
+                "image": "",
+                "seeAlso":"[Wallets](../accounts/wallets.md)"
             }
         }
     },
@@ -52,22 +59,25 @@
         "definition": "The terms in this category are related to cryptography",
         "EN": {
             "Curl": {
-                "definition": "Hashing function, designed for the Internet of things, that uses the SHA-3 sponge-based construction",
+                "definition": "Hashing algorithm, designed for the Internet of things, that uses the SHA-3 sponge-based construction",
                 "pos": "noun",
                 "status": "preferred",
-                "image": ""
-            },
+                "image": "",
+				"seeAlso":"[Immutability in the Tangle](../the-tangle/immutability.md), [How proof of work is calculated](../cryptography/proof-of-work.md)"
+			},
             "Kerl": {
-                "definition": "Ternary version of the Keccek-384 hashing function that takes a 48 byte input and produces a 243 trit output, using two's complement",
+                "definition": "Ternary version of the Keccek-384 hashing algorithm that takes a 48 byte input and produces a 243 trit output, using two's complement",
                 "pos": "noun",
                 "status": "preferred",
-                "image": ""
-            },
+                "image": "",
+				"seeAlso":"[Kerl GitHub repository](https://github.com/iotaledger/kerl)"
+			},
             "Troika": {
-                "definition": "Ternary hash function",
+                "definition": "Ternary hashing algorithm",
                 "pos": "noun",
                 "status": "preferred",
-                "image": ""
+                "image": "",
+                "seeAlso":""
             }
         }
 
@@ -77,100 +87,151 @@
         "definition": "The terms in this category are related to IOTA networks",
         "EN": {
             "blowball": {
-                "definition": "Subtangle where a large group of tip transactions reference one central transaction",
+                "definition": "[Subtangle](#subtangle) where a large group of [tip transactions](#tip-transaction) reference one central transaction, which is often a [milestone](#milestone)",
                 "pos": "noun",
                 "status": "preferred",
-                "image": "../images/blowballs.png"
+                "image": "../images/blowballs.png",
+				"seeAlso":""
             },
+            "bootstrapping attack": {
+                "definition": "An attack where a node downloads malicious snapshot files, which includes invalid transactions and balances",
+                "pos": "noun",
+                "status": "preferred",
+                "image": "",
+				"seeAlso":""
+			},
             "Coordinator": {
-                "definition": "Client that sends milestones that nodes trust to use as a consensus rule",
+                "definition": "Client that sends [milestones](#milestone) that [nodes](#node) trust to decide which [transactions](#transaction) are confirmed",
                 "pos": "noun",
                 "status": "preferred",
-                "image": ""
-            },
+                "image": "../images/milestones.gif",
+				"seeAlso":"[The Coordinator](../the-tangle/the-coordinator.md)"
+			},
             "GoShimmer node": {
-                "definition": "Node that runs the GoShimmer node software",
+                "definition": "[Node](#node) that runs the GoShimmer node software",
                 "pos": "noun",
                 "status": "preferred",
-                "image": ""
-            },
+                "image": "",
+				"seeAlso":"[GoShimmer Github repository](https://github.com/iotaledger/goshimmer)"
+			},
             "gossip": {
-                "definition": "Forward a transaction onto another node for validation",
+                "definition": "Forward a [transaction](#transaction) onto another [node](#node) for validation",
                 "pos": "verb",
                 "status": "preferred",
-                "image": ""
-            },
+                "image": "",
+				"seeAlso":"[About nodes](../running-nodes/overview.md)"
+			},
             "Hornet node": {
-                "definition": "Node that runs the Hornet node software",
+                "definition": "[Node](#node) that runs the Hornet node software",
                 "pos": "noun",
                 "status": "preferred",
-                "image": ""
-            },
+                "image": "",
+				"seeAlso":"[Hornet overview](root://hornet/1.0/overview.md)"
+			},
             "IOTA token": {
-                "definition": "Unit of value that belongs to addresses and that can be transferred over an IOTA network in transactions",
+                "definition": "Unit of value that belongs to [addresses](#address) and that can be transferred over an IOTA network in transactions",
                 "pos": "noun",
                 "status": "preferred",
-                "image": ""
-            },
+                "image": "",
+				"seeAlso":"[The origin of the IOTA token](../the-tangle/genesis.md)"
+			},
             "IRI node": {
-                "definition": "Node that runs the IRI node software",
+                "definition": "[Node](#node) that runs the IRI node software",
                 "pos": "noun",
                 "status": "preferred",
-                "image": ""
-            },
+                "image": "",
+				"seeAlso":"[IRI overview](root://iri/1.0/overview.md)"
+			},
             "local snapshot":{
-                "definition": "Process in which a node saves the current state of the Tangle in local files",
+                "definition": "Process in which a [node](#node) saves the current state of the Tangle in local files",
                 "pos": "noun",
                 "status": "preferred",
-                "image": ""
-            },
+                "image": "",
+				"seeAlso":"[About nodes](../running-nodes/overview.md)"
+			},
             "neighbor": {
-                "definition": "Relationship between nodes that gossip transaction among each other",
+                "definition": "Relationship between [nodes](#node) that gossip [transactions](#transaction) among each other",
                 "pos": "noun",
                 "status": "preferred",
-                "image": ""
-            },
+                "image": "",
+				"seeAlso":"[About nodes](../running-nodes/overview.md)"
+			},
             "node": {
                 "definition": "Device that has read and write access to the Tangle",
                 "pos": "noun",
                 "status": "preferred",
-                "image": ""
-            },
+                "image": "",
+				"seeAlso":"[About nodes](../running-nodes/overview.md)"
+			},
             "node quorum": {
-                "definition": "A group of nodes to which clients send the same API requests and compare the responses for consistency",
+                "definition": "A group of [nodes](#node) to which [clients](#clients) send the same API requests and compare the responses for consistency",
                 "pos": "noun",
                 "status": "preferred",
-                "image": ""
+                "image": "",
+				"seeAlso":"[IOTA architecture](../introduction/architecture.md)"
             },
+            "parasite chain":{
+                "definition": "An attack that aims to reduce the confirmation rate by attaching a malicious chain of transactions to the latest [subtangle](#subtangle)",
+                "pos": "noun",
+                "status": "preferred",
+                "image": "",
+				"seeAlso":""
+			},
             "permanode":{
-                "definition": "A node that never prunes transactions from its database and enables applications to search the full history of the Tangle",
+                "definition": "A [node](#node) that never prunes [transactions](#transaction) from its database and enables applications to search the full history of the Tangle",
                 "pos": "noun",
                 "status": "preferred",
-                "image": ""
-            },
+                "image": "",
+				"seeAlso":"[Chronicle overview](root://chronicle/1.0/overview.md)"
+			},
             "solidify": {
-                "definition": "Request the past cone of all milestones in the Tangle from neighbors, starting from an entry point milestone and ending at the latest one",
+                "definition": "Request the [past cone](#past-cone) of all [milestones](#milestone) in the Tangle from [neighbors](#neighbor), starting from an entry point milestone and ending at the latest one",
                 "pos": "verb",
                 "status": "preferred",
-                "image": ""
+                "image": "",
+				"seeAlso":"[About nodes](../running-nodes/overview.md)"
             },
+            "splitting attack": {
+                "definition": "An attack where [double spends](#double-spend) are attached to the Tangle on purpose to try and reduce the confirmation rate",
+                "pos": "noun",
+                "status": "preferred",
+                "image": "",
+				"seeAlso":""
+			},
             "subgraph": {
                 "definition": "See subtangle",
                 "pos": "noun",
                 "status": "deprecated",
-                "image": ""
-            },
+                "image": "",
+				"seeAlso":""
+			},
             "subtangle": {
-                "definition": "Section of the Tangle that contains transactions between a milestone and tip transactions",
+                "definition": "Section of the Tangle that contains transactions between a [milestone](#milestone) and [tip transactions](#tip-transaction)",
                 "pos": "noun",
                 "status": "preferred",
-                "image": ""
-            },
+                "image": "",
+				"seeAlso":""
+			},
             "Tangle": {
-                "definition": "Immutable data structure that contains an up-to-date history of transactions, each of which references two others",
+                "definition": "Immutable data structure that contains an up-to-date history of transactions",
                 "pos": "noun",
                 "status": "preferred",
-                "image": ""
+                "image": "",
+                "seeAlso":""
+            },
+            "TPS": {
+                "definition": "[Transactions per second](#transactions-per-second)",
+                "pos": "noun",
+                "status": "preferred",
+                "image": "",
+                "seeAlso":""
+            },
+            "transactions per second": {
+                "definition": "The number of transactions that a node processes every second",
+                "pos": "noun",
+                "status": "preferred",
+                "image": "",
+                "seeAlso":""
             }
         }
 
@@ -183,175 +244,239 @@
                 "definition": "Chain of transactions that are ordered by their `currentIndex` field and that are considered atomic by nodes",
                 "pos": "noun",
                 "status": "preferred",
-                "image": "../images/bundle.png"
-            },
+                "image": "../images/bundle.png",
+				"seeAlso":""
+			},
             "bundle essence": {
                 "definition": "The `address`, `value`, `obsoleteTag`, `currentIndex`, `lastIndex`, and `timestamp` fields of transactions in a bundle",
                 "pos": "noun",
                 "status": "preferred",
-                "image": ""
-            },
+                "image": "",
+				"seeAlso":"[Immutability in the Tangle](../the-tangle/immutability.md#bundle-hashes)"
+			},
             "child": {
-                "definition": "A transaction that is directly attached to others in the Tangle",
+                "definition": "A transaction that directly references two others, called its [parents](#parent), in the Tangle",
                 "pos": "noun",
                 "status": "preferred",
-                "image": ""
-            },
+                "image": "../images/parent-child.svg",
+				"seeAlso":""
+			},
             "confirmed": {
-                "definition": "State of a transaction when it fulfills the consensus rules of the nodes in the network",
+                "definition": "State of a [transaction](#transaction) when it is directly or indirectly referenced by a [milestone](#milestone)",
                 "pos": "adjective",
                 "status": "preferred",
-                "image": ""
+                "image": "",
+				"seeAlso":""
             },
+            "confirmation milestone index": {
+                "definition": "The index of the milestone that confirmed a given transaction",
+                "pos": "noun",
+                "status": "preferred",
+                "image": "",
+				"seeAlso":""
+			},
+            "confirmed root transaction": {
+                "definition": "The first confirmed transactions in the past cone of a tip transaction",
+                "pos": "noun",
+                "status": "preferred",
+                "image": "../images/confirmed-root-transaction.svg",
+				"seeAlso":"[Tip selection](../the-tangle/tip-selection.md)"
+			},
             "depth": {
-                "definition": "The milestone offset from which nodes start tip selection in the Tangle",
+                "definition": "The difference between the index of the latest [milestone](#milestone) and a target milestone",
                 "pos": "noun",
                 "status": "preferred",
-                "image": ""
-            },
+                "image": "../images/depth.svg",
+				"seeAlso":""
+			},
             "double spend":{
-                "definition": "A state in the Tangle when two or more transactions try to transfer the same IOTA tokens from an address",
+                "definition": "A conflict in the Tangle when two or more transactions try to transfer the same IOTA tokens from an address",
                 "pos": "noun",
                 "status": "preferred",
-                "image": ""
-            },
+                "image": "",
+				"seeAlso":""
+			},
             "entry point milestone":{
-                "definition": "The first milestone in a node's database",
+                "definition": "The milestone with the smallest index in a node's database",
                 "pos": "noun",
                 "status": "preferred",
-                "image": ""
-            },
+                "image": "",
+				"seeAlso":""
+			},
             "future cone": {
-                "definition": "A group of decendant transactions in the Tangle, starting from and including a child transaction",
+                "definition": "A group of transactions that directly or indirectly reference a [child](#child) transaction in the Tangle, including the child transaction",
                 "pos": "noun",
                 "status": "preferred",
-                "image": ""
-            },
+                "image": "../images/future-cone.svg",
+				"seeAlso":"[About the Tangle](../the-tangle/overview.md)"
+			},
             "head transaction": {
                 "definition": "Last transaction in a bundle",
                 "pos": "noun",
                 "status": "preferred",
-                "image": ""
-            },
+                "image": "",
+				"seeAlso":"[Transaction types](../the-tangle/transaction-types.md)"
+			},
             "input transaction": {
                 "definition": "Transaction with a negative value that withdraws IOTA tokens from an address",
                 "pos": "noun",
                 "status": "preferred",
-                "image": ""
-            },
+                "image": "",
+				"seeAlso":"[Transaction types](../the-tangle/transaction-types.md)"
+			},
             "local proof of work": {
                 "definition": "Proof of work that is done on the same device as the one that creates the transaction",
                 "pos": "noun",
                 "status": "preferred",
-                "image": ""
-            },
+                "image": "",
+				"seeAlso":""
+			},
             "minimum weight magnitude": {
                 "definition": "A setting for proof of work that defines the number of trailing zeros that a transaction hash must have to be accepted by nodes in an IOTA network",
                 "pos": "noun",
                 "status": "preferred",
-                "image": ""
-            },
+                "image": "",
+				"seeAlso":""
+			},
             "milestone": {
                 "definition": "Signed transaction that is sent by the Coordinator",
                 "pos": "noun",
                 "status": "preferred",
-                "image": ""
+                "image": "",
+				"seeAlso":""
             },
+            "oldest transaction root snapshot index": {
+                "definition": "The lowest [confirmation milestone index](#confirmation-milestone-index) of a transaction's [confirmed root transactions](#confirmed-root-transaction)",
+                "pos": "noun",
+                "status": "preferred",
+                "image": "",
+				"seeAlso":"[Tip selection](../the-tangle/tip-selection.md)"
+			},
             "output transaction": {
                 "definition": "Transaction with a positive value that deposits IOTA tokens into an address",
                 "pos": "noun",
                 "status": "preferred",
-                "image": ""
-            },
+                "image": "",
+				"seeAlso":"[Transaction types](../the-tangle/transaction-types.md)"
+			},
             "outsourced proof of work": {
                 "definition": "Proof of work that is done on a device that is neither a node nor the device that creates the transaction",
                 "pos": "noun",
                 "status": "preferred",
-                "image": ""
-            },
+                "image": "",
+				"seeAlso":""
+			},
             "parent": {
-                "definition": "A transaction that has others directly attached to it",
+                "definition": "A transaction that is directly referenced by at least one other, called its [child](#child), in the Tangle",
                 "pos": "noun",
                 "status": "preferred",
-                "image": ""
-            },
+                "image": "../images/parent-child.svg",
+				"seeAlso":""
+			},
             "past cone": {
-                "definition": "A group of ancestor transactions in the Tangle, starting from and including a child transaction",
+                "definition": "A group of transactions that are directly or indirectly referenced by a child transaction in the Tangle, including the child transaction",
                 "pos": "noun",
                 "status": "preferred",
-                "image": ""
-            },
+                "image": "../images/past-cone.svg",
+				"seeAlso":"[About the Tangle](../the-tangle/overview.md)"
+			},
             "pending": {
-                "definition": "State of a transaction when it's attached to the Tangle, but not yet confirmed",
+                "definition": "State of a transaction when it's attached to the Tangle, but not yet [confirmed](#confirmed)",
                 "pos": "noun",
                 "status": "preferred",
-                "image": ""
-            },
+                "image": "",
+				"seeAlso":""
+			},
             "promote": {
-                "definition": "Send a zero-value transaction that references the tail transaction of a pending bundle and the latest milestone to increase its chances of being chosen during tip selection",
+                "definition": "Send a [zero-value transaction](#zero-value-transaction) that references a lazy tip transaction and the latest [milestone](#milestone) to increase its chances of being chosen during [tip selection](#tip-selection)",
                 "pos": "verb",
                 "status": "preferred",
-                "image": ""
-            },
+                "image": "",
+				"seeAlso":"[Tip selection](../the-tangle/tip-selection.md)"
+			},
             "proof of work": {
                 "definition": "Cryptographic proof that energy has been spent in computing power to solve a puzzle",
                 "pos": "noun",
                 "status": "preferred",
-                "image": ""
-            },
+                "image": "",
+				"seeAlso":"[Doing proof of work](../first-steps/sending-transactions.md#doing-proof-of-work)"
+			},
             "reattach": {
-                "definition": "Recreate and resend a transaction that is too old to be confirmed",
+                "definition": "Recreate and resend a [transaction](#transaction) that is too old to be [confirmed](#confirmed)",
                 "pos": "verb",
                 "status": "preferred",
-                "image": ""
-            },
+                "image": "",
+				"seeAlso":"[Tip selection](../the-tangle/tip-selection.md)"
+			},
             "rebroadcast": {
-                "definition": "Send the same transaction to a node again",
+                "definition": "Send the same [transaction](#transaction) to a [node](#node) again",
                 "pos": "verb",
                 "status": "preferred",
-                "image": ""
-            },
+                "image": "",
+				"seeAlso":""
+			},
             "remote proof of work": {
-                "definition": "Proof of work that is done by a node",
+                "definition": "[Proof of work](#proof-of-work) that is done by a [node](#node)",
                 "pos": "noun",
                 "status": "preferred",
-                "image": ""
-            },
+                "image": "",
+				"seeAlso":"[Doing proof of work](../first-steps/sending-transactions.md#doing-proof-of-work)"
+			},
             "solid": {
                 "definition": "State of a transaction when a node has its past cone",
                 "pos": "noun",
                 "status": "preferred",
-                "image": ""
+                "image": "",
+				"seeAlso":""
             },
+            "state-mutating transaction": {
+                "definition": "A value transaction that results in a change in the balance of two or more [addresses](#address)",
+                "pos": "adjective",
+                "status": "preferred",
+                "image": "",
+				"seeAlso":""
+			},
             "tail transaction": {
-                "definition": "First transaction in a bundle",
+                "definition": "First transaction in a [bundle](#bundle)",
                 "pos": "noun",
                 "status": "preferred",
-                "image": ""
-            },
+                "image": "",
+				"seeAlso":"[Transaction types](../the-tangle/transaction-types.md)"
+			},
             "tip selection": {
-                "definition": "Process whereby a node selects two tip transactions from the Tangle",
+                "definition": "Process whereby a [node](#node) selects two [tip transactions](#tip-transaction) from the Tangle",
                 "pos": "noun",
                 "status": "preferred",
-                "image": ""
-            },
+                "image": "",
+				"seeAlso":"[Tip selection](../the-tangle/tip-selection.md)"
+			},
             "tip transaction": {
-                "definition": "Transaction that has no children in the Tangle",
+                "definition": "A [solid](#solid) [tail transaction](#tail-transaction) that is not yet a [parent](#parent)",
                 "pos": "noun",
                 "status": "preferred",
-                "image": ""
-            },
+                "image": "../images/tip-transactions.svg",
+				"seeAlso":""
+			},
             "transaction": {
-                "definition": "An object that is stored in the Tangle and that nodes in an IOTA network can process",
+                "definition": "An object that is stored in the Tangle and that [nodes](#node) in an IOTA network can process",
                 "pos": "noun",
                 "status": "preferred",
-                "image": ""
+                "image": "",
+				"seeAlso":"[Transaction types](../the-tangle/transaction-types.md)"
             },
+            "youngest transaction root snapshot index": {
+                "definition": "The highest [confirmation milestone index](#confirmation-milestone-index) of a transaction's [confirmed root transactions](#confirmed-root-transaction)",
+                "pos": "noun",
+                "status": "preferred",
+                "image": "",
+				"seeAlso":"[Tip selection](../the-tangle/tip-selection.md)"
+			},
             "zero-value transaction": {
                 "definition": "Transaction with no value that may contain any arbitrary data such as messages or signatures",
                 "pos": "noun",
                 "status": "preferred",
-                "image": ""
+                "image": "",
+                "seeAlso":"[Transaction types](../the-tangle/transaction-types.md)"
             }
         }
     }

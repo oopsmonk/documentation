@@ -2,8 +2,8 @@
 
 **In this tutorial, you install and run IRI as a service on a Linux device. This guide has been tested on [Ubuntu 18.04](http://releases.ubuntu.com/18.04).**
 
-:::info:
-This software is now in maintenance mode. Only critical fixes will be made. We recommend using [Hornet](root://hornet/1.0/overview.md) if you are setting up your first node.
+:::danger:
+This software is now **deprecated**. See [Hornet](root://hornet/1.1/overview.md) for an up-to-date node software.
 :::
 
 ## Prerequisites

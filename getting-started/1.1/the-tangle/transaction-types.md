@@ -7,7 +7,7 @@ Transactions can be one of two types:
 - Zero-value transactions
 - Value transactions
 
-Both of these transaction types are always grouped into a bundle.
+Both of these transaction types are always grouped into a [bundle](#bundles).
 
 ## Zero-value transactions
 

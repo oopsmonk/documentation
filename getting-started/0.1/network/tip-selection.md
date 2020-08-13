@@ -8,7 +8,7 @@ Although the tip selection algorithm is embedded in the IOTA node software, it i
 
 ## The tip selection process
 
-When a client calls the [`getTransactionsToApprove`](root://iri/1.0/references/iri-api-reference.md#getTransactionsToApprove) API endpoint, the IOTA node selects a subtangle (also known as a subtangle) of the ledger and does two weighted random walks through it. Each weighted random walk returns a tip transaction hash.
+When a client calls the [`getTransactionsToApprove`](root://hornet/1.1/references/api-reference.md#getTransactionsToApprove) API endpoint, the IOTA node selects a subtangle (also known as a subtangle) of the ledger and does two weighted random walks through it. Each weighted random walk returns a tip transaction hash.
 
 ### Subtangle selection
 

@@ -2,6 +2,10 @@
 
 **This topic contains known issues that you may find while using IRI and some suggested steps to resolve them.**
 
+:::danger:
+This software is now **deprecated**. See [Hornet](root://hornet/1.1/overview.md) for an up-to-date node software.
+:::
+
 ## The IOTA node won't synchronize with its neighbors
 
 It may take some time for the IOTA node to synchronize, so we recommend that you wait a while to see if it synchronizes by itself.

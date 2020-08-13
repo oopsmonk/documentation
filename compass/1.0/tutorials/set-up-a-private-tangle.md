@@ -267,11 +267,11 @@ If you restart Compass, you don't need to pass it the `-bootstrap` flag (Compass
 
 When the application is running, you can interact with the network through the IRI node's API port at the following address http://localhost:14265.
 
-For a list of API endpoints see the [node API reference](root://iri/1.0/references/iri-api-reference.md).
+For a list of API endpoints see the [node API reference](root://hornet/1.1/references/api-reference.md).
 
 --------------------
 ### getBalances
-Call the [`getBalances`](root://iri/1.0/references/iri-api-reference.md#getbalances) endpoint to get the total balance of your seed.
+Call the [`getBalances`](root://hornet/1.1/references/api-reference.md#getbalances) endpoint to get the total balance of your seed.
 
  ```js
  var request = require('request');

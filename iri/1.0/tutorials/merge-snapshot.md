@@ -2,6 +2,10 @@
 
 **In this tutorial, you update your IRI database to be compatible with version 1.8.6 while keeping all your existing snapshot data. To do so, you must use the merger tool to merge your snapshot data and spent addresses into a single database.**
 
+:::danger:
+This software is now **deprecated**. See [Hornet](root://hornet/1.1/overview.md) for an up-to-date node software.
+:::
+
 You have two options for using the merger tool:
 
 - Run the merger tool in a Docker container (for Linux, macOS, and Windows)

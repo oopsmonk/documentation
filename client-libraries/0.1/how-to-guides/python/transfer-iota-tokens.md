@@ -12,11 +12,7 @@ pip install pyota
 
 ## IOTA network
 
-In this tutorial, we connect to a node in the [Devnet](root://getting-started/1.1/networks/overview.md) with the following network settings:
-
-- **[minimum weight magnitude](root://getting-started/1.1/first-steps/sending-transactions.md#doing-proof-of-work)**: 9
-
-- **[Depth](root://getting-started/1.1/first-steps/sending-transactions.md#choosing-a-depth)**: 3
+In this tutorial, we connect to a node in the [Devnet](root://getting-started/1.1/networks/overview.md).
 
 ## Step 1. Get test IOTA tokens
 

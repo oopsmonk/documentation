@@ -1,6 +1,6 @@
 # Proof of work proxy server
 
-**The proof of work (PoW) proxy server does local proof of work by intercepting calls to a node's [`attachToTangle`](root://iri/1.0/references/iri-api-reference.md#attachToTangle) endpoint.**
+**The proof of work (PoW) proxy server does local proof of work by intercepting calls to a node's [`attachToTangle`](root://hornet/1.1/references/api-reference.md#attachToTangle) endpoint.**
 
 The `attachToTangle` endpoint is resource intensive. As a result, many calls to this endpoint can sometimes cause the IOTA node to crash. By installing a PoW proxy server, you can allow the connected node to process transactions faster by removing its need to do PoW.
 

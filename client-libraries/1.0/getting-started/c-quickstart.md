@@ -315,7 +315,7 @@ If not, try connecting to a different node. The [iota.dance website](https://iot
 :::info:
 In the `features` list, you can see that this node also support [remote proof of work](root://getting-started/1.1/references/glossary.md#remote-proof-of-work) (RemotePOW). As a result, you can use this node to do proof of work instead of doing it on your local device.
 
-For more information about these fields, see the [node API reference](root://iri/1.0/references/iri-api-reference.md#getNodeInfo).
+For more information about these fields, see the [node API reference](root://hornet/1.1/references/api-reference.md#getNodeInfo).
 :::
 
 :::success: Congratulations :tada:

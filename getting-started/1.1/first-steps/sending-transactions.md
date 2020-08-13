@@ -26,14 +26,10 @@ To attach your transaction to the Tangle, you need to reference the transaction 
 To request tip transactions from the Tangle, clients ask nodes to traverse the Tangle in a process called tip selection.
 
 :::info:
-In the previous [tutorial](../first-steps/hello-world.md), the `prepareTransfers()` method took care of requesting tip transactions by calling the node's [`getTransactionsToApprove`](root://iri/1.0/references/iri-api-reference.md#getTransactionsToApprove) endpoint.
+In the previous [tutorial](../first-steps/hello-world.md), the `prepareTransfers()` method took care of requesting tip transactions by calling the node's [`getTransactionsToApprove`](root://hornet/1.1/references/api-reference.md#getTransactionsToApprove) endpoint.
 :::
 
 All IOTA node software includes an algorithm for [selecting tip transactions](../the-tangle/how-transfer-tokens.md#choosing-where-to-attach-transactions). These algorithms aim to select valid tip transactions with the best chance of being confirmed.
-
-### Choosing a depth
-
-When sending a transaction to a node, you can specify a depth argument, which defines how many [milestones](../the-tangle/the-coordinator.md) in the past the node starts the tip selection algorithm. The greater the depth, the farther back in the Tangle the node starts. A greater depth increases the time that nodes take to complete tip selection, making them use more computational power.
 
 ## Doing proof of work
 
@@ -44,7 +40,7 @@ IOTA transactions must contain a proof of work to discourage clients from sendin
 An important attribute of any PoW algorithm is that it's difficult to do, but easy to validate. See [Calculating proof of work](../cryptography/proof-of-work.md). The exact difficulty of proof of work is defined by the nodes in an IOTA network in a setting called **minimum weight magnitude** (MWM).
 
 :::info:
-In the previous [tutorial](../first-steps/hello-world.md), the `sendTrytes()` method took care of doing remote proof of work by calling the node's [`attachToTangle`](root://iri/1.0/references/iri-api-reference.md#attachToTangle) endpoint.
+In the previous [tutorial](../first-steps/hello-world.md), the `sendTrytes()` method took care of doing remote proof of work by calling the node's [`attachToTangle`](root://hornet/1.1/references/api-reference.md#attachToTangle) endpoint.
 :::
 
 You have the following options for doing PoW:
@@ -66,7 +62,7 @@ Each option for PoW has its advantages and disadvantages.
 The last step is sending the transactions to the node so that it can attach the transaction to the Tangle.
 
 :::info:
-In the previous [tutorial](../first-steps/hello-world.md), the `sendTrytes()` method took care of sending your transaction by calling the node's [`broadcastTransactions`](root://iri/1.0/references/iri-api-reference.md#broadcastTransactions) endpoint.
+In the previous [tutorial](../first-steps/hello-world.md), the `sendTrytes()` method took care of sending your transaction by calling the node's [`broadcastTransactions`](root://hornet/1.1/references/api-reference.md#broadcastTransactions) endpoint.
 :::
 
 ## Next steps

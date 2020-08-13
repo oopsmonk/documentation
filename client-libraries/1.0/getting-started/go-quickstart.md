@@ -152,7 +152,7 @@ In the `features` array, you can see that this node also support [remote proof o
 
 Also, this node has its zero message queue (ZMQ) enabled, so you can use it to [listen for live transactions](root://core/1.0/tutorials/go/listen-for-transactions.md).
 
-For more information about these fields, see the [IRI API reference](root://iri/1.0/references/iri-api-reference.md#getNodeInfo).
+For more information about these fields, see the [Node API reference](root://hornet/1.1/references/api-reference.md#getNodeInfo).
 
 
 ## Run the code

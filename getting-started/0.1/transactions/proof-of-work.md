@@ -16,7 +16,7 @@ You have the following options for doing PoW.
 
 ### Remote proof of work
 
-Remote PoW is when you ask a node to do PoW for a transaction. You do this by calling the [`attachToTangle` endpoint](root://iri/1.0/references/iri-api-reference.md#attachToTangle).
+Remote PoW is when you ask a node to do PoW for a transaction. You do this by calling the [`attachToTangle` endpoint](root://hornet/1.1/references/api-reference.md#attachToTangle).
 
 ### Local proof of work
 

@@ -1,6 +1,6 @@
 # The tip selection algorithm
 
-**The following information describes what IRI does when a client calls the [getTransactionsToApprove](root://iri/1.0/references/iri-api-reference.md#getTransactionsToApprove) endpoint.**
+**The following information describes what IRI does when a client calls the [getTransactionsToApprove](root://hornet/1.1/references/api-reference.md#getTransactionsToApprove) endpoint.**
 
 When this endpoint is called, a node starts the tip selection algorithm, which is separated into the following stages:
 

@@ -12,7 +12,7 @@ To restrict the depth, nodes can define a maximum value for it in the [`MAX-DEPT
 
 If you aren't connected to your own node, you should consider doing so. This way, you can make sure that you're using a valid depth.
 
-If you want to use a third-party node, you can check the value of this configuration option by calling the [`getNodeAPIConfiguration`](root://iri/1.0/references/iri-api-reference.md#getnodeapiconfiguration) endpoint.
+If you want to use a third-party node, you can check the value of this configuration option by calling the [`getNodeAPIConfiguration`](root://hornet/1.1/references/api-reference.md#getnodeapiconfiguration) endpoint.
 
 ## Related guides
 

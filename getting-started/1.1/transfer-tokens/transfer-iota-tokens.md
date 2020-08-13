@@ -33,7 +33,7 @@ Before you send a transaction, it's best to make sure that you're connected to a
     });
     ```
 
-    This code calls the [`getNodeInfo` endpoint](root://iri/1.0/references/iri-api-reference.md), using the node's API.
+    This code calls the [`getNodeInfo` endpoint](root://hornet/1.1/references/api-reference.md), using the node's API.
 
 2. Execute the file
 

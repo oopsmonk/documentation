@@ -2,6 +2,10 @@
 
 **If you're new to IRI, you can follow this workflow topic to start learning from the beginning.**
 
+:::danger:
+This software is now **deprecated**. See [Hornet](root://hornet/1.1/overview.md) for an up-to-date node software.
+:::
+
 ## Workflow
 
 If you complete this workflow from beginning to end, you'll learn how to install, run, and manage your node.
