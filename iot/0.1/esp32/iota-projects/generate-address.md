@@ -10,10 +10,10 @@ To complete this tutorial, you need the following:
 - An LCD screen connected to your ESP32, using one of the following options:
 
     - **Connected to VSPI**
-    ![](https://github.com/oopsmonk/esp32_lib_st7735/blob/master/image/ESP32-ST7735-Wiring-VSPI.jpg)
+    ![](../images/ESP32-ST7735-Wiring-VSPI.jpg)
 
     - **Connected to HVSPI**  
-    ![](https://github.com/oopsmonk/esp32_lib_st7735/blob/master/image/ESP32-ST7735-Wiring-HSPI.jpg)
+    ![](../images/ESP32-ST7735-Wiring-HSPI.jpg)
 
 ## Architecture
 
