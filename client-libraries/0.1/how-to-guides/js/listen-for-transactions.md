@@ -37,7 +37,7 @@ In this tutorial, we connect to a node in the [Devnet](root://getting-started/1.
     sock.connect('tcp://zmq.devnet.iota.org:5556');
     ```
 
-3. If the script is executed with no additional arguments, subscribe to the [`tx`](root://iri/1.0/references/zmq-events.md) event to see all transactions, otherwise subscribe to the address event to see only transactions that were sent to that address
+3. If the script is executed with no additional arguments, subscribe to the [`tx`](root://hornet/1.1/references/events.md) event to see all transactions, otherwise subscribe to the address event to see only transactions that were sent to that address
 
     ```js
     // Check for a command-line argument
