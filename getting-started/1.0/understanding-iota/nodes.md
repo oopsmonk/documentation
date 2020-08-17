@@ -24,7 +24,7 @@ Like any distributed system, nodes in an IOTA network synchronize their database
 
 When one node, no matter where it is in the world, receives a transaction, it will try to [gossip](../references/glossary.md#gossip) it to all its neighbors. This way, all nodes eventually see all transactions and store them in their local databases.
 
-When a node is sychronized, it then has enough information to decide which transactions it considers confirmed.
+When a node is synchronized, it then has enough information to decide which transactions it considers confirmed.
 
 ## Keeping a record of the balances on addresses
 
