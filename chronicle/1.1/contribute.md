@@ -14,7 +14,7 @@ If you'd like to get involved, join the #experience channel on [Discord](https:/
 
 ## Contribute to the project's GitHub repository
 
-All the code is open source and hosted on [GitHub](https://github.com/iotaledger/chronicle) where you can do the following:
+All the code is open source and hosted on [GitHub](https://github.com/iotaledger/chronicle.rs) where you can do the following:
 
 - Report a bug
 - Suggest a new feature
