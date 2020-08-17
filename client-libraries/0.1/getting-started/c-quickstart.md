@@ -97,7 +97,6 @@ The C client library is organized in packages, which contain related methods. Al
             "rqXRfboQnoZsG4q5WTP468SQvvG5\r\n" \
             "-----END CERTIFICATE-----\r\n"
 
-    // A sensible depth for the IOTA node to use for tip selection
     #define DEPTH 3
 
     // The minimum weight magnitude for the Devnet (for the Mainnet use 14)

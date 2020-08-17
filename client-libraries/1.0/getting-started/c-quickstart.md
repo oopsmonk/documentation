@@ -140,7 +140,6 @@ In this step, you write the code that will connect to a node and call its `getNo
             "rqXRfboQnoZsG4q5WTP468SQvvG5\r\n" \
             "-----END CERTIFICATE-----\r\n"
 
-    // A sensible depth for the node to use for tip selection
     #define DEPTH 3
 
     // The minimum weight magnitude for the Devnet (for the Mainnet use 14)

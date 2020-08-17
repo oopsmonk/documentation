@@ -714,7 +714,7 @@ curl http://localhost:14265 \
 
 Gets the inclusion states of a set of transactions.
 
-This endpoint determines if a transaction is confirmed by the network (referenced by a valid milestone).
+This endpoint determines if a transaction is confirmed.
 
 :::info:
 This endpoint returns data only if the node is synchronized.

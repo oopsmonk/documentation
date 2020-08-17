@@ -30,10 +30,10 @@ In this tutorial, we connect to a node in the [Devnet](root://getting-started/1.
     Click a transaction hash in the Latest milestones box, then click the branch transaction hash. This transaction is referenced and approved by the milestone, so it is in a confirmed state.
     :::
 
-2. Pass the transaction hash to the [`getLatestInclusion()`](https://github.com/iotaledger/iota.js/blob/next/api_reference.md#module_core.getLatestInclusion) method to check if the IOTA node's latest solid subtangle milestone approves it
+2. Pass the transaction hash to the [`getInclusionStates()`](https://github.com/iotaledger/iota.js/tree/next/packages/core#module_core.getInclusionStates) method to check if the IOTA node's latest solid subtangle milestone approves it
 
     ```js
-   IOTA.getLatestInclusion(['TRANSACTION HASH'])
+   IOTA.getInclusionStates(['TRANSACTION HASH'])
     .then(states => console.log(states));
     ```
 
@@ -45,10 +45,10 @@ In this tutorial, we connect to a node in the [Devnet](root://getting-started/1.
     Click a transaction hash in the Latest transactions box. This transaction is a tip, so it is in a pending state.
     :::
 
-6. Pass the transaction hash to the `getLatestInclusion()` method to check if the IOTA node's latest solid subtangle milestone approves it
+6. Pass the transaction hash to the `getInclusionStates()` method to check if the IOTA node's latest solid subtangle milestone approves it
 
     ```js
-   IOTA.getLatestInclusion(['TRANSACTION HASH'])
+   IOTA.getInclusionStates(['TRANSACTION HASH'])
     .then(states => console.log(states));
     ```
 
