@@ -1,6 +1,6 @@
 # Tip selection
 
-**Tip selection is an algorithm that nodes use to select two tip transactions from the Tangle to maximize the confirmation rate. This topic describes why tip selection is important and how nodes select tip transactions.**
+**Tip selection is an algorithm that nodes use to select two tip transactions from the Tangle to maximize the confirmation rate and mitigate some attacks. This topic describes why tip selection is important and how nodes select tip transactions.**
 
 All transactions in the Tangle must be attached to two previous ones. This is [what makes transactions immutable](../the-tangle/immutability.md) and how new transactions are approved and [confirmed](../the-tangle/the-coordinator.md).
 
@@ -17,7 +17,7 @@ However, the tip selection algorithm selects tip transactions that:
 
 ## Types of tip transactions
 
-In the Tangle, new transactions can only be confirmed if they are directly or indirectly referenced by a milestone.
+In the Tangle, new transactions can only be confirmed if they are directly or indirectly referenced by a [milestone](../the-tangle/the-coordinator.md).
 
 As a result, the more pending transactions that are referenced by a milestone, the higher the confirmation rate.
 
@@ -32,12 +32,12 @@ Therefore, nodes categorize tip transactions into types and select only those th
 |**Type**|**Can be selected**|**Description**|
 |:-------|:----------|:----------|
 |Non-lazy|:heavy_check_mark:|Tip transactions that are attached to a subtangle in which the latest confirmed transactions were confirmed by a recent milestone
-|Semi-lazy|:heavy_check_mark:|Tip transactions whose parents are attached to a subtangle in which the latest confirmed transactions were confirmed by a recent milestone
+|Semi-lazy|:heavy_check_mark:|Tip transactions that have one parent that is attached to a subtangle in which the latest confirmed transactions were confirmed by a recent milestone
 |Lazy|:negative_squared_cross_mark:|Tip transactions that are attached to a subtangle in which the latest confirmed transactions were confirmed by an old milestone
 
 ### The difference between an old and a recent milestone
 
-Milestone are like a clock. The more milestone ticks that happen after a transaction, the older it is.
+Milestones are like a clock. The more milestone "ticks" that happen after a transaction, the older it is.
 
 As a result, nodes uses milestones to decide the age of a transaction.
 
@@ -56,6 +56,8 @@ If a transaction's YTRSI is too high it is lazy. If a transaction's OTRSI is too
 
 Nodes can define the highest YTRSI and OTRSI that they accept in their node software settings.
 
-## Milestone tip selection
+## Next steps
 
-it will select the semi-lazy tangle because you "artificially" made it heavy by stitching semi-lazy tips together through spam -> making it narrower & heavier
+[Learn about IOTA networks](../networks/overview.md).
+
+For details about the tip selection algorithm, see [RFC 0008](https://github.com/iotaledger/protocol-rfcs/blob/master/text/0008-weighted-uniform-random-tip-selection/0008-weighted-uniform-random-tip-selection.md).

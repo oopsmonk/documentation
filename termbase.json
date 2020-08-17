@@ -15,7 +15,7 @@
                 "pos": "noun",
                 "status": "preferred",
                 "image": "",
-				"seeAlso":"[Available faucets](../references/faucets.md)"
+				"seeAlso":""
 			},
             "private key": {
                 "definition": "A secret key that is derived from a seed and can be used to prove ownership of an address or a message in a transaction",

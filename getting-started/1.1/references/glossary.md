@@ -27,8 +27,6 @@ See also: [IOTA accounts](../accounts/overview.md)
 |:---------|:-------------|:-----|
 |A tool that transfers [IOTA tokens](#iota-token) to a given [address](#address)|noun|preferred|
 
-See also: [Available faucets](../references/faucets.md)
-
 ### private key
 
 |**Definition**|**Part of speech**|**Status**|

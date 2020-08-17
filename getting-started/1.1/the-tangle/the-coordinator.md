@@ -108,4 +108,4 @@ By doing so, nodes can create their own Merkle root and compare it against the o
 
 ## Next steps
 
-[Learn about IOTA accounts](../accounts/overview.md) and how you can create one to prove your ownership of transactions.
+[Learn about tip selection](../the-tangle/tip-selection.md).
