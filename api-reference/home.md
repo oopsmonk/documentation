@@ -3,7 +3,7 @@
 [Overview](/1.0/overview.md)
 ## See an overview of the available node APIs
 
-[Hornet](root://hornet/1.0/references/api-reference.md)
+[Hornet](root://hornet/1.1/references/api-reference.md)
 ## Use this API to attach transactions to the Tangle, find the balance of addresses, and find transactions.
 
 [Chronicle](root://chronicle/1.0/references/chronicle-api-reference.md)
