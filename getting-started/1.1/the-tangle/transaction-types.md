@@ -140,7 +140,7 @@ All transactions in the same bundle have the same bundle hash.
 
 Often, a bundle is a group of transactions that rely on each other's validity. For example, a transaction that deposits IOTA tokens into an address relies on another transaction to withdraw those IOTA tokens from another address. Therefore, those transactions must be in the same bundle.
 
-## Structure of a bundle
+### Structure of a bundle
 
 A bundle consists of a head, a body, and a tail, where the tail transaction is the one with a 0 in the `currentIndex` field (the first transaction in the bundle), and the head transaction is the one with the largest value in the `lastIndex` field (the last transaction in the bundle).
 
@@ -156,6 +156,18 @@ The other `branchTransaction` and `trunkTransaction` fields reference the tail t
 |1 | Transaction index 2 in this bundle| The same branch transaction hash as transaction index 0|This transaction is linked to transaction index 0 and 2 through the `trunkTransaction` field |
 |2 | Transaction index 3 in this bundle| The same branch transaction hash as transaction index 0 and 1|This transaction is linked to transaction index 1 and 3 through the `trunkTransaction` field |
 |3 | The same branch transaction hash as all other transactions in this bundle| Transaction hash of an existing transaction in the Tangle| This transaction is called the **head transaction** |
+
+### Maximum number of transactions in a bundle
+
+When you create a bundle of transactions, you get two tip transactions first before doing proof of work for each transaction.
+
+The more transactions in a bundle, the longer it takes to complete the proof of work, which means that by the time a node receives your transactions, they may be attached to an old subtangle.
+
+As a result, we recommend keeping the number of transactions in a bundle below 10 because bundles of more than 10 transactions are less likely to be confirmed.
+
+:::info:
+Keep in mind that for each input transaction, you may need up to three zero-value transactions to contain the signature, depending on the [security level](../cryptography/signatures.md) of the address.
+:::
 
 ## Next steps
 
