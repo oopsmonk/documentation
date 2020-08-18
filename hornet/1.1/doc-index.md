@@ -23,7 +23,7 @@
 [Tutorials/Linux/Set up a Grafana dashboard](/tutorials/set-up-grafana.md)
 [Tutorials/Linux/Set up a private Tangle](/tutorials/set-up-a-private-tangle-hornet.md)
 
-[References/API reference](root://hornet/1.1/references/api-reference.md)
+[References/API reference](/references/api-reference.md)
 [References/Events](/references/events.md)
 [References/Troubleshooting](/references/troubleshooting.md)
 [References/Configuration options](https://github.com/gohornet/hornet/wiki/Configuration)
