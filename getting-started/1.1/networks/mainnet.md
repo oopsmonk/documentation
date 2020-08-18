@@ -25,7 +25,7 @@ Transactions on the Mainnet must use a minimum weight magnitude (MWM) of at leas
 Nodes on the Mainnet use a Coordinator that is run by the IOTA Foundation with the following address:
 
 ```
-EQSAUZXULTTYZCLNJNTXQTQHOMOFZERHTCGTXOLTVAHKSA9OGAZDEKECURBRIXIJWNPFCQIOVFVVXJVD9
+UDYXTZBE9GZGPM9SSQV9LTZNDLJIZMPUVVXYXFYVBLIEUHLSEWFTKZZLXYRHHWVQV9MNNX9KZC9D9UZWZ
 ```
 
 ## Next steps
