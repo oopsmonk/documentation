@@ -29,6 +29,7 @@
 [References/Configuration options](https://github.com/gohornet/hornet/wiki/Configuration)
 [References/Plugins](https://github.com/gohornet/hornet/wiki/Plugins)
 [References/Tools](https://github.com/gohornet/hornet/wiki/Tools)
+[References/Release notes](https://github.com/gohornet/hornet/releases)
 [References/Changelog](changelog.md)
 
 [Community resources/Hornet Playbook](https://github.com/nuriel77/hornet-playbook)
