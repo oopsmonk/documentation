@@ -2,6 +2,10 @@
 
 **Nodes send transactions to their neighbors in data packets. These tables display the data packets that nodes gossip among each other.**
 
+:::danger:
+This software is now **deprecated**. See [Hornet](root://hornet/1.1/overview.md) for an up-to-date node software.
+:::
+
 ## Header
 
 |**Name**|**Bytes**|**Description**|

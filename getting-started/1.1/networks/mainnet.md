@@ -12,6 +12,10 @@ However, if you want to test the Mainnet, you can find a list of nodes on the fo
 
 - [thetangle.org](https://thetangle.org/nodes)
 
+## Faucets
+
+Currently, no Mainnet [faucets](../references/glossary.md#faucet) are available. If you know of any community members who offer such a faucet, please get in touch with us in the #documentation-discussion channel on [Discord](https://discord.iota.org/).
+
 ## Minimum weight magnitude
 
 Transactions on the Mainnet must use a minimum weight magnitude (MWM) of at least 14 to be valid.
@@ -21,6 +25,9 @@ Transactions on the Mainnet must use a minimum weight magnitude (MWM) of at leas
 Nodes on the Mainnet use a Coordinator that is run by the IOTA Foundation with the following address:
 
 ```
-EQSAUZXULTTYZCLNJNTXQTQHOMOFZERHTCGTXOLTVAHKSA9OGAZDEKECURBRIXIJWNPFCQIOVFVVXJVD9
+UDYXTZBE9GZGPM9SSQV9LTZNDLJIZMPUVVXYXFYVBLIEUHLSEWFTKZZLXYRHHWVQV9MNNX9KZC9D9UZWZ
 ```
 
+## Next steps
+
+See an overview of the [Devnet](../networks/devnet.md).

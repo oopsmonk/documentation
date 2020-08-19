@@ -2,6 +2,10 @@
 
 **In this tutorial, you delete your snapshot data and replace it with the latest snapshot data on the IOTA Foundation's server.**
 
+:::danger:
+This software is now **deprecated**. See [Hornet](root://hornet/1.1/overview.md) for an up-to-date node software.
+:::
+
 1. Stop IRI
 
 2. Change into the directory where you keep your IRI database

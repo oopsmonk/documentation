@@ -6,12 +6,12 @@ All transactions have an inclusion state, which is how nodes knows whether it is
 
 A positive inclusion state means that a transaction is confirmed, and a negative inclusion state means that it is still pending.
 
-To check whether a transaction is confirmed, you can use the [`getLatestInclusion()`](https://github.com/iotaledger/iota.js/blob/next/api_reference.md#module_core.getLatestInclusion) method.
+To check whether a transaction is confirmed, you can use the [`getInclusionStates()`](https://github.com/iotaledger/iota.js/tree/next/packages/core#module_core.getInclusionStates) method.
 
 This method checks if the IOTA node's latest solid milestone approves it a given transaction.
 
 ```js
-iota.getLatestInclusion(['TRANSACTION HASH'])
+iota.getInclusionStates(['TRANSACTION HASH'])
 .then(states => console.log(states));
 ```
 

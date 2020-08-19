@@ -84,11 +84,11 @@ If you want to use all the functionalities of the utilities website, you need th
 
 When the application is running, you can interact with the network through the IRI node's API port at the following address `http://localhost:14265`.
 
-See a list of [API endpoints](root://iri/1.0/references/iri-api-reference.md).
+See a list of [API endpoints](root://hornet/1.1/references/api-reference.md).
 
 --------------------
 ### GetBalances
-Using the [core JavaScript client library](root://core/1.0/overview.md) with Node.js, you can call the [`getBalances`](root://iri/1.0/references/iri-api-reference.md#getbalances) endpoint to get the total balance of the seed.
+Using the [core JavaScript client library](root://core/1.0/overview.md) with Node.js, you can call the [`getBalances`](root://hornet/1.1/references/api-reference.md#getbalances) endpoint to get the total balance of the seed.
 
 
  ```js

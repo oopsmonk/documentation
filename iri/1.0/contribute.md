@@ -2,6 +2,10 @@
 
 **Thanks for thinking about contributing to the project! We have the following ways that you can contribute.**
 
+:::danger:
+This software is now **deprecated**. See [Hornet](root://hornet/1.1/overview.md) for an up-to-date node software.
+:::
+
 ## Contribute to the project's GitHub repository
 
 All the code is open source and hosted on GitHub where you can do the following:

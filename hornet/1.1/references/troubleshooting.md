@@ -6,7 +6,15 @@
 
 It may take some time for your node to synchronize, so we recommend that you wait a while to see if it synchronizes by itself.
 
-If your node still doesn't synchronize, make sure that your neighbors are synchronized.
+If your node still doesn't synchronize, try one of the following.
+
+### Make sure your node is following the correct Coordinator
+
+On August 19, 2020, the address of the Mainnet Coordinator was changed, following a network upgrade.
+
+If your node is running on the Mainnet, restart your node, using the `--overwriteCooAddress` flag.
+
+### Check that your neighbors are synchronized
 
 In the **Neighbors** tab on the dashboard, you can see which neighbors are synchronized by the label next to their IP addresses.
 

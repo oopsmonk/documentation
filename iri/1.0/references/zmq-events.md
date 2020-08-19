@@ -2,6 +2,10 @@
 
 **This table contains the zero message queue (ZMQ) events that a node can publish.**
 
+:::danger:
+This software is now **deprecated**. See [Hornet](root://hornet/1.1/overview.md) for an up-to-date node software.
+:::
+
 All events return one or more buffer objects, which contain space-separated data. The first item in the buffer is always the name of the event. The information in the Returned data column is displayed as though the buffer had been converted to a string and split on a space character into an array.
 
 |  **Event and description** | **Returned data**

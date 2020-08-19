@@ -17,6 +17,7 @@
 [The Tangle/Origin of the IOTA token](/the-tangle/genesis.md)
 [The Tangle/How IOTA tokens are transferred](/the-tangle/how-transfer-tokens.md)
 [The Tangle/The Coordinator](/the-tangle/the-coordinator.md)
+[The Tangle/Tip selection](/the-tangle/tip-selection.md)
 
 [Networks/IOTA networks](/networks/overview.md)
 [Networks/Mainnet](/networks/mainnet.md)
@@ -52,7 +53,6 @@
 [Going further/Navigating the docs](/going-further/navigating-the-docs.md)
 [Going further/Upcoming developments](/going-further/upcoming-developments.md)
 
-[References/Faucets](/references/faucets.md)
 [References/Production checklist](/references/production-checklist.md)
 [References/Tools](/references/tools.md)
 [References/Transaction fields](/references/transaction-fields.md)
