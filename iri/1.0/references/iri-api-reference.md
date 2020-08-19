@@ -2,6 +2,10 @@
 
 **The Node API provides a simple and consistent way to get transactions from the Tangle, get a node's neighbors, or send new transactions. This API accepts HTTP requests and responds with JSON data.**
 
+:::danger:
+This software is now **deprecated**. See [Hornet](root://hornet/1.1/overview.md) for an up-to-date node software.
+:::
+
 :::warning:
 This API is in beta and subject to change. We do not recommend using this API in production applications.
 :::

@@ -5,7 +5,7 @@
 The PoW proxy server is an implementation of [Caddy](https://caddyserver.com/) that uses IOTA middleware. This middleware allows the server to intercept calls to a node's `attachToTangle` endpoint and do the PoW.
 
 :::info:
-All requests to the other IRI API endpoints are forwarded to the IOTA node.
+All requests to the other Node API endpoints are forwarded to the IOTA node.
 :::
 
 ## Prerequisites

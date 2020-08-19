@@ -307,7 +307,7 @@ You've confirmed your connection to a synchronized node. Now, you're ready to [s
 :::
 
 :::info:
-To learn what these fields mean, [see the API reference](root://iri/1.0/references/iri-api-reference.md#getNodeInfo).
+To learn what these fields mean, [see the API reference](root://hornet/1.1/references/api-reference.md#getNodeInfo).
 :::
 
 ## Run the code

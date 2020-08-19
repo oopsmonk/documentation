@@ -8,7 +8,7 @@ Although the tip selection algorithm is embedded in the IOTA node software, it i
 
 ## The tip selection process
 
-When a client calls the [`getTransactionsToApprove`](root://iri/1.0/references/iri-api-reference.md#getTransactionsToApprove) API endpoint, the IOTA node selects a subtangle (also known as a subtangle) of the ledger and does two weighted random walks through it. Each weighted random walk returns a tip transaction hash.
+When a client calls the [`getTransactionsToApprove`](root://hornet/1.1/references/api-reference.md#getTransactionsToApprove) API endpoint, the IOTA node selects a subtangle (also known as a subtangle) of the ledger and does two weighted random walks through it. Each weighted random walk returns a tip transaction hash.
 
 ### Subtangle selection
 
@@ -54,10 +54,4 @@ However, as discussed in the [whitepaper](https://iota.org/IOTA_Whitepaper.pdf),
 
 This randomness is important because if nodes chose to select their own tip transactions (for example, those that approve their own transactions), only a few lucky transactions would ever be confirmed. We discuss this theory in the paper [Equilibria in the tangle](https://arxiv.org/abs/1712.05385).
 
-![Nodes select the best tip transactions](https://cdn-images-1.medium.com/max/1600/1*Qs_KFwcXxXKuoERjfJ5xsw.jpeg)
-
-In this diagram, the black transactions are considered the best, and each new transaction tries to reference them. This situation reduces the rate at which all transactions are confirmed. 
-
 When all nodes use the tip selection algorithm, all tip transactions are selected at random. This randomness increases the rate at which new transactions are attached to the Tangle and eventually confirmed.
-
-![Comparison between a random tip selection and a non-random tip selection](https://cdn-images-1.medium.com/max/1600/1*qvNmyzQijU3PpMYvYtaxGg.jpeg)

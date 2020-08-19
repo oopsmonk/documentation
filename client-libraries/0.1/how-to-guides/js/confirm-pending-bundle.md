@@ -20,11 +20,7 @@ yarn add @iota/core
 
 ## IOTA network
 
-In this tutorial, we connect to a node in the [Devnet](root://getting-started/1.1/networks/overview.md) with the following network settings:
-
-- **[minimum weight magnitude](root://getting-started/1.1/first-steps/sending-transactions.md#doing-proof-of-work)**: 9
-
-- **[Depth](root://getting-started/1.1/first-steps/sending-transactions.md#choosing-a-depth)**: 3
+In this tutorial, we connect to a node in the [Devnet](root://getting-started/1.1/networks/overview.md).
 
 ## Step 1. Create a timer function
 
@@ -93,7 +89,7 @@ function autoPromoteReattach (tail) {
 
 To be able to check the array of tail transactions for confirmation at regular intervals, you need a function that can be passed to a `setInterval()` function.
 
-The [`getLatestInclusion()`](https://github.com/iotaledger/iota.js/blob/next/api_reference.md#module_core.getLatestInclusion) method checks if any of the tail transactions in the array have been confirmed. If any of the transactions have been confirmed this method returns `true`.
+The [`getInclusionStates()`](https://github.com/iotaledger/iota.js/tree/next/packages/core#module_core.getInclusionStates) method checks if any of the tail transactions in the array have been confirmed. If any of the transactions have been confirmed this method returns `true`.
 
 The `tail` variable stores the last tail transaction in the array so that the latest reattachment can be promoted or reattached.
 
@@ -104,7 +100,7 @@ If a tail transaction has been confirmed, it's logged to the console along with 
 ```js
 function autoConfirm(tails){
 console.log(tails);
-   IOTA.getLatestInclusion(tails)
+   IOTA.getInclusionStates(tails)
         .then(states => {
             // Check that none of the transactions have been confirmed
             if (states.indexOf(true) === -1) {

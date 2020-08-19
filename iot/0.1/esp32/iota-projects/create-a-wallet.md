@@ -12,7 +12,7 @@ To complete this tutorial, you need the following:
 
 The wallet application uses the C client library to interact with the an IOTA network.
 
-![Application architecture](https://raw.githubusercontent.com/oopsmonk/iota_esp32_wallet/master/images/esp32_wallet_block_diagram.png)
+![Application architecture](../images/esp32_wallet_block_diagram.png)
 
 ## Run the application
 

@@ -2,6 +2,10 @@
 
 **The IRI configuration options allow you to customize how your node behaves. You can choose to set these options either in the command line (CL flags) or in a .ini configuration file (config file parameters).**
 
+:::danger:
+This software is now **deprecated**. See [Hornet](root://hornet/1.1/overview.md) for an up-to-date node software.
+:::
+
 To make it easier to find the options you want to change, we've separated them into the following categories:
 
 - **API:** How the API responds and which hosts can access it

@@ -38,7 +38,7 @@ In this tutorial, we connect to a node in the [Devnet](root://getting-started/1.
 	client.Connect("tcp://zmq.devnet.iota.org:5556")
     ```
 
-3. Subscribe to the [`tx` and `sn`](root://iri/1.0/references/zmq-events.md) events to see all transactions and confirmed transactions
+3. Subscribe to the [`tx` and `sn`](root://hornet/1.1/references/events.md) events to see all transactions and confirmed transactions
 
     ```go
     client.SetSubscribe("tx")

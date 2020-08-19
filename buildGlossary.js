@@ -30,6 +30,9 @@ function convertToDefinitionList (termsObj) {
 
             if(termsObj[i].EN[term].image !== ""){
                 newFile.write(`\r\n\r\n![${term}](${termsObj[i].EN[term].image})`);
+            }
+            if(termsObj[i].EN[term].seeAlso !== ""){
+                newFile.write(`\r\n\r\nSee also: ${termsObj[i].EN[term].seeAlso}`);
             } 
         }
     }

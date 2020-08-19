@@ -2,6 +2,10 @@
 
 **In this topic, you choose an option to upgrade IRI to version 1.8.6.**
 
+:::danger:
+This software is now **deprecated**. See [Hornet](root://hornet/1.1/overview.md) for an up-to-date node software.
+:::
+
 Version 1.8.6 comes with the following changes, which aren't backwards compatible:
 
 - To save memory, empty `signatureMessageFragment` fields (all 9s) in transactions are truncated before being stored in the database

@@ -2,6 +2,10 @@
 
 **Before you run IRI, you should consider whether you need to override some of its default settings. This topic gives you some advice about what to consider.**
 
+:::danger:
+This software is now **deprecated**. See [Hornet](root://hornet/1.1/overview.md) for an up-to-date node software.
+:::
+
 ## Sending requests to the API
 
 If you want to access your node's API from any network, you must expose its API to the Internet by using one of the following options:

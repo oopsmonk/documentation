@@ -1,6 +1,6 @@
 # How Chronicle works
 
-**Chronicle receives transactions from nodes through the `trytes` [ZMQ event](root://iri/1.0/references/zmq-events.md). When Chronicle receives transactions, it stores them in a [Scylla database](https://www.scylladb.com/).**
+**Chronicle receives transactions from nodes through the `trytes` [ZMQ event](root://hornet/1.1/references/events.md). When Chronicle receives transactions, it stores them in a [Scylla database](https://www.scylladb.com/).**
 
 ## Architecture
 

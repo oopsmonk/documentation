@@ -140,7 +140,6 @@ In this step, you write the code that will connect to a node and call its `getNo
             "rqXRfboQnoZsG4q5WTP468SQvvG5\r\n" \
             "-----END CERTIFICATE-----\r\n"
 
-    // A sensible depth for the node to use for tip selection
     #define DEPTH 3
 
     // The minimum weight magnitude for the Devnet (for the Mainnet use 14)
@@ -315,7 +314,7 @@ If not, try connecting to a different node. The [iota.dance website](https://iot
 :::info:
 In the `features` list, you can see that this node also support [remote proof of work](root://getting-started/1.1/references/glossary.md#remote-proof-of-work) (RemotePOW). As a result, you can use this node to do proof of work instead of doing it on your local device.
 
-For more information about these fields, see the [node API reference](root://iri/1.0/references/iri-api-reference.md#getNodeInfo).
+For more information about these fields, see the [node API reference](root://hornet/1.1/references/api-reference.md#getNodeInfo).
 :::
 
 :::success: Congratulations :tada:

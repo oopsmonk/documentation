@@ -23,11 +23,13 @@
 [Tutorials/Linux/Set up a Grafana dashboard](/tutorials/set-up-grafana.md)
 [Tutorials/Linux/Set up a private Tangle](/tutorials/set-up-a-private-tangle-hornet.md)
 
-[References/API reference](root://iri/1.0/references/iri-api-reference.md)
+[References/API reference](/references/api-reference.md)
+[References/Events](/references/events.md)
 [References/Troubleshooting](/references/troubleshooting.md)
 [References/Configuration options](https://github.com/gohornet/hornet/wiki/Configuration)
 [References/Plugins](https://github.com/gohornet/hornet/wiki/Plugins)
 [References/Tools](https://github.com/gohornet/hornet/wiki/Tools)
+[References/Release notes](https://github.com/gohornet/hornet/releases)
 [References/Changelog](changelog.md)
 
 [Community resources/Hornet Playbook](https://github.com/nuriel77/hornet-playbook)

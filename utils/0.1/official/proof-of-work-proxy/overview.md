@@ -1,13 +1,13 @@
 # Proof-of-work proxy server
 
-**A node's [`attachToTangle`](root://iri/1.0/references/iri-api-reference.md#attachToTangle) endpoint is resource intensive. As a result, many calls to this endpoint can sometimes cause the IOTA node to crash. In this tutorial, you install a dedicated proxy server to do proof of work (PoW) to intercept calls this this endpoint and do the proof of work.**
+**A node's [`attachToTangle`](root://hornet/1.1/references/api-reference.md#attachToTangle) endpoint is resource intensive. As a result, many calls to this endpoint can sometimes cause the IOTA node to crash. In this tutorial, you install a dedicated proxy server to do proof of work (PoW) to intercept calls this this endpoint and do the proof of work.**
 
 ## Download, build, and run the proxy server
 
 The PoW proxy server is an implementation of [Caddy](https://caddyserver.com/) that uses IOTA middleware. This middleware allows the server to intercept calls to a node's `attachToTangle` endpoint and do the PoW.
 
 :::info:
-All requests to the other IRI API endpoints are forwarded to the IOTA node.
+All requests to the other Node API endpoints are forwarded to the IOTA node.
 :::
 
 ### Prerequisites

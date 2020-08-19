@@ -30,7 +30,7 @@ In this tutorial, we connect to a node in the [Devnet](root://getting-started/1.
     socket.connect('tcp://zmq.devnet.iota.org:5556')
     ```
 
-3. Subscribe to the [`sn`](root://iri/1.0/references/zmq-events.md) event to see confirmed transactions
+3. Subscribe to the [`sn`](root://hornet/1.1/references/events.md) event to see confirmed transactions
 
     ```python
     socket.subscribe('sn')

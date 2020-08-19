@@ -33,7 +33,7 @@ Before you send a transaction, it's best to make sure that you're connected to a
     });
     ```
 
-    This code calls the [`getNodeInfo` endpoint](root://iri/1.0/references/iri-api-reference.md), using the node's API.
+    This code calls the [`getNodeInfo` endpoint](root://hornet/1.1/references/api-reference.md), using the node's API.
 
 2. Execute the file
 
@@ -62,27 +62,20 @@ In this step, you transfer your IOTA tokens from one of your addresses to anothe
 - One output transaction to deposit 1 i into your other address
 - One output transaction to deposit the remaining IOTA tokens into another one of your addresses
 
-1. Define the [depth](../first-steps/sending-transactions.md#choosing-a-depth) for tip selection and the minimum weight magnitude for [proof of work](../first-steps/sending-transactions.md#doing-proof-of-work)
-
-    ```js
-    const depth = 3;
-    const minimumWeightMagnitude = 9;
-    ```
-
-2. Define your seed
+1. Define your seed
 
     ```js 
     const seed =
     '';
     ```
 
-3. Define the address to which you want to send your IOTA tokens
+2. Define the address to which you want to send your IOTA tokens
 
     ```js
     const receivingAddress = ""
     ```
 
-4. Create a `transfers` object to specify the amount of IOTA tokens you want to transfer and the address to send the tokens to
+3. Create a `transfers` object to specify the amount of IOTA tokens you want to transfer and the address to send the tokens to
 
     ```js
     const transfers = [
@@ -93,7 +86,7 @@ In this step, you transfer your IOTA tokens from one of your addresses to anothe
     ]
     ```
 
-5. To create a bundle from your `transfers` object, pass it to the [`prepareTransfers()`](https://github.com/iotaledger/iota.js/blob/next/api_reference.md#module_core.prepareTransfers) method
+4. To create a bundle from your `transfers` object, pass it to the [`prepareTransfers()`](https://github.com/iotaledger/iota.js/blob/next/api_reference.md#module_core.prepareTransfers) method
 
     ```js
     const bundle = await iota.prepareTransfers(seed, transfers);
@@ -109,14 +102,21 @@ In this step, you transfer your IOTA tokens from one of your addresses to anothe
 
     If the amount you want to transfer is less than the balance of your address, this method creates another output transaction to transfer the remaining IOTA tokens to a new address that belongs to your seed.
     
-6. Pass your bundle to the [`sendTrytes()`](https://github.com/iotaledger/iota.js/blob/next/api_reference.md#module_core.sendTrytes) method, which handles tip selection, remote proof of work, and sending the transactions to the node
+5. Pass your bundle to the [`sendTrytes()`](https://github.com/iotaledger/iota.js/blob/next/api_reference.md#module_core.sendTrytes) method, which handles tip selection, remote proof of work, and sending the transactions to the node
 
     ```js
+    const depth = 3;
+    const minimumWeightMagnitude = 9;
+    
     const response = await iota.sendTrytes(bundle, depth, minimumWeightMagnitude);
 
     console.log('Bundle sent');
     response.map(tx => console.log(tx));
     ```
+
+    :::info:
+    Nodes no longer require you to use the `depth` and `minimumWeightMagnitude` parameters. However, the client libraries still require them. Therefore, this sample code still includes them.
+    :::
 
 In the console, you'll see the transaction objects in your bundle. For example:
 

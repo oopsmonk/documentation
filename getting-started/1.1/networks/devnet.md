@@ -16,11 +16,16 @@ Use this URL for sending transactions and requesting information about the Tangl
 
 ### ZMQ node
 
-The IOTA Foundation hosts many nodes behind the following load balancer:
-
 Use this endpoint to poll the node for new transactions.
 
 **URL:** tcp://zmq.devnet.iota.org:5556
+
+## Faucets
+
+Use the following [faucets](../references/glossary.md#faucet) to transfer up to 1 Ki of IOTA tokens to one of your addresses in the Devnet:
+
+- **[Official faucet](https://faucet.devnet.iota.org/):** Distributes tokens in batches of 1 Ki
+- **[Community faucet](https://faucet.einfachiota.de/):** Distributes tokens in batches of up to 1 Ki
 
 ## Minimum weight magnitude
 
@@ -34,4 +39,6 @@ Nodes in the Devnet use a Coordinator that is run by the IOTA Foundation with th
 GYISMBVRKSCEXXTUPBWTIHRCZIKIRPDYAHAYKMNTPZSCSDNADDWAEUNHKUERZCTVAYJCNFXGTNUH9OGTW
 ```
 
+## Next steps
 
+See an overview of the [Comnet](../networks/comnet.md).

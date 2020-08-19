@@ -2,6 +2,10 @@
 
 **Clients can abuse the open API port of an IRI node by spamming API requests to it. To restrict API requests by IP address or to limit the number of API requests, you can connect your IRI node to a reverse proxy server. In this tutorial, you'll install [Nginx](https://docs.nginx.com/nginx/admin-guide/web-server/reverse-proxy/) on the same Linux server as your IRI node.**
 
+:::danger:
+This software is now **deprecated**. See [Hornet](root://hornet/1.1/overview.md) for an up-to-date node software.
+:::
+
 ## Step 1. Install Nginx as a reverse proxy server
 
 Nginx is a web server which can also be used as a reverse proxy, load balancer, mail proxy and HTTP cache.

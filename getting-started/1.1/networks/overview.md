@@ -34,3 +34,7 @@ Every increment of the MWM triples the difficulty of the PoW.
 ## Coordinator address
 
 In the current IOTA networks, nodes rely on the Coordinator to reach a consensus, therefore each one is hard-coded with the address of a Coordinator. Nodes use this address to validate the Coordinator's signatures in milestones.
+
+## Next steps
+
+See an overview of the [Mainnet](../networks/mainnet.md).
