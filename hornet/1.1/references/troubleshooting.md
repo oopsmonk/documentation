@@ -12,9 +12,7 @@ If your node still doesn't synchronize, try one of the following.
 
 On August 19, 2020, the address of the Mainnet Coordinator was changed, following a network upgrade.
 
-If your node is running on the Mainnet, restart your node, using the following flag:
-
-`--overwriteCooAddress UDYXTZBE9GZGPM9SSQV9LTZNDLJIZMPUVVXYXFYVBLIEUHLSEWFTKZZLXYRHHWVQV9MNNX9KZC9D9UZWZ`
+If your node is running on the Mainnet, restart your node, using the `--overwriteCooAddress` flag.
 
 ### Check that your neighbors are synchronized
 
