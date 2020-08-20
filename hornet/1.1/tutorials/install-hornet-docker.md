@@ -94,6 +94,7 @@ If you don't have Docker Compose, you can build the Docker image from the Docker
 
     ```bash
     docker run --rm -v $(pwd)/config.json:/app/config.json:ro -v $(pwd)/latest-export.gz.bin:/app/latest-export.gz.bin:ro -v $(pwd)/mainnetdb:/app/mainnetdb --name hornet --net=host hornet:latest
+    ```
 
     :::info:
     To make Hornet start on every reboot, add the `--restart=always` flag to the `docker run` command.
