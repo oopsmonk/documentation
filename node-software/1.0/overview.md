@@ -5,7 +5,7 @@
 -------------------------
 ![Hornet](images/hornet.png)
 ## [Hornet](root://hornet/1.1/overview.md)
-Hornet is the current node software for running nodes on any IOTA networks. This implementation will continue to be updated to include the protocol changes in [Chrysalis](https://roadmap.iota.org/chrysalis).
+Hornet is the current node software for running nodes on any IOTA networks. This implementation will continue to be updated to include the protocol changes in Chrysalis
 -------------------------
 
 -------------------------
@@ -23,6 +23,6 @@ GoShimmer implements a prototype of an IOTA network without the Coordinator. Thi
 -------------------------
 ![IRI](images/IRI.png)
 ## [IRI](root://iri/1.0/overview.md)
-IRI was the original IOTA reference implementation for the IOTA Mainnet. This software is now **deprecated**. See [Hornet](root://hornet/1.1/overview.md) for an up-to-date node software.
+IRI was the original IOTA reference implementation for the IOTA Mainnet. This software is now **deprecated**. See Hornet for an up-to-date node software.
 -------------------------
 
