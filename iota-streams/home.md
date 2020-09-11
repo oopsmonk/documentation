@@ -1,9 +1,9 @@
 # Streams is a cryptographic framework for building cryptographic messaging protocols.
 
-[Streams overview](/1.0/overview.md)
+[Streams overview](/1.1/overview.md)
 ## Learn what the Streams framework is and what you can build with it
 
-[How Streams works](/1.0/get-started/building-a-protocol.md)
+[How Streams works](/1.1/guides/building-a-protocol.md)
 ## Learn how to build your own Streams protocols
 
 [Get started with Channels](root://channels/1.1/overview.md)
