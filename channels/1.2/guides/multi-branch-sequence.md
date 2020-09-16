@@ -15,7 +15,7 @@ Upon creation of a new channel, a flag indicating which of these two models is t
 |Multi branching| Multiple branches allows a channel to have multiple publishers whilest maintaining a chronological order | Maintaining a sequence requires a second message send, and leads to a roundabout reading experience if not properly managed|
 
 :::info:
-If you never plan to have more than 1 publisher (The author) in your channel, multi branching has no advantage for you. 
+If you never plan to have more than 1 publisher (The `Author`) in your channel, multi branching has no advantage for you. 
 :::
 
 ## Single branching
@@ -24,7 +24,8 @@ If you never plan to have more than 1 publisher (The author) in your channel, mu
 
 ![Message flow in a single branch scenario](../images/sequence-single-branch.jpg)
 
-
+As each participant processes a message, they will update their state and be able to process the following message. Once all messages are processed, all participants will have the same state. 
+For more information about the state, see [How it works](../how-it-works.md).
 
 ## Multi branching
 
