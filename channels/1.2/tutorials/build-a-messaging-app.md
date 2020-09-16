@@ -194,13 +194,14 @@ In this step, you write a function that creates and publishes an alert about bre
     client.send_message_with_options(&message.0, send_opt)?;
     println!("Published signed message");
     ```
-8. Optionally publish the sequence message on the channel
+8. Publish the sequence message on the channel
 
     ```rust
     let sequence = message.1.unwrap();
     client.send_message_with_options(&sequence, send_opt)?;
     println!("Published sequence message");
     ```
+    Depending on your choice in step 4.2, you can skip this step.
 
     `message.1` is not available when we are not using multi branching on the author, thus we need to unwrap the `Option` first.
 
@@ -210,7 +211,10 @@ In this step, you write a function that creates and publishes an alert about bre
     ```rust
      Ok(sequence.link)
     ```
-
+    If you are not using multi branching, there is no need to publish the message in step 8. In that case you return the signed message link instead
+    ```rust
+     Ok(message.0.link)
+    ```
 ## Step 4. Create the author
 
 In this step, you create the main function that calls the ones you just created.
@@ -261,6 +265,7 @@ In this step, you create the main function that calls the ones you just created.
     let mut author = Author::new("MYAUTHORSECRETSTRINGAPWOQ9", encoding, PAYLOAD_BYTES, multi_branching_flag);
     ```
 
+    Depending on the `multi_branching_flag` here, you have to send an extra message in step 3.8 for your message to be read. 
     For more information about creating an author, see [Creating a new channel](../guides/creating-a-new-channel.md).
 
     :::danger:Do not share the secret string
