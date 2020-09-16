@@ -7,17 +7,20 @@ To create a subscriber, you need an instance of the `Subscriber` object, which y
 Subscribers can have one of the following encryption keys to use for sending `Subscribe` messages:
 
 - A pre-shared key
-- An NTRU key pair
+- An X25519 key pair
 
-The NTRU keys can be generated when the `Subscriber` object is created.
+The X25519 keys are generated when the `Subscriber` object is created using another generated ed25519 key and a `secret`.
 
 ```rust
-let mut subscriber = Subscriber::new("MYSUBSCRIBERSECRETSTRING", true);
+use iota_streams::app_channels::api::tangle::Subscriber;
+use iota_streams::app::transport::tangle::PAYLOAD_BYTES;
+
+let encoding = "utf-8";
+let mut subscriber = Subscriber::new("MYSUBSCRIBERSECRETSTRING", encoding, PAYLOAD_BYTES);
 ```
 
-The first argument is the subscriber's secret, which is used by a [pseudo-random number generator](https://en.wikipedia.org/wiki/Pseudorandom_number_generator) (PRNG) to generate the encryption key pair and to generate message identifiers.
+The first argument is the subscriber's `secret`, which is used by the [pseudo-random number generator](https://en.wikipedia.org/wiki/Pseudorandom_number_generator) (PRNG) to generate the encryption key pair and to generate message identifiers.
 
-The second argument defines whether the subscriber has an NTRU key pair. This argument must be true if you want to be able to publish `Subscribe` messages.
-
+The second argument is the encoding type of your messages, usually set to `utf-8`. `PAYLOAD_BYTES` is required for splitting up your message, as each Tangle transaction can only hold `PAYLOAD_BYTES`, but your message can be bigger.
 
 

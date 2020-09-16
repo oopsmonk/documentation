@@ -43,7 +43,7 @@ See [Linking messages](../guides/linking-messages.md) for more information.
 
 Instead of allowing subscribers to request access to a session key, you can choose authorized subscribers before announcing the channel. These subscribers may come from an external source such as a list of members' email addresses in a database.
 
-To set up subscribers before announcing the channel, you can choose them in advance and either establish a pre-shared key or request their NTRU keys.
+To set up subscribers before announcing the channel, you can choose them in advance and either establish a pre-shared key or request their X25519 keys.
 
 The author can then later use these keys to publish a `Keyload` message.
 

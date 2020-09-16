@@ -9,4 +9,4 @@
 5. [Publishing public payloads](../guides/publishing-public-data.md)
 6. [Authorizing subscribers](../guides/authorizing-subscribers.md)
 7. [Publishing masked payloads for authorized subscribers](../guides/publishing-encrypted-data.md)
-
+8. [Bonus: Sequencing with branches](../guides/multi-branch-sequence.md)

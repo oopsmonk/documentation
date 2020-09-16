@@ -35,6 +35,7 @@ The following message type is used by the author to publish public or masked pay
 |**Message type**| **Description**|  **How and when it's used**|
 |:-----------|:-----------|:---------------------------------------|
 |![TaggedPacket](../images/taggedpacket.png)| Publishes public and masked payloads that are authenticated with a [message authentication code](https://searchsecurity.techtarget.com/definition/message-authentication-code-MAC). |The MAC code is used to prove that the message is unchanged. These messages are anonymous, unless the author publishes a `SignedPacket` message and links it to one of them|
+|![Sequence](../images/sequencepacket.png)|Special message type used as a reference pointer to a messages in a multi branch implementation. | Contains the essence necessary to derive the referenced message’s identification marker for retrieval. See [Multi branching using Sequencing](../guides/multi-branch-sequence.md)
 
 ## Creating messages
 
@@ -49,3 +50,7 @@ The author and subscribers process messages according to their type, using a cor
 The `unwrap()` method uses the author's or subscriber's state to process a message and extract the message's content.
 ​
 For example, when a subscriber processes a `Keyload` message, the `unwrap_keyload()` method uses the subscriber's state to decrypt the session key. Then, the result of processing the `Keyload` message would be added to the subscriber's spongos state, which can be used to decrypt payloads in future `TaggedPacket` and `SignedPacket` messages.
+
+## Sequencing message
+
+Sequencing messages are created when `multi branching` is enabled and a `Keyload`, `SignedPacked` or `TaggedPacket` packet is made. Handling these packets using `unwrap_sequence` will result in a [message link](../guides/sending-links.md) pointing to the message containing the new `Publisher` payload

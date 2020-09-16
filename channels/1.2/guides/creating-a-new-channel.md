@@ -29,25 +29,31 @@ The first step in starting a channel is to create an instance of the `Author` ob
 use iota_streams::{
     app_channels::api::tangle::{Author}
 };
+use iota_streams::app::transport::tangle::PAYLOAD_BYTES;
 
-let mut author = Author::new("AUTHORSECRET", 3, true);
+let encoding = "utf-8";
+let multi_branching_flag = true;
+let mut author = Author::new("MYAUTHORSECRETSTRINGAPWOQ9", encoding, PAYLOAD_BYTES, multi_branching_flag);
+
 ```
 
 The first argument is the author's secret, which is used by a [pseudo-random number generator](https://en.wikipedia.org/wiki/Pseudorandom_number_generator) (PRNG) to generate the author's [signature keys](#signature-keys) and message identifiers.
 
-The second argument is the height of the Merkle tree, which is used to define how many signature keys the author has. To calculate the number of signature keys an author has, use this formula: Number of signature keys = 2<sup>height</sup>. For example a height of 3 would result in 8 signature keys, which could be used to sign 8 messages.
+The second argument is the encoding type of your messages, usually set to `utf-8`. `PAYLOAD_BYTES` is required for splitting up your message, as each Tangle transaction can only hold `PAYLOAD_BYTES`, but your message can be bigger.
     ​
-The third argument defines whether the author has an [encryption key pair](#encryption-keys). This argument must be `true` if you plan on [managing authorized subscribers on the channel](../guides/authorizing-subscribers.md).
+The last argument defines what type of tree structure you wish to use for your branches. What this does can be found in-depth at [Sequencing with branches](../guides/multi-branch-sequence.md).
 
 ### Signature keys
 
 Only authors have signature keys to sign messages and prove ownership of the channel.
 ​
-To sign messages, the `Author` object uses the Winternitz one-time signature (W-OTS) scheme combined with a Merkle signature scheme. These signatures are quantum robust, meaning that they are resistant against attacks by quantum computers.
+To sign messages, the `Author` object uses the Ed25519 signature, which is a signature scheme in EdDSA family. 
+
+The private key is a 256-bit random number. Public key is a 256-bit number deterministically calculated from a private key.
+
+More information on the signature can be found in the [RFC803](https://tools.ietf.org/html/rfc8032).
 
 To generate the private signature keys, the `Author` object uses a pseudo-random number generator and a secret string. The public half of these keys is then used to generate the channel address.
-​
-![Example of a Merkle tree](../images/merkle-tree-channel.png)
 
 ## Announcing a channel
 
@@ -68,7 +74,7 @@ To publish a message in the Tangle, you need the following:
 - The `Transport` trait for the Tangle
 
 ```rust
-use iota_lib_rs::prelude::iota_client;
+use iota::{client as iota_client,};
 use iota_streams::app::transport::tangle::client::SendTrytesOptions;
 use iota_streams::app_channels::api::tangle::{Transport};
 ```
@@ -80,7 +86,8 @@ The `iota_client` object is extended to implement the [`Transport` trait for the
 
 ```rust
 // Connect to a node
-let mut client = iota_client::Client::new("https://nodes.devnet.iota.org:443");
+let mut client = iota_client::Client::get();
+iota_client::Client::add_node("https://nodes.devnet.iota.org:443").unwrap();
 
 // Change the default settings to use a lower minimum weight magnitude for the Devnet
 let mut send_opt = SendTrytesOptions::default();
