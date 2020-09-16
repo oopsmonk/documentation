@@ -12,7 +12,6 @@
 [Guides/Publishing public payloads](/guides/publishing-public-data.md)
 [Guides/Authorizing subscribers](/guides/authorizing-subscribers.md)
 [Guides/Publishing encrypted data for authorized subscribers](/guides/publishing-encrypted-data.md)
-[Guides/Generating new signature keys](/guides/generating-new-signature-keys.md)
 
 [Tutorials/Build your first application](/tutorials/build-a-messaging-app.md)
 
