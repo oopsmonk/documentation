@@ -10,7 +10,7 @@ The difference between these message types is that `TaggedPacket` messages are a
 
 ## Linking
 
-When publishing public payloads in `SignedPacket` messages, those messages should be linked to either an `Announce` message or a previous `ChangeKey` message so that subscribers can verify the signature.
+When publishing public payloads in `SignedPacket` messages, those messages should be linked to an `Announce` message so that subscribers can verify the signature.
 
 ![Annonce message linked to a SignedPacket message](../images/signedpacket-workflow.png)
 

@@ -4,7 +4,7 @@
 
 The way that messages are linked affects whether receivers (the author and subscribers) have the correct information in their [states](../how-it-works.md#states) to be able to process messages correctly.
 
-By linking a message to another, you declare it as a dependency. For example, to allow subscribers to verify a signature in a `SignedPacket` message, that message relies on another that contains the public key such as the `Announce` message or a `ChangeKey` message. In this case, you could link the signed message to either of those messages that contain the latest public key.
+By linking a message to another, you declare it as a dependency. For example, to allow subscribers to verify a signature in a `SignedPacket` message, that message relies on another that contains the public key such as the `Announce` message. In this case, you could link the signed message to either of those messages that contain the latest public key.
 
 In this example, the subscriber would need to process the `Announce` message before being able to process the `SignedPacket` message.
 

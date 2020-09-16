@@ -30,9 +30,9 @@ If you see this message please reach out to us in the #streams-discussion on [Di
 
 ## No Author's MSS public key found
 
-You may see this error when trying to process a message that relies on information in an `Announce` and/or `ChangeKey` message.
+You may see this error when trying to process a message that relies on information in an `Announce` message.
 
-To resolve this error, you first need to process these messages by using the `unwrap_announcement()` or `unwrap_change_key()` method to add the channel information to the subscriber's [state](../how-it-works.md#states).
+To resolve this error, you first need to process these messages by using the `unwrap_announcement()` method to add the channel information to the subscriber's [state](../how-it-works.md#states).
 
 See [Linking messages](../guides/linking-messages.md) for more information.
 

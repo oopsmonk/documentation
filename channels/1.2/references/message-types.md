@@ -10,7 +10,7 @@ The following message types are used by the author to manage the keys to a chann
 
 |**Message type**| **Description**| **How and when it's used**|
 |:-----------|:-----------|:---------------------------------------|
-|![Announce](../images/announce.png)| Starts the channel by publishing the author's public signature key and optional public encryption key | Subscribers use the public signature key to verify signatures in `SignedPacket` and `ChangeKey` messages. Subscribers can also use the public encryption key to encrypt their own public encryption keys and publish them in `Subscribe` messages.|
+|![Announce](../images/announce.png)| Starts the channel by publishing the author's public signature key and optional public encryption key | Subscribers use the public signature key to verify signatures in `SignedPacket` messages. Subscribers can also use the public encryption key to encrypt their own public encryption keys and publish them in `Subscribe` messages.|
 |![Keyload](../images/keyload.png)| Publishes a session key that's encrypted with the public encryption keys of authorized subscribers|Gives authorized subscribers access to decrypt the author's masked payloads in `SignedPacket` and `TaggedPacket` messages and to publish their own masked payloads in `TaggedPacket` messages|
 
 ## Managing subscriptions to masked payloads as a subscriber
