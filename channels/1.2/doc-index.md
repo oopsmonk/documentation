@@ -12,7 +12,7 @@
 [Guides/Publishing public payloads](/guides/publishing-public-data.md)
 [Guides/Authorizing subscribers](/guides/authorizing-subscribers.md)
 [Guides/Publishing encrypted data for authorized subscribers](/guides/publishing-encrypted-data.md)
-[Sequencing with branches](/guides/multi-branch-sequence.md)
+[Guides/Sequencing with branches](/guides/multi-branch-sequence.md)
 
 [Tutorials/Build your first application](/tutorials/build-a-messaging-app.md)
 
