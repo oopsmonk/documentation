@@ -11,7 +11,7 @@ A full CLI example, including masked payloads is available on [GitHub](https://g
 ## Prerequisites
 
 To complete this tutorial, you need the following:
-- [Rust](https://www.rust-lang.org/tools/install)
+- [Rust nightly](https://www.rust-lang.org/tools/install)
 - (Optional) An IDE that supports Rust autocompletion. We recommend [Visual Studio Code](https://code.visualstudio.com/Download) with the [rust-analyzer](https://marketplace.visualstudio.com/items?itemName=matklad.rust-analyzer) extension
 
 ## References
