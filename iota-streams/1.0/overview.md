@@ -20,7 +20,7 @@ Messages are intended to be read and processed. After a message is sent, you sho
 
 ---------------
 #### **Rust** ####
-[Link](guides/building-a-protocol.md/)
+[Link](guides/building-a-protocol.md)
 ---------------
 
 ## Roadmap
