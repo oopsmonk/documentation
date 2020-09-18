@@ -41,15 +41,15 @@ The first argument is the author's secret, which is used by a [pseudo-random num
 
 The second argument is the encoding type of your messages, usually set to `utf-8`. `PAYLOAD_BYTES` is required for splitting up your message, as each Tangle transaction can only hold `PAYLOAD_BYTES`, but your message can be bigger.
     ​
-The last argument defines what type of tree structure you wish to use for your branches. What this does can be found in-depth at [Sequencing with branches](../guides/multi-branch-sequence.md).
+The last argument defines what type of tree structure you wish to use for your branches. For more information about tree structures, see [Sequencing with branches](../guides/multi-branch-sequence.md).
 
 ### Signature keys
 
 Only authors have signature keys to sign messages and prove ownership of the channel.
 ​
-To sign messages, the `Author` object uses the Ed25519 signature, which is a signature scheme in EdDSA family. 
+To sign messages, the `Author` object uses the Ed25519 signature, which is a signature scheme in the EdDSA family. 
 
-The private key is a 256-bit random number. Public key is a 256-bit number deterministically calculated from a private key.
+The private key is a 256-bit random number, and the public key is a 256-bit number deterministically calculated from a private key.
 
 More information on the signature can be found in the [RFC803](https://tools.ietf.org/html/rfc8032).
 
