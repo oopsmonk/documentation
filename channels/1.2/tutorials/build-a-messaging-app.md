@@ -194,7 +194,7 @@ In this step, you write a function that creates and publishes an alert about bre
     client.send_message_with_options(&message.0, send_opt)?;
     println!("Published signed message");
     ```
-8. Publish the sequence message on the channel
+8. Publish the `Sequence` message on the channel
 
     ```rust
     let sequence = message.1.unwrap();
@@ -384,7 +384,7 @@ In this step, you write a function to read the API author's message from the Tan
     You need to iterate through messages here because the Tangle may contain more than one `Sequence` message with your channel address and message identifier.
     For example, an author may have sent the same `Sequence` message more than once, or someone else may have reattached the `Sequence` message.
 
-    However, if we are on single branch, all that we need is the `message_link`. On multi branch, the Sequence message points to another message. 
+    However, if we are on single branch, all that we need is the `message_link`. On multi branch, the `Sequence` message points to another message. 
 7. Define a new function called `get_announcement`
 
     ```rust
