@@ -25,7 +25,7 @@ Send API requests to a node, create transactions, and convert data to or from tr
 Simplify IOTA payments without the worry of withdrawing from spent addresses or the need to promote and reattach pending transactions.
 ---
 #### **Channels** ####
-[Link](root://channels/1.1/overview.md)
+[Link](root://channels/1.2/overview.md)
 
 Build secure messaging applications where users can encrypt messages and prove its integrity and authenticity.
 ---
