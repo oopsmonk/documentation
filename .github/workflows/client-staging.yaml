@@ -3,7 +3,7 @@ name: Client Build and Deploy Staging
 on:
   push:
     branches: [develop]
-  pull_request:
+  pull_request_target:
     branches: [develop]
    
 
