@@ -196,7 +196,7 @@ In this step, you write a function that creates and publishes an alert about bre
     println!("Published signed message");
     ```
 
-8. Publish the `Sequence` message on the channel (You can skip this step if your are not using multi branching. See [Multi branching using Sequencing](../guides/multi-branch-sequence.md) for more information.)
+8. Publish the `Sequence` message on the channel (You can skip this step if you are not using multi branching. See [Multi branching using Sequencing](../guides/multi-branch-sequence.md) for more information.)
 
     ```rust
     let sequence = message.1.unwrap();
