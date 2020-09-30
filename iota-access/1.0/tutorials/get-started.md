@@ -218,17 +218,15 @@ To run the Access Mobile Client, you need [Android Studio](https://developer.and
     Password: IOTApass1234
     ```
 
-5. Add the IP address of your Access Server (Raspberry Pi) to the **Settings** page
+5. Add the IP addresses of your Access Server (Raspberry Pi) and Policy Store (Linux server) to the **Settings** page
 
     ![Settings](../images/access-server-settings.gif)
 
-6. Add the IP address of your Access Policy Store (Linux server) to the **Settings** page
-
-7. Go to **Delegation editor** and create a new policy by selecting User 1 and Action 1
+6. Go to **Delegation editor** and create a new policy by selecting User 1 and Action 1
 
     ![Create a policy](../images/create-policy.gif)
 
-8. Refresh the home page by pulling down the page
+7. Refresh the home page by pulling down the page
 
     On the home page you should see the Action 1 button.
 
