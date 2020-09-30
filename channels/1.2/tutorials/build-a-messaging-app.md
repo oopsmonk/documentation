@@ -49,7 +49,7 @@ In this step, you use Cargo to create a new project and install the dependencies
 
 Now you have all the dependencies, you're ready to start coding.
 
-You're project should look like this:
+Your project should look like this:
 
 ```
 src/
@@ -63,7 +63,7 @@ In this step, you write a function that announces a new channel. This channel is
 
 1. In the `src` directory, create a new directory called `api_author` and create two files inside it: `mod.rs` and `announce.rs`
 
-    You're project should now look like this:
+    Your project should now look like this:
 
     ```
     src/
@@ -108,7 +108,7 @@ In this step, you write a function that announces a new channel. This channel is
 
     This method returns an error only if the bundle was not sent to the IOTA node. Therefore, if you see no error, the bundle was sent.
 
-5. Return the `Announce` message identifier
+5. Return the `Announce` message link which contains the channel address (`appinst`) and the announce message identifier (`msgid`)
 
     ```rust
      Ok(announcement.link)
@@ -116,10 +116,11 @@ In this step, you write a function that announces a new channel. This channel is
 
     As an author, you must [send the link](../guides/sending-links.md) to anyone who wants to read the message. In this tutorial, you'll do this by passing them to the subscriber as command-line arguments.
 
-6. In the `mod.rs` file, add the following to expose this module to the rest of your project
+6. In the `mod.rs` file, add the following to expose this module and the `send_message` module (to be defined below) to the rest of your project
 
     ```rust
     pub mod announce;
+    pub mod send_message;
     ```
 
 ## Step 3. Publish a public payload about breaking changes
@@ -128,7 +129,7 @@ In this step, you write a function that creates and publishes an alert about bre
 
 1. In the `api_author` directory, create a new file called `send_message.rs`
 
-    You're project should now look like this:
+    Your project should now look like this:
 
     ```
     src/
@@ -167,7 +168,7 @@ In this step, you write a function that creates and publishes an alert about bre
     let public_payload = Bytes(public_payload.as_bytes().to_vec());
     ```
 
-5. Convert the channel address and the `Announce` message identifier to an `Address` type to be able to link it to the message about breaking changes
+5. Convert the channel address and the `Announce` message identifier to a link of `Address` type to be able to connect it to the message about breaking changes
 
     ```rust
     let announcement_link = match Address::from_str(&channel_address, &announce_message_identifier){
@@ -194,18 +195,17 @@ In this step, you write a function that creates and publishes an alert about bre
     client.send_message_with_options(&message.0, send_opt)?;
     println!("Published signed message");
     ```
-8. Publish the `Sequence` message on the channel
+
+8. Publish the `Sequence` message on the channel (You can skip this step if you are not using multi branching. See [Multi branching using Sequencing](../guides/multi-branch-sequence.md) for more information.)
 
     ```rust
     let sequence = message.1.unwrap();
     client.send_message_with_options(&sequence, send_opt)?;
     println!("Published sequence message");
     ```
-    Depending on your choice in step 4.2, you can skip this step.
 
     `message.1` is not available when we are not using multi branching on the author, thus we need to unwrap the `Option` first.
 
-    See [Multi branching using Sequencing](../guides/multi-branch-sequence.md) for more information.
 9. Return the `Sequence` message identifier
 
     ```rust
@@ -215,6 +215,7 @@ In this step, you write a function that creates and publishes an alert about bre
     ```rust
      Ok(message.0.link)
     ```
+
 ## Step 4. Create the author
 
 In this step, you create the main function that calls the ones you just created.
@@ -242,7 +243,7 @@ In this step, you create the main function that calls the ones you just created.
         }
     };
 
-    use iota::{client as iota_client,};
+    use iota::{client as iota_client};
     ```
 
 2. In the `main()` function, connect to a node and change the default settings to use remote proof of work
@@ -280,14 +281,19 @@ In this step, you create the main function that calls the ones you just created.
     let channel_address = author.channel_address().to_string();
     ```
 
+    The channel address can also be obtained through the announce message link obtained below (`appinst` field). 
+
 5. Call your module's functions to publish the `Announce` and `SignedPacket` messages
 
     ```rust
+    // announce_message is a link, thus it contains the channel address (appinst) and message identifier (msgid)
     let announce_message = start_a_new_channel(&mut author, &mut client, send_opt).unwrap();
+    let announce_msgid = announce_message.msgid.to_string();
   
     let public_payload = "BREAKINGCHANGES";
 
-    let signed_message = send_signed_message(&mut author, &channel_address, &announce_message.msgid.to_string(), &public_payload.to_string(), &mut client, send_opt).unwrap();
+    // signed_message is a link, thus it contains the channel address (appinst) and message identifier (msgid)
+    let signed_message = send_signed_message(&mut author, &channel_address, &announce_msgid, &public_payload.to_string(), &mut client, send_opt).unwrap();
 
 6. Print the command for subscribing to the channel to the console
 
@@ -295,7 +301,7 @@ In this step, you create the main function that calls the ones you just created.
     println!("");
     println!("Now, in a new terminal window, use the subscriber to publish a `Subscribe` message on the channel");
     println!("");
-    println!("cargo run --release --bin subscriber {} {} {}", channel_address, announce_message.msgid, signed_message.msgid);
+    println!("cargo run --release --bin subscriber {} {} {}", channel_address, announce_msgid, signed_message.msgid);
     println!("");
     ```
 
@@ -309,7 +315,7 @@ In this step, you write a function to read the API author's message from the Tan
 
 2. Inside the `bin` directory, create a file called `subscriber.rs`
 
-    You're project should now look like this:
+    Your project should now look like this:
 
     ```
     src/
@@ -347,18 +353,18 @@ In this step, you write a function to read the API author's message from the Tan
 4. Define a new function called `find_message_link_opt_sequence`
 
     ```rust
-    fn find_message_link_opt_sequence<T: Transport>(subscriber: &mut Subscriber, address: &String, message_identifier: &String, client: &mut T, recv_opt: T::RecvOptions) -> Result<Address> where T::RecvOptions: Copy {
+    fn find_message_link_opt_sequence<T: Transport>(subscriber: &mut Subscriber, channel_address: &String, message_identifier: &String, client: &mut T, recv_opt: T::RecvOptions) -> Result<Address> where T::RecvOptions: Copy {
     }
     ```
-    With this method we will be changing the address and identifier into a valid link for us to find on the Tangle.
+    With this method we will be transforming the channel address and message identifier into a valid link (of type `Address`) for us to find on the Tangle.
     The implementation of the link changes based on the authors choice of single and multi branching,
 
-5. Create the initial message link based on address and identifier
+5. Create the initial message link based on channel address and message identifier
 
     ```rust
-    let mut message_link = match Address::from_str(&address, &message_identifier){
+    let mut message_link = match Address::from_str(&channel_address, &message_identifier){
         Ok(message_link) => message_link,
-        Err(()) => bail!("Failed to create Address from {}:{}", &address, &message_identifier),
+        Err(()) => bail!("Failed to create Address link from {}:{}", &channel_address, &message_identifier),
     };
     ```
 6. If we are on multi branching, get and parse the `Sequence` messages by checking the header
@@ -428,10 +434,19 @@ In this step, you write a function to read the API author's message from the Tan
         for tx in list.iter() {
             let header = tx.parse_header()?;
             ensure!(header.check_content_type(&message::SIGNED_PACKET), "Content type should be signed type");
-            let (public_payload, masked_payload) = subscriber.unwrap_signed_packet(header.clone())?;
+
+            // First element of the tuple returned is the public key
+            // Second and third are the public and masked payloads respectively
+            let (public_payload, masked_payload) = match subscriber.unwrap_signed_packet(header.clone()) {
+              Ok(result) => (result.1, result.2),
+              Err(error) => bail!(error),
+            };
+
+            let pub_msg = String::from_utf8(public_payload.0).unwrap();
+            let priv_msg = String::from_utf8(masked_payload.0).unwrap();
+
             println!("Found and verified messages");
-            println!("Public message: {:?}, private message: {:?}", 
-                String::from_utf8(public_payload.0), String::from_utf8(masked_payload.0));
+            println!("Public message: {}, private message: {}", pub_msg, priv_msg);
             break;
         }
         Ok(())
@@ -450,7 +465,7 @@ In this step, you write a function to read the API author's message from the Tan
     let mut client = iota_client::Client::get();
     iota_client::Client::add_node("https://nodes.devnet.iota.org:443").unwrap();
 
-    // Get the arugments that were passed to the subscriber
+    // Get the arguments that were passed to the subscriber
     let args: Vec<String> = env::args().collect();
 
     let channel_address = &args[1];
@@ -459,12 +474,12 @@ In this step, you write a function to read the API author's message from the Tan
 
     let recv_opt = RecvOptions::default();
 
-    match get_announcement(&mut subscriber, &channel_address.to_string(), &announce_message_identifier.to_string(), &mut client, recv_opt){
+    match get_announcement(&mut subscriber, &channel_address, &announce_message_identifier, &mut client, recv_opt){
         Ok(()) => (),
         Err(error) => println!("Failed with error {}", error),
     }
 
-    match get_signed_messages(&mut subscriber, &channel_address.to_string(), &signed_message_identifier.to_string(), &mut client, recv_opt){
+    match get_signed_messages(&mut subscriber, &channel_address, &signed_message_identifier, &mut client, recv_opt){
         Ok(()) => (),
         Err(error) => println!("Failed with error {}", error),
     }
@@ -483,18 +498,3 @@ You've got an API author application that publishes an alert on your channel, an
 ## Next steps
 
 Take a look at the [full example](https://github.com/JakeSCahill/channels-examples) and get involved by discussing your own ideas in the #streams-discussion channel on [Discord](https://discord.iota.org/).
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
