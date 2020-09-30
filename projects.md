@@ -7,6 +7,7 @@
 [App Blueprints](/blueprints)
 [IoT Projects](/iot)
 [Streams](/iota-streams)
+[Access](/iota-access)
 [Core](/core)
 [Account Module](/account-module)
 [Channels](/channels)
