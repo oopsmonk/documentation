@@ -12,6 +12,15 @@ With Access, you can build and embed applications inside your resources to do th
 
 Access is a work in progress, and the project should be seen as a [*minimum viable product*](https://en.wikipedia.org/wiki/Minimum_viable_product) (MVP).
 
+## Blog posts
+
+---------------
+#### **Introducing IOTA Access** ####
+[IOTA Access](https://blog.iota.org/introducing-iota-access-686a2f017ff)
+
+An overview of the alpha release of IOTA Access.
+---------------
+
 ## Source code
 
 The source code for this project is hosted on the following Github repositories:
