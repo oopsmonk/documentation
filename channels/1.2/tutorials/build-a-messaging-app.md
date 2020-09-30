@@ -168,7 +168,7 @@ In this step, you write a function that creates and publishes an alert about bre
     let public_payload = Bytes(public_payload.as_bytes().to_vec());
     ```
 
-5. Convert the channel address and the `Announce` message identifier to a link of `Address` type to be able to link it to the message about breaking changes
+5. Convert the channel address and the `Announce` message identifier to a link of `Address` type to be able to connect it to the message about breaking changes
 
     ```rust
     let announcement_link = match Address::from_str(&channel_address, &announce_message_identifier){
@@ -439,11 +439,11 @@ In this step, you write a function to read the API author's message from the Tan
             // Second and third are the public and masked payloads respectively
             let (public_payload, masked_payload) = match subscriber.unwrap_signed_packet(header.clone()) {
               Ok(result) => (result.1, result.2),
-              Err(_) => bail!("Error unwrapping packet"),
+             Err(error) => bail!(error),
             };
 
             let pub_msg = String::from_utf8(public_payload.0).unwrap();
-    l       let priv_msg = String::from_utf8(masked_payload.0).unwrap();
+            let priv_msg = String::from_utf8(masked_payload.0).unwrap();
 
             println!("Found and verified messages");
             println!("Public message: {}, private message: {}", pub_msg, priv_msg);
