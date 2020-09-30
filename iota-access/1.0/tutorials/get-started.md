@@ -2,7 +2,7 @@
 
 **In this tutorial, you learn how Access works by running a sample application that grants or denies access to functions on a Raspberry Pi.**
 
-## Architecture
+## Framework
 
 ![Access sample](../images/access-sample.png)
 
@@ -13,11 +13,11 @@ In this sample application, the Raspberry Pi runs the Access server, which accep
 To complete this tutorial, you need the following:
 
 - Access to a Linux server
-- A Raspberry Pi 3 or 4 with a relay module
+- A Raspberry Pi 3 or 4 with a [PiRelay](https://shop.sb-components.co.uk/products/pirelay-relay-board-shield-for-raspberry-pi) module
 
 ## Step 1. Run the policy store
 
-The policy store consists of interface servers for managing policies on the Tangle. It can manage both REST and TCP requests and it communicates with IRI nodes for storing policies and local SQL database where their Tangle addresses are stored.
+The policy store consists of interface servers for managing policies on the Tangle. It can manage both REST and TCP requests and it communicates with IOTA nodes for storing policies and local SQL database where their Tangle addresses are stored.
 
 ### Prerequisites
 
@@ -51,11 +51,11 @@ Future version of Access will allow you to connect to Hornet node software so th
 3. Open the configuration file and add the IP address of your local IRI node to the `iri` field
 
     :::info:
-    If your IRI node is running on the same machine as your policy store, you can leave the IP addres set to localhost (127.0.0.1).
+    If your IRI node is running on the same machine as your policy store, you can leave the IP address set to localhost (127.0.0.1).
     :::
 
     ```bash
-    sudo nano config/default.json
+    nano config/default.json
     ```
 
     The configuration file includes the following settings:
@@ -74,7 +74,7 @@ Future version of Access will allow you to connect to Hornet node software so th
             "host": string,
             "port": number
         },
-        "iri": {
+        "node": {
             "host": string,
             "port": number
         }
@@ -82,12 +82,12 @@ Future version of Access will allow you to connect to Hornet node software so th
     ```
 
     ```
-    `server.rest.listeningPort`: Listening port for the REST server
-    `server.tcp.listeningPort`: Listening port for the TCP server
-    `db.host`: Host address for the SQL database
-    `db.port`: Port number for the SQL database
-    `iri.host`: URL for the IOTA node
-    `iri.port`: API port number for the IOTA node
+    server.rest.listeningPort: Listening port for the REST server
+    server.tcp.listeningPort: Listening port for the TCP server
+    db.host: Host address for the SQL database
+    db.port: Port number for the SQL database
+    node.host: URL for the IOTA node
+    node.port: API port number for the IOTA node
     ```
 
 4. Create an `.env` file in the root directory and add values for the following configuration fields:
@@ -100,10 +100,10 @@ Future version of Access will allow you to connect to Hornet node software so th
     ```
 
     ```
-    `SEED`: Your IOTA seed for sending transactions that contain policies
-    `POSTGRES_PASSWORD`: Password for the database
-    `POSTGRES_USER`: Username of the database
-    `POSTGRES_DB`: Name of the database
+    SEED: Your IOTA seed for sending transactions that contain policies
+    POSTGRES_PASSWORD: Password for the database
+    POSTGRES_USER: Username of the database
+    POSTGRES_DB: Name of the database
     ```
 
 5. Start the Policy Store
@@ -131,7 +131,7 @@ a663b0103396        ps-iota-tcp         "node dist/tcp_serve…"   2 minutes ago
 
 The Access server runs on the Raspberry Pi to accept access requests from users.
 
-The Access Server is written using the [Access Server Reference Implementation](../references/asri.md), which showcases how to put together the different pieces of the Access SDK into a functional dApp.
+The Access Server is written using the [Access Server Reference Implementation](../references/asri.md), which showcases how to put together the different pieces of the Access SDK into a functional application.
 
 ### Prerequisites
 
@@ -161,18 +161,32 @@ To run the Access server, you need a Raspberry Pi with Raspbian and an Internet 
     make -j4
     ```
 
-4. Add the IP address of your policy store to the `[pap]` field in the `access-server/build/config.ini` file
+4. Add the IP address of your policy store to the `policy_store_service_ip` field under `[pap]` in the `access-server/build/config.ini` file
 
 5. Start the Access server
 
     ```bash
-    `sudo ./asri`
+    sudo ./asri
     ```
 
     You should see something like the following:
 
     ```bash
-    2020-09-30 10:46:52: policy_updater:  DEBUG: [policyupdater_get_policy_list:190] device_id: 123
+    2020-09-30 18:03:01:  policy_loader:   INFO: [logger_init_policy_loader:42] enable logger policy_loader.
+    2020-09-30 18:03:01:   cclient_core:   INFO: [logger_init_client_core:16] enable logger cclient_core.
+    2020-09-30 18:03:01:cclient_extended:   INFO: [logger_init_client_extended:16] enable logger cclient_extended.
+    2020-09-30 18:03:01:         wallet:   INFO: [logger_init_wallet:42] enable logger wallet.
+    2020-09-30 18:03:01:         wallet:  DEBUG: [wallet_create:61] wallet initialized.
+    2020-09-30 18:03:01:         wallet:  DEBUG: [wallet_create:63] wallet depth: 3
+    2020-09-30 18:03:01:         wallet:  DEBUG: [wallet_create:65] wallet mwm: 10
+    2020-09-30 18:03:01:         wallet:  DEBUG: [wallet_create:67] wallet node url: nodes.comnet.thetangle.org:443
+    2020-09-30 18:03:01:         plugin:   INFO: [logger_init_plugin:42] enable logger plugin.
+    2020-09-30 18:03:01: policy_updater:   INFO: [logger_init_policy_updater:42] enable logger policy_updater.
+    2020-09-30 18:03:01: policy_updater:   INFO: [logger_init_policy_updater:42] enable logger policy_updater.
+    2020-09-30 18:03:01: access_network:   INFO: [logger_init_network:42] enable logger access_network.
+    2020-09-30 18:03:01:           auth:   INFO: [logger_init_auth:42] enable logger auth.
+    2020-09-30 18:03:01:         crypto:   INFO: [logger_init_crypto:42] enable logger crypto.
+
     ```
 
 ## Step 3. Run the Access Mobile Client
@@ -193,32 +207,26 @@ To run the Access Mobile Client, you need [Android Studio](https://developer.and
 
 2. Open the project in Android Studio
 
-3. Add the IP address of your policy store to line 65 of the `app/build.gradle` file
-
-4. Open **app** > **res** > **xml** > **network_security_config.xml** and change the domain to the IP address of your policy store
-
-    ![Security configuration](../images/security-config.png)
-
-5. Click the **Run** button to run the Access Mobile Client in an emulator
+3. Click the **Run** button to run the Access Mobile Client in an emulator
 
     ![Run button](../images/emulator-play.png)
 
-6. Log into the app, using the following credentials:
+4. Log into the app, using the following credentials:
 
     ```
     Username: Alice
     Password: IOTApass1234
     ```
 
-7. Add the IP address of your Access server (Raspberry Pi) to the **Settings** page
+5. Add the IP addresses of your Access Server (Raspberry Pi) and Policy Store (Linux server) to the **Settings** page
 
     ![Settings](../images/access-server-settings.gif)
 
-8. Go to **Delegation editor** and create a new policy by selecting User 1 and Action 1
+6. Go to **Delegation editor** and create a new policy by selecting User 1 and Action 1
 
     ![Create a policy](../images/create-policy.gif)
 
-9. Refresh the home page by pulling down the page
+7. Refresh the home page by pulling down the page
 
     On the home page you should see the Action 1 button.
 
@@ -259,4 +267,4 @@ Wait one or two minutes for your operating system to clean the remaining threads
 
 ## Next steps
 
-Learn more details about Access in the [specifications](../references/auth-specs.md).
+Learn more details about Access in the [specifications](https://github.com/iotaledger/access-sdk/tree/master/docs/v0.1.0).
