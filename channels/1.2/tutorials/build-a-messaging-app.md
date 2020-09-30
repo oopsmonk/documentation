@@ -439,7 +439,7 @@ In this step, you write a function to read the API author's message from the Tan
             // Second and third are the public and masked payloads respectively
             let (public_payload, masked_payload) = match subscriber.unwrap_signed_packet(header.clone()) {
               Ok(result) => (result.1, result.2),
-             Err(error) => bail!(error),
+              Err(error) => bail!(error),
             };
 
             let pub_msg = String::from_utf8(public_payload.0).unwrap();
