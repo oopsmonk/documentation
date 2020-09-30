@@ -19,9 +19,6 @@ To complete this tutorial, you need the following:
 
 The policy store consists of interface servers for managing policies on the Tangle. It can manage both REST and TCP requests and it communicates with IRI nodes for storing policies and local SQL database where their Tangle addresses are stored.
 
-:::info:
-
-
 ### Prerequisites
 
 To run the policy store, you need the following:
@@ -84,12 +81,14 @@ Future version of Access will allow you to connect to Hornet node software so th
     }
     ```
 
-    * `server.rest.listeningPort`: Listening port for the REST server
-    * `server.tcp.listeningPort`: Listening port for the TCP server
-    * `db.host`: Host address for the SQL database
-    * `db.port`: Port number for the SQL database
-    * `iri.host`: URL for the IOTA node
-    * `iri.port`: API port number for the IOTA node
+    ```
+    `server.rest.listeningPort`: Listening port for the REST server
+    `server.tcp.listeningPort`: Listening port for the TCP server
+    `db.host`: Host address for the SQL database
+    `db.port`: Port number for the SQL database
+    `iri.host`: URL for the IOTA node
+    `iri.port`: API port number for the IOTA node
+    ```
 
 4. Create an `.env` file in the root directory and add values for the following configuration fields:
 
@@ -100,10 +99,12 @@ Future version of Access will allow you to connect to Hornet node software so th
     POSTGRES_DB=
     ```
 
-    * `SEED`: Your IOTA seed for sending transactions that contain policies
-    * `POSTGRES_PASSWORD`: Password for the database
-    * `POSTGRES_USER`: Username of the database
-    * `POSTGRES_DB`: Name of the database
+    ```
+    `SEED`: Your IOTA seed for sending transactions that contain policies
+    `POSTGRES_PASSWORD`: Password for the database
+    `POSTGRES_USER`: Username of the database
+    `POSTGRES_DB`: Name of the database
+    ```
 
 5. Start the Policy Store
 
@@ -229,7 +230,6 @@ To run the Access Mobile Client, you need [Android Studio](https://developer.and
     2020-09-29 18:16:12: policy_updater:   INFO: [policyupdater_get_policy:135] asking for policy E4E93F75BA560C6B0A371A9AD121B95059F6F0D45CF4325032B19E68A1AF08B5
     2020-09-29 18:16:12:  policy_loader:   INFO: [parse_policy_struct:294] Policy loaded.
     ```
-
 
 10. Click the Action 1 button
 
