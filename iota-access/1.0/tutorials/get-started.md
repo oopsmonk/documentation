@@ -51,7 +51,7 @@ Future version of Access will allow you to connect to Hornet node software so th
 3. Open the configuration file and add the IP address of your local IRI node to the `iri` field
 
     :::info:
-    If your IRI node is running on the same machine as your policy store, you can leave the IP addres set to localhost (127.0.0.1).
+    If your IRI node is running on the same machine as your policy store, you can leave the IP address set to localhost (127.0.0.1).
     :::
 
     ```bash
@@ -82,12 +82,12 @@ Future version of Access will allow you to connect to Hornet node software so th
     ```
 
     ```
-    `server.rest.listeningPort`: Listening port for the REST server
-    `server.tcp.listeningPort`: Listening port for the TCP server
-    `db.host`: Host address for the SQL database
-    `db.port`: Port number for the SQL database
-    `node.host`: URL for the IOTA node
-    `node.port`: API port number for the IOTA node
+    server.rest.listeningPort: Listening port for the REST server
+    server.tcp.listeningPort: Listening port for the TCP server
+    db.host: Host address for the SQL database
+    db.port: Port number for the SQL database
+    node.host: URL for the IOTA node
+    node.port: API port number for the IOTA node
     ```
 
 4. Create an `.env` file in the root directory and add values for the following configuration fields:
@@ -100,10 +100,10 @@ Future version of Access will allow you to connect to Hornet node software so th
     ```
 
     ```
-    `SEED`: Your IOTA seed for sending transactions that contain policies
-    `POSTGRES_PASSWORD`: Password for the database
-    `POSTGRES_USER`: Username of the database
-    `POSTGRES_DB`: Name of the database
+    SEED: Your IOTA seed for sending transactions that contain policies
+    POSTGRES_PASSWORD: Password for the database
+    POSTGRES_USER: Username of the database
+    POSTGRES_DB: Name of the database
     ```
 
 5. Start the Policy Store
