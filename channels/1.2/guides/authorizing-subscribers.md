@@ -17,7 +17,7 @@ You must trust these subscribers because their keys are used to encrypt the sess
 
 ## Managing authorized subscribers on the channel
 
-If the author is created with an NTRU key pair, subscribers can publish  `Subscribe` messages on the channel to request access to a session key.
+If the author is created with an x25519 key pair, subscribers can publish  `Subscribe` messages on the channel to request access to a session key.
 
 ![Subscribe message linked to an Announce message](../images/subscribe-workflow.png)
 
