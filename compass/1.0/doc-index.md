@@ -4,7 +4,6 @@
 
 [Installation/Install a private Tangle](/tutorials/install-compass.md)
 [Installation/Run Compass as a plugin on the Hornet node software](root://hornet/1.1/tutorials/set-up-a-private-tangle-hornet.md)
-[Installation/Build Compass from source and connect it to an IRI node](/tutorials/set-up-a-private-tangle.md)
 [Installation/Set up a one-command private Tangle](/tutorials/set-up-one-command.md)
 
 
@@ -14,7 +13,7 @@
 
 [Tutorials/Connect to the light wallet](/tutorials/connect-to-light.md)
 
-[References/Compass configuration options](/references/compass-configuration-options.md)
+[References/Compass configuration options](https://github.com/gohornet/hornet/wiki/Configuration#Coordinator)
 [References/Merkle tree compute times](/references/merkle-tree-compute-times.md)
 [References/Troubleshooting](/references/troubleshooting.md)
 [References/Changelog](changelog.md)

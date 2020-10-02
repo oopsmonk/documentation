@@ -5,7 +5,7 @@
 ![Private Tangle in Trinity](../images/trinity-private-tangle.png)
 
 :::info:
-This tutorial is for the [one-command Tangle](../tutorials/set-up-one-command.md) setup. If you built Compass from source, you need to expose your node to the Internet over HTTPS, then continue this tutorial from step 3.
+This tutorial is for the [one-command Tangle](../tutorials/set-up-one-command.md) setup.
 :::
 
 :::warning:

@@ -5,7 +5,7 @@
 ![Private Tangle utilities](../images/utils.png)
 
 :::info:
-If you set up your private Tangle, using the Hornet plugin or if you built Compass from source, see the [deployment instructions](https://github.com/iotaledger/tangle-utils-website/blob/master/api/DEPLOYMENT.md) on Github.
+This tutorial is for the [one-command Tangle](../tutorials/set-up-one-command.md) setup. If you set up your private Tangle, using the Hornet plugin, see the [deployment instructions](https://github.com/iotaledger/tangle-utils-website/blob/master/api/DEPLOYMENT.md) on Github.
 :::
 
 ## Prerequisites

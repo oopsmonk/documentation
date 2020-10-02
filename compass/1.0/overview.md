@@ -14,7 +14,7 @@ You may want to set up a private Tangle for the following reasons:
 
 ## Source code
 
-Go to the Compass source code on [Github](https://github.com/iotaledger/compass)
+Go to the Compass source code on [Github](https://github.com/gohornet/hornet/blob/master/plugins/coordinator/plugin.go)
 
 ## Further reading 
 
