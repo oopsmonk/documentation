@@ -24,13 +24,6 @@ The policy store consists of interface servers for managing policies on the Tang
 To run the policy store, you need the following:
 - [npm](https://www.npmjs.com/get-npm)
 - [Docker](https://docs.docker.com/engine/install/#server)
-- [A local IRI node](root://compass/1.0/tutorials/set-up-one-command.md)
-
-:::info:
-The IRI node software is no longer supported by the public IOTA networks. Therefore, you need to [install one in a private network](root://compass/1.0/tutorials/set-up-one-command.md).
-
-Future version of Access will allow you to connect to Hornet node software so that you can run it in a public IOTA network.
-:::
 
 ---
 
@@ -88,7 +81,14 @@ Future version of Access will allow you to connect to Hornet node software so th
     `db.port`: Port number for the SQL database
     `node.host`: URL for the IOTA node
     `node.port`: API port number for the IOTA node
-    ```
+   ```
+
+**Warning ⚠️**
+As a known limitation, you will need a [HORNET](https://github.com/gohornet/hornet) node with the following available features:
+- `"attachToTangle"` enabled under `"permitRemoteAccess"` field of configuration file.
+- HTTP port available (usually 14265).
+
+Nodes behind load balancers or firewalls might present unexpected behaviour.
 
 4. Create an `.env` file in the root directory and add values for the following configuration fields:
 
