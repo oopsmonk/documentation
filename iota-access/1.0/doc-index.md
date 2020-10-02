@@ -6,10 +6,10 @@
 
 [Tutorials/Get started](/tutorials/get-started.md)
 
-[References/Access Server Reference Implementation](/references/asri.md)
-[References/Policy Update Protocol](/references/apu.md)
+[References/Access server reference implementation](/references/asri.md)
+[References/Policy update protocol](/references/apu.md)
 
-[Specifications/Access Authentication](/references/auth-specs.md)
+[Specifications/Access authentication](/references/auth-specs.md)
 [Specifications/Plugins](/references/plugin-specs.md)
 [Specifications/Policies](/references/policy-specs.md)
 
