@@ -3,10 +3,10 @@
 **In this tutorial, you set up your own IOTA network by using a single Docker command. When you run this command, you'll have your own IOTA test network and 2.7Pi (the maximum amount) of test IOTA tokens. You can use this application to test your ideas and applications without risking any monetary value.**
 
 :::info:Go to GitHub
-For quickstart instructions or to read the source code, [see the GitHub repository](https://github.com/iota-community/one-command-tangle).
+For quickstart instructions or the source code, [see the GitHub repository](https://github.com/iota-community/one-command-tangle).
 :::
 
-The test network runs one IRI node and an instance of [Compass](root://compass/1.0/overview.md) on your localhost (not connected to the Internet).
+The test network runs one IRI node and an instance of Compass on your localhost (not connected to the Internet).
 
 The total supply of tokens are stored on the first address of this seed: `SEED99999999999999999999999999999999999999999999999999999999999999999999999999999`.
 
