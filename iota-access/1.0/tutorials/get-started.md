@@ -41,10 +41,10 @@ To run the policy store, you need the following:
     npm run build
     ```
 
-3. Open the configuration file and add the IP address of your local IRI node to the `iri` field
+3. Open the configuration file and add the IP address of your node to the `node` field
 
     :::info:
-    If your IRI node is running on the same machine as your policy store, you can leave the IP address set to localhost (127.0.0.1).
+    If your node is running on the same machine as your policy store, you can leave the IP address set to localhost (127.0.0.1).
     :::
 
     ```bash
@@ -83,12 +83,13 @@ To run the policy store, you need the following:
     `node.port`: API port number for the IOTA node
    ```
 
-**Warning ⚠️**
-As a known limitation, you will need a [HORNET](https://github.com/gohornet/hornet) node with the following available features:
-- `"attachToTangle"` enabled under `"permitRemoteAccess"` field of configuration file.
-- HTTP port available (usually 14265).
+    :::warning
+    As a known limitation, you will need a [HORNET](root://hornet/1.1/overview.md) node with the following available features:
+    - `"attachToTangle"` enabled under `"permitRemoteAccess"` field of configuration file.
+    - HTTP port available (usually 14265).
 
-Nodes behind load balancers or firewalls might present unexpected behaviour.
+    Nodes behind load balancers or firewalls might present unexpected behaviour.
+    :::
 
 4. Create an `.env` file in the root directory and add values for the following configuration fields:
 
