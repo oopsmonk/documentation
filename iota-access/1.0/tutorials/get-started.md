@@ -44,7 +44,7 @@ To run the policy store, you need the following:
 3. Open the configuration file and add the IP address of your local IRI node to the `iri` field
 
     :::info:
-    If your IRI node is running on the same machine as your policy store, you can leave the IP addres set to localhost (127.0.0.1).
+    If your IRI node is running on the same machine as your policy store, you can leave the IP address set to localhost (127.0.0.1).
     :::
 
     ```bash
@@ -100,10 +100,10 @@ Nodes behind load balancers or firewalls might present unexpected behaviour.
     ```
 
     ```
-    `SEED`: Your IOTA seed for sending transactions that contain policies
-    `POSTGRES_PASSWORD`: Password for the database
-    `POSTGRES_USER`: Username of the database
-    `POSTGRES_DB`: Name of the database
+    SEED: Your IOTA seed for sending transactions that contain policies
+    POSTGRES_PASSWORD: Password for the database
+    POSTGRES_USER: Username of the database
+    POSTGRES_DB: Name of the database
     ```
 
 5. Start the Policy Store
