@@ -24,13 +24,6 @@ The policy store consists of interface servers for managing policies on the Tang
 To run the policy store, you need the following:
 - [npm](https://www.npmjs.com/get-npm)
 - [Docker](https://docs.docker.com/engine/install/#server)
-- [A local IRI node](root://compass/1.0/tutorials/set-up-one-command.md)
-
-:::info:
-The IRI node software is no longer supported by the public IOTA networks. Therefore, you need to [install one in a private network](root://compass/1.0/tutorials/set-up-one-command.md).
-
-Future version of Access will allow you to connect to Hornet node software so that you can run it in a public IOTA network.
-:::
 
 ---
 
@@ -48,10 +41,10 @@ Future version of Access will allow you to connect to Hornet node software so th
     npm run build
     ```
 
-3. Open the configuration file and add the IP address of your local IRI node to the `iri` field
+3. Open the configuration file and add the IP address of your node to the `node` field
 
     :::info:
-    If your IRI node is running on the same machine as your policy store, you can leave the IP address set to localhost (127.0.0.1).
+    If your node is running on the same machine as your policy store, you can leave the IP address set to localhost (127.0.0.1).
     :::
 
     ```bash
@@ -82,13 +75,21 @@ Future version of Access will allow you to connect to Hornet node software so th
     ```
 
     ```
-    server.rest.listeningPort: Listening port for the REST server
-    server.tcp.listeningPort: Listening port for the TCP server
-    db.host: Host address for the SQL database
-    db.port: Port number for the SQL database
-    node.host: URL for the IOTA node
-    node.port: API port number for the IOTA node
-    ```
+    `server.rest.listeningPort`: Listening port for the REST server
+    `server.tcp.listeningPort`: Listening port for the TCP server
+    `db.host`: Host address for the SQL database
+    `db.port`: Port number for the SQL database
+    `node.host`: URL for the IOTA node
+    `node.port`: API port number for the IOTA node
+   ```
+
+    :::warning
+    As a known limitation, you will need a [HORNET](root://hornet/1.1/overview.md) node with the following available features:
+    - `"attachToTangle"` enabled under `"permitRemoteAccess"` field of configuration file.
+    - HTTP port available (usually 14265).
+
+    Nodes behind load balancers or firewalls might present unexpected behaviour.
+    :::
 
 4. Create an `.env` file in the root directory and add values for the following configuration fields:
 

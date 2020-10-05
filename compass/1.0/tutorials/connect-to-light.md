@@ -4,6 +4,10 @@
 
 <img src="../images/light-wallet-test-tangle.png" width="200">
 
+:::info:
+This tutorial is for the [one-command Tangle](../tutorials/set-up-one-command.md) setup.
+:::
+
 ## Prerequisites
 
 To complete this tutorial, you need the following:

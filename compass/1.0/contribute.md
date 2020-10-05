@@ -12,7 +12,6 @@ All the code is open source and hosted on GitHub where you can do the following:
 
 You can contribute to the following projects:
 
-- [Compass](https://github.com/iotaledger/compass)
 - [Hornet](https://github.com/gohornet/hornet)
 - [One-command Tangle](https://github.com/iota-community/one-command-tangle)
 

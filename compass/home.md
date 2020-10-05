@@ -5,6 +5,3 @@
 
 [Set up a private Tangle](/1.0/tutorials/install-compass.md)
 ## Find out how to set up your own IOTA network with its own private Tangle
-
-[Configuration options](/1.0/references/compass-configuration-options.md)
-## Explore the different options for customizing your own private Tangle
