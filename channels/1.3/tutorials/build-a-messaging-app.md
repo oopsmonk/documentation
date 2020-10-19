@@ -5,7 +5,7 @@
 ![API workflow](../images/api-workflow.png)
 
 :::info:Just want to run some code?
-A full CLI example, including masked payloads is available on [GitHub](https://github.com/JakeSCahill/channels-examples).
+A full CLI example, including masked payloads is available on [GitHub](https://github.com/kwek20/channels-examples.git).
 :::
 
 ## Prerequisites
@@ -459,4 +459,4 @@ You've got an API author application that publishes an alert on your channel, an
 
 ## Next steps
 
-Take a look at the [full example](https://github.com/JakeSCahill/channels-examples) and get involved by discussing your own ideas in the #streams-discussion channel on [Discord](https://discord.iota.org/).
+Take a look at the [full example](https://github.com/kwek20/channels-examples.git) and get involved by discussing your own ideas in the #streams-discussion channel on [Discord](https://discord.iota.org/).
