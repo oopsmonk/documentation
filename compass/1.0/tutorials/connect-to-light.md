@@ -2,6 +2,12 @@
 
 **In this tutorial, you connect the IOTA light wallet to your private Tangle so that you can use it to send transactions.**
 
+:::danger:
+This software is now **deprecated**. See [Set up a private Tangle as a Hornet plugin
+](root://hornet/1.1/tutorials/set-up-a-private-tangle-hornet.md) for an up-to-date private Tangle.
+:::
+
+
 <img src="../images/light-wallet-test-tangle.png" width="200">
 
 :::info:
