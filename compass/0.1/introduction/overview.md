@@ -2,6 +2,12 @@
 
 **A private Tangle is an IOTA network that you control and that contains only nodes that you know. A private Tangle uses the same technology as the public IOTA networks, except you control it by running an open-source implementation of the Coordinator called Compass. You can use Compass to allow nodes to reach a consensus on transactions attached to your private Tangle. If Compass stops, no transactions in your IOTA network will be confirmed until it starts again.**
 
+:::danger:
+This software is now **deprecated**. See [Set up a private Tangle as a Hornet plugin
+](root://hornet/1.1/tutorials/set-up-a-private-tangle-hornet.md) for an up-to-date private Tangle.
+:::
+
+
 ## Reasons to set up a private Tangle
 
 You may want to set up a private Tangle for the following reasons:
