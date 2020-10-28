@@ -2,6 +2,11 @@
 
 **The Compass configuration options allow you to customize your private Tangle, depending on your needs. For example, you could create a lightweight private Tangle for a specific test, or create a more resource intensive one that's similar to the Mainnet.**
 
+:::danger:
+This software is now **deprecated**. See [Set up a private Tangle as a Hornet plugin
+](root://hornet/1.1/tutorials/set-up-a-private-tangle-hornet.md) for an up-to-date private Tangle.
+:::
+
 |**Parameter**|**Description**|**Notes**|
 |:----------------------|:--------------|:--------|
 |`seed` |Seed that Compass uses to sign milestone bundles |Back up this seed and keep it secure|

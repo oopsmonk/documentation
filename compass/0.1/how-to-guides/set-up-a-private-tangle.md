@@ -2,6 +2,12 @@
 
 **A private Tangle is one that you control and that contains only nodes that you know. You may want to set up a private Tangle if you want to test an application without using a public IOTA network such as the Mainnet or the Devnet where everyone can see your transactions in the public Tangle.**
 
+:::danger:
+This software is now **deprecated**. See [Set up a private Tangle as a Hornet plugin
+](root://hornet/1.1/tutorials/set-up-a-private-tangle-hornet.md) for an up-to-date private Tangle.
+:::
+
+
 For this basic setup, you'll install an IRI node and Compass on the same server or virtual machine with the same configuration settings as the [Devnet](root://getting-started/1.1/networks/overview.md).
 
 ![Single-node private Tangle](../images/single-node-tangle.svg)
