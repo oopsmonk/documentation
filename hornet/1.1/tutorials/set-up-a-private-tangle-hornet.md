@@ -245,3 +245,6 @@ Try using one of the client libraries to send transactions to the nodes in your 
 - [JavaScript](root://core/1.0/getting-started/get-started-js.md)
 
 - [Python](root://core/1.0/getting-started/get-started-python.md)
+
+
+> search-tags: private tangle
