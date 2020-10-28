@@ -2,6 +2,11 @@
 
 **In this topic, you choose how to install and run a private Tangle.**
 
+:::danger:
+This software is now **deprecated**. See [Set up a private Tangle as a Hornet plugin
+](root://hornet/1.1/tutorials/set-up-a-private-tangle-hornet.md) for an up-to-date private Tangle.
+:::
+
 The option you choose will affect whether you can use the light wallet or the Trinity wallet applications to attach transactions to your private Tangle.
 
 [Trinity](root://wallets/0.1/trinity/introduction/overview.md) is the official IOTA  wallet for macOS, Windows, Linux, iOS, and Android. This wallet allows you to connect only to nodes that support HTTPS.

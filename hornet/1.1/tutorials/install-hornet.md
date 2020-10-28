@@ -25,4 +25,4 @@ Use the following table to select an installation method for your operating syst
 
 Hornet is available as a one-click setup on the Amazon Web Services (AWS) Marketplace.
 
-For installation instructions, see the [IOTA Hornet Node page](https://aws.amazon.com/marketplace/pp/B08CGPLSYZ) on the AWS Marketplace.
+For installation instructions, see the [IOTA Hornet Node page](https://aws.amazon.com/marketplace/pp/B08KYFLWB7) on the AWS Marketplace.

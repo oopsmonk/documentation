@@ -1,6 +1,6 @@
 # Set up a private Tangle as a Hornet plugin
 
-**In this tutorial, you configure your Hornet node as a private Tangle, using the `Coordinator` plugin to create an instance of [Compass](root://compass/1.0/overview.md).**
+**In this tutorial, you configure your Hornet node as a private Tangle, using the `Coordinator` plugin.**
 
 ![Single-node private Tangle](../images/private-tangle.png)
 
@@ -12,9 +12,9 @@ For tutorials, see [Choose an installation method](../tutorials/install-hornet.m
 
 ## Step 1. Generate the Merkle tree
 
-In this step, you generate a Merkle tree for Compass to use to sign milestones.
+In this step, you generate a Merkle tree for the Coordinator plugin to use to sign milestones.
 
-Hornet includes a tool for computing a Merkle tree signature scheme for Compass to use.
+Hornet includes a tool for computing a Merkle tree signature scheme for the Coordinator plugin to use.
 
 1. Open your `config.json` file
 
@@ -44,7 +44,7 @@ Hornet includes a tool for computing a Merkle tree signature scheme for Compass 
 	},
 	```
 
-3. Configure the `coordinator` object to customize your Compass instance
+3. Configure the `coordinator` object to customize your Coordinator instance
 
 	```json
 	"coordinator":{
@@ -57,7 +57,7 @@ Hornet includes a tool for computing a Merkle tree signature scheme for Compass 
 	},
 	```
 
-	A depth of 16 and an interval of 60 seconds allows Compass to send milestones for around 45 days.
+	A depth of 16 and an interval of 60 seconds allows the Coordinator to send milestones for around 45 days.
 
 	A low minimum weight magnitude (`mwm`), makes it faster to create transactions because of the reduced proof of work.
 
@@ -65,7 +65,7 @@ Hornet includes a tool for computing a Merkle tree signature scheme for Compass 
     See the [Hornet configuration documentation](https://github.com/gohornet/hornet/wiki/Configuration#Coordinator) for more information.
 	:::
 
-4. Create a seed for Compass. Compass will use this seed to derive public/private keys for the Merkle tree signature scheme.
+4. Create a seed for the Coordinator plugin. The Coordinator will use this seed to derive public/private keys for the Merkle tree signature scheme.
 
 	```bash
 	cat /dev/urandom |LC_ALL=C tr -dc 'A-Z9' | fold -w 81 | head -n 1 
@@ -178,7 +178,7 @@ In this step, you create your snapshot file so that one of your own addresses co
 
 ## Step 3. Run your private Tangle
 
-In this step, you run Hornet with your new configuration so that Compass can start attaching milestones to your private Tangle.
+In this step, you run Hornet with your new configuration so that the Coordinator plugin can start attaching milestones to your private Tangle.
 
 1. Change into the `hornet` directory, and run Hornet. Replace the `$YOURSEED` placeholder with your seed.
 
@@ -211,7 +211,7 @@ In this step, you add more nodes to your network. The more nodes you have, the m
 
 1. Install another Hornet node
 
-2. Copy the `config.json` and `snapshot.csv` files from your Compass node and add them to the `hornet` directory of your new node
+2. Copy the `config.json` and `snapshot.csv` files from your Coordinator node and add them to the `hornet` directory of your new node
 
 3. In the `config.json` file of your new node, remove the Coordinator plugin
 
@@ -245,3 +245,6 @@ Try using one of the client libraries to send transactions to the nodes in your 
 - [JavaScript](root://core/1.0/getting-started/get-started-js.md)
 
 - [Python](root://core/1.0/getting-started/get-started-python.md)
+
+
+> search-tags: private tangle

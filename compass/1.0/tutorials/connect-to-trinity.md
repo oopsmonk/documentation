@@ -2,6 +2,12 @@
 
 **In this tutorial, you expose your private Tangle to the Internet over HTTPS so that you can use the Trinity wallet to attach transactions to it.**
 
+:::danger:
+This software is now **deprecated**. See [Set up a private Tangle as a Hornet plugin
+](root://hornet/1.1/tutorials/set-up-a-private-tangle-hornet.md) for an up-to-date private Tangle.
+:::
+
+
 ![Private Tangle in Trinity](../images/trinity-private-tangle.png)
 
 :::info:
