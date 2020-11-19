@@ -25,7 +25,6 @@ Use this endpoint to poll the node for new transactions.
 Use the following [faucets](../references/glossary.md#faucet) to transfer up to 1 Ki of IOTA tokens to one of your addresses in the Devnet:
 
 - **[Official faucet](https://faucet.devnet.iota.org/):** Distributes tokens in batches of 1 Ki
-- **[Community faucet](https://faucet.einfachiota.de/):** Distributes tokens in batches of up to 1 Ki
 
 ## Minimum weight magnitude
 
