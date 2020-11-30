@@ -1,6 +1,10 @@
-# Ternary
+# Ternary 
 
 **All transactions in the Tangle are made up of characters called trytes. This topic explains what ternary is, why IOTA uses it, and how data is converted to trytes.**
+
+:::info:
+The Ternary numerical system will be repurposed in the future in the coming IOTA updates.
+:::
 
 IOTA uses the ternary numeral system to represent data because, compared to binary, ternary computing is considered to be more efficient as it can represent data in three states rather then just two. See [Why does IOTA use a ternary number system](https://iota.stackexchange.com/questions/8/why-does-iota-use-a-ternary-number-system) on StackExchange for more details.
 

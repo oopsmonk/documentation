@@ -31,9 +31,19 @@ In the previous [tutorial](../first-steps/hello-world.md), the `prepareTransfers
 
 All IOTA node software includes an algorithm for [selecting tip transactions](../the-tangle/how-transfer-tokens.md#choosing-where-to-attach-transactions). These algorithms aim to select valid tip transactions with the best chance of being confirmed.
 
+:::info:
+For further reference into IOTA's updates into tip transactions / transactions to come, see the Request for Changes (RFC):
+
+- [RFC - 0008](https://github.com/iotaledger/protocol-rfcs/pull/26)
+- [RFC - 0017](https://github.com/iotaledger/protocol-rfcs/pull/17)
+- [RFC - 0018](https://github.com/iotaledger/protocol-rfcs/pull/18), and
+- [RFC - 0024]([iotaledger/protocol-rfcs#0024](https://github.com/iotaledger/protocol-rfcs/pull/0024))
+
+:::
+
 ## Doing proof of work
 
-Proof of work is cryptographic proof that energy has been spent in computing power to solve a puzzle.
+Proof of work (PoW) is cryptographic proof that energy has been spent in computing power to solve a puzzle.
 
 IOTA transactions must contain a proof of work to discourage clients from sending lots of spam transactions, which may put an extra load on nodes. See [Hashcash](https://en.wikipedia.org/wiki/Hashcash) for more examples of proof of work as a spam prevention measure.
 

@@ -4,58 +4,56 @@
 
 In this tutorial, you will learn how to:
 
-1. Install your tools
-
-2. Create your first coding project
-
-2. Install the IOTA core client library
+- Install your tools
+- Create your first coding project
+- Install the IOTA core client library
 
 ## Why JavaScript
 
 IOTA supports many programming languages, including C, Go, Java, and Python. While all these languages have their own benefits, JavaScript is one of the most popular languages.
 
-Technically, these tutorials use a server-side version of JavaScript called Node.js.
+As such, these tutorials use a server-side version of JavaScript called Node.js.
 
-If you have never used JavaScript or Node.js before, you can find some beginner tutorials on [w3schools.com](https://www.w3schools.com/).
+If you have never used JavaScript or Node.js before, reference the beginner tutorials at [w3schools.com](https://www.w3schools.com/).
 
 ## Step 1. Install your tools
 
-In this step, you install the programming tools that make up your developer environment. 
+In this step, install the programming tools that make up your developer environment. 
 
-1. Install the [latest long-term support (LTS) version of Node.js](https://nodejs.org/en/download/)
+1. Install the [latest long-term support (LTS) version of Node.js](https://nodejs.org/en/download/).
 
     Node.js is an open-source server environment that allows you to run JavaScript on the server.
 
-2. Install [Visual Studio Code](https://code.visualstudio.com/Download)
+2. Install [Visual Studio Code](https://code.visualstudio.com/Download).
 
     :::info:
-    This is a code editor, which makes it easy to write and run code.
+    Installing Visual Studio Code is a suggestion as it is a simple code editor that makes it easy to write and run code.
 
-    Feel free to use another code editor if you want.
+    Feel free to use any other as a preference.
     :::
 
 ## Step 2. Create your first coding project
 
-In this step, you create a project, using the [npm package manager](https://www.npmjs.com/) that comes with Node.js. You'll use this project throughout the tutorials in this section.
+In this step, create a project using the [npm package manager](https://www.npmjs.com/) that comes with Node.js. This project is used throughout the tutorials in this section.
 
-1. Open a command-line interface
+1. Open a command-line interface.
 
     Depending on your operating system, a command-line interface could be [PowerShell in Windows](https://docs.microsoft.com/en-us/powershell/scripting/getting-started/getting-started-with-windows-powershell?view=powershell-6), the [Linux Terminal](https://www.howtogeek.com/140679/beginner-geek-how-to-start-using-the-linux-terminal/) or [Terminal for macOS](https://macpaw.com/how-to/use-terminal-on-mac).
 
-2. Create a new directory to use for your project and change into it
+2. Create a new directory to use for your project and change into it.
 
     ```bash
     mkdir iota-tutorial
     cd iota-tutorial
     ```
 
-3. Initialize a new Node.js project
+3. Initialize a new Node.js project.
 
     ```bash
     npm init
     ```
 
-Now you have a `package.json` file, which includes the packages and applications your project depends on, and specific metadata like the project's name, description, and author. Whenever you install packages, those packages will be added to this file as a dependency. For more information, see this excellent [package.json guide](https://flaviocopes.com/package-json/).
+Now you have a `package.json` file, which includes the packages and applications the project depends on, and specific metadata like the project's name, description, and author. Whenever you install packages, those packages will be added to this file as a dependency. For more information, see this excellent [package.json guide](https://flaviocopes.com/package-json/).
 
 ## Step 3. Install the IOTA core client library
 
@@ -63,7 +61,7 @@ The IOTA core client library contains the main functionality that you need to de
 
 All the available packages are listed in the [GitHub repository](https://github.com/iotaledger/iota.js/tree/next/packages).
 
-In a command-line interface, change into the directory where you initialized your project, and install the `core` package
+In a command-line interface, change into the directory where you initialized your project, and install the `core` package.
 
 ```bash
 npm install @iota/core @iota/converter

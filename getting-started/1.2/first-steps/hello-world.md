@@ -1,18 +1,18 @@
 # Send a "hello world" transaction
 
-**In this tutorial, you send your first transaction to an IOTA node. At the end of this tutorial, you'll have your own transaction in the Tangle that everyone can see.**
+**In this tutorial, you send your first transaction to an IOTA node. At the end of this tutorial, you will have your own transaction in the Tangle that everyone can see.**
 
 ## Prerequisites
 
 To complete this tutorial, you need a [developer environment for Node.js](../first-steps/set-up-env.md).
 
-In this tutorial, you'll connect to a node that's run by the IOTA Foundation in the Devnet: A development network.
+In this tutorial, you will connect to a node that's run by the IOTA Foundation in the Devnet: A development network.
 
 ## Send a transaction to the node
 
 In this step, you create a zero-value transaction that contains a "Hello world" message and send it to your connected node to attach to the Tangle.
 
-1. Require the library and connect to a node
+1. Require the library and connect to a node.
 
     ```js
     // Require the client library packages
@@ -25,7 +25,7 @@ In this step, you create a zero-value transaction that contains a "Hello world" 
     });
     ```
 
-1. Define a depth and a minimum weight magnitude
+1. Define a depth and a minimum weight magnitude.
 
     ```js
     const depth = 3;
@@ -34,7 +34,7 @@ In this step, you create a zero-value transaction that contains a "Hello world" 
 
     You'll find out more about what these are in the next topic.
 
-2. Define an address to which you want to send a message
+2. Define an address to which you want to send a message.
 
     ```js
     const address =
@@ -45,7 +45,7 @@ In this step, you create a zero-value transaction that contains a "Hello world" 
     This address does not have to belong to anyone. To be valid, the address just needs to consist of 81 trytes. You'll learn about trytes in [Ternary](../the-tangle/ternary.md). For now, it's enough to know that a tryte is just a character between A-Z or the number 9.
     :::
 
-3. Define a seed
+3. Define a seed.
 
     ```js
     const seed =
@@ -56,14 +56,14 @@ In this step, you create a zero-value transaction that contains a "Hello world" 
     The seed is not used in this code. However, the library expects a valid seed.
     :::
 
-4. Create your "hello world" message, serialize it into JSON, and convert it to trytes
+4. Create your "hello world" message, serialize it into JSON, and convert it to trytes.
 
     ```js
     const message = JSON.stringify({"message": "Hello world"});
     const messageInTrytes = Converter.asciiToTrytes(message);
     ```
 
-5. Define a transaction that sends the message to the address
+5. Define a transaction that sends the message to the address.
 
     ```js
     const transfers = [
@@ -75,7 +75,7 @@ In this step, you create a zero-value transaction that contains a "Hello world" 
     ];
     ```
 
-6. Send your transaction to the node
+6. Send your transaction to the node.
 
     ```js
    Iota.prepareTransfers(seed, transfers)
@@ -88,9 +88,9 @@ In this step, you create a zero-value transaction that contains a "Hello world" 
         .catch(err => {
             console.error(err)
         });
-    ```
+   ```
 
-7. Execute the file
+7. Execute the file.
 
     ```bash
     node index.js
@@ -102,7 +102,7 @@ In this step, you create a zero-value transaction that contains a "Hello world" 
     MAXPIKYYYNPRXXVIKNPZ9TSAVYTDEDAJOJHJVXGKLJADWDNHYNNNJJYSO9LYNVTXLJ9URVGMAEDPA9999
     ```
 
-8. To see your transaction in the Tangle, search for your transaction hash in a Tangle explorer such as [utils.iota.org](https://utils.iota.org/)
+8. To see your transaction in the Tangle, search for your transaction hash in a Tangle explorer such as [utils.iota.org](https://utils.iota.org/).
 
     Make sure to select the Devnet network.
 

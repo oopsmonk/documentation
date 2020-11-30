@@ -35,20 +35,20 @@ Miners are incentivized to validate transactions and do proof of work because of
 - The fees that users are willing to pay to have their transactions included in a block
 - The reward that the network gives them for mining the block before other miners
 
-The only way to reverse transactions in a blockchain is to mine a new blockchain in the time it takes other miners to mine a single block. To do so, a miner would need 51% of the network's ability to do proof of work known as hash power.
+The only way to reverse transactions in a blockchain is to mine a new blockchain in the time it takes other miners to mine a single block. To do so, a miner would need 51% of the network's ability to do PoW known as hash power.
 
-As a result, requiring proof of work secures blockchain networks by making it difficult to attack, change, or stop. The more miners that mine, the more the secure the network.
+As a result, requiring PoW secures blockchain networks by making it difficult to attack, change, or stop. The more miners that mine, the more the secure the network.
 
 ## Consensus in the Tangle
 
 In the Tangle, transactions require no fees because the network has no miners.
 
-In the Tangle, proof of work is not used to secure the network. Instead, proof of work is used only to discourage spam transactions.
+In the Tangle, PoW is not used to secure the network. Instead, proof of work is used only to discourage spam transactions.
 
 To reach a consensus, all IOTA nodes validate transactions and use [the Coordinator](../the-tangle/the-coordinator.md) to decide which ones are confirmed. The Coordinator helps to secure the network by making sure that only valid transactions are confirmed.
 
 :::info:
-The Coordinator is temporary. The IOTA Foundation are working on a project to remove the Coordinator and from the network: [Coordicide](https://coordicide.iota.org/post-coordinator).
+The Coordinator is temporary. The IOTA Foundation is working on a project to remove the Coordinator and from the network: [Coordicide](https://coordicide.iota.org/post-coordinator).
 :::
 
 ## Next steps

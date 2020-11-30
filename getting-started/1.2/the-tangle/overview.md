@@ -2,7 +2,7 @@
 
 **The Tangle is the distributed ledger in IOTA that contains an up-to-date history of transactions. This section introduces you to the Tangle.**
 
-The Tangle is a single source of truth. Any client, anywhere in the world, is able to send valid transactions to any node, and that transaction will be replicated across the rest of the network to form one version of truth: The Tangle.
+The Tangle is a single source of truth. Any user, anywhere in the world, is able to send valid transactions to any node, and that transaction will be replicated across the rest of the network to form one version of truth: The Tangle.
 
 All transactions in the Tangle are attached to two others to form a [directed acyclic graph](https://en.wikipedia.org/wiki/Directed_acyclic_graph) (DAG).
 

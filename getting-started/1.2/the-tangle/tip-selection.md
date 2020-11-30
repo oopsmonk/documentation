@@ -8,7 +8,7 @@ To make sure that the Tangle continues to grow, new transactions need to be atta
 
 ![Tip transactions](../images/tip-transactions.svg)
 
-Clients are free to choose any tip transactions to attach theirs to.
+Users are free to choose any tip transactions to attach theirs to.
 
 However, the tip selection algorithm selects tip transactions that:
 
@@ -21,7 +21,7 @@ In the Tangle, new transactions can only be confirmed if they are directly or in
 
 As a result, the more pending transactions that are referenced by a milestone, the higher the confirmation rate.
 
-For example, if tip 1 in this image were referenced by a milestone, lots of pending transactions would be confirmed.
+For example, if tip 1 in this image below were referenced by a milestone, lots of pending transactions would be confirmed.
 
 If tip 2 were referenced by a milestone, no other transactions would be confirmed because its [past cone](../references/glossary.md#past-cone) includes transactions that are already confirmed by an old milestone.
 
@@ -48,9 +48,9 @@ Therefore, all nodes in an IOTA network define old tip transactions, depending o
 - **Youngest transaction root snapshot index (YTRSI):** The highest [confirmation milestone index](../references/glossary.md#confirmation-milestone-index) of a transaction's [confirmed root transactions](../references/glossary.md#confirmed-root-transaction)
 - **Oldest transaction root snapshot index(OTRSI):** The lowest confirmation milestone index of a transaction's confirmed root transactions
 
-In this image, the OTRSI of the tip transaction is milestone 1 and its YTRSI is milestone 2.
+In the image below, the OTRSI of the tip transaction is milestone 1 and its YTRSI is milestone 2.
 
-If a transaction's YTRSI is too high it is lazy. If a transaction's OTRSI is too high, it is semi-lazy. Otherwise, it is non-lazy.
+If a transaction's YTRSI is too high it is lazy; if a transaction's OTRSI is too high, it is semi-lazy. Otherwise, it is non-lazy.
 
 ![Types of tip transaction](../images/tip-selection.svg)
 
@@ -60,4 +60,4 @@ Nodes can define the highest YTRSI and OTRSI that they accept in their node soft
 
 [Learn about IOTA networks](../networks/overview.md).
 
-For details about the tip selection algorithm, see [RFC 0008](https://github.com/iotaledger/protocol-rfcs/blob/master/text/0008-weighted-uniform-random-tip-selection/0008-weighted-uniform-random-tip-selection.md).
+For details about the tip selection algorithm, see [RFC - 0008](https://github.com/iotaledger/protocol-rfcs/blob/master/text/0008-weighted-uniform-random-tip-selection/0008-weighted-uniform-random-tip-selection.md).
