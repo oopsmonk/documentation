@@ -7,7 +7,7 @@ Transactions can be one of two types:
 - Zero-value transactions
 - Value transactions
 
-Both of these transaction types are always grouped into a [bundle](#bundles).
+Both of these transaction types are always grouped into a [unspent transaction outputs (UTXO)](#UTXO).
 
 ## Zero-value transactions
 
@@ -17,7 +17,6 @@ You can choose to store this data in either the `signatureMessageFragment` field
 
 Because these transactions do not transfer any IOTA tokens, nodes carry out only the following basic checks on them:
 
-- [Proof of work](../first-steps/sending-transactions.md#doing-proof-of-work) is done according to the minimum weight magnitude of the network
 - The transaction's timestamp is not older than 10 minutes, according to the local time of the IOTA node to which it is sent
 
 For example, this zero-value transaction contains a `Hello world` message in [trytes](../the-tangle/ternary.md).
@@ -47,7 +46,7 @@ For now, you can ignore all the fields apart from the `signatureMessageFragment`
 
 ## Value transactions
 
-Value transactions either withdraw IOTA tokens from an address or they deposit them into an address.
+Value transactions can withdraw IOTA tokens from an address, deposit them into an address, or send from/to multiple in/outputs from one transaction.
 
 As well as the checks for zero-value transactions, nodes must carry out the following extra checks on these transactions to make sure that the sender actually owns the IOTA tokens and that no additional tokens are ever created:
 
@@ -129,44 +128,44 @@ For example, this output transaction contains an instruction to deposit 100 Mi i
 }
 ```
 
-## Bundles
+## UTXO
 
-A bundle is a group of transactions that are numbered according to their position (index) in the bundle, starting from 0:
+Unspent transaction outputs are used as inputs instead of an account-based model. The UTXO is a part of a larger, self-contained transaction structure known as a [payload](#payload)
 
-- **`currentIndex`:** Index of the current transaction in the bundle
-- **`lastIndex`:** Index of the last transaction in the bundle
+The UTXO model defines a ledger state where balances are not directly associated to addresses but to the outputs of transactions. In this model, transactions specify the outputs of previous transactions as inputs, which are consumed to create new outputs. A transaction must consume the entirety of the specified inputs.
 
-All transactions in the same bundle have the same bundle hash.
+![UTXO flow](https://camo.githubusercontent.com/718a66923f2c437fb814e8bd77ec52cb5e0d550254f641281479d6c8480e0149/68747470733a2f2f692e696d6775722e636f6d2f6833757866364e2e706e67)
 
-Often, a bundle is a group of transactions that rely on each other's validity. For example, a transaction that deposits IOTA tokens into an address relies on another transaction to withdraw those IOTA tokens from another address. Therefore, those transactions must be in the same bundle.
+This approach is meant to enable a self-contained transaction structure defining the data of the entire transfer as a payload to be imbedded into a message. Additionally it provides the benefit of, but is not limited to,
 
-### Structure of a bundle
+- Parallel validation of transaction
+- Easier double-spend detection, since conflicting transactions would reference the same UTXO
 
-A bundle consists of a head, a body, and a tail, where the tail transaction is the one with a 0 in the `currentIndex` field (the first transaction in the bundle), and the head transaction is the one with the largest value in the `lastIndex` field (the last transaction in the bundle).
+## Payload
 
-All transactions in a bundle, except the head, are connected to each other through their `trunkTransaction` fields. These connections allow nodes to find all transactions in the same bundle and validate them.
+A transaction payload is made up of two parts:
 
-The other `branchTransaction` and `trunkTransaction` fields reference the tail transactions of two existing bundles in the Tangle.
+- Transaction essence
+  - These contain the inputs, outputs, and optional embedded payloads
+- Unblock blocks
+  - These unlock the transition essence inputs. In case the unblock block contains a signature, it signs the entire transaction essence part
 
-![Connections in a bundle](../images/bundle-structure.png)
-
-| **Current index**|**Trunk transaction**| **Branch transaction**| **Description**   |
-| :----------------------------- | :------ |:---|:---|
-| 0| Transaction index 1 in this bundle| Transaction hash of an existing transaction in the Tangle|This transaction is called the **tail transaction** |
-|1 | Transaction index 2 in this bundle| The same branch transaction hash as transaction index 0|This transaction is linked to transaction index 0 and 2 through the `trunkTransaction` field |
-|2 | Transaction index 3 in this bundle| The same branch transaction hash as transaction index 0 and 1|This transaction is linked to transaction index 1 and 3 through the `trunkTransaction` field |
-|3 | The same branch transaction hash as all other transactions in this bundle| Transaction hash of an existing transaction in the Tangle| This transaction is called the **head transaction** |
-
-### Maximum number of transactions in a bundle
-
-When you create a bundle of transactions, you get two tip transactions first before doing proof of work for each transaction.
-
-The more transactions in a bundle, the longer it takes to complete the proof of work, which means that by the time a node receives your transactions, they may be attached to an old subtangle.
-
-As a result, we recommend keeping the number of transactions in a bundle below 10 because bundles of more than 10 transactions are less likely to be confirmed.
+| Name                  | Type                                                         | Description                                                  |
+| --------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| Payload Type          | uint32                                                       | Set to **value 0** to denote a *Transaction Payload*.        |
+| Essence `oneOf`       | Transaction EssenceDescribes the essence data making up a transaction by defining its inputs and outputs and an optional payload.**Name****Type****Description**Transaction Typeuint8Set to **value 0** to denote a *Transaction Essence*.Inputs Countuint16The amount of inputs proceeding.Inputs `anyOf`UTXO InputOutputs Countuint16The amount of outputs proceeding.Outputs `anyOf`SigLockedSingleOutputPayload Lengthuint32The length in bytes of the optional payload.Payload `optOneOf`Indexation Payload |                                                              |
+| Unlock Blocks Count   | uint16                                                       | The count of unlock blocks proceeding. Must match count of inputs specified. |
+| Unlock Blocks `anyOf` | Signature Unlock BlockDefines an unlock block containing signature(s) unlocking input(s).NameTypeDescriptionUnlock Typeuint8Set to **value 0** to denote a *Signature Unlock Block*.Signature `oneOf`WOTS SignatureEd25519 SignatureReference Unlock BlockReferences a previous unlock block in order to substitute the duplication of the same unlock block data for inputs which unlock through the same data.NameTypeDescriptionUnlock Typeuint8Set to **value 1** to denote a *Reference Unlock Block*.Referenceuint16Represents the index of a previous unlock block. |                                                              |
 
 :::info:
-Keep in mind that for each input transaction, you may need up to three zero-value transactions to contain the signature, depending on the [security level](../cryptography/signatures.md) of the address.
+For further reference on the updated types of transactions and methods, see:
+
+- [RFC-17]([iotaledger/protocol-rfcs#0017](https://github.com/iotaledger/protocol-rfcs/pull/0017))
+- [RFC-18]([iotaledger/protocol-rfcs#18](https://github.com/iotaledger/protocol-rfcs/pull/18))
+- [RFC-19]([iotaledger/protocol-rfcs#0019](https://github.com/iotaledger/protocol-rfcs/pull/19))
+- [RFC-20]([iotaledger/protocol-rfcs#0020](https://github.com/iotaledger/protocol-rfcs/pull/20))
+- [RFC-00]([iotaledger/protocol-rfcs#0000](https://github.com/iotaledger/protocol-rfcs/pull/0000))
+
 :::
 
 ## Next steps
