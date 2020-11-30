@@ -160,11 +160,11 @@ A transaction payload is made up of two parts:
 :::info:
 For further reference on the updated types of transactions and methods, see:
 
-- [RFC-17]([iotaledger/protocol-rfcs#0017](https://github.com/iotaledger/protocol-rfcs/pull/0017))
-- [RFC-18]([iotaledger/protocol-rfcs#18](https://github.com/iotaledger/protocol-rfcs/pull/18))
-- [RFC-19]([iotaledger/protocol-rfcs#0019](https://github.com/iotaledger/protocol-rfcs/pull/19))
-- [RFC-20]([iotaledger/protocol-rfcs#0020](https://github.com/iotaledger/protocol-rfcs/pull/20))
-- [RFC-00]([iotaledger/protocol-rfcs#0000](https://github.com/iotaledger/protocol-rfcs/pull/0000))
+- [RFC - 0017]([iotaledger/protocol-rfcs#0017](https://github.com/iotaledger/protocol-rfcs/pull/0017))
+- [RFC - 0018]([iotaledger/protocol-rfcs#18](https://github.com/iotaledger/protocol-rfcs/pull/18))
+- [RFC - 0019]([iotaledger/protocol-rfcs#0019](https://github.com/iotaledger/protocol-rfcs/pull/19))
+- [RFC - 0020]([iotaledger/protocol-rfcs#0020](https://github.com/iotaledger/protocol-rfcs/pull/20))
+- [RFC - 0000]([iotaledger/protocol-rfcs#0000](https://github.com/iotaledger/protocol-rfcs/pull/0000))
 
 :::
 

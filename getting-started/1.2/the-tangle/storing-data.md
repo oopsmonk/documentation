@@ -2,11 +2,11 @@
 
 **This topic discusses the types of data that the Tangle is designed to store.**
 
-Although you can store anything in the Tangle, You should consider doing so only for the following use cases:
+Although you can store anything in the Tangle, you should consider doing so only for the following use cases:
 
 **Tamper-Evidence:** You want to be able to prove that a dataset has or has not changed. For an example of this use case, see the blueprint for [Tangle Data Storage](root://blueprints/0.1/tangle-data-storage/overview.md).
 
-**Decentralization:** You can't trust the parties involved to keep data in a centralized, proprietary database. For an example of this use case, see the blueprint for [Track and Trace](root://blueprints/0.1/track-and-trace/overview.md).
+**Decentralization:** You cannot trust the parties involved to keep data in a centralized, proprietary database. For an example of this use case, see the blueprint for [Track and Trace](root://blueprints/0.1/track-and-trace/overview.md).
 
 **Transparency:** You want your data to be visible to everyone to establish trust. For an example of this use case, see the blueprint for the [Data Marketplace](root://blueprints/0.1/tangle-data-storage/overview.md).
 

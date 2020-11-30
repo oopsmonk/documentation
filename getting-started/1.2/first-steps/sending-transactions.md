@@ -34,10 +34,10 @@ All IOTA node software includes an algorithm for [selecting tip transactions](..
 :::info:
 For further reference into IOTA's updates into tip transactions / transactions to come, see the Request for Changes (RFC):
 
-- [RFC 8](https://github.com/iotaledger/protocol-rfcs/pull/26)
-- [RFC 17](https://github.com/iotaledger/protocol-rfcs/pull/17)
-- [RFC 18](https://github.com/iotaledger/protocol-rfcs/pull/18), and
-- [RFC 24]([iotaledger/protocol-rfcs#0024](https://github.com/iotaledger/protocol-rfcs/pull/0024))
+- [RFC - 0008](https://github.com/iotaledger/protocol-rfcs/pull/26)
+- [RFC - 0017](https://github.com/iotaledger/protocol-rfcs/pull/17)
+- [RFC - 0018](https://github.com/iotaledger/protocol-rfcs/pull/18), and
+- [RFC - 0024]([iotaledger/protocol-rfcs#0024](https://github.com/iotaledger/protocol-rfcs/pull/0024))
 
 :::
 

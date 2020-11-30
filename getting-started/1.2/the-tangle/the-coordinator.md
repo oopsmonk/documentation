@@ -2,6 +2,10 @@
 
 **The Coordinator is a client that sends signed transactions called milestones that nodes trust and use to confirm transactions. This topic describes how nodes use milestones to determine which transactions are confirmed.**
 
+:::info:
+The Coordinator is temporary. The IOTA Foundation is working on a project to remove the Coordinator and from the network: [Coordicide](https://coordicide.iota.org/post-coordinator).
+:::
+
 Transactions in the Tangle are considered for confirmation only when they are directly or indirectly referenced by a milestone that has been validated by nodes.
 
 To allow them to recognize milestones, all nodes in the same IOTA network are configured with the [Merkle root address](../accounts/addresses.md) of a Coordinator that they trust to confirm transactions. Using this address, nodes can validate the signatures in milestones to verify whether they are signed by their trusted Coordinator.
