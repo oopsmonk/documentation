@@ -144,7 +144,7 @@ In this tutorial we will use a Merkle Tree of Depth `16`, that just takes some m
 
 The first parameter is the depth of the Merkle Tree and the second parameter is the amount of time (in seconds) to wait for the Coordinator bootstrap step. This step enables the Coordinator to bootstrap by emitting its first milestone as detailed [here](root://hornet/1.1/tutorials/set-up-a-private-tangle-hornet.md#step-3-run-your-private-tangle).
 
-Behind the scenes, our process will create a seed for the Coordinator, an initial IOTA Address holding all IOTAs, a seed for our Nodes, etc i.e. all the steps described here, but fully automated. To monitor the Merkle Tree Generation process, the script runs a Web endpoint that you can use to monitor the status through your favorite browser, at `http://localhost:9000/merkle-tree-generation.log.html`. (The page refreshes automatically).
+Behind the scenes, our process will create a seed for the Coordinator, an initial IOTA Address holding all IOTAs, a seed for our Nodes, etc i.e. all the steps described [here](root://hornet/1.1/tutorials/set-up-a-private-tangle-hornet.md), but fully automated. To monitor the Merkle Tree Generation process, the script runs a Web endpoint that you can use to monitor the status through your favorite browser, at `http://localhost:9000/merkle-tree-generation.log.html`. (The page refreshes automatically).
 
 After the process finishes you should see the following docker containers up and running:
 
