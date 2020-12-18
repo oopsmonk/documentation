@@ -12,7 +12,7 @@ The figure below depicts a minimum viable deployment architecture of a Private T
 
 There are three main nodes identified: 
 
-* The **Coordinator**. As described [here](root://getting-started/1.1/the-tangle/the-coordinator.md), this node emits milestones periodically and has to be bootstrapped and set up appropriately which can be further explained [here](root://hornet/1.1/tutorials/set-up-a-private-tangle-hornet.md). 
+* The **Coordinator**. As described [here](root://getting-started/1.1/the-tangle/the-coordinator.md), this node emits milestones periodically and has to be bootstrapped and set up appropriately which can be further explained [here](root://hornet/1.1/tutorials/set-up-a-private-tangle-hornet.md). With IOTA 2.0 the Coordinator will no longer be needed as explained [here](root://getting-started/1.1/going-further/upcoming-developments.md#coordicide). 
 
 * The **Spammer**. A node that periodically sends `0` value messages to the Private Tangle, thus enabling a minimal message load to support transaction approval as per the IOTA protocol. 
 
