@@ -4,7 +4,7 @@
 
 Like a bank account, IOTA accounts are a way to prove your ownership of transactions in the Tangle.
 
-Rather than using your name and a password to create an account, you create a seed. This seed is your account's master key.
+Rather than using your name and a password to create an account you create a seed. This seed is your account's master key.
 
 ![Seed](/Users/charlesthompson/documentation/getting-started/1.2/images/seed.png)
 
