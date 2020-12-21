@@ -93,7 +93,7 @@ The Parameters of this "one click" installation are as follows (further details 
 * Coordinator Security Level: `2`.
 * Spammer Settings, check [these lines of code](https://github.com/iotaledger/one-click-tangle/blob/master/hornet-private-net/config/config-spammer.json#L72).
 
-Further instructions for AWS deployments can be found [here](https://github.com/iotaledger/one-click-tangle/blob/master/README_AWS.md). If you want to know lower-level details of the AWS installation, how to do it yourself in any Docker-enabled VM and what happens under the scenes, please continue reading. 
+Further instructions for AWS deployments can be found [here](https://github.com/iotaledger/one-click-tangle/blob/master/README_AWS.md). If you want to know lower-level details of the AWS installation, how to do it yourself in any Docker-enabled VM, and what happens under the scenes, please continue reading. 
 
 ## "One Click" Private Tangle on any Docker-enabled VM
 
