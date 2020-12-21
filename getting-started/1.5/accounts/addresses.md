@@ -6,7 +6,7 @@
 
 Addresses are the public half of a [public/private key pair](https://en.wikipedia.org/wiki/Public-key_cryptography), which belongs to a seed. As a result, each address has a corresponding private key which is used to prove to nodes who owns it.
 
-Using a seed, you can generate an [almost unlimited number of addresses and private keys](#maximum-number-of-addresses).
+Using a seed, you can generate an [almost unlimited number of addresses and private keys](#maximum-number-of-addresses). 
 
 You can prove that you own an address by doing the following:
 
