@@ -79,9 +79,9 @@ But now let us see how we can launch our Private Tangle via a "single click". We
 
 ## "One Click" Private Tangle on AWS
 
-To materialize on AWS the deployment architecture described above, go to the AWS Marketplace and install this [product](https://aws.amazon.com/marketplace/pp/B08M4933Y3/) and follow the [instructions](https://github.com/iotaledger/one-click-tangle/blob/master/README_AWS.md). That's it!. 
+To materialize on AWS using the deployment architecture described above, go to the AWS Marketplace and install this [product](https://aws.amazon.com/marketplace/pp/B08M4933Y3/) and follow the [instructions](https://github.com/iotaledger/one-click-tangle/blob/master/README_AWS.md). That's it!. 
 
-Behind the scenes, the process will launch all the Docker containers (through docker-compose), create a seed for the Coordinator, generate the Merkle Tree, configure the Coordinator Address for the initial node, generate an initial IOTA Address holding all IOTAs, a seed for our Nodes, etc i.e. our [deployment architecture](#mvp-deployment-architecture-of-a-private-tangle) and all the steps described [here](root://hornet/1.1/tutorials/set-up-a-private-tangle-hornet.md), but **fully automated**, in "one click"!.
+Behind the scenes, the process will launch all the Docker containers (through docker-compose), create a seed for the Coordinator, generate the Merkle Tree, configure the Coordinator Address for the initial node, generate an initial IOTA Address holding all IOTAs, a seed for our Nodes, etc i.e. our [deployment architecture](#mvp-deployment-architecture-of-a-private-tangle) and all the steps described [here](root://hornet/1.1/tutorials/set-up-a-private-tangle-hornet.md), but **fully automated**, with "one click"!.
 
 The Private Tangle installed will have a Merkle Tree of Depth `24` and could take half a day to be generated. See also a basic explanation of [Merkle Tree Generation](#merkle-tree-depth). 
 
