@@ -18,9 +18,9 @@ There are three main nodes identified:
 
 * The **Regular Hornet Node**. An initial node, it is exposed to the outside through the IOTA protocol (port `14265`) to be the recipient of messages or to peer with other Nodes (through port `15600`) that can later [join](root://hornet/1.1/tutorials/set-up-a-private-tangle-hornet.md#step-4-add-more-hornet-nodes-to-your-private-tangle) the same Private Tangle.  
 
-These three nodes are peered among them as our architecture is based on Docker, so that each node runs within a Docker Container and all containers are attached to the same network named `private-tangle`. 
+These three nodes are peered amongst each other as our architecture is based on Docker, so that each node runs within a Docker Container and all containers are attached to the same network named `private-tangle`. 
 
-In addition, to make the Private Tangle easier to use, a Tangle Explorer can be deployed, conveniently, similar to the one at [https://explorer.iota.org](https://explorer.iota.org). As a result, all the participants in the network are able to browse and visualize messages or IOTA Streams channels. The Tangle Explorer deployment involves two different containers, one with the REST API listening at port `4000` and one with the Web Application listening at port `8082`. The Tangle Explorer also uses zeroMQ to watch what is happening on the Tangle. That is the rationale for having a connection between the Explorer's REST API Container and the Hornet Node through port `5556`. 
+In addition, to make the Private Tangle easier to use, a Tangle Explorer can be deployed, conveniently, similar to the one at [https://explorer.iota.org](https://explorer.iota.org). As a result, all the participants in the network are able to browse and visualize messages or IOTA Streams channels. The Tangle Explorer deployment involves two different containers, one with the REST API listening at port `4000` and one with the Web Application listening at port `8082`. The Tangle Explorer also uses zeroMQ to watch what is happening on the Tangle. This is the rationale for having a connection between the Explorer's REST API Container and the Hornet Node through port `5556`. 
 
 The Hornet Dashboard (available through HTTP port `8081`) is also useful as a way to monitor and ensure that your Private Tangle Nodes are in sync and performing well.
 
