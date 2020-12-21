@@ -169,7 +169,7 @@ docker-compose stop nginx
 Alternatively, the following files should have been created for you:
 
 * `merkle-tree.addr`. The public address of the Coordinator. 
-* `coordinator.seed`. The seed of the coordinator. Keep it safe! 
+* `coordinator.seed`. The seed of the Coordinator. Keep it safe! 
 * `node.seed`. The seed of the initial Hornet Bode. Keep it safe!
 * `snapshots/private-tangle/snapshot.csv` The initial Private Tangle snapshot. It contains just one IOTA address that is holding all IOTAs. 
 
