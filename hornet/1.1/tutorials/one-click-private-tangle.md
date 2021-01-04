@@ -26,15 +26,21 @@ The Hornet Dashboard (available through HTTP port `8081`) is also useful as a wa
 
 The summary of containers that shall be running and **TCP** ports exposed is as follows: 
 
+
+
 | Component           | Container name    | Docker Ports exposed (TCP)       |
 | ------------------- | ----------------- | :------------------------------- |
 | Hornet Initial Node | `node1`           | `14265`, `15600`, `8081`, `5556` |
 | Coordinator         | `coo`             | `15600`                          |
 | Spammer             | `spammer`         | `14265`, `15600`                 |
 | Explorer API        | `explorer-api`    | `4000`                           |
-| Explorer Web App    | `explorer-webapp` | `8082:80`                             |
+| Explorer Web App    | `explorer-webapp` | `8082:80`                        |
+
+
 
 The network policies for those containers should be configured as follows:
+
+
 
 | Component           | Container name    |  Outgoing Traffic To           |
 | ------------------- | ----------------- | :----------------------------- |
@@ -43,6 +49,7 @@ The network policies for those containers should be configured as follows:
 | Spammer             | `spammer`         | `coo:15600`, `node1:15600`     |
 | Explorer API        | `explorer-api`    | `node1:14265`, `node1:5556`    |
 | Explorer Web App    | `explorer-webapp` |                                |
+
 
 
 | Container name      |  Port     | Incoming Traffic from           |
@@ -58,7 +65,10 @@ The network policies for those containers should be configured as follows:
 | `explorer-webapp`   | `8082:80` | outside clients                 |
 
 
+
 The summary of services exposed to the outside is as follows: 
+
+
 
 | Service          | Container name    | Host TCP Port |
 | ---------------- | ----------------- | ------------- |
@@ -68,6 +78,7 @@ The summary of services exposed to the outside is as follows:
 | ZeroMQ           | `node1`           | `5556`        |
 | Explorer API     | `explorer-api`    | `4000`        |
 | Explorer Web App | `explorer-webapp` | `8082`        |
+
 
 
 The deployment architecture described above can be easily transitioned to production-ready by incorporating a reverse proxy leveraging [NGINX](https://docs.nginx.com/nginx/admin-guide/web-server/reverse-proxy/#). As a result, the amount of ports exposed to the outside world can be reduced or load balancing between the nodes of your Private Tangle can be achieved. IOTA Foundation intends to provide automatic, "one click" deployment of these kind of enhanced architectures in the next version of this software. 
