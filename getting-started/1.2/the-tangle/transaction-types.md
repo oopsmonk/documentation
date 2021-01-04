@@ -147,7 +147,7 @@ A transaction payload is made up of two parts:
 
 - Transaction essence
   - These contain the inputs, outputs, and optional embedded payloads
-- Unblock blocks
+- Unblock blocks 
   - These unlock the transition essence inputs. In case the unblock block contains a signature, it signs the entire transaction essence part.
 
 | Name                  | Type                                                         | Description                                                  |
