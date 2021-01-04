@@ -37,7 +37,7 @@ For further reference into IOTA's updates into tip transactions / transactions t
 - [RFC - 0008](https://github.com/iotaledger/protocol-rfcs/pull/26)
 - [RFC - 0017](https://github.com/iotaledger/protocol-rfcs/pull/17)
 - [RFC - 0018](https://github.com/iotaledger/protocol-rfcs/pull/18), and
-- [RFC - 0024]([iotaledger/protocol-rfcs#0024](https://github.com/iotaledger/protocol-rfcs/pull/0024))
+- [RFC - 0024](https://github.com/iotaledger/protocol-rfcs/pull/0024)
 
 :::
 
