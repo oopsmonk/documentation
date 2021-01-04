@@ -32,8 +32,6 @@ In the previous [tutorial](../first-steps/hello-world.md), the `prepareTransfers
 All IOTA node software includes an algorithm for [selecting tip transactions](../the-tangle/how-transfer-tokens.md#choosing-where-to-attach-transactions). These algorithms aim to select valid tip transactions with the best chance of being confirmed.
 
 
-:::
-
 ## Doing proof of work
 
 Proof of work (PoW) is cryptographic proof that energy has been spent in computing power to solve a puzzle.
