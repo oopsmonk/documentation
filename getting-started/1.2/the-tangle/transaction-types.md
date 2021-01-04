@@ -160,11 +160,13 @@ A transaction payload is made up of two parts:
 :::info:
 For further reference on the updated types of transactions and methods, see:
 
+
 - [RFC - 0017]([https://github.com/iotaledger/protocol-rfcs/pull/0017)
 - [RFC - 0018](https://github.com/iotaledger/protocol-rfcs/pull/18)
 - [RFC - 0019](https://github.com/iotaledger/protocol-rfcs/pull/19)
 - [RFC - 0020](https://github.com/iotaledger/protocol-rfcs/pull/20)
 - [RFC - 0000](https://github.com/iotaledger/protocol-rfcs/pull/0000)
+
 
 :::
 
