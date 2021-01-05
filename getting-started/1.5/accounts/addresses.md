@@ -10,8 +10,8 @@ Using a seed, you can generate an [almost unlimited number of addresses and priv
 
 You can prove that you own an address by doing the following:
 
-- Using the private key to sign a transaction
-- Adding the resulting signature fragments to the `signatureMessageFragment` fields of transactions
+- Using the private key to sign a message
+- Adding the resulting signature fragments to the `signatureMessageFragment` fields of messages
 
 :::info:
 It's safe to share addresses with anyone because only the seed owner knows the private key to prove ownership of them.
