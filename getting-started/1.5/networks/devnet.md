@@ -1,8 +1,8 @@
 # The Devnet
 
-**The Devnet is similar to the Mainnet, except the tokens are free and it takes less time and computational power to create and send a transaction. This topic lists some practical information for connecting to the Devnet.**
+**The Devnet is similar to the Mainnet, except the tokens are free and it takes less time and computational power to create and send a message. This topic lists some practical information for connecting to the Devnet.**
 
-## Nodes
+## Nodes 
 
 The IOTA Foundation hosts the following nodes that you can use to connect to the Devnet:
 

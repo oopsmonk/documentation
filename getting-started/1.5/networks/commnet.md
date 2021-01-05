@@ -8,7 +8,7 @@ The IOTA community hosts many nodes behind the following load balancer; you can 
 
 - **URL:** https://nodes.comnet.thetangle.org
 
-## Faucets
+## Faucets 
 
 Use the following [faucet](../references/glossary.md#faucet) to transfer up to 1 Ki of IOTA tokens to one of your addresses on the Comnet:
 
