@@ -157,16 +157,6 @@ A transaction payload is made up of two parts:
 | Unlock Blocks Count   | uint16                                                       | The count of unlock blocks proceeding. Must match count of inputs specified. |
 | Unlock Blocks `anyOf` | Signature Unlock BlockDefines an unlock block containing signature(s) unlocking input(s).NameTypeDescriptionUnlock Typeuint8Set to **value 0** to denote a *Signature Unlock Block*.Signature `oneOf`WOTS SignatureEd25519 SignatureReference Unlock BlockReferences a previous unlock block in order to substitute the duplication of the same unlock block data for inputs which unlock through the same data.NameTypeDescriptionUnlock Typeuint8Set to **value 1** to denote a *Reference Unlock Block*.Referenceuint16Represents the index of a previous unlock block. |                                                              |
 
-:::info:
-For further reference on the updated types of transactions and methods, see:
-
-- [RFC - 0017](https://github.com/iotaledger/protocol-rfcs/pull/17)
-- [RFC - 0018](https://github.com/iotaledger/protocol-rfcs/pull/18)
-- [RFC - 0019](https://github.com/iotaledger/protocol-rfcs/pull/19)
-- [RFC - 0020](https://github.com/iotaledger/protocol-rfcs/pull/20)
-- [RFC - 0000](https://github.com/iotaledger/protocol-rfcs/pull/00)
-
-:::
 
 ## Next steps
 
