@@ -21,7 +21,7 @@
         "cheerio": "^1.0.0-rc.2",
         "emoji-regex": "^9.2.0",
         "emoji-unicode": "^2.0.1",
-        "markdown-it": "^12.0.3",
+        "markdown-it": "^12.0.4",
         "node-emoji": "^1.10.0",
         "pre-commit": "^1.2.2",
         "remark": "^13.0.0",
