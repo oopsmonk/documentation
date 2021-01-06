@@ -12,7 +12,7 @@ Wallets are useful for:
 
 Wallets store any information about your IOTA accounts that is needed to interact with an IOTA network.
 
-The exact information that a wallet stores depends on the developers who made it.
+The exact information that a wallet stores depends on the developers who made it. 
 
 For example, a wallet may store the following:
 

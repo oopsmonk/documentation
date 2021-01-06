@@ -31,7 +31,7 @@ An address is a unique string of 81 [trytes](../the-tangle/ternary.md) (or 90 tr
 OGMMQJUDMNNYSOAXMJWAMNAJPHWMGVAY9UWBXRGTXXVEDIEWSNYRNDQY99NDJQB9QQBPCRRNFAIUPGPLZ
 ```
 
-To support Ed22519 and legacy W-OTS, IOTA also uses Bech32, an extendable address format..
+To support Ed22519, IOTA also uses Bech32, an extendable address format.
 
 The human-readable encoding of the address is Bech32 (as described in [BIP-0173](https://github.com/bitcoin/bips/blob/master/bip-0173.mediawiki)). A Bech32 string is at most 90 characters long and consists of:
 

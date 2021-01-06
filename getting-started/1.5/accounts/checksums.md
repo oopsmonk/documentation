@@ -2,7 +2,7 @@
 
 **A checksum is the name given to the [trytes](../the-tangle/ternary.md) that are appended to the end of an address or a seed. This topic discusses what checksums are for and what they look like.**
 
-Checksums are often appended to addresses and seeds in user interfaces such as wallets to help you to detect typos. 
+Checksums are often appended to addresses and seeds in user interfaces such as wallets to help you to detect typos.
 
 Changing a single tryte in a seed or a checksum results in a completely different checksum.
 
