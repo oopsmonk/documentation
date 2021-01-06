@@ -158,7 +158,6 @@ A transaction payload is made up of two parts:
 | Unlock Blocks `anyOf` | Signature Unlock BlockDefines an unlock block containing signature(s) unlocking input(s).NameTypeDescriptionUnlock Typeuint8Set to **value 0** to denote a *Signature Unlock Block*.Signature `oneOf`WOTS SignatureEd25519 SignatureReference Unlock BlockReferences a previous unlock block in order to substitute the duplication of the same unlock block data for inputs which unlock through the same data.NameTypeDescriptionUnlock Typeuint8Set to **value 1** to denote a *Reference Unlock Block*.Referenceuint16Represents the index of a previous unlock block. |                                                              |
 
 
-
 ## Next steps
 
 [Learn what makes transactions immutable in the Tangle](../the-tangle/immutability.md).
