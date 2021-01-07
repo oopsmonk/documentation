@@ -36,7 +36,6 @@ jobs:
       - uses: actions/checkout@v2
         with:
           path: docs
-          ref: ${{ github.ref }}
       - name: Client Config
         run: |
           cd src
