@@ -32,10 +32,11 @@ jobs:
       - uses: actions/checkout@v2
         with:
           repository: iotaledger/documentation-platform
-          ref: ${{ github.ref }}
+          ref: develop
       - uses: actions/checkout@v2
         with:
           path: docs
+          ref: ${{ github.ref }}
       - name: Client Config
         run: |
           cd src
