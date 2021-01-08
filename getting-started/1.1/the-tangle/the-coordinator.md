@@ -1,56 +1,54 @@
 # The Coordinator
 
-**The Coordinator is a client that sends signed messages called milestones that nodes trust and use to confirm messages. This topic describes how nodes use milestones to determine which messages are confirmed.**
+**The Coordinator is a client that sends signed transactions called milestones that nodes trust and use to confirm transactions. This topic describes how nodes use milestones to determine which transactions are confirmed.**
 
-:::info:
-The Coordinator is temporary. The IOTA Foundation is working on a project to remove the Coordinator and from the network: [Coordicide](https://coordicide.iota.org/post-coordinator). Below is how the Coordinator was employed within IOTA.
-:::
+Transactions in the Tangle are considered for confirmation only when they are directly or indirectly referenced by a milestone that has been validated by nodes.
 
-Messages in the Tangle are considered for confirmation only when they are directly or indirectly referenced by a milestone that has been validated by nodes.
+To allow them to recognize milestones, all nodes in the same IOTA network are configured with the [Merkle root address](../accounts/addresses.md) of a Coordinator that they trust to confirm transactions. Using this address, nodes can validate the signatures in milestones to verify whether they are signed by their trusted Coordinator.
 
-To allow them to recognize milestones, all nodes in the same IOTA network are configured with the [Merkle root address](../accounts/addresses.md) of a Coordinator that they trust to confirm messages. Using this address, nodes can validate the signatures in milestones to verify whether they are signed by their trusted Coordinator.
+To make sure that new transactions always have a chance of being confirmed, the Coordinator sends indexed milestones at regular intervals. This way, nodes can compare the indexes of their milestones to check whether they are synchonized with the rest of the network.
 
-To make sure that new messages always have a chance of being confirmed, the Coordinator sends indexed milestones at regular intervals. This way, nodes can compare the indexes of their milestones to check whether they are synchonized with the rest of the network.
-
-![Milestones](https://docs.iota.org/assets/docs/getting-started/1.1/images/milestones.gif)
+![Milestones](../images/milestones.gif)
 
 ##  Sending milestones
 
-When the Coordinator sends a milestone, it does so in the same way as any [other messages](../first-steps/sending-transactions.md), except for the following difference:
+When the Coordinator sends a milestone, it does so in the same way as any [other transaction](../first-steps/sending-transactions.md), except for the following difference:
 
-- The [past cone](../references/glossary.md#past-cone) of the milestone's tip messages are considered for confirmation
+- The [past cone](../references/glossary.md#past-cone) of the milestone's tip transactions are considered for confirmation
 
-This past cone includes all the pending messages that the tip transactions directly or indirectly reference. As a result, the name of this past cone is called the _confirmation cone_.
+This past cone includes all the pending transactions that the tip transactions directly or indirectly reference. As a result, the name of this past cone is called the _confirmation cone_.
 
-The confirmation cone of a milestone can contain two types of messages:
+The confirmation cone of a milestone can contain two types of transaction:
 
-- **State-mutating:** Value messages that change the balances of two or more addresses
-- **Non-state-mutating:** Zero-value messages and value transactions that withdraw IOTA tokens from an address and deposit them straight back
+- **State-mutating:** Value transactions that change the balances of two or more addresses
+- **Non-state-mutating:** Zero-value transactions and value transactions that withdraw IOTA tokens from an address and deposit them straight back
 
-Non-state-mutating messages are always confirmed if they are referenced by a milestone.
+Non-state-mutating transactions are always confirmed if they are referenced by a milestone.
 
-However, state-mutating messages can lead to [double spends](../references/glossary.md#double-spend). Therefore, nodes and the Coordinator agree on which of the messages should be confirmed by ordering the confirmation cone.
+However, state-mutating transactions can lead to [double spends](../references/glossary.md#double-spend). Therefore, nodes and the Coordinator agree on which of the transactions should be confirmed by ordering the confirmation cone.
 
 ### Ordering the confirmation cone
 
-If the confirmation cone leads to a double spend, nodes and the Coordinator agree that the first messages that tries to transfer the IOTA tokens should be confirmed and the others should be ignored.
+If the confirmation cone leads to a double spend, nodes and the Coordinator agree that the first transaction that tries to transfer the IOTA tokens should be confirmed and the others should be ignored.
 
-However, there are many ways to order messages in the Tangle. Therefore, nodes and the Coordinator agree to order the confirmation cone, using the following [depth-first search](https://en.wikipedia.org/wiki/Depth-first_search) that favors a path down the trunk message:
+However, there are many ways to order transactions in the Tangle. Therefore, nodes and the Coordinator agree to order the confirmation cone, using the following [depth-first search](https://en.wikipedia.org/wiki/Depth-first_search) that favors a path down the trunk transaction:
 
 - Start from the milestone
-- Follow the trunk messages through the confirmation cone until the first confirmed message is found
-- Add the closest message to the list
-- Backtrack through the other messages in the confirmation cone, following the same strategy that favors the trunk message first
+- Follow the trunk transactions through the confirmation cone until the first confirmed transaction is found
+- Add the closest transaction to the list
+- Backtrack through the other transactions in the confirmation cone, following the same strategy that favors the trunk transaction first
 
-For example, here are 26 messages labeled from A to Z.
+For example, here are 26 transactions labeled from A to Z.
 
-![Double spend](https://docs.iota.org/assets/docs/getting-started/1.1/images/conflict.svg)
+![Double spend](../images/conflict.svg)
 
-Messages A, B, C, E, and F are confirmed by milestone H. The other messages are the confirmation cone of milestone V, and transactions G and O represent double spends.
+Transactions A, B, C, E, and F are confirmed by milestone H. The other transactions are the confirmation cone of milestone V, and transactions G and O represent double spends.
 
-To order the confirmation cone, you follow the trunk all the way down to message D. This is the first message in the confirmation cone. Then, you work your way back up, finding the rest of the messages until you have the final order.
+To order the confirmation cone, you follow the trunk all the way down to transaction D. This is the first transaction in the confirmation cone. Then, you work your way back up, finding the rest of the transactions until you have the final order.
 
-![Ordering a double spend](https://docs.iota.org/assets/docs/getting-started/1.1/images/conflict-simple.svg)So, starting from V, the messages are ordered like so:
+![Ordering a double spend](../images/conflict-simple.svg)
+
+So, starting from V, the transactions are ordered like so:
 
 - D
 - G
@@ -65,17 +63,17 @@ To order the confirmation cone, you follow the trunk all the way down to message
 - S
 - V
 
-As a result, milestone V confirms message G because it comes before messages O.
+As a result, milestone V confirms transaction G because it comes before transactions O.
 
-### Recording the confirmed messages
+### Recording the confirmed transactions
 
-To allow nodes to check which messages in the confirmation cone are confirmed by a milestone, it includes the Merkle root of the tail messages that it confirmed.
+To allow nodes to check which transactions in the confirmation cone are confirmed by a milestone, it includes the Merkle root of the tail transactions that it confirmed.
 
 To create the Merkle root, the Coordinator does the following:
 
-- Use the message hashes of all the chosen tail messages as leaves
+- Use the transaction hashes of all the chosen tail transactions as leaves
 
-- Convert each message hash to 49-byte strings
+- Convert each transaction hash to 49-byte strings
 
 - Calculate the 64-byte Merkle root
 
@@ -85,7 +83,7 @@ To create the Merkle root, the Coordinator does the following:
 
 After creating a Merkle root, the Coordinator is ready to add all of this information to its milestone bundle to allow nodes to validate it.
 
-First, the Coordinator signs the bundle hash and adds the signature to the head messages.
+First, the Coordinator signs the bundle hash and adds the signature to the head transaction.
 
 The length of the signature depends on the depth of the Coordinator's Merkle tree:
 

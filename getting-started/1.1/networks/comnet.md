@@ -4,15 +4,21 @@
 
 ## Nodes
 
-The IOTA community hosts many nodes behind the following load balancer; you can also use this URL for sending messages and requesting information about the Tangle from nodes on the Comnet:
+The IOTA community hosts many nodes behind the following load balancer:
 
-- **URL:** https://nodes.comnet.thetangle.org
+**URL:** https://nodes.comnet.thetangle.org
+
+Use this URL for sending transactions and requesting information about the Tangle from nodes on the Comnet.
 
 ## Faucets
 
 Use the following [faucet](../references/glossary.md#faucet) to transfer up to 1 Ki of IOTA tokens to one of your addresses on the Comnet:
 
 - **[Community faucet](https://faucet.comnet.einfachiota.de/#/):** Distributes tokens in batches of up to 1 Ki
+
+## Minimum weight magnitude
+
+Transactions on the Comnet must use a minimum weight magnitude (MWM) of 10 to be valid.
 
 ## Coordinator address
 
@@ -21,10 +27,6 @@ Nodes on the Comnet use a Coordinator that is run by the IOTA community with the
 ```
 YBWDHGHUEB9KSOPONTLTOSSKITIBE9MXPASCLREDNV9HEABYBPTHRQGWNJWQFSYAYZRDXXIOZHWBC9DWC
 ```
-
-:::info:
-The Coordinator is temporary. The IOTA Foundation is working on a project to remove the Coordinator and from the network: [Coordicide](https://coordicide.iota.org/post-coordinator).
-:::
 
 ## Next steps
 

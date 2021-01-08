@@ -11,7 +11,7 @@ Using a seed, you can generate an [almost unlimited number of addresses and priv
 You can prove that you own an address by doing the following:
 
 - Using the private key to sign a message
-- Adding the resulting signature fragments to the `signatureMessageFragment` fields of messages
+- Adding the resulting signature fragments to the `signatureMessageFragment`messages
 
 :::info:
 It's safe to share addresses with anyone because only the seed owner knows the private key to prove ownership of them.
@@ -21,7 +21,7 @@ It's safe to share addresses with anyone because only the seed owner knows the p
 
 In the past, IOTA used two address types but, within and beyond Chrysalis, it supports one: Ed25519, and thus reusable addresses.
 
-Ed25519 is a modern EdDSA signature scheme using [SHA-512](https://en.wikipedia.org/wiki/SHA-512) and [Curve25519](https://en.wikipedia.org/wiki/Curve25519). It addresses the disadvantage of statefulness, size, and speed found in previous schemes. And at its core, Ed25519 support allows for smaller transaction sizes and to safely spend funds which were sent to an already used deposit address. 
+Ed25519 is a modern EdDSA signature scheme using [SHA-512](https://en.wikipedia.org/wiki/SHA-512) and [Curve25519](https://en.wikipedia.org/wiki/Curve25519). It addresses the disadvantage of statefulness, size, and speed found in previous schemes. And at its core, Ed25519 support allows for smaller message sizes and to safely spend funds which were sent to an already used deposit address. 
 
 ## Address formats
 
@@ -31,7 +31,7 @@ An address is a unique string of 81 [trytes](../the-tangle/ternary.md) (or 90 tr
 OGMMQJUDMNNYSOAXMJWAMNAJPHWMGVAY9UWBXRGTXXVEDIEWSNYRNDQY99NDJQB9QQBPCRRNFAIUPGPLZ
 ```
 
-To support Ed22519, IOTA also uses Bech32, an extendable address format.
+To support Ed22519, IOTA also uses Bech32, an extendable address format..
 
 The human-readable encoding of the address is Bech32 (as described in [BIP-0173](https://github.com/bitcoin/bips/blob/master/bip-0173.mediawiki)). A Bech32 string is at most 90 characters long and consists of:
 
@@ -72,10 +72,9 @@ You can use the following IOTA Tangle Utilities with addresses:
 
 - [Read an address from a QR code](https://utils.iota.org/qr-scan)
 
-- [Search for transactions that include an address](https://utils.iota.org/)
+- [Search for messages that include an address](https://utils.iota.org/)
 
 ## Next steps
 
 Learn about [signatures](../accounts/signatures.md) and how they prove to nodes that you own an address.
-
 

@@ -6,9 +6,9 @@
 
 To prove ownership of an [address](../accounts/addresses.md), you sign a unspent message output with the corresponding private key of the address so that others can verify that you own it.
 
-Depending on how the address is generated, a signature may be too large to fit in a single message. As a result, signatures are sometimes fragments across the `signatureMessageFragment` fields of one or more messages in a bundle. See [How signatures are created and verified](../cryptography/signatures.md).
+Depending on how the address is generated, a signature may be too large to fit in a single message. As a result, signatures are sometimes fragments across the `signatureMessageFragment`messages in a bundle. See [How signatures are created and verified](../cryptography/signatures.md).
 
-The way in which a signature is generated differs depending on the signature scheme that's used.
+The way in which a signature is generated differs depending on the signature scheme that is used.
 
 ## Signature scheme
 

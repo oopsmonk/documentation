@@ -8,7 +8,7 @@ To explain how IOTA tokens are transferred from one address to another, this top
 
 - Bob
 
-- Charlie 
+- Charlie
 
 ## The goal
 

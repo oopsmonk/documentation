@@ -28,4 +28,4 @@ The Coordinator is temporary. The IOTA Foundation is working on a project to rem
 
 ## Next steps
 
-[Learn about IOTA accounts](../accounts/overview.md) and how you can create one to prove your ownership of transactions.
+[Learn about IOTA accounts](../accounts/overview.md) and how you can create one to prove your ownership of messages.

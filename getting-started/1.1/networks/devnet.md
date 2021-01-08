@@ -12,11 +12,11 @@ The IOTA Foundation hosts many nodes behind the following load balancer:
 
 **URL:** https://nodes.devnet.iota.org
 
-Use this URL for sending messages and requesting information about the Tangle from nodes in the Devnet.
+Use this URL for sending transactions and requesting information about the Tangle from nodes in the Devnet.
 
 ### ZMQ node
 
-Use this endpoint to poll the node for new transactions:
+Use this endpoint to poll the node for new transactions.
 
 **URL:** tcp://zmq.devnet.iota.org:5556
 
@@ -26,6 +26,10 @@ Use the following [faucets](../references/glossary.md#faucet) to transfer up to 
 
 - **[Official faucet](https://faucet.devnet.iota.org/):** Distributes tokens in batches of 1 Ki
 
+## Minimum weight magnitude
+
+Transactions in the Devnet must use a minimum weight magnitude (MWM) of at least 9 to be valid.
+
 ## Coordinator address
 
 Nodes in the Devnet use a Coordinator that is run by the IOTA Foundation with the following address:
@@ -33,10 +37,6 @@ Nodes in the Devnet use a Coordinator that is run by the IOTA Foundation with th
 ```
 GYISMBVRKSCEXXTUPBWTIHRCZIKIRPDYAHAYKMNTPZSCSDNADDWAEUNHKUERZCTVAYJCNFXGTNUH9OGTW
 ```
-
-:::info:
-The Coordinator is temporary. The IOTA Foundation is working on a project to remove the Coordinator and from the network: [Coordicide](https://coordicide.iota.org/post-coordinator).
-:::
 
 ## Next steps
 

@@ -16,7 +16,7 @@ Use this URL for sending messages and requesting information about the Tangle fr
 
 ### ZMQ node
 
-Use this endpoint to poll the node for new transactions:
+Use this endpoint to poll the node for new messages:
 
 **URL:** tcp://zmq.devnet.iota.org:5556
 
@@ -40,4 +40,4 @@ The Coordinator is temporary. The IOTA Foundation is working on a project to rem
 
 ## Next steps
 
-See an overview of the [Comnet](../networks/comnet.md).
+See an overview of the [Comnet](../networks/commnet.md).

@@ -12,7 +12,7 @@ To allow them to recognize milestones, all nodes in the same IOTA network are co
 
 To make sure that new messages always have a chance of being confirmed, the Coordinator sends indexed milestones at regular intervals. This way, nodes can compare the indexes of their milestones to check whether they are synchonized with the rest of the network.
 
-![Milestones](https://docs.iota.org/assets/docs/getting-started/1.1/images/milestones.gif)
+![Milestones](../images/milestones.gif)
 
 ##  Sending milestones
 
@@ -44,13 +44,13 @@ However, there are many ways to order messages in the Tangle. Therefore, nodes a
 
 For example, here are 26 messages labeled from A to Z.
 
-![Double spend](https://docs.iota.org/assets/docs/getting-started/1.1/images/conflict.svg)
+![Double spend](../images/conflict.svg)
 
 Messages A, B, C, E, and F are confirmed by milestone H. The other messages are the confirmation cone of milestone V, and transactions G and O represent double spends.
 
 To order the confirmation cone, you follow the trunk all the way down to message D. This is the first message in the confirmation cone. Then, you work your way back up, finding the rest of the messages until you have the final order.
 
-![Ordering a double spend](https://docs.iota.org/assets/docs/getting-started/1.1/images/conflict-simple.svg)So, starting from V, the messages are ordered like so:
+![Ordering a double spend](../images/conflict-simple.svg)So, starting from V, the messages are ordered like so:
 
 - D
 - G

@@ -22,7 +22,7 @@
 [Networks/IOTA networks](/networks/overview.md)
 [Networks/Mainnet](/networks/mainnet.md)
 [Networks/Devnet](/networks/devnet.md)
-[Networks/Comnet](/networks/comnet.md)
+[Networks/Comnet](/networks/commnet.md)
 
 [IOTA accounts/About accounts](/accounts/overview.md)
 [IOTA accounts/Seeds](/accounts/seeds.md)

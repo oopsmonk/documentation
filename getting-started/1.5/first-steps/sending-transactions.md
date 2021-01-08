@@ -5,8 +5,8 @@
 Sending a transaction includes the following steps:
 
 - Choosing an IOTA network
-- Getting tip transactions 
-- Doing proof of work 
+- Getting tip transactions
+- Doing proof of work
 - Sending the transaction to a node
 
 ![Sending a transaction](../images/sending-transaction.png)

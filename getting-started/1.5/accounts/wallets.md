@@ -12,7 +12,7 @@ Wallets are useful for:
 
 Wallets store any information about your IOTA accounts that is needed to interact with an IOTA network.
 
-The exact information that a wallet stores depends on the developers who made it. 
+The exact information that a wallet stores depends on the developers who made it.
 
 For example, a wallet may store the following:
 
@@ -63,7 +63,7 @@ Be careful where you enter your seed. Some unofficial wallets may not be trustwo
 
 ## Wallet security
 
-IOTA's wallets are based in Stronghold, a secure software implementation with the sole purpose of isolating digital secrets from exposure to hackers and accidental leaks. It uses versioned, file-based snapshots with double-encryption that can be easily backed up and securely shared between devices. Written in Rust, it has strong guarantees of memory safety and process integrity. 
+IOTA's wallets are based in Stronghold, a secure software implementation with the sole purpose of isolating digital secrets from exposure to hackers and accidental leaks. It uses versioned, file-based snapshots with double-encryption that can be easily backed up and securely shared between devices. Written in Rust, it has strong guarantees of memory safety and process integrity.
 
 ## Next steps
 
