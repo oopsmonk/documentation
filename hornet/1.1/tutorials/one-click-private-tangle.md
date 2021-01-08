@@ -1,8 +1,10 @@
 # "One Click" Private Tangle Tutorial
 
-## Introduction
+In this tutorial you will learn how to use a set of Docker-based tools and pre-configured setups to deploy a ([hornet-based](https://github.com/gohornet/hornet)) Private Tangle in **"one click"** to cloud environments or platforms.
 
-IOTA [mainnet](root://getting-started/1.1/networks/mainnet.md) and [devnet](root://getting-started/1.1/networks/devnet.md) are public IOTA Networks where you can develop permissionless applications based on the Tangle. However, there can be situations where you would like to run a [Private IOTA Network](root://compass/1.0/overview.md) (Private Tangle) so that only a limited set of stakeholders or nodes can participate. To support the IOTA Community working on these kind of scenarios, a set of Docker-based tools and pre-configured setups allow the deployment of a ([hornet-based](https://github.com/gohornet/hornet)) Private Tangle in **"one click"**. These tools are publicly available in the [one-click-tangle](https://github.com/iotaledger/one-click-tangle) repository. Additionally, the IOTA Foundation has integrated them for use in the [AWS Marketplace](https://aws.amazon.com/marketplace/pp/B08M4933Y3/) and, in the future, on other Cloud marketplaces.
+## Background
+
+IOTA [mainnet](root://getting-started/1.1/networks/mainnet.md) and [devnet](root://getting-started/1.1/networks/devnet.md) are public IOTA Networks where you can develop permissionless applications based on the Tangle. However, there can be situations where you would like to run a [Private IOTA Network](root://compass/1.0/overview.md) (Private Tangle) so that only a limited set of stakeholders or nodes can participate.  To automate and simplify the [deployment of a Private Tangle](../tutorials/set-up-a-private-tangle-hornet.md), some tools publicly available in the [one-click-tangle](https://github.com/iotaledger/one-click-tangle) repository have been developed. Additionally, the IOTA Foundation has integrated them for use in the [AWS Marketplace](https://aws.amazon.com/marketplace/pp/B08M4933Y3/) and, in the future, on other Cloud marketplaces.
 
 ## MVP Deployment Architecture of a Private Tangle
 
@@ -27,7 +29,6 @@ The Hornet Dashboard (available through HTTP port `8081`) is also useful as a wa
 The summary of containers that shall be running and **TCP** ports exposed is as follows: 
 
 
-
 | Component           | Container name    | Docker Ports exposed (TCP)       |
 | ------------------- | ----------------- | :------------------------------- |
 | Hornet Initial Node | `node1`           | `14265`, `15600`, `8081`, `5556` |
@@ -37,9 +38,7 @@ The summary of containers that shall be running and **TCP** ports exposed is as 
 | Explorer Web App    | `explorer-webapp` | `8082:80`                        |
 
 
-
 The network policies for those containers should be configured as follows:
-
 
 
 | Component           | Container name    |  Outgoing Traffic To           |
@@ -65,9 +64,7 @@ The network policies for those containers should be configured as follows:
 | `explorer-webapp`   | `8082:80` | outside clients                 |
 
 
-
 The summary of services exposed to the outside is as follows: 
-
 
 
 | Service          | Container name    | Host TCP Port |
@@ -78,7 +75,6 @@ The summary of services exposed to the outside is as follows:
 | ZeroMQ           | `node1`           | `5556`        |
 | Explorer API     | `explorer-api`    | `4000`        |
 | Explorer Web App | `explorer-webapp` | `8082`        |
-
 
 
 The deployment architecture described above can be easily transitioned to production-ready by incorporating a reverse proxy leveraging [NGINX](https://docs.nginx.com/nginx/admin-guide/web-server/reverse-proxy/#). As a result, the amount of ports exposed to the outside world can be reduced or load balancing between the nodes of your Private Tangle can be achieved. IOTA Foundation intends to provide automatic, "one click" deployment of these kind of enhanced architectures in the next version of this software. 
@@ -208,6 +204,21 @@ dd4bcad67c5e        iotaledger/explorer-webapp   "docker-entrypoint.s…"   2 da
 You can now get access to the Tangle Explorer through `http://localhost:8082`. 
 
 ## Limitations and Troubleshooting
+
 Currently, launching a new installation will blindly remove all existing data, so you have to be careful. The next version of the scripts will allow for the stopping, restarting, and updating of all the software artifacts.
 
 For Mac OS, there is an issue with permissions and you may need to comment [this line of code](https://github.com/iotaledger/one-click-tangle/blob/master/hornet-private-net/private-tangle.sh#L106). Also Mac OS users should install GNU sed, for instance, using `brew install --default-names gnu-sed`.  
+
+## Next steps
+
+Try using one of the client libraries to send transactions to the nodes in your Private Tangle:
+
+- [C](root://core/1.0/getting-started/get-started-c.md)
+
+- [Go](root://core/1.0/getting-started/get-started-go.md)
+
+- [Java](root://core/1.0/getting-started/get-started-java.md)
+
+- [JavaScript](root://core/1.0/getting-started/get-started-js.md)
+
+- [Python](root://core/1.0/getting-started/get-started-python.md)
