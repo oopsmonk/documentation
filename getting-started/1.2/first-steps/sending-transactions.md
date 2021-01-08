@@ -5,8 +5,8 @@
 Sending a transaction includes the following steps:
 
 - Choosing an IOTA network
-- Getting tip transactions
-- Doing proof of work
+- Getting tip transactions 
+- Doing proof of work 
 - Sending the transaction to a node
 
 ![Sending a transaction](../images/sending-transaction.png)
@@ -31,15 +31,6 @@ In the previous [tutorial](../first-steps/hello-world.md), the `prepareTransfers
 
 All IOTA node software includes an algorithm for [selecting tip transactions](../the-tangle/how-transfer-tokens.md#choosing-where-to-attach-transactions). These algorithms aim to select valid tip transactions with the best chance of being confirmed.
 
-:::info:
-For further reference into IOTA's updates into tip transactions / transactions to come, see the Request for Changes (RFC):
-
-- [RFC - 0008](https://github.com/iotaledger/protocol-rfcs/pull/26)
-- [RFC - 0017](https://github.com/iotaledger/protocol-rfcs/pull/17)
-- [RFC - 0018](https://github.com/iotaledger/protocol-rfcs/pull/18), and
-- [RFC - 0024]([iotaledger/protocol-rfcs#0024](https://github.com/iotaledger/protocol-rfcs/pull/0024))
-
-:::
 
 ## Doing proof of work
 

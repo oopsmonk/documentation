@@ -78,4 +78,3 @@ You can use the following IOTA Tangle Utilities with addresses:
 
 Learn about [signatures](../accounts/signatures.md) and how they prove to nodes that you own an address.
 
-
