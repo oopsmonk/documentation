@@ -6,12 +6,12 @@
 
 [First steps/Set up your developer environment](/first-steps/set-up-env.md)
 [First steps/Hello world!](/first-steps/hello-world.md)
-[First steps/Sending transactions](/first-steps/sending-transactions.md)
+[First steps/Sending messages](/first-steps/sending-messages.md)
 
 [The Tangle/About the Tangle](/the-tangle/overview.md)
 [The Tangle/Differences in the Tangle and blockchains](/the-tangle/tangle-vs-blockchain.md)
 [The Tangle/Ternary](/the-tangle/ternary.md)
-[The Tangle/Types of transaction](/the-tangle/transaction-types.md)
+[The Tangle/Types of message](/the-tangle/message-types.md)
 [The Tangle/Immutability in the Tangle](/the-tangle/immutability.md)
 [The Tangle/Storing data in the Tangle](/the-tangle/storing-data.md)
 [The Tangle/Origin of the IOTA token](/the-tangle/genesis.md)

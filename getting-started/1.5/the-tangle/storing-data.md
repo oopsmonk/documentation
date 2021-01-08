@@ -8,7 +8,7 @@ Although you can store anything in the Tangle, you should consider doing so only
 
 **Decentralization:** You cannot trust the parties involved to keep data in a centralized, proprietary database. For an example of this use case, see the blueprint for [Track and Trace](root://blueprints/0.1/track-and-trace/overview.md).
 
-**Transparency:** You want your data to be visible to everyone to establish trust. For an example of this use case, see the blueprint for the [Data Marketplace](root://blueprints/0.1/tangle-data-storage/overview.md).
+**Transparency:** You want your data to be visible to everyone to establish trust. For an example of this use case, see the blueprint for the [Data Marketplace](root://blueprints/0.1/tangle-data-storage/overview.md). 
 
 ## Data persistence
 

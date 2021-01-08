@@ -1,6 +1,6 @@
 # Immutability in the Tangle
 
-**This topic explains what makes transactions immutable when they are attached to the Tangle.**
+**This topic explains what makes messages immutable when they are attached to the Tangle.**
 
 One of the most fundamental properties of the Tangle is that it is immutable. After a message is attached to the Tangle, it cannot be changed.
 
@@ -20,7 +20,7 @@ Since the digest only needs to be computed once whilte iterating over different 
 It is much faster as BLAKE2b-256 has a performance of about 1 GB/s and Curl then only needs to be executed for one single 243-trit block of input. However, the hashing algorithm still needs a permanode.
 
 :::info:
-Previously, IOTA used [Curl](../references/glossary.md#Curl), which took [ternary](../the-tangle/ternary.md) input values called trits and always output a 243-trit hash. For reference, see Version 1.1 of this content.
+Previously, IOTA used [Curl](../references/glossary.md#Curl), which took [ternary](../the-tangle/ternary.md) input values called trits and always output a 243-trit hash. For reference, see Version 1.2 of this document.
 :::
 
 ## Next steps

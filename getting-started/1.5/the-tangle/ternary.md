@@ -1,6 +1,6 @@
 # Ternary 
 
-**All transactions in the Tangle are made up of characters called trytes. This topic explains what ternary is, why IOTA uses it, and how data is converted to trytes.**
+**All messages in the Tangle are made up of characters called trytes. This topic explains what ternary is, why IOTA uses it, and how data is converted to trytes.**
 
 :::info:
 The Ternary numerical system will be repurposed in the future in the coming IOTA updates.
@@ -48,7 +48,7 @@ To make trytes easier to read, they are represented as one of 27 possible tryte-
 
 In the IOTA client libraries, you can convert ASCII characters to and from trytes.
 
-This feature is useful for converting an ASCII message such as `Hello world` to trytes, which you can add to a transaction.
+This feature is useful for converting an ASCII message such as `Hello world` to trytes, which you can add to a message.
 
 Each ASCII character is represented as 2 trytes by doing the following:
 
@@ -106,4 +106,5 @@ Each ASCII character is represented as 2 trytes by doing the following:
 
 ## Next steps
 
-[Find out about the different types of transactions](../the-tangle/transaction-types.md) and how you can use them.
+[Find out about the different types of messages](../first-steps/sending-messages.md) and how you can use them.
+

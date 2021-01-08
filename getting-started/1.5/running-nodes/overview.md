@@ -34,7 +34,7 @@ When a node is synchronized, it then has enough information to decide which tran
 
 ## Deciding which transactions are confirmed
 
-All transactions remain in a pending state until the node is sure of its validity. For a definition of a valid transaction, see [Transaction types](../the-tangle/transaction-types.md).
+All transactions remain in a pending state until the node is sure of its validity. For a definition of a valid transaction, see [Transaction types](../the-tangle/message-types.md).
 
 However, even when a transaction is valid, nodes may not be able to make a decision like in the case of a [double spend](../the-tangle/how-transfer-tokens.md#reaching-a-consensus-on-double-spends).
 

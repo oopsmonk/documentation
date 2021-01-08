@@ -10,15 +10,15 @@ Users are free to choose any tip messages to attach theirs to.
 
 However, the Weighted Uniform Random Tip Selection algorithm selects tip messages that are non-lazy to maximize confirmation rates, meaning  a tip does not attach to a cone of messages which is too far in the past.
 
-## Types of tip transactions
+## Types of tip messages
 
 In the Tangle, new messages are confirmed if they are directly or indirectly referenced by a [milestone](../the-tangle/the-coordinator.md), using the White Flag confirmation algorithm.
 
 As a result, the algorithm needs to return tips that are non-lazy so the confirmation rate is higher.
 
-For example, if tip 1 in this image below were referenced by a milestone, lots of non-lazy transactions would be confirmed.
+For example, if tip 1 in this image below were referenced by a milestone, lots of non-lazy messages would be confirmed.
 
-If tip 2 were referenced by a milestone, no other transactions would be confirmed because its [past cone](../references/glossary.md#past-cone) includes transactions that are already confirmed by an old milestone.
+If tip 2 were referenced by a milestone, no other messages would be confirmed because its [past cone](../references/glossary.md#past-cone) includes messages that are already confirmed by an old milestone.
 
 ![sdf](https://github.com/GalRogozinski/protocol-rfcs/raw/urts/text/0008-uniform-random-tip-selection/images/otrsi_ytrsi.PNG)
 
