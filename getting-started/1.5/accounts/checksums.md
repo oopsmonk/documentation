@@ -4,9 +4,9 @@
 
 Checksums are often appended to addresses and seeds in user interfaces such as wallets to help you to detect typos.
 
-Changing a single tryte in a seed or a checksum results in a completely different checksum.
+Changing a single tryte in a seed or a checksum results in a completely different checksum. 
 
-![Trinity checksum](/Users/charlesthompson/documentation/getting-started/1.2/images/trinity-checksum.png)
+![Trinity checksum](../images/trinity-checksum.png)
 
 
 
