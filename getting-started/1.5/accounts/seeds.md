@@ -2,7 +2,7 @@
 
 **A seed is a unique master key that gives you the ability to prove your ownership of either messages and/or any IOTA tokens that are held on your addresses.**
 
-![Seed](/Users/charlesthompson/documentation/getting-started/1.2/images/seed.png)
+![Seed](../images/seed.png)
 
 ## Seed format
 
@@ -22,7 +22,7 @@ The used seed is a 384-bit or 243-trit random string and there are several ways 
 
 IOTA uses a combination of Ed25519, BIP-39, and SLIP-10 methodologies as the standardized way of producing derivation:
 
-- [Ed25519]([iotaledger/protocol-rfcs#0009](https://github.com/iotaledger/protocol-rfcs/pull/9)) – a signature algorithm key generation where a given random sequence of bytes (or seed) the length of 32 bytes is a valid private key
+- [Ed25519](https://github.com/iotaledger/protocol-rfcs/pull/9) – a signature algorithm key generation where a given random sequence of bytes (or seed) the length of 32 bytes is a valid private key
 - [SLIP -10](https://github.com/satoshilabs/slips/blob/master/slip-0010.md) – describes how to derive private keys on a coin/account/index basis from a single master seed 
 - [BIP - 39](https://github.com/bitcoin/bips/blob/master/bip-0039.mediawiki) – describes how a seed can be represented as human readable mnemonic words 
 

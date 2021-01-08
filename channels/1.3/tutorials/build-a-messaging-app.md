@@ -5,7 +5,7 @@
 ![API workflow](../images/api-workflow.png)
 
 :::info:Just want to run some code?
-A full CLI example, including masked payloads is available on [GitHub](https://github.com/JakeSCahill/channels-examples).
+A full CLI example, including masked payloads is available on [GitHub](https://github.com/iotaledger/channels-examples).
 :::
 
 ## Prerequisites
@@ -44,7 +44,7 @@ In this step, you use Cargo to create a new project and install the dependencies
     ```bash
     anyhow = { version = "1.0", default-features = false }
     iota-streams = { git = "https://github.com/iotaledger/streams", branch  = "master"}
-    iota-core = { git = "https://github.com/iotaledger/iota.rs", rev = "0ad8e7f" }
+    iota-core = { git = "https://github.com/iotaledger/iota.rs", branch = "iota-1.0" }
     ```
 
 Now you have all the dependencies, you're ready to start coding.
@@ -459,4 +459,4 @@ You've got an API author application that publishes an alert on your channel, an
 
 ## Next steps
 
-Take a look at the [full example](https://github.com/JakeSCahill/channels-examples) and get involved by discussing your own ideas in the #streams-discussion channel on [Discord](https://discord.iota.org/).
+Take a look at the [full example](https://github.com/iotaledger/channels-examples) and get involved by discussing your own ideas in the #streams-discussion channel on [Discord](https://discord.iota.org/).

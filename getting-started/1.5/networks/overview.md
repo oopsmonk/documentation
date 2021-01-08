@@ -23,7 +23,7 @@ The IOTA community maintains the following permissionless network, where anyone 
 
 |      | **Network**                     | **Status** | **Description**                                              |      |
 | :--- | :------------------------------ | :--------- | ------------------------------------------------------------ | ---- |
-|      | [Comnet](../networks/comnet.md) | Active     | A development network where the IOTA token has no value except for testing purposes |      |
+|      | [Comnet](../networks/commnet.md) | Active     | A development network where the IOTA token has no value except for testing purposes |      |
 
 ## Coordinator address
 

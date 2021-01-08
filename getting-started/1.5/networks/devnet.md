@@ -40,4 +40,4 @@ The Coordinator is temporary. The IOTA Foundation is working on a project to rem
 
 ## Next steps
 
-See an overview of the [Comnet](../networks/comnet.md).
+See an overview of the [Comnet](../networks/commnet.md).
