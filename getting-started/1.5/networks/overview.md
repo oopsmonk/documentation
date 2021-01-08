@@ -35,4 +35,4 @@ The Coordinator is temporary. The IOTA Foundation is working on a project to rem
 
 ## Next steps
 
-See an overview of the [Mainnet](../networks/mainnet.md).
+See an overview of the [Mainnet](../networks/mainnet.md). 
