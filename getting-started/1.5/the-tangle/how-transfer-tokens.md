@@ -18,7 +18,7 @@ Charlie wants to transfer 10 i to Bob.
 
 In this example, Alice had 10 i that she transferred to Bob.
 
-Therefore, the Tangle now includes a [value message](../the-tangle/transaction-types.md) that transferred those 10 i to Bob.
+Therefore, the Tangle now includes a [value message](../the-tangle/message-types.md) that transferred those 10 i to Bob.
 
 ## Choosing where to attach messages
 
@@ -26,7 +26,7 @@ To transfer 10 i to Bob, Charlie must attach a value message to the Tangle. To d
 
 To get these tip messages, Charlie requests them from a node.
 
-The node selects two messages by using an algorithm called [uniform random tip selection](../the-tangle/tip-selection.md). This algorithm selects two valid tip messages that lead to a valid ledger state.
+The node selects two messages by using an algorithm called [uniform random tip selection](../the-tangle/tip-selection.md) (URTS). This algorithm selects two valid tip messages that lead to a valid ledger state.
 
 :::info:
 The ledger state is a record of all the value message that have transferred IOTA tokens in the Tangle, including the state of all balances on addresses. This state must always be balanced: The total number of IOTA tokens must always add up to the [total supply](../the-tangle/genesis.md).

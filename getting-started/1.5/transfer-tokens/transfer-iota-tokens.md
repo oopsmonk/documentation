@@ -56,7 +56,7 @@ If the `latestMilestoneIndex` field is equal to the one you got from Discord and
 
 ## Step 2. Transfer your IOTA tokens
 
-In this step, you transfer your IOTA tokens from one of your addresses to another. To do so, you will create a bundle of value [transactions](../the-tangle/transaction-types.md#value-transactions), including:
+In this step, you transfer your IOTA tokens from one of your addresses to another. To do so, you will create a bundle of value [transactions](../the-tangle/message-types.md), including:
 
 - One input transaction to withdraw the IOTA tokens from your address
 - One output transaction to deposit 1 i into your other address
@@ -127,7 +127,7 @@ The first transaction is the tail transaction in your bundle. You can tell that 
 
 All the transactions in a bundle have the same bundle hash, which makes the bundle essence immutable. See [Immutability in the Tangle](../the-tangle/immutability.md) for more information about the bundle hash.
 
-In this example, the tail transaction is an [output](../the-tangle/transaction-types.md#value-transactions) because it deposits 1 Ki into the address that you added to the `receivingAddress` variable.
+In this example, the tail transaction is an [output](../the-tangle/message-types.md) because it deposits 1 Ki into the address that you added to the `receivingAddress` variable.
 
 The `signatureMessageFragment` field of this transaction contains only 9s, meaning that this field is empty because it does not need to contain ownership of the address.
 

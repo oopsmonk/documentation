@@ -124,7 +124,7 @@ Click the green button to run the sample code in this tutorial and see the resul
 
 ## Next steps
 
-Take an in-depth look at how your transaction made it to the Tangle by [examining the steps that were involved](../first-steps/sending-transactions.md).
+Take an in-depth look at how your transaction made it to the Tangle by [examining the steps that were involved](../first-steps/sending-messages.md).
 
 You can also use the client library to [search for your transaction in the Tangle](root://core/1.0/tutorials/js/read-transactions.md).
 

@@ -335,7 +335,7 @@ See also: [About the Tangle](../the-tangle/overview.md)
 |:---------|:-------------|:-----|
 |Last transaction in a bundle|noun|preferred|
 
-See also: [Transaction types](../the-tangle/transaction-types.md)
+See also: [Transaction types](../the-tangle/message-types.md)
 
 ### input transaction
 
@@ -343,7 +343,7 @@ See also: [Transaction types](../the-tangle/transaction-types.md)
 |:---------|:-------------|:-----|
 |Transaction with a negative value that withdraws IOTA tokens from an address|noun|preferred|
 
-See also: [Transaction types](../the-tangle/transaction-types.md)
+See also: [Transaction types](../the-tangle/message-types.md)
 
 ### local proof of work
 
@@ -377,7 +377,7 @@ See also: [Tip selection](../the-tangle/tip-selection.md)
 |:---------|:-------------|:-----|
 |Transaction with a positive value that deposits IOTA tokens into an address|noun|preferred|
 
-See also: [Transaction types](../the-tangle/transaction-types.md)
+See also: [Transaction types](../the-tangle/message-types.md)
 
 ### outsourced proof of work
 
@@ -423,7 +423,7 @@ See also: [Tip selection](../the-tangle/tip-selection.md)
 |:---------|:-------------|:-----|
 |Cryptographic proof that energy has been spent in computing power to solve a puzzle|noun|preferred|
 
-See also: [Doing proof of work](../first-steps/sending-transactions.md#doing-proof-of-work)
+See also: [Doing proof of work](../first-steps/sending-messages.md#doing-proof-of-work)
 
 ### reattach
 
@@ -445,7 +445,7 @@ See also: [Tip selection](../the-tangle/tip-selection.md)
 |:---------|:-------------|:-----|
 |[Proof of work](#proof-of-work) that is done by a [node](#node)|noun|preferred|
 
-See also: [Doing proof of work](../first-steps/sending-transactions.md#doing-proof-of-work)
+See also: [Doing proof of work](../first-steps/sending-messages.md#doing-proof-of-work)
 
 ### solid
 
@@ -465,7 +465,7 @@ See also: [Doing proof of work](../first-steps/sending-transactions.md#doing-pro
 |:---------|:-------------|:-----|
 |First transaction in a [bundle](#bundle)|noun|preferred|
 
-See also: [Transaction types](../the-tangle/transaction-types.md)
+See also: [Transaction types](../the-tangle/message-types.md)
 
 ### tip selection
 
@@ -489,7 +489,7 @@ See also: [Tip selection](../the-tangle/tip-selection.md)
 |:---------|:-------------|:-----|
 |An object that is stored in the Tangle and that [nodes](#node) in an IOTA network can process|noun|preferred|
 
-See also: [Transaction types](../the-tangle/transaction-types.md)
+See also: [Transaction types](../the-tangle/message-types.md)
 
 ### youngest transaction root snapshot index
 
@@ -505,4 +505,4 @@ See also: [Tip selection](../the-tangle/tip-selection.md)
 |:---------|:-------------|:-----|
 |Transaction with no value that may contain any arbitrary data such as messages or signatures|noun|preferred|
 
-See also: [Transaction types](../the-tangle/transaction-types.md)
+See also: [Message types](../the-tangle/message-types.md)

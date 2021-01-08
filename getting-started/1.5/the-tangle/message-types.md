@@ -100,12 +100,12 @@ For example, this input message contains an instruction to withdraw 100 Mi from 
 
 Output messages deposit IOTA tokens into an address.
 
-A valid output transaction must always contain the following:
+A valid output message must always contain the following:
 
 - A positive value in the `value` field
 - A valid address
 
-For example, this output transaction contains an instruction to deposit 100 Mi into an address:
+For example, this output message contains an instruction to deposit 100 Mi into an address:
 
 ```json
 {
@@ -153,7 +153,7 @@ A messages payload is made up of two parts:
 | Name                  | Type                                                         | Description                                                  |
 | --------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
 | Payload Type          | uint32                                                       | Set to **value 0** to denote a Message Payload*.             |
-| Essence `oneOf`       | Message EssenceDescribes the essence data making up a transaction by defining its inputs and outputs and an optional payload.**Name****Type****Description**Message Typeuint8Set to **value 0** to denote a Message Essence*.Inputs Countuint16The amount of inputs proceeding.Inputs `anyOf`UTXO InputOutputs Countuint16The amount of outputs proceeding.Outputs `anyOf`SigLockedSingleOutputPayload Lengthuint32The length in bytes of the optional payload.Payload `optOneOf`Indexation Payload |                                                              |
+| Essence `oneOf`       | Message EssenceDescribes the essence data making up a message by defining its inputs and outputs and an optional payload.**Name****Type****Description**Message Typeuint8Set to **value 0** to denote a Message Essence*.Inputs Countuint16The amount of inputs proceeding.Inputs `anyOf`UTXO InputOutputs Countuint16The amount of outputs proceeding.Outputs `anyOf`SigLockedSingleOutputPayload Lengthuint32The length in bytes of the optional payload.Payload `optOneOf`Indexation Payload |                                                              |
 | Unlock Blocks Count   | uint16                                                       | The count of unlock blocks proceeding. Must match count of inputs specified. |
 | Unlock Blocks `anyOf` | Signature Unlock BlockDefines an unlock block containing signature(s) unlocking input(s).NameTypeDescriptionUnlock Typeuint8Set to **value 0** to denote a *Signature Unlock Block*.Signature `oneOf`WOTS SignatureEd25519 SignatureReference Unlock BlockReferences a previous unlock block in order to substitute the duplication of the same unlock block data for inputs which unlock through the same data.NameTypeDescriptionUnlock Typeuint8Set to **value 1** to denote a *Reference Unlock Block*.Referenceuint16Represents the index of a previous unlock block. |                                                              |
 
@@ -161,4 +161,4 @@ A messages payload is made up of two parts:
 
 ## Next steps
 
-[Learn what makes transactions immutable in the Tangle](../the-tangle/immutability.md).
+[Learn what makes messages immutable in the Tangle](../the-tangle/immutability.md).

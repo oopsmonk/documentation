@@ -3,7 +3,7 @@
 **The Coordinator is a client that sends signed messages called milestones that nodes trust and use to confirm messages. This topic describes how nodes use milestones to determine which messages are confirmed.**
 
 :::info:
-The Coordinator is temporary. The IOTA Foundation is working on a project to remove the Coordinator and from the network: [Coordicide](https://coordicide.iota.org/post-coordinator). Below is how the Coordinator was employed within IOTA.
+The Coordinator is temporary. After Chrysalis is completed, we will transition into removing the Coordinator: [Coordicide](https://coordicide.iota.org/post-coordinator). Below is how the Coordinator is currently employed within IOTA.
 :::
 
 Messages in the Tangle are considered for confirmation only when they are directly or indirectly referenced by a milestone that has been validated by nodes.
@@ -16,16 +16,16 @@ To make sure that new messages always have a chance of being confirmed, the Coor
 
 ##  Sending milestones
 
-When the Coordinator sends a milestone, it does so in the same way as any [other messages](../first-steps/sending-transactions.md), except for the following difference:
+When the Coordinator sends a milestone, it does so in the same way as any [other messages](../first-steps/sending-messages.md), except for the following difference:
 
 - The [past cone](../references/glossary.md#past-cone) of the milestone's tip messages are considered for confirmation
 
-This past cone includes all the pending messages that the tip transactions directly or indirectly reference. As a result, the name of this past cone is called the _confirmation cone_.
+This past cone includes all the pending messages that the tip messages directly or indirectly reference. As a result, the name of this past cone is called the _confirmation cone_.
 
 The confirmation cone of a milestone can contain two types of messages:
 
 - **State-mutating:** Value messages that change the balances of two or more addresses
-- **Non-state-mutating:** Zero-value messages and value transactions that withdraw IOTA tokens from an address and deposit them straight back
+- **Non-state-mutating:** Zero-value messages and value messages that withdraw IOTA tokens from an address and deposit them straight back
 
 Non-state-mutating messages are always confirmed if they are referenced by a milestone.
 
@@ -46,7 +46,7 @@ For example, here are 26 messages labeled from A to Z.
 
 ![Double spend](../images/conflict.svg)
 
-Messages A, B, C, E, and F are confirmed by milestone H. The other messages are the confirmation cone of milestone V, and transactions G and O represent double spends.
+Messages A, B, C, E, and F are confirmed by milestone H. The other messages are the confirmation cone of milestone V, and messages G and O represent double spends.
 
 To order the confirmation cone, you follow the trunk all the way down to message D. This is the first message in the confirmation cone. Then, you work your way back up, finding the rest of the messages until you have the final order.
 
@@ -95,7 +95,7 @@ Signature length in trytes = depth x 81
 
 Then, the Coordinator appends the Merkle root to the signature.
 
-To prove its ownership of the Merkle root, the Coordinator then signs it and adds that signature to the other zero-value transactions in the milestone bundle.
+To prove its ownership of the Merkle root, the Coordinator then signs it and adds that signature to the other zero-value messages in the milestone bundle.
 
 ## Validating milestones
 
