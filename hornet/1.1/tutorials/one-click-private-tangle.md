@@ -1,6 +1,6 @@
 # "One Click" Private Tangle Tutorial
 
-In this tutorial you will learn how to use a set of Docker-based tools and pre-configured setups to deploy a ([hornet-based](https://github.com/gohornet/hornet)) Private Tangle in **"one click"** to cloud environments or platforms.
+In this tutorial, you will learn how to use a set of Docker-based tools and pre-configured setups to deploy a ([hornet-based](https://github.com/gohornet/hornet)) Private Tangle in **"one click"** to cloud environments or platforms.
 
 ## Background
 
