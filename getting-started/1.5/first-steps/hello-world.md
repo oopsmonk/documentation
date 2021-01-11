@@ -1,6 +1,6 @@
-# Send a "hello world" transaction
+# Send a "hello world" message
 
-**In this tutorial, you send your first transaction to an IOTA node. At the end of this tutorial, you'll have your own transaction in the Tangle that everyone can see.**
+**In this tutorial, you send your first message to an IOTA node. At the end of this tutorial, you'll have your own message in the Tangle that everyone can see.**
 
 ## Prerequisites
 
@@ -8,9 +8,9 @@ To complete this tutorial, you need a [developer environment for Node.js](../fir
 
 In this tutorial, you'll connect to a node that's run by the IOTA Foundation in the Devnet: A development network.
 
-## Send a transaction to the node
+## Send a message to the node
 
-In this step, you create a zero-value transaction that contains a "Hello world" message and send it to your connected node to attach to the Tangle.
+In this step, you create a zero-value message that contains a "Hello world" message and send it to your connected node to attach to the Tangle.
 
 1. Require the library and connect to a node
 
@@ -42,7 +42,7 @@ In this step, you create a zero-value transaction that contains a "Hello world" 
     ```
 
     :::info:
-    This address does not have to belong to anyone. To be valid, the address just needs to consist of 81 trytes. You'll learn about trytes in [Ternary](../the-tangle/ternary.md). For now, it's enough to know that a tryte is just a character between A-Z or the number 9.
+    This address does not have to belong to anyone. To be valid, the address just needs to consist of 81 trytes. You'll learn about trytes in bech32. For now, it's enough to know that a tryte is just a character between A-Z or the number 9.
     :::
 
 3. Define a seed
@@ -63,7 +63,7 @@ In this step, you create a zero-value transaction that contains a "Hello world" 
     const messageInTrytes = Converter.asciiToTrytes(message);
     ```
 
-5. Define a transaction that sends the message to the address
+5. Define a message that sends the message to the address
 
     ```js
     const transfers = [
@@ -75,7 +75,7 @@ In this step, you create a zero-value transaction that contains a "Hello world" 
     ];
     ```
 
-6. Send your transaction to the node
+6. Send your message to the node
 
     ```js
    Iota.prepareTransfers(seed, transfers)
@@ -88,7 +88,7 @@ In this step, you create a zero-value transaction that contains a "Hello world" 
         .catch(err => {
             console.error(err)
         });
-    ```
+   ```
 
 7. Execute the file
 
@@ -96,22 +96,22 @@ In this step, you create a zero-value transaction that contains a "Hello world" 
     node index.js
     ```
 
-    In the console, you should see your transaction hash, which looks something like the following:
+    In the console, you should see your message hash, which looks something like the following:
 
     ```
     MAXPIKYYYNPRXXVIKNPZ9TSAVYTDEDAJOJHJVXGKLJADWDNHYNNNJJYSO9LYNVTXLJ9URVGMAEDPA9999
     ```
 
-8. To see your transaction in the Tangle, search for your transaction hash in a Tangle explorer such as [utils.iota.org](https://utils.iota.org/)
+8. To see your message in the Tangle, search for your message hash in a Tangle explorer such as [utils.iota.org](https://utils.iota.org/)
 
     Make sure to select the Devnet network.
 
-    You should see your transaction and the message that you sent.
+    You should see your message and the message that you sent.
 
     ![JSON message](../images/json-message.png)
 
 :::success:Congratulations :tada:
-You've just sent your first transaction. Your transaction is attached to the Tangle, and will be gossiped around the rest of the network.
+You've just sent your first message. Your message is attached to the Tangle, and will be gossiped around the rest of the network.
 :::
 
 ## Run the code
@@ -126,7 +126,7 @@ Click the green button to run the sample code in this tutorial and see the resul
 
 Take an in-depth look at how your transaction made it to the Tangle by [examining the steps that were involved](../first-steps/sending-messages.md).
 
-You can also use the client library to [search for your transaction in the Tangle](root://core/1.0/tutorials/js/read-transactions.md).
+You can also use the client library to [search for your message in the Tangle](root://core/1.0/tutorials/js/read-transactions.md).
 
 Examples of this tutorial are also available in the following languages:
 

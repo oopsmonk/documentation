@@ -4,7 +4,7 @@
 
 ## What you will learn
 
-At the end of this section, you will have a fundamental understanding of how IOTA works and the knowledge to explore other IOTA products with confidence.
+At the end of this section, you will have a fundamental understanding of how IOTA works and the knowledge to explore other IOTA products with confidence. 
 
 ## Running code in the browser
 

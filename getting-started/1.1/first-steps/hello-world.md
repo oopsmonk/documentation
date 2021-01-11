@@ -88,7 +88,7 @@ In this step, you create a zero-value transaction that contains a "Hello world" 
         .catch(err => {
             console.error(err)
         });
-    ```
+   ```
 
 7. Execute the file
 
