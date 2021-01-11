@@ -17,6 +17,10 @@
             "name": "roadmap"
         },
         {
+            "href": "https://explorer.iota.org/",
+            "name": "explorer"
+        },
+        {
             "href": "https://status.iota.org/",
             "name": "status"
         },
@@ -27,10 +31,6 @@
         {
             "href": "https://trinity.iota.org/",
             "name": "wallet"
-        },
-        {
-            "href": "https://utils.iota.org/",
-            "name": "utilities"
         }
     ],
     "popularTopics": [
