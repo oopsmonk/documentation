@@ -29,7 +29,7 @@ Everything in the Tangle is immutable and transparent. Through cryptography, you
 
 ### Anyone who values security
 
-IOTA uses multiple, secure signatures to prorect the network agaunst the next generation of computing power.
+IOTA uses multiple, secure signatures to protect the network against the next generation of computing power.
 
 ### Anyone who wants the freedom to transact
 

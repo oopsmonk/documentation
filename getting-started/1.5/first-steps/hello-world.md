@@ -41,10 +41,8 @@ In this step, you create a zero-value message that contains a "Hello world" mess
     'HEQLOWORLDHELLOWORLDHELLOWORLDHELLOWORLDHELLOWORLDHELLOWORLDHELLOWORLDHELLOWOR99D';
     ```
 
-    :::info:
-    This address does not have to belong to anyone. To be valid, the address just needs to consist of 81 trytes. You'll learn about trytes in bech32. For now, it's enough to know that a tryte is just a character between A-Z or the number 9.
-    :::
-
+    
+    
 3. Define a seed
 
     ```js
