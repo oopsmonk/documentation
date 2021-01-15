@@ -1,6 +1,6 @@
-# Send a "hello world" transaction
+# Send a "hello world" message
 
-**In this tutorial, you send your first transaction to an IOTA node. At the end of this tutorial, you'll have your own transaction in the Tangle that everyone can see.**
+**In this tutorial, you send your first message to an IOTA node. At the end of this tutorial, you'll have your own message in the Tangle that everyone can see.**
 
 ## Prerequisites
 
@@ -8,9 +8,9 @@ To complete this tutorial, you need a [developer environment for Node.js](../fir
 
 In this tutorial, you'll connect to a node that's run in the IOTA Foundation Devnet: A development network.
 
-## Send a transaction to the node
+## Send a message to the node
 
-In this step, you create a zero-value transaction that contains a "Hello world" message and send it to your connected node to attach to the Tangle.
+In this step, you create a zero-value message that contains a "Hello world" message and send it to your connected node to attach to the Tangle.
 
 1. Require the library and connect to a node
 
@@ -124,7 +124,7 @@ Click the green button to run the sample code in this tutorial and see the resul
 
 Take an in-depth look at how your transaction made it to the Tangle by [examining the steps that were involved](../first-steps/sending-messages.md).
 
-You can also use the client library to [search for your transaction in the Tangle](root://core/1.0/tutorials/js/read-transactions.md).
+You can also use the client library to [search for your message in the Tangle](root://core/1.0/tutorials/js/read-transactions.md).
 
 Examples of this tutorial are also available in the following languages:
 

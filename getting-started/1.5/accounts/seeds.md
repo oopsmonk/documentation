@@ -9,7 +9,7 @@
 An IOTA seed consists of a Bech32 string:
 
 ```
-PUEOTSEITFEVEWCWBTSIZM9NKRGJEIMXTULBACGFRQK9IMGICLBKW9TTEVSDQMGWKBXPVCBMMCXWMNPDX
+iota1q9f0mlq8yxpx2nck8a0slxnzr4ef2ek8f5gqxlzd0wasgp73utryj0w6qwt
 ```
 
 ### Mnemonic seeds
@@ -31,10 +31,6 @@ IOTA uses a combination of Ed25519, BIP-39, and SLIP-10 methodologies as the sta
 Checksums are often appended to addresses and seeds in user interfaces such as wallets to help you to detect typos.
 
 BIP-39 and Bech32 already contain a checksum for seeds and addresses, respectively.
-
-## Maximum number of seeds
-
-The total number of possible seeds is almost unlimited (8.7 x 10<sup>115</sup>). As a result, the chances of two seeds being the same is very unlikely.
 
 ## Next steps
 

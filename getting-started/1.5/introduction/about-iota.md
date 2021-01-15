@@ -17,7 +17,7 @@ Through its open network of nodes, IOTA allows you and your devices to:
 
 ## Who is IOTA for
 
-IOTA can benefit many people, including the following important groups.
+IOTA can benefit many people, including the following important groups:
 
 ### Anyone who does not trust centralized networks
 
@@ -29,7 +29,7 @@ Everything in the Tangle is immutable and transparent. Through cryptography, you
 
 ### Anyone who values security
 
-IOTA uses quantum-robust signatures to protect the network against the next generation of computing power.
+IOTA uses multiple, secure signatures to protect the network against the next generation of computing power.
 
 ### Anyone who wants the freedom to transact
 
