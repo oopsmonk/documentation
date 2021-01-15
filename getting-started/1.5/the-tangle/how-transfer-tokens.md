@@ -29,7 +29,7 @@ To get these tip messages, Charlie requests them from a node.
 The node selects two messages by using an algorithm called [uniform random tip selection](../the-tangle/tip-selection.md) (URTS). This algorithm selects two valid tip messages that lead to a valid ledger state.
 
 :::info:
-The ledger state is a record of all the value message that have transferred IOTA tokens in the Tangle, including the state of all balances on addresses. This state must always be balanced: The total number of IOTA tokens must always add up to the [total supply](../the-tangle/genesis.md).
+The ledger state is a record of all the value message that have transferred IOTA tokens in the Tangle, including the state of all balances on addresses. This state must always be balanced: The total number of IOTA tokens must always add up to the  [total supply](../the-tangle/genesis.md).
 :::
 
 By using the tip messages that the node gave him, Charlie lets the network know that he is also approving them and their history. If any of those messages turn out to be invalid, Charlie's messages will also be treated as invalid and will not be selected by other nodes during tip selection.
@@ -48,9 +48,9 @@ Then Charlie puts all the messages in a UTXO and sends them to a node on an IOTA
 
 ## Waiting for the messages to be confirmed
 
-Anyone is free to send messages to a node at any time. As a result, it is not always a simple matter of selecting valid tip messages. Sometimes a node must make a decision on which of two valid messages to prefer.
+Anyone is free to send messages to a node at any time. As a result, it is not always a simple matter of selecting valid tip messages. The milestone, however, determines which messages are included and confirmed based on [deterministic ordering](https://github.com/thibault-martinez/protocol-rfcs/blob/white-flag-chrysalis-pt-2/text/0005-white-flag/0005-white-flag.md).
 
-For example, what if Alice actually attached two messages to the Tangle: One that transferred 10 i to Bob, and one that transferred 10 i to Charlie?  Together, these messages would be called a double spend because they try to transfer the same IOTA tokens to different addresses.
+For example, what if Alice actually attached two messages to the Tangle: One that transferred 10 i to Bob, and one that transferred 10 i to Charlie? Together, these messages would be called a double spend because they try to transfer the same IOTA tokens to different addresses.
 
 Both of Alice's messages could not be part of the ledger state because it would result in a negative balance for Alice’s address: - 10 i.
 

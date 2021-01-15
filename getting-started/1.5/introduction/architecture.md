@@ -14,7 +14,7 @@ The IOTA architecture involves the following components:
 
 ## Next steps
 
-Get some experience with the Tangle by [setting up the developer tools](../first-steps/set-up-env.md) you need to send transactions.
+Learn more about IOTA's latest update, [Chrysalis](../introduction/chrysalis.md).
 
 
 

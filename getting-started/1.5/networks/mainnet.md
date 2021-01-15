@@ -16,13 +16,9 @@ However, if you want to test the Mainnet, you can find a list of nodes on the fo
 
 Currently, no Mainnet [faucets](../references/glossary.md#faucet) are available. If you know of any community members who offer such a faucet, please get in touch with us in the #documentation-discussion channel on [Discord](https://discord.iota.org/).
 
-## Coordinator address
+## Coordinator public key
 
-Nodes on the Mainnet use a Coordinator that is run by the IOTA Foundation with the following address:
-
-```
-UDYXTZBE9GZGPM9SSQV9LTZNDLJIZMPUVVXYXFYVBLIEUHLSEWFTKZZLXYRHHWVQV9MNNX9KZC9D9UZWZ
-```
+Nodes on the Mainnet use a Coordinator that relies on a public key to validate the singatures within a milestone payload. For reference, see [RFC-19](https://github.com/jakubcech/protocol-rfcs/blob/jakubcech-milestonepayload/text/0019-milestone-payload/0019-milestone-payload.md).
 
 :::info:
 The Coordinator is temporary. After Chrysalis is completed, we will transition into removing the Coordinator: [Coordicide](https://coordicide.iota.org/post-coordinator).

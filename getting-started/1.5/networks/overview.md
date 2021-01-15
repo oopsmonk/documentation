@@ -25,9 +25,9 @@ The IOTA community maintains the following permissionless network, where anyone 
 | :--- | :------------------------------ | :--------- | ------------------------------------------------------------ | ---- |
 |      | [Comnet](../networks/commnet.md) | Active     | A development network where the IOTA token has no value except for testing purposes |      |
 
-## Coordinator address
+## Coordinator public key
 
-In the current IOTA networks, nodes rely on the Coordinator to reach a consensus, therefore each one is hard-coded with the address of a Coordinator. Nodes use this address to validate the Coordinator's signatures in milestones.
+In the current IOTA networks, nodes rely on the Coordinator to reach a consensus, therefore each one is hard-coded with the public key of a Coordinator. Nodes use this public key, or keys, to validate the Coordinator's signatures in milestones.
 
 :::info:
 The Coordinator is temporary. After Chrysalis is completed, we will transition into removing the Coordinator: [Coordicide](https://coordicide.iota.org/post-coordinator).

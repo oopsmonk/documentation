@@ -10,7 +10,6 @@
 
 [The Tangle/About the Tangle](/the-tangle/overview.md)
 [The Tangle/Differences in the Tangle and blockchains](/the-tangle/tangle-vs-blockchain.md)
-[The Tangle/Ternary](/the-tangle/ternary.md)
 [The Tangle/Types of message](/the-tangle/message-types.md)
 [The Tangle/Immutability in the Tangle](/the-tangle/immutability.md)
 [The Tangle/Storing data in the Tangle](/the-tangle/storing-data.md)
@@ -29,7 +28,6 @@
 [IOTA accounts/Addresses](/accounts/addresses.md)
 [IOTA accounts/Signatures](/accounts/signatures.md)
 [IOTA accounts/Wallets](/accounts/wallets.md)
-[IOTA accounts/Checksums](/accounts/checksums.md)
 
 [Transferring tokens/Steps involved](/transfer-tokens/overview.md)
 [Transferring tokens/Step 1. Create a seed](/transfer-tokens/create-a-seed.md)

@@ -5,7 +5,7 @@
 Sending a message includes the following steps:
 
 - Choosing an IOTA network
-- Getting tip message
+- Getting a message to link to (tip)
 - Doing proof of work
 - Sending the message to a node
 
@@ -23,11 +23,7 @@ In the previous [tutorial](../first-steps/hello-world.md), you connected to a no
 
 To attach your message to the Tangle, you need to reference the message hashes of two tip messages in the Tangle. These messages are the ones that your message will be attached to in the Tangle.
 
-To request tip messages from the Tangle, clients ask nodes to traverse the Tangle in a process called tip selection.
-
-:::info:
-In the previous [tutorial](../first-steps/hello-world.md), the `prepareTransfers()` method took care of requesting tip messages by calling the node's [`getTransactionsToApprove`](root://hornet/1.1/references/api-reference.md#getTransactionsToApprove) endpoint.
-:::
+To request tip messages from the Tangle, the client asks the node to traverse the Tangle in a process called tip selection.
 
 All IOTA node software includes an algorithm for [selecting tip messages](../the-tangle/how-transfer-tokens.md#choosing-where-to-attach-transactions). These algorithms aim to select valid tip messages with the best chance of being confirmed.
 
@@ -35,13 +31,9 @@ All IOTA node software includes an algorithm for [selecting tip messages](../the
 
 Proof of work (PoW) is cryptographic proof that energy has been spent in computing power to solve a puzzle.
 
-IOTA messages must contain a proof of work to discourage clients from sending lots of spam messages, which may put an extra load on nodes. See [Hashcash](https://en.wikipedia.org/wiki/Hashcash) for more examples of proof of work as a spam prevention measure.
+IOTA messages must contain a PoW to discourage clients from sending lots of spam messages, which may put an extra load on nodes. See [Hashcash](https://en.wikipedia.org/wiki/Hashcash) for more examples of PoW as a spam prevention measure.
 
-An important attribute of any PoW algorithm is that it's difficult to do, but easy to validate. See [Calculating proof of work](../cryptography/proof-of-work.md). The exact difficulty of proof of work is defined by the nodes in an IOTA network in a setting called **minimum weight magnitude** (MWM).
-
-:::info:
-In the previous [tutorial](../first-steps/hello-world.md), the `sendTrytes()` method took care of doing remote proof of work by calling the node's [`attachToTangle`](root://hornet/1.1/references/api-reference.md#attachToTangle) endpoint.
-:::
+An important attribute of any PoW algorithm is that it's difficult to do, but easy to validate. See [Calculating proof of work](../cryptography/proof-of-work.md). 
 
 You have the following options for doing PoW:
 
@@ -60,10 +52,6 @@ Each option for PoW has its advantages and disadvantages.
 ## Sending the messages to a node
 
 The last step is sending the messages to the node so that it can attach the message to the Tangle.
-
-:::info:
-In the previous [tutorial](../first-steps/hello-world.md), the `sendTrytes()` method took care of sending your message by calling the node's [`broadcastTransactions`](root://hornet/1.1/references/api-reference.md#broadcastTransactions) endpoint.
-:::
 
 ## Next steps
 

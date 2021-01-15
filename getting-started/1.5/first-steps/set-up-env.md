@@ -36,7 +36,7 @@ In this step, you install the programming tools that make up your developer envi
 
 ## Step 2. Create your first coding project
 
-In this step, you create a project, using the [npm package manager](https://www.npmjs.com/) that comes with Node.js. You'll use this project throughout the tutorials in this section.
+In this step, you create a project, using the node package manager [(npm)](https://www.npmjs.com/) that comes with Node.js. You'll use this project throughout the tutorials in this section.
 
 1. Open a command-line interface
 
@@ -63,7 +63,7 @@ The IOTA core client library contains the main functionality that you need to de
 
 All the available packages are listed in the [GitHub repository](https://github.com/iotaledger/iota.js/tree/next/packages).
 
-In a command-line interface, change into the directory where you initialized your project, and install the `core` package
+In a command-line interface, change into the directory where you initialized your project, and install the `core` package, if you haven't already.
 
 ```bash
 npm install @iota/core @iota/converter
