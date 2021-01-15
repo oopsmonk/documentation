@@ -232,6 +232,10 @@ Repeat this process for each new node that you want to add.
 You have a private Tangle in which you own the total supply of IOTA tokens.
 :::
 
+## See also
+
+You can also have a look at the "one click" Private Tangle [tutorial](../tutorials/one-click-private-tangle.md) which describes a simplified procedure to deploy a Private Tangle on AWS or any Docker-enabled machine. 
+
 ## Next steps
 
 Try using one of the client libraries to send transactions to the nodes in your private Tangle:

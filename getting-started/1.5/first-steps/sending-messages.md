@@ -5,7 +5,7 @@
 Sending a message includes the following steps:
 
 - Choosing an IOTA network
-- Getting tip message
+- Getting a tip message
 - Doing proof of work
 - Sending the message to a node
 
@@ -35,9 +35,9 @@ All IOTA node software includes an algorithm for [selecting tip messages](../the
 
 Proof of work (PoW) is cryptographic proof that energy has been spent in computing power to solve a puzzle.
 
-IOTA messages must contain a proof of work to discourage clients from sending lots of spam messages, which may put an extra load on nodes. See [Hashcash](https://en.wikipedia.org/wiki/Hashcash) for more examples of proof of work as a spam prevention measure.
+IOTA messages must contain a PoW to discourage clients from sending lots of spam messages, which may put an extra load on nodes. See [Hashcash](https://en.wikipedia.org/wiki/Hashcash) for more examples of proof of work as a spam prevention measure.
 
-An important attribute of any PoW algorithm is that it's difficult to do, but easy to validate. See [Calculating proof of work](../cryptography/proof-of-work.md). The exact difficulty of proof of work is defined by the nodes in an IOTA network in a setting called **minimum weight magnitude** (MWM).
+An important attribute of any PoW algorithm is that it's difficult to do, but easy to validate. See [Calculating proof of work](../cryptography/proof-of-work.md). The exact difficulty of PoW is defined by the nodes in an IOTA network in a setting called **minimum weight magnitude** (MWM).
 
 :::info:
 In the previous [tutorial](../first-steps/hello-world.md), the `sendTrytes()` method took care of doing remote proof of work by calling the node's [`attachToTangle`](root://hornet/1.1/references/api-reference.md#attachToTangle) endpoint.

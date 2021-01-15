@@ -59,7 +59,7 @@ Now you have a `package.json` file, which includes the packages and applications
 
 ## Step 3. Install the IOTA core client library
 
-The IOTA core client library contains the main functionality that you need to develop applications on IOTA. This library is organized in packages. For example, the `core` package contains methods for requesting information from nodes, creating transactions, and sending them to nodes. The `unit-converter` package contains methods for representing amounts of IOTA tokens in different units.
+The IOTA core client library contains the main functionality that you need to develop applications on IOTA. This library is organized in packages. For example, the `core` package contains methods for requesting information from nodes, creating messages, and sending them to nodes. The `unit-converter` package contains methods for representing amounts of IOTA tokens in different units.
 
 All the available packages are listed in the [GitHub repository](https://github.com/iotaledger/iota.js/tree/next/packages).
 
@@ -85,5 +85,5 @@ You've got all the tools you need and now you're ready to start learning and cod
 
 ## Next steps
 
-Complete your first IOTA project by [sending a "hello world" transaction](../first-steps/hello-world.md).
+Complete your first IOTA project by [sending a "hello world" message](../first-steps/hello-world.md).
 

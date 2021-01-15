@@ -44,9 +44,9 @@ These updates produce
 - Introudction of features such as tokenized assets
 - Significant improvements to the usability and relaibility of IOTA
 
-## 
-
 ## Next steps
+
+Get some experience with the Tangle by [setting up the developer tools](../first-steps/set-up-env.md) you need to send messages.
 
 
 

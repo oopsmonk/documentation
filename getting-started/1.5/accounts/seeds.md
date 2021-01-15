@@ -6,10 +6,10 @@
 
 ## Seed format
 
-A seed is a string of 81 [trytes](../the-tangle/ternary.md) (or 90 trytes with a [checksum](../accounts/checksums.md)).
+A seed consists of a bech32 string
 
 ```
-PUEOTSEITFEVEWCWBTSIZM9NKRGJEIMXTULBACGFRQK9IMGICLBKW9TTEVSDQMGWKBXPVCBMMCXWMNPDX
+iota1q9f0mlq8yxpx2nck8a0slxnzr4ef2ek8f5gqxlzd0wasgp73utryj0w6qwt
 ```
 
 ## Mnemonic seeds
@@ -25,10 +25,6 @@ IOTA uses a combination of Ed25519, BIP-39, and SLIP-10 methodologies as the sta
 - [Ed25519](https://github.com/iotaledger/protocol-rfcs/pull/9) – a signature algorithm key generation where a given random sequence of bytes (or seed) the length of 32 bytes is a valid private key
 - [SLIP -10](https://github.com/satoshilabs/slips/blob/master/slip-0010.md) – describes how to derive private keys on a coin/account/index basis from a single master seed 
 - [BIP - 39](https://github.com/bitcoin/bips/blob/master/bip-0039.mediawiki) – describes how a seed can be represented as human readable mnemonic words 
-
-## Maximum number of seeds
-
-The total number of possible seeds is almost unlimited (8.7 x 10<sup>115</sup>). As a result, the chances of two seeds being the same is very unlikely.
 
 ## Next steps
 
