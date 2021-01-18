@@ -59,25 +59,35 @@ Now you have a `package.json` file, which includes the packages and applications
 
 ## Step 3. Install the IOTA core client library
 
-The IOTA core client library contains the main functionality that you need to develop applications on IOTA. This library is organized in packages. For example, the `core` package contains methods for requesting information from nodes, creating messages, and sending them to nodes. The `unit-converter` package contains methods for representing amounts of IOTA tokens in different units.
+The IOTA core client library contains the main functionality that you need to develop applications on IOTA. The client library brings many functionality to communicate with the Tangle.
 
-All the available packages are listed in the [GitHub repository](https://github.com/iotaledger/iota.js/tree/next/packages).
+IOTA core client library used for:
+- Create messages and transactions
+- Sign transactions
+- Generate addresses
+- Interact with an IOTA node
 
-In a command-line interface, change into the directory where you initialized your project, and install the `core` package, if you haven't already.
+If you want to send and receive IOTA tokens, take a look at the [IOTA Wallet Librariy](https://github.com/iotaledger/wallet.rs).
+
+The main library is written in the programming language Rust, and there a serval bindings to use the library other programming languages and environemts like Node.js. 
+
+
+In a command-line interface, change into the directory where you initialized your project, and install the `iota-soon` package, if you haven't already.
 
 ```bash
-npm install @iota/core @iota/converter
+npm install @iota/soon  
 ```
 
 If everything went well, you should see something like the following in the output. You can ignore any 'npm WARN' messages.
 
 ```shell
-+ @iota/core@1.0.0-beta.8
-added 19 packages from 10 contributors and audited 68 packages in 5.307s
++ @iota/soon@1.0.0
+added 11 packages from 10 contributors and audited 42 packages in 5.307s
 found 0 vulnerabilities
 ```
 
-After installing a package, you'll have a `node_modules` directory, which contains the `core` package code and its dependencies.
+After installing a package, you'll have a `node_modules` directory, which contains the `@iota/soon` package code and its dependencies.
+
 
 :::success: Congratulations :tada:
 You've got all the tools you need and now you're ready to start learning and coding!
