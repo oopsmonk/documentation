@@ -6,7 +6,7 @@
 
 To complete this tutorial, you need a [developer environment for Node.js](../first-steps/set-up-env.md).
 
-In this tutorial, you'll connect to a node that's run by the IOTA Foundation in the Devnet: A development network.
+In this tutorial, you'll connect to a node that's run in the IOTA Foundation Devnet: A development network.
 
 ## Send a message to the node
 
@@ -54,7 +54,7 @@ In this step, you create a zero-value message that contains a "Hello world" mess
     The seed is not used in this code. However, the library expects a valid seed.
     :::
 
-4. Create your "hello world" message, serialize it into JSON, and convert it to trytes
+4. Create your "hello world" message and serialize it into JSON.
 
     ```js
     const message = JSON.stringify({"message": "Hello world"});
@@ -100,15 +100,15 @@ In this step, you create a zero-value message that contains a "Hello world" mess
     MAXPIKYYYNPRXXVIKNPZ9TSAVYTDEDAJOJHJVXGKLJADWDNHYNNNJJYSO9LYNVTXLJ9URVGMAEDPA9999
     ```
 
-8. To see your message in the Tangle, search for your message hash in a Tangle explorer such as [utils.iota.org](https://utils.iota.org/)
+8. To see your message in the Tangle, search for your message hash in a Tangle explorer such as [explorer.iota.org](https://explorer.iota.org/mainnet)
 
     Make sure to select the Devnet network.
-
-    You should see your message and the message that you sent.
-
+    
+    You should see your transaction and the message that you sent.
+    
     ![JSON message](../images/json-message.png)
 
-:::success:Congratulations :tada:
+:::success: Congratulations :tada:
 You've just sent your first message. Your message is attached to the Tangle, and will be gossiped around the rest of the network.
 :::
 

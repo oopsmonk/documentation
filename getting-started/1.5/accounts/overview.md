@@ -2,25 +2,21 @@
 
 **IOTA accounts allow you to prove your ownership of IOTA tokens or messages. This section introduces you to accounts.**
 
-Like a bank account, IOTA accounts are a way to prove your ownership of message in the Tangle.
+## Hiearchical Deterministic Wallets
 
-Rather than using your name and a password to create an account you create a seed. This seed is your account's master key. 
+Following our Chrysalis updates, IOTA adopted full support for Hierarchical Deterministic (HD) Wallets. An HD wallet is a digital wallet that automatically generates a hierarchical tree-like structure of private/public addresses (or keys), thereby addressing the problem of the user having to generate them on their own.
 
-![Seed](../images/seed.png)
+The benefit of users having the HD wallet is two-fold:
 
-And rather than having a sort code or an account number, you have lots of addresses that belong to your seed. Each address can contain any amount of IOTA tokens.
+- Increased privacy - since blockchains are public ledgers, where all transactions and balances can be seen by anyone, having multiple addresses would not allow others to know your exact balance
+- Increased security - the user who has access to an address’s private keys would have access to the funds on an address. Since you’d have diversified your funds over multiple addresses, others would need to get multiple private keys to get access to all your crypto assets
 
-![Addresses](../images/addresses.png)
+## Keys
 
-Unlike a bank, your seed is not stored by anyone in an IOTA network apart from you. You are the only owner of your seed. This makes IOTA decentralized and also makes your identity pseudonymous.
+Once you’ve used an IOTA address to receive funds, a new one would be generated for you to use. These addresses, also known as public keys, are still governed by a single key pair. This means that any previous addresses you’ve used are still completely usable and that you wouldn’t lose control of them. The funds on each of these addresses can only be accessed by using its matching private key.
 
-:::info: Why pseudonymous?
-Due to the public nature of the Tangle, some public data in messages could be used to find out someone's identity.
-:::
-
-To prove to nodes that you do indeed own an address, you must use cryptography to create digital signatures that prove that you also own the seed.
-
-![Signature](../images/signature.png)
+- The key pair that governs all your addresses is known as the Extended [Key Pair](https://www.ledger.com/academy/blockchain/what-are-public-keys-and-private-keys), consisting of the **Extended Public Key** and the **Extended Private Key.** The most important of the two would be the Extended Private Key. This key is the base from which all of your addresses’ private keys are derived. Or in other words: **the Extended Private Key is the master key to all the Private Keys belonging to an account**. 
+- The Extended Public Key can instead be used to view the balance of all your different addresses 
 
 ## Next steps
 

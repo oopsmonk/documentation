@@ -24,8 +24,8 @@ This past cone includes all the pending messages that the tip messages directly 
 
 The confirmation cone of a milestone can contain two types of messages:
 
-- **State-mutating:** Value messages that change the balances of two or more addresses
-- **Non-state-mutating:** Zero-value messages and value messages that withdraw IOTA tokens from an address and deposit them straight back
+- **State-mutating:** messages that change the balances of two or more addresses
+- **Non-state-mutating:** messages and value messages that withdraw IOTA tokens from an address and deposit them straight back
 
 Non-state-mutating messages are always confirmed if they are referenced by a milestone.
 

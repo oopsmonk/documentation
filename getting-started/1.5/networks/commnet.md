@@ -14,13 +14,9 @@ Use the following [faucet](../references/glossary.md#faucet) to transfer up to 1
 
 - **[Community faucet](https://faucet.comnet.einfachiota.de/#/):** Distributes tokens in batches of up to 1 Ki
 
-## Coordinator address
+## Coordinator public key
 
-Nodes on the Comnet use a Coordinator that is run by the IOTA community with the following address:
-
-```
-YBWDHGHUEB9KSOPONTLTOSSKITIBE9MXPASCLREDNV9HEABYBPTHRQGWNJWQFSYAYZRDXXIOZHWBC9DWC
-```
+Nodes on the Mainnet use a Coordinator that relies on a public key to validate the singatures within a milestone payload. For reference, see [RFC-19](https://github.com/jakubcech/protocol-rfcs/blob/jakubcech-milestonepayload/text/0019-milestone-payload/0019-milestone-payload.md).
 
 :::info:
 The Coordinator is temporary. After Chrysalis is completed, we will transition into removing the Coordinator: [Coordicide](https://coordicide.iota.org/post-coordinator).

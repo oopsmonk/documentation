@@ -14,15 +14,6 @@ From the genesis, IOTA tokens were then transferred to the accounts of the origi
 
 Today, IOTA tokens are spread across many different addresses. You can see [how IOTA tokens are distributed](https://thetangle.org/statistics/tokens-distribution) on a Tangle explorer.
 
-## Pre-Chrysalis tokens
-
-Prior to the Chrysalis update, nodes at IOTA created local snapshots to produce ledger representations at a point in time of a given milestone to be able to:
-
-- Start up from a recent milestone instead of having to synchronize from the genesis message
-- Delete old message data below a given milestone
-
-These node implementations used a [local snapshot file format](https://github.com/iotaledger/iri-ls-sa-merger/tree/351020d3b5e342b6e9a41f2868575ab7ff8c251c#generating-an-export-file-from-a-localsnapshots-db) which only worked with account based ledgers.
-
 ## How nodes keep track of IOTA tokens
 
 Based on the **UTXO** ledger, snapshot files are broken into two formats:

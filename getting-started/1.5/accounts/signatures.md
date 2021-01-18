@@ -4,15 +4,23 @@
 
 ![Signature](../images/signature.png)
 
-To prove ownership of an [address](../accounts/addresses.md), you sign a unspent message output with the corresponding private key of the address so that others can verify that you own it.
-
-Depending on how the address is generated, a signature may be too large to fit in a single message. As a result, signatures are sometimes fragments across the `signatureMessageFragment`messages in a bundle. See [How signatures are created and verified](../cryptography/signatures.md).
-
-The way in which a signature is generated differs depending on the signature scheme that is used.
-
 ## Signature scheme
 
-Previously, IOTA used the Winternitz [one-time signature scheme](https://en.wikipedia.org/wiki/Hash-based_cryptography#One-time_signature_schemes) (W-OTS) to generate [digital signatures](https://en.wikipedia.org/wiki/Digital_signature). Currently, we use the Ed25519 scheme in coordination with the UTXO model.
+Previously, IOTA used the Winternitz [one-time signature scheme](https://en.wikipedia.org/wiki/Hash-based_cryptography#One-time_signature_schemes) (W-OTS) to generate [digital signatures](https://en.wikipedia.org/wiki/Digital_signature). Currently, we use the Ed25519 scheme in coordination with the UTXO model and ZIP-215, which is used to explicitly define validation criteria.
+
+## Signature validation
+
+To have consistent validation of Ed25519 signatures for all edge cases and throughout different implementations, three criteria **must** be checked to evaluate whether a signature is valid.
+
+Using the notation and Ed25519 parameters as described in  [RFC-8032](https://tools.ietf.org/html/rfc8032), the criteria are defined as follows:
+
+1. Accept non-canonical encodings of A and R.
+2. Reject values for S that are greater or equal than L.
+3. Use the equation [8][S]B = [8]R + [8][k]A' for validation.
+
+While each honestly generated signature following RFC-8032 satisfies the second, cofactor-less equation and thus, also the first equation. Due to the limitations proposed in RFC-8032, IOTA adopted the following formula in order to be consistent with batched verification: 
+
+- The group equation [8][S]B = [8]R + [8][k]A' *must* be used for validations instead of [S]B = R + [k]A'
 
 ## Next steps
 

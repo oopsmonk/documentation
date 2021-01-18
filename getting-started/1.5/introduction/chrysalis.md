@@ -1,10 +1,10 @@
-# IOTA 1.5 Chrysalis
+# IOTA 1.5 - Chrysalis
 
-This documentation outlines the current and upcoming updates to the IOTA environment.
+**This documentation outlines the current and upcoming updates to the IOTA environment.**
 
 ## What it is
 
-IOTA 1.5, better known as [Chrysalis](https://blog.iota.org/release-strategy-for-chrysalis-iota-1-5-4ea8741ea3a1/), is an intermediate update between the pre and present [**Coordicide**](https://coordicide.iota.org/post-coordinator) that will dually make our services more manageable for users while improving performance and quality.
+IOTA 1.5, better known as [Chrysalis](https://blog.iota.org/release-strategy-for-chrysalis-iota-1-5-4ea8741ea3a1/), is an intermediate update between the pre and present [Coordicide](https://coordicide.iota.org/post-coordinator) that will dually make our services more manageable for users while improving performance and quality.
 
 With these two factors, Chrysalis will overall lessen the level of effort used for both sides.
 
@@ -39,7 +39,7 @@ These updates produce:
 
 These updates produce
 
-- Reusable addresses and support for more standard cryptography (EdDSA), making hardware support for all major arechitectures possible
+- Reusable addresses and support for more standard cryptography (EdDSA), making hardware support for all major architectures possible
 - Simplified transaction layout and a reduction in transaction size, further increasing performance
 - Introudction of features such as tokenized assets
 - Significant improvements to the usability and relaibility of IOTA
@@ -47,6 +47,4 @@ These updates produce
 ## Next steps
 
 Get some experience with the Tangle by [setting up the developer tools](../first-steps/set-up-env.md) you need to send messages.
-
-
 

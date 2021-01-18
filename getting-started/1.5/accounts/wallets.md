@@ -46,16 +46,11 @@ These wallet types can also come in the following forms:
 
 The IOTA Foundation maintains the following official wallets:
 
-- **Firefly**: A GUI wallet for managing one or more accounts
-    - [Documentation](root://wallets/0.1/trinity/introduction/overview.md)
-    - [GitHub](https://github.com/iotaledger/trinity-wallet)
-
-- **Hub**:  A CLI wallet for managing many accounts
-    - [Documentation](root://wallets/0.1/trinity/introduction/overview.md)
-    - [GitHub](https://github.com/iotaledger/hub)
-
-- **Spark**: A GUI wallet for sending small amount of IOTA tokens
-    - [GitHub](https://github.com/iotaledger/spark-wallet)
+- **Firefly (GUI)**: A GUI wallet for managing one or more accounts
+    - [Github](https://github.com/iotaledger/firefly)
+- **Command-line (CLI)**: A simplified version of the wallet run from the command line
+- **Wallet.rs**: A stateful library for use as a wallet or to program your own wallet for sending small amount of IOTA tokens
+    - Both Firefly and CLI use Wallet.rs as well
 
 :::warning:
 Be careful where you enter your seed. Some unofficial wallets may not be trustworthy.
@@ -67,4 +62,4 @@ IOTA's wallets are based in Stronghold, a secure software implementation with th
 
 ## Next steps
 
-Learn about [checksums](../accounts/checksums.md) and how they are used to help you enter the correct address in applications such as wallets.
+Test your new knowledge by creating your own IOTA account and [transferring some test IOTA tokens](../transfer-tokens/overview.md).

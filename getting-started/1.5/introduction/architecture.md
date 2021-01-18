@@ -14,7 +14,7 @@ The IOTA architecture involves the following components:
 
 ## Next steps
 
-Learn about IOTA's latest update: [Chrysalis](../introduction/chrysalis.md)
+Learn more about IOTA's latest update, [Chrysalis](../introduction/chrysalis.md).
 
 
 

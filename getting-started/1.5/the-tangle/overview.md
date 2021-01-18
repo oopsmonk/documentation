@@ -18,9 +18,9 @@ Messages are attached to the Tangle by referencing other messages in their [`bra
 
 References in the Tangle can be one of two types:
 
-- **Direct:** Connects a message with those in its `branchMessage` and `trunkMessage` fields. For example, message 5 **directly** references messages 2 and 3.
+- **Direct:** connects a message with those in its `branchMessage` and `trunkMessage` fields. For example, message 5 **directly** references messages 2 and 3.
 
-- **Indirect:**message with those that come before the ones in its `branchMessage` and `trunkMessage` fields. For example, message 6 **indirectly** references message 3 (through message 5).
+- **Indirect:** message with those that come before the ones in its `branchMessage` and `trunkMessage` fields. For example, message 6 **indirectly** references message 3 (through message 5).
 
 These references form a message's history, whereby if a message is a **child**, its direct references are its **parents** and its indirect references are its **grandparents**, and so on.
 
