@@ -53,6 +53,7 @@ In this step, you create a project, using the node package manager [(npm)](https
 
     ```bash
     npm init
+    touch index.js
     ```
 
 Now you have a `package.json` file, which includes the packages and applications your project depends on, and specific metadata like the project's name, description, and author. Whenever you install packages, those packages will be added to this file as a dependency. For more information, see this excellent [package.json guide](https://flaviocopes.com/package-json/).
