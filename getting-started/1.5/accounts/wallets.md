@@ -50,7 +50,8 @@ The IOTA Foundation maintains the following official wallets:
     - [Github](https://github.com/iotaledger/firefly)
 - **Command-line (CLI)**: A simplified version of the wallet run from the command line
 - **Wallet.rs**: A stateful library for use as a wallet or to program your own wallet for sending small amount of IOTA tokens
-    - Both Firefly and CLI use Wallet.rs as well
+    - [Github](https://github.com/iotaledger/wallet.rs)
+        - Both Firefly and CLI use Wallet.rs as well
 
 :::warning:
 Be careful where you enter your seed. Some unofficial wallets may not be trustworthy.

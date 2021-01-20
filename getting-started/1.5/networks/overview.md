@@ -10,7 +10,7 @@ IOTA networks can be private or permissionless:
 
 ## Official permissionless networks
 
-The IOTA Foundation maintains the following permissionless networks, where anyone can run a node.
+The IOTA Foundation maintains the following permissionless networks, where anyone can run a node:
 
 |      | **Network**                       | **Status** | **Description**                                              |      |
 | :--- | :-------------------------------- | :--------- | ------------------------------------------------------------ | ---- |

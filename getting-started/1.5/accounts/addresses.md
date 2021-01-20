@@ -1,6 +1,6 @@
 # Addresses
 
-**An address is like a personal account that belongs to a [seed](../accounts/seeds.md) and that can have a balance of [IOTA tokens](../the-tangle/genesis.md). This topic explains what addresses are, how many of them you can have, and how to use them.**
+**An address is like a personal account that belongs to a [seed](../accounts/seeds.md) and that can have a balance of [IOTA tokens](../the-tangle/genesis.md). This topic explains what addresses are, their types, and how they are used.**
 
 
 
@@ -8,7 +8,7 @@
 
 Addresses are the public half of a [public/private key pair](https://en.wikipedia.org/wiki/Public-key_cryptography), which belongs to a seed. As a result, each address has a corresponding private key which is used to prove to nodes who owns it. You can prove that you own an address by using the private key to sign a message.
 
-By appending something to your seed you can generate as many unique but predictable keypairs as you like. Using both the address and the seed, and a [BIP32](https://wiki.trezor.io/Address_path_(BIP32)) based path, we generate the private/public key pairs so that it always generates the same private/public keypair without any randomness making our key pairs more manageable.
+By appending something to your seed, you can generate as many unique but predictable key pairs as you like. Using both the seed and a [BIP32](https://wiki.trezor.io/Address_path_(BIP32)) based path, we define, derive, and generate the private/public key pairs.
 
 :::info:
 It's safe to share addresses with anyone because only the seed owner knows the private key to prove ownership of them.
@@ -18,7 +18,7 @@ It's safe to share addresses with anyone because only the seed owner knows the p
 
 In the past, IOTA used two address types but, within and beyond Chrysalis, it supports one: Ed25519, and thus reusable addresses.
 
-Ed25519 is a modern EdDSA signature scheme using [SHA-512](https://en.wikipedia.org/wiki/SHA-512) and [Curve25519](https://en.wikipedia.org/wiki/Curve25519). It addresses the disadvantage of statefulness, size, and speed found in previous schemes. And at its core, Ed25519 support allows for smaller message sizes and to safely spend funds which were sent to an already used deposit address. 
+Ed25519 is a modern EdDSA signature scheme using [SHA-512](https://en.wikipedia.org/wiki/SHA-512) and [Curve25519](https://en.wikipedia.org/wiki/Curve25519) and it addresses the disadvantage of statefulness, size, and speed found in previous schemes. At its core, Ed25519 support allows for smaller message sizes and to safely spend funds which were sent to an already used deposit address. 
 
 ## Address formats
 
