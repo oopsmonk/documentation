@@ -14,13 +14,11 @@ For further reference, see our [Messages](https://github.com/GalRogozinski/proto
 
 Previously, IOTA protocol used transactions (which were vertices in the Tangle), where each transaction defined either an input or output. A grouping of those input/output transaction vertices made up a bundle which transferred the given values as an atomic unit. But this approach was seen as too time consuming. So, we adopted a new transaction structure called the unspent transaction outputs (UTXO). 
 
-Unspent transaction outputs are used as inputs instead of an account-based model. The UTXO is a part of a larger, self-contained messages structure known as a [payload](#message-payloads).
-
 The UTXO model defines a ledger state where balances are not directly associated to addresses but to the outputs of transactions. In this model, transactions specify the outputs of previous transactions as inputs, which are consumed to create new outputs. A transaction must consume the entirety of the specified inputs.
 
 ![UTXO flow](https://camo.githubusercontent.com/718a66923f2c437fb814e8bd77ec52cb5e0d550254f641281479d6c8480e0149/68747470733a2f2f692e696d6775722e636f6d2f6833757866364e2e706e67)
 
-This approach is meant to enable a self-contained message structure defining the data of the entire transfer as a payload to be imbedded into a message.
+So, the UTXO is a part of a larger, self-contained messages structure known as a [payload](#message-payloads). This approach is meant to enable a self-contained message structure defining the data of the entire transfer as a payload to be imbedded into a message.
 
 Overall, these payload structures are simple:
 
@@ -30,11 +28,13 @@ Overall, these payload structures are simple:
 | Index        | string    | The index key of the message, a UTF-8 encoded string |
 | Data         | ByteArray | Data we are attaching                                |
 
+
+
 Additionally, there can be three types of message payloads
 
-- A transaction payload
-- An indexation payload
-- A milestone payload
+- **A transaction payload**
+- **An indexation payload**
+- **A milestone payload**
 
 ## Message payloads
 
@@ -53,11 +53,11 @@ The concept of the payload allows for the addition of an index to the encapsulat
 
 ### Milestone payload
 
-A message that has been attached to the Tangle and approved by a milestone has several useful properties: verifying that the content of the data did not change and determining the approximate time it was published by checking the approving milestone. If the payload will be incorporated under the signed transaction payload, the content is signed (using the [Ed25519](https://tools.ietf.org/html/rfc8032) signature scheme) as well.
+A message that has been attached to the Tangle and approved by a milestone has several useful properties including verifying that the content of the data did not change and determining the approximate time it was published by checking the approving milestone. If the payload is incorporated under the signed transaction payload, the content is signed (using the [Ed25519](https://tools.ietf.org/html/rfc8032) signature scheme) as well.
 
 All values are serialized in little-endian encoding. The serialized form of the milestone is deterministic, meaning the same logical milestone always results in the same serialized byte sequence.
 
-To increase the security of the design, a milestone can (optionally) be independently signed by multiple keys at once. These keys should be operated by detached signature provider services running on independent infrastructure elements. This assists in mitigating the risk of an attacker having access to all the key material necessary for forging milestones. 
+To increase the security of the design, a milestone can (optionally) be independently signed by multiple keys at once. . 
 
 ### Conflict
 
@@ -65,7 +65,7 @@ Additionally, if messages are conflicting, milestones can confirm them by enforc
 
 ## Validation
 
-A message is considered valid if the following syntactic rules are met:
+Finally, a message is considered valid if the following syntactic rules are met:
 
 1. The message size must not exceed 32 KiB (32 * 1024 bytes).
 2. When parsing the message is complete, there should not be any trailing bytes left that were not parsed.

@@ -16,7 +16,7 @@ Today, IOTA tokens are spread across many different addresses. You can see [how 
 
 ## How nodes keep track of IOTA tokens
 
-Based on the **UTXO** ledger, snapshot files are broken into two formats:
+Based on the UTXO ledger, snapshot files are broken into two formats:
 
 - A full format which represents a complete ledger state
 - A delta format which only contains diffs (consumed and spent outputs) of milestones from a given milestone index onwards

@@ -12,7 +12,7 @@ However, the Weighted Uniform Random Tip Selection algorithm selects tip message
 
 ## Types of tip messages
 
-In the Tangle, new messages are confirmed if they are directly or indirectly referenced by a [milestone](../the-tangle/the-coordinator.md), using the White Flag confirmation algorithm.
+In the Tangle, new messages are confirmed if they are directly or indirectly referenced by a [milestone](../the-tangle/the-coordinator.md), using the [White Flag](https://github.com/thibault-martinez/protocol-rfcs/blob/white-flag-chrysalis-pt-2/text/0005-white-flag/0005-white-flag.md) confirmation algorithm.
 
 As a result, the algorithm needs to return tips that are non-lazy so the confirmation rate is higher.
 

@@ -4,21 +4,13 @@
 
 ![Seed](../images/seed.png)
 
-## Seed format
+## Mnemonic seeds
 
-An IOTA seed consists of a Bech32 string:
+To make seeds easier to manage and more secure, IOTA uses mnonemic sentences derived from the seed; a group of easily comprehensible words. This mnemonic seed is a list of words that stores all the information needed to recover funds.
 
-```
-iota1q9f0mlq8yxpx2nck8a0slxnzr4ef2ek8f5gqxlzd0wasgp73utryj0w6qwt
-```
+The seed used is a 384-bit or 243-trit random string and there are several ways to represent this in a human-readable form, but a mnemonic sentence is superior to raw binary or ternary strings.
 
-### Mnemonic seeds
-
-To make seeds easier to manage and more secure, IOTA uses mnonemic sentences derived from the seed, a group of easily comprehensible words.
-
-The used seed is a 384-bit or 243-trit random string and there are several ways to represent this in a human-readable form, but a mnemonic sentence is superior to raw binary or ternary strings.
-
-#### How mnemonic seeds work
+### How mnemonic seeds work
 
 IOTA uses a combination of Ed25519, BIP-39, and SLIP-10 methodologies as the standardized way of producing derivation:
 
@@ -28,15 +20,13 @@ IOTA uses a combination of Ed25519, BIP-39, and SLIP-10 methodologies as the sta
 
 ## Checksums
 
-Checksums are often appended to addresses and seeds in user interfaces such as wallets to help you to detect typos.
+Checksums are often appended to seeds and addresses in user interfaces such as [wallets](../accounts/wallets.md) to help you to detect typos.
 
-BIP-39 and Bech32 already contain a checksum for seeds and addresses, respectively.
+BIP-39 and Bech32 already contain a checksum for seeds and addresses, respectively, so there is no need to implement any further.
 
 ## Next steps
 
 Learn about the [addresses](../accounts/addresses.md) that belong to seeds.
-
-To simplify the process of securing your seed, sending messages, and managing your account, you can use a [wallet](../accounts/wallets.md).
 
 
 
