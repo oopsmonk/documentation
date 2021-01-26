@@ -20,7 +20,7 @@ For example, if tip 1 in this image below were referenced by a milestone, lots o
 
 If tip 2 were referenced by a milestone, no other messages would be confirmed because its [past cone](../references/glossary.md#past-cone) includes messages that are already confirmed by an old milestone.
 
-![sdf](https://github.com/GalRogozinski/protocol-rfcs/raw/urts/text/0008-uniform-random-tip-selection/images/otrsi_ytrsi.PNG)
+![](https://github.com/GalRogozinski/protocol-rfcs/raw/urts/text/0008-uniform-random-tip-selection/images/otrsi_ytrsi.PNG)
 
 Therefore, nodes categorize tip messages into types and select only those that would lead to better confirmation rates and mitigate attacks:
 
