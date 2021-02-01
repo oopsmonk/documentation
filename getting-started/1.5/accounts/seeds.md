@@ -6,7 +6,7 @@
 
 ## Mnemonic seeds
 
-To make seeds easier to manage and more secure, IOTA uses mnonemic sentences derived from the seed; a group of easily comprehensible words. This mnemonic seed is a list of 36 words that stores all the information needed to recover funds.
+To make seeds easier to manage and more secure, IOTA uses mnonemic sentences derived from the seed; a group of easily comprehensible words. This mnemonic seed is a list of 24 words that stores all the information needed to recover funds.
 
 ### How mnemonic seeds work
 
