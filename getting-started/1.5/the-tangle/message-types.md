@@ -18,7 +18,7 @@ The UTXO model defines a ledger state where balances are not directly associated
 
 ![UTXO flow](https://camo.githubusercontent.com/718a66923f2c437fb814e8bd77ec52cb5e0d550254f641281479d6c8480e0149/68747470733a2f2f692e696d6775722e636f6d2f6833757866364e2e706e67)
 
-So, the UTXO is a part of a larger, self-contained messages structure known as a [payload](#message-payloads). This approach is meant to enable a self-contained message structure defining the data of the entire transfer as a payload to be imbedded into a message.
+So, the UTXO is a part of a larger, self-contained, and flexible message structure known as a [payload](#message-payloads). This approach is meant to enable a self-contained message structure defining the data of the entire transfer as a payload to be imbedded into a message.
 
 Overall, these payload structures are simple:
 
@@ -45,7 +45,9 @@ A transaction payload is made up of two parts:
 1. The *Transaction Essence* part which contains the inputs, outputs, and an optional embedded payload.
 2. The *Unlock Blocks* which unlock the *Transaction Essence*'s inputs. In case the unlock block contains a signature, it signs the entire *Transaction Essence* part.
 
-As mentioned above, the payload part of a *Transaction Essence* can hold an optional payload. This payload does not affect the validity of the *Transaction Essence*. If the transaction is not valid, then the payload must also be discarded.
+In general, all parts of a transaction payload begin with a byte describing the type of the given part to keep the flexibility to introduce new types/versions of the given part in the future.
+
+And, as mentioned above, the payload part of a *Transaction Essence* can hold an optional payload. This payload does not affect the validity of the *Transaction Essence*. If the transaction is not valid, then the payload must also be discarded.
 
 ### Indexation payload
 
@@ -53,15 +55,15 @@ The concept of the payload allows for the addition of an index to the encapsulat
 
 ### Milestone payload
 
-A message that has been attached to the Tangle and approved by a milestone has several useful properties including verifying that the content of the data did not change and determining the approximate time it was published by checking the approving milestone. If the payload is incorporated under the signed transaction payload, the content is signed (using the [Ed25519](https://tools.ietf.org/html/rfc8032) signature scheme) as well.
+A milestone payload contains the *Milestone Essence*, which consists of the actual milestone information (like its index number or position in the tangle), which is signed using the Ed25519 signature scheme. It uses keys of 32 bytes, while the generated signatures are 64 bytes.
 
-All values are serialized in little-endian encoding. The serialized form of the milestone is deterministic, meaning the same logical milestone always results in the same serialized byte sequence.
+To increase the security of the design, a milestone can (optionally) be independently signed by multiple keys at once. These keys should be operated by detached signature provider services running on independent infrastructure elements. This assist in mitigating the risk of an attacker having access to all the key material necessary for forging milestones.
 
-To increase the security of the design, a milestone can (optionally) be independently signed by multiple keys at once. . 
+In addition, a key rotation policy can also be enforced by limiting key validity to certain milestone intervals.
 
 ### Conflict
 
-Additionally, if messages are conflicting, milestones can confirm them by enforcing deterministic ordering by applying only the first message that will not violate the ledger state. For further reference, see [RFC-0005](https://github.com/thibault-martinez/protocol-rfcs/blob/white-flag-chrysalis-pt-2/text/0005-white-flag/0005-white-flag.md).
+Additionally, if messages are conflicting, milestones can confirm them by enforcing deterministic ordering by applying only the first message that will not violate the ledger state; this is accomplished by using the White Flag feature. For further reference, see [RFC-0005](https://github.com/thibault-martinez/protocol-rfcs/blob/white-flag-chrysalis-pt-2/text/0005-white-flag/0005-white-flag.md).
 
 ## Validation
 

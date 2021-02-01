@@ -10,17 +10,17 @@ This immutability is based on the unique properties of hashing algorithms.
 
 A hashing algorithm is a mathematical function that converts an input value of any length into another compressed value of a fixed length. Values returned by a hashing algorithm are called message digests or simply hashes.
 
-In IOTA, the hashing algorithm methods that are used are called the BLAKE2b-256 hash and the Curl-P-81.
+In IOTA, the hashing algorithm methods that are used are called the [BLAKE2b-256](https://tools.ietf.org/html/rfc7693) hash and the Curl-P-81 which are meant to speed up the message validation process:
 
 - BLAKE2b-256 is used to create a short, fixed length digest of the message
 - Curl-P-81, with the Blake digest and the nonce, is hashed
 
 Since the digest only needs to be computed once whilte iterating over different nonce values, this preserves Curl as the PoW-relevant hash.
 
-It is much faster as BLAKE2b-256 has a performance of about 1 GB/s and Curl then only needs to be executed for one single 243-trit block of input. 
+It is much faster as BLAKE2b-256 has a performance of about 1 GB/s and Curl then only needs to be executed for one single 243-trit block of input. Additionally, since the input of the final Curl computation is always fixed, parallell Curl variants can be used to further speed up the validation if necessary.
 
 :::info:
-Previously, IOTA used   [Curl](../references/glossary.md#Curl), which took ternary input values called trits and always output a 243-trit hash. For reference, see Version 1.2 of this document.
+Previously, IOTA used [Curl](../references/glossary.md#Curl), which took ternary input values called trits and always output a 243-trit hash. For reference, see Version 1.2 of this document.
 :::
 
 ## Next steps
