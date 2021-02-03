@@ -68,30 +68,26 @@ IOTA core client library used for:
 - Generate addresses
 - Interact with an IOTA node
 
-If you want to send and receive IOTA tokens, take a look at the [IOTA Wallet Librariy](https://github.com/iotaledger/wallet.rs).
+If you looking for an highler level library to include an IOTA Wallet into your application, please visit the [IOTA Wallet Librariy](https://github.com/iotaledger/wallet.rs).
 
 The main library is written in the programming language Rust, and there a serval bindings to use the library other programming languages and environemts like Node.js. 
 
 
-In a command-line interface, change into the directory where you initialized your project, and install the `iota-soon` package, if you haven't already.
+In a command-line interface, change into the directory where you initialized your project.
 
-```bash
-npm install @iota/soon  
-```
+Currently the package isn't published so you'd need to clone and link the library to your project like this:
 
-If everything went well, you should see something like the following in the output. You can ignore any 'npm WARN' messages.
-
-```shell
-+ @iota/soon@1.0.0
-added 11 packages from 10 contributors and audited 42 packages in 5.307s
-found 0 vulnerabilities
-```
-
-After installing a package, you'll have a `node_modules` directory, which contains the `@iota/soon` package code and its dependencies.
-
+    ```bash
+    cd ..
+    git clone https://github.com/iotaledger/iota.rs
+    cd iota.rs/bindings/nodejs
+    npm link
+    cd ../iota-tutorial
+    npm link iota-client
+    ```
 
 :::success: Congratulations :tada:
-You've got all the tools you need and now you're ready to start learning and coding!
+You've got all the tools you need and now you're ready to use the IOTA library!
 :::
 
 ## Next steps
