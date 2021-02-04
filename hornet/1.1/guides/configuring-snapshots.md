@@ -51,19 +51,19 @@ An old milestone is one that has an index greater than the combined value of the
 
 The values that you choose for these settings depend on how often the Coordinator attaches milestones to the Tangle in your IOTA network.
 
-For example, when milestones are attached every two minutes, like in the Mainnet, you can use the following calculations:
+For example, when milestones are attached every ten seconds, like in the Mainnet, you can use the following calculations:
 
 - **Pruning timeline:** `depth` + `delay` 
 
-- **Total time in minutes:** Pruning timeline / 120
+- **Total time in minutes:** Pruning timeline * 10 / 60
 
-- **Total time in days:** Total time in minutes / 24
+- **Total time in days:** Total time in minutes / 60 / 24
 
-For example, for the following example configuration, the sum of the `delay` and `depth` fields is 40,050. Therefore, the node will delete transactions that are older than approximately 14 days.
+For example, for the following example configuration, the sum of the `delay` and `depth` fields is 40,050. Therefore, the node will delete transactions that are older than approximately 5 days.
 
 ```
-40,050 / 120 = 333.75 minutes
-333.75 / 24 = 13.9 days
+40,050 * 10 / 60 = 6,675 minutes
+6,675 / 60 / 24 = 4.6 days
 ```
 
 ```json
