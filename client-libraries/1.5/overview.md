@@ -18,14 +18,17 @@ Repository: [iota.rs](https://github.com/iotaledger/iota.rs)
 ---
 
 #### **Rust** ####
-[Link](https://client-lib.docs.iota.org/)
-Getting Started with [iota.rs](https://github.com/iotaledger/iota.rs)
-API Docs: 
+- [Repository](https://client-lib.docs.iota.org/)
+- [Getting Started](https://client-lib.docs.iota.org/libraries/rust/getting_started.html)
+- [Examples](https://github.com/iotaledger/iota.rs/tree/dev/examples)
+- [API Docs](https://client-lib.docs.iota.org/docs/iota_client/) 
 ---
 
 #### **Javascript** ####
-Getting Started with [Node.js](https://github.com/iotaledger/iota.rs/tree/dev/bindings/node)
-API Docs: 
+- [Repository](https://github.com/iotaledger/iota.rs/tree/dev/bindings/nodejs)
+- [Getting Started](https://client-lib.docs.iota.org/libraries/nodejs/getting_started.html)
+- [Examples]()
+- [API Docs]() 
 ---
 
 
@@ -39,13 +42,17 @@ Repository: [wallet.rs](https://github.com/iotaledger/wallet.rs)
 ---
 
 #### **Rust** ####
-Getting Started with: [wallet.rs](https://github.com/iotaledger/wallet.rs)
-API Docs: 
+- [Repository](https://github.com/iotaledger/wallet.rs)
+- [Getting Started](https://wallet-lib.docs.iota.org/libraries/rust/getting_started.html)
+- [Examples](https://github.com/iotaledger/wallet.rs/tree/develop/examples)
+- [API Docs](https://wallet-lib.docs.iota.org/docs/iota_wallet) 
 ---
 
 #### **Javascript** ####
-Getting Started with: [Node.js](https://github.com/iotaledger/wallet.rs/tree/develop/bindings/nodejs)
-API Docs: 
+- [Repository](https://github.com/iotaledger/wallet.rs/tree/develop/bindings/nodejs)
+- [Getting Started](https://wallet-lib.docs.iota.org/libraries/nodejs/getting_started.html)
+- [Examples](https://github.com/iotaledger/wallet.rs/tree/develop/bindings/nodejs/examples)
+- [API Docs](https://wallet-lib.docs.iota.org/libraries/nodejs/api_reference.html)
 ---
 
 
