@@ -94,10 +94,11 @@ What is Dust? We define the spamming of low value transaction as dust.
 
 ### Up to 8 Parents.
 
-An message can be bind to minimal 2 parents and up to 8 parents. This rusults in a ...
+An message can be bind to minimal one parent and up to eight parents. This rusults in a ...
 
 :::danger
 **Question**
-
-Which advantages has the "8 Parent". RFC?
+Which advantages has the "8 Parents" change? 
+**TODO**
+Link to RFC!
 :::
