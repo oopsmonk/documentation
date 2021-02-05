@@ -21,7 +21,7 @@ In the previous [tutorial](../first-steps/hello-world.md), you connected to a no
 
 ## Getting tip messages
 
-To attach your message to the Tangle, you need to reference the message hashes of two tip messages in the Tangle. These messages are the ones that your message will be attached to in the Tangle.
+To attach your message to the Tangle, you need to reference the message hashes of minimal two and maximal eight tip messages. These messages are called parents.
 
 To request tip messages from the Tangle, the client asks the node to traverse the Tangle in a process called tip selection.
 
