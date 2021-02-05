@@ -12,6 +12,7 @@ All information in short!
 ## Libraries
 - [iota.rs](https://github.com/iotaledger/iota.rs)
     - [Node.js](https://github.com/iotaledger/iota.rs/tree/dev/bindings/node)
+    - [Python](https://github.com/iotaledger/iota.rs/tree/dev/bindings/python)
 - [wallet.rs](https://github.com/iotaledger/wallet.rs)
     - [Node.js](https://github.com/iotaledger/wallet.rs/tree/develop/bindings/nodejs)
 
