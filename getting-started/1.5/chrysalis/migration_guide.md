@@ -99,5 +99,5 @@ An message can be bind to minimal 2 parents and up to 8 parents. This rusults in
 :::danger
 **Question**
 
-Which advantates has the "8 Parent". RFC?
+Which advantages has the "8 Parent". RFC?
 :::
