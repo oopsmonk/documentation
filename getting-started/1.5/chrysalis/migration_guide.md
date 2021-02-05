@@ -34,7 +34,7 @@ Nodes deployed to the testnet can be queried using a load balancer at:
 
 We recommend using the load balancer for most scenarios.
 
-Single node endpoints, for example for MQTT use, are:
+Single node endpoints that expose native MQTT in case you need this are:
 
 - api.hornet-0.testnet.chrysalis2.com
 - api.hornet-1.testnet.chrysalis2.com
