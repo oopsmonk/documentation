@@ -53,7 +53,7 @@ Node API is integrated according to the [following specification](https://editor
 
 ## A note about seeds and addresses
 
-In Crysalis, all Ternary things has been removed. which results in a better developer expirence.
+In Chrysalis all ternary conversions have been removed, which results in a better and faster developer experience.
 
 Also the WOTS-Signarure has beed chaged to the Ed25519 Signarure scheme. That means, you can use an address now multiple times to send and recive tokens. 
 
