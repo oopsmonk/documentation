@@ -43,7 +43,7 @@ In this step, you use Cargo to create a new project and install the dependencies
 
     ```bash
     anyhow = { version = "1.0", default-features = false }
-    iota-streams = { git = "https://github.com/iotaledger/streams", branch  = "master"}
+    iota-streams = { git = "https://github.com/iotaledger/streams", branch  = "develop"}
     iota-core = { git = "https://github.com/iotaledger/iota.rs", branch = "iota-1.0" }
     ```
 
