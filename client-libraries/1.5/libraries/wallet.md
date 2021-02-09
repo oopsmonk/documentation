@@ -1,6 +1,6 @@
 # IOTA Wallet Library
 
-The wallet library is a stateful package with a standardised interface for developers to build applications involving IOTA value transactions.
+The wallet library is a stateful package with a standardised interface for developers to build applications involving IOTA value transactions. It is recommended to use this library if it's your main goal to transfer IOTA tokens. This library supports handling and monitoring multiple account/addresses at the same time. 
 
 ## Rust
 ---------------
