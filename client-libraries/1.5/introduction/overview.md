@@ -67,7 +67,7 @@ Implemeted in TypeScript to strongly type the objects sent and received from the
 #### __Community Resources__ ####
 [Link](https://github.com/iota-community)
 
-Here could appear your library, please feel free to create a Pull Request and add it! :-)
+Here your library could appear, please feel free to create a Pull Request and add it! :-)
 
 ---------------
 
