@@ -8,7 +8,7 @@ The libraries are currently in development, and you should not use them in produ
 
 ## Multi Libraries
 
-Multi Libraries are libraries written in Rust and bindet to many other languages like C, Python, Node.js, Java, or WebAssembly(WASM).
+Multi Libraries are libraries written in Rust with bindings available in other languages like C, Python, Node.js, Java, or WebAssembly(WASM); Allowing you to utilize this library in the language of your choice.
 
 ### **Official support** ###
 
