@@ -13,7 +13,7 @@ The client libraries with community support are maintained by the IOTA community
 ### **Client Libraries** ###
 ---------------
 Create and sign messages and interact with an IOTA node.
-[Link](https://client-lib.docs.iota.org/)
+[Link](https://client-lib.docs.iota.org)
 Repository: [iota.rs](https://github.com/iotaledger/iota.rs)
 ---
 

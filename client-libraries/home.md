@@ -1,6 +1,6 @@
 # The client libraries abstract the complexity of the IOTA protocol into simple methods for sending messages and payments, authenticating messages, and more.
 
-[Client libraries overview](/1.5/overview.md)
+[Client libraries overview](root://client-libraries/1.5/overview.md)
 ## Learn what client libraries are, why they're useful, and which projects are using them
 
 <!-- 
