@@ -7,7 +7,7 @@ The client library for interacting with the Tangle
 - Generate addresses
 - Interact with an IOTA node
 
-For value transfers we recommend to use the [wallet library](./wallet.md).
+For value transfers we recommend you to use our stateful [wallet library](./wallet.md).
 
 ## Rust
 ---------------
