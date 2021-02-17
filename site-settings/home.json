@@ -58,9 +58,9 @@
             "name": "Learn about IOTA technology"
         },
         {
-            "href": "/docs/client-libraries/1.0/overview",
-            "image": "1.png",
-            "name": "Start building"
+            "href": "https://chrysalis.docs.iota.org",
+            "image": "chrysalis.png",
+            "name": "Chrysalis Documentation"
         },
         {
             "href": "/docs/blueprints/0.1/introduction/overview",
