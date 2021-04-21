@@ -1,7 +1,7 @@
 <h2 align="center">Developer Documentation for IOTA technology</h2>
 
 <p align="center">
-    <a href="https://docs.iota.org/" style="text-decoration:none;">
+    <a href="https://legacy.docs.iota.org/" style="text-decoration:none;">
     <img src="https://img.shields.io/badge/Documentation%20portal-blue.svg?style=for-the-badge" alt="Developer documentation portal">
 </p>
 <p align="center">
@@ -22,7 +22,7 @@
 
 ## About
 
-This repository contains all the documentation that's hosted on [docs.iota.org](https://docs.iota.org).
+This repository contains all the documentation that's hosted on [legacy.docs.iota.org](https://legacy.docs.iota.org).
 
 The documentation is written in markdown files and built by the platform in the [documentation platform repository](https://github.com/iotaledger/documentation-platform).
 
